@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using DragonLib;
+using DragonLib.Platform;
 using Jackdaw.Cache;
 using Jackdaw.Structs.Client;
 using Serilog;
@@ -20,6 +21,9 @@ internal class Program {
 			Console.WriteLine("Usage: Jackdaw.ResourceCache <path/to/ResFiles> <path/to/rescacheindex> <path/to/output>");
 			return;
 		}
+
+		var canMakeSymlinks = PlatformUtils.CanCreateSymlinks;
+		var method = canMakeSymlinks ? "Linking" : "Copying";
 
 		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
@@ -77,9 +81,17 @@ internal class Program {
 				await remote.CopyToAsync(local);
 			}
 
-			Log.Information("[{Current}/{Total}/{Percent:F2}%] Copying {Path}", ++current, records.Length, (float) current / records.Length * 100, record.Path.AbsolutePath[1..]);
+			Log.Information("[{Current}/{Total}/{Percent:F2}%] {Method} {Path}", ++current, records.Length, (float) current / records.Length * 100, method, record.Path.AbsolutePath[1..]);
 			var target = Path.Combine(outputPath, record.Path.AbsolutePath[1..]);
-			File.Copy(resFilePath, target, true);
+			if (File.Exists(target)) {
+				File.Delete(target);
+			}
+
+			if (canMakeSymlinks) {
+				File.CreateSymbolicLink(target, Path.GetRelativePath(Path.GetDirectoryName(target) ?? target, resFilePath));
+			} else {
+				File.Copy(resFilePath, target);
+			}
 		}
 	}
 }
