@@ -1,0 +1,75 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw", "Jackdaw\Jackdaw.csproj", "{29A8A850-8659-4B1C-AD0F-0AA2BB36AE73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.RegistryHelper", "Jackdaw.RegistryHelper\Jackdaw.RegistryHelper.csproj", "{EF6CE49A-A522-4822-91CE-CAFE548A6DBB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.ResourceCache", "Jackdaw.ResourceCache\Jackdaw.ResourceCache.csproj", "{158D9A47-303B-4418-9C93-924B9C111B37}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Structs", "Jackdaw.Structs\Jackdaw.Structs.csproj", "{ABF2FB75-6363-48B7-9B2E-623223885ECB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonLib", "DragonLib\DragonLib\DragonLib.csproj", "{8E7701C8-B4B6-4D21-8B44-57777184DEA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Tests", "Jackdaw.Tests\Jackdaw.Tests.csproj", "{5968959D-F8EA-4D37-BA0F-8AF3B04FA450}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "research", "research", "{0E2B5EC8-7717-47B6-9940-877A301C3F85}"
+	ProjectSection(SolutionItems) = preProject
+		research\rescache.txt = research\rescache.txt
+		research\fsdbinary.hexpat = research\fsdbinary.hexpat
+		research\tr2_blacktype_scan.py = research\tr2_blacktype_scan.py
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Codegen.Black", "Jackdaw.Codegen.Black\Jackdaw.Codegen.Black.csproj", "{2A53E153-CFF6-4A4E-B207-81FE9B44DFE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.StaticData", "Jackdaw.StaticData\Jackdaw.StaticData.csproj", "{C08608FC-6458-40DB-B6B2-D642591BA57D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferment", "Ferment\Ferment.csproj", "{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29A8A850-8659-4B1C-AD0F-0AA2BB36AE73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29A8A850-8659-4B1C-AD0F-0AA2BB36AE73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29A8A850-8659-4B1C-AD0F-0AA2BB36AE73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29A8A850-8659-4B1C-AD0F-0AA2BB36AE73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6CE49A-A522-4822-91CE-CAFE548A6DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6CE49A-A522-4822-91CE-CAFE548A6DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6CE49A-A522-4822-91CE-CAFE548A6DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6CE49A-A522-4822-91CE-CAFE548A6DBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{158D9A47-303B-4418-9C93-924B9C111B37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{158D9A47-303B-4418-9C93-924B9C111B37}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{158D9A47-303B-4418-9C93-924B9C111B37}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{158D9A47-303B-4418-9C93-924B9C111B37}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABF2FB75-6363-48B7-9B2E-623223885ECB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABF2FB75-6363-48B7-9B2E-623223885ECB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABF2FB75-6363-48B7-9B2E-623223885ECB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABF2FB75-6363-48B7-9B2E-623223885ECB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E7701C8-B4B6-4D21-8B44-57777184DEA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E7701C8-B4B6-4D21-8B44-57777184DEA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E7701C8-B4B6-4D21-8B44-57777184DEA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E7701C8-B4B6-4D21-8B44-57777184DEA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A53E153-CFF6-4A4E-B207-81FE9B44DFE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A53E153-CFF6-4A4E-B207-81FE9B44DFE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A53E153-CFF6-4A4E-B207-81FE9B44DFE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A53E153-CFF6-4A4E-B207-81FE9B44DFE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C08608FC-6458-40DB-B6B2-D642591BA57D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C08608FC-6458-40DB-B6B2-D642591BA57D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C08608FC-6458-40DB-B6B2-D642591BA57D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C08608FC-6458-40DB-B6B2-D642591BA57D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

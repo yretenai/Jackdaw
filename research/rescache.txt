@@ -1,0 +1,151 @@
+servers:
+    CHAOS - internal test 1
+    BUCKINGHAM - internal test 2
+    DUALITY - internal test 3
+    TQ - live (tranquility)
+    SISI - public test (singularity)
+    THUNDERDOME - event
+
+client info:
+    https://binaries.eveonline.com/eveclient_%s.json, server (in uppercase)
+    example: https://binaries.eveonline.com/eveclient_TQ.json
+
+    json schema:
+        { "build": string, "protected": boolean, "platforms": [string]? }
+
+    caveats:
+        protected: true means the client is not publicly available and cannot be downloaded
+        platforms: windows platform is implicitly supported, other platforms are optional
+
+client download:
+    https://binaries.eveonline.com/eveonline%s_%d.txt, platform, version
+    example: https://binaries.eveonline.com/eveonline_2239025.txt
+    example: https://binaries.eveonline.com/eveonlinemacOS_2239025.txt
+
+    csv schema:
+        filename, rescache_path, md5_hash, size, compressed_size, permissions
+
+    caveats:
+        compressed_size is the size of the .gz file
+        size is the size of the uncompressed file
+        permissions is a number representing linux-style permissions
+
+client bundles:
+    https://binaries.eveonline.com/bundles/%d/eveonline_%d.txt.bundle.chunks, (version, version)
+    example: https://binaries.eveonline.com/bundles/2226621/eveonline_2226621.txt.bundle.chunks
+
+    json schema:
+        [{"name": string, "checksum": string, "size": number}]
+
+client bundle chunk:
+    https://binaries.eveonline.com/bundles/%d/%s, (version, name)
+    example: https://binaries.eveonline.com/bundles/2226621/eveonline_2226621.txt.bundle.1
+
+    schema:
+        gz binary data
+    
+    caveats:
+        concatinate all chunks
+
+client resources:
+    uncompressed: https://binaries.eveonline.com/%s, rescache_path
+    example: https://binaries.eveonline.com/1d/1d34143a37d4b739_a99d768074ea4e24c8beaf50fbe89636
+
+    compressed: https://binaries.eveonline.com/%s.gz, rescache_path
+    example: https://binaries.eveonline.com/1d/1d34143a37d4b739_a99d768074ea4e24c8beaf50fbe89636.gz
+
+resource cache:
+    uncompressed: https://resources.eveonline.com/%s, rescache_path
+    example: https://resources.eveonline.com/a9/a9d1721dd5cc6d54_e6bbb2df307e5a9527159a4c971034b5
+
+    compressed: https://resources.eveonline.com/%s.gz, rescache_path
+    example: https://resources.eveonline.com/a9/a9d1721dd5cc6d54_e6bbb2df307e5a9527159a4c971034b5.gz
+
+resource bundles:
+    https://resources.eveonline.com/bundles/%d/%s_%d.txt.bundle.chunks, (version, resfileindex_name, version)
+    example: https://resources.eveonline.com/bundles/2226621/resfileindex_prefetch_2226621.txt.bundle.chunks
+
+    json schema:
+        [{"name": string, "checksum": string, "size": number}]
+
+resource bundle chunk:
+    https://resources.eveonline.com/bundles/%d/%s, (version, name)
+    example: https://resources.eveonline.com/bundles/2226621/resfileindex_prefetch_2226621.txt.bundle.1
+
+    schema:
+        gz binary data
+    
+    caveats:
+        concatinate all chunks
+
+launcher version:
+    https://binaries.eveonline.com/evelauncher_%s_%s.json, platform, type (dev, beta, release)
+    example: https://binaries.eveonline.com/evelauncher_win_release.json
+    exmaple: https://binaries.eveonline.com/evelauncher_mac_release.json
+    example: https://binaries.eveonline.com/evelauncher_linux_release.json
+
+    json schema:
+        { "version": string, "minimum": string? }
+
+launcher download:
+    https://binaries.eveonline.com/evelauncher%s_%d.txt, platform, version
+    example: https://binaries.eveonline.com/evelauncher_2198233.txt
+    example: https://binaries.eveonline.com/evelauncher_mac_2198233.txt
+    example: https://binaries.eveonline.com/evelauncher_linux_1747682.txt
+
+    csv schema:
+        filename, rescache_path, md5_hash, size, compressed_size, permissions
+
+launcher resources:
+    uncompressed: https://binaries.eveonline.com/%s, rescache_path
+    example: https://binaries.eveonline.com/09/098afca6b2531ae7_fc639bf182ab67a0ccc910295955f030
+
+    compressed: https://binaries.eveonline.com/%s.gz, rescache_path
+    example: https://binaries.eveonline.com/09/098afca6b2531ae7_fc639bf182ab67a0ccc910295955f030.gz
+
+launcher version:
+    https://launcher.eveonline.com/version.json
+
+    json schema:
+        { [string type]: string }
+
+launcher options:
+    https://launcher.eveonline.com/options.json
+
+    json schema:
+        { [string type]: bool | any? }
+
+launcher webgui:
+    https://launcher.eveonline.com/%s, version
+    example: https://launcher.eveonline.com/6-0-x/6.6.14
+
+launcher news:
+    https://launcher.eveonline.com/resources/news_v3/%s.json, locale
+
+    json schema:
+        [ { "title": string, "date": string, "src": string, "text": string, "url": string } ]
+
+launcher motd:
+    https://launcher.eveonline.com/resources/sync-ingredients/motd_v3.json
+
+    json schema:
+        { "hash": string, motd: { [string locale]: string } }
+
+launcher sync:
+    https://launcher.eveonline.com/resources/syncHash_v2.json
+    https://launcher.eveonline.com/resources/sync_v2.json
+
+    json schema:
+        {
+            "backgrounds": { [string branch]: { "uri": string, "isDark": bool, "loaderColor": string } },
+            "features": { [string branch]: { [string feature]: any } },
+            "motd": { "hash": string, "motd": { [string locale]: string } },
+            "motd_v3": "string",
+            "news": { "hash": string, "localized": { [string locale]: string } },
+            "servers": { [string server]: { "userCount": number, "serverStatus": string } },
+            "versions": { [string branch]: string },
+        }
+
+special links:
+    https://binaries.eveonline.com/evelauncher-1104891.tar.gz -- Linux beta launcher
+    https://binaries.eveonline.com/EVEResources.7z -- a complete copy of a 2020 version?

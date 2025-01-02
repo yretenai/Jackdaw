@@ -1,0 +1,227 @@
+ship_cosmetic_slot_categories
+	dict<int, string> items
+
+ship_cosmetic_slot_configurations:
+	dict<int, ship_cosmetic_slot_configuration> items
+
+ship_cosmetic_slot_configuration:
+	int[] config
+	string name
+	int[] ship
+	int priority
+	int allow_all_ships
+
+ship_cosmetic_slot_names:
+	dict<int, string> items
+
+ship_cosmetic_slots:
+	dict<int, ship_cosmetic_slot> items
+
+ship_cosmetic_slot:
+	int[] allowed_design_component_categories
+	int category
+	int descirption
+	int internal_name
+	int name
+
+ship_skin_design_component_categories:
+	dict<int, string> items
+
+ship_skin_design_component_point_values:
+	dict<int, dict<int, int>> items
+
+ship_skin_design_component_rarities:
+	dict<int, ship_skin_design_component_rarity> items
+
+ship_skin_design_component_rarity:
+	int name
+	int rank
+
+ship_skin_design_component_post_process:
+	dict<int, string> items
+
+ship_skin_design_component:
+	design_component_item_reference[] associated_type_ids
+	int[] disallowed_slots
+	string finish
+	string icon_file
+	string internal_name
+	string projection_type_u
+	string projection_type_v
+	string resource_file
+	int category
+	int description
+	int name
+	int origin_event
+	int rarity
+	int sequence_binder
+	int published
+
+ship_skin_design_component_item_reference:
+	int license_uses_granted
+	int type_id
+
+ship_skin_design_sequence_binder_reference:
+	int count
+	int item_type_id
+
+ship_skin_design_tier_thresholds:
+	dict<int, dict<int, int> items
+
+ship_cosmetic_licenses:
+	int cosmeticType
+	int shipCosmeticLicenseTypeID
+	int shipTypeID
+	int slotGroup
+
+sound_ids:
+	dict<int, sound_id> items
+
+sound_id:
+	string wwiseEvent
+
+wwise_events:
+	dict<string, wwise_event> items
+
+wwise_event:
+	long eventID
+	string eventName
+	string[] eventsStoppedBy
+	wwise_playback_duration playbackDuration
+	string[] soundbanks
+	double maxRadiusAttenuation
+	int is2D
+	int isLoop
+	int isVital
+
+wwise_playback_duration
+	string playbackDurationType
+	double playbackDurationMax
+	double playbackDurationMin
+
+wwise_soundbanks:
+	dict<string, wwise_soundbank> items
+
+wwise_soundbank:
+	string wwiseID
+	int EssentialMedia
+	int EssentialSoundBank
+
+wwise_wem_file_ids:
+	dict<string, wwise_wem_file_id> items
+
+wwise_wem_file_id:
+	int IsEssential
+
+type_lists:
+	dict<int, type_list> items
+
+type_list:
+	string description
+	int[] excludedCategoryIDs
+	int[] excludedGroupIDs
+	int[] excludedTypeIDs
+	int[] includedCategoryIDs
+	int[] includedGroupIDs
+	int[] includedTypeIDs
+	string name
+	int displayDescriptionID
+	int displayNameID
+
+types:
+	dict<int, type> items
+
+type:
+	double basePrice
+	double capacity
+	double mass
+	long portionSize
+	double radius
+	double volume
+	int certificateTemplate
+	int descriptionID
+	int factionID
+	int graphicID
+	int groupID
+	int iconID
+	int isGroupID
+	int marketGroupID
+	int metaGroupID
+	int metaLevel
+	int raceID
+	int soundID
+	int techLevel
+	int typeID
+	int typeNameID
+	int variationParentTypeID
+	int wreckTypeID
+	int isDynamicType
+	int published
+
+graphic_ids:
+	dict<long, graphic_id> items
+
+graphic_id:
+	dict<string, string> animationStateObjects
+	dict<string, double> controllerVariableOverrides
+	string graphicFile
+	string iconInfo
+	string sofFactionName
+	string sofHullName
+	string[] sofLayout
+	string sofRaceName
+	FSDColor albedoColor
+	FSDColor ammoColor
+	FSDColor emissiveColor
+	int explosionBucketID
+	int graphicLocationID
+	int sofMaterialSetID
+
+graphic_locations:
+	dict<int, graphic_location> items
+
+graphic_location:
+	graphic_directional_locator[] directionalLocators
+	string hull
+	graphic_locator[] locators
+
+graphic_directional_locator:
+	string category
+	string name
+	vector3 direction
+	vector3 position
+
+graphic_locator:
+	string category
+	string name
+	vector3 position
+
+graphic_material_sets:
+	dict<int, graphic_material_set> items
+
+graphic_material_set:
+	string CustomMaterial1
+	string CustomMaterial2
+	string Description
+	string Material1
+	string Material2
+	string Material3
+	string Material4
+	string ResPathInsert
+	string SOFFactionName
+	string SOFPatternName
+	string SOFRaceHint
+	FSDColor ColorHull
+	FSDColor ColorPrimary
+	FSDColor ColorSecondary
+	FSDColor ColorWindow
+
+paints:
+	dict<int, paint> items
+
+paint:
+	string finish
+	string hueCategory
+	string materialName
+	string rarity
+	int paintNameID
