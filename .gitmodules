@@ -1,3 +1,9 @@
 [submodule "DragonLib"]
 	path = DragonLib
 	url = https://github.com/yretenai/DragonLib
+[submodule "Knit"]
+	path = Knit
+	url = https://github.com/yretenai/Knit.git
+[submodule "Ferment"]
+	path = Ferment
+	url = https://github.com/yretenai/Ferment.git
