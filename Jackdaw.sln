@@ -28,6 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.StaticData", "Jackd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ferment", "Ferment\Ferment.csproj", "{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knit", "Knit\Knit.csproj", "{364F0350-768E-4F1E-A3F7-2F6BCE138DB4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56BA40D2-361E-40C9-95D3-EB3BA50E1E49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{364F0350-768E-4F1E-A3F7-2F6BCE138DB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{364F0350-768E-4F1E-A3F7-2F6BCE138DB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{364F0350-768E-4F1E-A3F7-2F6BCE138DB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{364F0350-768E-4F1E-A3F7-2F6BCE138DB4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
