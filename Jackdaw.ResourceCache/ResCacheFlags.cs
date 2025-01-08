@@ -10,7 +10,7 @@ public record ResCacheFlags : CommandLineFlags {
 	[Flag("output", Positional = 1, IsRequired = true, Help = "Path to where files should be actualized")]
 	public string Output { get; set; } = null!;
 
-	[Flag("res-cache", Positional = 2, IsRequired = true, Help = "Path to different resource indexes")]
+	[Flag("res-cache", Positional = 2, IsRequired = true, Help = "Path to different resource indexes, or path to flycatcher cache followed by a version number")]
 	public List<string> IndexFiles { get; set; } = [];
 
 	[Flag("dry", Help = "Dry run, don't actually download/create anything")]
@@ -27,4 +27,10 @@ public record ResCacheFlags : CommandLineFlags {
 
 	[Flag("no-overwrite", Help = "Don't overwrite any resources")]
 	public bool NoOverwrite { get; set; }
+
+	[Flag("no-deduplication", Help = "Don't deduplicate files with the same hash")]
+	public bool NoDeduplication { get; set; }
+
+	[Flag("clean", Help = "Clean entire tree and reclaim storage from the resource cache")]
+	public bool CleanIndex { get; set; }
 }
