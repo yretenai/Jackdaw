@@ -56,14 +56,17 @@ internal class Program {
 		}
 
 		// pass 1: delete directory
-		if (flags is { CleanIndex: true, Dry: false } && Directory.Exists(outputPath)) {
+		if (flags.CleanIndex && Directory.Exists(outputPath)) {
 			Log.Information("Clearing existing install");
-			Directory.Delete(outputPath, true);
+			if (!flags.Dry) {
+				Directory.Delete(outputPath, true);
+			}
 		}
 
 		foreach (var indexPath in indexFiles) {
 			if (!File.Exists(indexPath)) {
 				Log.Error("Index file {Path} does not exist", indexPath);
+				continue;
 			}
 
 			ResourceCacheRecord[] records;
@@ -95,11 +98,18 @@ internal class Program {
 				targetCache.Add(record.ResourcePath);
 
 				var target = Path.Combine(outputPath, record.Path.AbsolutePath[1..]);
+				var fullPath = Path.GetFullPath(target);
+				var directory = Path.GetDirectoryName(fullPath);
+				if (string.IsNullOrEmpty(directory)) {
+					continue;
+				}
+
+				Log.Information("Creating directory {Path}", Path.GetRelativePath(outputPath, directory));
 				if (flags.Dry) {
 					continue;
 				}
 
-				target.EnsureDirectoryExists();
+				Directory.CreateDirectory(directory);
 			}
 
 			// pass 3: actualize files
@@ -162,11 +172,11 @@ internal class Program {
 					continue;
 				}
 
+				Log.Information("Deleting {File}", relative);
 				if (flags.Dry) {
 					continue;
 				}
 
-				Log.Information("Deleting {File}", relative);
 				File.Delete(file);
 			}
 		}
