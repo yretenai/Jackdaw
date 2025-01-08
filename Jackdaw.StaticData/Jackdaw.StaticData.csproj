@@ -9,6 +9,7 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\Ferment\Ferment.csproj"/>
+		<ProjectReference Include="..\Ferment\Ferment\Ferment.csproj" />
 		<ProjectReference Include="..\Jackdaw\Jackdaw.csproj"/>
 	</ItemGroup>
 

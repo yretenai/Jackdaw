@@ -3,5 +3,7 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/DragonLib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Ferment" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Knit" vcs="Git" />
   </component>
 </project>
