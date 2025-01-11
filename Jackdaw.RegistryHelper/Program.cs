@@ -10,6 +10,7 @@ using System.Text.Json;
 using System.Threading;
 using System.Threading.Tasks;
 using CsvHelper;
+using CsvHelper.Configuration;
 using Jackdaw.Cache;
 using Jackdaw.Structs.Client;
 using Serilog;
@@ -42,6 +43,10 @@ internal class Program {
 
 		var flycatcherRoot = args[0];
 
+		var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture) {
+			NewLine = "\n",
+		};
+
 		await using var redirectStream = new FileStream(Path.Combine(flycatcherRoot, "redirect.registry"), FileMode.OpenOrCreate, FileAccess.ReadWrite);
 		using var redirectReader = new StreamReader(redirectStream);
 		Dictionary<string, string> redirectMap;
@@ -53,7 +58,8 @@ internal class Program {
 
 		redirectStream.Seek(0, SeekOrigin.End);
 		await using var redirectWriter = new StreamWriter(redirectStream);
-		await using var redirectCsvWriter = new CsvWriter(redirectWriter, CultureInfo.InvariantCulture);
+		redirectWriter.NewLine = "\n";
+		await using var redirectCsvWriter = new CsvWriter(redirectWriter, csvConfig);
 
 		await using var versionStream = new FileStream(Path.Combine(flycatcherRoot, "version.registry"), FileMode.OpenOrCreate, FileAccess.ReadWrite);
 		using var versionReader = new StreamReader(versionStream);
@@ -66,7 +72,8 @@ internal class Program {
 
 		versionStream.Seek(0, SeekOrigin.End);
 		await using var versionWriter = new StreamWriter(versionStream);
-		await using var versionCsvWriter = new CsvWriter(versionWriter, CultureInfo.InvariantCulture);
+		versionWriter.NewLine = "\n";
+		await using var versionCsvWriter = new CsvWriter(versionWriter, csvConfig);
 
 		using var httpHandler = new HttpClientHandler();
 		httpHandler.CheckCertificateRevocationList = true;
