@@ -2,6 +2,7 @@ namespace Jackdaw.BluePyType.Structs;
 
 public class ManagedBlueClass {
 	public ManagedBlueClass(BlueClass cls) {
+		Hash = cls.Hash;
 		Id = cls.Id.Read().GetFullName();
 		var pyType = cls.PyType.Read().Read();
 		PythonId = pyType.Id.Read().GetFullName();
