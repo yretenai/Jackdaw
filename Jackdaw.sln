@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knit", "Knit\Knit\Knit.cspr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.BluePyType", "Jackdaw.BluePyType\Jackdaw.BluePyType.csproj", "{50CCE3F6-6461-4DAF-8D8D-4A1E78F8D32E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knit.glTF", "Knit\Knit.glTF\Knit.glTF.csproj", "{E1157E53-FE90-495F-9AF5-D15F72628A42}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{50CCE3F6-6461-4DAF-8D8D-4A1E78F8D32E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50CCE3F6-6461-4DAF-8D8D-4A1E78F8D32E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50CCE3F6-6461-4DAF-8D8D-4A1E78F8D32E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1157E53-FE90-495F-9AF5-D15F72628A42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1157E53-FE90-495F-9AF5-D15F72628A42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1157E53-FE90-495F-9AF5-D15F72628A42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1157E53-FE90-495F-9AF5-D15F72628A42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

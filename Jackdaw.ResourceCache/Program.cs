@@ -93,7 +93,7 @@ internal class Program {
 
 			// pass 2: create directories
 			Log.Information("Creating directories");
-			foreach (var record in records) {
+			foreach (var record in records.DistinctBy(x => Path.GetDirectoryName(x.Path.AbsolutePath[1..]))) {
 				cacheRepo.Add(record.ResourcePath);
 				targetCache.Add(record.ResourcePath);
 
@@ -190,6 +190,7 @@ internal class Program {
 		Directory.CreateDirectory(indexPath);
 		using var stream = new FileStream(Path.Combine(indexPath, skipTarget + ".txt"), FileMode.Create, FileAccess.Write);
 		using var writer = new StreamWriter(stream);
+		writer.WriteLine($"# {outputPath}");
 		foreach (var line in cache.Order()) {
 			writer.WriteLine(line);
 		}
@@ -209,6 +210,10 @@ internal class Program {
 			using var stream = new FileStream(txt, FileMode.Open, FileAccess.Read);
 			using var reader = new StreamReader(stream);
 			while (reader.ReadLine() is { } line) {
+				if (line.StartsWith('#')) {
+					continue;
+				}
+
 				if (line.Trim().Length > 0) {
 					cache.Add(line.Trim());
 				}
