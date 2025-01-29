@@ -19,7 +19,11 @@ public class GeometryMesh {
 	public GrannyFileRoot Resource { get; }
 
 	public void SaveAsGLTF(string path) {
-		using var gltf = new GrannyGLTF(Resource);
+		using var gltf = new GrannyGLTF(Resource, new GrannyGLTFOptions {
+			OneBoned = true,
+			GenerateNormals = false,
+			Rescale = true,
+		});
 		gltf.Write(path);
 	}
 }

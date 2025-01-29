@@ -8,6 +8,9 @@ public enum ShardServer {
 	Duality,
 	Buckingham,
 	Chaos,
+	Nebula,
+	Nova,
+	Polaris
 }
 
 public static class ShardServerHelpers {
@@ -20,6 +23,9 @@ public static class ShardServerHelpers {
 			ShardServer.Duality => "DUALITY",
 			ShardServer.Buckingham => "BUCKINGHAM",
 			ShardServer.Chaos => "CHAOS",
+			ShardServer.Nebula => "NEBULA",
+			ShardServer.Nova => "NOVA",
+			ShardServer.Polaris => "POLARIS",
 			_ => throw new ArgumentOutOfRangeException(nameof(server), server, null),
 		};
 
@@ -32,6 +38,9 @@ public static class ShardServerHelpers {
 			"DUALITY" => ShardServer.Duality,
 			"BUCKINGHAM" => ShardServer.Buckingham,
 			"CHAOS" => ShardServer.Chaos,
+			"NEBULA" => ShardServer.Nebula,
+			"NOVA" => ShardServer.Nova,
+			"POLARIS" => ShardServer.Polaris,
 			_ => throw new ArgumentOutOfRangeException(nameof(code), code, null),
 		};
 }

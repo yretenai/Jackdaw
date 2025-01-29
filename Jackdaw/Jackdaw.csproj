@@ -9,8 +9,8 @@
 	<ItemGroup>
 		<ProjectReference Include="$(SolutionDir)\DragonLib\DragonLib\DragonLib.csproj"/>
 		<ProjectReference Include="..\Jackdaw.Structs\Jackdaw.Structs.csproj"/>
-		<ProjectReference Include="..\Knit\Knit.glTF\Knit.glTF.csproj" />
-		<ProjectReference Include="..\Knit\Knit\Knit.csproj" />
+		<ProjectReference Include="..\Knit\Knit.glTF\Knit.glTF.csproj"/>
+		<ProjectReference Include="..\Knit\Knit\Knit.csproj"/>
 	</ItemGroup>
 
 	<ItemGroup>
