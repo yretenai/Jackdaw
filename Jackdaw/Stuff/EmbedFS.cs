@@ -13,9 +13,9 @@ public sealed class EmbedFS : IDisposable, IAsyncDisposable {
 		BaseStream = stream;
 
 		Span<byte> slop = stackalloc byte[0xFFF];
-		BaseStream.Seek(0x10, SeekOrigin.End);
+		BaseStream.Seek(-0x10, SeekOrigin.End);
 		BaseStream.ReadExactly(slop[..0x10]);
-		if (slop[..0x10].SequenceEqual("\0\0\0\0EmbedFs 1.0\0"u8)) {
+		if (!slop[..0x10].SequenceEqual("\0\0\0\0EmbedFs 1.0\0"u8)) {
 			throw new InvalidDataException("Not an EmbedFS 1.0 file");
 		}
 
@@ -49,13 +49,14 @@ public sealed class EmbedFS : IDisposable, IAsyncDisposable {
 	public Stream BaseStream { get; }
 	public long BaseAddress { get; }
 	public Dictionary<string, (long Offset, int Size)> Resources { get; } = new(StringComparer.OrdinalIgnoreCase);
-
-	public void Dispose() {
-		BaseStream.Dispose();
-	}
+	public IEnumerable<string> Names => Resources.Keys;
 
 	public async ValueTask DisposeAsync() {
 		await BaseStream.DisposeAsync();
+	}
+
+	public void Dispose() {
+		BaseStream.Dispose();
 	}
 
 	public IMemoryOwner<byte>? Open(string name, out int allocSize) {
@@ -68,6 +69,7 @@ public sealed class EmbedFS : IDisposable, IAsyncDisposable {
 		var buffer = MemoryPool<byte>.Shared.Rent(info.Size);
 		try {
 			BaseStream.ReadExactly(buffer.Memory.Span[..info.Size]);
+			allocSize = info.Size;
 			return buffer;
 		} catch {
 			buffer.Dispose();

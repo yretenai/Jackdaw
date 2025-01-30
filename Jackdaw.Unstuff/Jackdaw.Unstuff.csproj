@@ -8,13 +8,8 @@
 	</PropertyGroup>
 
 	<ItemGroup>
-		<ProjectReference Include="..\Ferment\Ferment\Ferment.csproj"/>
+		<ProjectReference Include="..\DragonLib\DragonLib\DragonLib.csproj"/>
 		<ProjectReference Include="..\Jackdaw\Jackdaw.csproj"/>
-	</ItemGroup>
-
-	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
-		<PackageReference Include="Serilog.Sinks.Console" Version="4.1.0"/>
 	</ItemGroup>
 
 </Project>
