@@ -45,7 +45,7 @@ internal static class Program {
 			safeName = safeName.TrimStart('.', '/', '~');
 			Trace.Assert(!safeName.Contains(':', StringComparison.Ordinal));
 
-			Console.WriteLine(safeName);
+			Console.WriteLine($"{Path.GetFileNameWithoutExtension(stuffPath)}: {safeName}");
 			if (Flags.Dry) {
 				continue;
 			}
