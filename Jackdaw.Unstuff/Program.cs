@@ -42,7 +42,7 @@ internal static class Program {
 				safeName = safeName[4..];
 			}
 
-			safeName = safeName.TrimStart('.', '/', '~');
+			safeName = safeName.TrimStart('.', '/', '~').ToLowerInvariant();
 			Trace.Assert(!safeName.Contains(':', StringComparison.Ordinal));
 
 			Console.WriteLine($"{Path.GetFileNameWithoutExtension(stuffPath)}: {safeName}");
