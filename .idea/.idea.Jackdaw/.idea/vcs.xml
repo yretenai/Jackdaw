@@ -5,5 +5,7 @@
     <mapping directory="$PROJECT_DIR$/DragonLib" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Ferment" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Knit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Knit/DragonLib" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Knit/glTFScaffold" vcs="Git" />
   </component>
 </project>
