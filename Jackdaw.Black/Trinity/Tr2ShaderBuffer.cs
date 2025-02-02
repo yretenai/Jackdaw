@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ShaderBuffer : IRoot {
-	public int Size { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 1, Class: 
+	public int Size { get; set; }
 }

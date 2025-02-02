@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class ResFile : IRoot, IResFile, IBlueStream {
-	public long Size { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 1, Class: 
+	public long Size { get; set; }
 }

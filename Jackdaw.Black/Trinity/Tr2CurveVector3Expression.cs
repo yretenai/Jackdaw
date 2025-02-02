@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveVector3Expression : IRoot, ITriColorFunction, ITriVectorFunction, ITriFunction, IInitialize {
-	public string? ExpressionX { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public string? ExpressionY { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public string? ExpressionZ { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Inputs { get; set; } // Offset: 256, Size: 144, Type: Collection, Id: 17, Class: IList
-	public Vector3 CurrentValue { get; set; } // Offset: 400, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public float Input1 { get; set; } // Offset: 424, Size: 4, Type: Single, Id: 19, Class: 
-	public float Input2 { get; set; } // Offset: 428, Size: 4, Type: Single, Id: 19, Class: 
-	public float Input3 { get; set; } // Offset: 432, Size: 4, Type: Single, Id: 19, Class: 
-	public float Input4 { get; set; } // Offset: 436, Size: 4, Type: Single, Id: 19, Class: 
+	public string? ExpressionX { get; set; }
+	public string? ExpressionY { get; set; }
+	public string? ExpressionZ { get; set; }
+	public string? Name { get; set; }
+	public List<IRoot?>? Inputs { get; set; }
+	public Vector3 CurrentValue { get; set; }
+	public float Input1 { get; set; }
+	public float Input2 { get; set; }
+	public float Input3 { get; set; }
+	public float Input4 { get; set; }
 }

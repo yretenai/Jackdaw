@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriTorque : IRoot {
-	public float Time { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 Rot0 { get; set; } // Offset: 12, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Vector3 Omega0 { get; set; } // Offset: 28, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Torque { get; set; } // Offset: 40, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public float Time { get; set; }
+	public Vector3 Rot0 { get; set; }
+	public Vector3 Omega0 { get; set; }
+	public Vector3 Torque { get; set; }
 }

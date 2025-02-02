@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class FollowASpline : IRoot, IBehavior, INotify {
-	public bool Enabled { get; set; } // Offset: 24, Size: 1, Type: Boolean, Id: 19, Class: 
-	public List<IRoot?>? SplineTunnels { get; set; } // Offset: 32, Size: 144, Type: Collection, Id: 17, Class: IList
-	public int TunnelGroupType { get; set; } // Offset: 204, Size: 4, Type: Int, Id: 531, Class: 
-	public float BehaviorWeight { get; set; } // Offset: 208, Size: 4, Type: Single, Id: 19, Class: 
-	public float SmoothPullFactor { get; set; } // Offset: 212, Size: 4, Type: Single, Id: 19, Class: 
-	public float CornerSmoothener { get; set; } // Offset: 216, Size: 4, Type: Single, Id: 19, Class: 
-	public int BehaviorPriority { get; set; } // Offset: 288, Size: 4, Type: Int, Id: 535, Class: 
+	public bool Enabled { get; set; }
+	public List<IRoot?>? SplineTunnels { get; set; }
+	public int TunnelGroupType { get; set; }
+	public float BehaviorWeight { get; set; }
+	public float SmoothPullFactor { get; set; }
+	public float CornerSmoothener { get; set; }
+	public int BehaviorPriority { get; set; }
 }

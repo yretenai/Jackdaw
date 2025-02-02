@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2RenderTarget : IRoot, ITr2TextureProvider {
-	public string? Name { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public int Width { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Height { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int MipCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int MultiSampleType { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int MultiSampleQuality { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Format { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Type { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public bool IsValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsReadable { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
+	public string? Name { get; set; }
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public int MipCount { get; set; }
+	public int MultiSampleType { get; set; }
+	public int MultiSampleQuality { get; set; }
+	public int Format { get; set; }
+	public int Type { get; set; }
+	public bool IsValid { get; set; }
+	public bool IsReadable { get; set; }
 }

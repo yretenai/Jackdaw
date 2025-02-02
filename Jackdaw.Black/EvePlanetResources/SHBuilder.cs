@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class SHBuilder : IRoot {
-	public double AngleName { get; set; } // Offset: 8, Size: 8, Type: Double, Id: 1, Class: 
-	public int NumSteps { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 1, Class: 
-	public int MaxBands { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 1, Class: 
-	public int MaxCoefficients { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 1, Class: 
+	public double AngleName { get; set; }
+	public int NumSteps { get; set; }
+	public int MaxBands { get; set; }
+	public int MaxCoefficients { get; set; }
 }

@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveBannerSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
-	public string? Name { get; set; } // Offset: 32, Size: 32, Type: String, Id: 19, Class: 
-	public int Key { get; set; } // Offset: 64, Size: 4, Type: Int, Id: 19, Class: 
-	public IRoot? Effect { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 19, Class: Tr2Effect
-	[BlackArray]public byte[][]? Banners { get; set; } // Offset: 80, Size: 152, Type: Collection, Id: 17, Class: IBlueStructureList
-	public bool Display { get; set; } // Offset: 368, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool IsPickable { get; set; } // Offset: 369, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Name { get; set; }
+	public int Key { get; set; }
+	public IRoot? Effect { get; set; }
+	[BlackArray]public byte[][]? Banners { get; set; }
+	public bool Display { get; set; }
+	public bool IsPickable { get; set; }
 }

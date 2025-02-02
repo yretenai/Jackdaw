@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GrannyTrack : IRoot, ITriFunction, IInitialize, INotify {
-	public bool Cycle { get; set; } // Offset: 40, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float Duration { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 48, Size: 32, Type: String, Id: 23, Class: 
-	public string? Group { get; set; } // Offset: 80, Size: 32, Type: String, Id: 23, Class: 
-	public string? GrannyResPath { get; set; } // Offset: 112, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? GrannyRes { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 1, Class: TriGrannyRes
+	public bool Cycle { get; set; }
+	public float Duration { get; set; }
+	public string? Name { get; set; }
+	public string? Group { get; set; }
+	public string? GrannyResPath { get; set; }
+	public IRoot? GrannyRes { get; set; }
 }

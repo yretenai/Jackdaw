@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Model : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Meshes { get; set; } // Offset: 40, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public List<IRoot?>? Meshes { get; set; }
 }

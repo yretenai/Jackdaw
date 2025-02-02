@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriVariableParameter : IRoot, ITriEffectParameter, INotify, IInitialize {
-	public int VariableType { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 23, Class: 
-	public string? VariableName { get; set; } // Offset: 32, Size: 8, Type: UTFString, Id: 23, Class: 
-	public bool UsedByCurrentTechnique { get; set; } // Offset: 48, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool UsedByCurrentEffect { get; set; } // Offset: 48, Size: 1, Type: Boolean, Id: 1, Class: 
+	public int VariableType { get; set; }
+	public string? Name { get; set; }
+	public string? VariableName { get; set; }
+	public bool UsedByCurrentTechnique { get; set; }
+	public bool UsedByCurrentEffect { get; set; }
 }

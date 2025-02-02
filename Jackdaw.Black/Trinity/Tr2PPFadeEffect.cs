@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPFadeEffect : Tr2PPEffect {
-	public Vector3 Color { get; set; } // Offset: 16, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public float Intensity { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 23, Class: 
+	public Vector3 Color { get; set; }
+	public float Intensity { get; set; }
 }

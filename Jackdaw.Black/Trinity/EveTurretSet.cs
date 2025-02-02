@@ -6,61 +6,61 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTurretSet : IRoot, IInitialize, EveEntity, INotify, ITr2Renderable {
-	public IRoot? TargetObject { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: ITriTargetable
-	public string? Name { get; set; } // Offset: 104, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 136, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool DisplayEffects { get; set; } // Offset: 137, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool IsOnline { get; set; } // Offset: 138, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool UpdatePitchPose { get; set; } // Offset: 139, Size: 1, Type: Boolean, Id: 19, Class: 
-	public int VisibleCount { get; set; } // Offset: 144, Size: 4, Type: Int, Id: 1, Class: 
-	public float EstimatedPixelDiameter { get; set; } // Offset: 148, Size: 4, Type: Single, Id: 1, Class: 
-	public int LodLevel { get; set; } // Offset: 152, Size: 4, Type: Int, Id: 1, Class: 
-	public string? LocatorName { get; set; } // Offset: 160, Size: 32, Type: String, Id: 19, Class: 
-	public int SlotNumber { get; set; } // Offset: 192, Size: 4, Type: Int, Id: 3, Class: 
-	public int SwarmID { get; set; } // Offset: 196, Size: 4, Type: Int, Id: 3, Class: 
-	public bool UseDynamicBounds { get; set; } // Offset: 368, Size: 1, Type: Boolean, Id: 23, Class: 
-	public Vector3 BoundingSphere { get; set; } // Offset: 372, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public float BottomClipHeight { get; set; } // Offset: 388, Size: 4, Type: Single, Id: 19, Class: 
-	public IRoot? TurretEffect { get; set; } // Offset: 400, Size: 8, Type: Object, Id: 19, Class: Tr2Effect
-	public string? GeometryResPath { get; set; } // Offset: 456, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? GeometryResource { get; set; } // Offset: 488, Size: 8, Type: Object, Id: 1, Class: TriGeometryRes
-	public IRoot? Target { get; set; } // Offset: 512, Size: 8, Type: Object, Id: 1, Class: EveTurretTarget
-	public bool LaserMissBehaviour { get; set; } // Offset: 520, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool ProjectileMissBehaviour { get; set; } // Offset: 521, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float ImpactSize { get; set; } // Offset: 524, Size: 4, Type: Single, Id: 19, Class: 
-	public int ImpactBehaviour { get; set; } // Offset: 528, Size: 4, Type: Int, Id: 535, Class: 
-	public float TrackingInfluence { get; set; } // Offset: 532, Size: 4, Type: Single, Id: 1, Class: 
-	public float MaxTrackingTime { get; set; } // Offset: 548, Size: 4, Type: Single, Id: 19, Class: 
-	public bool UseRandomFiringDelay { get; set; } // Offset: 592, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float RandomFiringDelay { get; set; } // Offset: 596, Size: 4, Type: Single, Id: 1, Class: 
-	public int MaxCyclingFirePos { get; set; } // Offset: 600, Size: 4, Type: Int, Id: 19, Class: 
-	public int CyclingFireGroupCount { get; set; } // Offset: 604, Size: 4, Type: Int, Id: 19, Class: 
-	public int CurrentCyclingFiresPos { get; set; } // Offset: 608, Size: 4, Type: Int, Id: 1, Class: 
-	public float SysBoneHeight { get; set; } // Offset: 672, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitchOffset { get; set; } // Offset: 676, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitchFactor { get; set; } // Offset: 680, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitchMin { get; set; } // Offset: 684, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitchMax { get; set; } // Offset: 688, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitch01Offset { get; set; } // Offset: 692, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitch01Factor { get; set; } // Offset: 696, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitch02Offset { get; set; } // Offset: 700, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitch02Factor { get; set; } // Offset: 704, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitch03Offset { get; set; } // Offset: 708, Size: 4, Type: Single, Id: 19, Class: 
-	public float SysBonePitch03Factor { get; set; } // Offset: 712, Size: 4, Type: Single, Id: 19, Class: 
-	public int State { get; set; } // Offset: 716, Size: 4, Type: Int, Id: 17, Class: 
-	public string? FiringEffectResPath { get; set; } // Offset: 728, Size: 32, Type: String, Id: 19, Class: 
-	public IRoot? FiringEffect { get; set; } // Offset: 760, Size: 8, Type: Object, Id: 7, Class: EveTurretFiringFX
-	public bool UseLowLodFiringTransform { get; set; } // Offset: 769, Size: 1, Type: Boolean, Id: 19, Class: 
-	public Vector3 LowLodFiringEffectTranslation { get; set; } // Offset: 772, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 LowLodFiringEffectScale { get; set; } // Offset: 784, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 LowLodFiringEffectRotation { get; set; } // Offset: 796, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public bool ChooseRandomLocator { get; set; } // Offset: 812, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool RandomizeExplosionRotation { get; set; } // Offset: 813, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? AmbientEffect { get; set; } // Offset: 816, Size: 8, Type: Object, Id: 23, Class: IEveSpaceObjectChild
-	public IRoot? GeneratedDistributedAmbientEffect { get; set; } // Offset: 824, Size: 8, Type: Object, Id: 1, Class: EveChildInstanceContainer
-	public bool AmbientEffectEditingMode { get; set; } // Offset: 896, Size: 1, Type: Boolean, Id: 7, Class: 
-	public bool PlayMovementSound { get; set; } // Offset: 897, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? TurretMovementObserver { get; set; } // Offset: 904, Size: 8, Type: Object, Id: 19, Class: TriObserverLocal
-	[BlackUseNamePool]public string? IdleToTargetingMovementAudioEvent { get; set; } // Offset: 912, Size: 32, Type: WString, Id: 19, Class: 
-	[BlackUseNamePool]public string? TargetingToIdleMovementAudioEvent { get; set; } // Offset: 944, Size: 32, Type: WString, Id: 19, Class: 
+	public IRoot? TargetObject { get; set; }
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public bool DisplayEffects { get; set; }
+	public bool IsOnline { get; set; }
+	public bool UpdatePitchPose { get; set; }
+	public int VisibleCount { get; set; }
+	public float EstimatedPixelDiameter { get; set; }
+	public int LodLevel { get; set; }
+	public string? LocatorName { get; set; }
+	public int SlotNumber { get; set; }
+	public int SwarmID { get; set; }
+	public bool UseDynamicBounds { get; set; }
+	public Vector3 BoundingSphere { get; set; }
+	public float BottomClipHeight { get; set; }
+	public IRoot? TurretEffect { get; set; }
+	public string? GeometryResPath { get; set; }
+	public IRoot? GeometryResource { get; set; }
+	public IRoot? Target { get; set; }
+	public bool LaserMissBehaviour { get; set; }
+	public bool ProjectileMissBehaviour { get; set; }
+	public float ImpactSize { get; set; }
+	public int ImpactBehaviour { get; set; }
+	public float TrackingInfluence { get; set; }
+	public float MaxTrackingTime { get; set; }
+	public bool UseRandomFiringDelay { get; set; }
+	public float RandomFiringDelay { get; set; }
+	public int MaxCyclingFirePos { get; set; }
+	public int CyclingFireGroupCount { get; set; }
+	public int CurrentCyclingFiresPos { get; set; }
+	public float SysBoneHeight { get; set; }
+	public float SysBonePitchOffset { get; set; }
+	public float SysBonePitchFactor { get; set; }
+	public float SysBonePitchMin { get; set; }
+	public float SysBonePitchMax { get; set; }
+	public float SysBonePitch01Offset { get; set; }
+	public float SysBonePitch01Factor { get; set; }
+	public float SysBonePitch02Offset { get; set; }
+	public float SysBonePitch02Factor { get; set; }
+	public float SysBonePitch03Offset { get; set; }
+	public float SysBonePitch03Factor { get; set; }
+	public int State { get; set; }
+	public string? FiringEffectResPath { get; set; }
+	public IRoot? FiringEffect { get; set; }
+	public bool UseLowLodFiringTransform { get; set; }
+	public Vector3 LowLodFiringEffectTranslation { get; set; }
+	public Vector3 LowLodFiringEffectScale { get; set; }
+	public Vector3 LowLodFiringEffectRotation { get; set; }
+	public bool ChooseRandomLocator { get; set; }
+	public bool RandomizeExplosionRotation { get; set; }
+	public IRoot? AmbientEffect { get; set; }
+	public IRoot? GeneratedDistributedAmbientEffect { get; set; }
+	public bool AmbientEffectEditingMode { get; set; }
+	public bool PlayMovementSound { get; set; }
+	public IRoot? TurretMovementObserver { get; set; }
+	[BlackUseNamePool]public string? IdleToTargetingMovementAudioEvent { get; set; }
+	[BlackUseNamePool]public string? TargetingToIdleMovementAudioEvent { get; set; }
 }

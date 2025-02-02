@@ -6,26 +6,26 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTacticalOverlay : IRoot, IEveSpaceObject2, IInitialize {
-	public IRoot? ConnectorEffect { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? AnchorEffect { get; set; } // Offset: 32, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? VelocityEffect { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public float SegmentsLow { get; set; } // Offset: 144, Size: 4, Type: Single, Id: 19, Class: 
-	public float SegmentsMedium { get; set; } // Offset: 148, Size: 4, Type: Single, Id: 19, Class: 
-	public float SegmentsHigh { get; set; } // Offset: 152, Size: 4, Type: Single, Id: 19, Class: 
-	public float TotalSegmentsLast { get; set; } // Offset: 156, Size: 4, Type: Single, Id: 1, Class: 
-	public float RequestedSegmentsLast { get; set; } // Offset: 160, Size: 4, Type: Single, Id: 1, Class: 
-	public float TargetMaxSegments { get; set; } // Offset: 164, Size: 4, Type: Single, Id: 19, Class: 
-	public float ArcSegmentMultiplier { get; set; } // Offset: 168, Size: 4, Type: Single, Id: 19, Class: 
-	public float SegmentCountMultiplier { get; set; } // Offset: 172, Size: 4, Type: Single, Id: 19, Class: 
-	public float InterestRange { get; set; } // Offset: 176, Size: 4, Type: Single, Id: 19, Class: 
-	public float OutsideInterestIntensity { get; set; } // Offset: 180, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinRadiusForRange { get; set; } // Offset: 184, Size: 4, Type: Single, Id: 19, Class: 
-	public float ActiveRange { get; set; } // Offset: 188, Size: 4, Type: Single, Id: 19, Class: 
-	public float RangeFadeLength { get; set; } // Offset: 192, Size: 4, Type: Single, Id: 19, Class: 
-	public float RangeMultiplier { get; set; } // Offset: 196, Size: 4, Type: Single, Id: 19, Class: 
-	public float SourceRadius { get; set; } // Offset: 200, Size: 4, Type: Single, Id: 19, Class: 
-	public List<IRoot?>? TrackObjects { get; set; } // Offset: 208, Size: 144, Type: Collection, Id: 1, Class: IList
-	public IRoot? InterestObject { get; set; } // Offset: 352, Size: 8, Type: Object, Id: 3, Class: EveTacticalOverlayTrackObject
-	public IRoot? TranslationCurve { get; set; } // Offset: 360, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public Vector3 WorldPosition { get; set; } // Offset: 368, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public IRoot? ConnectorEffect { get; set; }
+	public IRoot? AnchorEffect { get; set; }
+	public IRoot? VelocityEffect { get; set; }
+	public float SegmentsLow { get; set; }
+	public float SegmentsMedium { get; set; }
+	public float SegmentsHigh { get; set; }
+	public float TotalSegmentsLast { get; set; }
+	public float RequestedSegmentsLast { get; set; }
+	public float TargetMaxSegments { get; set; }
+	public float ArcSegmentMultiplier { get; set; }
+	public float SegmentCountMultiplier { get; set; }
+	public float InterestRange { get; set; }
+	public float OutsideInterestIntensity { get; set; }
+	public float MinRadiusForRange { get; set; }
+	public float ActiveRange { get; set; }
+	public float RangeFadeLength { get; set; }
+	public float RangeMultiplier { get; set; }
+	public float SourceRadius { get; set; }
+	public List<IRoot?>? TrackObjects { get; set; }
+	public IRoot? InterestObject { get; set; }
+	public IRoot? TranslationCurve { get; set; }
+	public Vector3 WorldPosition { get; set; }
 }

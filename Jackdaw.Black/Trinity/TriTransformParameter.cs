@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriTransformParameter : IRoot, ITriEffectParameter {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public int TransformBase { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 531, Class: 
-	public Vector3 Scaling { get; set; } // Offset: 20, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 RotationCenter { get; set; } // Offset: 32, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 44, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Vector3 Translation { get; set; } // Offset: 60, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Matrix4x4 WorldTransform { get; set; } // Offset: 72, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
+	public string? Name { get; set; }
+	public int TransformBase { get; set; }
+	public Vector3 Scaling { get; set; }
+	public Vector3 RotationCenter { get; set; }
+	public Vector3 Rotation { get; set; }
+	public Vector3 Translation { get; set; }
+	public Matrix4x4 WorldTransform { get; set; }
 }

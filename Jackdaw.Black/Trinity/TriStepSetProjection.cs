@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepSetProjection : TriRenderStep {
-	public IRoot? Projection { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 19, Class: TriProjection
+	public IRoot? Projection { get; set; }
 }

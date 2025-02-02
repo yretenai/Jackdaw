@@ -6,19 +6,19 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueCpuUsage : IRoot {
-	public long Timestamp { get; set; } // Offset: 8, Size: 8, Type: Long, Id: 1, Class: 
-	public long UserThreadCpuUsage { get; set; } // Offset: 16, Size: 8, Type: Long, Id: 1, Class: 
-	public long UserProcessCpuUsage { get; set; } // Offset: 24, Size: 8, Type: Long, Id: 1, Class: 
-	public long KernelThreadCpuUsage { get; set; } // Offset: 32, Size: 8, Type: Long, Id: 1, Class: 
-	public long KernelProcessCpuUsage { get; set; } // Offset: 40, Size: 8, Type: Long, Id: 1, Class: 
-	public long VirtualMemory { get; set; } // Offset: 48, Size: 8, Type: Long, Id: 1, Class: 
-	public long PythonMemoryUsage { get; set; } // Offset: 56, Size: 8, Type: Long, Id: 1, Class: 
-	public long WorkingSetSize { get; set; } // Offset: 64, Size: 8, Type: Long, Id: 1, Class: 
-	public long PageFaultCount { get; set; } // Offset: 72, Size: 8, Type: Long, Id: 1, Class: 
-	public double Fps { get; set; } // Offset: 80, Size: 8, Type: Double, Id: 1, Class: 
-	public long TaskletsProcessed { get; set; } // Offset: 88, Size: 8, Type: Long, Id: 1, Class: 
-	public long TaskletsYielding { get; set; } // Offset: 96, Size: 8, Type: Long, Id: 1, Class: 
-	public long TaskletsSleeping { get; set; } // Offset: 104, Size: 8, Type: Long, Id: 1, Class: 
-	public float TaskletsSchedulerDuration { get; set; } // Offset: 112, Size: 4, Type: Single, Id: 1, Class: 
-	public long TaskletsQueued { get; set; } // Offset: 120, Size: 8, Type: Long, Id: 1, Class: 
+	public long Timestamp { get; set; }
+	public long UserThreadCpuUsage { get; set; }
+	public long UserProcessCpuUsage { get; set; }
+	public long KernelThreadCpuUsage { get; set; }
+	public long KernelProcessCpuUsage { get; set; }
+	public long VirtualMemory { get; set; }
+	public long PythonMemoryUsage { get; set; }
+	public long WorkingSetSize { get; set; }
+	public long PageFaultCount { get; set; }
+	public double Fps { get; set; }
+	public long TaskletsProcessed { get; set; }
+	public long TaskletsYielding { get; set; }
+	public long TaskletsSleeping { get; set; }
+	public float TaskletsSchedulerDuration { get; set; }
+	public long TaskletsQueued { get; set; }
 }

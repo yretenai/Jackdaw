@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPDynamicExposureEffect : Tr2PPEffect {
-	public float MinBrightness { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 23, Class: 
-	public float MaxBrightness { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 23, Class: 
-	public float IncreaseSpeed { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 23, Class: 
-	public float DecreaseSpeed { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 23, Class: 
-	public float MinLuminance { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 23, Class: 
-	public float MaxLuminance { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 23, Class: 
-	public float Influence { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 23, Class: 
-	public float MiddleValue { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 23, Class: 
-	public float Adjustment { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 23, Class: 
-	public float MinExposure { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 23, Class: 
-	public float MaxExposure { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 23, Class: 
+	public float MinBrightness { get; set; }
+	public float MaxBrightness { get; set; }
+	public float IncreaseSpeed { get; set; }
+	public float DecreaseSpeed { get; set; }
+	public float MinLuminance { get; set; }
+	public float MaxLuminance { get; set; }
+	public float Influence { get; set; }
+	public float MiddleValue { get; set; }
+	public float Adjustment { get; set; }
+	public float MinExposure { get; set; }
+	public float MaxExposure { get; set; }
 }

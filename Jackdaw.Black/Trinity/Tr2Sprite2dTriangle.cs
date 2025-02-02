@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dTriangle : IRoot {
-	public short Index0 { get; set; } // Offset: 8, Size: 2, Type: Short, Id: 19, Class: 
-	public short Index1 { get; set; } // Offset: 10, Size: 2, Type: Short, Id: 19, Class: 
-	public short Index2 { get; set; } // Offset: 12, Size: 2, Type: Short, Id: 19, Class: 
+	public short Index0 { get; set; }
+	public short Index1 { get; set; }
+	public short Index2 { get; set; }
 }

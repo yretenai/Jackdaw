@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueAsyncRes : IRoot, IBlueResource {
-	public bool IsGood { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsPrepared { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsLoading { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	[BlackUseNamePool]public string? Path { get; set; } // Offset: 8, Size: 32, Type: WString, Id: 1, Class: 
-	[BlackUseNamePool]public string? Ext { get; set; } // Offset: 40, Size: 32, Type: WString, Id: 1, Class: 
+	public bool IsGood { get; set; }
+	public bool IsPrepared { get; set; }
+	public bool IsLoading { get; set; }
+	[BlackUseNamePool]public string? Path { get; set; }
+	[BlackUseNamePool]public string? Ext { get; set; }
 }

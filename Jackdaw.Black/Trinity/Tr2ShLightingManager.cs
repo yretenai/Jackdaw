@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ShLightingManager : IRoot {
-	public float SecondaryIntensity { get; set; } // Offset: 152, Size: 4, Type: Single, Id: 19, Class: 
-	public float PrimaryIntensity { get; set; } // Offset: 156, Size: 4, Type: Single, Id: 19, Class: 
-	public int Quality { get; set; } // Offset: 160, Size: 4, Type: Int, Id: 531, Class: 
-	public List<IRoot?>? Lights { get; set; } // Offset: 168, Size: 144, Type: Collection, Id: 17, Class: IList
+	public float SecondaryIntensity { get; set; }
+	public float PrimaryIntensity { get; set; }
+	public int Quality { get; set; }
+	public List<IRoot?>? Lights { get; set; }
 }

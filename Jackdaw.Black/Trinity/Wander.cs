@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Wander : IRoot, IBehavior {
-	public bool Enabled { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float WeightWander { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public float Rand1 { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float Rand2 { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public float Rand3 { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public float Freq { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
-	public int BehaviorPriority { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 535, Class: 
+	public bool Enabled { get; set; }
+	public float WeightWander { get; set; }
+	public float Rand1 { get; set; }
+	public float Rand2 { get; set; }
+	public float Rand3 { get; set; }
+	public float Freq { get; set; }
+	public int BehaviorPriority { get; set; }
 }

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionResetClipSphereCenter : IRoot, ITr2ControllerAction {
-	public string? LocatorSetName { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public int LocatorIndex { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 19, Class: 
-	public int ResetBehavior { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 531, Class: 
+	public string? LocatorSetName { get; set; }
+	public int LocatorIndex { get; set; }
+	public int ResetBehavior { get; set; }
 }

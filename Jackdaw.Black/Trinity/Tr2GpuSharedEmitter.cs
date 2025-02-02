@@ -6,33 +6,33 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GpuSharedEmitter : IRoot, IInitialize, INotify, ITr2GenericEmitter {
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public float Rate { get; set; } // Offset: 80, Size: 4, Type: Single, Id: 19, Class: 
-	public float InheritVelocity { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 19, Class: 
-	public float EmissionDensity { get; set; } // Offset: 92, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxEmissionDensity { get; set; } // Offset: 96, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxDisplacement { get; set; } // Offset: 100, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 Position { get; set; } // Offset: 104, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Direction { get; set; } // Offset: 116, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float Radius { get; set; } // Offset: 192, Size: 4, Type: Single, Id: 19, Class: 
-	public float Angle { get; set; } // Offset: 208, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinSpeed { get; set; } // Offset: 240, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxSpeed { get; set; } // Offset: 256, Size: 4, Type: Single, Id: 19, Class: 
-	public float InnerAngle { get; set; } // Offset: 260, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinLifeTime { get; set; } // Offset: 276, Size: 4, Type: Single, Id: 23, Class: 
-	public float MaxLifeTime { get; set; } // Offset: 280, Size: 4, Type: Single, Id: 23, Class: 
-	public int TextureIndex { get; set; } // Offset: 284, Size: 4, Type: Int, Id: 23, Class: 
-	public float ColorMidpoint { get; set; } // Offset: 288, Size: 4, Type: Single, Id: 23, Class: 
-	public Vector3 Color0 { get; set; } // Offset: 292, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public Vector3 Color1 { get; set; } // Offset: 308, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public Vector3 Color2 { get; set; } // Offset: 324, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public Vector3 Color3 { get; set; } // Offset: 340, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public Vector3 Sizes { get; set; } // Offset: 356, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public float SizeVariance { get; set; } // Offset: 368, Size: 4, Type: Single, Id: 23, Class: 
-	public float Drag { get; set; } // Offset: 372, Size: 4, Type: Single, Id: 23, Class: 
-	public float TurbulenceAmplitude { get; set; } // Offset: 376, Size: 4, Type: Single, Id: 23, Class: 
-	public int TurbulenceFrequency { get; set; } // Offset: 380, Size: 4, Type: Int, Id: 23, Class: 
-	public float Gravity { get; set; } // Offset: 384, Size: 4, Type: Single, Id: 23, Class: 
-	public float VelocityStretchRotation { get; set; } // Offset: 404, Size: 4, Type: Single, Id: 23, Class: 
-	public bool ContinuousEmitter { get; set; } // Offset: 408, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Name { get; set; }
+	public float Rate { get; set; }
+	public float InheritVelocity { get; set; }
+	public float EmissionDensity { get; set; }
+	public float MaxEmissionDensity { get; set; }
+	public float MaxDisplacement { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 Direction { get; set; }
+	public float Radius { get; set; }
+	public float Angle { get; set; }
+	public float MinSpeed { get; set; }
+	public float MaxSpeed { get; set; }
+	public float InnerAngle { get; set; }
+	public float MinLifeTime { get; set; }
+	public float MaxLifeTime { get; set; }
+	public int TextureIndex { get; set; }
+	public float ColorMidpoint { get; set; }
+	public Vector3 Color0 { get; set; }
+	public Vector3 Color1 { get; set; }
+	public Vector3 Color2 { get; set; }
+	public Vector3 Color3 { get; set; }
+	public Vector3 Sizes { get; set; }
+	public float SizeVariance { get; set; }
+	public float Drag { get; set; }
+	public float TurbulenceAmplitude { get; set; }
+	public int TurbulenceFrequency { get; set; }
+	public float Gravity { get; set; }
+	public float VelocityStretchRotation { get; set; }
+	public bool ContinuousEmitter { get; set; }
 }

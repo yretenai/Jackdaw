@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraSystem : IRoot {
-	public IRoot? MainCamera { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 17, Class: EveVirtualCamera
-	public List<IRoot?>? Cameras { get; set; } // Offset: 24, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? Transition { get; set; } // Offset: 168, Size: 8, Type: Object, Id: 1, Class: EveVirtualCameraTransitionBase
-	public IRoot? ExternalCamera { get; set; } // Offset: 184, Size: 8, Type: Object, Id: 19, Class: EveVirtualCamera
+	public IRoot? MainCamera { get; set; }
+	public List<IRoot?>? Cameras { get; set; }
+	public IRoot? Transition { get; set; }
+	public IRoot? ExternalCamera { get; set; }
 }

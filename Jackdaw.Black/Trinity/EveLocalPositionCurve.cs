@@ -6,19 +6,19 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveLocalPositionCurve : IRoot, ITriVectorFunction {
-	public int Behavior { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 531, Class: 
-	public IRoot? Parent { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 3, Class: IEveSpaceObject2
-	public IRoot? TurretSetObject { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 3, Class: EveTurretSet
-	public IRoot? ParentPositionCurve { get; set; } // Offset: 32, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public IRoot? ParentRotationCurve { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 3, Class: ITriQuaternionFunction
-	public IRoot? AlignPositionCurve { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public float Offset { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 19, Class: 
-	public int LocatorIndex { get; set; } // Offset: 60, Size: 4, Type: Int, Id: 3, Class: 
-	public string? LocatorSetName { get; set; } // Offset: 64, Size: 8, Type: UTFString, Id: 3, Class: 
-	public Vector3 Value { get; set; } // Offset: 72, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 BoundingSize { get; set; } // Offset: 84, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 PositionOffset { get; set; } // Offset: 96, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public int DamageLocatorIndex { get; set; } // Offset: 108, Size: 4, Type: Int, Id: 1, Class: 
-	public float ImpactSize { get; set; } // Offset: 116, Size: 4, Type: Single, Id: 3, Class: 
-	public int MuzzleIndex { get; set; } // Offset: 120, Size: 4, Type: Int, Id: 3, Class: 
+	public int Behavior { get; set; }
+	public IRoot? Parent { get; set; }
+	public IRoot? TurretSetObject { get; set; }
+	public IRoot? ParentPositionCurve { get; set; }
+	public IRoot? ParentRotationCurve { get; set; }
+	public IRoot? AlignPositionCurve { get; set; }
+	public float Offset { get; set; }
+	public int LocatorIndex { get; set; }
+	public string? LocatorSetName { get; set; }
+	public Vector3 Value { get; set; }
+	public Vector3 BoundingSize { get; set; }
+	public Vector3 PositionOffset { get; set; }
+	public int DamageLocatorIndex { get; set; }
+	public float ImpactSize { get; set; }
+	public int MuzzleIndex { get; set; }
 }

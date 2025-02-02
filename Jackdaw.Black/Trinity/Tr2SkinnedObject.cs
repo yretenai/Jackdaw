@@ -6,27 +6,27 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SkinnedObject : IRoot, ITr2Renderable, IWorldPosition, IListNotify {
-	public IRoot? Translation { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: 
-	public IRoot? Rotation { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: Rotation
-	public IRoot? Scaling { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: 
-	public int CurrentLod { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public IRoot? AnimationUpdater { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 19, Class: ITr2AnimationUpdater
-	public IRoot? WorldTransformUpdater { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 19, Class: ITr2WorldTransformUpdater
-	public string? Name { get; set; } // Offset: 64, Size: 32, Type: String, Id: 19, Class: 
-	public TriMatrix? Transform { get; set; } // Offset: 96, Size: 96, Type: Collection, Id: 17, Class: TriMatrix
-	public IRoot? VisualModel { get; set; } // Offset: 192, Size: 8, Type: Object, Id: 23, Class: Tr2SkinnedModel
-	public int FrameDelay { get; set; } // Offset: 472, Size: 4, Type: Int, Id: 1, Class: 
-	public int SkinningMatrixCount { get; set; } // Offset: 488, Size: 4, Type: Int, Id: 1, Class: 
-	public int RenderRigBoneCount { get; set; } // Offset: 600, Size: 4, Type: Int, Id: 1, Class: 
-	public bool Display { get; set; } // Offset: 605, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? HighDetailModel { get; set; } // Offset: 632, Size: 8, Type: Object, Id: 23, Class: IBlueObjectProxy
-	public IRoot? LowDetailModel { get; set; } // Offset: 640, Size: 8, Type: Object, Id: 23, Class: IBlueObjectProxy
-	public IRoot? MediumDetailModel { get; set; } // Offset: 648, Size: 8, Type: Object, Id: 23, Class: IBlueObjectProxy
-	public float EstimatedPixelDiameter { get; set; } // Offset: 656, Size: 4, Type: Single, Id: 1, Class: 
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 672, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool UseDynamicBounds { get; set; } // Offset: 816, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool UseExplicitBounds { get; set; } // Offset: 817, Size: 1, Type: Boolean, Id: 23, Class: 
-	public Vector3 ExplicitMinBounds { get; set; } // Offset: 844, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public Vector3 ExplicitMaxBounds { get; set; } // Offset: 856, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public float UpdatePeriod { get; set; } // Offset: 868, Size: 4, Type: Single, Id: 3, Class: 
+	public IRoot? Translation { get; set; }
+	public IRoot? Rotation { get; set; }
+	public IRoot? Scaling { get; set; }
+	public int CurrentLod { get; set; }
+	public IRoot? AnimationUpdater { get; set; }
+	public IRoot? WorldTransformUpdater { get; set; }
+	public string? Name { get; set; }
+	public TriMatrix? Transform { get; set; }
+	public IRoot? VisualModel { get; set; }
+	public int FrameDelay { get; set; }
+	public int SkinningMatrixCount { get; set; }
+	public int RenderRigBoneCount { get; set; }
+	public bool Display { get; set; }
+	public IRoot? HighDetailModel { get; set; }
+	public IRoot? LowDetailModel { get; set; }
+	public IRoot? MediumDetailModel { get; set; }
+	public float EstimatedPixelDiameter { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
+	public bool UseDynamicBounds { get; set; }
+	public bool UseExplicitBounds { get; set; }
+	public Vector3 ExplicitMinBounds { get; set; }
+	public Vector3 ExplicitMaxBounds { get; set; }
+	public float UpdatePeriod { get; set; }
 }

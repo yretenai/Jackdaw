@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2QuadRenderer : IRoot {
-	public int InstanceBufferSize { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int InstanceDataSize { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
+	public int InstanceBufferSize { get; set; }
+	public int InstanceDataSize { get; set; }
 }

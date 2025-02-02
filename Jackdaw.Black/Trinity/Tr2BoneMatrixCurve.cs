@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2BoneMatrixCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
-	public string? Bone { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public bool Reversed { get; set; } // Offset: 16, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Cycle { get; set; } // Offset: 17, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float Length { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 32, Size: 32, Type: String, Id: 19, Class: 
-	public Matrix4x4 StartValue { get; set; } // Offset: 72, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
-	public Matrix4x4 CurrentValue { get; set; } // Offset: 136, Size: 64, Type: FloatArray, Id: 1, Class: Matrix
-	public Matrix4x4 EndValue { get; set; } // Offset: 200, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
-	public List<IRoot?>? Keys { get; set; } // Offset: 272, Size: 144, Type: Collection, Id: 24, Class: IList
-	public IRoot? SkinnedObject { get; set; } // Offset: 456, Size: 8, Type: Object, Id: 3, Class: Tr2SkinnedObject
-	public Matrix4x4 Transform { get; set; } // Offset: 504, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
+	public string? Bone { get; set; }
+	public bool Reversed { get; set; }
+	public bool Cycle { get; set; }
+	public float Length { get; set; }
+	public string? Name { get; set; }
+	public Matrix4x4 StartValue { get; set; }
+	public Matrix4x4 CurrentValue { get; set; }
+	public Matrix4x4 EndValue { get; set; }
+	public List<IRoot?>? Keys { get; set; }
+	public IRoot? SkinnedObject { get; set; }
+	public Matrix4x4 Transform { get; set; }
 }

@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2MouseCursor : IRoot {
-	public bool IsValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
+	public bool IsValid { get; set; }
 }

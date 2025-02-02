@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveScalar : IRoot, ITriScalarFunction, ITriFunction, ITriCurveLength {
-	[BlackArray]public byte[][]? Keys { get; set; } // Offset: 16, Size: 152, Type: Collection, Id: 17, Class: IBlueStructureList
-	public string? Name { get; set; } // Offset: 168, Size: 32, Type: String, Id: 19, Class: 
-	public float TimeOffset { get; set; } // Offset: 200, Size: 4, Type: Single, Id: 19, Class: 
-	public float TimeScale { get; set; } // Offset: 204, Size: 4, Type: Single, Id: 19, Class: 
-	public float CurrentValue { get; set; } // Offset: 208, Size: 4, Type: Single, Id: 1, Class: 
-	public int ExtrapolationBefore { get; set; } // Offset: 224, Size: 4, Type: Int, Id: 531, Class: 
-	public int ExtrapolationAfter { get; set; } // Offset: 228, Size: 4, Type: Int, Id: 531, Class: 
+	[BlackArray]public byte[][]? Keys { get; set; }
+	public string? Name { get; set; }
+	public float TimeOffset { get; set; }
+	public float TimeScale { get; set; }
+	public float CurrentValue { get; set; }
+	public int ExtrapolationBefore { get; set; }
+	public int ExtrapolationAfter { get; set; }
 }

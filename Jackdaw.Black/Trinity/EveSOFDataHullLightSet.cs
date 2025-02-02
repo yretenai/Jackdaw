@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullLightSet : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? VisibilityGroup { get; set; } // Offset: 40, Size: 8, Type: UTFString, Id: 19, Class: 
-	public List<IRoot?>? Items { get; set; } // Offset: 48, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public string? VisibilityGroup { get; set; }
+	public List<IRoot?>? Items { get; set; }
 }

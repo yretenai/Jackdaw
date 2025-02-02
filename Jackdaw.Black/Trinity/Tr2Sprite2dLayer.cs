@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dLayer : Tr2Sprite2dContainer {
-	public IRoot? TextureSecondary { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: ITr2Sprite2dTexture
-	public Vector3 BackgroundColor { get; set; } // Offset: 480, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public Vector3 Color { get; set; } // Offset: 496, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public bool ClearBackground { get; set; } // Offset: 512, Size: 1, Type: Boolean, Id: 23, Class: 
-	public int BlendMode { get; set; } // Offset: 516, Size: 4, Type: Int, Id: 519, Class: 
-	public int SpriteEffect { get; set; } // Offset: 520, Size: 4, Type: Int, Id: 519, Class: 
+	public IRoot? TextureSecondary { get; set; }
+	public Vector3 BackgroundColor { get; set; }
+	public Vector3 Color { get; set; }
+	public bool ClearBackground { get; set; }
+	public int BlendMode { get; set; }
+	public int SpriteEffect { get; set; }
 }

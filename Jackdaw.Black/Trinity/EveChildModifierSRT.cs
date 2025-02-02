@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildModifierSRT : IRoot, IEveChildTransformModifier {
-	public Vector3 Scaling { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Translation { get; set; } // Offset: 20, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 32, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
+	public Vector3 Scaling { get; set; }
+	public Vector3 Translation { get; set; }
+	public Vector3 Rotation { get; set; }
 }

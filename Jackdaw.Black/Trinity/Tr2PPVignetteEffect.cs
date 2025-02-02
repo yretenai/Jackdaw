@@ -6,16 +6,16 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPVignetteEffect : Tr2PPEffect {
-	public string? ShapePath { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 23, Class: 
-	public string? DetailPath { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 23, Class: 
-	public Vector3 Detail1Size { get; set; } // Offset: 32, Size: 8, Type: FloatArray, Id: 23, Class: 
-	public Vector3 Detail2Size { get; set; } // Offset: 40, Size: 8, Type: FloatArray, Id: 23, Class: 
-	public Vector3 Detail1Scroll { get; set; } // Offset: 48, Size: 8, Type: FloatArray, Id: 23, Class: 
-	public Vector3 Detail2Scroll { get; set; } // Offset: 56, Size: 8, Type: FloatArray, Id: 23, Class: 
-	public Vector3 Color { get; set; } // Offset: 64, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public float Opacity { get; set; } // Offset: 80, Size: 4, Type: Single, Id: 23, Class: 
-	public float Intensity { get; set; } // Offset: 84, Size: 4, Type: Single, Id: 23, Class: 
-	public float SineFrequency { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 23, Class: 
-	public float SineMinimum { get; set; } // Offset: 92, Size: 4, Type: Single, Id: 23, Class: 
-	public float SineMaximum { get; set; } // Offset: 96, Size: 4, Type: Single, Id: 23, Class: 
+	public string? ShapePath { get; set; }
+	public string? DetailPath { get; set; }
+	public Vector3 Detail1Size { get; set; }
+	public Vector3 Detail2Size { get; set; }
+	public Vector3 Detail1Scroll { get; set; }
+	public Vector3 Detail2Scroll { get; set; }
+	public Vector3 Color { get; set; }
+	public float Opacity { get; set; }
+	public float Intensity { get; set; }
+	public float SineFrequency { get; set; }
+	public float SineMinimum { get; set; }
+	public float SineMaximum { get; set; }
 }

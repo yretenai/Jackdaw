@@ -6,21 +6,21 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveMissileWarhead : EveTransform {
-	public IRoot? SpriteSet { get; set; } // Offset: 1144, Size: 8, Type: Object, Id: 19, Class: EveSpriteSet
-	public float WarheadLength { get; set; } // Offset: 1152, Size: 4, Type: Single, Id: 19, Class: 
-	public float WarheadRadius { get; set; } // Offset: 1156, Size: 4, Type: Single, Id: 19, Class: 
-	public float ImpactDuration { get; set; } // Offset: 1164, Size: 4, Type: Single, Id: 19, Class: 
-	public float ImpactSize { get; set; } // Offset: 1168, Size: 4, Type: Single, Id: 19, Class: 
-	public bool StartDataValid { get; set; } // Offset: 1204, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool DoSpread { get; set; } // Offset: 1205, Size: 1, Type: Boolean, Id: 3, Class: 
-	public Vector3 PathOffset { get; set; } // Offset: 1376, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public float PathOffsetNoiseScale { get; set; } // Offset: 1388, Size: 4, Type: Single, Id: 19, Class: 
-	public float PathOffsetNoiseSpeed { get; set; } // Offset: 1392, Size: 4, Type: Single, Id: 19, Class: 
-	public float DurationEjectPhase { get; set; } // Offset: 1396, Size: 4, Type: Single, Id: 19, Class: 
-	public float StartEjectVelocity { get; set; } // Offset: 1400, Size: 4, Type: Single, Id: 19, Class: 
-	public float Acceleration { get; set; } // Offset: 1404, Size: 4, Type: Single, Id: 19, Class: 
-	public int TargetLocatorID { get; set; } // Offset: 1408, Size: 4, Type: Int, Id: 1, Class: 
-	public int Id { get; set; } // Offset: 1412, Size: 4, Type: Int, Id: 3, Class: 
-	public float MaxExplosionDistance { get; set; } // Offset: 1424, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 ExplosionPosition { get; set; } // Offset: 1428, Size: 12, Type: FloatArray, Id: 1, Class: 
+	public IRoot? SpriteSet { get; set; }
+	public float WarheadLength { get; set; }
+	public float WarheadRadius { get; set; }
+	public float ImpactDuration { get; set; }
+	public float ImpactSize { get; set; }
+	public bool StartDataValid { get; set; }
+	public bool DoSpread { get; set; }
+	public Vector3 PathOffset { get; set; }
+	public float PathOffsetNoiseScale { get; set; }
+	public float PathOffsetNoiseSpeed { get; set; }
+	public float DurationEjectPhase { get; set; }
+	public float StartEjectVelocity { get; set; }
+	public float Acceleration { get; set; }
+	public int TargetLocatorID { get; set; }
+	public int Id { get; set; }
+	public float MaxExplosionDistance { get; set; }
+	public Vector3 ExplosionPosition { get; set; }
 }

@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TextureReference : IRoot, ITr2TextureProvider {
-	public int Width { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Height { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Depth { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Type { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int MipCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Format { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int ArraySize { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public int Depth { get; set; }
+	public int Type { get; set; }
+	public int MipCount { get; set; }
+	public int Format { get; set; }
+	public int ArraySize { get; set; }
 }

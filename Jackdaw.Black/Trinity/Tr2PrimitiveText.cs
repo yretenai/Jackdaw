@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PrimitiveText : IRoot {
-	public string? Text { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 Position { get; set; } // Offset: 56, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public int Font { get; set; } // Offset: 68, Size: 4, Type: Int, Id: 531, Class: 
-	public bool Display { get; set; } // Offset: 76, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Text { get; set; }
+	public Vector3 Position { get; set; }
+	public int Font { get; set; }
+	public bool Display { get; set; }
 }

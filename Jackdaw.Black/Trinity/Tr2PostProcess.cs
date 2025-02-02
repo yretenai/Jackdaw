@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PostProcess : IRoot {
-	public List<IRoot?>? Stages { get; set; } // Offset: 40, Size: 144, Type: Collection, Id: 17, Class: IList
+	public List<IRoot?>? Stages { get; set; }
 }

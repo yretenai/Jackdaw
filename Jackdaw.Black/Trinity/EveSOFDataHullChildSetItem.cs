@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullChildSetItem : IRoot {
-	public string? Name { get; set; } // Offset: 0, Size: 0, Type: String, Id: 1, Class: 
-	public string? RedFilePath { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public int LowestLodVisible { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 19, Class: 
-	public Vector3 Translation { get; set; } // Offset: 44, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 56, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Vector3 Scaling { get; set; } // Offset: 72, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public int BuildFilter { get; set; } // Offset: 84, Size: 4, Type: Int, Id: 19, Class: 
+	public string? Name { get; set; }
+	public string? RedFilePath { get; set; }
+	public int LowestLodVisible { get; set; }
+	public Vector3 Translation { get; set; }
+	public Vector3 Rotation { get; set; }
+	public Vector3 Scaling { get; set; }
+	public int BuildFilter { get; set; }
 }

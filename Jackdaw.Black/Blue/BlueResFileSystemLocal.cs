@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueResFileSystemLocal : IRoot, IBlueResFileSystem {
-	[BlackUseNamePool]public string? InitialWorkingDirectory { get; set; } // Offset: 0, Size: 0, Type: WString, Id: 1, Class: 
+	[BlackUseNamePool]public string? InitialWorkingDirectory { get; set; }
 }

@@ -6,26 +6,26 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataGenericSwarm : IRoot {
-	public float SpeedMultiplier { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public float SpeedMinimum { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxDistance0 { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxDistance1 { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxTime { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 19, Class: 
-	public float Speed0 { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 19, Class: 
-	public float Speed1 { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightCohesion { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightSeparation { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 19, Class: 
-	public float SeparationDistance { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightAlign { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightWander { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 19, Class: 
-	public float WanderFluctuation { get; set; } // Offset: 68, Size: 4, Type: Single, Id: 19, Class: 
-	public float WanderDistance { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 19, Class: 
-	public float WanderRadius { get; set; } // Offset: 76, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightAnchor { get; set; } // Offset: 80, Size: 4, Type: Single, Id: 19, Class: 
-	public float AnchorRadius0 { get; set; } // Offset: 84, Size: 4, Type: Single, Id: 19, Class: 
-	public float AnchorRadius1 { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightDeceleration { get; set; } // Offset: 92, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxDeceleration { get; set; } // Offset: 96, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightFormation { get; set; } // Offset: 100, Size: 4, Type: Single, Id: 19, Class: 
-	public float FormationDistance { get; set; } // Offset: 104, Size: 4, Type: Single, Id: 19, Class: 
+	public float SpeedMultiplier { get; set; }
+	public float SpeedMinimum { get; set; }
+	public float MaxDistance0 { get; set; }
+	public float MaxDistance1 { get; set; }
+	public float MaxTime { get; set; }
+	public float Speed0 { get; set; }
+	public float Speed1 { get; set; }
+	public float WeightCohesion { get; set; }
+	public float WeightSeparation { get; set; }
+	public float SeparationDistance { get; set; }
+	public float WeightAlign { get; set; }
+	public float WeightWander { get; set; }
+	public float WanderFluctuation { get; set; }
+	public float WanderDistance { get; set; }
+	public float WanderRadius { get; set; }
+	public float WeightAnchor { get; set; }
+	public float AnchorRadius0 { get; set; }
+	public float AnchorRadius1 { get; set; }
+	public float WeightDeceleration { get; set; }
+	public float MaxDeceleration { get; set; }
+	public float WeightFormation { get; set; }
+	public float FormationDistance { get; set; }
 }

@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullLocatorSet : IRoot, IEveSOFDataHullLocatorSet {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public List<IRoot?>? Locators { get; set; } // Offset: 16, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public List<IRoot?>? Locators { get; set; }
 }

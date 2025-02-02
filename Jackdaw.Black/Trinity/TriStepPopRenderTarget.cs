@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepPopRenderTarget : TriRenderStep {
-	public int Slot { get; set; } // Offset: 136, Size: 4, Type: Int, Id: 3, Class: 
+	public int Slot { get; set; }
 }

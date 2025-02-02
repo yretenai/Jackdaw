@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueSysInfoOs : IRoot {
-	public int Platform { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 513, Class: 
-	public int MajorVersion { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 1, Class: 
-	public int MinorVersion { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 1, Class: 
-	public int BuildNumber { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 1, Class: 
-	public string? Patch { get; set; } // Offset: 24, Size: 32, Type: String, Id: 1, Class: 
-	public int Suite { get; set; } // Offset: 56, Size: 4, Type: Int, Id: 1, Class: 
+	public int Platform { get; set; }
+	public int MajorVersion { get; set; }
+	public int MinorVersion { get; set; }
+	public int BuildNumber { get; set; }
+	public string? Patch { get; set; }
+	public int Suite { get; set; }
 }

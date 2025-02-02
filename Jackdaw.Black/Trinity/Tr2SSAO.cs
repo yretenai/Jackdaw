@@ -6,20 +6,20 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SSAO : IRoot, INotify {
-	public bool Enabled { get; set; } // Offset: 16, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int Quality { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 519, Class: 
-	public bool Downsampled { get; set; } // Offset: 24, Size: 1, Type: Boolean, Id: 7, Class: 
-	public float ZoomLevel { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 3, Class: 
-	public float Radius { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 3, Class: 
-	public float ShadowMultiplier { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 3, Class: 
-	public float ShadowPower { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 3, Class: 
-	public float ShadowClamp { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 3, Class: 
-	public float Sharpness { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? DeinterleavedDepthTarget { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? DeinterleavedNormalTarget { get; set; } // Offset: 152, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? SsaoWorkerTargetA { get; set; } // Offset: 192, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? SsaoWorkerTargetB { get; set; } // Offset: 200, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? ImportanceTargetA { get; set; } // Offset: 208, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? ImportanceTargetB { get; set; } // Offset: 216, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? OutputTarget { get; set; } // Offset: 344, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
+	public bool Enabled { get; set; }
+	public int Quality { get; set; }
+	public bool Downsampled { get; set; }
+	public float ZoomLevel { get; set; }
+	public float Radius { get; set; }
+	public float ShadowMultiplier { get; set; }
+	public float ShadowPower { get; set; }
+	public float ShadowClamp { get; set; }
+	public float Sharpness { get; set; }
+	public IRoot? DeinterleavedDepthTarget { get; set; }
+	public IRoot? DeinterleavedNormalTarget { get; set; }
+	public IRoot? SsaoWorkerTargetA { get; set; }
+	public IRoot? SsaoWorkerTargetB { get; set; }
+	public IRoot? ImportanceTargetA { get; set; }
+	public IRoot? ImportanceTargetB { get; set; }
+	public IRoot? OutputTarget { get; set; }
 }

@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class CcpStatisticsEntry : IRoot {
-	public string? Name { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public string? Description { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public bool ResetPerFrame { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public int Type { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 3, Class: 
-	public double Value { get; set; } // Offset: 0, Size: 0, Type: Double, Id: 1, Class: 
-	public double Peak { get; set; } // Offset: 0, Size: 0, Type: Double, Id: 1, Class: 
+	public string? Name { get; set; }
+	public string? Description { get; set; }
+	public bool ResetPerFrame { get; set; }
+	public int Type { get; set; }
+	public double Value { get; set; }
+	public double Peak { get; set; }
 }

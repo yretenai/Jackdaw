@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderScene : TriRenderStep {
-	public IRoot? Scene { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 19, Class: ITr2Scene
+	public IRoot? Scene { get; set; }
 }

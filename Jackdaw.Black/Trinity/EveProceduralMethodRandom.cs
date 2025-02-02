@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveProceduralMethodRandom : IRoot, IEveProceduralSelectionMethod, INotify, IListNotify, IInitialize {
-	public string? Name { get; set; } // Offset: 32, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? SeedName { get; set; } // Offset: 40, Size: 8, Type: UTFString, Id: 19, Class: 
-	public float Seed_temp { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 7, Class: 
-	public int SelectedChild { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 1, Class: 
-	public int TotalWeight { get; set; } // Offset: 56, Size: 4, Type: Int, Id: 1, Class: 
-	public List<IRoot?>? Parameters { get; set; } // Offset: 88, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DebugVolumes { get; set; } // Offset: 240, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public string? SeedName { get; set; }
+	public float Seed_temp { get; set; }
+	public int SelectedChild { get; set; }
+	public int TotalWeight { get; set; }
+	public List<IRoot?>? Parameters { get; set; }
+	public List<IRoot?>? DebugVolumes { get; set; }
 }

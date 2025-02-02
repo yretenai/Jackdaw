@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SkinnedModel : Tr2Model, IInitialize, INotify {
-	public string? GeometryResPath { get; set; } // Offset: 232, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? GeometryRes { get; set; } // Offset: 264, Size: 8, Type: Object, Id: 1, Class: TriGeometryRes
-	public string? SkeletonName { get; set; } // Offset: 272, Size: 32, Type: String, Id: 23, Class: 
-	public Vector3 SkinScale { get; set; } // Offset: 308, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public string? GeometryResPath { get; set; }
+	public IRoot? GeometryRes { get; set; }
+	public string? SkeletonName { get; set; }
+	public Vector3 SkinScale { get; set; }
 }

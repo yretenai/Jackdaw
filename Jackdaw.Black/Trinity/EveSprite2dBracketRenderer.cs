@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSprite2dBracketRenderer : Tr2SpriteObject {
-	public List<IRoot?>? Brackets { get; set; } // Offset: 208, Size: 144, Type: Collection, Id: 1, Class: IList
-	public IRoot? IconAtlas { get; set; } // Offset: 352, Size: 8, Type: Object, Id: 3, Class: Tr2AtlasTexture
+	public List<IRoot?>? Brackets { get; set; }
+	public IRoot? IconAtlas { get; set; }
 }

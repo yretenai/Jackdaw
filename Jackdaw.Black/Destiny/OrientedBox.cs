@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class OrientedBox : IRoot {
-	public long Id { get; set; } // Offset: 16, Size: 8, Type: Long, Id: 3, Class: 
-	public IRoot? Park { get; set; } // Offset: 120, Size: 8, Type: Object, Id: 1, Class: Ballpark
-	public bool IsMoribund { get; set; } // Offset: 132, Size: 1, Type: Boolean, Id: 1, Class: 
-	public double Corner_x { get; set; } // Offset: 144, Size: 8, Type: Double, Id: 1, Class: 
+	public long Id { get; set; }
+	public IRoot? Park { get; set; }
+	public bool IsMoribund { get; set; }
+	public double Corner_x { get; set; }
 }

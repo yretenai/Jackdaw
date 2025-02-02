@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GrannyEventTrack : Tr2GrannyTrack {
-	public IRoot? EventListener { get; set; } // Offset: 176, Size: 8, Type: Object, Id: 3, Class: IBlueEventListener
+	public IRoot? EventListener { get; set; }
 }

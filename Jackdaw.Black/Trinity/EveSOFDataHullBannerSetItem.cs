@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullBannerSetItem : IRoot {
-	public IRoot? Scaling { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: 
-	public float AngleX { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float AngleY { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public int Usage { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 531, Class: 
-	public Vector3 Position { get; set; } // Offset: 44, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 68, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public IRoot? Light { get; set; } // Offset: 88, Size: 8, Type: Object, Id: 19, Class: EveSOFDataPointLightAttachment
-	public int BoneIndex { get; set; } // Offset: 104, Size: 4, Type: Int, Id: 19, Class: 
-	public bool MaintainAspectRatio { get; set; } // Offset: 108, Size: 1, Type: Boolean, Id: 3, Class: 
+	public IRoot? Scaling { get; set; }
+	public float AngleX { get; set; }
+	public float AngleY { get; set; }
+	public string? Name { get; set; }
+	public int Usage { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 Rotation { get; set; }
+	public IRoot? Light { get; set; }
+	public int BoneIndex { get; set; }
+	public bool MaintainAspectRatio { get; set; }
 }

@@ -6,17 +6,17 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Vector4Parameter : IRoot, ITriEffectParameter, ITriReroutable, IInitialize {
-	public IRoot? Value { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: 
-	public float X { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float Y { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float Z { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float W { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float V1 { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float V2 { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float V3 { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float V4 { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 56, Size: 8, Type: UTFString, Id: 23, Class: 
-	public bool UsedByCurrentTechnique { get; set; } // Offset: 64, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool UsedByCurrentEffect { get; set; } // Offset: 64, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool IsSrgb { get; set; } // Offset: 65, Size: 1, Type: Boolean, Id: 1, Class: 
+	public IRoot? Value { get; set; }
+	public float X { get; set; }
+	public float Y { get; set; }
+	public float Z { get; set; }
+	public float W { get; set; }
+	public float V1 { get; set; }
+	public float V2 { get; set; }
+	public float V3 { get; set; }
+	public float V4 { get; set; }
+	public string? Name { get; set; }
+	public bool UsedByCurrentTechnique { get; set; }
+	public bool UsedByCurrentEffect { get; set; }
+	public bool IsSrgb { get; set; }
 }

@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ForceSphereVolume : IRoot, ITr2ParticleForce {
-	public List<IRoot?>? Forces { get; set; } // Offset: 8, Size: 144, Type: Collection, Id: 17, Class: IList
-	public Vector3 Position { get; set; } // Offset: 152, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float Radius { get; set; } // Offset: 164, Size: 4, Type: Single, Id: 19, Class: 
-	public float Exponent { get; set; } // Offset: 168, Size: 4, Type: Single, Id: 19, Class: 
+	public List<IRoot?>? Forces { get; set; }
+	public Vector3 Position { get; set; }
+	public float Radius { get; set; }
+	public float Exponent { get; set; }
 }

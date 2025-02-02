@@ -6,18 +6,18 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSpriteLineSetItem : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public bool IsCircle { get; set; } // Offset: 16, Size: 1, Type: Boolean, Id: 19, Class: 
-	public Vector3 Position { get; set; } // Offset: 20, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 32, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Vector3 Scaling { get; set; } // Offset: 48, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float Spacing { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 19, Class: 
-	public float BlinkRate { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 19, Class: 
-	public float BlinkPhase { get; set; } // Offset: 68, Size: 4, Type: Single, Id: 19, Class: 
-	public float BlinkPhaseShift { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinScale { get; set; } // Offset: 76, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxScale { get; set; } // Offset: 80, Size: 4, Type: Single, Id: 19, Class: 
-	public float Falloff { get; set; } // Offset: 84, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 Color { get; set; } // Offset: 88, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public int BoneIndex { get; set; } // Offset: 104, Size: 4, Type: Int, Id: 19, Class: 
+	public string? Name { get; set; }
+	public bool IsCircle { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 Rotation { get; set; }
+	public Vector3 Scaling { get; set; }
+	public float Spacing { get; set; }
+	public float BlinkRate { get; set; }
+	public float BlinkPhase { get; set; }
+	public float BlinkPhaseShift { get; set; }
+	public float MinScale { get; set; }
+	public float MaxScale { get; set; }
+	public float Falloff { get; set; }
+	public Vector3 Color { get; set; }
+	public int BoneIndex { get; set; }
 }

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataGenericVariant : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public bool IsTransparent { get; set; } // Offset: 16, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? HullArea { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 19, Class: EveSOFDataHullArea
+	public string? Name { get; set; }
+	public bool IsTransparent { get; set; }
+	public IRoot? HullArea { get; set; }
 }

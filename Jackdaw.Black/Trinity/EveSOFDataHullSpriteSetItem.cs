@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullSpriteSetItem : IRoot {
-	public Vector3 Position { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float BlinkRate { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public float BlinkPhase { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinScale { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxScale { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 19, Class: 
-	public float Falloff { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 19, Class: 
-	public float Intensity { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 19, Class: 
-	public float Saturation { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 19, Class: 
-	public int BoneIndex { get; set; } // Offset: 48, Size: 4, Type: Int, Id: 19, Class: 
-	public int ColorType { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 531, Class: 
-	public IRoot? Light { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 19, Class: EveSOFDataPointLightAttachment
+	public Vector3 Position { get; set; }
+	public float BlinkRate { get; set; }
+	public float BlinkPhase { get; set; }
+	public float MinScale { get; set; }
+	public float MaxScale { get; set; }
+	public float Falloff { get; set; }
+	public float Intensity { get; set; }
+	public float Saturation { get; set; }
+	public int BoneIndex { get; set; }
+	public int ColorType { get; set; }
+	public IRoot? Light { get; set; }
 }

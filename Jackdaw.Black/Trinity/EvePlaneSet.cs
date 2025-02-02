@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EvePlaneSet : IRoot, IInitialize, INotify, IEveSpaceObjectAttachment {
-	public bool Display { get; set; } // Offset: 40, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool HideOnLowQuality { get; set; } // Offset: 41, Size: 1, Type: Boolean, Id: 19, Class: 
-	public byte PickBufferID { get; set; } // Offset: 42, Size: 1, Type: Byte, Id: 23, Class: 
-	public string? Name { get; set; } // Offset: 48, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Planes { get; set; } // Offset: 128, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? Effect { get; set; } // Offset: 296, Size: 8, Type: Object, Id: 19, Class: Tr2Effect
+	public bool Display { get; set; }
+	public bool HideOnLowQuality { get; set; }
+	public byte PickBufferID { get; set; }
+	public string? Name { get; set; }
+	public List<IRoot?>? Planes { get; set; }
+	public IRoot? Effect { get; set; }
 }

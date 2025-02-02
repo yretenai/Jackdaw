@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildEnvironment : IRoot, IEveSpaceObjectChild, IInitialize, IListNotify {
-	public string? Name { get; set; } // Offset: 216, Size: 8, Type: UTFString, Id: 19, Class: 
-	public List<IRoot?>? Volumes { get; set; } // Offset: 224, Size: 144, Type: Collection, Id: 21, Class: IList
-	public List<IRoot?>? ExclusionVolumes { get; set; } // Offset: 368, Size: 144, Type: Collection, Id: 17, Class: IList
-	public Vector3 BoundingSphere { get; set; } // Offset: 512, Size: 16, Type: FloatArray, Id: 1, Class: 
-	public float Intensity { get; set; } // Offset: 532, Size: 4, Type: Single, Id: 1, Class: 
+	public string? Name { get; set; }
+	public List<IRoot?>? Volumes { get; set; }
+	public List<IRoot?>? ExclusionVolumes { get; set; }
+	public Vector3 BoundingSphere { get; set; }
+	public float Intensity { get; set; }
 }

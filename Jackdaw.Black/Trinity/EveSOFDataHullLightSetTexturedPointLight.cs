@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullLightSetTexturedPointLight : EveSOFDataHullLightSetItem {
-	[BlackUseNamePool]public string? TexturePath { get; set; } // Offset: 64, Size: 32, Type: WString, Id: 19, Class: 
+	[BlackUseNamePool]public string? TexturePath { get; set; }
 }

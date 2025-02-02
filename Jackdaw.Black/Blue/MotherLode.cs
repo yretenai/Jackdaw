@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class MotherLode : IRoot, IMotherLode {
-	public long MaxMemUsage { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 3, Class: 
-	public long MemUsage { get; set; } // Offset: 368, Size: 8, Type: Long, Id: 1, Class: 
-	public bool Verbose { get; set; } // Offset: 385, Size: 1, Type: Boolean, Id: 3, Class: 
+	public long MaxMemUsage { get; set; }
+	public long MemUsage { get; set; }
+	public bool Verbose { get; set; }
 }

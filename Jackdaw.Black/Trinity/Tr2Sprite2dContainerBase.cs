@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dContainerBase : Tr2SpriteObjectBase, ITr2SpriteObject, IListNotify {
-	public float Opacity { get; set; } // Offset: 120, Size: 4, Type: Single, Id: 7, Class: 
-	public List<IRoot?>? Children { get; set; } // Offset: 128, Size: 144, Type: Collection, Id: 1, Class: IList
-	public List<IRoot?>? Background { get; set; } // Offset: 272, Size: 144, Type: Collection, Id: 1, Class: IList
+	public float Opacity { get; set; }
+	public List<IRoot?>? Children { get; set; }
+	public List<IRoot?>? Background { get; set; }
 }

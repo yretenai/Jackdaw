@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2RenderJobs : IRoot {
-	public List<IRoot?>? Recurring { get; set; } // Offset: 8, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Once { get; set; } // Offset: 152, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Chained { get; set; } // Offset: 296, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? UpdateRecurring { get; set; } // Offset: 440, Size: 144, Type: Collection, Id: 17, Class: IList
+	public List<IRoot?>? Recurring { get; set; }
+	public List<IRoot?>? Once { get; set; }
+	public List<IRoot?>? Chained { get; set; }
+	public List<IRoot?>? UpdateRecurring { get; set; }
 }

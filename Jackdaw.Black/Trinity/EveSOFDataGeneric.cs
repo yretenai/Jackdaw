@@ -6,30 +6,30 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataGeneric : IRoot {
-	public string? ResPathDefaultAlliance { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? ResPathDefaultCorp { get; set; } // Offset: 40, Size: 32, Type: String, Id: 19, Class: 
-	public string? ResPathDefaultCeo { get; set; } // Offset: 72, Size: 32, Type: String, Id: 19, Class: 
-	public string? ShaderPrefix { get; set; } // Offset: 104, Size: 32, Type: String, Id: 19, Class: 
-	public string? ShaderPrefixAnimated { get; set; } // Offset: 136, Size: 32, Type: String, Id: 19, Class: 
-	public string? AreaShaderLocation { get; set; } // Offset: 168, Size: 32, Type: String, Id: 19, Class: 
-	public string? DecalShaderLocation { get; set; } // Offset: 200, Size: 32, Type: String, Id: 19, Class: 
-	public float DecalMinScreenSizeSTANDARD { get; set; } // Offset: 232, Size: 4, Type: Single, Id: 19, Class: 
-	public float DecalMinScreenSizeKILLCOUNTER { get; set; } // Offset: 236, Size: 4, Type: Single, Id: 19, Class: 
-	public float DecalMinScreenSizeHOLE { get; set; } // Offset: 240, Size: 4, Type: Single, Id: 19, Class: 
-	public float DecalMinScreenSizeCYLINDRICAL { get; set; } // Offset: 244, Size: 4, Type: Single, Id: 19, Class: 
-	public float DecalMinScreenSizeGLOWCYLINDRICAL { get; set; } // Offset: 248, Size: 4, Type: Single, Id: 19, Class: 
-	public float DecalMinScreenSizeGLOWSTANDARD { get; set; } // Offset: 252, Size: 4, Type: Single, Id: 19, Class: 
-	public float DecalMinScreenSizeLOGO { get; set; } // Offset: 256, Size: 4, Type: Single, Id: 19, Class: 
-	public List<IRoot?>? MaterialPrefixes { get; set; } // Offset: 264, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? PatternMaterialPrefixes { get; set; } // Offset: 408, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? AreaShaders { get; set; } // Offset: 552, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DecalShaders { get; set; } // Offset: 696, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? Damage { get; set; } // Offset: 840, Size: 8, Type: Object, Id: 19, Class: EveSOFDataGenericDamage
-	public IRoot? HullDamage { get; set; } // Offset: 848, Size: 8, Type: Object, Id: 19, Class: EveSOFDataGenericHullDamage
-	public IRoot? Swarm { get; set; } // Offset: 856, Size: 8, Type: Object, Id: 19, Class: EveSOFDataGenericSwarm
-	public IRoot? GenericWreckMaterial { get; set; } // Offset: 864, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public EveSOFDataGenericShader? BannerShader { get; set; } // Offset: 872, Size: 480, Type: Collection, Id: 17, Class: EveSOFDataGenericShader
-	public List<IRoot?>? Variants { get; set; } // Offset: 1352, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? VisibilityGroups { get; set; } // Offset: 1496, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? HullCategories { get; set; } // Offset: 1640, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? ResPathDefaultAlliance { get; set; }
+	public string? ResPathDefaultCorp { get; set; }
+	public string? ResPathDefaultCeo { get; set; }
+	public string? ShaderPrefix { get; set; }
+	public string? ShaderPrefixAnimated { get; set; }
+	public string? AreaShaderLocation { get; set; }
+	public string? DecalShaderLocation { get; set; }
+	public float DecalMinScreenSizeSTANDARD { get; set; }
+	public float DecalMinScreenSizeKILLCOUNTER { get; set; }
+	public float DecalMinScreenSizeHOLE { get; set; }
+	public float DecalMinScreenSizeCYLINDRICAL { get; set; }
+	public float DecalMinScreenSizeGLOWCYLINDRICAL { get; set; }
+	public float DecalMinScreenSizeGLOWSTANDARD { get; set; }
+	public float DecalMinScreenSizeLOGO { get; set; }
+	public List<IRoot?>? MaterialPrefixes { get; set; }
+	public List<IRoot?>? PatternMaterialPrefixes { get; set; }
+	public List<IRoot?>? AreaShaders { get; set; }
+	public List<IRoot?>? DecalShaders { get; set; }
+	public IRoot? Damage { get; set; }
+	public IRoot? HullDamage { get; set; }
+	public IRoot? Swarm { get; set; }
+	public IRoot? GenericWreckMaterial { get; set; }
+	public EveSOFDataGenericShader? BannerShader { get; set; }
+	public List<IRoot?>? Variants { get; set; }
+	public List<IRoot?>? VisibilityGroups { get; set; }
+	public List<IRoot?>? HullCategories { get; set; }
 }

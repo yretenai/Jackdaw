@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOF : IRoot {
-	public EveSOFDataMgr? DataMgr { get; set; } // Offset: 8, Size: 1080, Type: Collection, Id: 1, Class: EveSOFDataMgr
-	public bool AllowFileCaching { get; set; } // Offset: 1248, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool EditorMode { get; set; } // Offset: 1249, Size: 1, Type: Boolean, Id: 3, Class: 
+	public EveSOFDataMgr? DataMgr { get; set; }
+	public bool AllowFileCaching { get; set; }
+	public bool EditorMode { get; set; }
 }

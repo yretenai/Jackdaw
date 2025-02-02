@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPFilmGrainEffect : Tr2PPEffect {
-	public bool Colored { get; set; } // Offset: 17, Size: 1, Type: Boolean, Id: 23, Class: 
-	public float ColorAmount { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 23, Class: 
-	public float GrainSize { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 23, Class: 
-	public float Intensity { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 23, Class: 
-	public float GrainDensity { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 23, Class: 
-	public float GrainContrast { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 23, Class: 
-	public float BrightnessModifier { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 23, Class: 
+	public bool Colored { get; set; }
+	public float ColorAmount { get; set; }
+	public float GrainSize { get; set; }
+	public float Intensity { get; set; }
+	public float GrainDensity { get; set; }
+	public float GrainContrast { get; set; }
+	public float BrightnessModifier { get; set; }
 }

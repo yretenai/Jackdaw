@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriViewport : IRoot {
-	public int X { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 19, Class: 
-	public int Y { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 19, Class: 
-	public int Width { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 19, Class: 
-	public int Height { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 19, Class: 
-	public float MinZ { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxZ { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
+	public int X { get; set; }
+	public int Y { get; set; }
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public float MinZ { get; set; }
+	public float MaxZ { get; set; }
 }

@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2BindingVector3 : IRoot {
-	public Vector3 Value { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public Vector3 Value { get; set; }
 }

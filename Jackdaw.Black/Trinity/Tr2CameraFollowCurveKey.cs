@@ -6,18 +6,18 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CameraFollowCurveKey : IRoot, ITr2FollowCurveKey, INotify, IInitialize {
-	public string? Name { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 19, Class: 
-	public float FovMultiplication { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 23, Class: 
-	public float Angle { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 19, Class: 
-	public float AngleZero { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 ObjectBounds { get; set; } // Offset: 44, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public Vector3 Offset { get; set; } // Offset: 56, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float Time { get; set; } // Offset: 68, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 LeftTangent { get; set; } // Offset: 72, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 RightTangent { get; set; } // Offset: 84, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 RotatedLeftTangent { get; set; } // Offset: 96, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 RotatedRightTangent { get; set; } // Offset: 108, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public int Interpolation { get; set; } // Offset: 120, Size: 4, Type: Int, Id: 531, Class: 
-	public Vector3 BoxPosition { get; set; } // Offset: 124, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public bool Enabled { get; set; } // Offset: 152, Size: 1, Type: Boolean, Id: 7, Class: 
+	public string? Name { get; set; }
+	public float FovMultiplication { get; set; }
+	public float Angle { get; set; }
+	public float AngleZero { get; set; }
+	public Vector3 ObjectBounds { get; set; }
+	public Vector3 Offset { get; set; }
+	public float Time { get; set; }
+	public Vector3 LeftTangent { get; set; }
+	public Vector3 RightTangent { get; set; }
+	public Vector3 RotatedLeftTangent { get; set; }
+	public Vector3 RotatedRightTangent { get; set; }
+	public int Interpolation { get; set; }
+	public Vector3 BoxPosition { get; set; }
+	public bool Enabled { get; set; }
 }

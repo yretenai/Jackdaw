@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2VideoDriver : IRoot {
-	public long DriverVersion { get; set; } // Offset: 8, Size: 8, Type: Long, Id: 1, Class: 
-	public string? DriverVersionString { get; set; } // Offset: 16, Size: 32, Type: String, Id: 1, Class: 
-	public string? DriverVendor { get; set; } // Offset: 48, Size: 32, Type: String, Id: 1, Class: 
-	public string? DriverDate { get; set; } // Offset: 80, Size: 32, Type: String, Id: 1, Class: 
-	public bool IsOptimus { get; set; } // Offset: 112, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool IsAmdDynamicSwitchable { get; set; } // Offset: 113, Size: 1, Type: Boolean, Id: 1, Class: 
+	public long DriverVersion { get; set; }
+	public string? DriverVersionString { get; set; }
+	public string? DriverVendor { get; set; }
+	public string? DriverDate { get; set; }
+	public bool IsOptimus { get; set; }
+	public bool IsAmdDynamicSwitchable { get; set; }
 }

@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriEventCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public double Time { get; set; } // Offset: 56, Size: 8, Type: Double, Id: 1, Class: 
-	public float LocalTime { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 1, Class: 
-	[BlackUseNamePool]public string? Value { get; set; } // Offset: 72, Size: 32, Type: WString, Id: 19, Class: 
-	public float Length { get; set; } // Offset: 104, Size: 4, Type: Single, Id: 1, Class: 
-	public int Extrapolation { get; set; } // Offset: 108, Size: 4, Type: Int, Id: 531, Class: 
-	public List<IRoot?>? Keys { get; set; } // Offset: 112, Size: 144, Type: Collection, Id: 24, Class: IList
-	public IRoot? EventListener { get; set; } // Offset: 264, Size: 8, Type: Object, Id: 3, Class: IBlueEventListener
+	public string? Name { get; set; }
+	public double Time { get; set; }
+	public float LocalTime { get; set; }
+	[BlackUseNamePool]public string? Value { get; set; }
+	public float Length { get; set; }
+	public int Extrapolation { get; set; }
+	public List<IRoot?>? Keys { get; set; }
+	public IRoot? EventListener { get; set; }
 }

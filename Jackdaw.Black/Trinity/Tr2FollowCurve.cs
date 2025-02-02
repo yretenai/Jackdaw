@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2FollowCurve : IRoot, ITriVectorFunction, ITriFunction {
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Keys { get; set; } // Offset: 48, Size: 144, Type: Collection, Id: 17, Class: IList
-	public Vector3 CurrentValue { get; set; } // Offset: 192, Size: 12, Type: FloatArray, Id: 1, Class: 
+	public string? Name { get; set; }
+	public List<IRoot?>? Keys { get; set; }
+	public Vector3 CurrentValue { get; set; }
 }

@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2StaticEmitter : IRoot, ITr2GenericEmitter, INotify, IInitialize {
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public string? GeometryResourcePath { get; set; } // Offset: 56, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? GeometryResource { get; set; } // Offset: 88, Size: 8, Type: Object, Id: 1, Class: TriGrannyRes
-	public IRoot? ParticleSystem { get; set; } // Offset: 96, Size: 8, Type: Object, Id: 23, Class: Tr2ParticleSystem
-	public int MeshIndex { get; set; } // Offset: 108, Size: 4, Type: Int, Id: 19, Class: 
+	public string? Name { get; set; }
+	public string? GeometryResourcePath { get; set; }
+	public IRoot? GeometryResource { get; set; }
+	public IRoot? ParticleSystem { get; set; }
+	public int MeshIndex { get; set; }
 }

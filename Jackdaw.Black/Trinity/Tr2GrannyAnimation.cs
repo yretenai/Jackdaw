@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GrannyAnimation : IRoot, IInitialize, ITr2AnimationUpdater {
-	public string? ResPath { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public string? Model { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public string? ResPath_ { get; set; } // Offset: 80, Size: 32, Type: String, Id: 24, Class: 
-	public string? Model_ { get; set; } // Offset: 112, Size: 32, Type: String, Id: 24, Class: 
-	public IRoot? GrannyRes { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 1, Class: TriGrannyRes
-	public GrannyBoneOffset? BoneOffset { get; set; } // Offset: 208, Size: 192, Type: Collection, Id: 1, Class: GrannyBoneOffset
-	public bool DebugRenderSkeleton { get; set; } // Offset: 732, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool DebugRenderJointNames { get; set; } // Offset: 733, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool AnimationEnabled { get; set; } // Offset: 793, Size: 1, Type: Boolean, Id: 3, Class: 
-	public IRoot? EventListener { get; set; } // Offset: 808, Size: 8, Type: Object, Id: 3, Class: IBlueEventListener
+	public string? ResPath { get; set; }
+	public string? Model { get; set; }
+	public string? ResPath_ { get; set; }
+	public string? Model_ { get; set; }
+	public IRoot? GrannyRes { get; set; }
+	public GrannyBoneOffset? BoneOffset { get; set; }
+	public bool DebugRenderSkeleton { get; set; }
+	public bool DebugRenderJointNames { get; set; }
+	public bool AnimationEnabled { get; set; }
+	public IRoot? EventListener { get; set; }
 }

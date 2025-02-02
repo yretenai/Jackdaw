@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataTransform : IRoot {
-	public Vector3 Position { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 20, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Vector3 Scaling { get; set; } // Offset: 36, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public int BoneIndex { get; set; } // Offset: 48, Size: 4, Type: Int, Id: 19, Class: 
+	public Vector3 Position { get; set; }
+	public Vector3 Rotation { get; set; }
+	public Vector3 Scaling { get; set; }
+	public int BoneIndex { get; set; }
 }

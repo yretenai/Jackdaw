@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSpriteSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
-	public bool Display { get; set; } // Offset: 16, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Skinned { get; set; } // Offset: 17, Size: 1, Type: Boolean, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public float Intensity { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 19, Class: 
-	public List<IRoot?>? Sprites { get; set; } // Offset: 64, Size: 144, Type: Collection, Id: 21, Class: IList
-	public IRoot? Effect { get; set; } // Offset: 208, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
+	public bool Display { get; set; }
+	public bool Skinned { get; set; }
+	public string? Name { get; set; }
+	public float Intensity { get; set; }
+	public List<IRoot?>? Sprites { get; set; }
+	public IRoot? Effect { get; set; }
 }

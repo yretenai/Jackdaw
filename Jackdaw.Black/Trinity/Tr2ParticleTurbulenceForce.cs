@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ParticleTurbulenceForce : IRoot, ITr2ParticleForce {
-	public Vector3 Amplitude { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Frequency { get; set; } // Offset: 20, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public int NoiseLevel { get; set; } // Offset: 36, Size: 4, Type: Int, Id: 19, Class: 
-	public float NoiseRatio { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 19, Class: 
+	public Vector3 Amplitude { get; set; }
+	public Vector3 Frequency { get; set; }
+	public int NoiseLevel { get; set; }
+	public float NoiseRatio { get; set; }
 }

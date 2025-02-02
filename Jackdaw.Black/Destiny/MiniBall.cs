@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class MiniBall : IRoot {
-	public long Id { get; set; } // Offset: 8, Size: 8, Type: Long, Id: 1, Class: 
-	public float Radius { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 23, Class: 
-	public double X { get; set; } // Offset: 24, Size: 8, Type: Double, Id: 23, Class: 
-	public double Y { get; set; } // Offset: 32, Size: 8, Type: Double, Id: 23, Class: 
-	public double Z { get; set; } // Offset: 40, Size: 8, Type: Double, Id: 23, Class: 
+	public long Id { get; set; }
+	public float Radius { get; set; }
+	public double X { get; set; }
+	public double Y { get; set; }
+	public double Z { get; set; }
 }

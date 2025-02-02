@@ -6,44 +6,44 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHull : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? Description { get; set; } // Offset: 40, Size: 32, Type: String, Id: 19, Class: 
-	public string? Category { get; set; } // Offset: 72, Size: 8, Type: UTFString, Id: 19, Class: 
-	public int BuildClass { get; set; } // Offset: 80, Size: 4, Type: Int, Id: 531, Class: 
-	public string? GeometryResFilePath { get; set; } // Offset: 88, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 BoundingSphere { get; set; } // Offset: 120, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public Vector3 ShapeEllipsoidCenter { get; set; } // Offset: 136, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 ShapeEllipsoidRadius { get; set; } // Offset: 148, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public bool IsSkinned { get; set; } // Offset: 160, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool EnableDynamicBoundingSphere { get; set; } // Offset: 161, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool CastShadow { get; set; } // Offset: 162, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Sof6 { get; set; } // Offset: 163, Size: 1, Type: Boolean, Id: 19, Class: 
-	public List<IRoot?>? OpaqueAreas { get; set; } // Offset: 168, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DecalAreas { get; set; } // Offset: 312, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? TransparentAreas { get; set; } // Offset: 456, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? AdditiveAreas { get; set; } // Offset: 600, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DistortionAreas { get; set; } // Offset: 744, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? DefaultPattern { get; set; } // Offset: 888, Size: 8, Type: Object, Id: 19, Class: EveSOFDataPatternPerHull
-	public List<IRoot?>? SpriteSets { get; set; } // Offset: 896, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? SpotlightSets { get; set; } // Offset: 1040, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? PlaneSets { get; set; } // Offset: 1184, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? SpriteLineSets { get; set; } // Offset: 1328, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? HazeSets { get; set; } // Offset: 1472, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Banners { get; set; } // Offset: 1616, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? BannerSets { get; set; } // Offset: 1760, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DecalSets { get; set; } // Offset: 1904, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? LightSets { get; set; } // Offset: 2048, Size: 144, Type: Collection, Id: 17, Class: IList
-	public int ImpactEffectType { get; set; } // Offset: 2192, Size: 4, Type: Int, Id: 531, Class: 
-	public IRoot? Booster { get; set; } // Offset: 2200, Size: 8, Type: Object, Id: 19, Class: EveSOFDataHullBooster
-	public Vector3 AudioPosition { get; set; } // Offset: 2208, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public List<IRoot?>? LocatorTurrets { get; set; } // Offset: 2224, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? LocatorSets { get; set; } // Offset: 2368, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Children { get; set; } // Offset: 2512, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ChildSets { get; set; } // Offset: 2656, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? InstancedMeshes { get; set; } // Offset: 2800, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Animations { get; set; } // Offset: 2944, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? SoundEmitters { get; set; } // Offset: 3088, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Controllers { get; set; } // Offset: 3232, Size: 144, Type: Collection, Id: 17, Class: IList
-	public string? ModelRotationCurvePath { get; set; } // Offset: 3376, Size: 32, Type: String, Id: 19, Class: 
-	public string? ModelTranslationCurvePath { get; set; } // Offset: 3408, Size: 32, Type: String, Id: 19, Class: 
+	public string? Name { get; set; }
+	public string? Description { get; set; }
+	public string? Category { get; set; }
+	public int BuildClass { get; set; }
+	public string? GeometryResFilePath { get; set; }
+	public Vector3 BoundingSphere { get; set; }
+	public Vector3 ShapeEllipsoidCenter { get; set; }
+	public Vector3 ShapeEllipsoidRadius { get; set; }
+	public bool IsSkinned { get; set; }
+	public bool EnableDynamicBoundingSphere { get; set; }
+	public bool CastShadow { get; set; }
+	public bool Sof6 { get; set; }
+	public List<IRoot?>? OpaqueAreas { get; set; }
+	public List<IRoot?>? DecalAreas { get; set; }
+	public List<IRoot?>? TransparentAreas { get; set; }
+	public List<IRoot?>? AdditiveAreas { get; set; }
+	public List<IRoot?>? DistortionAreas { get; set; }
+	public IRoot? DefaultPattern { get; set; }
+	public List<IRoot?>? SpriteSets { get; set; }
+	public List<IRoot?>? SpotlightSets { get; set; }
+	public List<IRoot?>? PlaneSets { get; set; }
+	public List<IRoot?>? SpriteLineSets { get; set; }
+	public List<IRoot?>? HazeSets { get; set; }
+	public List<IRoot?>? Banners { get; set; }
+	public List<IRoot?>? BannerSets { get; set; }
+	public List<IRoot?>? DecalSets { get; set; }
+	public List<IRoot?>? LightSets { get; set; }
+	public int ImpactEffectType { get; set; }
+	public IRoot? Booster { get; set; }
+	public Vector3 AudioPosition { get; set; }
+	public List<IRoot?>? LocatorTurrets { get; set; }
+	public List<IRoot?>? LocatorSets { get; set; }
+	public List<IRoot?>? Children { get; set; }
+	public List<IRoot?>? ChildSets { get; set; }
+	public List<IRoot?>? InstancedMeshes { get; set; }
+	public List<IRoot?>? Animations { get; set; }
+	public List<IRoot?>? SoundEmitters { get; set; }
+	public List<IRoot?>? Controllers { get; set; }
+	public string? ModelRotationCurvePath { get; set; }
+	public string? ModelTranslationCurvePath { get; set; }
 }

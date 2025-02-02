@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2DistanceTracker : IRoot, ITriFunction, INotify {
-	[BlackUseNamePool]public string? Name { get; set; } // Offset: 16, Size: 32, Type: WString, Id: 19, Class: 
-	public bool SignedDistance { get; set; } // Offset: 48, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool DistanceToClosest { get; set; } // Offset: 49, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float Value { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 1, Class: 
-	public Vector3 Direction { get; set; } // Offset: 56, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public IRoot? TargetObject { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 23, Class: ITriVectorFunction
-	public IRoot? SourceObject { get; set; } // Offset: 80, Size: 8, Type: Object, Id: 23, Class: ITriVectorFunction
-	public Vector3 TargetPosition { get; set; } // Offset: 88, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 SourcePosition { get; set; } // Offset: 100, Size: 12, Type: FloatArray, Id: 19, Class: 
+	[BlackUseNamePool]public string? Name { get; set; }
+	public bool SignedDistance { get; set; }
+	public bool DistanceToClosest { get; set; }
+	public float Value { get; set; }
+	public Vector3 Direction { get; set; }
+	public IRoot? TargetObject { get; set; }
+	public IRoot? SourceObject { get; set; }
+	public Vector3 TargetPosition { get; set; }
+	public Vector3 SourcePosition { get; set; }
 }

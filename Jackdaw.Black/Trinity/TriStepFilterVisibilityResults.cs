@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepFilterVisibilityResults : TriRenderStep {
-	public int EventFilter { get; set; } // Offset: 136, Size: 4, Type: Int, Id: 19, Class: 
-	public int FilterType { get; set; } // Offset: 140, Size: 4, Type: Int, Id: 531, Class: 
-	public List<IRoot?>? Objects { get; set; } // Offset: 144, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? InputResults { get; set; } // Offset: 288, Size: 8, Type: Object, Id: 19, Class: Tr2VisibilityResults
-	public IRoot? OutputResults { get; set; } // Offset: 296, Size: 8, Type: Object, Id: 19, Class: Tr2VisibilityResults
+	public int EventFilter { get; set; }
+	public int FilterType { get; set; }
+	public List<IRoot?>? Objects { get; set; }
+	public IRoot? InputResults { get; set; }
+	public IRoot? OutputResults { get; set; }
 }

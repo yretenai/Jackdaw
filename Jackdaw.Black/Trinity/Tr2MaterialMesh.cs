@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2MaterialMesh : IRoot {
-	[BlackExperimental]public Dictionary<IRoot, IRoot?>? Areas { get; set; } // Offset: 8, Size: 320, Type: Collection, Id: 17, Class: IBlueDict
+	[BlackExperimental]public Dictionary<IRoot, IRoot?>? Areas { get; set; }
 }

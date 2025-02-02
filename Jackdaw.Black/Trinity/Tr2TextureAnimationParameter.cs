@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TextureAnimationParameter : IRoot, ITriEffectResourceParameter, INotify {
-	public string? Name { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? Channel { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 19, Class: 
-	public IRoot? Animation { get; set; } // Offset: 32, Size: 8, Type: Object, Id: 23, Class: Tr2TextureAnimation
+	public string? Name { get; set; }
+	public string? Channel { get; set; }
+	public IRoot? Animation { get; set; }
 }

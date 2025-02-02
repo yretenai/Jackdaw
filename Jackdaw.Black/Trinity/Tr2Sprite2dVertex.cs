@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dVertex : IRoot {
-	public IRoot? Color { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: Color
-	public Vector3 Position { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public IRoot? Color { get; set; }
+	public Vector3 Position { get; set; }
 }

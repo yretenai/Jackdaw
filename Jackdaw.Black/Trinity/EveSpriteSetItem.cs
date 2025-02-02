@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSpriteSetItem : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public Vector3 Position { get; set; } // Offset: 16, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public float BlinkRate { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
-	public float BlinkPhase { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinScale { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxScale { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 19, Class: 
-	public float Falloff { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 Color { get; set; } // Offset: 48, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public Vector3 WarpColor { get; set; } // Offset: 64, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public int BoneIndex { get; set; } // Offset: 80, Size: 4, Type: Int, Id: 19, Class: 
+	public string? Name { get; set; }
+	public Vector3 Position { get; set; }
+	public float BlinkRate { get; set; }
+	public float BlinkPhase { get; set; }
+	public float MinScale { get; set; }
+	public float MaxScale { get; set; }
+	public float Falloff { get; set; }
+	public Vector3 Color { get; set; }
+	public Vector3 WarpColor { get; set; }
+	public int BoneIndex { get; set; }
 }

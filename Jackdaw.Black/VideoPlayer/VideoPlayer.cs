@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class VideoPlayer : IRoot {
-	public int State { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public bool Is_paused { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public IRoot? Bgra_texture { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: ITriTextureRes
-	public long Media_time { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 1, Class: 
-	public long Duration { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 1, Class: 
-	public long Downloaded_media_time { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 1, Class: 
-	public IRoot? Audio_sink { get; set; } // Offset: 32, Size: 8, Type: Object, Id: 1, Class: IAudioSinkExposed
+	public int State { get; set; }
+	public bool Is_paused { get; set; }
+	public IRoot? Bgra_texture { get; set; }
+	public long Media_time { get; set; }
+	public long Duration { get; set; }
+	public long Downloaded_media_time { get; set; }
+	public IRoot? Audio_sink { get; set; }
 }

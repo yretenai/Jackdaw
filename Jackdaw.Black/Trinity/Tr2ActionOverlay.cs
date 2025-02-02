@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionOverlay : IRoot, ITr2ControllerAction {
-	public string? Path { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? TargetAnotherOwner { get; set; } // Offset: 48, Size: 8, Type: UTFString, Id: 19, Class: 
-	public bool AddOnStart { get; set; } // Offset: 56, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool RemoveOnStop { get; set; } // Offset: 57, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Path { get; set; }
+	public string? TargetAnotherOwner { get; set; }
+	public bool AddOnStart { get; set; }
+	public bool RemoveOnStop { get; set; }
 }

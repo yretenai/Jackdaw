@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dLineTrace : Tr2TexturedSpriteObject {
-	public List<IRoot?>? Vertices { get; set; } // Offset: 264, Size: 144, Type: Collection, Id: 5, Class: IList
-	public float LineWidth { get; set; } // Offset: 408, Size: 4, Type: Single, Id: 7, Class: 
-	public float TextureWidth { get; set; } // Offset: 412, Size: 4, Type: Single, Id: 7, Class: 
-	public float TextureOffset { get; set; } // Offset: 416, Size: 4, Type: Single, Id: 7, Class: 
-	public int CornerType { get; set; } // Offset: 428, Size: 4, Type: Int, Id: 7, Class: 
-	public float Start { get; set; } // Offset: 432, Size: 4, Type: Single, Id: 7, Class: 
-	public float End { get; set; } // Offset: 436, Size: 4, Type: Single, Id: 7, Class: 
-	public bool IsLoop { get; set; } // Offset: 440, Size: 1, Type: Boolean, Id: 7, Class: 
+	public List<IRoot?>? Vertices { get; set; }
+	public float LineWidth { get; set; }
+	public float TextureWidth { get; set; }
+	public float TextureOffset { get; set; }
+	public int CornerType { get; set; }
+	public float Start { get; set; }
+	public float End { get; set; }
+	public bool IsLoop { get; set; }
 }

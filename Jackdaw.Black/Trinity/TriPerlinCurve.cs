@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriPerlinCurve : IRoot, ITriFunction, ITriScalarFunction {
-	[BlackUseNamePool]public string? Name { get; set; } // Offset: 8, Size: 32, Type: WString, Id: 19, Class: 
-	public float Value { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public float Speed { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 19, Class: 
-	public float Alpha { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 19, Class: 
-	public float Beta { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 19, Class: 
-	public float Offset { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 19, Class: 
-	public float Scale { get; set; } // Offset: 68, Size: 4, Type: Single, Id: 19, Class: 
-	public int N { get; set; } // Offset: 84, Size: 4, Type: Int, Id: 19, Class: 
+	[BlackUseNamePool]public string? Name { get; set; }
+	public float Value { get; set; }
+	public float Speed { get; set; }
+	public float Alpha { get; set; }
+	public float Beta { get; set; }
+	public float Offset { get; set; }
+	public float Scale { get; set; }
+	public int N { get; set; }
 }

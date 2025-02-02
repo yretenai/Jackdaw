@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataGenericString : IRoot {
-	public string? Str { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
+	public string? Str { get; set; }
 }

@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dFrame : Tr2TexturedSpriteObject {
-	public int CornerSize { get; set; } // Offset: 256, Size: 4, Type: Int, Id: 7, Class: 
-	public float CornerScale { get; set; } // Offset: 260, Size: 4, Type: Single, Id: 7, Class: 
-	public int Offset { get; set; } // Offset: 264, Size: 4, Type: Int, Id: 7, Class: 
-	public bool FillCenter { get; set; } // Offset: 276, Size: 1, Type: Boolean, Id: 7, Class: 
+	public int CornerSize { get; set; }
+	public float CornerScale { get; set; }
+	public int Offset { get; set; }
+	public bool FillCenter { get; set; }
 }

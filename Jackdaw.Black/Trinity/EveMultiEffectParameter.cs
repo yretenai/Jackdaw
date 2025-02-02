@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveMultiEffectParameter : IRoot, INotify {
-	public bool IsValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public IRoot? Object { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 7, Class: 
-	public int Type { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 515, Class: 
+	public bool IsValid { get; set; }
+	public string? Name { get; set; }
+	public IRoot? Object { get; set; }
+	public int Type { get; set; }
 }

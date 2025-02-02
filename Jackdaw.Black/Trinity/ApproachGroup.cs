@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class ApproachGroup : IRoot, IBehavior {
-	public bool Enabled { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
-	public int FramesBetweenUpdates { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 19, Class: 
-	public float BehaviorWeight { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public float VisionRange { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 19, Class: 
-	public int BehaviorPriority { get; set; } // Offset: 56, Size: 4, Type: Int, Id: 535, Class: 
+	public bool Enabled { get; set; }
+	public int FramesBetweenUpdates { get; set; }
+	public float BehaviorWeight { get; set; }
+	public float VisionRange { get; set; }
+	public int BehaviorPriority { get; set; }
 }

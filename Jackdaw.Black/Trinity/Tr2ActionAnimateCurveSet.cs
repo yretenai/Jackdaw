@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionAnimateCurveSet : IRoot, ITr2ControllerAction, ITr2Updateable, INotify {
-	public bool IsExpressionValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public string? Value { get; set; } // Offset: 24, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? CurveSet { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 19, Class: TriCurveSet
+	public bool IsExpressionValid { get; set; }
+	public string? Value { get; set; }
+	public IRoot? CurveSet { get; set; }
 }

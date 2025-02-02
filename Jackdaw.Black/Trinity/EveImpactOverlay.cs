@@ -6,30 +6,30 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveImpactOverlay : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 16, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int Configuration { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 1, Class: 
-	public int ImpactDataNextIdx { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 1, Class: 
-	public bool DebugForceSpawnDebris { get; set; } // Offset: 28, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int Seed { get; set; } // Offset: 36, Size: 4, Type: Int, Id: 1, Class: 
-	public float RenderPriority { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 1, Class: 
-	public float OverallShieldImpact { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 3, Class: 
-	public int DataTextureBlockID { get; set; } // Offset: 144, Size: 4, Type: Int, Id: 1, Class: 
-	public IRoot? Mesh { get; set; } // Offset: 184, Size: 8, Type: Object, Id: 19, Class: Tr2MeshBase
-	public bool ShieldIsEllipsoid { get; set; } // Offset: 192, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int MaxShieldImpacts { get; set; } // Offset: 196, Size: 4, Type: Int, Id: 1, Class: 
-	public float ShieldImpactColorFade { get; set; } // Offset: 200, Size: 4, Type: Single, Id: 3, Class: 
-	public float ShieldImpactParentSize { get; set; } // Offset: 204, Size: 4, Type: Single, Id: 1, Class: 
-	public IRoot? ArmorDamageShader { get; set; } // Offset: 208, Size: 8, Type: Object, Id: 19, Class: Tr2Effect
-	public long ArmorImpactGoalCount { get; set; } // Offset: 216, Size: 8, Type: Long, Id: 1, Class: 
-	public float ArmorImpactParentSize { get; set; } // Offset: 224, Size: 4, Type: Single, Id: 1, Class: 
-	public IRoot? ArmorImpactEmitter { get; set; } // Offset: 232, Size: 8, Type: Object, Id: 19, Class: Tr2GpuUniqueEmitter
-	public float HullDamageFactor { get; set; } // Offset: 240, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? HullDamageFlickerCurve { get; set; } // Offset: 248, Size: 8, Type: Object, Id: 19, Class: TriPerlinCurve
-	public IRoot? HullImpactEmitter { get; set; } // Offset: 256, Size: 8, Type: Object, Id: 19, Class: Tr2GpuUniqueEmitter
-	public IRoot? ShieldHardening { get; set; } // Offset: 264, Size: 8, Type: Object, Id: 3, Class: Tr2ScalarFader
-	public IRoot? ShieldBoosting { get; set; } // Offset: 272, Size: 8, Type: Object, Id: 3, Class: Tr2ScalarFader
-	public IRoot? ArmorRepairing { get; set; } // Offset: 280, Size: 8, Type: Object, Id: 3, Class: Tr2ScalarFader
-	public IRoot? ArmorHardening { get; set; } // Offset: 288, Size: 8, Type: Object, Id: 3, Class: Tr2ScalarFader
-	public IRoot? HullRepairing { get; set; } // Offset: 296, Size: 8, Type: Object, Id: 3, Class: Tr2ScalarFader
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public int Configuration { get; set; }
+	public int ImpactDataNextIdx { get; set; }
+	public bool DebugForceSpawnDebris { get; set; }
+	public int Seed { get; set; }
+	public float RenderPriority { get; set; }
+	public float OverallShieldImpact { get; set; }
+	public int DataTextureBlockID { get; set; }
+	public IRoot? Mesh { get; set; }
+	public bool ShieldIsEllipsoid { get; set; }
+	public int MaxShieldImpacts { get; set; }
+	public float ShieldImpactColorFade { get; set; }
+	public float ShieldImpactParentSize { get; set; }
+	public IRoot? ArmorDamageShader { get; set; }
+	public long ArmorImpactGoalCount { get; set; }
+	public float ArmorImpactParentSize { get; set; }
+	public IRoot? ArmorImpactEmitter { get; set; }
+	public float HullDamageFactor { get; set; }
+	public IRoot? HullDamageFlickerCurve { get; set; }
+	public IRoot? HullImpactEmitter { get; set; }
+	public IRoot? ShieldHardening { get; set; }
+	public IRoot? ShieldBoosting { get; set; }
+	public IRoot? ArmorRepairing { get; set; }
+	public IRoot? ArmorHardening { get; set; }
+	public IRoot? HullRepairing { get; set; }
 }

@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2LineGraph : IRoot, ICcpStatisticsAccumulator {
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 Color { get; set; } // Offset: 140, Size: 16, Type: FloatArray, Id: 19, Class: Color
+	public string? Name { get; set; }
+	public Vector3 Color { get; set; }
 }

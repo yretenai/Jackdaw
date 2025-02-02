@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2AtlasTexture : BlueAsyncRes, IBlueResource, ICacheable {
-	public bool IsStandAlone { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public IRoot? TextureRes { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: TriTextureRes
-	public string? Name { get; set; } // Offset: 240, Size: 32, Type: String, Id: 19, Class: 
-	public string? ResPath { get; set; } // Offset: 272, Size: 32, Type: String, Id: 1, Class: 
-	public int X { get; set; } // Offset: 360, Size: 4, Type: Int, Id: 1, Class: 
-	public int Y { get; set; } // Offset: 364, Size: 4, Type: Int, Id: 1, Class: 
-	public int Width { get; set; } // Offset: 368, Size: 4, Type: Int, Id: 1, Class: 
-	public int Height { get; set; } // Offset: 372, Size: 4, Type: Int, Id: 1, Class: 
-	public int AtlasWidth { get; set; } // Offset: 384, Size: 4, Type: Int, Id: 1, Class: 
-	public int AtlasHeight { get; set; } // Offset: 388, Size: 4, Type: Int, Id: 1, Class: 
-	public IRoot? Atlas { get; set; } // Offset: 416, Size: 8, Type: Object, Id: 1, Class: Tr2TextureAtlas
+	public bool IsStandAlone { get; set; }
+	public IRoot? TextureRes { get; set; }
+	public string? Name { get; set; }
+	public string? ResPath { get; set; }
+	public int X { get; set; }
+	public int Y { get; set; }
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public int AtlasWidth { get; set; }
+	public int AtlasHeight { get; set; }
+	public IRoot? Atlas { get; set; }
 }

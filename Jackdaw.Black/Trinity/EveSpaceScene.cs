@@ -6,76 +6,76 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateable, IInitialize, INotify, ITr2NamedPredicate {
-	public IRoot? CameraAttachments { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 1, Class: IRoot
-	public IRoot? ShLightingManager { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: Tr2ShLightingManager
-	public IRoot? QuadRenderer { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 1, Class: Tr2QuadRenderer
-	public IRoot? GpuParticleSystem { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: Tr2GpuParticleSystem
-	public bool Display { get; set; } // Offset: 864, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Update { get; set; } // Offset: 865, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool EnableShadows { get; set; } // Offset: 866, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool DisplayShadowMap { get; set; } // Offset: 867, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool BackgroundRenderingEnabled { get; set; } // Offset: 868, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float PlanetScale { get; set; } // Offset: 5544, Size: 4, Type: Single, Id: 19, Class: 
-	public float PlanetCameraScale { get; set; } // Offset: 5548, Size: 4, Type: Single, Id: 19, Class: 
-	public IRoot? CascadedShadowMap { get; set; } // Offset: 5552, Size: 8, Type: Object, Id: 19, Class: Tr2ShadowMap
-	public List<IRoot?>? BackgroundObjects { get; set; } // Offset: 5560, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Planets { get; set; } // Offset: 5704, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Objects { get; set; } // Offset: 5848, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? UiObjects { get; set; } // Offset: 5992, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? WarpTunnel { get; set; } // Offset: 6136, Size: 8, Type: Object, Id: 3, Class: IEveSpaceObject2
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 6144, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Lensflares { get; set; } // Offset: 6288, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DistanceFields { get; set; } // Offset: 6544, Size: 144, Type: Collection, Id: 1, Class: IList
-	public IRoot? BackgroundEffect { get; set; } // Offset: 6776, Size: 8, Type: Object, Id: 19, Class: Tr2Effect
-	public Vector3 EnvMapRotation { get; set; } // Offset: 6784, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public string? EnvMapResPath { get; set; } // Offset: 6800, Size: 32, Type: String, Id: 23, Class: 
-	public string? EnvMap1ResPath { get; set; } // Offset: 6848, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? EnvMap1 { get; set; } // Offset: 6880, Size: 8, Type: Object, Id: 1, Class: ITr2TextureProvider
-	public string? EnvMap2ResPath { get; set; } // Offset: 6888, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? EnvMap2 { get; set; } // Offset: 6920, Size: 8, Type: Object, Id: 1, Class: ITr2TextureProvider
-	public string? EnvMap3ResPath { get; set; } // Offset: 6928, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? EnvMap3 { get; set; } // Offset: 6960, Size: 8, Type: Object, Id: 1, Class: ITr2TextureProvider
-	public string? LowQualityNebulaResPath { get; set; } // Offset: 6968, Size: 32, Type: String, Id: 23, Class: 
-	public string? LowQualityNebulaMixResPath { get; set; } // Offset: 7008, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? ColorTexture { get; set; } // Offset: 7104, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public IRoot? OpaqueColorTexture { get; set; } // Offset: 7112, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public IRoot? DepthTexture { get; set; } // Offset: 7120, Size: 8, Type: Object, Id: 3, Class: Tr2DepthStencil
-	public IRoot? NormalTexture { get; set; } // Offset: 7144, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public IRoot? SSAO { get; set; } // Offset: 7152, Size: 8, Type: Object, Id: 1, Class: Tr2SSAO
-	public IRoot? DistortionTexture { get; set; } // Offset: 7160, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public IRoot? VelocityMap { get; set; } // Offset: 7168, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public Vector3 SunDirection { get; set; } // Offset: 7176, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 SunDiffuseColor { get; set; } // Offset: 7208, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public Vector3 SunDiffuseColorWithDynamicLights { get; set; } // Offset: 7224, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public bool UseSunDiffuseColorWithDynamicLights { get; set; } // Offset: 7240, Size: 1, Type: Boolean, Id: 19, Class: 
-	public Vector3 AmbientColor { get; set; } // Offset: 7244, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public Vector3 FogColor { get; set; } // Offset: 7260, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public float NebulaIntensity { get; set; } // Offset: 7276, Size: 4, Type: Single, Id: 19, Class: 
-	public float FogStart { get; set; } // Offset: 7288, Size: 4, Type: Single, Id: 19, Class: 
-	public float FogEnd { get; set; } // Offset: 7292, Size: 4, Type: Single, Id: 19, Class: 
-	public float FogMax { get; set; } // Offset: 7296, Size: 4, Type: Single, Id: 19, Class: 
-	public int VisualizeMethod { get; set; } // Offset: 9444, Size: 4, Type: Int, Id: 515, Class: 
-	public float PerFrameDebug { get; set; } // Offset: 9448, Size: 4, Type: Single, Id: 3, Class: 
-	public List<IRoot?>? StaticParticles { get; set; } // Offset: 9456, Size: 144, Type: Collection, Id: 1, Class: IList
-	public IRoot? DataTextureMgr { get; set; } // Offset: 9600, Size: 8, Type: Object, Id: 1, Class: Tr2DataTextureManager
-	public IRoot? SunBall { get; set; } // Offset: 9608, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public IRoot? Ballpark { get; set; } // Offset: 9616, Size: 8, Type: Object, Id: 3, Class: IEveBallpark
-	public List<IRoot?>? ExternalParameters { get; set; } // Offset: 9624, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? DebugRenderer { get; set; } // Offset: 9768, Size: 8, Type: Object, Id: 3, Class: Tr2DebugRenderer
-	public long UpdateTime { get; set; } // Offset: 9776, Size: 8, Type: Long, Id: 1, Class: 
-	public IRoot? Starfield { get; set; } // Offset: 9896, Size: 8, Type: Object, Id: 19, Class: EveStarfield
-	public int TaaSubpixelPattern { get; set; } // Offset: 10024, Size: 4, Type: Int, Id: 3, Class: 
-	public float PixelOffsetScale { get; set; } // Offset: 10112, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? ImpostorManager { get; set; } // Offset: 10120, Size: 8, Type: Object, Id: 3, Class: Tr2ImpostorManager
-	public IRoot? Postprocess { get; set; } // Offset: 10136, Size: 8, Type: Object, Id: 19, Class: Tr2PostProcess2
-	public IRoot? ReflectionProbe { get; set; } // Offset: 10144, Size: 8, Type: Object, Id: 7, Class: Tr2ReflectionProbe
-	public IRoot? VirtualCameraSystem { get; set; } // Offset: 10152, Size: 8, Type: Object, Id: 19, Class: EveVirtualCameraSystem
-	public float ReflectionIntensity { get; set; } // Offset: 10160, Size: 4, Type: Single, Id: 23, Class: 
-	public float ReflectionBackLightingContrast { get; set; } // Offset: 10164, Size: 4, Type: Single, Id: 23, Class: 
-	public Vector3 ReflectionBackLightingColor { get; set; } // Offset: 10168, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public string? Name { get; set; } // Offset: 10184, Size: 8, Type: UTFString, Id: 19, Class: 
-	public IRoot? ComponentRegistry { get; set; } // Offset: 10192, Size: 8, Type: Object, Id: 1, Class: EveComponentRegistry
-	public IRoot? VolumetricsRenderer { get; set; } // Offset: 10200, Size: 8, Type: Object, Id: 1, Class: Tr2VolumetricsRenderer
-	public bool DynamicObjectReflectionEnabled { get; set; } // Offset: 10208, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool FreezeFrustum { get; set; } // Offset: 14052, Size: 1, Type: Boolean, Id: 19, Class: 
+	public IRoot? CameraAttachments { get; set; }
+	public IRoot? ShLightingManager { get; set; }
+	public IRoot? QuadRenderer { get; set; }
+	public IRoot? GpuParticleSystem { get; set; }
+	public bool Display { get; set; }
+	public bool Update { get; set; }
+	public bool EnableShadows { get; set; }
+	public bool DisplayShadowMap { get; set; }
+	public bool BackgroundRenderingEnabled { get; set; }
+	public float PlanetScale { get; set; }
+	public float PlanetCameraScale { get; set; }
+	public IRoot? CascadedShadowMap { get; set; }
+	public List<IRoot?>? BackgroundObjects { get; set; }
+	public List<IRoot?>? Planets { get; set; }
+	public List<IRoot?>? Objects { get; set; }
+	public List<IRoot?>? UiObjects { get; set; }
+	public IRoot? WarpTunnel { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
+	public List<IRoot?>? Lensflares { get; set; }
+	public List<IRoot?>? DistanceFields { get; set; }
+	public IRoot? BackgroundEffect { get; set; }
+	public Vector3 EnvMapRotation { get; set; }
+	public string? EnvMapResPath { get; set; }
+	public string? EnvMap1ResPath { get; set; }
+	public IRoot? EnvMap1 { get; set; }
+	public string? EnvMap2ResPath { get; set; }
+	public IRoot? EnvMap2 { get; set; }
+	public string? EnvMap3ResPath { get; set; }
+	public IRoot? EnvMap3 { get; set; }
+	public string? LowQualityNebulaResPath { get; set; }
+	public string? LowQualityNebulaMixResPath { get; set; }
+	public IRoot? ColorTexture { get; set; }
+	public IRoot? OpaqueColorTexture { get; set; }
+	public IRoot? DepthTexture { get; set; }
+	public IRoot? NormalTexture { get; set; }
+	public IRoot? SSAO { get; set; }
+	public IRoot? DistortionTexture { get; set; }
+	public IRoot? VelocityMap { get; set; }
+	public Vector3 SunDirection { get; set; }
+	public Vector3 SunDiffuseColor { get; set; }
+	public Vector3 SunDiffuseColorWithDynamicLights { get; set; }
+	public bool UseSunDiffuseColorWithDynamicLights { get; set; }
+	public Vector3 AmbientColor { get; set; }
+	public Vector3 FogColor { get; set; }
+	public float NebulaIntensity { get; set; }
+	public float FogStart { get; set; }
+	public float FogEnd { get; set; }
+	public float FogMax { get; set; }
+	public int VisualizeMethod { get; set; }
+	public float PerFrameDebug { get; set; }
+	public List<IRoot?>? StaticParticles { get; set; }
+	public IRoot? DataTextureMgr { get; set; }
+	public IRoot? SunBall { get; set; }
+	public IRoot? Ballpark { get; set; }
+	public List<IRoot?>? ExternalParameters { get; set; }
+	public IRoot? DebugRenderer { get; set; }
+	public long UpdateTime { get; set; }
+	public IRoot? Starfield { get; set; }
+	public int TaaSubpixelPattern { get; set; }
+	public float PixelOffsetScale { get; set; }
+	public IRoot? ImpostorManager { get; set; }
+	public IRoot? Postprocess { get; set; }
+	public IRoot? ReflectionProbe { get; set; }
+	public IRoot? VirtualCameraSystem { get; set; }
+	public float ReflectionIntensity { get; set; }
+	public float ReflectionBackLightingContrast { get; set; }
+	public Vector3 ReflectionBackLightingColor { get; set; }
+	public string? Name { get; set; }
+	public IRoot? ComponentRegistry { get; set; }
+	public IRoot? VolumetricsRenderer { get; set; }
+	public bool DynamicObjectReflectionEnabled { get; set; }
+	public bool FreezeFrustum { get; set; }
 }

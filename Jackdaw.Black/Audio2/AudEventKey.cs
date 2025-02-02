@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class AudEventKey : IRoot {
-	public float Time { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	[BlackUseNamePool]public string? Value { get; set; } // Offset: 16, Size: 32, Type: WString, Id: 19, Class: 
+	public float Time { get; set; }
+	[BlackUseNamePool]public string? Value { get; set; }
 }

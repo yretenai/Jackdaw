@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullArea : IRoot {
-	public int Index { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 19, Class: 
-	public int Count { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? Shader { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 19, Class: 
-	public int BlockedMaterials { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 19, Class: 
-	public int AreaType { get; set; } // Offset: 36, Size: 4, Type: Int, Id: 531, Class: 
-	public List<IRoot?>? Textures { get; set; } // Offset: 40, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Parameters { get; set; } // Offset: 184, Size: 144, Type: Collection, Id: 17, Class: IList
+	public int Index { get; set; }
+	public int Count { get; set; }
+	public string? Name { get; set; }
+	public string? Shader { get; set; }
+	public int BlockedMaterials { get; set; }
+	public int AreaType { get; set; }
+	public List<IRoot?>? Textures { get; set; }
+	public List<IRoot?>? Parameters { get; set; }
 }

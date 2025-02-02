@@ -6,24 +6,24 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveStretch3 : IRoot, INotify, IListNotify, IInitialize, IEveSpaceObject2, IEveFiringEffectElement, ITr2ControllerOwner, ITr2CurveSetOwner, ITr2DynamicBindingOwner, ITr2SoundEmitterOwner, ITr2LightOwner {
-	public IRoot? SourceSpaceObject { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: IEveSpaceObject2
-	public IRoot? DestSpaceObject { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: IEveSpaceObject2
-	public string? Name { get; set; } // Offset: 88, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 120, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Update { get; set; } // Offset: 121, Size: 1, Type: Boolean, Id: 19, Class: 
-	public Vector3 SourcePosition { get; set; } // Offset: 128, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 DestinationPosition { get; set; } // Offset: 140, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public IRoot? Source { get; set; } // Offset: 152, Size: 8, Type: Object, Id: 23, Class: ITriVectorFunction
-	public IRoot? Dest { get; set; } // Offset: 160, Size: 8, Type: Object, Id: 23, Class: ITriVectorFunction
-	public IRoot? SourceObject { get; set; } // Offset: 208, Size: 8, Type: Object, Id: 19, Class: IEveSpaceObjectChild
-	public IRoot? DestObject { get; set; } // Offset: 216, Size: 8, Type: Object, Id: 19, Class: IEveSpaceObjectChild
-	public IRoot? StretchObject { get; set; } // Offset: 224, Size: 8, Type: Object, Id: 23, Class: IEveSpaceObjectChild
-	public IRoot? MoveObject { get; set; } // Offset: 232, Size: 8, Type: Object, Id: 19, Class: IEveSpaceObjectChild
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 240, Size: 144, Type: Collection, Id: 17, Class: IList
-	public long StartTime { get; set; } // Offset: 384, Size: 8, Type: Long, Id: 1, Class: 
-	public List<IRoot?>? Controllers { get; set; } // Offset: 400, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DynamicBindings { get; set; } // Offset: 544, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? Length { get; set; } // Offset: 688, Size: 8, Type: Object, Id: 17, Class: TriFloat
-	public IRoot? MoveProgression { get; set; } // Offset: 696, Size: 8, Type: Object, Id: 19, Class: TriFloat
-	public IRoot? Audio { get; set; } // Offset: 776, Size: 8, Type: Object, Id: 19, Class: ITr2Audio
+	public IRoot? SourceSpaceObject { get; set; }
+	public IRoot? DestSpaceObject { get; set; }
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public bool Update { get; set; }
+	public Vector3 SourcePosition { get; set; }
+	public Vector3 DestinationPosition { get; set; }
+	public IRoot? Source { get; set; }
+	public IRoot? Dest { get; set; }
+	public IRoot? SourceObject { get; set; }
+	public IRoot? DestObject { get; set; }
+	public IRoot? StretchObject { get; set; }
+	public IRoot? MoveObject { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
+	public long StartTime { get; set; }
+	public List<IRoot?>? Controllers { get; set; }
+	public List<IRoot?>? DynamicBindings { get; set; }
+	public IRoot? Length { get; set; }
+	public IRoot? MoveProgression { get; set; }
+	public IRoot? Audio { get; set; }
 }

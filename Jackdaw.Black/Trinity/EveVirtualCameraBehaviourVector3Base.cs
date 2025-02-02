@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraBehaviourVector3Base : IRoot, INotify {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 23, Class: 
-	public bool Active { get; set; } // Offset: 40, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Name { get; set; }
+	public bool Active { get; set; }
 }

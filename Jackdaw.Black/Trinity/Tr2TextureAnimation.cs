@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TextureAnimation : IRoot, IInitialize, INotify {
-	[BlackUseNamePool]public string? ResPath { get; set; } // Offset: 56, Size: 32, Type: WString, Id: 23, Class: 
-	public float Fps { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 19, Class: 
-	public float Time { get; set; } // Offset: 92, Size: 4, Type: Single, Id: 1, Class: 
-	public int Frame { get; set; } // Offset: 96, Size: 4, Type: Int, Id: 1, Class: 
-	public bool Paused { get; set; } // Offset: 104, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Looped { get; set; } // Offset: 105, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool UpdateOnlyWhenRendered { get; set; } // Offset: 106, Size: 1, Type: Boolean, Id: 19, Class: 
+	[BlackUseNamePool]public string? ResPath { get; set; }
+	public float Fps { get; set; }
+	public float Time { get; set; }
+	public int Frame { get; set; }
+	public bool Paused { get; set; }
+	public bool Looped { get; set; }
+	public bool UpdateOnlyWhenRendered { get; set; }
 }

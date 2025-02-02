@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TextureLodManager : IRoot {
-	public bool UseLowResVtaFiles { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
+	public bool UseLowResVtaFiles { get; set; }
 }

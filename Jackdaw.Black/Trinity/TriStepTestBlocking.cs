@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepTestBlocking : TriRenderStep {
-	public bool InProgress { get; set; } // Offset: 136, Size: 1, Type: Boolean, Id: 19, Class: 
+	public bool InProgress { get; set; }
 }

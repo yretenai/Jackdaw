@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullSoundEmitter : IRoot {
-	public float AttenuationScalingFactor { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	[BlackUseNamePool]public string? Prefix { get; set; } // Offset: 48, Size: 32, Type: WString, Id: 19, Class: 
-	public Vector3 Position { get; set; } // Offset: 80, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 92, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
+	public float AttenuationScalingFactor { get; set; }
+	public string? Name { get; set; }
+	[BlackUseNamePool]public string? Prefix { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 Rotation { get; set; }
 }

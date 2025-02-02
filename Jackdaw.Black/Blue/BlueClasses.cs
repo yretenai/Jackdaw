@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueClasses : IRoot, IBlueClasses {
-	public bool PendingDeletesEnabled { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public float MaxTimeForPendingDeletes { get; set; } // Offset: 368, Size: 4, Type: Single, Id: 3, Class: 
-	public int MaxPendingDeletes { get; set; } // Offset: 372, Size: 4, Type: Int, Id: 3, Class: 
+	public bool PendingDeletesEnabled { get; set; }
+	public float MaxTimeForPendingDeletes { get; set; }
+	public int MaxPendingDeletes { get; set; }
 }

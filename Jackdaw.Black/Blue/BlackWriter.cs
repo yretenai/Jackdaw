@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlackWriter : IRoot {
-	public int CurrentVersion { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
+	public int CurrentVersion { get; set; }
 }

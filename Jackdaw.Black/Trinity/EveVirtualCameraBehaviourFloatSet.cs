@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraBehaviourFloatSet : EveVirtualCameraBehaviourFloatBase, INotify {
-	public float Value { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
+	public float Value { get; set; }
 }

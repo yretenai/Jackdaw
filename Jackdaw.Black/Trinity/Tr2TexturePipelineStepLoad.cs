@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TexturePipelineStepLoad : IRoot, ITr2TexturePipelineStep {
-	[BlackUseNamePool]public string? Path { get; set; } // Offset: 8, Size: 32, Type: WString, Id: 19, Class: 
+	[BlackUseNamePool]public string? Path { get; set; }
 }

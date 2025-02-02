@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2KelvinColor : IRoot, IInitialize {
-	public float Temperature { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	public float Tint { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public int WhiteBalance { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 531, Class: 
+	public float Temperature { get; set; }
+	public float Tint { get; set; }
+	public int WhiteBalance { get; set; }
 }

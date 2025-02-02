@@ -6,16 +6,16 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildBulletStorm : IRoot, IEveSpaceObjectChild, ITr2Renderable, INotify {
-	public string? Name { get; set; } // Offset: 48, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 80, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int ObjectCount { get; set; } // Offset: 84, Size: 4, Type: Int, Id: 1, Class: 
-	public int Multiplier { get; set; } // Offset: 88, Size: 4, Type: Int, Id: 23, Class: 
-	public string? SourceLocatorSet { get; set; } // Offset: 96, Size: 32, Type: String, Id: 23, Class: 
-	public float Range { get; set; } // Offset: 128, Size: 4, Type: Single, Id: 19, Class: 
-	public float Speed { get; set; } // Offset: 132, Size: 4, Type: Single, Id: 23, Class: 
-	public float ClipSphere { get; set; } // Offset: 136, Size: 4, Type: Single, Id: 1, Class: 
-	public IRoot? SourceObject { get; set; } // Offset: 152, Size: 8, Type: Object, Id: 7, Class: EveSpaceObject2
-	public float SourceRadius { get; set; } // Offset: 160, Size: 4, Type: Single, Id: 1, Class: 
-	public List<IRoot?>? TargetObjects { get; set; } // Offset: 168, Size: 144, Type: Collection, Id: 5, Class: IList
-	public IRoot? Effect { get; set; } // Offset: 336, Size: 8, Type: Object, Id: 19, Class: Tr2Effect
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public int ObjectCount { get; set; }
+	public int Multiplier { get; set; }
+	public string? SourceLocatorSet { get; set; }
+	public float Range { get; set; }
+	public float Speed { get; set; }
+	public float ClipSphere { get; set; }
+	public IRoot? SourceObject { get; set; }
+	public float SourceRadius { get; set; }
+	public List<IRoot?>? TargetObjects { get; set; }
+	public IRoot? Effect { get; set; }
 }

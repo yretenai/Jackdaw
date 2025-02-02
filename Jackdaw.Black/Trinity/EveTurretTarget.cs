@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTurretTarget : IRoot {
-	public int Locator { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 1, Class: 
-	public int Behaviour { get; set; } // Offset: 44, Size: 4, Type: Int, Id: 1, Class: 
-	public Vector3 Position { get; set; } // Offset: 48, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 TargetPosition { get; set; } // Offset: 60, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 PositionOld { get; set; } // Offset: 72, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public float PositionOldInfluence { get; set; } // Offset: 84, Size: 4, Type: Single, Id: 1, Class: 
+	public int Locator { get; set; }
+	public int Behaviour { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 TargetPosition { get; set; }
+	public Vector3 PositionOld { get; set; }
+	public float PositionOldInfluence { get; set; }
 }

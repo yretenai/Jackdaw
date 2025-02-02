@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ParticleFluidDragForce : IRoot, ITr2ParticleForce {
-	public float Drag { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
+	public float Drag { get; set; }
 }

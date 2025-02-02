@@ -6,29 +6,29 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildEffectPropagator : EveChildContainer, IEveSpaceObjectChild, INotify, EveEntity {
-	public IRoot? Effect { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: EveChildInstanceContainer
-	public float PlayTime { get; set; } // Offset: 2448, Size: 4, Type: Single, Id: 1, Class: 
-	public Vector3 EffectScaling { get; set; } // Offset: 2472, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public float RandScaleMin { get; set; } // Offset: 2484, Size: 4, Type: Single, Id: 23, Class: 
-	public float RandScaleMax { get; set; } // Offset: 2488, Size: 4, Type: Single, Id: 23, Class: 
-	public Vector3 TriggerSphereOffset { get; set; } // Offset: 2492, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public IRoot? TriggerSphereRadiusCurve { get; set; } // Offset: 2504, Size: 8, Type: Object, Id: 19, Class: Tr2CurveScalar
-	public float TriggerSphereScalarMulti { get; set; } // Offset: 2512, Size: 4, Type: Single, Id: 1, Class: 
-	public IRoot? LocalLocators { get; set; } // Offset: 2520, Size: 8, Type: Object, Id: 19, Class: EveLocatorSets
-	public int PropagationType { get; set; } // Offset: 2552, Size: 4, Type: Int, Id: 535, Class: 
-	public int TriggerMethood { get; set; } // Offset: 2556, Size: 4, Type: Int, Id: 535, Class: 
-	public bool SkipCleanup { get; set; } // Offset: 2564, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float StopToClearDelay { get; set; } // Offset: 2568, Size: 4, Type: Single, Id: 19, Class: 
-	public bool ReplayAfterDelay { get; set; } // Offset: 2576, Size: 1, Type: Boolean, Id: 19, Class: 
-	public string? LocatorSetName { get; set; } // Offset: 2584, Size: 8, Type: UTFString, Id: 23, Class: 
-	public float Completeness { get; set; } // Offset: 2592, Size: 4, Type: Single, Id: 23, Class: 
-	public long NumTriggers { get; set; } // Offset: 2600, Size: 8, Type: Long, Id: 23, Class: 
-	public float Range { get; set; } // Offset: 2608, Size: 4, Type: Single, Id: 23, Class: 
-	public float ClosenessPreference { get; set; } // Offset: 2612, Size: 4, Type: Single, Id: 23, Class: 
-	public float MinRangeThreshold { get; set; } // Offset: 2616, Size: 4, Type: Single, Id: 23, Class: 
-	public float Frequency { get; set; } // Offset: 2620, Size: 4, Type: Single, Id: 23, Class: 
-	public float DurationPerEffect { get; set; } // Offset: 2624, Size: 4, Type: Single, Id: 23, Class: 
-	public float StopAfterNumTriggers { get; set; } // Offset: 2628, Size: 4, Type: Single, Id: 23, Class: 
-	public bool IsPlaying { get; set; } // Offset: 2664, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool Trigger { get; set; } // Offset: 2665, Size: 1, Type: Boolean, Id: 3, Class: 
+	public IRoot? Effect { get; set; }
+	public float PlayTime { get; set; }
+	public Vector3 EffectScaling { get; set; }
+	public float RandScaleMin { get; set; }
+	public float RandScaleMax { get; set; }
+	public Vector3 TriggerSphereOffset { get; set; }
+	public IRoot? TriggerSphereRadiusCurve { get; set; }
+	public float TriggerSphereScalarMulti { get; set; }
+	public IRoot? LocalLocators { get; set; }
+	public int PropagationType { get; set; }
+	public int TriggerMethood { get; set; }
+	public bool SkipCleanup { get; set; }
+	public float StopToClearDelay { get; set; }
+	public bool ReplayAfterDelay { get; set; }
+	public string? LocatorSetName { get; set; }
+	public float Completeness { get; set; }
+	public long NumTriggers { get; set; }
+	public float Range { get; set; }
+	public float ClosenessPreference { get; set; }
+	public float MinRangeThreshold { get; set; }
+	public float Frequency { get; set; }
+	public float DurationPerEffect { get; set; }
+	public float StopAfterNumTriggers { get; set; }
+	public bool IsPlaying { get; set; }
+	public bool Trigger { get; set; }
 }

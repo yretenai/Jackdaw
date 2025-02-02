@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderObject : TriRenderStep {
-	public IRoot? Renderable { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 19, Class: ITr2Renderable
-	public IRoot? EffectOverride { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 19, Class: Tr2Material
-	public bool RenderOpaque { get; set; } // Offset: 168, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool RenderDecal { get; set; } // Offset: 169, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool RenderTransparent { get; set; } // Offset: 170, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool RenderAdditive { get; set; } // Offset: 171, Size: 1, Type: Boolean, Id: 19, Class: 
+	public IRoot? Renderable { get; set; }
+	public IRoot? EffectOverride { get; set; }
+	public bool RenderOpaque { get; set; }
+	public bool RenderDecal { get; set; }
+	public bool RenderTransparent { get; set; }
+	public bool RenderAdditive { get; set; }
 }

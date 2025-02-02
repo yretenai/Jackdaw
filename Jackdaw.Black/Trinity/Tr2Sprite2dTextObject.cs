@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dTextObject : Tr2SpriteObject {
-	public IRoot? FontMeasurer { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: Tr2FontMeasurer
-	public float PickRadius { get; set; } // Offset: 224, Size: 4, Type: Single, Id: 3, Class: 
-	public float TextWidth { get; set; } // Offset: 228, Size: 4, Type: Single, Id: 7, Class: 
-	public float TextHeight { get; set; } // Offset: 232, Size: 4, Type: Single, Id: 7, Class: 
-	public bool UseShadowSpriteEffect { get; set; } // Offset: 236, Size: 1, Type: Boolean, Id: 7, Class: 
-	public int ShadowSpriteEffect { get; set; } // Offset: 240, Size: 4, Type: Int, Id: 519, Class: 
-	public IRoot? TexturePrimary { get; set; } // Offset: 248, Size: 8, Type: Object, Id: 7, Class: ITr2Sprite2dTexture
-	public bool UseSizeFromTexture { get; set; } // Offset: 256, Size: 1, Type: Boolean, Id: 7, Class: 
-	public bool HasAuxiliaryTooltip { get; set; } // Offset: 257, Size: 1, Type: Boolean, Id: 3, Class: 
+	public IRoot? FontMeasurer { get; set; }
+	public float PickRadius { get; set; }
+	public float TextWidth { get; set; }
+	public float TextHeight { get; set; }
+	public bool UseShadowSpriteEffect { get; set; }
+	public int ShadowSpriteEffect { get; set; }
+	public IRoot? TexturePrimary { get; set; }
+	public bool UseSizeFromTexture { get; set; }
+	public bool HasAuxiliaryTooltip { get; set; }
 }

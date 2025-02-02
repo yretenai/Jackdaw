@@ -6,21 +6,21 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueResMan : IRoot, IBlueResMan {
-	public bool LoadObjectCacheEnabled { get; set; } // Offset: 32, Size: 1, Type: Boolean, Id: 3, Class: 
-	public MotherLode? LoadObjectCache { get; set; } // Offset: 40, Size: 408, Type: Collection, Id: 1, Class: MotherLode
-	public float LoadObjectTimeSlice { get; set; } // Offset: 448, Size: 4, Type: Single, Id: 3, Class: 
-	public long BackgroundLoadMemoryBudget { get; set; } // Offset: 536, Size: 8, Type: Long, Id: 3, Class: 
-	public long BackgroundLoadMemoryInUse { get; set; } // Offset: 544, Size: 8, Type: Long, Id: 1, Class: 
-	public int PendingLoads { get; set; } // Offset: 552, Size: 4, Type: Int, Id: 1, Class: 
-	public int PendingPrepares { get; set; } // Offset: 556, Size: 4, Type: Int, Id: 1, Class: 
-	public int PreparesHandledLastTick { get; set; } // Offset: 560, Size: 4, Type: Int, Id: 1, Class: 
-	public int PreparesHandledPerTickMax { get; set; } // Offset: 564, Size: 4, Type: Int, Id: 3, Class: 
-	public int PreparesHandledTotal { get; set; } // Offset: 568, Size: 4, Type: Int, Id: 1, Class: 
-	public int MaxAllowedInPrepareQueue { get; set; } // Offset: 572, Size: 4, Type: Int, Id: 3, Class: 
-	public float LoadQueueTimeAverage { get; set; } // Offset: 576, Size: 4, Type: Single, Id: 1, Class: 
-	public float LoadQueueTimeMax { get; set; } // Offset: 580, Size: 4, Type: Single, Id: 1, Class: 
-	public float PrepareQueueTimeAverage { get; set; } // Offset: 584, Size: 4, Type: Single, Id: 1, Class: 
-	public float PrepareQueueTimeMax { get; set; } // Offset: 588, Size: 4, Type: Single, Id: 1, Class: 
-	public float MainThreadTimeSlice { get; set; } // Offset: 592, Size: 4, Type: Single, Id: 3, Class: 
-	public float MainThreadMaxTime { get; set; } // Offset: 596, Size: 4, Type: Single, Id: 3, Class: 
+	public bool LoadObjectCacheEnabled { get; set; }
+	public MotherLode? LoadObjectCache { get; set; }
+	public float LoadObjectTimeSlice { get; set; }
+	public long BackgroundLoadMemoryBudget { get; set; }
+	public long BackgroundLoadMemoryInUse { get; set; }
+	public int PendingLoads { get; set; }
+	public int PendingPrepares { get; set; }
+	public int PreparesHandledLastTick { get; set; }
+	public int PreparesHandledPerTickMax { get; set; }
+	public int PreparesHandledTotal { get; set; }
+	public int MaxAllowedInPrepareQueue { get; set; }
+	public float LoadQueueTimeAverage { get; set; }
+	public float LoadQueueTimeMax { get; set; }
+	public float PrepareQueueTimeAverage { get; set; }
+	public float PrepareQueueTimeMax { get; set; }
+	public float MainThreadTimeSlice { get; set; }
+	public float MainThreadMaxTime { get; set; }
 }

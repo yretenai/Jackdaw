@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TextureAtlas : IRoot, ITr2TextureProvider {
-	public int MultiSampleType { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int MultiSampleQuality { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int TexturesInAtlasCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int TexturesOutsideAtlasCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Format { get; set; } // Offset: 112, Size: 4, Type: Int, Id: 513, Class: 
-	public int Width { get; set; } // Offset: 116, Size: 4, Type: Int, Id: 1, Class: 
-	public int Height { get; set; } // Offset: 120, Size: 4, Type: Int, Id: 1, Class: 
-	public int Margin { get; set; } // Offset: 288, Size: 4, Type: Int, Id: 3, Class: 
-	public bool OptimizeOnRemoval { get; set; } // Offset: 292, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool PaintEmptyAreas { get; set; } // Offset: 293, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int MipCount { get; set; } // Offset: 324, Size: 4, Type: Int, Id: 1, Class: 
+	public int MultiSampleType { get; set; }
+	public int MultiSampleQuality { get; set; }
+	public int TexturesInAtlasCount { get; set; }
+	public int TexturesOutsideAtlasCount { get; set; }
+	public int Format { get; set; }
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public int Margin { get; set; }
+	public bool OptimizeOnRemoval { get; set; }
+	public bool PaintEmptyAreas { get; set; }
+	public int MipCount { get; set; }
 }

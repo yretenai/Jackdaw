@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueSysInfoNetworkAdapter : IRoot {
-	[BlackUseNamePool]public string? Name { get; set; } // Offset: 8, Size: 32, Type: WString, Id: 1, Class: 
-	public string? MacAddress { get; set; } // Offset: 40, Size: 32, Type: String, Id: 1, Class: 
-	public string? MacAddressString { get; set; } // Offset: 72, Size: 32, Type: String, Id: 1, Class: 
-	public string? Uuid { get; set; } // Offset: 104, Size: 32, Type: String, Id: 1, Class: 
+	[BlackUseNamePool]public string? Name { get; set; }
+	public string? MacAddress { get; set; }
+	public string? MacAddressString { get; set; }
+	public string? Uuid { get; set; }
 }

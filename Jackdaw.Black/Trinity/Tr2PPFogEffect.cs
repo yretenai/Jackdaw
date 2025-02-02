@@ -6,31 +6,31 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPFogEffect : Tr2PPEffect {
-	public Vector3 Color { get; set; } // Offset: 16, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public float NebulaInfluence { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 23, Class: 
-	public float NebulaBlur { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 23, Class: 
-	public float OriginalBrightenOnly { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 23, Class: 
-	public float ColorInfluence { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 23, Class: 
-	public float TotalAmount { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 23, Class: 
-	public float TotalPower { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 23, Class: 
-	public float BackgroundOcclusion { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 23, Class: 
-	public float Intensity { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 23, Class: 
-	public float BrightnessThreshold0 { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 23, Class: 
-	public float BrightnessThreshold1 { get; set; } // Offset: 68, Size: 4, Type: Single, Id: 23, Class: 
-	public float BrightnessAdjustmentAmount { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendDistance0 { get; set; } // Offset: 76, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendBias0 { get; set; } // Offset: 80, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendAmount0 { get; set; } // Offset: 84, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendPower0 { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendDistance1 { get; set; } // Offset: 92, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendBias1 { get; set; } // Offset: 96, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendAmount1 { get; set; } // Offset: 100, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendPower1 { get; set; } // Offset: 104, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendDistance2 { get; set; } // Offset: 108, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendBias2 { get; set; } // Offset: 112, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendAmount2 { get; set; } // Offset: 116, Size: 4, Type: Single, Id: 23, Class: 
-	public float BlendPower2 { get; set; } // Offset: 120, Size: 4, Type: Single, Id: 23, Class: 
-	public Vector3 AreaSize { get; set; } // Offset: 124, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public Vector3 AreaScale { get; set; } // Offset: 136, Size: 8, Type: FloatArray, Id: 23, Class: 
-	public Vector3 AreaCenter { get; set; } // Offset: 144, Size: 12, Type: FloatArray, Id: 23, Class: 
+	public Vector3 Color { get; set; }
+	public float NebulaInfluence { get; set; }
+	public float NebulaBlur { get; set; }
+	public float OriginalBrightenOnly { get; set; }
+	public float ColorInfluence { get; set; }
+	public float TotalAmount { get; set; }
+	public float TotalPower { get; set; }
+	public float BackgroundOcclusion { get; set; }
+	public float Intensity { get; set; }
+	public float BrightnessThreshold0 { get; set; }
+	public float BrightnessThreshold1 { get; set; }
+	public float BrightnessAdjustmentAmount { get; set; }
+	public float BlendDistance0 { get; set; }
+	public float BlendBias0 { get; set; }
+	public float BlendAmount0 { get; set; }
+	public float BlendPower0 { get; set; }
+	public float BlendDistance1 { get; set; }
+	public float BlendBias1 { get; set; }
+	public float BlendAmount1 { get; set; }
+	public float BlendPower1 { get; set; }
+	public float BlendDistance2 { get; set; }
+	public float BlendBias2 { get; set; }
+	public float BlendAmount2 { get; set; }
+	public float BlendPower2 { get; set; }
+	public Vector3 AreaSize { get; set; }
+	public Vector3 AreaScale { get; set; }
+	public Vector3 AreaCenter { get; set; }
 }

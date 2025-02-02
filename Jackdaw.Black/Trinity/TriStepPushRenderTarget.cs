@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepPushRenderTarget : TriRenderStep {
-	public IRoot? RenderTarget { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public int Slot { get; set; } // Offset: 144, Size: 4, Type: Int, Id: 3, Class: 
+	public IRoot? RenderTarget { get; set; }
+	public int Slot { get; set; }
 }

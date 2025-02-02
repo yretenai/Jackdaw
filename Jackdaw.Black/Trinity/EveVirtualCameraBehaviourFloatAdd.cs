@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraBehaviourFloatAdd : EveVirtualCameraBehaviourFloatBase, INotify {
-	public float Value { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public IRoot? ScaleCurve { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 19, Class: Tr2CurveScalar
+	public float Value { get; set; }
+	public IRoot? ScaleCurve { get; set; }
 }

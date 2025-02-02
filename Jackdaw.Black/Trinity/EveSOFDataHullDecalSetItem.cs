@@ -6,16 +6,16 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullDecalSetItem : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public int Usage { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 531, Class: 
-	public int LogoType { get; set; } // Offset: 44, Size: 4, Type: Int, Id: 531, Class: 
-	public Vector3 Position { get; set; } // Offset: 48, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Scaling { get; set; } // Offset: 60, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 72, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public int BoneIndex { get; set; } // Offset: 88, Size: 4, Type: Int, Id: 19, Class: 
-	public int MeshIndex { get; set; } // Offset: 92, Size: 4, Type: Int, Id: 19, Class: 
-	public int GlowColorType { get; set; } // Offset: 96, Size: 4, Type: Int, Id: 531, Class: 
-	public List<IRoot?>? Textures { get; set; } // Offset: 104, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Parameters { get; set; } // Offset: 248, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? IndexBuffers { get; set; } // Offset: 392, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public int Usage { get; set; }
+	public int LogoType { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 Scaling { get; set; }
+	public Vector3 Rotation { get; set; }
+	public int BoneIndex { get; set; }
+	public int MeshIndex { get; set; }
+	public int GlowColorType { get; set; }
+	public List<IRoot?>? Textures { get; set; }
+	public List<IRoot?>? Parameters { get; set; }
+	public List<IRoot?>? IndexBuffers { get; set; }
 }

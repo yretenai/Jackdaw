@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueSysInfoMemory : IRoot {
-	public long WorkingSet { get; set; } // Offset: 8, Size: 8, Type: Long, Id: 1, Class: 
-	public long PageFile { get; set; } // Offset: 16, Size: 8, Type: Long, Id: 1, Class: 
-	public long TotalPhysical { get; set; } // Offset: 24, Size: 8, Type: Long, Id: 1, Class: 
-	public long AvailablePhysical { get; set; } // Offset: 32, Size: 8, Type: Long, Id: 1, Class: 
+	public long WorkingSet { get; set; }
+	public long PageFile { get; set; }
+	public long TotalPhysical { get; set; }
+	public long AvailablePhysical { get; set; }
 }

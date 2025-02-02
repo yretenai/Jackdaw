@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraBehaviourFloatNoise : EveVirtualCameraBehaviourFloatBase, INotify {
-	public float PerlineScale { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public int Octaves { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 19, Class: 
-	public float Magnitude { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 19, Class: 
-	public IRoot? MagnitudeCurve { get; set; } // Offset: 64, Size: 8, Type: Object, Id: 19, Class: Tr2CurveScalar
+	public float PerlineScale { get; set; }
+	public int Octaves { get; set; }
+	public float Magnitude { get; set; }
+	public IRoot? MagnitudeCurve { get; set; }
 }

@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionCallback : IRoot, ITr2ControllerAction {
-	public string? CallbackName { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
+	public string? CallbackName { get; set; }
 }

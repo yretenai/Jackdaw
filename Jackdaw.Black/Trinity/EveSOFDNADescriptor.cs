@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDNADescriptor : IRoot {
-	public string? Hull { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? Faction { get; set; } // Offset: 40, Size: 32, Type: String, Id: 19, Class: 
-	public string? Race { get; set; } // Offset: 72, Size: 32, Type: String, Id: 19, Class: 
-	public string? Layout { get; set; } // Offset: 104, Size: 32, Type: String, Id: 19, Class: 
-	public string? Pattern { get; set; } // Offset: 136, Size: 32, Type: String, Id: 19, Class: 
-	public string? Material1 { get; set; } // Offset: 168, Size: 32, Type: String, Id: 19, Class: 
-	public string? Material2 { get; set; } // Offset: 200, Size: 32, Type: String, Id: 19, Class: 
-	public string? Material3 { get; set; } // Offset: 232, Size: 32, Type: String, Id: 19, Class: 
-	public string? Material4 { get; set; } // Offset: 264, Size: 32, Type: String, Id: 19, Class: 
+	public string? Hull { get; set; }
+	public string? Faction { get; set; }
+	public string? Race { get; set; }
+	public string? Layout { get; set; }
+	public string? Pattern { get; set; }
+	public string? Material1 { get; set; }
+	public string? Material2 { get; set; }
+	public string? Material3 { get; set; }
+	public string? Material4 { get; set; }
 }

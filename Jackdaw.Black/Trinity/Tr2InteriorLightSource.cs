@@ -6,17 +6,17 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2InteriorLightSource : IRoot, IInitialize, INotify, ITr2InteriorLight {
-	public Vector3 Position { get; set; } // Offset: 32, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public Vector3 ConeDirection { get; set; } // Offset: 44, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public float ConeAlphaOuter { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 23, Class: 
-	public float ConeAlphaInner { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 23, Class: 
-	public float Radius { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 23, Class: 
-	public string? Name { get; set; } // Offset: 136, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 Color { get; set; } // Offset: 192, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public float Falloff { get; set; } // Offset: 208, Size: 4, Type: Single, Id: 19, Class: 
-	public float SpecularIntensity { get; set; } // Offset: 212, Size: 4, Type: Single, Id: 19, Class: 
-	public IRoot? KelvinColor { get; set; } // Offset: 216, Size: 8, Type: Object, Id: 19, Class: Tr2KelvinColor
-	public bool UseKelvinColor { get; set; } // Offset: 224, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool PrimaryLighting { get; set; } // Offset: 225, Size: 1, Type: Boolean, Id: 23, Class: 
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 296, Size: 144, Type: Collection, Id: 17, Class: IList
+	public Vector3 Position { get; set; }
+	public Vector3 ConeDirection { get; set; }
+	public float ConeAlphaOuter { get; set; }
+	public float ConeAlphaInner { get; set; }
+	public float Radius { get; set; }
+	public string? Name { get; set; }
+	public Vector3 Color { get; set; }
+	public float Falloff { get; set; }
+	public float SpecularIntensity { get; set; }
+	public IRoot? KelvinColor { get; set; }
+	public bool UseKelvinColor { get; set; }
+	public bool PrimaryLighting { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
 }

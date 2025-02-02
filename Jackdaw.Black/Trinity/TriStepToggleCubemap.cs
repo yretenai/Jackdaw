@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepToggleCubemap : TriRenderStep {
-	public bool M_showCubemap { get; set; } // Offset: 136, Size: 1, Type: Boolean, Id: 3, Class: 
+	public bool M_showCubemap { get; set; }
 }

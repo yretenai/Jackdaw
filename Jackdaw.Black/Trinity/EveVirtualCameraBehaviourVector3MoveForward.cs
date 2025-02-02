@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraBehaviourVector3MoveForward : EveVirtualCameraBehaviourVector3Base, INotify {
-	public float Value { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public IRoot? ScaleCurve { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 19, Class: Tr2CurveScalar
-	public bool Proportional { get; set; } // Offset: 64, Size: 1, Type: Boolean, Id: 19, Class: 
+	public float Value { get; set; }
+	public IRoot? ScaleCurve { get; set; }
+	public bool Proportional { get; set; }
 }

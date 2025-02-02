@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ParticleDirectForce : IRoot, ITr2ParticleForce {
-	public Vector3 Force { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public Vector3 Force { get; set; }
 }

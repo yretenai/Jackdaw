@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GrannyVector3Curve : IRoot, ITriFunction, ITriCurveLength, ICustomPersist {
-	[BlackArray(4)]public int[]? Curve { get; set; } // Offset: 0, Size: 0, Type: Buffer, Id: 24, Class: 
-	public bool Cycle { get; set; } // Offset: 24, Size: 1, Type: Boolean, Id: 3, Class: 
-	public Vector3 CurrentValue { get; set; } // Offset: 28, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public float TimeOffset { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 3, Class: 
-	public float Duration { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 24, Class: 
+	[BlackArray(4)]public int[]? Curve { get; set; }
+	public bool Cycle { get; set; }
+	public Vector3 CurrentValue { get; set; }
+	public float TimeOffset { get; set; }
+	public float Duration { get; set; }
 }

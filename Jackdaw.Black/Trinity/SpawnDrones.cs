@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class SpawnDrones : IRoot, IBehavior {
-	public bool Enabled { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool AddByCount { get; set; } // Offset: 9, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool AddOnGrid { get; set; } // Offset: 10, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool RegenerateDrones { get; set; } // Offset: 11, Size: 1, Type: Boolean, Id: 3, Class: 
-	public float Seconds { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public float Time { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 17, Class: 
-	public float GridFullnessFactor { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 23, Class: 
-	public int Count { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 19, Class: 
-	public Vector3 SpawnPosition { get; set; } // Offset: 28, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 GridInfo { get; set; } // Offset: 40, Size: 16, Type: FloatArray, Id: 23, Class: 
-	public Vector3 GridSpacing { get; set; } // Offset: 56, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public bool Enabled { get; set; }
+	public bool AddByCount { get; set; }
+	public bool AddOnGrid { get; set; }
+	public bool RegenerateDrones { get; set; }
+	public float Seconds { get; set; }
+	public float Time { get; set; }
+	public float GridFullnessFactor { get; set; }
+	public int Count { get; set; }
+	public Vector3 SpawnPosition { get; set; }
+	public Vector3 GridInfo { get; set; }
+	public Vector3 GridSpacing { get; set; }
 }

@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionPlaySound : IRoot, ITr2ControllerAction {
-	public string? Emitter { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? Event { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? Target { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 19, Class: 
-	public bool BypassPrefix { get; set; } // Offset: 32, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Emitter { get; set; }
+	public string? Event { get; set; }
+	public string? Target { get; set; }
+	public bool BypassPrefix { get; set; }
 }

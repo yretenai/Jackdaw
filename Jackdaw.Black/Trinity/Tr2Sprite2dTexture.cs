@@ -6,21 +6,21 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dTexture : IRoot, ITr2Sprite2dTexture, IInitialize, INotify {
-	public string? ResPath { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public float SrcX { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float SrcY { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float SrcWidth { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float SrcHeight { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public bool TileX { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public bool TileY { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public int RepeatMode { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 3, Class: 
-	public IRoot? AtlasTexture { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: Tr2AtlasTexture
-	[BlackUseNamePool]public string? Name { get; set; } // Offset: 32, Size: 32, Type: WString, Id: 3, Class: 
-	public bool UseTransform { get; set; } // Offset: 128, Size: 1, Type: Boolean, Id: 7, Class: 
-	public Vector3 Translation { get; set; } // Offset: 132, Size: 8, Type: FloatArray, Id: 7, Class: 
-	public Vector3 RotationCenter { get; set; } // Offset: 140, Size: 8, Type: FloatArray, Id: 7, Class: 
-	public float Rotation { get; set; } // Offset: 148, Size: 4, Type: Single, Id: 7, Class: 
-	public Vector3 ScalingCenter { get; set; } // Offset: 152, Size: 8, Type: FloatArray, Id: 7, Class: 
-	public float ScalingRotation { get; set; } // Offset: 160, Size: 4, Type: Single, Id: 7, Class: 
-	public Vector3 Scale { get; set; } // Offset: 164, Size: 8, Type: FloatArray, Id: 7, Class: 
+	public string? ResPath { get; set; }
+	public float SrcX { get; set; }
+	public float SrcY { get; set; }
+	public float SrcWidth { get; set; }
+	public float SrcHeight { get; set; }
+	public bool TileX { get; set; }
+	public bool TileY { get; set; }
+	public int RepeatMode { get; set; }
+	public IRoot? AtlasTexture { get; set; }
+	[BlackUseNamePool]public string? Name { get; set; }
+	public bool UseTransform { get; set; }
+	public Vector3 Translation { get; set; }
+	public Vector3 RotationCenter { get; set; }
+	public float Rotation { get; set; }
+	public Vector3 ScalingCenter { get; set; }
+	public float ScalingRotation { get; set; }
+	public Vector3 Scale { get; set; }
 }

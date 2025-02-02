@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ImpostorManager : IRoot, IInitialize, INotify {
-	public long Count { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 1, Class: 
-	public int Width { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 23, Class: 
-	public int Height { get; set; } // Offset: 28, Size: 4, Type: Int, Id: 23, Class: 
-	public int ItemWidth { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 23, Class: 
-	public int ItemHeight { get; set; } // Offset: 36, Size: 4, Type: Int, Id: 23, Class: 
-	public int MaxUpdates { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 19, Class: 
-	public IRoot? Atlas { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? Effect { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 1, Class: Tr2Effect
+	public long Count { get; set; }
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public int ItemWidth { get; set; }
+	public int ItemHeight { get; set; }
+	public int MaxUpdates { get; set; }
+	public IRoot? Atlas { get; set; }
+	public IRoot? Effect { get; set; }
 }

@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class InclusionVolume : IRoot, IBehavior {
-	public bool Enabled { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
-	public List<IRoot?>? InclusionVolumes { get; set; } // Offset: 16, Size: 144, Type: Collection, Id: 17, Class: IList
-	public int BehaviorPriority { get; set; } // Offset: 160, Size: 4, Type: Int, Id: 535, Class: 
-	public int FramesBetweenUpdates { get; set; } // Offset: 164, Size: 4, Type: Int, Id: 19, Class: 
-	public float BehaviorWeight { get; set; } // Offset: 200, Size: 4, Type: Single, Id: 19, Class: 
+	public bool Enabled { get; set; }
+	public List<IRoot?>? InclusionVolumes { get; set; }
+	public int BehaviorPriority { get; set; }
+	public int FramesBetweenUpdates { get; set; }
+	public float BehaviorWeight { get; set; }
 }

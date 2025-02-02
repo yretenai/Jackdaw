@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionPlayCurveSet : IRoot, ITr2ControllerAction {
-	public string? CurveSetName { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public string? RangeName { get; set; } // Offset: 48, Size: 32, Type: String, Id: 19, Class: 
-	public bool SyncToRange { get; set; } // Offset: 100, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? CurveSetName { get; set; }
+	public string? RangeName { get; set; }
+	public bool SyncToRange { get; set; }
 }

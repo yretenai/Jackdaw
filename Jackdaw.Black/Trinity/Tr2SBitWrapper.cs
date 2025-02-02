@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SBitWrapper : IRoot {
-	public int XOffset { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int YOffset { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Width { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Height { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Xadvance { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Yadvance { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int X { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 1, Class: 
-	public int Y { get; set; } // Offset: 44, Size: 4, Type: Int, Id: 1, Class: 
+	public int XOffset { get; set; }
+	public int YOffset { get; set; }
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public int Xadvance { get; set; }
+	public int Yadvance { get; set; }
+	public int X { get; set; }
+	public int Y { get; set; }
 }

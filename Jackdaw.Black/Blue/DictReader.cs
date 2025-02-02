@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class DictReader : IRoot {
-	public bool DoInitialize { get; set; } // Offset: 184, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool PersistedAttributesOnly { get; set; } // Offset: 185, Size: 1, Type: Boolean, Id: 3, Class: 
+	public bool DoInitialize { get; set; }
+	public bool PersistedAttributesOnly { get; set; }
 }

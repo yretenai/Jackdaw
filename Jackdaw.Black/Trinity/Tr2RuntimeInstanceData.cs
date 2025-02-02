@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2RuntimeInstanceData : IRoot, ITr2InstanceData, ITr2GenericEmitter, ITr2GpuBuffer {
-	public int Count { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 32, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 AabbMin { get; set; } // Offset: 144, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 AabbMax { get; set; } // Offset: 156, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public IRoot? ParticleSystem { get; set; } // Offset: 168, Size: 8, Type: Object, Id: 19, Class: Tr2ParticleSystem
+	public int Count { get; set; }
+	public string? Name { get; set; }
+	public Vector3 AabbMin { get; set; }
+	public Vector3 AabbMax { get; set; }
+	public IRoot? ParticleSystem { get; set; }
 }

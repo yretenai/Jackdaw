@@ -6,32 +6,32 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSwarm : EveShip2, IEveSpaceObject2, IInitialize, INotify, EveEntity, IEveShadowCaster {
-	public bool SwarmingEnabled { get; set; } // Offset: 4248, Size: 1, Type: Boolean, Id: 17, Class: 
-	public int Count { get; set; } // Offset: 4252, Size: 4, Type: Int, Id: 17, Class: 
-	public float Mass { get; set; } // Offset: 4500, Size: 4, Type: Single, Id: 19, Class: 
-	public float SpeedMultiplier { get; set; } // Offset: 4504, Size: 4, Type: Single, Id: 19, Class: 
-	public float SpeedMinimum { get; set; } // Offset: 4508, Size: 4, Type: Single, Id: 19, Class: 
-	public float Agility { get; set; } // Offset: 4512, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxDistance0 { get; set; } // Offset: 4516, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxDistance1 { get; set; } // Offset: 4520, Size: 4, Type: Single, Id: 19, Class: 
-	public float TimeMultiplier { get; set; } // Offset: 4524, Size: 4, Type: Single, Id: 3, Class: 
-	public float MaxTime { get; set; } // Offset: 4528, Size: 4, Type: Single, Id: 19, Class: 
-	public float Speed0 { get; set; } // Offset: 4532, Size: 4, Type: Single, Id: 19, Class: 
-	public float Speed1 { get; set; } // Offset: 4536, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightCohesion { get; set; } // Offset: 4540, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightSeparation { get; set; } // Offset: 4544, Size: 4, Type: Single, Id: 19, Class: 
-	public float SeparationDistance { get; set; } // Offset: 4548, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightAlign { get; set; } // Offset: 4552, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightWander { get; set; } // Offset: 4556, Size: 4, Type: Single, Id: 19, Class: 
-	public float WanderFluctuation { get; set; } // Offset: 4560, Size: 4, Type: Single, Id: 19, Class: 
-	public float WanderDistance { get; set; } // Offset: 4564, Size: 4, Type: Single, Id: 19, Class: 
-	public float WanderRadius { get; set; } // Offset: 4568, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightAnchor { get; set; } // Offset: 4572, Size: 4, Type: Single, Id: 19, Class: 
-	public float AnchorRadius0 { get; set; } // Offset: 4576, Size: 4, Type: Single, Id: 19, Class: 
-	public float AnchorRadius1 { get; set; } // Offset: 4580, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightDeceleration { get; set; } // Offset: 4584, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxDeceleration { get; set; } // Offset: 4588, Size: 4, Type: Single, Id: 19, Class: 
-	public float WeightFormation { get; set; } // Offset: 4592, Size: 4, Type: Single, Id: 19, Class: 
-	public float FormationDistance { get; set; } // Offset: 4596, Size: 4, Type: Single, Id: 19, Class: 
-	public bool DebugShowForces { get; set; } // Offset: 4600, Size: 1, Type: Boolean, Id: 23, Class: 
+	public bool SwarmingEnabled { get; set; }
+	public int Count { get; set; }
+	public float Mass { get; set; }
+	public float SpeedMultiplier { get; set; }
+	public float SpeedMinimum { get; set; }
+	public float Agility { get; set; }
+	public float MaxDistance0 { get; set; }
+	public float MaxDistance1 { get; set; }
+	public float TimeMultiplier { get; set; }
+	public float MaxTime { get; set; }
+	public float Speed0 { get; set; }
+	public float Speed1 { get; set; }
+	public float WeightCohesion { get; set; }
+	public float WeightSeparation { get; set; }
+	public float SeparationDistance { get; set; }
+	public float WeightAlign { get; set; }
+	public float WeightWander { get; set; }
+	public float WanderFluctuation { get; set; }
+	public float WanderDistance { get; set; }
+	public float WanderRadius { get; set; }
+	public float WeightAnchor { get; set; }
+	public float AnchorRadius0 { get; set; }
+	public float AnchorRadius1 { get; set; }
+	public float WeightDeceleration { get; set; }
+	public float MaxDeceleration { get; set; }
+	public float WeightFormation { get; set; }
+	public float FormationDistance { get; set; }
+	public bool DebugShowForces { get; set; }
 }

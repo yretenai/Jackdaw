@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Denoiser : IRoot, INotify {
-	public IRoot? NoiseEstimate { get; set; } // Offset: 8, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? Intermediate { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? Result { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public int Radius { get; set; } // Offset: 64, Size: 4, Type: Int, Id: 23, Class: 
-	public int StepSize { get; set; } // Offset: 68, Size: 4, Type: Int, Id: 23, Class: 
-	public float DepthWeight { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 23, Class: 
-	public float NormalWeight { get; set; } // Offset: 76, Size: 4, Type: Single, Id: 23, Class: 
-	public float PlaneWeight { get; set; } // Offset: 80, Size: 4, Type: Single, Id: 23, Class: 
-	public bool Bypass { get; set; } // Offset: 84, Size: 1, Type: Boolean, Id: 23, Class: 
+	public IRoot? NoiseEstimate { get; set; }
+	public IRoot? Intermediate { get; set; }
+	public IRoot? Result { get; set; }
+	public int Radius { get; set; }
+	public int StepSize { get; set; }
+	public float DepthWeight { get; set; }
+	public float NormalWeight { get; set; }
+	public float PlaneWeight { get; set; }
+	public bool Bypass { get; set; }
 }

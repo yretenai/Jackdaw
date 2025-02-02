@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GpuUniqueEmitter : Tr2GpuSharedEmitter {
-	public float AttractorStrength { get; set; } // Offset: 400, Size: 4, Type: Single, Id: 23, Class: 
-	public Vector3 AttractorPosition { get; set; } // Offset: 416, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public bool ScaledByParent { get; set; } // Offset: 428, Size: 1, Type: Boolean, Id: 19, Class: 
+	public float AttractorStrength { get; set; }
+	public Vector3 AttractorPosition { get; set; }
+	public bool ScaledByParent { get; set; }
 }

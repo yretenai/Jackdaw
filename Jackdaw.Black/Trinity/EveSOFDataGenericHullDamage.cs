@@ -6,20 +6,20 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataGenericHullDamage : IRoot {
-	public float HullParticleRate { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	public float HullParticleInnerAngle { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public float HullParticleAngle { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float HullParticleColorMidpoint { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 HullParticleMinMaxSpeed { get; set; } // Offset: 24, Size: 8, Type: FloatArray, Id: 19, Class: 
-	public Vector3 HullParticleMinMaxLifeTime { get; set; } // Offset: 32, Size: 8, Type: FloatArray, Id: 19, Class: 
-	public Vector3 HullParticleSizes { get; set; } // Offset: 40, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public Vector3 HullParticleColor0 { get; set; } // Offset: 56, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public Vector3 HullParticleColor1 { get; set; } // Offset: 72, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public Vector3 HullParticleColor2 { get; set; } // Offset: 88, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public Vector3 HullParticleColor3 { get; set; } // Offset: 104, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public int HullParticleTextureIndex { get; set; } // Offset: 120, Size: 4, Type: Int, Id: 19, Class: 
-	public float HullParticleVelocityStretchRotation { get; set; } // Offset: 124, Size: 4, Type: Single, Id: 19, Class: 
-	public float HullParticleDrag { get; set; } // Offset: 128, Size: 4, Type: Single, Id: 19, Class: 
-	public float HullParticleTurbulenceAmplitude { get; set; } // Offset: 132, Size: 4, Type: Single, Id: 19, Class: 
-	public int HullParticleTurbulenceFrequency { get; set; } // Offset: 136, Size: 4, Type: Int, Id: 19, Class: 
+	public float HullParticleRate { get; set; }
+	public float HullParticleInnerAngle { get; set; }
+	public float HullParticleAngle { get; set; }
+	public float HullParticleColorMidpoint { get; set; }
+	public Vector3 HullParticleMinMaxSpeed { get; set; }
+	public Vector3 HullParticleMinMaxLifeTime { get; set; }
+	public Vector3 HullParticleSizes { get; set; }
+	public Vector3 HullParticleColor0 { get; set; }
+	public Vector3 HullParticleColor1 { get; set; }
+	public Vector3 HullParticleColor2 { get; set; }
+	public Vector3 HullParticleColor3 { get; set; }
+	public int HullParticleTextureIndex { get; set; }
+	public float HullParticleVelocityStretchRotation { get; set; }
+	public float HullParticleDrag { get; set; }
+	public float HullParticleTurbulenceAmplitude { get; set; }
+	public int HullParticleTurbulenceFrequency { get; set; }
 }

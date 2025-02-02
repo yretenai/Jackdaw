@@ -6,23 +6,23 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2MeshBase : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 40, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int MeshIndex { get; set; } // Offset: 44, Size: 4, Type: Int, Id: 23, Class: 
-	public List<IRoot?>? OpaqueAreas { get; set; } // Offset: 48, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DecalAreas { get; set; } // Offset: 192, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DepthAreas { get; set; } // Offset: 336, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? TransparentAreas { get; set; } // Offset: 480, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? AdditiveAreas { get; set; } // Offset: 624, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? PickableAreas { get; set; } // Offset: 768, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? MirrorAreas { get; set; } // Offset: 912, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DecalNormalAreas { get; set; } // Offset: 1056, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DepthNormalAreas { get; set; } // Offset: 1200, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? OpaquePrepassAreas { get; set; } // Offset: 1344, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DecalPrepassAreas { get; set; } // Offset: 1488, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? GeometryEraserAreas { get; set; } // Offset: 1632, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DistortionAreas { get; set; } // Offset: 1920, Size: 144, Type: Collection, Id: 17, Class: IList
-	public float MaxVertexScale { get; set; } // Offset: 2252, Size: 4, Type: Single, Id: 17, Class: 
-	public float MaxVertexDisplacement { get; set; } // Offset: 2256, Size: 4, Type: Single, Id: 17, Class: 
-	public bool RotatesVertices { get; set; } // Offset: 2260, Size: 1, Type: Boolean, Id: 17, Class: 
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public int MeshIndex { get; set; }
+	public List<IRoot?>? OpaqueAreas { get; set; }
+	public List<IRoot?>? DecalAreas { get; set; }
+	public List<IRoot?>? DepthAreas { get; set; }
+	public List<IRoot?>? TransparentAreas { get; set; }
+	public List<IRoot?>? AdditiveAreas { get; set; }
+	public List<IRoot?>? PickableAreas { get; set; }
+	public List<IRoot?>? MirrorAreas { get; set; }
+	public List<IRoot?>? DecalNormalAreas { get; set; }
+	public List<IRoot?>? DepthNormalAreas { get; set; }
+	public List<IRoot?>? OpaquePrepassAreas { get; set; }
+	public List<IRoot?>? DecalPrepassAreas { get; set; }
+	public List<IRoot?>? GeometryEraserAreas { get; set; }
+	public List<IRoot?>? DistortionAreas { get; set; }
+	public float MaxVertexScale { get; set; }
+	public float MaxVertexDisplacement { get; set; }
+	public bool RotatesVertices { get; set; }
 }

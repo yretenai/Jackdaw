@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPLutEffect : Tr2PPEffect {
-	public float Influence { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 23, Class: 
-	public string? Path { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 23, Class: 
+	public float Influence { get; set; }
+	public string? Path { get; set; }
 }

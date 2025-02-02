@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildModifierBillboard3D : IRoot, IEveChildTransformModifier {
-	public bool Fixed { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
+	public bool Fixed { get; set; }
 }

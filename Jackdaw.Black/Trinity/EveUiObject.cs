@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveUiObject : EveSpaceObject2, IEveSpaceObject2 {
-	public bool UsePerspectiveScale { get; set; } // Offset: 3728, Size: 1, Type: Boolean, Id: 3, Class: 
+	public bool UsePerspectiveScale { get; set; }
 }

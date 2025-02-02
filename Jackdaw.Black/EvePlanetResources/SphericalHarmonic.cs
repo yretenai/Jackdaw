@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class SphericalHarmonic : IRoot {
-	public int NumBands { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 17, Class: 
+	public int NumBands { get; set; }
 }

@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriLineSet : IRoot {
-	public Matrix4x4 Transform { get; set; } // Offset: 16, Size: 64, Type: FloatArray, Id: 3, Class: Matrix
-	public bool ZEnable { get; set; } // Offset: 84, Size: 1, Type: Boolean, Id: 3, Class: 
+	public Matrix4x4 Transform { get; set; }
+	public bool ZEnable { get; set; }
 }

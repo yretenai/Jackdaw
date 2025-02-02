@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveColor : IRoot, ITriColorFunction, ITriFunction, ITriCurveLength {
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public Tr2CurveScalar? R { get; set; } // Offset: 48, Size: 248, Type: Collection, Id: 17, Class: Tr2CurveScalar
-	public Tr2CurveScalar? G { get; set; } // Offset: 296, Size: 248, Type: Collection, Id: 17, Class: Tr2CurveScalar
-	public Tr2CurveScalar? B { get; set; } // Offset: 544, Size: 248, Type: Collection, Id: 17, Class: Tr2CurveScalar
-	public Tr2CurveScalar? A { get; set; } // Offset: 792, Size: 248, Type: Collection, Id: 17, Class: Tr2CurveScalar
-	public Vector3 CurrentValue { get; set; } // Offset: 1040, Size: 16, Type: FloatArray, Id: 1, Class: Color
-	public float TimeOffset { get; set; } // Offset: 1056, Size: 4, Type: Single, Id: 19, Class: 
-	public bool SrgbOutput { get; set; } // Offset: 1060, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Name { get; set; }
+	public Tr2CurveScalar? R { get; set; }
+	public Tr2CurveScalar? G { get; set; }
+	public Tr2CurveScalar? B { get; set; }
+	public Tr2CurveScalar? A { get; set; }
+	public Vector3 CurrentValue { get; set; }
+	public float TimeOffset { get; set; }
+	public bool SrgbOutput { get; set; }
 }

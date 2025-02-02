@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2RotationAdapter : IRoot, ITriQuaternionFunction {
-	public IRoot? Curve { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 19, Class: ITriQuaternionFunction
-	public Vector3 Value { get; set; } // Offset: 32, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Vector3 CurrentValue { get; set; } // Offset: 48, Size: 16, Type: FloatArray, Id: 1, Class: Rotation
+	public IRoot? Curve { get; set; }
+	public Vector3 Value { get; set; }
+	public Vector3 CurrentValue { get; set; }
 }

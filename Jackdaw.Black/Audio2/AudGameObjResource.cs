@@ -6,19 +6,19 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class AudGameObjResource : IRoot, IInitialize, IListNotify {
-	public float MaxAttenuationRadius { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public long ID { get; set; } // Offset: 16, Size: 8, Type: Long, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	[BlackUseNamePool]public string? EventPrefix { get; set; } // Offset: 56, Size: 32, Type: WString, Id: 19, Class: 
-	public List<IRoot?>? Parameters { get; set; } // Offset: 88, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool IsVisible { get; set; } // Offset: 246, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool ListenerInRange { get; set; } // Offset: 247, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool IsUsed { get; set; } // Offset: 248, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool Playing2DSound { get; set; } // Offset: 249, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool PlayingVitalSound { get; set; } // Offset: 250, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool ForceCullingState { get; set; } // Offset: 251, Size: 1, Type: Boolean, Id: 1, Class: 
-	public float DistanceFromListener { get; set; } // Offset: 256, Size: 4, Type: Single, Id: 1, Class: 
-	public float AdditionalCullingWeight { get; set; } // Offset: 260, Size: 4, Type: Single, Id: 1, Class: 
-	public float CumulativeWeight { get; set; } // Offset: 264, Size: 4, Type: Single, Id: 1, Class: 
-	public float ScalingFactor { get; set; } // Offset: 268, Size: 4, Type: Single, Id: 1, Class: 
+	public float MaxAttenuationRadius { get; set; }
+	public long ID { get; set; }
+	public string? Name { get; set; }
+	[BlackUseNamePool]public string? EventPrefix { get; set; }
+	public List<IRoot?>? Parameters { get; set; }
+	public bool IsVisible { get; set; }
+	public bool ListenerInRange { get; set; }
+	public bool IsUsed { get; set; }
+	public bool Playing2DSound { get; set; }
+	public bool PlayingVitalSound { get; set; }
+	public bool ForceCullingState { get; set; }
+	public float DistanceFromListener { get; set; }
+	public float AdditionalCullingWeight { get; set; }
+	public float CumulativeWeight { get; set; }
+	public float ScalingFactor { get; set; }
 }

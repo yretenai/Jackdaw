@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SpriteObject : Tr2SpriteObjectBase {
-	public int BlendMode { get; set; } // Offset: 112, Size: 4, Type: Int, Id: 519, Class: 
-	public int SpriteEffect { get; set; } // Offset: 116, Size: 4, Type: Int, Id: 519, Class: 
-	public int SpriteTarget { get; set; } // Offset: 120, Size: 4, Type: Int, Id: 519, Class: 
-	public float GlowBrightness { get; set; } // Offset: 124, Size: 4, Type: Single, Id: 7, Class: 
-	public Vector3 Color { get; set; } // Offset: 128, Size: 16, Type: FloatArray, Id: 7, Class: Color
-	public float Depth { get; set; } // Offset: 144, Size: 4, Type: Single, Id: 7, Class: 
-	public Vector3 ShadowOffset { get; set; } // Offset: 148, Size: 8, Type: FloatArray, Id: 7, Class: 
-	public Vector3 ShadowColor { get; set; } // Offset: 156, Size: 16, Type: FloatArray, Id: 7, Class: Color
-	public float GlowFactor { get; set; } // Offset: 172, Size: 4, Type: Single, Id: 7, Class: 
-	public float GlowExpand { get; set; } // Offset: 176, Size: 4, Type: Single, Id: 7, Class: 
-	public Vector3 GlowColor { get; set; } // Offset: 180, Size: 16, Type: FloatArray, Id: 7, Class: Color
+	public int BlendMode { get; set; }
+	public int SpriteEffect { get; set; }
+	public int SpriteTarget { get; set; }
+	public float GlowBrightness { get; set; }
+	public Vector3 Color { get; set; }
+	public float Depth { get; set; }
+	public Vector3 ShadowOffset { get; set; }
+	public Vector3 ShadowColor { get; set; }
+	public float GlowFactor { get; set; }
+	public float GlowExpand { get; set; }
+	public Vector3 GlowColor { get; set; }
 }

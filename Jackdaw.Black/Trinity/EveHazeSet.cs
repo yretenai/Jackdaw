@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveHazeSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
-	public bool Display { get; set; } // Offset: 32, Size: 1, Type: Boolean, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 40, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Hazes { get; set; } // Offset: 72, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? Effect { get; set; } // Offset: 240, Size: 8, Type: Object, Id: 19, Class: Tr2Effect
+	public bool Display { get; set; }
+	public string? Name { get; set; }
+	public List<IRoot?>? Hazes { get; set; }
+	public IRoot? Effect { get; set; }
 }

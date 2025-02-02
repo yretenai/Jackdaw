@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueSysInfoTaskTimes : IRoot {
-	public double UserTime { get; set; } // Offset: 8, Size: 8, Type: Double, Id: 1, Class: 
-	public double SystemTime { get; set; } // Offset: 16, Size: 8, Type: Double, Id: 1, Class: 
+	public double UserTime { get; set; }
+	public double SystemTime { get; set; }
 }

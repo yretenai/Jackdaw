@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2IntSkinnedObject : Tr2SkinnedObject, ITr2InteriorDynamic, ITr2Interior, IInitialize, ITr2Pickable, ITr2BoundingBox, INotify, IBluePlacementObserver {
-	public Vector3 BoundingSphereCenter { get; set; } // Offset: 912, Size: 12, Type: FloatArray, Id: 123141007343617, Class: Default
-	public float BoundingSphereRadius { get; set; } // Offset: 924, Size: 4, Type: Single, Id: 1, Class: 
-	public IRoot? VariableStore { get; set; } // Offset: 1024, Size: 8, Type: Object, Id: 1, Class: Tr2VariableStore
-	public float DepthOffset { get; set; } // Offset: 1032, Size: 4, Type: Single, Id: 19, Class: 
+	public Vector3 BoundingSphereCenter { get; set; }
+	public float BoundingSphereRadius { get; set; }
+	public IRoot? VariableStore { get; set; }
+	public float DepthOffset { get; set; }
 }

@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSpaceObjectFxAttributes : IRoot, IEveFxAttribute {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public float ActivationStrength { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 1, Class: 
-	public float Ship { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 1, Class: 
-	public float BoundingSphereRadius { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 1, Class: 
-	public float ChildParent { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 1, Class: 
-	public float KillCount { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 1, Class: 
-	public float ActiveTurretCount { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 1, Class: 
-	public Vector3 GeneratedShapeEllipsoidCenter { get; set; } // Offset: 44, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 GeneratedShapeEllipsoidRadius { get; set; } // Offset: 56, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 ParentWorldTranslation { get; set; } // Offset: 68, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 ParentWorldRotation { get; set; } // Offset: 80, Size: 16, Type: FloatArray, Id: 1, Class: Rotation
+	public string? Name { get; set; }
+	public float ActivationStrength { get; set; }
+	public float Ship { get; set; }
+	public float BoundingSphereRadius { get; set; }
+	public float ChildParent { get; set; }
+	public float KillCount { get; set; }
+	public float ActiveTurretCount { get; set; }
+	public Vector3 GeneratedShapeEllipsoidCenter { get; set; }
+	public Vector3 GeneratedShapeEllipsoidRadius { get; set; }
+	public Vector3 ParentWorldTranslation { get; set; }
+	public Vector3 ParentWorldRotation { get; set; }
 }

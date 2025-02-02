@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GeometryBufferParameter : IRoot, ITriEffectParameter, ITriEffectResourceParameter, IInitialize, INotify {
-	public bool IsValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 23, Class: 
-	[BlackUseNamePool]public string? ResourcePath { get; set; } // Offset: 32, Size: 32, Type: WString, Id: 23, Class: 
-	public int MeshIndex { get; set; } // Offset: 64, Size: 4, Type: Int, Id: 23, Class: 
-	public IRoot? GpuBuffer { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 23, Class: ITr2GpuBuffer
-	public bool UsedByCurrentEffect { get; set; } // Offset: 80, Size: 1, Type: Boolean, Id: 1, Class: 
+	public bool IsValid { get; set; }
+	public string? Name { get; set; }
+	[BlackUseNamePool]public string? ResourcePath { get; set; }
+	public int MeshIndex { get; set; }
+	public IRoot? GpuBuffer { get; set; }
+	public bool UsedByCurrentEffect { get; set; }
 }

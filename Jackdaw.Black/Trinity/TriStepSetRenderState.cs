@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepSetRenderState : TriRenderStep {
-	public int State { get; set; } // Offset: 136, Size: 4, Type: Int, Id: 531, Class: 
-	public int Value { get; set; } // Offset: 140, Size: 4, Type: Int, Id: 19, Class: 
+	public int State { get; set; }
+	public int Value { get; set; }
 }

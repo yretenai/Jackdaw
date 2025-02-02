@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class MiniCapsule : IRoot {
-	public long Id { get; set; } // Offset: 8, Size: 8, Type: Long, Id: 1, Class: 
-	public double Ax { get; set; } // Offset: 24, Size: 8, Type: Double, Id: 23, Class: 
-	public double Ay { get; set; } // Offset: 32, Size: 8, Type: Double, Id: 23, Class: 
-	public double Az { get; set; } // Offset: 40, Size: 8, Type: Double, Id: 23, Class: 
-	public double Bx { get; set; } // Offset: 48, Size: 8, Type: Double, Id: 23, Class: 
-	public double By { get; set; } // Offset: 56, Size: 8, Type: Double, Id: 23, Class: 
-	public double Bz { get; set; } // Offset: 64, Size: 8, Type: Double, Id: 23, Class: 
-	public float Radius { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 23, Class: 
+	public long Id { get; set; }
+	public double Ax { get; set; }
+	public double Ay { get; set; }
+	public double Az { get; set; }
+	public double Bx { get; set; }
+	public double By { get; set; }
+	public double Bz { get; set; }
+	public float Radius { get; set; }
 }

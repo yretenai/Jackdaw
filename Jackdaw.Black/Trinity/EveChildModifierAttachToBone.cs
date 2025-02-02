@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildModifierAttachToBone : IRoot, IEveChildTransformModifier {
-	public int BoneIndex { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 19, Class: 
+	public int BoneIndex { get; set; }
 }

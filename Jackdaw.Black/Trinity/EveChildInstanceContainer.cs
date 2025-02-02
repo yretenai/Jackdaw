@@ -6,23 +6,23 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildInstanceContainer : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2ControllerOwner, IListNotify, EveEntity {
-	public Vector3 Translation { get; set; } // Offset: 96, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Scaling { get; set; } // Offset: 108, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 120, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Matrix4x4 LocalTransform { get; set; } // Offset: 136, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
-	public Matrix4x4 WorldTransform { get; set; } // Offset: 200, Size: 64, Type: FloatArray, Id: 1, Class: Matrix
-	public bool StaticTransform { get; set; } // Offset: 264, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool UseSRT { get; set; } // Offset: 265, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool UseStaticRotation { get; set; } // Offset: 266, Size: 1, Type: Boolean, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 272, Size: 8, Type: UTFString, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 296, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool AlwaysOn { get; set; } // Offset: 298, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? InheritProperties { get; set; } // Offset: 304, Size: 8, Type: Object, Id: 19, Class: EveChildInheritProperties
-	public int Origin { get; set; } // Offset: 312, Size: 4, Type: Int, Id: 1, Class: 
-	public IRoot? Source { get; set; } // Offset: 512, Size: 8, Type: Object, Id: 23, Class: IEveSpaceObjectChild
-	public List<IRoot?>? Instances { get; set; } // Offset: 520, Size: 144, Type: Collection, Id: 1, Class: IList
-	public bool Reset { get; set; } // Offset: 664, Size: 1, Type: Boolean, Id: 3, Class: 
-	public string? LocatorSet { get; set; } // Offset: 672, Size: 8, Type: UTFString, Id: 23, Class: 
-	[BlackArray]public byte[][]? Transforms { get; set; } // Offset: 680, Size: 152, Type: Collection, Id: 17, Class: IBlueStructureList
-	public List<IRoot?>? TransformModifiers { get; set; } // Offset: 832, Size: 144, Type: Collection, Id: 21, Class: IList
+	public Vector3 Translation { get; set; }
+	public Vector3 Scaling { get; set; }
+	public Vector3 Rotation { get; set; }
+	public Matrix4x4 LocalTransform { get; set; }
+	public Matrix4x4 WorldTransform { get; set; }
+	public bool StaticTransform { get; set; }
+	public bool UseSRT { get; set; }
+	public bool UseStaticRotation { get; set; }
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public bool AlwaysOn { get; set; }
+	public IRoot? InheritProperties { get; set; }
+	public int Origin { get; set; }
+	public IRoot? Source { get; set; }
+	public List<IRoot?>? Instances { get; set; }
+	public bool Reset { get; set; }
+	public string? LocatorSet { get; set; }
+	[BlackArray]public byte[][]? Transforms { get; set; }
+	public List<IRoot?>? TransformModifiers { get; set; }
 }

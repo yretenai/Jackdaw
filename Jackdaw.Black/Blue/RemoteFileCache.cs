@@ -6,20 +6,20 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class RemoteFileCache : IRoot {
-	public double ThresholdForWarningLongDownloads { get; set; } // Offset: 0, Size: 0, Type: Double, Id: 3, Class: 
-	public double ThresholdForAbortingLongDownloads { get; set; } // Offset: 0, Size: 0, Type: Double, Id: 3, Class: 
-	public string? Server { get; set; } // Offset: 8, Size: 32, Type: String, Id: 3, Class: 
-	public string? BackupServer { get; set; } // Offset: 40, Size: 32, Type: String, Id: 3, Class: 
-	public string? Prefix { get; set; } // Offset: 72, Size: 32, Type: String, Id: 3, Class: 
-	[BlackUseNamePool]public string? CacheFolder { get; set; } // Offset: 104, Size: 32, Type: WString, Id: 3, Class: 
-	public bool RegisterDownloadErrors { get; set; } // Offset: 136, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int PrimaryServerFailThreshold { get; set; } // Offset: 144, Size: 4, Type: Int, Id: 3, Class: 
-	public long BytesDownloaded { get; set; } // Offset: 184, Size: 8, Type: Long, Id: 1, Class: 
-	public long BytesCached { get; set; } // Offset: 192, Size: 8, Type: Long, Id: 1, Class: 
-	public int FilesDownloaded { get; set; } // Offset: 200, Size: 4, Type: Int, Id: 1, Class: 
-	public int FilesCached { get; set; } // Offset: 204, Size: 4, Type: Int, Id: 1, Class: 
-	public int FilesUsedFromCache { get; set; } // Offset: 208, Size: 4, Type: Int, Id: 1, Class: 
-	public bool FullHeaderLogging { get; set; } // Offset: 212, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool VerifyContentsOnSave { get; set; } // Offset: 213, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool VerifyContentsOnLoad { get; set; } // Offset: 214, Size: 1, Type: Boolean, Id: 3, Class: 
+	public double ThresholdForWarningLongDownloads { get; set; }
+	public double ThresholdForAbortingLongDownloads { get; set; }
+	public string? Server { get; set; }
+	public string? BackupServer { get; set; }
+	public string? Prefix { get; set; }
+	[BlackUseNamePool]public string? CacheFolder { get; set; }
+	public bool RegisterDownloadErrors { get; set; }
+	public int PrimaryServerFailThreshold { get; set; }
+	public long BytesDownloaded { get; set; }
+	public long BytesCached { get; set; }
+	public int FilesDownloaded { get; set; }
+	public int FilesCached { get; set; }
+	public int FilesUsedFromCache { get; set; }
+	public bool FullHeaderLogging { get; set; }
+	public bool VerifyContentsOnSave { get; set; }
+	public bool VerifyContentsOnLoad { get; set; }
 }

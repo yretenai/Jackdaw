@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveVector2 : IRoot, ITriFunction, ITriCurveLength {
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public Tr2CurveScalar? X { get; set; } // Offset: 48, Size: 248, Type: Collection, Id: 17, Class: Tr2CurveScalar
-	public Tr2CurveScalar? Y { get; set; } // Offset: 296, Size: 248, Type: Collection, Id: 17, Class: Tr2CurveScalar
-	public Vector3 CurrentValue { get; set; } // Offset: 544, Size: 8, Type: FloatArray, Id: 1, Class: 
+	public string? Name { get; set; }
+	public Tr2CurveScalar? X { get; set; }
+	public Tr2CurveScalar? Y { get; set; }
+	public Vector3 CurrentValue { get; set; }
 }

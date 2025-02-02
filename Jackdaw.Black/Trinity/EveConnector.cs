@@ -6,18 +6,18 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveConnector : IRoot {
-	public IRoot? SourceObject { get; set; } // Offset: 8, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public IRoot? DestObject { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public int Type { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 531, Class: 
-	public Vector3 SourcePosition { get; set; } // Offset: 28, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 DestPosition { get; set; } // Offset: 40, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 PlaneNormal { get; set; } // Offset: 52, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Color { get; set; } // Offset: 64, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public Vector3 AnimationColor { get; set; } // Offset: 80, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public float AnimationSpeed { get; set; } // Offset: 96, Size: 4, Type: Single, Id: 19, Class: 
-	public float AnimationScale { get; set; } // Offset: 100, Size: 4, Type: Single, Id: 19, Class: 
-	public float LineWidth { get; set; } // Offset: 104, Size: 4, Type: Single, Id: 19, Class: 
-	public float Length { get; set; } // Offset: 112, Size: 4, Type: Single, Id: 19, Class: 
-	public bool IsAnimated { get; set; } // Offset: 116, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool AutoScaleAnimation { get; set; } // Offset: 117, Size: 1, Type: Boolean, Id: 19, Class: 
+	public IRoot? SourceObject { get; set; }
+	public IRoot? DestObject { get; set; }
+	public int Type { get; set; }
+	public Vector3 SourcePosition { get; set; }
+	public Vector3 DestPosition { get; set; }
+	public Vector3 PlaneNormal { get; set; }
+	public Vector3 Color { get; set; }
+	public Vector3 AnimationColor { get; set; }
+	public float AnimationSpeed { get; set; }
+	public float AnimationScale { get; set; }
+	public float LineWidth { get; set; }
+	public float Length { get; set; }
+	public bool IsAnimated { get; set; }
+	public bool AutoScaleAnimation { get; set; }
 }

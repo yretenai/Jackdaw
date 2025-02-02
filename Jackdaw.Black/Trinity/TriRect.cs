@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriRect : IRoot, IPythonMethods {
-	public int Left { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 19, Class: 
-	public int Top { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 19, Class: 
-	public int Right { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 19, Class: 
-	public int Bottom { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 19, Class: 
+	public int Left { get; set; }
+	public int Top { get; set; }
+	public int Right { get; set; }
+	public int Bottom { get; set; }
 }

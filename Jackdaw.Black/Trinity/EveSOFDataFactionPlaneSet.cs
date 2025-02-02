@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataFactionPlaneSet : IRoot {
-	public int GroupIndex { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 Color { get; set; } // Offset: 48, Size: 16, Type: FloatArray, Id: 19, Class: Color
+	public int GroupIndex { get; set; }
+	public string? Name { get; set; }
+	public Vector3 Color { get; set; }
 }

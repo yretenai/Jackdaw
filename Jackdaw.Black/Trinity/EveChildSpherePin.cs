@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildSpherePin : EveChildMesh {
-	public Vector3 CenterNormal { get; set; } // Offset: 1776, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public float PinMaxRadius { get; set; } // Offset: 1788, Size: 4, Type: Single, Id: 23, Class: 
-	public float PinRadius { get; set; } // Offset: 1792, Size: 4, Type: Single, Id: 23, Class: 
-	public float PinRotation { get; set; } // Offset: 1796, Size: 4, Type: Single, Id: 23, Class: 
-	public Vector3 PinColor { get; set; } // Offset: 1800, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public Vector3 Color { get; set; } // Offset: 1800, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public float PinAlphaThreshold { get; set; } // Offset: 1816, Size: 4, Type: Single, Id: 23, Class: 
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 1824, Size: 144, Type: Collection, Id: 17, Class: IList
+	public Vector3 CenterNormal { get; set; }
+	public float PinMaxRadius { get; set; }
+	public float PinRadius { get; set; }
+	public float PinRotation { get; set; }
+	public Vector3 PinColor { get; set; }
+	public Vector3 Color { get; set; }
+	public float PinAlphaThreshold { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
 }

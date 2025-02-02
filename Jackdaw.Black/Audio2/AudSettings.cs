@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class AudSettings : IRoot {
-	[BlackUseNamePool]public string? BaseSoundbankPath { get; set; } // Offset: 8, Size: 32, Type: WString, Id: 3, Class: 
-	[BlackUseNamePool]public string? EssentialPath { get; set; } // Offset: 40, Size: 32, Type: WString, Id: 3, Class: 
-	[BlackUseNamePool]public string? SoundbankLanguage { get; set; } // Offset: 72, Size: 32, Type: WString, Id: 3, Class: 
-	public string? ApplicationName { get; set; } // Offset: 104, Size: 32, Type: String, Id: 3, Class: 
+	[BlackUseNamePool]public string? BaseSoundbankPath { get; set; }
+	[BlackUseNamePool]public string? EssentialPath { get; set; }
+	[BlackUseNamePool]public string? SoundbankLanguage { get; set; }
+	public string? ApplicationName { get; set; }
 }

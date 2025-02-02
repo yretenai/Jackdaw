@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SwapChain : IRoot {
-	public int Width { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Height { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public IRoot? BackBuffer { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? DepthStencilBuffer { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 1, Class: Tr2DepthStencil
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public IRoot? BackBuffer { get; set; }
+	public IRoot? DepthStencilBuffer { get; set; }
 }

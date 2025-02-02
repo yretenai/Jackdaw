@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullExtensionPlacementDistributionPlacement : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public float Completeness { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 PlacementBias { get; set; } // Offset: 52, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float CenterBias { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 19, Class: 
-	public int Cap { get; set; } // Offset: 68, Size: 4, Type: Int, Id: 19, Class: 
-	public Vector3 RandomRotationStepSizeYPR { get; set; } // Offset: 72, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Vector3 RandomRotationMaxSteps { get; set; } // Offset: 88, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 RandomScaleMin { get; set; } // Offset: 100, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 RandomScaleMax { get; set; } // Offset: 112, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public bool UniformScale { get; set; } // Offset: 124, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool OccupyLocators { get; set; } // Offset: 125, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Name { get; set; }
+	public float Completeness { get; set; }
+	public Vector3 PlacementBias { get; set; }
+	public float CenterBias { get; set; }
+	public int Cap { get; set; }
+	public Vector3 RandomRotationStepSizeYPR { get; set; }
+	public Vector3 RandomRotationMaxSteps { get; set; }
+	public Vector3 RandomScaleMin { get; set; }
+	public Vector3 RandomScaleMax { get; set; }
+	public bool UniformScale { get; set; }
+	public bool OccupyLocators { get; set; }
 }

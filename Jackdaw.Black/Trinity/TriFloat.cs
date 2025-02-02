@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriFloat : IRoot {
-	public float Value { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
+	public float Value { get; set; }
 }

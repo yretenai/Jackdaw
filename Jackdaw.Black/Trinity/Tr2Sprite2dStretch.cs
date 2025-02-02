@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dStretch : Tr2TexturedSpriteObject {
-	public int LeftEdgeSize { get; set; } // Offset: 256, Size: 4, Type: Int, Id: 7, Class: 
-	public int RightEdgeSize { get; set; } // Offset: 260, Size: 4, Type: Int, Id: 7, Class: 
-	public float EdgeScale { get; set; } // Offset: 264, Size: 4, Type: Single, Id: 7, Class: 
-	public float Saturation { get; set; } // Offset: 268, Size: 4, Type: Single, Id: 7, Class: 
-	public float EffectOpacity { get; set; } // Offset: 272, Size: 4, Type: Single, Id: 7, Class: 
-	public int Offset { get; set; } // Offset: 276, Size: 4, Type: Int, Id: 7, Class: 
-	public bool FillCenter { get; set; } // Offset: 280, Size: 1, Type: Boolean, Id: 7, Class: 
-	public int DpiScaleBehavior { get; set; } // Offset: 284, Size: 4, Type: Int, Id: 531, Class: 
+	public int LeftEdgeSize { get; set; }
+	public int RightEdgeSize { get; set; }
+	public float EdgeScale { get; set; }
+	public float Saturation { get; set; }
+	public float EffectOpacity { get; set; }
+	public int Offset { get; set; }
+	public bool FillCenter { get; set; }
+	public int DpiScaleBehavior { get; set; }
 }

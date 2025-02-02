@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PostProcessRenderInfo : IRoot, INotify {
-	public IRoot? SourceBuffer { get; set; } // Offset: 32, Size: 8, Type: Object, Id: 7, Class: Tr2RenderTarget
+	public IRoot? SourceBuffer { get; set; }
 }

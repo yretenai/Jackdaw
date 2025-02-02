@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class WodPlaceableRes : IRoot {
-	public IRoot? VisualModel { get; set; } // Offset: 8, Size: 8, Type: Object, Id: 19, Class: Tr2Model
-	public float NearFadeDistance { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float FarFadeDistance { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public bool IsShadowCaster { get; set; } // Offset: 24, Size: 1, Type: Boolean, Id: 19, Class: 
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 152, Size: 144, Type: Collection, Id: 17, Class: IList
+	public IRoot? VisualModel { get; set; }
+	public float NearFadeDistance { get; set; }
+	public float FarFadeDistance { get; set; }
+	public bool IsShadowCaster { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
 }

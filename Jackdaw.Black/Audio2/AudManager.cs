@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class AudManager : IRoot {
-	public long OneShotWindow { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 3, Class: 
-	public float ActiveSoundsWeight { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float RangeWeight { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float UsedEmitterWeight { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float WaitingOneShotWeight { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float VisibleWeight { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float Playing2DWeight { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public bool AudioCullingEnabled { get; set; } // Offset: 2364, Size: 1, Type: Boolean, Id: 1, Class: 
-	public int MaxAwakeGameObjects { get; set; } // Offset: 2368, Size: 4, Type: Int, Id: 3, Class: 
-	public float WeightMultiplier { get; set; } // Offset: 2412, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? Log { get; set; } // Offset: 2416, Size: 8, Type: Object, Id: 3, Class: IAudActionLog
+	public long OneShotWindow { get; set; }
+	public float ActiveSoundsWeight { get; set; }
+	public float RangeWeight { get; set; }
+	public float UsedEmitterWeight { get; set; }
+	public float WaitingOneShotWeight { get; set; }
+	public float VisibleWeight { get; set; }
+	public float Playing2DWeight { get; set; }
+	public bool AudioCullingEnabled { get; set; }
+	public int MaxAwakeGameObjects { get; set; }
+	public float WeightMultiplier { get; set; }
+	public IRoot? Log { get; set; }
 }

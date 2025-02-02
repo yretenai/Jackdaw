@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullSpotlightSet : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? VisibilityGroup { get; set; } // Offset: 40, Size: 8, Type: UTFString, Id: 19, Class: 
-	public bool Skinned { get; set; } // Offset: 48, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float ZOffset { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 19, Class: 
-	public string? GlowTextureResPath { get; set; } // Offset: 56, Size: 32, Type: String, Id: 19, Class: 
-	public string? ConeTextureResPath { get; set; } // Offset: 88, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Items { get; set; } // Offset: 120, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public string? VisibilityGroup { get; set; }
+	public bool Skinned { get; set; }
+	public float ZOffset { get; set; }
+	public string? GlowTextureResPath { get; set; }
+	public string? ConeTextureResPath { get; set; }
+	public List<IRoot?>? Items { get; set; }
 }

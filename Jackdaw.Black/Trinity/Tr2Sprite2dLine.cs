@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dLine : Tr2TexturedSpriteObject {
-	public Vector3 TranslationFrom { get; set; } // Offset: 496, Size: 8, Type: FloatArray, Id: 7, Class: 
-	public Vector3 TranslationTo { get; set; } // Offset: 504, Size: 8, Type: FloatArray, Id: 7, Class: 
-	public float WidthFrom { get; set; } // Offset: 512, Size: 4, Type: Single, Id: 7, Class: 
-	public float WidthTo { get; set; } // Offset: 516, Size: 4, Type: Single, Id: 7, Class: 
-	public Vector3 ColorFrom { get; set; } // Offset: 520, Size: 16, Type: FloatArray, Id: 7, Class: Color
-	public Vector3 ColorTo { get; set; } // Offset: 536, Size: 16, Type: FloatArray, Id: 7, Class: Color
-	public float TextureWidth { get; set; } // Offset: 552, Size: 4, Type: Single, Id: 7, Class: 
-	public float TextureOffsetBase { get; set; } // Offset: 556, Size: 4, Type: Single, Id: 7, Class: 
-	public float TextureOffset { get; set; } // Offset: 560, Size: 4, Type: Single, Id: 7, Class: 
+	public Vector3 TranslationFrom { get; set; }
+	public Vector3 TranslationTo { get; set; }
+	public float WidthFrom { get; set; }
+	public float WidthTo { get; set; }
+	public Vector3 ColorFrom { get; set; }
+	public Vector3 ColorTo { get; set; }
+	public float TextureWidth { get; set; }
+	public float TextureOffsetBase { get; set; }
+	public float TextureOffset { get; set; }
 }

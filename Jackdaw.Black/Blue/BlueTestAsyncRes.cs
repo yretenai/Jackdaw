@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueTestAsyncRes : BlueAsyncRes, IBlueResource, ICacheable {
-	public bool Ex { get; set; } // Offset: 232, Size: 1, Type: Boolean, Id: 1, Class: 
+	public bool Ex { get; set; }
 }

@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriColorSequencer : IRoot, ITriFunction, ITriColorFunction, ITriCurveLength {
-	[BlackUseNamePool]public string? Name { get; set; } // Offset: 16, Size: 32, Type: WString, Id: 19, Class: 
-	public long Start { get; set; } // Offset: 48, Size: 8, Type: Long, Id: 19, Class: 
-	public Vector3 Value { get; set; } // Offset: 56, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public int Operator { get; set; } // Offset: 72, Size: 4, Type: Int, Id: 531, Class: 
-	public List<IRoot?>? Functions { get; set; } // Offset: 80, Size: 144, Type: Collection, Id: 17, Class: IList
+	[BlackUseNamePool]public string? Name { get; set; }
+	public long Start { get; set; }
+	public Vector3 Value { get; set; }
+	public int Operator { get; set; }
+	public List<IRoot?>? Functions { get; set; }
 }

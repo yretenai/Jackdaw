@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullExtensionPlacementDistributionParentMatch : IRoot, IEveSOFDataHullExtensionPlacementDistribution {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public IRoot? ParentDescriptor { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 19, Class: EveSOFDNADescriptor
+	public string? Name { get; set; }
+	public IRoot? ParentDescriptor { get; set; }
 }

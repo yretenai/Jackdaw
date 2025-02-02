@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ManipulationTool : IRoot {
-	public List<IRoot?>? Primitives { get; set; } // Offset: 8, Size: 144, Type: Collection, Id: 1, Class: IList
-	public Vector3 Pivot { get; set; } // Offset: 160, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public Matrix4x4 LocalTransform { get; set; } // Offset: 172, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
-	public Matrix4x4 WorldTransform { get; set; } // Offset: 236, Size: 64, Type: FloatArray, Id: 1, Class: Matrix
-	public bool Captured { get; set; } // Offset: 360, Size: 1, Type: Boolean, Id: 3, Class: 
+	public List<IRoot?>? Primitives { get; set; }
+	public Vector3 Pivot { get; set; }
+	public Matrix4x4 LocalTransform { get; set; }
+	public Matrix4x4 WorldTransform { get; set; }
+	public bool Captured { get; set; }
 }

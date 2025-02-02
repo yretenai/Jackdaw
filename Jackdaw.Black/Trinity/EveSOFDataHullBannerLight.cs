@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullBannerLight : IRoot {
-	public float RadiusMultiplier { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	public float Brightness { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public float InnerRadiusMultiplier { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float NoiseAmplitude { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public float NoiseFrequency { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public int NoiceOctaves { get; set; } // Offset: 28, Size: 4, Type: Int, Id: 19, Class: 
-	public float Saturation { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 19, Class: 
+	public float RadiusMultiplier { get; set; }
+	public float Brightness { get; set; }
+	public float InnerRadiusMultiplier { get; set; }
+	public float NoiseAmplitude { get; set; }
+	public float NoiseFrequency { get; set; }
+	public int NoiceOctaves { get; set; }
+	public float Saturation { get; set; }
 }

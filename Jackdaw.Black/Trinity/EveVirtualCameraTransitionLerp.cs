@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraTransitionLerp : EveVirtualCameraTransitionBase {
-	public float TansitionTime { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 19, Class: 
+	public float TansitionTime { get; set; }
 }

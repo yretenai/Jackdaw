@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2FontManager : IRoot {
-	public int NumGlyphsInUse { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int NumGlyphsCached { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int LoadFlag { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 3, Class: 
-	public long TotalGlyphsCachedSize { get; set; } // Offset: 496, Size: 8, Type: Long, Id: 1, Class: 
-	public long GlyphCacheBudget { get; set; } // Offset: 504, Size: 8, Type: Long, Id: 3, Class: 
+	public int NumGlyphsInUse { get; set; }
+	public int NumGlyphsCached { get; set; }
+	public int LoadFlag { get; set; }
+	public long TotalGlyphsCachedSize { get; set; }
+	public long GlyphCacheBudget { get; set; }
 }

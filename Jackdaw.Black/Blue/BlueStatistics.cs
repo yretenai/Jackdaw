@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueStatistics : IRoot {
-	public bool IsTelemetryConnectionRequested { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public float TelemetrySamplingTimeLeft { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public bool IsTelemetryConnected { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsTelemetryPaused { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsCppCaptureEnabled { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public bool IsTaskletCaptureEnabled { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public bool IsPythonCaptureEnabled { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public int TelemetryMaxThreadCount { get; set; } // Offset: 392, Size: 4, Type: Int, Id: 3, Class: 
+	public bool IsTelemetryConnectionRequested { get; set; }
+	public float TelemetrySamplingTimeLeft { get; set; }
+	public bool IsTelemetryConnected { get; set; }
+	public bool IsTelemetryPaused { get; set; }
+	public bool IsCppCaptureEnabled { get; set; }
+	public bool IsTaskletCaptureEnabled { get; set; }
+	public bool IsPythonCaptureEnabled { get; set; }
+	public int TelemetryMaxThreadCount { get; set; }
 }

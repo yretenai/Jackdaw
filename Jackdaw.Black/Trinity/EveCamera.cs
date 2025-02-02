@@ -6,44 +6,44 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveCamera : IRoot, INotify {
-	public IRoot? Parent { get; set; } // Offset: 8, Size: 8, Type: Object, Id: 3, Class: ITriVectorFunction
-	public IRoot? Interest { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 7, Class: ITriVectorFunction
-	public IRoot? Audio2Listener { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 3, Class: IBluePlacementObserver
-	public float TranslationFromParent { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 RotationAroundParent { get; set; } // Offset: 44, Size: 16, Type: FloatArray, Id: 23, Class: Rotation
-	public Vector3 RotationOfInterest { get; set; } // Offset: 60, Size: 16, Type: FloatArray, Id: 23, Class: Rotation
-	public Vector3 Alignment { get; set; } // Offset: 76, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 ExtraTranslation { get; set; } // Offset: 88, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public bool UseExtraTranslation { get; set; } // Offset: 100, Size: 1, Type: Boolean, Id: 3, Class: 
-	public float FieldOfView { get; set; } // Offset: 104, Size: 4, Type: Single, Id: 19, Class: 
-	public float FrontClip { get; set; } // Offset: 108, Size: 4, Type: Single, Id: 19, Class: 
-	public float BackClip { get; set; } // Offset: 112, Size: 4, Type: Single, Id: 19, Class: 
-	public float Friction { get; set; } // Offset: 116, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxSpeed { get; set; } // Offset: 120, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinPitch { get; set; } // Offset: 124, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxPitch { get; set; } // Offset: 128, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinYaw { get; set; } // Offset: 132, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxYaw { get; set; } // Offset: 136, Size: 4, Type: Single, Id: 19, Class: 
-	public float Yaw { get; set; } // Offset: 156, Size: 4, Type: Single, Id: 17, Class: 
-	public float Pitch { get; set; } // Offset: 160, Size: 4, Type: Single, Id: 17, Class: 
-	public bool IdleMove { get; set; } // Offset: 172, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float IdleScale { get; set; } // Offset: 176, Size: 4, Type: Single, Id: 19, Class: 
-	public float IdleSpeed { get; set; } // Offset: 180, Size: 4, Type: Single, Id: 19, Class: 
-	public bool Noise { get; set; } // Offset: 184, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float NoiseScale { get; set; } // Offset: 188, Size: 4, Type: Single, Id: 19, Class: 
-	public float NoiseDamp { get; set; } // Offset: 192, Size: 4, Type: Single, Id: 19, Class: 
-	public float CenterOffset { get; set; } // Offset: 196, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? ZoomCurve { get; set; } // Offset: 200, Size: 8, Type: Object, Id: 19, Class: ITriScalarFunction
-	public IRoot? NoiseCurve { get; set; } // Offset: 208, Size: 8, Type: Object, Id: 19, Class: ITriScalarFunction
-	public IRoot? NoiseScaleCurve { get; set; } // Offset: 216, Size: 8, Type: Object, Id: 19, Class: ITriScalarFunction
-	public IRoot? NoiseDampCurve { get; set; } // Offset: 224, Size: 8, Type: Object, Id: 19, Class: ITriScalarFunction
-	public bool Update { get; set; } // Offset: 232, Size: 1, Type: Boolean, Id: 19, Class: 
-	public Vector3 Pos { get; set; } // Offset: 264, Size: 12, Type: FloatArray, Id: 17, Class: 
-	public Vector3 Intr { get; set; } // Offset: 276, Size: 12, Type: FloatArray, Id: 17, Class: 
-	public Vector3 ViewVec { get; set; } // Offset: 288, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 RightVec { get; set; } // Offset: 300, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 UpVec { get; set; } // Offset: 312, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public IRoot? ProjectionMatrix { get; set; } // Offset: 392, Size: 8, Type: Object, Id: 3, Class: TriProjection
-	public IRoot? ViewMatrix { get; set; } // Offset: 400, Size: 8, Type: Object, Id: 1, Class: TriView
-	public IRoot? ErrorHandler { get; set; } // Offset: 424, Size: 8, Type: Object, Id: 3, Class: IBlueEventListener
+	public IRoot? Parent { get; set; }
+	public IRoot? Interest { get; set; }
+	public IRoot? Audio2Listener { get; set; }
+	public float TranslationFromParent { get; set; }
+	public Vector3 RotationAroundParent { get; set; }
+	public Vector3 RotationOfInterest { get; set; }
+	public Vector3 Alignment { get; set; }
+	public Vector3 ExtraTranslation { get; set; }
+	public bool UseExtraTranslation { get; set; }
+	public float FieldOfView { get; set; }
+	public float FrontClip { get; set; }
+	public float BackClip { get; set; }
+	public float Friction { get; set; }
+	public float MaxSpeed { get; set; }
+	public float MinPitch { get; set; }
+	public float MaxPitch { get; set; }
+	public float MinYaw { get; set; }
+	public float MaxYaw { get; set; }
+	public float Yaw { get; set; }
+	public float Pitch { get; set; }
+	public bool IdleMove { get; set; }
+	public float IdleScale { get; set; }
+	public float IdleSpeed { get; set; }
+	public bool Noise { get; set; }
+	public float NoiseScale { get; set; }
+	public float NoiseDamp { get; set; }
+	public float CenterOffset { get; set; }
+	public IRoot? ZoomCurve { get; set; }
+	public IRoot? NoiseCurve { get; set; }
+	public IRoot? NoiseScaleCurve { get; set; }
+	public IRoot? NoiseDampCurve { get; set; }
+	public bool Update { get; set; }
+	public Vector3 Pos { get; set; }
+	public Vector3 Intr { get; set; }
+	public Vector3 ViewVec { get; set; }
+	public Vector3 RightVec { get; set; }
+	public Vector3 UpVec { get; set; }
+	public IRoot? ProjectionMatrix { get; set; }
+	public IRoot? ViewMatrix { get; set; }
+	public IRoot? ErrorHandler { get; set; }
 }

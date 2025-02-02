@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderDebug : TriRenderStep, ITr2DebugRenderer {
-	public bool AutoClear { get; set; } // Offset: 280, Size: 1, Type: Boolean, Id: 3, Class: 
+	public bool AutoClear { get; set; }
 }

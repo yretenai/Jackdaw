@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dPickingMask : IRoot {
-	[BlackUseNamePool]public string? MaskPath { get; set; } // Offset: 0, Size: 0, Type: WString, Id: 3, Class: 
-	public IRoot? Mask { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 1, Class: Tr2ImageRes
-	public int Channel { get; set; } // Offset: 48, Size: 4, Type: Int, Id: 515, Class: 
-	public float Threshold { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 3, Class: 
-	public int LeftEdge { get; set; } // Offset: 56, Size: 4, Type: Int, Id: 3, Class: 
-	public int TopEdge { get; set; } // Offset: 60, Size: 4, Type: Int, Id: 3, Class: 
-	public int RightEdge { get; set; } // Offset: 64, Size: 4, Type: Int, Id: 3, Class: 
-	public int BottomEdge { get; set; } // Offset: 68, Size: 4, Type: Int, Id: 3, Class: 
+	[BlackUseNamePool]public string? MaskPath { get; set; }
+	public IRoot? Mask { get; set; }
+	public int Channel { get; set; }
+	public float Threshold { get; set; }
+	public int LeftEdge { get; set; }
+	public int TopEdge { get; set; }
+	public int RightEdge { get; set; }
+	public int BottomEdge { get; set; }
 }

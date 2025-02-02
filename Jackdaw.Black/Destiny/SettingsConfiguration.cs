@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class SettingsConfiguration : IRoot {
-	public long CollisionMaxIterations { get; set; } // Offset: 8, Size: 8, Type: Long, Id: 3, Class: 
-	public bool UseIterativeCollision { get; set; } // Offset: 16, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool UseDynamicalOrientation { get; set; } // Offset: 17, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool DisableDynamicalOrientationForMissiles { get; set; } // Offset: 18, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool UseNewOrbit { get; set; } // Offset: 19, Size: 1, Type: Boolean, Id: 3, Class: 
+	public long CollisionMaxIterations { get; set; }
+	public bool UseIterativeCollision { get; set; }
+	public bool UseDynamicalOrientation { get; set; }
+	public bool DisableDynamicalOrientationForMissiles { get; set; }
+	public bool UseNewOrbit { get; set; }
 }

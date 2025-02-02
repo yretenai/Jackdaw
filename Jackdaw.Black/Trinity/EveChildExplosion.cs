@@ -6,25 +6,25 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildExplosion : EveChildContainer, EveEntity, IEveSpaceObjectChild {
-	public List<IRoot?>? GeneratedLocalExplosions { get; set; } // Offset: 304, Size: 144, Type: Collection, Id: 1, Class: IList
-	public float LocalExplosionDelay { get; set; } // Offset: 2448, Size: 4, Type: Single, Id: 19, Class: 
-	public float LocalExplosionInterval { get; set; } // Offset: 2452, Size: 4, Type: Single, Id: 19, Class: 
-	public float LocalExplosionIntervalFactor { get; set; } // Offset: 2456, Size: 4, Type: Single, Id: 19, Class: 
-	public float GlobalExplosionDelay { get; set; } // Offset: 2488, Size: 4, Type: Single, Id: 19, Class: 
-	public float WreckSwitchTime { get; set; } // Offset: 2496, Size: 4, Type: Single, Id: 1, Class: 
-	public float WreckSwitchOffsetFromGlobalStart { get; set; } // Offset: 2500, Size: 4, Type: Single, Id: 3, Class: 
-	public float LocalDuration { get; set; } // Offset: 2504, Size: 4, Type: Single, Id: 19, Class: 
-	public float GlobalDuration { get; set; } // Offset: 2508, Size: 4, Type: Single, Id: 19, Class: 
-	public float TotalDuration { get; set; } // Offset: 2512, Size: 4, Type: Single, Id: 1, Class: 
-	public IRoot? LocalExplosion { get; set; } // Offset: 2520, Size: 8, Type: Object, Id: 19, Class: IEveSpaceObjectChild
-	public List<IRoot?>? LocalExplosions { get; set; } // Offset: 2528, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? LocalExplosionShared { get; set; } // Offset: 2672, Size: 8, Type: Object, Id: 19, Class: IEveSpaceObjectChild
-	public IRoot? GlobalExplosion { get; set; } // Offset: 2680, Size: 8, Type: Object, Id: 19, Class: IEveSpaceObjectChild
-	public List<IRoot?>? GlobalExplosions { get; set; } // Offset: 2688, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? GeneratedGlobalExplosions { get; set; } // Offset: 2976, Size: 8, Type: Object, Id: 1, Class: EveChildContainer
-	public float PlayTime { get; set; } // Offset: 3264, Size: 4, Type: Single, Id: 1, Class: 
-	public float GlobalExplosionTime { get; set; } // Offset: 3272, Size: 4, Type: Single, Id: 1, Class: 
-	public Vector3 GlobalScaling { get; set; } // Offset: 3288, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 LocalScaling { get; set; } // Offset: 3312, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public bool IsPlaying { get; set; } // Offset: 3324, Size: 1, Type: Boolean, Id: 1, Class: 
+	public List<IRoot?>? GeneratedLocalExplosions { get; set; }
+	public float LocalExplosionDelay { get; set; }
+	public float LocalExplosionInterval { get; set; }
+	public float LocalExplosionIntervalFactor { get; set; }
+	public float GlobalExplosionDelay { get; set; }
+	public float WreckSwitchTime { get; set; }
+	public float WreckSwitchOffsetFromGlobalStart { get; set; }
+	public float LocalDuration { get; set; }
+	public float GlobalDuration { get; set; }
+	public float TotalDuration { get; set; }
+	public IRoot? LocalExplosion { get; set; }
+	public List<IRoot?>? LocalExplosions { get; set; }
+	public IRoot? LocalExplosionShared { get; set; }
+	public IRoot? GlobalExplosion { get; set; }
+	public List<IRoot?>? GlobalExplosions { get; set; }
+	public IRoot? GeneratedGlobalExplosions { get; set; }
+	public float PlayTime { get; set; }
+	public float GlobalExplosionTime { get; set; }
+	public Vector3 GlobalScaling { get; set; }
+	public Vector3 LocalScaling { get; set; }
+	public bool IsPlaying { get; set; }
 }

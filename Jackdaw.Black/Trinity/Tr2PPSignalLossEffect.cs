@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPSignalLossEffect : Tr2PPEffect {
-	public float Strength { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 23, Class: 
+	public float Strength { get; set; }
 }

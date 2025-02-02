@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriValueBinding : IRoot, ITr2ValueBinding, INotify {
-	public bool IsValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public IRoot? SourceObject { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: 
-	public IRoot? DestinationObject { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public string? SourceAttribute { get; set; } // Offset: 96, Size: 32, Type: String, Id: 23, Class: 
-	public string? DestinationAttribute { get; set; } // Offset: 128, Size: 32, Type: String, Id: 23, Class: 
-	public bool IsWeak { get; set; } // Offset: 178, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool IsEnabled { get; set; } // Offset: 179, Size: 1, Type: Boolean, Id: 3, Class: 
-	public float Scale { get; set; } // Offset: 180, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 Offset { get; set; } // Offset: 184, Size: 16, Type: FloatArray, Id: 19, Class: 
+	public bool IsValid { get; set; }
+	public IRoot? SourceObject { get; set; }
+	public IRoot? DestinationObject { get; set; }
+	public string? Name { get; set; }
+	public string? SourceAttribute { get; set; }
+	public string? DestinationAttribute { get; set; }
+	public bool IsWeak { get; set; }
+	public bool IsEnabled { get; set; }
+	public float Scale { get; set; }
+	public Vector3 Offset { get; set; }
 }

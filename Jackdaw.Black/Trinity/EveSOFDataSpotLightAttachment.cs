@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataSpotLightAttachment : IRoot {
-	public float Saturation { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	public float Intensity { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 Translation { get; set; } // Offset: 16, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float InnerAngleMultiplier { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
-	public float OuterAngleMultiplier { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 19, Class: 
-	public float InnerScaleMultiplier { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 19, Class: 
-	public float OuterScaleMultiplier { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 19, Class: 
-	public float NoiseAmplitude { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 19, Class: 
-	public float NoiseFrequency { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public int NoiseOctaves { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 19, Class: 
-	[BlackUseNamePool]public string? LightProfilePath { get; set; } // Offset: 56, Size: 32, Type: WString, Id: 19, Class: 
+	public float Saturation { get; set; }
+	public float Intensity { get; set; }
+	public Vector3 Translation { get; set; }
+	public float InnerAngleMultiplier { get; set; }
+	public float OuterAngleMultiplier { get; set; }
+	public float InnerScaleMultiplier { get; set; }
+	public float OuterScaleMultiplier { get; set; }
+	public float NoiseAmplitude { get; set; }
+	public float NoiseFrequency { get; set; }
+	public int NoiseOctaves { get; set; }
+	[BlackUseNamePool]public string? LightProfilePath { get; set; }
 }

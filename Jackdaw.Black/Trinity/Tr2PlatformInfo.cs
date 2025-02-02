@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PlatformInfo : IRoot {
-	public string? PlatformName { get; set; } // Offset: 0, Size: 0, Type: String, Id: 1, Class: 
-	public int PlatformID { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public bool IsLowPerformance { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
+	public string? PlatformName { get; set; }
+	public int PlatformID { get; set; }
+	public bool IsLowPerformance { get; set; }
 }

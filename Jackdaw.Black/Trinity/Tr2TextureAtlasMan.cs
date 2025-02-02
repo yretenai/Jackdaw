@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TextureAtlasMan : IRoot {
-	public List<IRoot?>? Atlases { get; set; } // Offset: 8, Size: 144, Type: Collection, Id: 1, Class: IList
+	public List<IRoot?>? Atlases { get; set; }
 }

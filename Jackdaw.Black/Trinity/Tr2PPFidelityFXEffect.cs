@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPFidelityFXEffect : Tr2PPEffect {
-	public float Intensity { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 23, Class: 
-	public float Sharpness { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 23, Class: 
-	public bool UseRcas { get; set; } // Offset: 24, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool FsrEnabled { get; set; } // Offset: 25, Size: 1, Type: Boolean, Id: 23, Class: 
-	public float UpsamplingFactor { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 23, Class: 
-	public bool SlowFSR { get; set; } // Offset: 32, Size: 1, Type: Boolean, Id: 23, Class: 
-	public float Miplodbias { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 23, Class: 
-	public bool Debug { get; set; } // Offset: 40, Size: 1, Type: Boolean, Id: 3, Class: 
+	public float Intensity { get; set; }
+	public float Sharpness { get; set; }
+	public bool UseRcas { get; set; }
+	public bool FsrEnabled { get; set; }
+	public float UpsamplingFactor { get; set; }
+	public bool SlowFSR { get; set; }
+	public float Miplodbias { get; set; }
+	public bool Debug { get; set; }
 }

@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GrannyIntersectionResult : IRoot {
-	public Vector3 Position { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public Vector3 Normal { get; set; } // Offset: 20, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public Vector3 Uv { get; set; } // Offset: 32, Size: 8, Type: FloatArray, Id: 3, Class: 
-	public int MeshIndex { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 3, Class: 
-	public int AreaIndex { get; set; } // Offset: 44, Size: 4, Type: Int, Id: 3, Class: 
-	public int BoneIndex { get; set; } // Offset: 48, Size: 4, Type: Int, Id: 3, Class: 
-	public bool HasPosition { get; set; } // Offset: 52, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool HasNormal { get; set; } // Offset: 53, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool HasUv { get; set; } // Offset: 54, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool HasBoneIndex { get; set; } // Offset: 55, Size: 1, Type: Boolean, Id: 3, Class: 
+	public Vector3 Position { get; set; }
+	public Vector3 Normal { get; set; }
+	public Vector3 Uv { get; set; }
+	public int MeshIndex { get; set; }
+	public int AreaIndex { get; set; }
+	public int BoneIndex { get; set; }
+	public bool HasPosition { get; set; }
+	public bool HasNormal { get; set; }
+	public bool HasUv { get; set; }
+	public bool HasBoneIndex { get; set; }
 }

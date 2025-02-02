@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GrannyVectorTrack : Tr2GrannyTrack {
-	public float Value { get; set; } // Offset: 152, Size: 4, Type: Single, Id: 1, Class: 
+	public float Value { get; set; }
 }

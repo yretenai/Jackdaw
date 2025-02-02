@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataArea : IRoot {
-	public IRoot? Primary { get; set; } // Offset: 8, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public IRoot? Glass { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public IRoot? Sails { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public IRoot? Reactor { get; set; } // Offset: 32, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public IRoot? Darkhull { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public IRoot? Rock { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public IRoot? Monument { get; set; } // Offset: 64, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public IRoot? Ornament { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
-	public IRoot? SimplePrimary { get; set; } // Offset: 80, Size: 8, Type: Object, Id: 19, Class: EveSOFDataAreaMaterial
+	public IRoot? Primary { get; set; }
+	public IRoot? Glass { get; set; }
+	public IRoot? Sails { get; set; }
+	public IRoot? Reactor { get; set; }
+	public IRoot? Darkhull { get; set; }
+	public IRoot? Rock { get; set; }
+	public IRoot? Monument { get; set; }
+	public IRoot? Ornament { get; set; }
+	public IRoot? SimplePrimary { get; set; }
 }

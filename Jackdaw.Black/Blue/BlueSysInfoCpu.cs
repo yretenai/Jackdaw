@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueSysInfoCpu : IRoot {
-	public int Family { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 1, Class: 
-	public int Revision { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 1, Class: 
-	public int LogicalCpuCount { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 1, Class: 
-	public int BitCount { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 1, Class: 
-	public string? Brand { get; set; } // Offset: 24, Size: 32, Type: String, Id: 1, Class: 
-	public string? Identifier { get; set; } // Offset: 56, Size: 32, Type: String, Id: 1, Class: 
-	public string? Architecture { get; set; } // Offset: 88, Size: 32, Type: String, Id: 1, Class: 
-	public int Frequency { get; set; } // Offset: 144, Size: 4, Type: Int, Id: 1, Class: 
+	public int Family { get; set; }
+	public int Revision { get; set; }
+	public int LogicalCpuCount { get; set; }
+	public int BitCount { get; set; }
+	public string? Brand { get; set; }
+	public string? Identifier { get; set; }
+	public string? Architecture { get; set; }
+	public int Frequency { get; set; }
 }

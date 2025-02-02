@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepSetView : TriRenderStep {
-	public IRoot? View { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 19, Class: TriView
-	public IRoot? Camera { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 19, Class: EveCamera
+	public IRoot? View { get; set; }
+	public IRoot? Camera { get; set; }
 }

@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveEllipsoidVolume : IRoot, IEveVolume, INotify {
-	public string? Name { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 19, Class: 
-	public Vector3 Position { get; set; } // Offset: 32, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public Vector3 Shape { get; set; } // Offset: 44, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public Vector3 InnerShape { get; set; } // Offset: 56, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 68, Size: 16, Type: FloatArray, Id: 23, Class: Rotation
-	public bool DebugShowIntersection { get; set; } // Offset: 108, Size: 1, Type: Boolean, Id: 3, Class: 
+	public string? Name { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 Shape { get; set; }
+	public Vector3 InnerShape { get; set; }
+	public Vector3 Rotation { get; set; }
+	public bool DebugShowIntersection { get; set; }
 }

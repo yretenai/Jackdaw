@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepSetVariableStore : TriRenderStep {
-	public string? VariableName { get; set; } // Offset: 136, Size: 32, Type: String, Id: 19, Class: 
+	public string? VariableName { get; set; }
 }

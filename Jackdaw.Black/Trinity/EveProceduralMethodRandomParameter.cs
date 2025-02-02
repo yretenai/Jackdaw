@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveProceduralMethodRandomParameter : IRoot, INotify, IInitialize {
-	public string? Name { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
-	public IRoot? Child { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 23, Class: EveChildRef
-	public int Weighting { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 23, Class: 
+	public string? Name { get; set; }
+	public IRoot? Child { get; set; }
+	public int Weighting { get; set; }
 }

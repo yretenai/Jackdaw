@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveConstant : IRoot, ITriScalarFunction, ITriVectorFunction, ITriQuaternionFunction, ITriColorFunction, ITriFunction {
-	public string? Name { get; set; } // Offset: 32, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 CurrentValue { get; set; } // Offset: 64, Size: 16, Type: FloatArray, Id: 1, Class: 
-	public Vector3 Value { get; set; } // Offset: 64, Size: 16, Type: FloatArray, Id: 19, Class: 
+	public string? Name { get; set; }
+	public Vector3 CurrentValue { get; set; }
+	public Vector3 Value { get; set; }
 }

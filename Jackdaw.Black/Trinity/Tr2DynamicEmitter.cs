@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2DynamicEmitter : IRoot, ITr2GenericEmitter, INotify, IInitialize {
-	public int EmittedParticles { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Generators { get; set; } // Offset: 56, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool IsValid { get; set; } // Offset: 200, Size: 1, Type: Boolean, Id: 1, Class: 
-	public IRoot? ParticleSystem { get; set; } // Offset: 208, Size: 8, Type: Object, Id: 23, Class: Tr2ParticleSystem
-	public float Rate { get; set; } // Offset: 220, Size: 4, Type: Single, Id: 19, Class: 
-	public int MaxParticles { get; set; } // Offset: 256, Size: 4, Type: Int, Id: 19, Class: 
+	public int EmittedParticles { get; set; }
+	public string? Name { get; set; }
+	public List<IRoot?>? Generators { get; set; }
+	public bool IsValid { get; set; }
+	public IRoot? ParticleSystem { get; set; }
+	public float Rate { get; set; }
+	public int MaxParticles { get; set; }
 }

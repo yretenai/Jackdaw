@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ParticleSpring : IRoot, ITr2ParticleForce {
-	public float SpringConstant { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 Position { get; set; } // Offset: 12, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public float SpringConstant { get; set; }
+	public Vector3 Position { get; set; }
 }

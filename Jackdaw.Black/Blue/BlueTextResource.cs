@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueTextResource : BlueAsyncRes {
-	public string? Text { get; set; } // Offset: 232, Size: 32, Type: String, Id: 1, Class: 
+	public string? Text { get; set; }
 }

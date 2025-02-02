@@ -6,29 +6,29 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildMesh : IRoot, EveEntity, IEveSpaceObjectDecalOwner, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify, ITr2GrannyAnimationOwner, IEveSpaceObjectAttachmentOwner, ITr2LightOwner, IEveShadowCaster {
-	public Vector3 Translation { get; set; } // Offset: 104, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Scaling { get; set; } // Offset: 116, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 128, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Matrix4x4 LocalTransform { get; set; } // Offset: 144, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
-	public Matrix4x4 WorldTransform { get; set; } // Offset: 208, Size: 64, Type: FloatArray, Id: 1, Class: Matrix
-	public bool StaticTransform { get; set; } // Offset: 272, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool UseSRT { get; set; } // Offset: 273, Size: 1, Type: Boolean, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 280, Size: 8, Type: UTFString, Id: 19, Class: 
-	public IRoot? Mesh { get; set; } // Offset: 288, Size: 8, Type: Object, Id: 23, Class: Tr2MeshBase
-	public List<IRoot?>? TransformModifiers { get; set; } // Offset: 408, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? AnimationUpdater { get; set; } // Offset: 552, Size: 8, Type: Object, Id: 23, Class: Tr2GrannyAnimation
-	public int LowestLodVisible { get; set; } // Offset: 560, Size: 4, Type: Int, Id: 19, Class: 
-	public float MinScreenSize { get; set; } // Offset: 564, Size: 4, Type: Single, Id: 19, Class: 
-	public float CurrentScreenSize { get; set; } // Offset: 568, Size: 4, Type: Single, Id: 1, Class: 
-	public float CurrentInstanceScreenSize { get; set; } // Offset: 572, Size: 4, Type: Single, Id: 1, Class: 
-	public float SortValueOffset { get; set; } // Offset: 576, Size: 4, Type: Single, Id: 19, Class: 
-	public float SortValueScale { get; set; } // Offset: 580, Size: 4, Type: Single, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 1320, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool UseSpaceObjectData { get; set; } // Offset: 1323, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool CastShadow { get; set; } // Offset: 1324, Size: 1, Type: Boolean, Id: 23, Class: 
-	public int Origin { get; set; } // Offset: 1332, Size: 4, Type: Int, Id: 1, Class: 
-	public int ReflectionMode { get; set; } // Offset: 1336, Size: 4, Type: Int, Id: 535, Class: 
-	public List<IRoot?>? Decals { get; set; } // Offset: 1344, Size: 144, Type: Collection, Id: 1, Class: IList
-	public List<IRoot?>? Attachments { get; set; } // Offset: 1488, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Lights { get; set; } // Offset: 1632, Size: 144, Type: Collection, Id: 17, Class: IList
+	public Vector3 Translation { get; set; }
+	public Vector3 Scaling { get; set; }
+	public Vector3 Rotation { get; set; }
+	public Matrix4x4 LocalTransform { get; set; }
+	public Matrix4x4 WorldTransform { get; set; }
+	public bool StaticTransform { get; set; }
+	public bool UseSRT { get; set; }
+	public string? Name { get; set; }
+	public IRoot? Mesh { get; set; }
+	public List<IRoot?>? TransformModifiers { get; set; }
+	public IRoot? AnimationUpdater { get; set; }
+	public int LowestLodVisible { get; set; }
+	public float MinScreenSize { get; set; }
+	public float CurrentScreenSize { get; set; }
+	public float CurrentInstanceScreenSize { get; set; }
+	public float SortValueOffset { get; set; }
+	public float SortValueScale { get; set; }
+	public bool Display { get; set; }
+	public bool UseSpaceObjectData { get; set; }
+	public bool CastShadow { get; set; }
+	public int Origin { get; set; }
+	public int ReflectionMode { get; set; }
+	public List<IRoot?>? Decals { get; set; }
+	public List<IRoot?>? Attachments { get; set; }
+	public List<IRoot?>? Lights { get; set; }
 }

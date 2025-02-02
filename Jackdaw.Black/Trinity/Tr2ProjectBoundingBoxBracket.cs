@@ -6,20 +6,20 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ProjectBoundingBoxBracket : IRoot, ITriFunction {
-	[BlackUseNamePool]public string? Name { get; set; } // Offset: 8, Size: 32, Type: WString, Id: 3, Class: 
-	public IRoot? Object { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 3, Class: ITr2BoundingBox
-	public bool IntegerCoordinates { get; set; } // Offset: 48, Size: 1, Type: Boolean, Id: 3, Class: 
-	public float MinProjectedWidth { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 3, Class: 
-	public float MinProjectedHeight { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 3, Class: 
-	public float MaxProjectedWidth { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 3, Class: 
-	public float MaxProjectedHeight { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? Parent { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 3, Class: Tr2Sprite2dContainer
-	public IRoot? Bracket { get; set; } // Offset: 80, Size: 8, Type: Object, Id: 3, Class: Tr2Sprite2dContainer
-	public float ProjectedX { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 1, Class: 
-	public float ProjectedY { get; set; } // Offset: 92, Size: 4, Type: Single, Id: 1, Class: 
-	public float ProjectedZ { get; set; } // Offset: 96, Size: 4, Type: Single, Id: 1, Class: 
-	public float ProjectedWidth { get; set; } // Offset: 100, Size: 4, Type: Single, Id: 1, Class: 
-	public float ProjectedHeight { get; set; } // Offset: 104, Size: 4, Type: Single, Id: 1, Class: 
-	public float CameraDistance { get; set; } // Offset: 108, Size: 4, Type: Single, Id: 1, Class: 
-	public float ScreenMargin { get; set; } // Offset: 112, Size: 4, Type: Single, Id: 3, Class: 
+	[BlackUseNamePool]public string? Name { get; set; }
+	public IRoot? Object { get; set; }
+	public bool IntegerCoordinates { get; set; }
+	public float MinProjectedWidth { get; set; }
+	public float MinProjectedHeight { get; set; }
+	public float MaxProjectedWidth { get; set; }
+	public float MaxProjectedHeight { get; set; }
+	public IRoot? Parent { get; set; }
+	public IRoot? Bracket { get; set; }
+	public float ProjectedX { get; set; }
+	public float ProjectedY { get; set; }
+	public float ProjectedZ { get; set; }
+	public float ProjectedWidth { get; set; }
+	public float ProjectedHeight { get; set; }
+	public float CameraDistance { get; set; }
+	public float ScreenMargin { get; set; }
 }

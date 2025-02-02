@@ -6,20 +6,20 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SphereShapeAttributeGenerator : IRoot, ITr2AttributeGenerator {
-	public string? Name { get; set; } // Offset: 0, Size: 0, Type: String, Id: 1, Class: 
-	public Vector3 Position { get; set; } // Offset: 8, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 20, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public float MinPhi { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxPhi { get; set; } // Offset: 40, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinTheta { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxTheta { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinRadius { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxRadius { get; set; } // Offset: 56, Size: 4, Type: Single, Id: 19, Class: 
-	public float DistributionExponent { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 19, Class: 
-	public bool ControlPosition { get; set; } // Offset: 64, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool ControlVelocity { get; set; } // Offset: 65, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float MinSpeed { get; set; } // Offset: 68, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxSpeed { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 19, Class: 
-	public float ParentVelocityFactor { get; set; } // Offset: 76, Size: 4, Type: Single, Id: 19, Class: 
-	public bool Valid { get; set; } // Offset: 112, Size: 1, Type: Boolean, Id: 1, Class: 
+	public string? Name { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 Rotation { get; set; }
+	public float MinPhi { get; set; }
+	public float MaxPhi { get; set; }
+	public float MinTheta { get; set; }
+	public float MaxTheta { get; set; }
+	public float MinRadius { get; set; }
+	public float MaxRadius { get; set; }
+	public float DistributionExponent { get; set; }
+	public bool ControlPosition { get; set; }
+	public bool ControlVelocity { get; set; }
+	public float MinSpeed { get; set; }
+	public float MaxSpeed { get; set; }
+	public float ParentVelocityFactor { get; set; }
+	public bool Valid { get; set; }
 }

@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveProceduralMethodCyclingParameter : IRoot, INotify, IInitialize {
-	public string? Name { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
-	public IRoot? Child { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 23, Class: EveChildRef
-	public bool RestartRequired { get; set; } // Offset: 34, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool ReloadRequired { get; set; } // Offset: 35, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float PlayDuration { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 19, Class: 
+	public string? Name { get; set; }
+	public IRoot? Child { get; set; }
+	public bool RestartRequired { get; set; }
+	public bool ReloadRequired { get; set; }
+	public float PlayDuration { get; set; }
 }

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2NamedPipeListener : IRoot {
-	public string? PipeName { get; set; } // Offset: 8, Size: 32, Type: String, Id: 1, Class: 
-	public int Size { get; set; } // Offset: 56, Size: 4, Type: Int, Id: 1, Class: 
-	public int Waiting { get; set; } // Offset: 60, Size: 4, Type: Int, Id: 1, Class: 
+	public string? PipeName { get; set; }
+	public int Size { get; set; }
+	public int Waiting { get; set; }
 }

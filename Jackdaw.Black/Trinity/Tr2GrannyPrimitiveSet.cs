@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GrannyPrimitiveSet : Tr2PrimitiveSet, IInitialize {
-	public bool RenderSolid { get; set; } // Offset: 344, Size: 1, Type: Boolean, Id: 19, Class: 
-	public string? GrannyResPath { get; set; } // Offset: 352, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? GrannyRes { get; set; } // Offset: 384, Size: 8, Type: Object, Id: 1, Class: TriGrannyRes
+	public bool RenderSolid { get; set; }
+	public string? GrannyResPath { get; set; }
+	public IRoot? GrannyRes { get; set; }
 }

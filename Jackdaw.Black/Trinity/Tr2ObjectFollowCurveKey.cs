@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ObjectFollowCurveKey : IRoot, ITr2FollowCurveKey, INotify, IInitialize {
-	public string? Name { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 19, Class: 
-	public float Time { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 LeftTangent { get; set; } // Offset: 36, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 RightTangent { get; set; } // Offset: 48, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 RotatedLeftTangent { get; set; } // Offset: 60, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 RotatedRightTangent { get; set; } // Offset: 72, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public int Interpolation { get; set; } // Offset: 84, Size: 4, Type: Int, Id: 531, Class: 
-	public IRoot? Object { get; set; } // Offset: 88, Size: 8, Type: Object, Id: 7, Class: 
-	public string? OffsetLocatorName { get; set; } // Offset: 96, Size: 8, Type: UTFString, Id: 23, Class: 
-	public Vector3 Offset { get; set; } // Offset: 104, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public int RotationSetting { get; set; } // Offset: 116, Size: 4, Type: Int, Id: 531, Class: 
+	public string? Name { get; set; }
+	public float Time { get; set; }
+	public Vector3 LeftTangent { get; set; }
+	public Vector3 RightTangent { get; set; }
+	public Vector3 RotatedLeftTangent { get; set; }
+	public Vector3 RotatedRightTangent { get; set; }
+	public int Interpolation { get; set; }
+	public IRoot? Object { get; set; }
+	public string? OffsetLocatorName { get; set; }
+	public Vector3 Offset { get; set; }
+	public int RotationSetting { get; set; }
 }

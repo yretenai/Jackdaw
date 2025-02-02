@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPTaaEffect : Tr2PPEffect {
-	public int Quality { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 7, Class: 
-	public bool ApplyMipBias { get; set; } // Offset: 20, Size: 1, Type: Boolean, Id: 7, Class: 
-	public bool ShowMotionVectors { get; set; } // Offset: 21, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool ShowEarlyOutMask { get; set; } // Offset: 22, Size: 1, Type: Boolean, Id: 23, Class: 
-	public float EarlyOutThreshold { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 7, Class: 
+	public int Quality { get; set; }
+	public bool ApplyMipBias { get; set; }
+	public bool ShowMotionVectors { get; set; }
+	public bool ShowEarlyOutMask { get; set; }
+	public float EarlyOutThreshold { get; set; }
 }

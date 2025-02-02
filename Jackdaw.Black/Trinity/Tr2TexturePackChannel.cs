@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TexturePackChannel : IRoot {
-	[BlackUseNamePool]public string? Path { get; set; } // Offset: 8, Size: 32, Type: WString, Id: 19, Class: 
-	public byte Channel { get; set; } // Offset: 40, Size: 1, Type: Byte, Id: 531, Class: 
-	public byte Fill { get; set; } // Offset: 41, Size: 1, Type: Byte, Id: 19, Class: 
+	[BlackUseNamePool]public string? Path { get; set; }
+	public byte Channel { get; set; }
+	public byte Fill { get; set; }
 }

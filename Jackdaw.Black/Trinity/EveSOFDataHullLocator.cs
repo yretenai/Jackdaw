@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullLocator : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public Matrix4x4 Transform { get; set; } // Offset: 16, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
+	public string? Name { get; set; }
+	public Matrix4x4 Transform { get; set; }
 }

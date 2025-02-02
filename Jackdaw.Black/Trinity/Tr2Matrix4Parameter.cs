@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Matrix4Parameter : IRoot, ITriEffectParameter, ITriReroutable {
-	public IRoot? Value { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: Matrix
-	public string? Name { get; set; } // Offset: 80, Size: 8, Type: UTFString, Id: 23, Class: 
-	public bool UsedByCurrentTechnique { get; set; } // Offset: 88, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool UsedByCurrentEffect { get; set; } // Offset: 88, Size: 1, Type: Boolean, Id: 1, Class: 
+	public IRoot? Value { get; set; }
+	public string? Name { get; set; }
+	public bool UsedByCurrentTechnique { get; set; }
+	public bool UsedByCurrentEffect { get; set; }
 }

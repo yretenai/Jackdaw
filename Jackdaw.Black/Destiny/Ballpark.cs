@@ -6,25 +6,25 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Ballpark : IRoot, IEveBallpark {
-	public long Time { get; set; } // Offset: 16, Size: 8, Type: Long, Id: 19, Class: 
-	public int TickInterval { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 3, Class: 
-	public int CurrentTime { get; set; } // Offset: 28, Size: 4, Type: Int, Id: 3, Class: 
-	public double LagDamping { get; set; } // Offset: 32, Size: 8, Type: Double, Id: 3, Class: 
-	public long Ego { get; set; } // Offset: 40, Size: 8, Type: Long, Id: 19, Class: 
-	public long Probe { get; set; } // Offset: 48, Size: 8, Type: Long, Id: 19, Class: 
-	public double Friction { get; set; } // Offset: 72, Size: 8, Type: Double, Id: 3, Class: 
-	public double WarpSpeed { get; set; } // Offset: 80, Size: 8, Type: Double, Id: 3, Class: 
-	public long SolarsystemID { get; set; } // Offset: 88, Size: 8, Type: Long, Id: 19, Class: 
-	public double Para1 { get; set; } // Offset: 104, Size: 8, Type: Double, Id: 3, Class: 
-	public double Para2 { get; set; } // Offset: 112, Size: 8, Type: Double, Id: 3, Class: 
-	public int Int1 { get; set; } // Offset: 120, Size: 4, Type: Int, Id: 3, Class: 
-	public int Int2 { get; set; } // Offset: 124, Size: 4, Type: Int, Id: 3, Class: 
-	public int MoribundBallRemovalCount { get; set; } // Offset: 128, Size: 4, Type: Int, Id: 3, Class: 
-	public int MoribundBallRemovalBuffer { get; set; } // Offset: 132, Size: 4, Type: Int, Id: 3, Class: 
-	public double RollSpeedAcceleration { get; set; } // Offset: 136, Size: 8, Type: Double, Id: 3, Class: 
-	public double RollSpeedDecay { get; set; } // Offset: 144, Size: 8, Type: Double, Id: 3, Class: 
-	public double RollAcceleration { get; set; } // Offset: 152, Size: 8, Type: Double, Id: 3, Class: 
-	public double RollDecay { get; set; } // Offset: 160, Size: 8, Type: Double, Id: 3, Class: 
-	public bool IsRunning { get; set; } // Offset: 696, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool IsMaster { get; set; } // Offset: 698, Size: 1, Type: Boolean, Id: 19, Class: 
+	public long Time { get; set; }
+	public int TickInterval { get; set; }
+	public int CurrentTime { get; set; }
+	public double LagDamping { get; set; }
+	public long Ego { get; set; }
+	public long Probe { get; set; }
+	public double Friction { get; set; }
+	public double WarpSpeed { get; set; }
+	public long SolarsystemID { get; set; }
+	public double Para1 { get; set; }
+	public double Para2 { get; set; }
+	public int Int1 { get; set; }
+	public int Int2 { get; set; }
+	public int MoribundBallRemovalCount { get; set; }
+	public int MoribundBallRemovalBuffer { get; set; }
+	public double RollSpeedAcceleration { get; set; }
+	public double RollSpeedDecay { get; set; }
+	public double RollAcceleration { get; set; }
+	public double RollDecay { get; set; }
+	public bool IsRunning { get; set; }
+	public bool IsMaster { get; set; }
 }

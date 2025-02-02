@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTransform : Tr2Transform, IEveTransform, IEveSpaceObject2, ITr2Pickable, IWorldPosition, IInitialize {
-	public List<IRoot?>? Children { get; set; } // Offset: 440, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Observers { get; set; } // Offset: 584, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ParticleSystems { get; set; } // Offset: 728, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ParticleEmitters { get; set; } // Offset: 872, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool UseLodLevel { get; set; } // Offset: 1017, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool HideOnLowQuality { get; set; } // Offset: 1018, Size: 1, Type: Boolean, Id: 19, Class: 
-	public int LodLevel { get; set; } // Offset: 1020, Size: 4, Type: Int, Id: 1, Class: 
-	public float VisibilityThreshold { get; set; } // Offset: 1024, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 OverrideBoundsMin { get; set; } // Offset: 1048, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 OverrideBoundsMax { get; set; } // Offset: 1060, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public IRoot? MeshLod { get; set; } // Offset: 1072, Size: 8, Type: Object, Id: 19, Class: Tr2MeshBase
+	public List<IRoot?>? Children { get; set; }
+	public List<IRoot?>? Observers { get; set; }
+	public List<IRoot?>? ParticleSystems { get; set; }
+	public List<IRoot?>? ParticleEmitters { get; set; }
+	public bool UseLodLevel { get; set; }
+	public bool HideOnLowQuality { get; set; }
+	public int LodLevel { get; set; }
+	public float VisibilityThreshold { get; set; }
+	public Vector3 OverrideBoundsMin { get; set; }
+	public Vector3 OverrideBoundsMax { get; set; }
+	public IRoot? MeshLod { get; set; }
 }

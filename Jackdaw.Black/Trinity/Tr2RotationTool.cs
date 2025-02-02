@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2RotationTool : Tr2ManipulationTool {
-	public float Precision { get; set; } // Offset: 396, Size: 4, Type: Single, Id: 3, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 400, Size: 16, Type: FloatArray, Id: 1, Class: Rotation
+	public float Precision { get; set; }
+	public Vector3 Rotation { get; set; }
 }

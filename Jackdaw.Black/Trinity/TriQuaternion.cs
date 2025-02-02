@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriQuaternion : IRoot, ITriQuaternion, IPythonMethods {
-	public float X { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float Y { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public float Z { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public float W { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
+	public float X { get; set; }
+	public float Y { get; set; }
+	public float Z { get; set; }
+	public float W { get; set; }
 }

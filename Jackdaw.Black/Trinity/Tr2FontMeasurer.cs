@@ -6,24 +6,24 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2FontMeasurer : IRoot {
-	public string? Font { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public int FontSize { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 3, Class: 
-	public float FadeLeftStart { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float FadeLeftEnd { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float FadeRightStart { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float FadeRightEnd { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float FadeTopStart { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float FadeTopEnd { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float FadeBottomStart { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public float FadeBottomEnd { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public int CursorX { get; set; } // Offset: 44, Size: 4, Type: Int, Id: 3, Class: 
-	public int CursorY { get; set; } // Offset: 48, Size: 4, Type: Int, Id: 3, Class: 
-	public int LetterSpace { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 3, Class: 
-	public int Limit { get; set; } // Offset: 56, Size: 4, Type: Int, Id: 3, Class: 
-	public int Ascender { get; set; } // Offset: 60, Size: 4, Type: Int, Id: 3, Class: 
-	public int Asc { get; set; } // Offset: 60, Size: 4, Type: Int, Id: 3, Class: 
-	public int Descender { get; set; } // Offset: 64, Size: 4, Type: Int, Id: 3, Class: 
-	public int Des { get; set; } // Offset: 64, Size: 4, Type: Int, Id: 3, Class: 
-	public int Color { get; set; } // Offset: 76, Size: 4, Type: Int, Id: 3, Class: 
-	public bool Underline { get; set; } // Offset: 80, Size: 1, Type: Boolean, Id: 3, Class: 
+	public string? Font { get; set; }
+	public int FontSize { get; set; }
+	public float FadeLeftStart { get; set; }
+	public float FadeLeftEnd { get; set; }
+	public float FadeRightStart { get; set; }
+	public float FadeRightEnd { get; set; }
+	public float FadeTopStart { get; set; }
+	public float FadeTopEnd { get; set; }
+	public float FadeBottomStart { get; set; }
+	public float FadeBottomEnd { get; set; }
+	public int CursorX { get; set; }
+	public int CursorY { get; set; }
+	public int LetterSpace { get; set; }
+	public int Limit { get; set; }
+	public int Ascender { get; set; }
+	public int Asc { get; set; }
+	public int Descender { get; set; }
+	public int Des { get; set; }
+	public int Color { get; set; }
+	public bool Underline { get; set; }
 }

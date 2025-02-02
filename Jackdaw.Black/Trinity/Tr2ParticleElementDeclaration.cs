@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ParticleElementDeclaration : IRoot {
-	public string? Name { get; set; } // Offset: 0, Size: 0, Type: String, Id: 1, Class: 
-	public int ElementType { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 531, Class: 
-	public string? CustomName { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public int Dimension { get; set; } // Offset: 48, Size: 4, Type: Int, Id: 19, Class: 
-	public int UsageIndex { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 19, Class: 
-	public bool UsedByGPU { get; set; } // Offset: 56, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Name { get; set; }
+	public int ElementType { get; set; }
+	public string? CustomName { get; set; }
+	public int Dimension { get; set; }
+	public int UsageIndex { get; set; }
+	public bool UsedByGPU { get; set; }
 }

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveCloudVolumeTextureParameter : IRoot, ITriEffectResourceParameter {
-	public string? Name { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public IRoot? Volume { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 19, Class: EveCloudEditableVolume
-	public bool IsUsedByEffect { get; set; } // Offset: 24, Size: 1, Type: Boolean, Id: 1, Class: 
+	public string? Name { get; set; }
+	public IRoot? Volume { get; set; }
+	public bool IsUsedByEffect { get; set; }
 }

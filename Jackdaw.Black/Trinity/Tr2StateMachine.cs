@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2StateMachine : IRoot, IListNotify, INotify {
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? States { get; set; } // Offset: 56, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? StartState { get; set; } // Offset: 200, Size: 8, Type: Object, Id: 23, Class: Tr2StateMachineState
-	public IRoot? CurrentState { get; set; } // Offset: 208, Size: 8, Type: Object, Id: 1, Class: Tr2StateMachineState
+	public string? Name { get; set; }
+	public List<IRoot?>? States { get; set; }
+	public IRoot? StartState { get; set; }
+	public IRoot? CurrentState { get; set; }
 }

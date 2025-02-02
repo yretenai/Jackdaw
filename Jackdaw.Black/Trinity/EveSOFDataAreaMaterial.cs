@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataAreaMaterial : IRoot {
-	public string? Material1 { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? Material2 { get; set; } // Offset: 40, Size: 32, Type: String, Id: 19, Class: 
-	public string? Material3 { get; set; } // Offset: 72, Size: 32, Type: String, Id: 19, Class: 
-	public string? Material4 { get; set; } // Offset: 104, Size: 32, Type: String, Id: 19, Class: 
-	public int ColorType { get; set; } // Offset: 136, Size: 4, Type: Int, Id: 531, Class: 
+	public string? Material1 { get; set; }
+	public string? Material2 { get; set; }
+	public string? Material3 { get; set; }
+	public string? Material4 { get; set; }
+	public int ColorType { get; set; }
 }

@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSocketParameterColor : IRoot, IEveSocketParameter {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 Value { get; set; } // Offset: 184, Size: 16, Type: FloatArray, Id: 19, Class: Color
+	public string? Name { get; set; }
+	public Vector3 Value { get; set; }
 }

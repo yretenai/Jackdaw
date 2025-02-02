@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Range : IRoot {
-	public float CenterPoint { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public float MinRangePoint { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public float MaxRangePoint { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public bool IsUniform { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
+	public float CenterPoint { get; set; }
+	public float MinRangePoint { get; set; }
+	public float MaxRangePoint { get; set; }
+	public bool IsUniform { get; set; }
 }

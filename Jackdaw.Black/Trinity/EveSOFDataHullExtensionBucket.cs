@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullExtensionBucket : IRoot {
-	public string? Name { get; set; } // Offset: 248, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? DepletionCounters { get; set; } // Offset: 280, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Placements { get; set; } // Offset: 424, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public List<IRoot?>? DepletionCounters { get; set; }
+	public List<IRoot?>? Placements { get; set; }
 }

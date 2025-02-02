@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TexturePipelineStepCompress : IRoot, ITr2TexturePipelineStep {
-	public int Format { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 531, Class: 
-	public float R { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public float G { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float B { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
+	public int Format { get; set; }
+	public float R { get; set; }
+	public float G { get; set; }
+	public float B { get; set; }
 }

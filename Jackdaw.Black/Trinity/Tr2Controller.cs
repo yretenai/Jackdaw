@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Controller : IRoot, ITr2Controller, IListNotify {
-	public long CallbackCount { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? StateMachines { get; set; } // Offset: 48, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Variables { get; set; } // Offset: 192, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? EventHandlers { get; set; } // Offset: 336, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool IsPlaying { get; set; } // Offset: 680, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool IsShared { get; set; } // Offset: 681, Size: 1, Type: Boolean, Id: 19, Class: 
+	public long CallbackCount { get; set; }
+	public string? Name { get; set; }
+	public List<IRoot?>? StateMachines { get; set; }
+	public List<IRoot?>? Variables { get; set; }
+	public List<IRoot?>? EventHandlers { get; set; }
+	public bool IsPlaying { get; set; }
+	public bool IsShared { get; set; }
 }

@@ -6,22 +6,22 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveCircle : IRoot, IEveLineSetPath, INotify {
-	public Vector3 Translation { get; set; } // Offset: 24, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public Vector3 Scaling { get; set; } // Offset: 36, Size: 12, Type: FloatArray, Id: 23, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 48, Size: 16, Type: FloatArray, Id: 23, Class: Rotation
-	public string? Name { get; set; } // Offset: 200, Size: 8, Type: UTFString, Id: 19, Class: 
-	public Vector3 CircleDistort { get; set; } // Offset: 312, Size: 16, Type: FloatArray, Id: 23, Class: 
-	public Vector3 ObjectScale { get; set; } // Offset: 328, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float CircleRadius { get; set; } // Offset: 340, Size: 4, Type: Single, Id: 23, Class: 
-	public float Completeness { get; set; } // Offset: 344, Size: 4, Type: Single, Id: 23, Class: 
-	public float NumSegments { get; set; } // Offset: 348, Size: 4, Type: Single, Id: 23, Class: 
-	public float LineWidth { get; set; } // Offset: 352, Size: 4, Type: Single, Id: 23, Class: 
-	public float MovementSpeed { get; set; } // Offset: 356, Size: 4, Type: Single, Id: 19, Class: 
-	public float AnimValue { get; set; } // Offset: 360, Size: 4, Type: Single, Id: 1, Class: 
-	public float StartPoint { get; set; } // Offset: 364, Size: 4, Type: Single, Id: 23, Class: 
-	public bool IsVisible { get; set; } // Offset: 372, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool Display { get; set; } // Offset: 373, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool ScaleEndpoints { get; set; } // Offset: 374, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool BillboardObjects { get; set; } // Offset: 375, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool ScaleSegmentsByCompleteness { get; set; } // Offset: 377, Size: 1, Type: Boolean, Id: 23, Class: 
+	public Vector3 Translation { get; set; }
+	public Vector3 Scaling { get; set; }
+	public Vector3 Rotation { get; set; }
+	public string? Name { get; set; }
+	public Vector3 CircleDistort { get; set; }
+	public Vector3 ObjectScale { get; set; }
+	public float CircleRadius { get; set; }
+	public float Completeness { get; set; }
+	public float NumSegments { get; set; }
+	public float LineWidth { get; set; }
+	public float MovementSpeed { get; set; }
+	public float AnimValue { get; set; }
+	public float StartPoint { get; set; }
+	public bool IsVisible { get; set; }
+	public bool Display { get; set; }
+	public bool ScaleEndpoints { get; set; }
+	public bool BillboardObjects { get; set; }
+	public bool ScaleSegmentsByCompleteness { get; set; }
 }

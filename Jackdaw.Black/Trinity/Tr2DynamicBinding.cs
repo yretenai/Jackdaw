@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2DynamicBinding : IRoot, INotify {
-	public bool IsDestinationValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsSourceValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? DestinationObjectPath { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 23, Class: 
-	public string? DestinationObjectAttribute { get; set; } // Offset: 32, Size: 8, Type: UTFString, Id: 23, Class: 
-	public string? SourceObjectPath { get; set; } // Offset: 56, Size: 8, Type: UTFString, Id: 23, Class: 
-	public string? SourceObjectAttribute { get; set; } // Offset: 64, Size: 8, Type: UTFString, Id: 23, Class: 
-	public float Scale { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 23, Class: 
-	public int BindingDelay { get; set; } // Offset: 92, Size: 4, Type: Int, Id: 19, Class: 
-	public IRoot? Binding { get; set; } // Offset: 104, Size: 8, Type: Object, Id: 1, Class: TriValueBinding
+	public bool IsDestinationValid { get; set; }
+	public bool IsSourceValid { get; set; }
+	public string? Name { get; set; }
+	public string? DestinationObjectPath { get; set; }
+	public string? DestinationObjectAttribute { get; set; }
+	public string? SourceObjectPath { get; set; }
+	public string? SourceObjectAttribute { get; set; }
+	public float Scale { get; set; }
+	public int BindingDelay { get; set; }
+	public IRoot? Binding { get; set; }
 }

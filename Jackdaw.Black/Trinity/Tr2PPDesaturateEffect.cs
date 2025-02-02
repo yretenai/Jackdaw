@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPDesaturateEffect : Tr2PPEffect {
-	public float Intensity { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 23, Class: 
+	public float Intensity { get; set; }
 }

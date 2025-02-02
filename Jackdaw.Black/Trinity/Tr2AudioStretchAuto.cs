@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2AudioStretchAuto : Tr2AudioStretchBase, ITr2Audio {
-	[BlackUseNamePool]public string? OutburstEvent { get; set; } // Offset: 48, Size: 32, Type: WString, Id: 19, Class: 
-	[BlackUseNamePool]public string? ImpactEvent { get; set; } // Offset: 80, Size: 32, Type: WString, Id: 19, Class: 
-	[BlackUseNamePool]public string? StretchEvent { get; set; } // Offset: 112, Size: 32, Type: WString, Id: 19, Class: 
+	[BlackUseNamePool]public string? OutburstEvent { get; set; }
+	[BlackUseNamePool]public string? ImpactEvent { get; set; }
+	[BlackUseNamePool]public string? StretchEvent { get; set; }
 }

@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataLogo : IRoot {
-	public List<IRoot?>? Textures { get; set; } // Offset: 8, Size: 144, Type: Collection, Id: 17, Class: IList
+	public List<IRoot?>? Textures { get; set; }
 }

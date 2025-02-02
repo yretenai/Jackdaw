@@ -6,36 +6,36 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueOS : IRoot, IBlueOS {
-	public int FrameTimeTimeout { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 3, Class: 
-	public bool IsOnMainTasklet { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public double SimDilation { get; set; } // Offset: 32, Size: 8, Type: Double, Id: 1, Class: 
-	public double DesiredSimDilation { get; set; } // Offset: 40, Size: 8, Type: Double, Id: 1, Class: 
-	public double Fps { get; set; } // Offset: 48, Size: 8, Type: Double, Id: 17, Class: 
-	public long FpsRefreshRate { get; set; } // Offset: 56, Size: 8, Type: Long, Id: 3, Class: 
-	public double LockFramerate { get; set; } // Offset: 64, Size: 8, Type: Double, Id: 3, Class: 
-	public int FramesTotal { get; set; } // Offset: 72, Size: 4, Type: Int, Id: 1, Class: 
-	public int IoRunsTotal { get; set; } // Offset: 76, Size: 4, Type: Int, Id: 1, Class: 
-	public int Sleeptime { get; set; } // Offset: 80, Size: 4, Type: Int, Id: 19, Class: 
-	public int Overridefg { get; set; } // Offset: 84, Size: 4, Type: Int, Id: 19, Class: 
-	public bool MiniDump { get; set; } // Offset: 128, Size: 1, Type: Boolean, Id: 3, Class: 
-	public long TimeSyncAdjust { get; set; } // Offset: 464, Size: 8, Type: Long, Id: 3, Class: 
-	public double TimeSyncAdjustFactor { get; set; } // Offset: 472, Size: 8, Type: Double, Id: 3, Class: 
-	public bool UseRDTSC { get; set; } // Offset: 496, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int Debuglevel { get; set; } // Offset: 508, Size: 4, Type: Int, Id: 3, Class: 
-	[BlackUseNamePool]public string? LanguageID { get; set; } // Offset: 512, Size: 32, Type: WString, Id: 3, Class: 
-	public float SlugTimeMinMs { get; set; } // Offset: 544, Size: 4, Type: Single, Id: 3, Class: 
-	public float SlugTimeMaxMs { get; set; } // Offset: 548, Size: 4, Type: Single, Id: 3, Class: 
-	public bool UseNominalDeltaT { get; set; } // Offset: 561, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool UseSmoothedDeltaT { get; set; } // Offset: 562, Size: 1, Type: Boolean, Id: 3, Class: 
-	public float NominalDeltaT_sec { get; set; } // Offset: 564, Size: 4, Type: Single, Id: 3, Class: 
-	public float TimeScaler { get; set; } // Offset: 568, Size: 4, Type: Single, Id: 3, Class: 
-	public long ExternalTime { get; set; } // Offset: 1872, Size: 8, Type: Long, Id: 1, Class: 
-	public int Pid { get; set; } // Offset: 1880, Size: 4, Type: Int, Id: 1, Class: 
-	public double MinSimDilation { get; set; } // Offset: 2032, Size: 8, Type: Double, Id: 3, Class: 
-	public double MaxSimDilation { get; set; } // Offset: 2040, Size: 8, Type: Double, Id: 3, Class: 
-	public long DilationOverloadThreshold { get; set; } // Offset: 2080, Size: 8, Type: Long, Id: 3, Class: 
-	public long DilationUnderloadThreshold { get; set; } // Offset: 2088, Size: 8, Type: Long, Id: 3, Class: 
-	public double DilationOverloadAdjustment { get; set; } // Offset: 2096, Size: 8, Type: Double, Id: 3, Class: 
-	public double DilationUnderloadAdjustment { get; set; } // Offset: 2104, Size: 8, Type: Double, Id: 3, Class: 
-	public bool AdvanceTimeInPump { get; set; } // Offset: 2180, Size: 1, Type: Boolean, Id: 3, Class: 
+	public int FrameTimeTimeout { get; set; }
+	public bool IsOnMainTasklet { get; set; }
+	public double SimDilation { get; set; }
+	public double DesiredSimDilation { get; set; }
+	public double Fps { get; set; }
+	public long FpsRefreshRate { get; set; }
+	public double LockFramerate { get; set; }
+	public int FramesTotal { get; set; }
+	public int IoRunsTotal { get; set; }
+	public int Sleeptime { get; set; }
+	public int Overridefg { get; set; }
+	public bool MiniDump { get; set; }
+	public long TimeSyncAdjust { get; set; }
+	public double TimeSyncAdjustFactor { get; set; }
+	public bool UseRDTSC { get; set; }
+	public int Debuglevel { get; set; }
+	[BlackUseNamePool]public string? LanguageID { get; set; }
+	public float SlugTimeMinMs { get; set; }
+	public float SlugTimeMaxMs { get; set; }
+	public bool UseNominalDeltaT { get; set; }
+	public bool UseSmoothedDeltaT { get; set; }
+	public float NominalDeltaT_sec { get; set; }
+	public float TimeScaler { get; set; }
+	public long ExternalTime { get; set; }
+	public int Pid { get; set; }
+	public double MinSimDilation { get; set; }
+	public double MaxSimDilation { get; set; }
+	public long DilationOverloadThreshold { get; set; }
+	public long DilationUnderloadThreshold { get; set; }
+	public double DilationOverloadAdjustment { get; set; }
+	public double DilationUnderloadAdjustment { get; set; }
+	public bool AdvanceTimeInPump { get; set; }
 }

@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataLogoSet : IRoot {
-	public IRoot? Primary { get; set; } // Offset: 8, Size: 8, Type: Object, Id: 19, Class: EveSOFDataLogo
-	public IRoot? Secondary { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 19, Class: EveSOFDataLogo
-	public IRoot? Tertiary { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 19, Class: EveSOFDataLogo
-	public IRoot? Marking_01 { get; set; } // Offset: 32, Size: 8, Type: Object, Id: 19, Class: EveSOFDataLogo
-	public IRoot? Marking_02 { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 19, Class: EveSOFDataLogo
+	public IRoot? Primary { get; set; }
+	public IRoot? Secondary { get; set; }
+	public IRoot? Tertiary { get; set; }
+	public IRoot? Marking_01 { get; set; }
+	public IRoot? Marking_02 { get; set; }
 }

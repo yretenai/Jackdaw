@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriVector : IRoot, ITriVector, IPythonMethods, IPythonNumeric {
-	public float X { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public float Y { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
-	public float Z { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 19, Class: 
+	public float X { get; set; }
+	public float Y { get; set; }
+	public float Z { get; set; }
 }

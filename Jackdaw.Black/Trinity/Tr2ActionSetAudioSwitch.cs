@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionSetAudioSwitch : IRoot, ITr2ControllerAction {
-	public string? Emitter { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	[BlackUseNamePool]public string? SwitchGroup { get; set; } // Offset: 40, Size: 32, Type: WString, Id: 19, Class: 
-	[BlackUseNamePool]public string? SwitchState { get; set; } // Offset: 72, Size: 32, Type: WString, Id: 19, Class: 
+	public string? Emitter { get; set; }
+	[BlackUseNamePool]public string? SwitchGroup { get; set; }
+	[BlackUseNamePool]public string? SwitchState { get; set; }
 }

@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PrimitiveSet : IRoot, ITr2Renderable, ITr2Pickable, INotify {
-	public float Scale { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 1, Class: 
-	public bool ScaleByDistanceToView { get; set; } // Offset: 36, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool ViewOriented { get; set; } // Offset: 37, Size: 1, Type: Boolean, Id: 19, Class: 
-	public Matrix4x4 WorldTransform { get; set; } // Offset: 56, Size: 64, Type: FloatArray, Id: 1, Class: Matrix
-	public Matrix4x4 LocalTransform { get; set; } // Offset: 120, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
-	public Vector3 Color { get; set; } // Offset: 196, Size: 16, Type: FloatArray, Id: 23, Class: Color
-	public string? Name { get; set; } // Offset: 216, Size: 32, Type: String, Id: 19, Class: 
-	public IRoot? Effect { get; set; } // Offset: 272, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? PickEffect { get; set; } // Offset: 280, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
+	public float Scale { get; set; }
+	public bool ScaleByDistanceToView { get; set; }
+	public bool ViewOriented { get; set; }
+	public Matrix4x4 WorldTransform { get; set; }
+	public Matrix4x4 LocalTransform { get; set; }
+	public Vector3 Color { get; set; }
+	public string? Name { get; set; }
+	public IRoot? Effect { get; set; }
+	public IRoot? PickEffect { get; set; }
 }

@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Inertia : IRoot, IBehavior {
-	public bool Enabled { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float MaxAcceleration { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinInertiaWeight { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxRotationSpeed { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public int BehaviorPriority { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 535, Class: 
+	public bool Enabled { get; set; }
+	public float MaxAcceleration { get; set; }
+	public float MinInertiaWeight { get; set; }
+	public float MaxRotationSpeed { get; set; }
+	public int BehaviorPriority { get; set; }
 }

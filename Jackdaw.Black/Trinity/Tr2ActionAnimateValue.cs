@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionAnimateValue : IRoot, ITr2ControllerAction, ITr2Updateable, INotify {
-	public bool IsBindingValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsExpressionValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public string? Path { get; set; } // Offset: 24, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? Destination { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 23, Class: 
-	public string? Attribute { get; set; } // Offset: 64, Size: 32, Type: String, Id: 23, Class: 
-	public string? Value { get; set; } // Offset: 152, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? Curve { get; set; } // Offset: 184, Size: 8, Type: Object, Id: 19, Class: ITriScalarFunction
-	public bool DelayBinding { get; set; } // Offset: 272, Size: 1, Type: Boolean, Id: 23, Class: 
+	public bool IsBindingValid { get; set; }
+	public bool IsExpressionValid { get; set; }
+	public string? Path { get; set; }
+	public IRoot? Destination { get; set; }
+	public string? Attribute { get; set; }
+	public string? Value { get; set; }
+	public IRoot? Curve { get; set; }
+	public bool DelayBinding { get; set; }
 }

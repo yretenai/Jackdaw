@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class MemoryTracker : IRoot {
-	public long LoggingThreshold { get; set; } // Offset: 32, Size: 8, Type: Long, Id: 3, Class: 
+	public long LoggingThreshold { get; set; }
 }

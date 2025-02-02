@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionBindRTPC : IRoot, ITr2ControllerAction, ITr2Updateable, INotify {
-	public bool IsExpressionValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public string? Value { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 23, Class: 
-	public string? Emitter { get; set; } // Offset: 32, Size: 8, Type: UTFString, Id: 19, Class: 
-	[BlackUseNamePool]public string? RtpcName { get; set; } // Offset: 40, Size: 32, Type: WString, Id: 19, Class: 
-	public IRoot? Curve { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 19, Class: ITriScalarFunction
+	public bool IsExpressionValid { get; set; }
+	public string? Value { get; set; }
+	public string? Emitter { get; set; }
+	[BlackUseNamePool]public string? RtpcName { get; set; }
+	public IRoot? Curve { get; set; }
 }

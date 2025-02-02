@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PlaneConstraint : IRoot, ITr2GenericParticleConstraint, INotify, IInitialize {
-	public Vector3 Plane { get; set; } // Offset: 32, Size: 16, Type: FloatArray, Id: 23, Class: 
-	public float Friction { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 19, Class: 
-	public float Elasticity { get; set; } // Offset: 68, Size: 4, Type: Single, Id: 19, Class: 
-	public float ReflectionNoise { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 19, Class: 
-	public string? ParticleRadiusComponent { get; set; } // Offset: 80, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 ParticleRadiusCoefficient { get; set; } // Offset: 112, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public bool AffectPosition { get; set; } // Offset: 128, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool AffectVelocity { get; set; } // Offset: 129, Size: 1, Type: Boolean, Id: 19, Class: 
-	public List<IRoot?>? Generators { get; set; } // Offset: 136, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool IsValid { get; set; } // Offset: 280, Size: 1, Type: Boolean, Id: 1, Class: 
-	public List<IRoot?>? OnCollisionEmitters { get; set; } // Offset: 336, Size: 144, Type: Collection, Id: 17, Class: IList
+	public Vector3 Plane { get; set; }
+	public float Friction { get; set; }
+	public float Elasticity { get; set; }
+	public float ReflectionNoise { get; set; }
+	public string? ParticleRadiusComponent { get; set; }
+	public Vector3 ParticleRadiusCoefficient { get; set; }
+	public bool AffectPosition { get; set; }
+	public bool AffectVelocity { get; set; }
+	public List<IRoot?>? Generators { get; set; }
+	public bool IsValid { get; set; }
+	public List<IRoot?>? OnCollisionEmitters { get; set; }
 }

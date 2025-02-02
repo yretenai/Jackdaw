@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2MainWindowState : IRoot {
-	public int WindowMode { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 19, Class: 
-	public int Adapter { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 19, Class: 
-	public int Width { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 19, Class: 
-	public int Height { get; set; } // Offset: 20, Size: 4, Type: Int, Id: 19, Class: 
-	public int PresentInterval { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 19, Class: 
-	public int Left { get; set; } // Offset: 28, Size: 4, Type: Int, Id: 19, Class: 
-	public int Top { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 19, Class: 
-	public int ShowState { get; set; } // Offset: 36, Size: 4, Type: Int, Id: 19, Class: 
+	public int WindowMode { get; set; }
+	public int Adapter { get; set; }
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public int PresentInterval { get; set; }
+	public int Left { get; set; }
+	public int Top { get; set; }
+	public int ShowState { get; set; }
 }

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PrimitiveScene : IRoot, ITr2Scene {
-	public List<IRoot?>? Primitives { get; set; } // Offset: 48, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? TextLabels { get; set; } // Offset: 216, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? Manipulator { get; set; } // Offset: 360, Size: 8, Type: Object, Id: 3, Class: Tr2ManipulationTool
+	public List<IRoot?>? Primitives { get; set; }
+	public List<IRoot?>? TextLabels { get; set; }
+	public IRoot? Manipulator { get; set; }
 }

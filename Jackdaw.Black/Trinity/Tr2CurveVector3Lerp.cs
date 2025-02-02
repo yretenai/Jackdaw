@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveVector3Lerp : IRoot, ITriFunction, ITriVectorFunction {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 InitialValue { get; set; } // Offset: 40, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public Vector3 CurrentValue { get; set; } // Offset: 52, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public float CurveStartTime { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 19, Class: 
-	public int StartInterpolation { get; set; } // Offset: 68, Size: 4, Type: Int, Id: 515, Class: 
-	public IRoot? Curve { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
+	public string? Name { get; set; }
+	public Vector3 InitialValue { get; set; }
+	public Vector3 CurrentValue { get; set; }
+	public float CurveStartTime { get; set; }
+	public int StartInterpolation { get; set; }
+	public IRoot? Curve { get; set; }
 }

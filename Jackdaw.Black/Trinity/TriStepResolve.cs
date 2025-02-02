@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepResolve : TriRenderStep {
-	public IRoot? Source { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public IRoot? Destination { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public bool GenerateMipmap { get; set; } // Offset: 152, Size: 1, Type: Boolean, Id: 3, Class: 
+	public IRoot? Source { get; set; }
+	public IRoot? Destination { get; set; }
+	public bool GenerateMipmap { get; set; }
 }

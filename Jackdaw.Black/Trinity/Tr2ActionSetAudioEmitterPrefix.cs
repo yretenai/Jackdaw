@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionSetAudioEmitterPrefix : IRoot, ITr2ControllerAction {
-	public string? Emitter { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	[BlackUseNamePool]public string? Prefix { get; set; } // Offset: 40, Size: 32, Type: WString, Id: 19, Class: 
+	public string? Emitter { get; set; }
+	[BlackUseNamePool]public string? Prefix { get; set; }
 }

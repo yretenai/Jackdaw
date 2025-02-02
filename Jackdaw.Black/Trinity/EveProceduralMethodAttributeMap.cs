@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveProceduralMethodAttributeMap : IRoot, IEveProceduralSelectionMethod, INotify {
-	public string? ThresholdAttribute { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? Seed_temp { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 7, Class: 
-	public int SelectedChild { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 1, Class: 
-	public List<IRoot?>? Parameters { get; set; } // Offset: 40, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DebugVolumes { get; set; } // Offset: 192, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? ThresholdAttribute { get; set; }
+	public string? Seed_temp { get; set; }
+	public int SelectedChild { get; set; }
+	public List<IRoot?>? Parameters { get; set; }
+	public List<IRoot?>? DebugVolumes { get; set; }
 }

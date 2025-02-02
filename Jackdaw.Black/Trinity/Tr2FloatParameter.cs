@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2FloatParameter : IRoot, ITriEffectParameter, ITriReroutable, IInitialize {
-	public float Value { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 24, Size: 8, Type: UTFString, Id: 23, Class: 
-	public bool UsedByCurrentEffect { get; set; } // Offset: 136, Size: 1, Type: Boolean, Id: 1, Class: 
+	public float Value { get; set; }
+	public string? Name { get; set; }
+	public bool UsedByCurrentEffect { get; set; }
 }

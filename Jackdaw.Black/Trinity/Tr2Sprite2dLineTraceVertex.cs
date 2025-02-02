@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dLineTraceVertex : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 Position { get; set; } // Offset: 40, Size: 8, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Color { get; set; } // Offset: 48, Size: 16, Type: FloatArray, Id: 19, Class: Color
+	public string? Name { get; set; }
+	public Vector3 Position { get; set; }
+	public Vector3 Color { get; set; }
 }

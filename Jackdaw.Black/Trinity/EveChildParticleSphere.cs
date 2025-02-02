@@ -6,20 +6,20 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildParticleSphere : IRoot, IEveSpaceObjectChild, ITr2Renderable {
-	public bool IsValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public IRoot? Mesh { get; set; } // Offset: 16, Size: 8, Type: Object, Id: 19, Class: Tr2InstancedMesh
-	public IRoot? ParticleSystem { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 19, Class: Tr2ParticleSystem
-	public List<IRoot?>? Generators { get; set; } // Offset: 32, Size: 144, Type: Collection, Id: 17, Class: IList
-	public string? Name { get; set; } // Offset: 304, Size: 32, Type: String, Id: 19, Class: 
-	public float Radius { get; set; } // Offset: 352, Size: 4, Type: Single, Id: 19, Class: 
-	public float MovementScale { get; set; } // Offset: 356, Size: 4, Type: Single, Id: 19, Class: 
-	public float MaxSpeed { get; set; } // Offset: 360, Size: 4, Type: Single, Id: 19, Class: 
-	public float EgoSpeed { get; set; } // Offset: 376, Size: 4, Type: Single, Id: 1, Class: 
-	public float PositionShiftMax { get; set; } // Offset: 384, Size: 4, Type: Single, Id: 19, Class: 
-	public float PositionShiftMin { get; set; } // Offset: 388, Size: 4, Type: Single, Id: 19, Class: 
-	public float PositionShift { get; set; } // Offset: 392, Size: 4, Type: Single, Id: 1, Class: 
-	public float PositionShiftIncreaseSpeed { get; set; } // Offset: 396, Size: 4, Type: Single, Id: 19, Class: 
-	public float PositionShiftDecreaseSpeed { get; set; } // Offset: 400, Size: 4, Type: Single, Id: 19, Class: 
-	public bool UseSpaceObjectData { get; set; } // Offset: 404, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 405, Size: 1, Type: Boolean, Id: 19, Class: 
+	public bool IsValid { get; set; }
+	public IRoot? Mesh { get; set; }
+	public IRoot? ParticleSystem { get; set; }
+	public List<IRoot?>? Generators { get; set; }
+	public string? Name { get; set; }
+	public float Radius { get; set; }
+	public float MovementScale { get; set; }
+	public float MaxSpeed { get; set; }
+	public float EgoSpeed { get; set; }
+	public float PositionShiftMax { get; set; }
+	public float PositionShiftMin { get; set; }
+	public float PositionShift { get; set; }
+	public float PositionShiftIncreaseSpeed { get; set; }
+	public float PositionShiftDecreaseSpeed { get; set; }
+	public bool UseSpaceObjectData { get; set; }
+	public bool Display { get; set; }
 }

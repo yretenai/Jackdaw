@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataDecalIndexBuffer : IRoot, ICustomPersist {
-	[BlackArray(4)]public int[]? IndexBuffer { get; set; } // Offset: 0, Size: 0, Type: Buffer, Id: 24, Class: 
+	[BlackArray(4)]public int[]? IndexBuffer { get; set; }
 }

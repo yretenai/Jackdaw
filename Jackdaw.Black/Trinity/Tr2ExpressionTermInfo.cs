@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ExpressionTermInfo : IRoot {
-	public int Type { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 3, Class: 
-	public string? Category { get; set; } // Offset: 16, Size: 32, Type: String, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 48, Size: 32, Type: String, Id: 3, Class: 
-	public string? Description { get; set; } // Offset: 104, Size: 32, Type: String, Id: 3, Class: 
+	public int Type { get; set; }
+	public string? Category { get; set; }
+	public string? Name { get; set; }
+	public string? Description { get; set; }
 }

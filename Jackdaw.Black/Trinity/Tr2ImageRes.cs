@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ImageRes : BlueAsyncRes, IBlueResource, ICacheable {
-	public int Width { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int Height { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
+	public int Width { get; set; }
+	public int Height { get; set; }
 }

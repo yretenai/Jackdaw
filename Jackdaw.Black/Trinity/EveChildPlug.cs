@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildPlug : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner {
-	public List<IRoot?>? Objects { get; set; } // Offset: 264, Size: 144, Type: Collection, Id: 17, Class: IList
-	public string? Name { get; set; } // Offset: 408, Size: 8, Type: UTFString, Id: 19, Class: 
-	public List<IRoot?>? Controllers { get; set; } // Offset: 416, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ExternalParameters { get; set; } // Offset: 752, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool Display { get; set; } // Offset: 968, Size: 1, Type: Boolean, Id: 19, Class: 
+	public List<IRoot?>? Objects { get; set; }
+	public string? Name { get; set; }
+	public List<IRoot?>? Controllers { get; set; }
+	public List<IRoot?>? ExternalParameters { get; set; }
+	public bool Display { get; set; }
 }

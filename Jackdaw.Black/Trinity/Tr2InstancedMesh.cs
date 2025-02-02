@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2InstancedMesh : Tr2Mesh {
-	public IRoot? InstanceGeometryResource { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: ITr2InstanceData
-	public string? InstanceGeometryResPath { get; set; } // Offset: 2464, Size: 32, Type: String, Id: 23, Class: 
-	public int InstanceMeshIndex { get; set; } // Offset: 2512, Size: 4, Type: Int, Id: 23, Class: 
-	public IRoot? InstanceCount { get; set; } // Offset: 2544, Size: 8, Type: Object, Id: 23, Class: ITr2GpuBuffer
-	public int BoundsMethod { get; set; } // Offset: 2552, Size: 4, Type: Int, Id: 531, Class: 
-	public Vector3 MinBounds { get; set; } // Offset: 2556, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 MaxBounds { get; set; } // Offset: 2568, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float MaxInstanceSize { get; set; } // Offset: 2580, Size: 4, Type: Single, Id: 19, Class: 
+	public IRoot? InstanceGeometryResource { get; set; }
+	public string? InstanceGeometryResPath { get; set; }
+	public int InstanceMeshIndex { get; set; }
+	public IRoot? InstanceCount { get; set; }
+	public int BoundsMethod { get; set; }
+	public Vector3 MinBounds { get; set; }
+	public Vector3 MaxBounds { get; set; }
+	public float MaxInstanceSize { get; set; }
 }

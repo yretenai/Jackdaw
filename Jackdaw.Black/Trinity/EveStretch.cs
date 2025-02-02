@@ -6,25 +6,25 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveStretch : IRoot, IEveTransform, IEveSpaceObject2, IEveFiringEffectElement, ITr2DebugRenderable, ITr2LightOwner {
-	public int LodLevel { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 56, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 88, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Update { get; set; } // Offset: 89, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool UseCurveLod { get; set; } // Offset: 92, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? Source { get; set; } // Offset: 264, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public IRoot? Dest { get; set; } // Offset: 272, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public IRoot? SourceObject { get; set; } // Offset: 280, Size: 8, Type: Object, Id: 19, Class: EveTransform
-	public IRoot? DestObject { get; set; } // Offset: 288, Size: 8, Type: Object, Id: 19, Class: EveTransform
-	public IRoot? StretchObject { get; set; } // Offset: 296, Size: 8, Type: Object, Id: 19, Class: EveTransform
-	public IRoot? MoveObject { get; set; } // Offset: 304, Size: 8, Type: Object, Id: 19, Class: EveTransform
-	public List<IRoot?>? SourceLights { get; set; } // Offset: 312, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DestLights { get; set; } // Offset: 456, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? ProgressCurve { get; set; } // Offset: 600, Size: 8, Type: Object, Id: 19, Class: ITriScalarFunction
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 608, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? MoveCompletion { get; set; } // Offset: 752, Size: 8, Type: Object, Id: 19, Class: TriCurveSet
-	public bool MoveCompleted { get; set; } // Offset: 760, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool Moving { get; set; } // Offset: 761, Size: 1, Type: Boolean, Id: 3, Class: 
-	public long StartTime { get; set; } // Offset: 768, Size: 8, Type: Long, Id: 1, Class: 
-	public IRoot? Length { get; set; } // Offset: 776, Size: 8, Type: Object, Id: 17, Class: TriFloat
-	public IRoot? Audio { get; set; } // Offset: 784, Size: 8, Type: Object, Id: 19, Class: ITr2Audio
+	public int LodLevel { get; set; }
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public bool Update { get; set; }
+	public bool UseCurveLod { get; set; }
+	public IRoot? Source { get; set; }
+	public IRoot? Dest { get; set; }
+	public IRoot? SourceObject { get; set; }
+	public IRoot? DestObject { get; set; }
+	public IRoot? StretchObject { get; set; }
+	public IRoot? MoveObject { get; set; }
+	public List<IRoot?>? SourceLights { get; set; }
+	public List<IRoot?>? DestLights { get; set; }
+	public IRoot? ProgressCurve { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
+	public IRoot? MoveCompletion { get; set; }
+	public bool MoveCompleted { get; set; }
+	public bool Moving { get; set; }
+	public long StartTime { get; set; }
+	public IRoot? Length { get; set; }
+	public IRoot? Audio { get; set; }
 }

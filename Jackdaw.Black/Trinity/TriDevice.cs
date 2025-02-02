@@ -6,28 +6,28 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriDevice : IRoot, ITriDevice {
-	public bool DisableGeometryLoad { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public bool DisableTextureLoad { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public bool DisableAsyncLoad { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public IRoot? Scene { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 7, Class: ITr2Scene
-	public int Width { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 1, Class: 
-	public int Height { get; set; } // Offset: 44, Size: 4, Type: Int, Id: 1, Class: 
-	public int SwapEffect { get; set; } // Offset: 48, Size: 4, Type: Int, Id: 535, Class: 
-	public int BackBufferCount { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 7, Class: 
-	public int AdapterWidth { get; set; } // Offset: 56, Size: 4, Type: Int, Id: 1, Class: 
-	public int AdapterHeight { get; set; } // Offset: 60, Size: 4, Type: Int, Id: 1, Class: 
-	public int AdapterRefreshRate { get; set; } // Offset: 68, Size: 4, Type: Int, Id: 1, Class: 
-	public TriViewport? Viewport { get; set; } // Offset: 88, Size: 48, Type: Collection, Id: 17, Class: TriViewport
-	public int TickInterval { get; set; } // Offset: 136, Size: 4, Type: Int, Id: 3, Class: 
-	public int DeviceType { get; set; } // Offset: 168, Size: 4, Type: Int, Id: 515, Class: 
-	public int Adapter { get; set; } // Offset: 172, Size: 4, Type: Int, Id: 1, Class: 
-	public int MultiSampleType { get; set; } // Offset: 208, Size: 4, Type: Int, Id: 23, Class: 
-	public int MultiSampleQuality { get; set; } // Offset: 212, Size: 4, Type: Int, Id: 23, Class: 
-	public int PresentationInterval { get; set; } // Offset: 236, Size: 4, Type: Int, Id: 535, Class: 
-	public float AnimationTime { get; set; } // Offset: 260, Size: 4, Type: Single, Id: 3, Class: 
-	public float AnimationTimeScale { get; set; } // Offset: 264, Size: 4, Type: Single, Id: 3, Class: 
-	public int MipLevelSkipCount { get; set; } // Offset: 268, Size: 4, Type: Int, Id: 3, Class: 
-	public int ThrottlingState { get; set; } // Offset: 272, Size: 4, Type: Int, Id: 1, Class: 
-	public bool AllowThrottling { get; set; } // Offset: 276, Size: 1, Type: Boolean, Id: 3, Class: 
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 280, Size: 144, Type: Collection, Id: 17, Class: IList
+	public bool DisableGeometryLoad { get; set; }
+	public bool DisableTextureLoad { get; set; }
+	public bool DisableAsyncLoad { get; set; }
+	public IRoot? Scene { get; set; }
+	public int Width { get; set; }
+	public int Height { get; set; }
+	public int SwapEffect { get; set; }
+	public int BackBufferCount { get; set; }
+	public int AdapterWidth { get; set; }
+	public int AdapterHeight { get; set; }
+	public int AdapterRefreshRate { get; set; }
+	public TriViewport? Viewport { get; set; }
+	public int TickInterval { get; set; }
+	public int DeviceType { get; set; }
+	public int Adapter { get; set; }
+	public int MultiSampleType { get; set; }
+	public int MultiSampleQuality { get; set; }
+	public int PresentationInterval { get; set; }
+	public float AnimationTime { get; set; }
+	public float AnimationTimeScale { get; set; }
+	public int MipLevelSkipCount { get; set; }
+	public int ThrottlingState { get; set; }
+	public bool AllowThrottling { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
 }

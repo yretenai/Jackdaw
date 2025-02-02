@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dPolygon : Tr2TexturedSpriteObject {
-	public List<IRoot?>? Vertices { get; set; } // Offset: 232, Size: 144, Type: Collection, Id: 1, Class: IList
-	public List<IRoot?>? Triangles { get; set; } // Offset: 376, Size: 144, Type: Collection, Id: 1, Class: IList
+	public List<IRoot?>? Vertices { get; set; }
+	public List<IRoot?>? Triangles { get; set; }
 }

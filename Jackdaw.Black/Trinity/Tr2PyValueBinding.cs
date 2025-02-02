@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PyValueBinding : IRoot, ITr2ValueBinding, INotify {
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public bool IsValid { get; set; } // Offset: 48, Size: 1, Type: Boolean, Id: 1, Class: 
-	public string? SourceAttribute { get; set; } // Offset: 72, Size: 32, Type: String, Id: 23, Class: 
-	public string? DestinationAttribute { get; set; } // Offset: 104, Size: 32, Type: String, Id: 23, Class: 
+	public string? Name { get; set; }
+	public bool IsValid { get; set; }
+	public string? SourceAttribute { get; set; }
+	public string? DestinationAttribute { get; set; }
 }

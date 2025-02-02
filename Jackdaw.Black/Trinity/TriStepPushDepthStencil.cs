@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepPushDepthStencil : TriRenderStep {
-	public IRoot? DepthStencil { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 3, Class: Tr2DepthStencil
-	public bool PushCurrent { get; set; } // Offset: 144, Size: 1, Type: Boolean, Id: 3, Class: 
+	public IRoot? DepthStencil { get; set; }
+	public bool PushCurrent { get; set; }
 }

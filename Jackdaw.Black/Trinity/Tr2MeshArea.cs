@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2MeshArea : IRoot {
-	public IRoot? Effect { get; set; } // Offset: 8, Size: 8, Type: Object, Id: 23, Class: Tr2Material
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public int Index { get; set; } // Offset: 48, Size: 4, Type: Int, Id: 19, Class: 
-	public int Count { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 60, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool Reversed { get; set; } // Offset: 61, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool UseSHLighting { get; set; } // Offset: 62, Size: 1, Type: Boolean, Id: 19, Class: 
+	public IRoot? Effect { get; set; }
+	public string? Name { get; set; }
+	public int Index { get; set; }
+	public int Count { get; set; }
+	public bool Display { get; set; }
+	public bool Reversed { get; set; }
+	public bool UseSHLighting { get; set; }
 }

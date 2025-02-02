@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTrailsSet : IRoot, IInitialize, INotify {
-	public bool Display { get; set; } // Offset: 40, Size: 1, Type: Boolean, Id: 3, Class: 
-	public IRoot? Effect { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 19, Class: Tr2Effect
-	public IRoot? GeometryResource { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 1, Class: TriGeometryRes
-	public string? GeometryResPath { get; set; } // Offset: 64, Size: 32, Type: String, Id: 23, Class: 
-	public float FadeSpeed { get; set; } // Offset: 168, Size: 4, Type: Single, Id: 19, Class: 
+	public bool Display { get; set; }
+	public IRoot? Effect { get; set; }
+	public IRoot? GeometryResource { get; set; }
+	public string? GeometryResPath { get; set; }
+	public float FadeSpeed { get; set; }
 }

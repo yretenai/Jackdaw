@@ -6,16 +6,16 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ReflectionProbe : IRoot, INotify {
-	public bool LockPosition { get; set; } // Offset: 18, Size: 1, Type: Boolean, Id: 3, Class: 
-	public Vector3 Position { get; set; } // Offset: 20, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public int ReflectionSize { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 7, Class: 
-	public IRoot? UnfilteredTexture { get; set; } // Offset: 184, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? ReflectionTexture { get; set; } // Offset: 216, Size: 8, Type: Object, Id: 1, Class: Tr2RenderTarget
-	public IRoot? CustomSourceTexture { get; set; } // Offset: 224, Size: 8, Type: Object, Id: 7, Class: ITriTextureRes
-	public bool HdrOutput { get; set; } // Offset: 233, Size: 1, Type: Boolean, Id: 7, Class: 
-	public int RenderFrequency { get; set; } // Offset: 236, Size: 4, Type: Int, Id: 519, Class: 
-	public byte CurrentFrame { get; set; } // Offset: 240, Size: 1, Type: Byte, Id: 1, Class: 
-	public bool HollywoodMode { get; set; } // Offset: 242, Size: 1, Type: Boolean, Id: 7, Class: 
-	public Vector3 BacklightColor { get; set; } // Offset: 244, Size: 16, Type: FloatArray, Id: 1, Class: Color
-	public float BacklightContrast { get; set; } // Offset: 260, Size: 4, Type: Single, Id: 1, Class: 
+	public bool LockPosition { get; set; }
+	public Vector3 Position { get; set; }
+	public int ReflectionSize { get; set; }
+	public IRoot? UnfilteredTexture { get; set; }
+	public IRoot? ReflectionTexture { get; set; }
+	public IRoot? CustomSourceTexture { get; set; }
+	public bool HdrOutput { get; set; }
+	public int RenderFrequency { get; set; }
+	public byte CurrentFrame { get; set; }
+	public bool HollywoodMode { get; set; }
+	public Vector3 BacklightColor { get; set; }
+	public float BacklightContrast { get; set; }
 }

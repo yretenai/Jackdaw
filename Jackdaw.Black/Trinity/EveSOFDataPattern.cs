@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataPattern : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public IRoot? Layer1 { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 19, Class: EveSOFDataPatternLayer
-	public IRoot? Layer2 { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 19, Class: EveSOFDataPatternLayer
-	public List<IRoot?>? Projections { get; set; } // Offset: 56, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ApplicationGroups { get; set; } // Offset: 200, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool Sof6 { get; set; } // Offset: 344, Size: 1, Type: Boolean, Id: 19, Class: 
+	public string? Name { get; set; }
+	public IRoot? Layer1 { get; set; }
+	public IRoot? Layer2 { get; set; }
+	public List<IRoot?>? Projections { get; set; }
+	public List<IRoot?>? ApplicationGroups { get; set; }
+	public bool Sof6 { get; set; }
 }

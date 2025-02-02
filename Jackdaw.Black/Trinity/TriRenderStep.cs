@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriRenderStep : IRoot {
-	public bool DebugCaptureGpuTime { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public float GpuTime { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public bool DebugCaptureCpuTime { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public float CpuTime { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public string? StatName { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public bool Enabled { get; set; } // Offset: 128, Size: 1, Type: Boolean, Id: 3, Class: 
+	public bool DebugCaptureGpuTime { get; set; }
+	public float GpuTime { get; set; }
+	public bool DebugCaptureCpuTime { get; set; }
+	public float CpuTime { get; set; }
+	public string? StatName { get; set; }
+	public string? Name { get; set; }
+	public bool Enabled { get; set; }
 }

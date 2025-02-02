@@ -6,18 +6,18 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2InteriorPlaceable : IRoot, ITr2Interior, ITr2InteriorDynamic, INotify, IInitialize, ITr2Renderable, ITr2Pickable, ITr2BoundingBox {
-	public IRoot? Translation { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: 
-	public IRoot? Rotation { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: Rotation
-	public IRoot? Scaling { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 48, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 80, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool IsUnique { get; set; } // Offset: 81, Size: 1, Type: Boolean, Id: 23, Class: 
-	public TriMatrix? Transform { get; set; } // Offset: 128, Size: 96, Type: Collection, Id: 21, Class: TriMatrix
-	public string? PlaceableResPath { get; set; } // Offset: 224, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? PlaceableRes { get; set; } // Offset: 256, Size: 8, Type: Object, Id: 1, Class: WodPlaceableRes
-	public Vector3 BoundingSphereCenter { get; set; } // Offset: 280, Size: 12, Type: FloatArray, Id: 123141007343617, Class: Default
-	public float BoundingSphereRadius { get; set; } // Offset: 292, Size: 4, Type: Single, Id: 1, Class: 
-	public IRoot? VariableStore { get; set; } // Offset: 360, Size: 8, Type: Object, Id: 1, Class: Tr2VariableStore
-	public Vector3 ProbeOffset { get; set; } // Offset: 368, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float DepthOffset { get; set; } // Offset: 380, Size: 4, Type: Single, Id: 19, Class: 
+	public IRoot? Translation { get; set; }
+	public IRoot? Rotation { get; set; }
+	public IRoot? Scaling { get; set; }
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public bool IsUnique { get; set; }
+	public TriMatrix? Transform { get; set; }
+	public string? PlaceableResPath { get; set; }
+	public IRoot? PlaceableRes { get; set; }
+	public Vector3 BoundingSphereCenter { get; set; }
+	public float BoundingSphereRadius { get; set; }
+	public IRoot? VariableStore { get; set; }
+	public Vector3 ProbeOffset { get; set; }
+	public float DepthOffset { get; set; }
 }

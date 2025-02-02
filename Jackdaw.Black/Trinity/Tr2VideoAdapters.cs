@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2VideoAdapters : IRoot {
-	public int DEFAULT_ADAPTER { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 1, Class: 
+	public int DEFAULT_ADAPTER { get; set; }
 }

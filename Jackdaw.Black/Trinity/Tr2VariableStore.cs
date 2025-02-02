@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2VariableStore : IRoot {
-	public IRoot? ParentStore { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: Tr2VariableStore
+	public IRoot? ParentStore { get; set; }
 }

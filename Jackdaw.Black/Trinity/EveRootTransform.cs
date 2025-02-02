@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveRootTransform : Tr2Transform, IEveSpaceObject2, ITriTargetable, ITr2Pickable, IWorldPosition {
-	public List<IRoot?>? Children { get; set; } // Offset: 440, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Observers { get; set; } // Offset: 584, Size: 144, Type: Collection, Id: 17, Class: IList
-	public int LodLevel { get; set; } // Offset: 1020, Size: 4, Type: Int, Id: 1, Class: 
-	public IRoot? TranslationCurve { get; set; } // Offset: 1088, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public IRoot? RotationCurve { get; set; } // Offset: 1096, Size: 8, Type: Object, Id: 19, Class: ITriQuaternionFunction
-	public IRoot? ModelRotationCurve { get; set; } // Offset: 1104, Size: 8, Type: Object, Id: 19, Class: ITriQuaternionFunction
-	public IRoot? ModelTranslationCurve { get; set; } // Offset: 1112, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public float BoundingSphereRadius { get; set; } // Offset: 1120, Size: 4, Type: Single, Id: 19, Class: 
+	public List<IRoot?>? Children { get; set; }
+	public List<IRoot?>? Observers { get; set; }
+	public int LodLevel { get; set; }
+	public IRoot? TranslationCurve { get; set; }
+	public IRoot? RotationCurve { get; set; }
+	public IRoot? ModelRotationCurve { get; set; }
+	public IRoot? ModelTranslationCurve { get; set; }
+	public float BoundingSphereRadius { get; set; }
 }

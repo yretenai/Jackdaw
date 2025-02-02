@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class CollisionAvoidance : IRoot, IBehavior {
-	public bool Enabled { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
-	public List<IRoot?>? ExclusionVolumes { get; set; } // Offset: 16, Size: 144, Type: Collection, Id: 17, Class: IList
-	public float AvoidanceScalar { get; set; } // Offset: 160, Size: 4, Type: Single, Id: 19, Class: 
-	public int BehaviorPriority { get; set; } // Offset: 164, Size: 4, Type: Int, Id: 535, Class: 
+	public bool Enabled { get; set; }
+	public List<IRoot?>? ExclusionVolumes { get; set; }
+	public float AvoidanceScalar { get; set; }
+	public int BehaviorPriority { get; set; }
 }

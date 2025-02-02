@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ControllerReference : IRoot, IInitialize, INotify, ITr2Controller {
-	public IRoot? Controller { get; set; } // Offset: 24, Size: 8, Type: Object, Id: 1, Class: ITr2Controller
-	public string? Path { get; set; } // Offset: 32, Size: 32, Type: String, Id: 23, Class: 
+	public IRoot? Controller { get; set; }
+	public string? Path { get; set; }
 }

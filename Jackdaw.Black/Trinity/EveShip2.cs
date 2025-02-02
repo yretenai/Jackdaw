@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveShip2 : EveMobile, IEveSpaceObject2, ITr2Renderable, IListNotify {
-	public IRoot? AudioSpeedParameter { get; set; } // Offset: 0, Size: 0, Type: Object, Id: 3, Class: IRoot
-	public float MaxSpeed { get; set; } // Offset: 220, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? Speed { get; set; } // Offset: 3920, Size: 8, Type: Object, Id: 1, Class: TriFloat
-	public IRoot? Boosters { get; set; } // Offset: 3944, Size: 8, Type: Object, Id: 19, Class: EveBoosterSet2
-	public int DisplayKillCounterValue { get; set; } // Offset: 4000, Size: 4, Type: Int, Id: 3, Class: 
+	public IRoot? AudioSpeedParameter { get; set; }
+	public float MaxSpeed { get; set; }
+	public IRoot? Speed { get; set; }
+	public IRoot? Boosters { get; set; }
+	public int DisplayKillCounterValue { get; set; }
 }

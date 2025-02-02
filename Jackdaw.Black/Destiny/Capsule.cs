@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Capsule : IRoot {
-	public long Id { get; set; } // Offset: 16, Size: 8, Type: Long, Id: 3, Class: 
-	public IRoot? Park { get; set; } // Offset: 120, Size: 8, Type: Object, Id: 1, Class: Ballpark
-	public bool IsMoribund { get; set; } // Offset: 132, Size: 1, Type: Boolean, Id: 1, Class: 
-	public double Ax { get; set; } // Offset: 144, Size: 8, Type: Double, Id: 3, Class: 
-	public double Ay { get; set; } // Offset: 152, Size: 8, Type: Double, Id: 3, Class: 
-	public double Az { get; set; } // Offset: 160, Size: 8, Type: Double, Id: 3, Class: 
-	public double Bx { get; set; } // Offset: 168, Size: 8, Type: Double, Id: 3, Class: 
-	public double By { get; set; } // Offset: 176, Size: 8, Type: Double, Id: 3, Class: 
-	public double Bz { get; set; } // Offset: 184, Size: 8, Type: Double, Id: 3, Class: 
-	public float Radius { get; set; } // Offset: 192, Size: 4, Type: Single, Id: 3, Class: 
+	public long Id { get; set; }
+	public IRoot? Park { get; set; }
+	public bool IsMoribund { get; set; }
+	public double Ax { get; set; }
+	public double Ay { get; set; }
+	public double Az { get; set; }
+	public double Bx { get; set; }
+	public double By { get; set; }
+	public double Bz { get; set; }
+	public float Radius { get; set; }
 }

@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveLineSet : IRoot, IInitialize, ITr2Renderable, IEveTransform, IEveSpaceObject2 {
-	public string? Name { get; set; } // Offset: 48, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 80, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? Effect { get; set; } // Offset: 104, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public bool RenderTransparent { get; set; } // Offset: 160, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? TranslationCurve { get; set; } // Offset: 168, Size: 8, Type: Object, Id: 19, Class: ITriVectorFunction
-	public IRoot? RotationCurve { get; set; } // Offset: 176, Size: 8, Type: Object, Id: 19, Class: ITriQuaternionFunction
-	public Vector3 Scaling { get; set; } // Offset: 248, Size: 12, Type: FloatArray, Id: 19, Class: 
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public IRoot? Effect { get; set; }
+	public bool RenderTransparent { get; set; }
+	public IRoot? TranslationCurve { get; set; }
+	public IRoot? RotationCurve { get; set; }
+	public Vector3 Scaling { get; set; }
 }

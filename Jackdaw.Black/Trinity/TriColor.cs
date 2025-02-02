@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriColor : IRoot, ITriColor, IPythonMethods {
-	public float R { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 19, Class: 
-	public float G { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public float B { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public float A { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
+	public float R { get; set; }
+	public float G { get; set; }
+	public float B { get; set; }
+	public float A { get; set; }
 }

@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2DataTextureManager : IRoot {
-	public string? Name { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
-	public int TextureWidth { get; set; } // Offset: 24, Size: 4, Type: Int, Id: 1, Class: 
-	public int TextureHeight { get; set; } // Offset: 28, Size: 4, Type: Int, Id: 1, Class: 
-	public int BlockDataNextIdx { get; set; } // Offset: 32, Size: 4, Type: Int, Id: 1, Class: 
-	public int MaxBlockCount { get; set; } // Offset: 96, Size: 4, Type: Int, Id: 1, Class: 
-	public int MaxPixelCount { get; set; } // Offset: 100, Size: 4, Type: Int, Id: 1, Class: 
+	public string? Name { get; set; }
+	public int TextureWidth { get; set; }
+	public int TextureHeight { get; set; }
+	public int BlockDataNextIdx { get; set; }
+	public int MaxBlockCount { get; set; }
+	public int MaxPixelCount { get; set; }
 }

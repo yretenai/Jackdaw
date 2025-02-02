@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataLayout : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public bool RandomizeSeedOnLoad { get; set; } // Offset: 40, Size: 1, Type: Boolean, Id: 19, Class: 
-	public int Seed { get; set; } // Offset: 44, Size: 4, Type: Int, Id: 19, Class: 
-	public List<IRoot?>? DepletionCounters { get; set; } // Offset: 48, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Placements { get; set; } // Offset: 192, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public bool RandomizeSeedOnLoad { get; set; }
+	public int Seed { get; set; }
+	public List<IRoot?>? DepletionCounters { get; set; }
+	public List<IRoot?>? Placements { get; set; }
 }

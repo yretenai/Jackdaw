@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataBoosterShape : IRoot {
-	public float NoiseFunction { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 19, Class: 
-	public float NoiseSpeed { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 NoiseAmplitureStart { get; set; } // Offset: 16, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public Vector3 NoiseAmplitureEnd { get; set; } // Offset: 32, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public Vector3 NoiseFrequency { get; set; } // Offset: 48, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Color { get; set; } // Offset: 64, Size: 16, Type: FloatArray, Id: 19, Class: Color
+	public float NoiseFunction { get; set; }
+	public float NoiseSpeed { get; set; }
+	public Vector3 NoiseAmplitureStart { get; set; }
+	public Vector3 NoiseAmplitureEnd { get; set; }
+	public Vector3 NoiseFrequency { get; set; }
+	public Vector3 Color { get; set; }
 }

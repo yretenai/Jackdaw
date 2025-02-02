@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveLineSet : IRoot, ITr2Renderable, INotify, ITr2Pickable {
-	public IRoot? LineEffect { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 23, Class: Tr2Material
-	public IRoot? PickEffect { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 23, Class: Tr2Material
-	public Vector3 Scaling { get; set; } // Offset: 56, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 68, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Vector3 Translation { get; set; } // Offset: 84, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 96, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 128, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Additive { get; set; } // Offset: 244, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float LineWidthFactor { get; set; } // Offset: 248, Size: 4, Type: Single, Id: 23, Class: 
-	public float DepthOffset { get; set; } // Offset: 328, Size: 4, Type: Single, Id: 19, Class: 
+	public IRoot? LineEffect { get; set; }
+	public IRoot? PickEffect { get; set; }
+	public Vector3 Scaling { get; set; }
+	public Vector3 Rotation { get; set; }
+	public Vector3 Translation { get; set; }
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public bool Additive { get; set; }
+	public float LineWidthFactor { get; set; }
+	public float DepthOffset { get; set; }
 }

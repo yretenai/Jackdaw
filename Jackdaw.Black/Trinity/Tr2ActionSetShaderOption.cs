@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionSetShaderOption : IRoot, ITr2ControllerAction {
-	public string? Key { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? Value { get; set; } // Offset: 16, Size: 8, Type: UTFString, Id: 19, Class: 
+	public string? Key { get; set; }
+	public string? Value { get; set; }
 }

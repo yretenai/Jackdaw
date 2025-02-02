@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataRaceDamage : IRoot {
-	public List<IRoot?>? ArmorImpactParameters { get; set; } // Offset: 8, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ArmorImpactTextures { get; set; } // Offset: 152, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ShieldImpactParameters { get; set; } // Offset: 296, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ShieldImpactTextures { get; set; } // Offset: 440, Size: 144, Type: Collection, Id: 17, Class: IList
+	public List<IRoot?>? ArmorImpactParameters { get; set; }
+	public List<IRoot?>? ArmorImpactTextures { get; set; }
+	public List<IRoot?>? ShieldImpactParameters { get; set; }
+	public List<IRoot?>? ShieldImpactTextures { get; set; }
 }

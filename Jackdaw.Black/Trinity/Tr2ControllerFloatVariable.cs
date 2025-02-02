@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ControllerFloatVariable : IRoot, IInitialize, INotify {
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public string? EnumValues { get; set; } // Offset: 48, Size: 32, Type: String, Id: 19, Class: 
-	public int VariableType { get; set; } // Offset: 104, Size: 4, Type: Int, Id: 531, Class: 
-	public float Value { get; set; } // Offset: 108, Size: 4, Type: Single, Id: 7, Class: 
-	public float DefaultValue { get; set; } // Offset: 112, Size: 4, Type: Single, Id: 19, Class: 
+	public string? Name { get; set; }
+	public string? EnumValues { get; set; }
+	public int VariableType { get; set; }
+	public float Value { get; set; }
+	public float DefaultValue { get; set; }
 }

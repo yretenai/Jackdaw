@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepPredicated : TriRenderStep {
-	public bool PredicateValue { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public string? PredicateName { get; set; } // Offset: 136, Size: 32, Type: String, Id: 3, Class: 
-	public IRoot? Predicate { get; set; } // Offset: 168, Size: 8, Type: Object, Id: 3, Class: ITr2NamedPredicate
-	public IRoot? Step { get; set; } // Offset: 176, Size: 8, Type: Object, Id: 3, Class: TriRenderStep
+	public bool PredicateValue { get; set; }
+	public string? PredicateName { get; set; }
+	public IRoot? Predicate { get; set; }
+	public IRoot? Step { get; set; }
 }

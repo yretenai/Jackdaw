@@ -6,23 +6,23 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BehaviorGroup : IRoot, IInitialize, INotify, IListNotify {
-	public bool Display { get; set; } // Offset: 292, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Update { get; set; } // Offset: 293, Size: 1, Type: Boolean, Id: 19, Class: 
-	public Vector3 SpawnPosition { get; set; } // Offset: 304, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 328, Size: 8, Type: UTFString, Id: 19, Class: 
-	public int Count { get; set; } // Offset: 336, Size: 4, Type: Int, Id: 19, Class: 
-	public int ActualCount { get; set; } // Offset: 340, Size: 4, Type: Int, Id: 1, Class: 
-	public IRoot? Mesh { get; set; } // Offset: 352, Size: 8, Type: Object, Id: 23, Class: Tr2Mesh
-	public List<IRoot?>? Behaviors { get; set; } // Offset: 368, Size: 144, Type: Collection, Id: 17, Class: IList
-	public float MaxVelocity { get; set; } // Offset: 656, Size: 4, Type: Single, Id: 19, Class: 
-	public float BoundingSphereRadius { get; set; } // Offset: 660, Size: 4, Type: Single, Id: 19, Class: 
-	public float Scale { get; set; } // Offset: 680, Size: 4, Type: Single, Id: 19, Class: 
-	public float CurrentScreenSize { get; set; } // Offset: 712, Size: 4, Type: Single, Id: 1, Class: 
-	public float RenderThreshold { get; set; } // Offset: 716, Size: 4, Type: Single, Id: 19, Class: 
-	public float BlendScreenSizeMin { get; set; } // Offset: 720, Size: 4, Type: Single, Id: 19, Class: 
-	public float BlendScreenSizeMax { get; set; } // Offset: 724, Size: 4, Type: Single, Id: 19, Class: 
-	public IRoot? Boosters { get; set; } // Offset: 736, Size: 8, Type: Object, Id: 23, Class: BehaviorGroupBooster
-	public bool DebugMode { get; set; } // Offset: 760, Size: 1, Type: Boolean, Id: 3, Class: 
-	public float DebugLodLevel { get; set; } // Offset: 764, Size: 4, Type: Single, Id: 3, Class: 
-	public float DebugIntensity { get; set; } // Offset: 768, Size: 4, Type: Single, Id: 3, Class: 
+	public bool Display { get; set; }
+	public bool Update { get; set; }
+	public Vector3 SpawnPosition { get; set; }
+	public string? Name { get; set; }
+	public int Count { get; set; }
+	public int ActualCount { get; set; }
+	public IRoot? Mesh { get; set; }
+	public List<IRoot?>? Behaviors { get; set; }
+	public float MaxVelocity { get; set; }
+	public float BoundingSphereRadius { get; set; }
+	public float Scale { get; set; }
+	public float CurrentScreenSize { get; set; }
+	public float RenderThreshold { get; set; }
+	public float BlendScreenSizeMin { get; set; }
+	public float BlendScreenSizeMax { get; set; }
+	public IRoot? Boosters { get; set; }
+	public bool DebugMode { get; set; }
+	public float DebugLodLevel { get; set; }
+	public float DebugIntensity { get; set; }
 }

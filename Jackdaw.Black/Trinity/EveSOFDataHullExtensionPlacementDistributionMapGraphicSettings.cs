@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullExtensionPlacementDistributionMapGraphicSettings : IRoot, IEveSOFDataHullExtensionPlacementDistribution {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public int DisplayFilter { get; set; } // Offset: 40, Size: 4, Type: Int, Id: 531, Class: 
+	public string? Name { get; set; }
+	public int DisplayFilter { get; set; }
 }

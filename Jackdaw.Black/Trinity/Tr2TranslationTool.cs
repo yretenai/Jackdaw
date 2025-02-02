@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TranslationTool : Tr2ManipulationTool {
-	public Vector3 Translation { get; set; } // Offset: 392, Size: 12, Type: FloatArray, Id: 1, Class: 
+	public Vector3 Translation { get; set; }
 }

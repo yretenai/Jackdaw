@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriGeometryRes : BlueAsyncRes, IBlueResource, ICacheable, ITr2InstanceData, ITr2GpuBuffer {
-	public int ModelCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int MeshCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int AnimationCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 256, Size: 32, Type: String, Id: 3, Class: 
-	public int ForcedLodIndex { get; set; } // Offset: 672, Size: 4, Type: Int, Id: 3, Class: 
-	public bool ForceLod { get; set; } // Offset: 676, Size: 1, Type: Boolean, Id: 3, Class: 
+	public int ModelCount { get; set; }
+	public int MeshCount { get; set; }
+	public int AnimationCount { get; set; }
+	public string? Name { get; set; }
+	public int ForcedLodIndex { get; set; }
+	public bool ForceLod { get; set; }
 }

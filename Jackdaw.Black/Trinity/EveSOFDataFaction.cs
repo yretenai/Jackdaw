@@ -6,22 +6,22 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataFaction : IRoot {
-	public string? Description { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 40, Size: 32, Type: String, Id: 19, Class: 
-	public string? ResPathInsert { get; set; } // Offset: 72, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? SpotlightSets { get; set; } // Offset: 104, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? PlaneSets { get; set; } // Offset: 248, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Children { get; set; } // Offset: 392, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? VisibilityGroupSet { get; set; } // Offset: 536, Size: 8, Type: Object, Id: 19, Class: EveSOFDataFactionVisibilityGroupSet
-	public IRoot? ColorSet { get; set; } // Offset: 544, Size: 8, Type: Object, Id: 19, Class: EveSOFDataFactionColorSet
-	public IRoot? LogoSet { get; set; } // Offset: 552, Size: 8, Type: Object, Id: 19, Class: EveSOFDataLogoSet
-	public int MaterialUsageMtl1 { get; set; } // Offset: 560, Size: 4, Type: Int, Id: 19, Class: 
-	public int MaterialUsageMtl2 { get; set; } // Offset: 564, Size: 4, Type: Int, Id: 19, Class: 
-	public int MaterialUsageMtl3 { get; set; } // Offset: 568, Size: 4, Type: Int, Id: 19, Class: 
-	public int MaterialUsageMtl4 { get; set; } // Offset: 572, Size: 4, Type: Int, Id: 19, Class: 
-	public IRoot? AreaTypes { get; set; } // Offset: 576, Size: 8, Type: Object, Id: 19, Class: EveSOFDataArea
-	public IRoot? DefaultPattern { get; set; } // Offset: 584, Size: 8, Type: Object, Id: 19, Class: EveSOFDataPatternLayer
-	public string? DefaultPatternLayer1MaterialName { get; set; } // Offset: 592, Size: 32, Type: String, Id: 19, Class: 
-	public string? DefaultPatternLayer2MaterialName { get; set; } // Offset: 624, Size: 32, Type: String, Id: 19, Class: 
-	public string? DefaultPatternName { get; set; } // Offset: 656, Size: 32, Type: String, Id: 19, Class: 
+	public string? Description { get; set; }
+	public string? Name { get; set; }
+	public string? ResPathInsert { get; set; }
+	public List<IRoot?>? SpotlightSets { get; set; }
+	public List<IRoot?>? PlaneSets { get; set; }
+	public List<IRoot?>? Children { get; set; }
+	public IRoot? VisibilityGroupSet { get; set; }
+	public IRoot? ColorSet { get; set; }
+	public IRoot? LogoSet { get; set; }
+	public int MaterialUsageMtl1 { get; set; }
+	public int MaterialUsageMtl2 { get; set; }
+	public int MaterialUsageMtl3 { get; set; }
+	public int MaterialUsageMtl4 { get; set; }
+	public IRoot? AreaTypes { get; set; }
+	public IRoot? DefaultPattern { get; set; }
+	public string? DefaultPatternLayer1MaterialName { get; set; }
+	public string? DefaultPatternLayer2MaterialName { get; set; }
+	public string? DefaultPatternName { get; set; }
 }

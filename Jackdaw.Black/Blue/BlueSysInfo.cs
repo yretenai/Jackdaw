@@ -6,16 +6,16 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueSysInfo : IRoot {
-	public int ProcessBitCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int SystemBitCount { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public bool IsRosetta { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsWine { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	[BlackUseNamePool]public string? WineVersion { get; set; } // Offset: 0, Size: 0, Type: WString, Id: 1, Class: 
-	[BlackUseNamePool]public string? WineHostOs { get; set; } // Offset: 0, Size: 0, Type: WString, Id: 1, Class: 
-	public string? MachineUuid { get; set; } // Offset: 0, Size: 0, Type: String, Id: 1, Class: 
-	[BlackUseNamePool]public string? ComputerName { get; set; } // Offset: 0, Size: 0, Type: WString, Id: 1, Class: 
-	[BlackUseNamePool]public string? DomainName { get; set; } // Offset: 0, Size: 0, Type: WString, Id: 1, Class: 
-	public long ProcessStartTime { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 1, Class: 
-	public BlueSysInfoCpu? Cpu { get; set; } // Offset: 8, Size: 160, Type: Collection, Id: 1, Class: BlueSysInfoCpu
-	public BlueSysInfoOs? Os { get; set; } // Offset: 168, Size: 72, Type: Collection, Id: 1, Class: BlueSysInfoOs
+	public int ProcessBitCount { get; set; }
+	public int SystemBitCount { get; set; }
+	public bool IsRosetta { get; set; }
+	public bool IsWine { get; set; }
+	[BlackUseNamePool]public string? WineVersion { get; set; }
+	[BlackUseNamePool]public string? WineHostOs { get; set; }
+	public string? MachineUuid { get; set; }
+	[BlackUseNamePool]public string? ComputerName { get; set; }
+	[BlackUseNamePool]public string? DomainName { get; set; }
+	public long ProcessStartTime { get; set; }
+	public BlueSysInfoCpu? Cpu { get; set; }
+	public BlueSysInfoOs? Os { get; set; }
 }

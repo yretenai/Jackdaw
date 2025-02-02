@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriTextureParameter : IRoot, ITriEffectParameter, ITriEffectResourceParameter, ITriEffectTextureParameter, IInitialize, INotify, ICopierCustomAssignment {
-	public string? Name { get; set; } // Offset: 40, Size: 8, Type: UTFString, Id: 23, Class: 
-	public IRoot? Resource { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 1, Class: ITr2TextureProvider
-	public int UavMipLevel { get; set; } // Offset: 76, Size: 4, Type: Int, Id: 19, Class: 
-	public float PositionScale { get; set; } // Offset: 80, Size: 4, Type: Single, Id: 1, Class: 
-	public float UvDensityScale0 { get; set; } // Offset: 84, Size: 4, Type: Single, Id: 1, Class: 
-	public float UvDensityScale1 { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 1, Class: 
-	public float UvDensityScale2 { get; set; } // Offset: 92, Size: 4, Type: Single, Id: 1, Class: 
-	public float UvDensityScale3 { get; set; } // Offset: 96, Size: 4, Type: Single, Id: 1, Class: 
-	public bool UsedByCurrentTechnique { get; set; } // Offset: 112, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool UsedByCurrentEffect { get; set; } // Offset: 112, Size: 1, Type: Boolean, Id: 1, Class: 
-	public string? ResourcePath { get; set; } // Offset: 120, Size: 32, Type: String, Id: 23, Class: 
+	public string? Name { get; set; }
+	public IRoot? Resource { get; set; }
+	public int UavMipLevel { get; set; }
+	public float PositionScale { get; set; }
+	public float UvDensityScale0 { get; set; }
+	public float UvDensityScale1 { get; set; }
+	public float UvDensityScale2 { get; set; }
+	public float UvDensityScale3 { get; set; }
+	public bool UsedByCurrentTechnique { get; set; }
+	public bool UsedByCurrentEffect { get; set; }
+	public string? ResourcePath { get; set; }
 }

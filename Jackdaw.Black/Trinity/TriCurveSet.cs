@@ -6,15 +6,15 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriCurveSet : IRoot, IInitialize, ITr2Updateable {
-	public string? Name { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Bindings { get; set; } // Offset: 56, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Curves { get; set; } // Offset: 200, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Ranges { get; set; } // Offset: 344, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? Driver { get; set; } // Offset: 488, Size: 8, Type: Object, Id: 19, Class: ICurveSetDriver
-	public bool IsPlaying { get; set; } // Offset: 496, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool PlayOnLoad { get; set; } // Offset: 498, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool UseSimTimeRebase { get; set; } // Offset: 499, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool UseRealTime { get; set; } // Offset: 501, Size: 1, Type: Boolean, Id: 19, Class: 
-	public double ScaledTime { get; set; } // Offset: 528, Size: 8, Type: Double, Id: 3, Class: 
-	public float Scale { get; set; } // Offset: 536, Size: 4, Type: Single, Id: 19, Class: 
+	public string? Name { get; set; }
+	public List<IRoot?>? Bindings { get; set; }
+	public List<IRoot?>? Curves { get; set; }
+	public List<IRoot?>? Ranges { get; set; }
+	public IRoot? Driver { get; set; }
+	public bool IsPlaying { get; set; }
+	public bool PlayOnLoad { get; set; }
+	public bool UseSimTimeRebase { get; set; }
+	public bool UseRealTime { get; set; }
+	public double ScaledTime { get; set; }
+	public float Scale { get; set; }
 }

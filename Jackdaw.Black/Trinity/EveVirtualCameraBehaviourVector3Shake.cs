@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraBehaviourVector3Shake : EveVirtualCameraBehaviourVector3Base, INotify {
-	public float PerlineScale { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public int Octaves { get; set; } // Offset: 52, Size: 4, Type: Int, Id: 19, Class: 
-	public Vector3 Magnitude { get; set; } // Offset: 56, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public IRoot? MagnitudeCurve { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 19, Class: Tr2CurveScalar
-	public bool ScaleByView { get; set; } // Offset: 80, Size: 1, Type: Boolean, Id: 19, Class: 
+	public float PerlineScale { get; set; }
+	public int Octaves { get; set; }
+	public Vector3 Magnitude { get; set; }
+	public IRoot? MagnitudeCurve { get; set; }
+	public bool ScaleByView { get; set; }
 }

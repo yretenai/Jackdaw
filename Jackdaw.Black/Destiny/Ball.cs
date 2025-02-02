@@ -6,52 +6,52 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Ball : IRoot, INotify, IBall {
-	public long Id { get; set; } // Offset: 24, Size: 8, Type: Long, Id: 17, Class: 
-	public double X { get; set; } // Offset: 40, Size: 8, Type: Double, Id: 23, Class: 
-	public double Y { get; set; } // Offset: 48, Size: 8, Type: Double, Id: 23, Class: 
-	public double Z { get; set; } // Offset: 56, Size: 8, Type: Double, Id: 23, Class: 
-	public int NewBubbleId { get; set; } // Offset: 88, Size: 4, Type: Int, Id: 1, Class: 
-	public int OldBubbleId { get; set; } // Offset: 92, Size: 4, Type: Int, Id: 1, Class: 
-	public bool IsInteractive { get; set; } // Offset: 96, Size: 1, Type: Boolean, Id: 23, Class: 
-	public int EffectStamp { get; set; } // Offset: 136, Size: 4, Type: Int, Id: 17, Class: 
-	public bool IsMoribund { get; set; } // Offset: 140, Size: 1, Type: Boolean, Id: 1, Class: 
-	public long FollowId { get; set; } // Offset: 144, Size: 8, Type: Long, Id: 17, Class: 
-	public long OwnerId { get; set; } // Offset: 152, Size: 8, Type: Long, Id: 19, Class: 
-	public long Harmonic { get; set; } // Offset: 160, Size: 8, Type: Long, Id: 23, Class: 
-	public IRoot? Ballpark { get; set; } // Offset: 168, Size: 8, Type: Object, Id: 1, Class: Ballpark
-	public int AllianceID { get; set; } // Offset: 192, Size: 4, Type: Int, Id: 23, Class: 
-	public int CorporationID { get; set; } // Offset: 196, Size: 4, Type: Int, Id: 23, Class: 
-	public byte FormationID { get; set; } // Offset: 206, Size: 1, Type: Byte, Id: 1, Class: 
-	public byte IsCloaked { get; set; } // Offset: 207, Size: 1, Type: Byte, Id: 23, Class: 
-	public bool IsFree { get; set; } // Offset: 208, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool IsGlobal { get; set; } // Offset: 209, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool IsMassive { get; set; } // Offset: 210, Size: 1, Type: Boolean, Id: 23, Class: 
-	public float Radius { get; set; } // Offset: 220, Size: 4, Type: Single, Id: 23, Class: 
-	public float MaxVelocity { get; set; } // Offset: 224, Size: 4, Type: Single, Id: 23, Class: 
-	public float Agility { get; set; } // Offset: 228, Size: 4, Type: Single, Id: 23, Class: 
-	public float MaxAngularVelocity { get; set; } // Offset: 232, Size: 4, Type: Single, Id: 23, Class: 
-	public float RotationalAgility { get; set; } // Offset: 240, Size: 4, Type: Single, Id: 23, Class: 
-	public float SpeedFraction { get; set; } // Offset: 244, Size: 4, Type: Single, Id: 23, Class: 
-	public float FollowRange { get; set; } // Offset: 248, Size: 4, Type: Single, Id: 17, Class: 
-	public double Mass { get; set; } // Offset: 256, Size: 8, Type: Double, Id: 23, Class: 
-	public double Yaw { get; set; } // Offset: 288, Size: 8, Type: Double, Id: 1, Class: 
-	public double Pitch { get; set; } // Offset: 304, Size: 8, Type: Double, Id: 1, Class: 
-	public double Roll { get; set; } // Offset: 320, Size: 8, Type: Double, Id: 1, Class: 
-	public double Vx { get; set; } // Offset: 376, Size: 8, Type: Double, Id: 23, Class: 
-	public double Vy { get; set; } // Offset: 384, Size: 8, Type: Double, Id: 23, Class: 
-	public double Vz { get; set; } // Offset: 392, Size: 8, Type: Double, Id: 23, Class: 
-	public double GotoX { get; set; } // Offset: 424, Size: 8, Type: Double, Id: 23, Class: 
-	public double GotoY { get; set; } // Offset: 432, Size: 8, Type: Double, Id: 23, Class: 
-	public double GotoZ { get; set; } // Offset: 440, Size: 8, Type: Double, Id: 23, Class: 
-	public float Wx { get; set; } // Offset: 448, Size: 4, Type: Single, Id: 23, Class: 
-	public float Wy { get; set; } // Offset: 452, Size: 4, Type: Single, Id: 23, Class: 
-	public float Wz { get; set; } // Offset: 456, Size: 4, Type: Single, Id: 23, Class: 
-	public float Rx { get; set; } // Offset: 536, Size: 4, Type: Single, Id: 23, Class: 
-	public float Ry { get; set; } // Offset: 540, Size: 4, Type: Single, Id: 23, Class: 
-	public float Rz { get; set; } // Offset: 544, Size: 4, Type: Single, Id: 23, Class: 
-	public float Rw { get; set; } // Offset: 548, Size: 4, Type: Single, Id: 23, Class: 
-	public int Mode { get; set; } // Offset: 568, Size: 4, Type: Int, Id: 529, Class: 
-	public List<IRoot?>? MiniBalls { get; set; } // Offset: 576, Size: 136, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? MiniBoxes { get; set; } // Offset: 712, Size: 136, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? MiniCapsules { get; set; } // Offset: 848, Size: 136, Type: Collection, Id: 17, Class: IList
+	public long Id { get; set; }
+	public double X { get; set; }
+	public double Y { get; set; }
+	public double Z { get; set; }
+	public int NewBubbleId { get; set; }
+	public int OldBubbleId { get; set; }
+	public bool IsInteractive { get; set; }
+	public int EffectStamp { get; set; }
+	public bool IsMoribund { get; set; }
+	public long FollowId { get; set; }
+	public long OwnerId { get; set; }
+	public long Harmonic { get; set; }
+	public IRoot? Ballpark { get; set; }
+	public int AllianceID { get; set; }
+	public int CorporationID { get; set; }
+	public byte FormationID { get; set; }
+	public byte IsCloaked { get; set; }
+	public bool IsFree { get; set; }
+	public bool IsGlobal { get; set; }
+	public bool IsMassive { get; set; }
+	public float Radius { get; set; }
+	public float MaxVelocity { get; set; }
+	public float Agility { get; set; }
+	public float MaxAngularVelocity { get; set; }
+	public float RotationalAgility { get; set; }
+	public float SpeedFraction { get; set; }
+	public float FollowRange { get; set; }
+	public double Mass { get; set; }
+	public double Yaw { get; set; }
+	public double Pitch { get; set; }
+	public double Roll { get; set; }
+	public double Vx { get; set; }
+	public double Vy { get; set; }
+	public double Vz { get; set; }
+	public double GotoX { get; set; }
+	public double GotoY { get; set; }
+	public double GotoZ { get; set; }
+	public float Wx { get; set; }
+	public float Wy { get; set; }
+	public float Wz { get; set; }
+	public float Rx { get; set; }
+	public float Ry { get; set; }
+	public float Rz { get; set; }
+	public float Rw { get; set; }
+	public int Mode { get; set; }
+	public List<IRoot?>? MiniBalls { get; set; }
+	public List<IRoot?>? MiniBoxes { get; set; }
+	public List<IRoot?>? MiniCapsules { get; set; }
 }

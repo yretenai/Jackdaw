@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class WwiseAudioSink : IRoot, IAudioInputSink, IAudioSinkExposed {
-	public float Volume { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
+	public float Volume { get; set; }
 }

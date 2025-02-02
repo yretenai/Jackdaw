@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataGenericDecalShader : IRoot {
-	public string? Shader { get; set; } // Offset: 8, Size: 8, Type: UTFString, Id: 19, Class: 
-	public List<IRoot?>? Parameters { get; set; } // Offset: 16, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? DefaultTextures { get; set; } // Offset: 160, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ParentTextures { get; set; } // Offset: 304, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Shader { get; set; }
+	public List<IRoot?>? Parameters { get; set; }
+	public List<IRoot?>? DefaultTextures { get; set; }
+	public List<IRoot?>? ParentTextures { get; set; }
 }

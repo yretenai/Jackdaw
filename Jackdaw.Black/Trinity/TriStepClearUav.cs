@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepClearUav : TriRenderStep {
-	public IRoot? Buffer { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 19, Class: ITr2GpuBuffer
-	public bool ClearWithFloat { get; set; } // Offset: 144, Size: 1, Type: Boolean, Id: 19, Class: 
-	public Vector3 FloatValue { get; set; } // Offset: 148, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public int BitValue0 { get; set; } // Offset: 164, Size: 4, Type: Int, Id: 19, Class: 
-	public int BitValue1 { get; set; } // Offset: 168, Size: 4, Type: Int, Id: 19, Class: 
-	public int BitValue2 { get; set; } // Offset: 172, Size: 4, Type: Int, Id: 19, Class: 
-	public int BitValue3 { get; set; } // Offset: 176, Size: 4, Type: Int, Id: 19, Class: 
+	public IRoot? Buffer { get; set; }
+	public bool ClearWithFloat { get; set; }
+	public Vector3 FloatValue { get; set; }
+	public int BitValue0 { get; set; }
+	public int BitValue1 { get; set; }
+	public int BitValue2 { get; set; }
+	public int BitValue3 { get; set; }
 }

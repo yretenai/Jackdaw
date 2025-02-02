@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveScalarExpression : IRoot, ITriFunction, ITriScalarFunction, IInitialize {
-	public string? Expression { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	public string? Name { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Inputs { get; set; } // Offset: 120, Size: 144, Type: Collection, Id: 17, Class: IList
-	public float CurrentValue { get; set; } // Offset: 264, Size: 4, Type: Single, Id: 1, Class: 
-	public float Input1 { get; set; } // Offset: 280, Size: 4, Type: Single, Id: 19, Class: 
-	public float Input2 { get; set; } // Offset: 284, Size: 4, Type: Single, Id: 19, Class: 
-	public float Input3 { get; set; } // Offset: 288, Size: 4, Type: Single, Id: 19, Class: 
-	public float Input4 { get; set; } // Offset: 292, Size: 4, Type: Single, Id: 19, Class: 
+	public string? Expression { get; set; }
+	public string? Name { get; set; }
+	public List<IRoot?>? Inputs { get; set; }
+	public float CurrentValue { get; set; }
+	public float Input1 { get; set; }
+	public float Input2 { get; set; }
+	public float Input3 { get; set; }
+	public float Input4 { get; set; }
 }

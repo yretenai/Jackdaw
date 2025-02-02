@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepClear : TriRenderStep {
-	public Vector3 Color { get; set; } // Offset: 136, Size: 16, Type: FloatArray, Id: 19, Class: Color
-	public float Depth { get; set; } // Offset: 152, Size: 4, Type: Single, Id: 19, Class: 
-	public int Stencil { get; set; } // Offset: 156, Size: 4, Type: Int, Id: 19, Class: 
-	public bool IsColorCleared { get; set; } // Offset: 160, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool IsDepthCleared { get; set; } // Offset: 161, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool IsStencilCleared { get; set; } // Offset: 162, Size: 1, Type: Boolean, Id: 19, Class: 
+	public Vector3 Color { get; set; }
+	public float Depth { get; set; }
+	public int Stencil { get; set; }
+	public bool IsColorCleared { get; set; }
+	public bool IsDepthCleared { get; set; }
+	public bool IsStencilCleared { get; set; }
 }

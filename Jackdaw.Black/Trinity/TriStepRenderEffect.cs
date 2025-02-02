@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderEffect : TriRenderStep {
-	public IRoot? Effect { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 3, Class: Tr2Effect
-	public IRoot? ShaderBuffer { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 3, Class: Tr2ShaderBuffer
-	public Vector3 TlTexCoord { get; set; } // Offset: 152, Size: 8, Type: FloatArray, Id: 3, Class: 
-	public Vector3 BrTexCoord { get; set; } // Offset: 160, Size: 8, Type: FloatArray, Id: 3, Class: 
+	public IRoot? Effect { get; set; }
+	public IRoot? ShaderBuffer { get; set; }
+	public Vector3 TlTexCoord { get; set; }
+	public Vector3 BrTexCoord { get; set; }
 }

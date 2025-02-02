@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveMultiEffect : IRoot, IEveSpaceObject2, ITr2ControllerOwner, IInitialize, ITr2DynamicBindingOwner, ITr2CurveSetOwner {
-	public string? Name { get; set; } // Offset: 48, Size: 8, Type: UTFString, Id: 19, Class: 
-	public List<IRoot?>? Parameters { get; set; } // Offset: 56, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Bindings { get; set; } // Offset: 200, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? Controllers { get; set; } // Offset: 344, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? CurveSets { get; set; } // Offset: 488, Size: 144, Type: Collection, Id: 17, Class: IList
-	public List<IRoot?>? ExternalParameters { get; set; } // Offset: 632, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public List<IRoot?>? Parameters { get; set; }
+	public List<IRoot?>? Bindings { get; set; }
+	public List<IRoot?>? Controllers { get; set; }
+	public List<IRoot?>? CurveSets { get; set; }
+	public List<IRoot?>? ExternalParameters { get; set; }
 }

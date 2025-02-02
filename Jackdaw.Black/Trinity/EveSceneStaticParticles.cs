@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSceneStaticParticles : IRoot, IInitialize {
-	public float MinSize { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 3, Class: 
-	public float MaxSize { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 3, Class: 
-	public long MaxParticleCount { get; set; } // Offset: 24, Size: 8, Type: Long, Id: 3, Class: 
-	public float ClusterParticleDensity { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 3, Class: 
-	public float ClusterParticleDensityAdjust { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 1, Class: 
-	public IRoot? Transform { get; set; } // Offset: 168, Size: 8, Type: Object, Id: 3, Class: EveTransform
+	public float MinSize { get; set; }
+	public float MaxSize { get; set; }
+	public long MaxParticleCount { get; set; }
+	public float ClusterParticleDensity { get; set; }
+	public float ClusterParticleDensityAdjust { get; set; }
+	public IRoot? Transform { get; set; }
 }

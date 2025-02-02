@@ -6,29 +6,29 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildCloud2 : IRoot, ITr2VolumetricRenderable, ITr2GeometryProvider, IInitialize, INotify, IEveSpaceObjectChild, ITr2Renderable, EveEntity {
-	public bool LightmapDirty { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public IRoot? Effect { get; set; } // Offset: 272, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? ReflectionEffect { get; set; } // Offset: 280, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public int NoiseTextureSize { get; set; } // Offset: 300, Size: 4, Type: Int, Id: 19, Class: 
-	public Vector3 Scaling { get; set; } // Offset: 304, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Translation { get; set; } // Offset: 316, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 328, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public List<IRoot?>? Lights { get; set; } // Offset: 384, Size: 144, Type: Collection, Id: 17, Class: IList
-	public IRoot? Lightmap { get; set; } // Offset: 536, Size: 8, Type: Object, Id: 1, Class: Tr2TextureReference
-	public IRoot? Animation { get; set; } // Offset: 544, Size: 8, Type: Object, Id: 19, Class: Tr2TextureAnimation
-	public int ReflectionMode { get; set; } // Offset: 552, Size: 4, Type: Int, Id: 535, Class: 
-	public int MinVisibleQuality { get; set; } // Offset: 556, Size: 4, Type: Int, Id: 531, Class: 
-	public string? Name { get; set; } // Offset: 568, Size: 32, Type: String, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 600, Size: 1, Type: Boolean, Id: 23, Class: 
-	public bool CastShadows { get; set; } // Offset: 601, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool ReceiveShadows { get; set; } // Offset: 602, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float SortingModifier { get; set; } // Offset: 608, Size: 4, Type: Single, Id: 19, Class: 
-	public float MinScreenSize { get; set; } // Offset: 612, Size: 4, Type: Single, Id: 19, Class: 
-	public float LightmapSizeScale { get; set; } // Offset: 632, Size: 4, Type: Single, Id: 1, Class: 
-	public Vector3 TextureTiling { get; set; } // Offset: 644, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 DetailTiling1 { get; set; } // Offset: 656, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 DetailTiling2 { get; set; } // Offset: 668, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 MapOffset0 { get; set; } // Offset: 680, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 MapOffset1 { get; set; } // Offset: 692, Size: 12, Type: FloatArray, Id: 1, Class: 
-	public Vector3 MapOffset2 { get; set; } // Offset: 704, Size: 12, Type: FloatArray, Id: 1, Class: 
+	public bool LightmapDirty { get; set; }
+	public IRoot? Effect { get; set; }
+	public IRoot? ReflectionEffect { get; set; }
+	public int NoiseTextureSize { get; set; }
+	public Vector3 Scaling { get; set; }
+	public Vector3 Translation { get; set; }
+	public Vector3 Rotation { get; set; }
+	public List<IRoot?>? Lights { get; set; }
+	public IRoot? Lightmap { get; set; }
+	public IRoot? Animation { get; set; }
+	public int ReflectionMode { get; set; }
+	public int MinVisibleQuality { get; set; }
+	public string? Name { get; set; }
+	public bool Display { get; set; }
+	public bool CastShadows { get; set; }
+	public bool ReceiveShadows { get; set; }
+	public float SortingModifier { get; set; }
+	public float MinScreenSize { get; set; }
+	public float LightmapSizeScale { get; set; }
+	public Vector3 TextureTiling { get; set; }
+	public Vector3 DetailTiling1 { get; set; }
+	public Vector3 DetailTiling2 { get; set; }
+	public Vector3 MapOffset0 { get; set; }
+	public Vector3 MapOffset1 { get; set; }
+	public Vector3 MapOffset2 { get; set; }
 }

@@ -6,23 +6,23 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2FactionLight : IRoot, IEveInheritPropertiesOwner, Tr2Light, IInitialize, INotify {
-	public IRoot? SelectedColor { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 1, Class: Color
-	public Vector3 Position { get; set; } // Offset: 16, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public float Brightness { get; set; } // Offset: 44, Size: 4, Type: Single, Id: 19, Class: 
-	public float NoiseAmplitude { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 19, Class: 
-	public float NoiseFrequency { get; set; } // Offset: 52, Size: 4, Type: Single, Id: 19, Class: 
-	public int NoiseOctaves { get; set; } // Offset: 56, Size: 4, Type: Int, Id: 19, Class: 
-	public float Radius { get; set; } // Offset: 60, Size: 4, Type: Single, Id: 19, Class: 
-	public float InnerRadius { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 68, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public float OuterAngle { get; set; } // Offset: 84, Size: 4, Type: Single, Id: 19, Class: 
-	public float InnerAngle { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 19, Class: 
-	public int BoneIndex { get; set; } // Offset: 128, Size: 4, Type: Int, Id: 23, Class: 
-	public short Flags { get; set; } // Offset: 132, Size: 2, Type: Short, Id: 19, Class: 
-	public string? Name { get; set; } // Offset: 152, Size: 32, Type: String, Id: 19, Class: 
-	public IRoot? LightProfile { get; set; } // Offset: 264, Size: 8, Type: Object, Id: 1, Class: Tr2LightProfileRes
-	[BlackUseNamePool]public string? LightProfilePath { get; set; } // Offset: 272, Size: 32, Type: WString, Id: 23, Class: 
-	public float Saturation { get; set; } // Offset: 312, Size: 4, Type: Single, Id: 23, Class: 
-	public bool IsSpotlight { get; set; } // Offset: 316, Size: 1, Type: Boolean, Id: 23, Class: 
-	public int FactionColor { get; set; } // Offset: 328, Size: 4, Type: Int, Id: 535, Class: 
+	public IRoot? SelectedColor { get; set; }
+	public Vector3 Position { get; set; }
+	public float Brightness { get; set; }
+	public float NoiseAmplitude { get; set; }
+	public float NoiseFrequency { get; set; }
+	public int NoiseOctaves { get; set; }
+	public float Radius { get; set; }
+	public float InnerRadius { get; set; }
+	public Vector3 Rotation { get; set; }
+	public float OuterAngle { get; set; }
+	public float InnerAngle { get; set; }
+	public int BoneIndex { get; set; }
+	public short Flags { get; set; }
+	public string? Name { get; set; }
+	public IRoot? LightProfile { get; set; }
+	[BlackUseNamePool]public string? LightProfilePath { get; set; }
+	public float Saturation { get; set; }
+	public bool IsSpotlight { get; set; }
+	public int FactionColor { get; set; }
 }

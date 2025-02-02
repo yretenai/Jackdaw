@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Mesh : Tr2MeshBase, IInitialize, INotify {
-	public bool IsLoading { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public IRoot? Geometry { get; set; } // Offset: 2288, Size: 8, Type: Object, Id: 1, Class: TriGeometryRes
-	public string? GeometryResPath { get; set; } // Offset: 2304, Size: 32, Type: String, Id: 23, Class: 
-	public bool DeferGeometryLoad { get; set; } // Offset: 2448, Size: 1, Type: Boolean, Id: 23, Class: 
+	public bool IsLoading { get; set; }
+	public IRoot? Geometry { get; set; }
+	public string? GeometryResPath { get; set; }
+	public bool DeferGeometryLoad { get; set; }
 }

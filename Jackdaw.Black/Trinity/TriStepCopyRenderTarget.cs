@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepCopyRenderTarget : TriRenderStep {
-	public IRoot? Destination { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public IRoot? Source { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 3, Class: Tr2RenderTarget
-	public IRoot? DestinationTexture { get; set; } // Offset: 152, Size: 8, Type: Object, Id: 3, Class: TriTextureRes
-	public IRoot? SourceViewport { get; set; } // Offset: 160, Size: 8, Type: Object, Id: 3, Class: TriViewport
-	public IRoot? DestinationViewport { get; set; } // Offset: 168, Size: 8, Type: Object, Id: 3, Class: TriViewport
+	public IRoot? Destination { get; set; }
+	public IRoot? Source { get; set; }
+	public IRoot? DestinationTexture { get; set; }
+	public IRoot? SourceViewport { get; set; }
+	public IRoot? DestinationViewport { get; set; }
 }

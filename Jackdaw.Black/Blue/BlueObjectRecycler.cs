@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueObjectRecycler : IRoot, IBlueObjectRecycler {
-	public float TimeLimit { get; set; } // Offset: 256, Size: 4, Type: Single, Id: 3, Class: 
+	public float TimeLimit { get; set; }
 }

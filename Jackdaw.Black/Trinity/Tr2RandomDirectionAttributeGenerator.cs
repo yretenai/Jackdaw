@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2RandomDirectionAttributeGenerator : IRoot, ITr2AttributeGenerator {
-	public string? Name { get; set; } // Offset: 0, Size: 0, Type: String, Id: 1, Class: 
-	public int Dimension { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 1, Class: 
-	public int ElementType { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 531, Class: 
-	public string? CustomName { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public bool Valid { get; set; } // Offset: 64, Size: 1, Type: Boolean, Id: 1, Class: 
+	public string? Name { get; set; }
+	public int Dimension { get; set; }
+	public int ElementType { get; set; }
+	public string? CustomName { get; set; }
+	public bool Valid { get; set; }
 }

@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueLogInMemory : IRoot {
-	public bool IsActive { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public int Capacity { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 3, Class: 
-	public int Threshold { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 3, Class: 
-	public bool SaveOnQuit { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
+	public bool IsActive { get; set; }
+	public int Capacity { get; set; }
+	public int Threshold { get; set; }
+	public bool SaveOnQuit { get; set; }
 }

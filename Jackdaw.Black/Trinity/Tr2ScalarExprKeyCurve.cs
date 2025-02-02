@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ScalarExprKeyCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
-	public float Length { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public string? Name { get; set; } // Offset: 32, Size: 32, Type: String, Id: 19, Class: 
-	public float CurrentValue { get; set; } // Offset: 64, Size: 4, Type: Single, Id: 1, Class: 
-	public bool Reversed { get; set; } // Offset: 68, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Cycle { get; set; } // Offset: 69, Size: 1, Type: Boolean, Id: 19, Class: 
-	public float TimeOffset { get; set; } // Offset: 72, Size: 4, Type: Single, Id: 19, Class: 
-	public float TimeScale { get; set; } // Offset: 76, Size: 4, Type: Single, Id: 19, Class: 
-	public int Interpolation { get; set; } // Offset: 80, Size: 4, Type: Int, Id: 531, Class: 
-	public List<IRoot?>? Keys { get; set; } // Offset: 88, Size: 144, Type: Collection, Id: 17, Class: IList
+	public float Length { get; set; }
+	public string? Name { get; set; }
+	public float CurrentValue { get; set; }
+	public bool Reversed { get; set; }
+	public bool Cycle { get; set; }
+	public float TimeOffset { get; set; }
+	public float TimeScale { get; set; }
+	public int Interpolation { get; set; }
+	public List<IRoot?>? Keys { get; set; }
 }

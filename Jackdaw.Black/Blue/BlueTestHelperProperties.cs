@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueTestHelperProperties : IRoot {
-	public string? MyString { get; set; } // Offset: 0, Size: 0, Type: String, Id: 3, Class: 
-	[BlackUseNamePool]public string? MyUnicode { get; set; } // Offset: 0, Size: 0, Type: WString, Id: 3, Class: 
-	public bool MyBool { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 3, Class: 
-	public int MyInt { get; set; } // Offset: 0, Size: 0, Type: Int, Id: 3, Class: 
-	public float MyFloat { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 3, Class: 
-	public double MyDouble { get; set; } // Offset: 0, Size: 0, Type: Double, Id: 3, Class: 
-	public long MyInt64 { get; set; } // Offset: 0, Size: 0, Type: Long, Id: 3, Class: 
+	public string? MyString { get; set; }
+	[BlackUseNamePool]public string? MyUnicode { get; set; }
+	public bool MyBool { get; set; }
+	public int MyInt { get; set; }
+	public float MyFloat { get; set; }
+	public double MyDouble { get; set; }
+	public long MyInt64 { get; set; }
 }

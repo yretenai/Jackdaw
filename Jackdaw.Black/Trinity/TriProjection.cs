@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriProjection : IRoot {
-	public IRoot? Transform { get; set; } // Offset: 0, Size: 0, Type: FloatArray, Id: 1, Class: Matrix
+	public IRoot? Transform { get; set; }
 }

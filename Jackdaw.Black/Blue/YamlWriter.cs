@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class YamlWriter : IRoot {
-	public bool SkipDefaults { get; set; } // Offset: 40, Size: 1, Type: Boolean, Id: 3, Class: 
+	public bool SkipDefaults { get; set; }
 }

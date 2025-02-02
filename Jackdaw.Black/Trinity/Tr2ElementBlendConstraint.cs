@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ElementBlendConstraint : IRoot, ITr2GenericParticleConstraint {
-	public bool IsValid { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 1, Class: 
-	public int ElementType { get; set; } // Offset: 16, Size: 4, Type: Int, Id: 531, Class: 
-	public string? CustomName { get; set; } // Offset: 24, Size: 32, Type: String, Id: 19, Class: 
-	public Vector3 Value { get; set; } // Offset: 72, Size: 16, Type: FloatArray, Id: 19, Class: 
-	public float OriginalFactor { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 19, Class: 
+	public bool IsValid { get; set; }
+	public int ElementType { get; set; }
+	public string? CustomName { get; set; }
+	public Vector3 Value { get; set; }
+	public float OriginalFactor { get; set; }
 }

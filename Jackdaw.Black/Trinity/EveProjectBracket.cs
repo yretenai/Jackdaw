@@ -6,27 +6,27 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveProjectBracket : IRoot, ITriFunction {
-	[BlackUseNamePool]public string? Name { get; set; } // Offset: 8, Size: 32, Type: WString, Id: 3, Class: 
-	public IRoot? TrackBall { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 3, Class: ITriVectorFunction
-	public float BallTrackingScaling { get; set; } // Offset: 48, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? TrackTransform { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 3, Class: IWorldPosition
-	public Vector3 TrackPosition { get; set; } // Offset: 64, Size: 12, Type: FloatArray, Id: 3, Class: 
-	public bool Dock { get; set; } // Offset: 76, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool IsVisible { get; set; } // Offset: 77, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool IsInFront { get; set; } // Offset: 78, Size: 1, Type: Boolean, Id: 1, Class: 
-	public bool IntegerCoordinates { get; set; } // Offset: 80, Size: 1, Type: Boolean, Id: 3, Class: 
-	public float MarginLeft { get; set; } // Offset: 84, Size: 4, Type: Single, Id: 3, Class: 
-	public float MarginRight { get; set; } // Offset: 88, Size: 4, Type: Single, Id: 3, Class: 
-	public float MarginTop { get; set; } // Offset: 92, Size: 4, Type: Single, Id: 3, Class: 
-	public float MarginBottom { get; set; } // Offset: 96, Size: 4, Type: Single, Id: 3, Class: 
-	public float MinDispRange { get; set; } // Offset: 100, Size: 4, Type: Single, Id: 3, Class: 
-	public float MaxDispRange { get; set; } // Offset: 104, Size: 4, Type: Single, Id: 3, Class: 
-	public float CameraDistance { get; set; } // Offset: 108, Size: 4, Type: Single, Id: 1, Class: 
-	public float OffsetX { get; set; } // Offset: 112, Size: 4, Type: Single, Id: 3, Class: 
-	public float OffsetY { get; set; } // Offset: 116, Size: 4, Type: Single, Id: 3, Class: 
-	public IRoot? Parent { get; set; } // Offset: 120, Size: 8, Type: Object, Id: 3, Class: Tr2Sprite2dContainer
-	public IRoot? Bracket { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 3, Class: Tr2Sprite2dContainer
-	public IRoot? BracketIcon { get; set; } // Offset: 152, Size: 8, Type: Object, Id: 3, Class: EveSprite2dBracket
-	public Vector3 ProjectedPosition { get; set; } // Offset: 160, Size: 8, Type: FloatArray, Id: 1, Class: 
-	public Vector3 RawProjectedPosition { get; set; } // Offset: 168, Size: 8, Type: FloatArray, Id: 1, Class: 
+	[BlackUseNamePool]public string? Name { get; set; }
+	public IRoot? TrackBall { get; set; }
+	public float BallTrackingScaling { get; set; }
+	public IRoot? TrackTransform { get; set; }
+	public Vector3 TrackPosition { get; set; }
+	public bool Dock { get; set; }
+	public bool IsVisible { get; set; }
+	public bool IsInFront { get; set; }
+	public bool IntegerCoordinates { get; set; }
+	public float MarginLeft { get; set; }
+	public float MarginRight { get; set; }
+	public float MarginTop { get; set; }
+	public float MarginBottom { get; set; }
+	public float MinDispRange { get; set; }
+	public float MaxDispRange { get; set; }
+	public float CameraDistance { get; set; }
+	public float OffsetX { get; set; }
+	public float OffsetY { get; set; }
+	public IRoot? Parent { get; set; }
+	public IRoot? Bracket { get; set; }
+	public IRoot? BracketIcon { get; set; }
+	public Vector3 ProjectedPosition { get; set; }
+	public Vector3 RawProjectedPosition { get; set; }
 }

@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullPlaneSet : IRoot {
-	public string? Name { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public string? VisibilityGroup { get; set; } // Offset: 40, Size: 8, Type: UTFString, Id: 19, Class: 
-	public bool Skinned { get; set; } // Offset: 48, Size: 1, Type: Boolean, Id: 19, Class: 
-	public string? Layer1MapResPath { get; set; } // Offset: 56, Size: 32, Type: String, Id: 19, Class: 
-	public string? Layer2MapResPath { get; set; } // Offset: 88, Size: 32, Type: String, Id: 19, Class: 
-	public string? MaskMapResPath { get; set; } // Offset: 120, Size: 32, Type: String, Id: 19, Class: 
-	public int Usage { get; set; } // Offset: 152, Size: 4, Type: Int, Id: 531, Class: 
-	public int AtlasSize { get; set; } // Offset: 156, Size: 4, Type: Int, Id: 19, Class: 
-	public Vector3 AtlasAspectRatio { get; set; } // Offset: 160, Size: 8, Type: FloatArray, Id: 19, Class: 
-	public List<IRoot?>? Items { get; set; } // Offset: 168, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? Name { get; set; }
+	public string? VisibilityGroup { get; set; }
+	public bool Skinned { get; set; }
+	public string? Layer1MapResPath { get; set; }
+	public string? Layer2MapResPath { get; set; }
+	public string? MaskMapResPath { get; set; }
+	public int Usage { get; set; }
+	public int AtlasSize { get; set; }
+	public Vector3 AtlasAspectRatio { get; set; }
+	public List<IRoot?>? Items { get; set; }
 }

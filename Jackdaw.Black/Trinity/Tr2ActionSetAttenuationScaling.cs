@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionSetAttenuationScaling : IRoot, ITr2ControllerAction {
-	public float FinalScalingFactor { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public string? Emitter { get; set; } // Offset: 16, Size: 32, Type: String, Id: 19, Class: 
-	public string? ControllerVariable { get; set; } // Offset: 48, Size: 32, Type: String, Id: 19, Class: 
-	public float ScalingFactor { get; set; } // Offset: 80, Size: 4, Type: Single, Id: 19, Class: 
+	public float FinalScalingFactor { get; set; }
+	public string? Emitter { get; set; }
+	public string? ControllerVariable { get; set; }
+	public float ScalingFactor { get; set; }
 }

@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderPass : TriRenderStep {
-	public int PassType { get; set; } // Offset: 136, Size: 4, Type: Int, Id: 531, Class: 
-	public IRoot? Scene { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 19, Class: ITr2MultiPassScene
+	public int PassType { get; set; }
+	public IRoot? Scene { get; set; }
 }

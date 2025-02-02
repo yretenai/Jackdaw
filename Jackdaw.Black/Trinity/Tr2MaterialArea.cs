@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2MaterialArea : IRoot {
-	public string? Metatype { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public IRoot? Material { get; set; } // Offset: 40, Size: 8, Type: Object, Id: 19, Class: Tr2MaterialParameterStore
+	public string? Metatype { get; set; }
+	public IRoot? Material { get; set; }
 }

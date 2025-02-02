@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TexturePipeline : IRoot {
-	public string? PipelineType { get; set; } // Offset: 8, Size: 32, Type: String, Id: 19, Class: 
-	public List<IRoot?>? Steps { get; set; } // Offset: 40, Size: 144, Type: Collection, Id: 17, Class: IList
+	public string? PipelineType { get; set; }
+	public List<IRoot?>? Steps { get; set; }
 }

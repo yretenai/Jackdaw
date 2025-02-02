@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataPatternMaterialOverride : IRoot {
-	public bool IsTargetMtl1 { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool IsTargetMtl2 { get; set; } // Offset: 9, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool IsTargetMtl3 { get; set; } // Offset: 10, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool IsTargetMtl4 { get; set; } // Offset: 11, Size: 1, Type: Boolean, Id: 19, Class: 
+	public bool IsTargetMtl1 { get; set; }
+	public bool IsTargetMtl2 { get; set; }
+	public bool IsTargetMtl3 { get; set; }
+	public bool IsTargetMtl4 { get; set; }
 }

@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveMissile : EveSpaceObject2, IEveSpaceObject2, ITr2Renderable {
-	public List<IRoot?>? Warheads { get; set; } // Offset: 3728, Size: 144, Type: Collection, Id: 17, Class: IList
-	public bool UpdateWarheads { get; set; } // Offset: 3872, Size: 1, Type: Boolean, Id: 3, Class: 
-	public IRoot? Target { get; set; } // Offset: 3912, Size: 8, Type: Object, Id: 3, Class: ITriTargetable
-	public float TargetRadius { get; set; } // Offset: 3920, Size: 4, Type: Single, Id: 3, Class: 
+	public List<IRoot?>? Warheads { get; set; }
+	public bool UpdateWarheads { get; set; }
+	public IRoot? Target { get; set; }
+	public float TargetRadius { get; set; }
 }

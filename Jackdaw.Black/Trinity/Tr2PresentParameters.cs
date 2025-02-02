@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PresentParameters : IRoot {
-	public int BackBufferWidth { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 3, Class: 
-	public int BackBufferHeight { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 3, Class: 
-	public bool Windowed { get; set; } // Offset: 64, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool Software { get; set; } // Offset: 65, Size: 1, Type: Boolean, Id: 515, Class: 
+	public int BackBufferWidth { get; set; }
+	public int BackBufferHeight { get; set; }
+	public bool Windowed { get; set; }
+	public bool Software { get; set; }
 }

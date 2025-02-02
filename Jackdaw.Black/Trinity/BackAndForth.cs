@@ -6,17 +6,17 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BackAndForth : IRoot, IBehavior {
-	public bool Enabled { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 535, Class: 
-	public int BehaviorPriority { get; set; } // Offset: 12, Size: 4, Type: Int, Id: 535, Class: 
-	public float ArrivedRadius { get; set; } // Offset: 20, Size: 4, Type: Single, Id: 19, Class: 
-	public float SlowDownRadius { get; set; } // Offset: 24, Size: 4, Type: Single, Id: 19, Class: 
-	public float BackAndForthWeight { get; set; } // Offset: 28, Size: 4, Type: Single, Id: 19, Class: 
-	public float SecondsToTurn { get; set; } // Offset: 32, Size: 4, Type: Single, Id: 3, Class: 
-	public float DistFromOrigin { get; set; } // Offset: 36, Size: 4, Type: Single, Id: 19, Class: 
-	public IRoot? FxBehavior { get; set; } // Offset: 56, Size: 8, Type: Object, Id: 19, Class: IBehavior
-	public IRoot? Target { get; set; } // Offset: 64, Size: 8, Type: Object, Id: 19, Class: EveSpaceObject2
-	public IRoot? Parent { get; set; } // Offset: 72, Size: 8, Type: Object, Id: 19, Class: EveSpaceObject2
-	public List<IRoot?>? LocatorSet { get; set; } // Offset: 80, Size: 144, Type: Collection, Id: 17, Class: IList
-	public string? LocatorSetName { get; set; } // Offset: 224, Size: 8, Type: UTFString, Id: 19, Class: 
-	public int LocatorType { get; set; } // Offset: 232, Size: 4, Type: Int, Id: 535, Class: 
+	public bool Enabled { get; set; }
+	public int BehaviorPriority { get; set; }
+	public float ArrivedRadius { get; set; }
+	public float SlowDownRadius { get; set; }
+	public float BackAndForthWeight { get; set; }
+	public float SecondsToTurn { get; set; }
+	public float DistFromOrigin { get; set; }
+	public IRoot? FxBehavior { get; set; }
+	public IRoot? Target { get; set; }
+	public IRoot? Parent { get; set; }
+	public List<IRoot?>? LocatorSet { get; set; }
+	public string? LocatorSetName { get; set; }
+	public int LocatorType { get; set; }
 }

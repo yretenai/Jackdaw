@@ -6,25 +6,25 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GpuParticleSystem : IRoot, IInitialize, INotify {
-	public float EmitTime { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public float UpdateTime { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public float SortTime { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public float RenderTime { get; set; } // Offset: 0, Size: 0, Type: Single, Id: 1, Class: 
-	public bool HasParticles { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public IRoot? Emit { get; set; } // Offset: 88, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? Update { get; set; } // Offset: 96, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? Render { get; set; } // Offset: 104, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? Clear { get; set; } // Offset: 112, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? SetDrawParameters { get; set; } // Offset: 120, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? SetSortParameters { get; set; } // Offset: 128, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? Sort { get; set; } // Offset: 136, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? SortStep { get; set; } // Offset: 144, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public IRoot? SortInner { get; set; } // Offset: 152, Size: 8, Type: Object, Id: 23, Class: Tr2Effect
-	public int MaxParticles { get; set; } // Offset: 304, Size: 4, Type: Int, Id: 23, Class: 
-	public bool EnableEmit { get; set; } // Offset: 337, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool EnableUpdate { get; set; } // Offset: 338, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool EnableSort { get; set; } // Offset: 339, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool Display { get; set; } // Offset: 340, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool UpdateVisibleCount { get; set; } // Offset: 712, Size: 1, Type: Boolean, Id: 3, Class: 
-	public int VisibleCount { get; set; } // Offset: 716, Size: 4, Type: Int, Id: 1, Class: 
+	public float EmitTime { get; set; }
+	public float UpdateTime { get; set; }
+	public float SortTime { get; set; }
+	public float RenderTime { get; set; }
+	public bool HasParticles { get; set; }
+	public IRoot? Emit { get; set; }
+	public IRoot? Update { get; set; }
+	public IRoot? Render { get; set; }
+	public IRoot? Clear { get; set; }
+	public IRoot? SetDrawParameters { get; set; }
+	public IRoot? SetSortParameters { get; set; }
+	public IRoot? Sort { get; set; }
+	public IRoot? SortStep { get; set; }
+	public IRoot? SortInner { get; set; }
+	public int MaxParticles { get; set; }
+	public bool EnableEmit { get; set; }
+	public bool EnableUpdate { get; set; }
+	public bool EnableSort { get; set; }
+	public bool Display { get; set; }
+	public bool UpdateVisibleCount { get; set; }
+	public int VisibleCount { get; set; }
 }

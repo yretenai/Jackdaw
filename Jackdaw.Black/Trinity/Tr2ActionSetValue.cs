@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionSetValue : IRoot, ITr2ControllerAction, INotify {
-	public bool IsExpressionValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public bool IsBindingValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public string? Path { get; set; } // Offset: 16, Size: 32, Type: String, Id: 23, Class: 
-	public IRoot? Destination { get; set; } // Offset: 48, Size: 8, Type: Object, Id: 23, Class: 
-	public string? Attribute { get; set; } // Offset: 56, Size: 32, Type: String, Id: 23, Class: 
-	public string? Value { get; set; } // Offset: 144, Size: 32, Type: String, Id: 23, Class: 
-	public bool DelayBinding { get; set; } // Offset: 240, Size: 1, Type: Boolean, Id: 23, Class: 
+	public bool IsExpressionValid { get; set; }
+	public bool IsBindingValid { get; set; }
+	public string? Path { get; set; }
+	public IRoot? Destination { get; set; }
+	public string? Attribute { get; set; }
+	public string? Value { get; set; }
+	public bool DelayBinding { get; set; }
 }

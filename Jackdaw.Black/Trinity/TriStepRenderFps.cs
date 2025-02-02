@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderFps : TriRenderStep {
-	public int DisplayX { get; set; } // Offset: 184, Size: 4, Type: Int, Id: 3, Class: 
-	public int DisplayY { get; set; } // Offset: 188, Size: 4, Type: Int, Id: 3, Class: 
-	public bool AlignRight { get; set; } // Offset: 192, Size: 1, Type: Boolean, Id: 3, Class: 
-	public bool AlignBottom { get; set; } // Offset: 193, Size: 1, Type: Boolean, Id: 3, Class: 
+	public int DisplayX { get; set; }
+	public int DisplayY { get; set; }
+	public bool AlignRight { get; set; }
+	public bool AlignBottom { get; set; }
 }

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullBooster : IRoot {
-	public bool AlwaysOn { get; set; } // Offset: 8, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool HasTrails { get; set; } // Offset: 9, Size: 1, Type: Boolean, Id: 19, Class: 
-	public List<IRoot?>? Items { get; set; } // Offset: 16, Size: 144, Type: Collection, Id: 17, Class: IList
+	public bool AlwaysOn { get; set; }
+	public bool HasTrails { get; set; }
+	public List<IRoot?>? Items { get; set; }
 }

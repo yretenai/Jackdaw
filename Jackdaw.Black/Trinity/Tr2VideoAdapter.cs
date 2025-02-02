@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2VideoAdapter : IRoot {
-	public string? DeviceIdentifier { get; set; } // Offset: 0, Size: 0, Type: String, Id: 1, Class: 
-	public int Index { get; set; } // Offset: 8, Size: 4, Type: Int, Id: 1, Class: 
-	public string? Driver { get; set; } // Offset: 16, Size: 32, Type: String, Id: 1, Class: 
-	[BlackUseNamePool]public string? Description { get; set; } // Offset: 48, Size: 32, Type: WString, Id: 1, Class: 
-	public string? DeviceName { get; set; } // Offset: 80, Size: 32, Type: String, Id: 1, Class: 
-	public long DriverVersion { get; set; } // Offset: 112, Size: 8, Type: Long, Id: 1, Class: 
-	public int VendorID { get; set; } // Offset: 120, Size: 4, Type: Int, Id: 1, Class: 
-	public int DeviceID { get; set; } // Offset: 124, Size: 4, Type: Int, Id: 1, Class: 
-	public int SubSystemID { get; set; } // Offset: 128, Size: 4, Type: Int, Id: 1, Class: 
-	public int Revision { get; set; } // Offset: 128, Size: 4, Type: Int, Id: 1, Class: 
+	public string? DeviceIdentifier { get; set; }
+	public int Index { get; set; }
+	public string? Driver { get; set; }
+	[BlackUseNamePool]public string? Description { get; set; }
+	public string? DeviceName { get; set; }
+	public long DriverVersion { get; set; }
+	public int VendorID { get; set; }
+	public int DeviceID { get; set; }
+	public int SubSystemID { get; set; }
+	public int Revision { get; set; }
 }

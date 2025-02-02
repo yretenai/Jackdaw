@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GpuStructuredBuffer : IRoot, INotify, IInitialize, ITr2GpuBuffer {
-	public bool IsValid { get; set; } // Offset: 0, Size: 0, Type: Boolean, Id: 1, Class: 
-	public int Count { get; set; } // Offset: 80, Size: 4, Type: Int, Id: 23, Class: 
-	public int Stride { get; set; } // Offset: 84, Size: 4, Type: Int, Id: 23, Class: 
-	public int CreationFlags { get; set; } // Offset: 88, Size: 4, Type: Int, Id: 23, Class: 
+	public bool IsValid { get; set; }
+	public int Count { get; set; }
+	public int Stride { get; set; }
+	public int CreationFlags { get; set; }
 }

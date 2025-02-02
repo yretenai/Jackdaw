@@ -219,7 +219,7 @@ internal class Program {
 
 				attribute = !string.IsNullOrEmpty(attribute) ? $"[{attribute}]" : string.Empty;
 
-				writer.WriteLine($"\t{attribute}public {fieldType} {fieldName} {{ get; set; }} // Offset: {field.Offset}, Size: {field.Size}, Type: {(BlueTypeId) field.Type}, Id: {field.TypeId}, Class: {field.ClassType}");
+				writer.WriteLine($"\t{attribute}public {fieldType} {fieldName} {{ get; set; }}");
 			}
 
 			writer.WriteLine("}");

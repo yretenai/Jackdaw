@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ScalarFader : IRoot {
-	public float Value { get; set; } // Offset: 8, Size: 4, Type: Single, Id: 3, Class: 
-	public float Fading { get; set; } // Offset: 12, Size: 4, Type: Single, Id: 3, Class: 
-	public float FadeTime { get; set; } // Offset: 16, Size: 4, Type: Single, Id: 1, Class: 
+	public float Value { get; set; }
+	public float Fading { get; set; }
+	public float FadeTime { get; set; }
 }

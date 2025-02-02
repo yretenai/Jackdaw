@@ -6,16 +6,16 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildRef : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, EveEntity {
-	public Vector3 Translation { get; set; } // Offset: 88, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Scaling { get; set; } // Offset: 100, Size: 12, Type: FloatArray, Id: 19, Class: 
-	public Vector3 Rotation { get; set; } // Offset: 112, Size: 16, Type: FloatArray, Id: 19, Class: Rotation
-	public Matrix4x4 LocalTransform { get; set; } // Offset: 128, Size: 64, Type: FloatArray, Id: 19, Class: Matrix
-	public Matrix4x4 WorldTransform { get; set; } // Offset: 192, Size: 64, Type: FloatArray, Id: 1, Class: Matrix
-	public bool StaticTransform { get; set; } // Offset: 256, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool UseSRT { get; set; } // Offset: 257, Size: 1, Type: Boolean, Id: 19, Class: 
-	public IRoot? Child { get; set; } // Offset: 264, Size: 8, Type: Object, Id: 1, Class: IEveSpaceObjectChild
-	public string? Name { get; set; } // Offset: 272, Size: 8, Type: UTFString, Id: 19, Class: 
-	public string? ResPath { get; set; } // Offset: 280, Size: 32, Type: String, Id: 23, Class: 
-	public bool LoadChildAutomatically { get; set; } // Offset: 312, Size: 1, Type: Boolean, Id: 19, Class: 
-	public bool Display { get; set; } // Offset: 313, Size: 1, Type: Boolean, Id: 23, Class: 
+	public Vector3 Translation { get; set; }
+	public Vector3 Scaling { get; set; }
+	public Vector3 Rotation { get; set; }
+	public Matrix4x4 LocalTransform { get; set; }
+	public Matrix4x4 WorldTransform { get; set; }
+	public bool StaticTransform { get; set; }
+	public bool UseSRT { get; set; }
+	public IRoot? Child { get; set; }
+	public string? Name { get; set; }
+	public string? ResPath { get; set; }
+	public bool LoadChildAutomatically { get; set; }
+	public bool Display { get; set; }
 }
