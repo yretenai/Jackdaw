@@ -8,6 +8,8 @@
 
 	<ItemGroup>
 		<ProjectReference Include="$(SolutionDir)\DragonLib\DragonLib\DragonLib.csproj"/>
+		<ProjectReference Include="..\Jackdaw.Black\Jackdaw.Black.csproj"/>
+		<ProjectReference Include="..\Jackdaw.Blue\Jackdaw.Blue.csproj"/>
 		<ProjectReference Include="..\Jackdaw.Structs\Jackdaw.Structs.csproj"/>
 		<ProjectReference Include="..\Knit\Knit.glTF\Knit.glTF.csproj"/>
 		<ProjectReference Include="..\Knit\Knit\Knit.csproj"/>

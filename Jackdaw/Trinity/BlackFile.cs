@@ -120,87 +120,44 @@ public class BlackFile {
 			return ReadArray(ref chunk, type, member);
 		}
 
-		switch (type.FullName) {
-			case "System.Boolean": {
-				var value = chunk[0] != 0;
+		if (type.IsEnum) {
+			var value = ReadValue(ref chunk, type.GetEnumUnderlyingType(), member);
+			return value == null ? Activator.CreateInstance(type) : Enum.ToObject(type, value);
+		}
+
+		if (type.IsPrimitive || type.IsValueType) {
+			object? value;
+
+			if (type == typeof(bool)) {
+				value = chunk[0] != 0;
 				chunk = chunk[1..];
 				return value;
 			}
 
-			case "System.Byte": {
-				var value = chunk[0];
-				chunk = chunk[1..];
-				return value;
-			}
-
-			case "System.SByte": {
-				var value = (sbyte) chunk[0];
-				chunk = chunk[1..];
-				return value;
-			}
-
-			case "System.Int16": {
-				var value = BinaryPrimitives.ReadInt16LittleEndian(chunk);
-				chunk = chunk[2..];
-				return value;
-			}
-
-			case "System.UInt16": {
-				var value = BinaryPrimitives.ReadUInt16LittleEndian(chunk);
-				chunk = chunk[2..];
-				return value;
-			}
-
-			case "System.Int32": {
-				var value = BinaryPrimitives.ReadInt32LittleEndian(chunk);
-				chunk = chunk[4..];
-				return value;
-			}
-
-			case "System.UInt32": {
-				var value = BinaryPrimitives.ReadUInt32LittleEndian(chunk);
-				chunk = chunk[4..];
-				return value;
-			}
-
-			case "System.Int64": {
-				var value = BinaryPrimitives.ReadInt64LittleEndian(chunk);
-				chunk = chunk[8..];
-				return value;
-			}
-
-			case "System.UInt64": {
-				var value = BinaryPrimitives.ReadUInt64LittleEndian(chunk);
-				chunk = chunk[8..];
-				return value;
-			}
-
-			case "System.Single": {
-				var value = BinaryPrimitives.ReadSingleLittleEndian(chunk);
-				chunk = chunk[4..];
-				return value;
-			}
-
-			case "System.Double": {
-				var value = BinaryPrimitives.ReadDoubleLittleEndian(chunk);
-				chunk = chunk[8..];
-				return value;
-			}
-
-			case "System.String": {
-				var pool = StringPool;
-				if (member.GetCustomAttribute<BlackUseNamePoolAttribute>() != null) {
-					pool = NamePool;
+			var size = Marshal.SizeOf(type);
+			unsafe {
+				fixed (byte* pin = chunk) {
+					value = Marshal.PtrToStructure((nint) pin, type);
 				}
-
-				var value = pool[BinaryPrimitives.ReadUInt16LittleEndian(chunk)];
-				chunk = chunk[2..];
-				return value;
 			}
+
+			chunk = chunk[size..];
+			return value;
+		}
+
+		if (type == typeof(string)) {
+			var pool = StringPool;
+			if (member.GetCustomAttribute<BlackUseNamePoolAttribute>() != null) {
+				pool = NamePool;
+			}
+
+			var value = pool[BinaryPrimitives.ReadUInt16LittleEndian(chunk)];
+			chunk = chunk[2..];
+			return value;
 		}
 
 		if (type.IsClass || type.IsValueType || type.IsInterface) {
-			return ReadObject(ref chunk, member.GetCustomAttribute<BlackPureRefAttribute>() == null);
+			return ReadObject(ref chunk, member.GetCustomAttribute<BlackArrayAttribute>() == null);
 		}
 
 		throw new CatastrophicBlueException($"Unknown type {type.FullName}");
@@ -209,30 +166,20 @@ public class BlackFile {
 	private object ReadArray(ref Span<byte> chunk, Type type, MemberInfo member) {
 		ArgumentNullException.ThrowIfNull(member);
 
-		var shouldReadSize = true;
-		var size = 0;
-		var attr = member.GetCustomAttribute<BlackArraySizeAttribute>();
-		if (attr != null) {
-			size = attr.Size;
-			shouldReadSize = false;
-		}
-
 		var elementType = type.GetElementType();
 		if (elementType == null) {
 			throw new CatastrophicBlueException($"Failed to get element type for array {type.FullName}");
 		}
 
-		if (shouldReadSize) {
-			size = BinaryPrimitives.ReadInt32LittleEndian(chunk);
-			chunk = chunk[4..];
-		}
+		var size = BinaryPrimitives.ReadInt32LittleEndian(chunk);
+		chunk = chunk[4..];
 
-		var pure = member.GetCustomAttribute<BlackPureRefAttribute>();
+		var pure = member.GetCustomAttribute<BlackArrayAttribute>();
 		if (pure is { Size: > 0 }) {
 			size /= pure.Size;
 		}
 
-		if (member.GetCustomAttribute<BlackPureRefAttribute>() != null && type == typeof(byte[][])) {
+		if (member.GetCustomAttribute<BlackArrayAttribute>() != null && type == typeof(byte[][])) {
 			var elementSize = BinaryPrimitives.ReadInt16LittleEndian(chunk);
 			chunk = chunk[2..];
 			var array = new byte[size][];
