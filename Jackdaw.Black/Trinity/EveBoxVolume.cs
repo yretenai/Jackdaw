@@ -10,6 +10,6 @@ public class EveBoxVolume : IRoot, IEveVolume, INotify, IInitialize {
 	public Vector3 Position { get; set; }
 	public Vector3 Scaling { get; set; }
 	public Vector3 InnerScaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public bool DebugShowIntersection { get; set; }
 }

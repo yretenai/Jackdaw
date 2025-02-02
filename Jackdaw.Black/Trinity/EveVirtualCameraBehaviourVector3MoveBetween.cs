@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveVirtualCameraBehaviourVector3MoveBetween : EveVirtualCameraBehaviourVector3Base, INotify {
 	public Vector3 Start { get; set; }
 	public Vector3 End { get; set; }
-	public IRoot? InterpolationCurve { get; set; }
+	public object? InterpolationCurve { get; set; }
 	public bool Proportional { get; set; }
 	public bool World { get; set; }
 }

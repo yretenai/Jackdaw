@@ -7,19 +7,19 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SpotLight : IRoot, Tr2Light, IInitialize, INotify {
 	public Vector3 Position { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 	public float Brightness { get; set; }
 	public float NoiseAmplitude { get; set; }
 	public float NoiseFrequency { get; set; }
 	public int NoiseOctaves { get; set; }
 	public float Radius { get; set; }
 	public float InnerRadius { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public float OuterAngle { get; set; }
 	public float InnerAngle { get; set; }
 	public int BoneIndex { get; set; }
 	public short Flags { get; set; }
 	public string? Name { get; set; }
-	public IRoot? LightProfile { get; set; }
+	public object? LightProfile { get; set; }
 	[BlackUseNamePool]public string? LightProfilePath { get; set; }
 }

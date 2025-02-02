@@ -16,12 +16,12 @@ public class EveChildExplosion : EveChildContainer, EveEntity, IEveSpaceObjectCh
 	public float LocalDuration { get; set; }
 	public float GlobalDuration { get; set; }
 	public float TotalDuration { get; set; }
-	public IRoot? LocalExplosion { get; set; }
+	public object? LocalExplosion { get; set; }
 	public List<IRoot?>? LocalExplosions { get; set; }
-	public IRoot? LocalExplosionShared { get; set; }
-	public IRoot? GlobalExplosion { get; set; }
+	public object? LocalExplosionShared { get; set; }
+	public object? GlobalExplosion { get; set; }
 	public List<IRoot?>? GlobalExplosions { get; set; }
-	public IRoot? GeneratedGlobalExplosions { get; set; }
+	public object? GeneratedGlobalExplosions { get; set; }
 	public float PlayTime { get; set; }
 	public float GlobalExplosionTime { get; set; }
 	public Vector3 GlobalScaling { get; set; }

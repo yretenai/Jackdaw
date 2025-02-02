@@ -11,5 +11,5 @@ public class Tr2CurveVector3Lerp : IRoot, ITriFunction, ITriVectorFunction {
 	public Vector3 CurrentValue { get; set; }
 	public float CurveStartTime { get; set; }
 	public int StartInterpolation { get; set; }
-	public IRoot? Curve { get; set; }
+	public object? Curve { get; set; }
 }

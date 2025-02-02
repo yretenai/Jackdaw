@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriTorque : IRoot {
 	public float Time { get; set; }
-	public Vector3 Rot0 { get; set; }
+	public Vector4 Rot0 { get; set; }
 	public Vector3 Omega0 { get; set; }
 	public Vector3 Torque { get; set; }
 }

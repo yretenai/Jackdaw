@@ -10,13 +10,13 @@ public class EveSOFDataGenericHullDamage : IRoot {
 	public float HullParticleInnerAngle { get; set; }
 	public float HullParticleAngle { get; set; }
 	public float HullParticleColorMidpoint { get; set; }
-	public Vector3 HullParticleMinMaxSpeed { get; set; }
-	public Vector3 HullParticleMinMaxLifeTime { get; set; }
-	public Vector3 HullParticleSizes { get; set; }
-	public Vector3 HullParticleColor0 { get; set; }
-	public Vector3 HullParticleColor1 { get; set; }
-	public Vector3 HullParticleColor2 { get; set; }
-	public Vector3 HullParticleColor3 { get; set; }
+	public Vector2 HullParticleMinMaxSpeed { get; set; }
+	public Vector2 HullParticleMinMaxLifeTime { get; set; }
+	public Vector4 HullParticleSizes { get; set; }
+	public Vector4 HullParticleColor0 { get; set; }
+	public Vector4 HullParticleColor1 { get; set; }
+	public Vector4 HullParticleColor2 { get; set; }
+	public Vector4 HullParticleColor3 { get; set; }
 	public int HullParticleTextureIndex { get; set; }
 	public float HullParticleVelocityStretchRotation { get; set; }
 	public float HullParticleDrag { get; set; }

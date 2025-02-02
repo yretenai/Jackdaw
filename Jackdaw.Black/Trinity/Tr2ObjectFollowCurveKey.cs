@@ -13,7 +13,7 @@ public class Tr2ObjectFollowCurveKey : IRoot, ITr2FollowCurveKey, INotify, IInit
 	public Vector3 RotatedLeftTangent { get; set; }
 	public Vector3 RotatedRightTangent { get; set; }
 	public int Interpolation { get; set; }
-	public IRoot? Object { get; set; }
+	public object? Object { get; set; }
 	public string? OffsetLocatorName { get; set; }
 	public Vector3 Offset { get; set; }
 	public int RotationSetting { get; set; }

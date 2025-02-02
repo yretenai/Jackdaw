@@ -9,6 +9,6 @@ public class EveVirtualCameraBehaviourVector3Shake : EveVirtualCameraBehaviourVe
 	public float PerlineScale { get; set; }
 	public int Octaves { get; set; }
 	public Vector3 Magnitude { get; set; }
-	public IRoot? MagnitudeCurve { get; set; }
+	public object? MagnitudeCurve { get; set; }
 	public bool ScaleByView { get; set; }
 }

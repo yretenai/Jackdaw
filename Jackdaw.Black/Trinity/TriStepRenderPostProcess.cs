@@ -6,25 +6,25 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderPostProcess : TriRenderStep, INotify {
-	public IRoot? RenderTarget { get; set; }
-	public IRoot? BloomHighPassFilter { get; set; }
-	public IRoot? GodrayEffect { get; set; }
-	public IRoot? SignalLossEffect { get; set; }
-	public IRoot? DynamicExposureCreateHistogramShader { get; set; }
-	public IRoot? DynamicExposureMergeHistogramShader { get; set; }
-	public IRoot? DynamicExposureMeasureExposureShader { get; set; }
-	public IRoot? DepthOfFieldCoCShader { get; set; }
-	public IRoot? DepthOfFieldBokehBlurShader { get; set; }
-	public IRoot? DepthOfFieldBokehFillShader { get; set; }
-	public IRoot? FsrEasuShader { get; set; }
-	public IRoot? FsrRCASShader { get; set; }
-	public IRoot? FogColorEffect { get; set; }
-	public IRoot? FogCompositeEffect { get; set; }
-	public IRoot? TaaEffect { get; set; }
-	public IRoot? AccumulationBuffer0 { get; set; }
-	public IRoot? AccumulationBuffer1 { get; set; }
-	public IRoot? TonemappingEffect { get; set; }
-	public IRoot? Scene { get; set; }
-	public IRoot? RenderInfo { get; set; }
+	public object? RenderTarget { get; set; }
+	public object? BloomHighPassFilter { get; set; }
+	public object? GodrayEffect { get; set; }
+	public object? SignalLossEffect { get; set; }
+	public object? DynamicExposureCreateHistogramShader { get; set; }
+	public object? DynamicExposureMergeHistogramShader { get; set; }
+	public object? DynamicExposureMeasureExposureShader { get; set; }
+	public object? DepthOfFieldCoCShader { get; set; }
+	public object? DepthOfFieldBokehBlurShader { get; set; }
+	public object? DepthOfFieldBokehFillShader { get; set; }
+	public object? FsrEasuShader { get; set; }
+	public object? FsrRCASShader { get; set; }
+	public object? FogColorEffect { get; set; }
+	public object? FogCompositeEffect { get; set; }
+	public object? TaaEffect { get; set; }
+	public object? AccumulationBuffer0 { get; set; }
+	public object? AccumulationBuffer1 { get; set; }
+	public object? TonemappingEffect { get; set; }
+	public object? Scene { get; set; }
+	public object? RenderInfo { get; set; }
 	public int Quality { get; set; }
 }

@@ -14,8 +14,8 @@ public class EveChildBulletStorm : IRoot, IEveSpaceObjectChild, ITr2Renderable, 
 	public float Range { get; set; }
 	public float Speed { get; set; }
 	public float ClipSphere { get; set; }
-	public IRoot? SourceObject { get; set; }
+	public object? SourceObject { get; set; }
 	public float SourceRadius { get; set; }
 	public List<IRoot?>? TargetObjects { get; set; }
-	public IRoot? Effect { get; set; }
+	public object? Effect { get; set; }
 }

@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullBannerSetItem : IRoot {
-	public IRoot? Scaling { get; set; }
+	public Vector3 Scaling { get; set; }
 	public float AngleX { get; set; }
 	public float AngleY { get; set; }
 	public string? Name { get; set; }
 	public int Usage { get; set; }
 	public Vector3 Position { get; set; }
-	public Vector3 Rotation { get; set; }
-	public IRoot? Light { get; set; }
+	public Vector4 Rotation { get; set; }
+	public object? Light { get; set; }
 	public int BoneIndex { get; set; }
 	public bool MaintainAspectRatio { get; set; }
 }

@@ -9,7 +9,7 @@ public class Tr2Effect : IRoot, Tr2Material, INotify, IInitialize, IListNotify {
 	public string? Name { get; set; }
 	public string? EffectFilePath { get; set; }
 	public string? ActualEffectFilePath { get; set; }
-	public IRoot? EffectResource { get; set; }
+	public object? EffectResource { get; set; }
 	public List<IRoot?>? Parameters { get; set; }
 	public List<IRoot?>? Resources { get; set; }
 	[BlackArray]public byte[][]? ConstParameters { get; set; }

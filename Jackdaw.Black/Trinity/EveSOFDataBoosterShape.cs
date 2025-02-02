@@ -8,8 +8,8 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveSOFDataBoosterShape : IRoot {
 	public float NoiseFunction { get; set; }
 	public float NoiseSpeed { get; set; }
-	public Vector3 NoiseAmplitureStart { get; set; }
-	public Vector3 NoiseAmplitureEnd { get; set; }
-	public Vector3 NoiseFrequency { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 NoiseAmplitureStart { get; set; }
+	public Vector4 NoiseAmplitureEnd { get; set; }
+	public Vector4 NoiseFrequency { get; set; }
+	public Vector4 Color { get; set; }
 }

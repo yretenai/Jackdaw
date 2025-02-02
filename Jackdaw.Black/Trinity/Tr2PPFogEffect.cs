@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPFogEffect : Tr2PPEffect {
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 	public float NebulaInfluence { get; set; }
 	public float NebulaBlur { get; set; }
 	public float OriginalBrightenOnly { get; set; }
@@ -31,6 +31,6 @@ public class Tr2PPFogEffect : Tr2PPEffect {
 	public float BlendAmount2 { get; set; }
 	public float BlendPower2 { get; set; }
 	public Vector3 AreaSize { get; set; }
-	public Vector3 AreaScale { get; set; }
+	public Vector2 AreaScale { get; set; }
 	public Vector3 AreaCenter { get; set; }
 }

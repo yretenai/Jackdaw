@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ExternalParameter : IRoot, IInitialize, INotify {
 	public string? Name { get; set; }
-	public IRoot? DestinationObject { get; set; }
+	public object? DestinationObject { get; set; }
 	public string? DestinationAttribute { get; set; }
 	public bool Valid { get; set; }
 }

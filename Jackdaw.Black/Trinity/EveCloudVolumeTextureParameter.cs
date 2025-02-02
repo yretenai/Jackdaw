@@ -7,6 +7,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveCloudVolumeTextureParameter : IRoot, ITriEffectResourceParameter {
 	public string? Name { get; set; }
-	public IRoot? Volume { get; set; }
+	public object? Volume { get; set; }
 	public bool IsUsedByEffect { get; set; }
 }

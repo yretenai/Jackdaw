@@ -7,13 +7,13 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriValueBinding : IRoot, ITr2ValueBinding, INotify {
 	public bool IsValid { get; set; }
-	public IRoot? SourceObject { get; set; }
-	public IRoot? DestinationObject { get; set; }
+	public object? SourceObject { get; set; }
+	public object? DestinationObject { get; set; }
 	public string? Name { get; set; }
 	public string? SourceAttribute { get; set; }
 	public string? DestinationAttribute { get; set; }
 	public bool IsWeak { get; set; }
 	public bool IsEnabled { get; set; }
 	public float Scale { get; set; }
-	public Vector3 Offset { get; set; }
+	public Vector4 Offset { get; set; }
 }

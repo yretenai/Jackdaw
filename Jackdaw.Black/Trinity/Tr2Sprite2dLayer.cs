@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dLayer : Tr2Sprite2dContainer {
-	public IRoot? TextureSecondary { get; set; }
-	public Vector3 BackgroundColor { get; set; }
-	public Vector3 Color { get; set; }
+	public object? TextureSecondary { get; set; }
+	public Vector4 BackgroundColor { get; set; }
+	public Vector4 Color { get; set; }
 	public bool ClearBackground { get; set; }
 	public int BlendMode { get; set; }
 	public int SpriteEffect { get; set; }

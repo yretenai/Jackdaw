@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2CurveQuaternion : IRoot, ITriQuaternionFunction, ITriFunction, ITriCurveLength {
 	[BlackArray]public byte[][]? Keys { get; set; }
 	public string? Name { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector4 CurrentValue { get; set; }
 	public int ExtrapolationBefore { get; set; }
 	public int ExtrapolationAfter { get; set; }
 }

@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveMultiEffectParameter : IRoot, INotify {
 	public bool IsValid { get; set; }
 	public string? Name { get; set; }
-	public IRoot? Object { get; set; }
+	public object? Object { get; set; }
 	public int Type { get; set; }
 }

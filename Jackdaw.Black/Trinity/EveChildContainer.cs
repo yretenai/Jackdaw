@@ -11,7 +11,7 @@ public class EveChildContainer : IRoot, EveEntity, IEveSpaceObjectChild, ITr2Cur
 	public bool IsUpdating { get; set; }
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
@@ -28,9 +28,9 @@ public class EveChildContainer : IRoot, EveEntity, IEveSpaceObjectChild, ITr2Cur
 	public bool Display { get; set; }
 	public int DisplayFilter { get; set; }
 	public bool AlwaysOn { get; set; }
-	public IRoot? InheritProperties { get; set; }
+	public object? InheritProperties { get; set; }
 	public int Origin { get; set; }
 	public List<IRoot?>? FxAttributes { get; set; }
-	public IRoot? AnimationOwner { get; set; }
+	public object? AnimationOwner { get; set; }
 	public List<IRoot?>? Attachments { get; set; }
 }

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class WodPlaceableRes : IRoot {
-	public IRoot? VisualModel { get; set; }
+	public object? VisualModel { get; set; }
 	public float NearFadeDistance { get; set; }
 	public float FarFadeDistance { get; set; }
 	public bool IsShadowCaster { get; set; }

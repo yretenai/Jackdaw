@@ -15,5 +15,5 @@ public class EveMeshOverlayEffect : IRoot, IInitialize, IListNotify, ITr2Control
 	public List<IRoot?>? AdditiveEffects { get; set; }
 	public List<IRoot?>? DistortionEffects { get; set; }
 	public List<IRoot?>? Controllers { get; set; }
-	public IRoot? CurveSet { get; set; }
+	public object? CurveSet { get; set; }
 }

@@ -34,8 +34,8 @@ public class EveTurretFiringFX : IRoot, IInitialize, INotify, ITr2ControllerOwne
 	public float FiringDelay11 { get; set; }
 	public float FiringDelay12 { get; set; }
 	public List<IRoot?>? Stretch { get; set; }
-	public IRoot? StartCurveSet { get; set; }
-	public IRoot? StopCurveSet { get; set; }
-	public IRoot? SourceObserver { get; set; }
-	public IRoot? DestinationObserver { get; set; }
+	public object? StartCurveSet { get; set; }
+	public object? StopCurveSet { get; set; }
+	public object? SourceObserver { get; set; }
+	public object? DestinationObserver { get; set; }
 }

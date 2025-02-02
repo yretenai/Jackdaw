@@ -7,17 +7,17 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildLineSet : IRoot, IEveSpaceObjectChild, IInitialize, INotify, ITr2Renderable {
 	public Vector3 Translation { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool AlwaysOn { get; set; }
-	public IRoot? LineSet { get; set; }
+	public object? LineSet { get; set; }
 	public int RenderType { get; set; }
-	public Vector3 BaseColor { get; set; }
-	public Vector3 AnimColor { get; set; }
+	public Vector4 BaseColor { get; set; }
+	public Vector4 AnimColor { get; set; }
 	public float Brightness { get; set; }
 	public bool AdditiveBatches { get; set; }
-	public IRoot? Mesh { get; set; }
+	public object? Mesh { get; set; }
 	public float ScrollSpeed { get; set; }
 	public float CurrentScreenSize { get; set; }
 	public float MinScreenSize { get; set; }

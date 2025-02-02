@@ -11,7 +11,7 @@ public class EveBoosterSet2Renderable : IRoot, ITr2Renderable {
 	public float BoosterLOD { get; set; }
 	public float TrailsLOD { get; set; }
 	public float ParentSpeed { get; set; }
-	public Vector3 ParentRotation { get; set; }
+	public Vector4 ParentRotation { get; set; }
 	public float OverallIntensity { get; set; }
 	public float TrailIntensity { get; set; }
 	public float TrailsTotalLength { get; set; }

@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTacticalOverlay : IRoot, IEveSpaceObject2, IInitialize {
-	public IRoot? ConnectorEffect { get; set; }
-	public IRoot? AnchorEffect { get; set; }
-	public IRoot? VelocityEffect { get; set; }
+	public object? ConnectorEffect { get; set; }
+	public object? AnchorEffect { get; set; }
+	public object? VelocityEffect { get; set; }
 	public float SegmentsLow { get; set; }
 	public float SegmentsMedium { get; set; }
 	public float SegmentsHigh { get; set; }
@@ -25,7 +25,7 @@ public class EveTacticalOverlay : IRoot, IEveSpaceObject2, IInitialize {
 	public float RangeMultiplier { get; set; }
 	public float SourceRadius { get; set; }
 	public List<IRoot?>? TrackObjects { get; set; }
-	public IRoot? InterestObject { get; set; }
-	public IRoot? TranslationCurve { get; set; }
+	public object? InterestObject { get; set; }
+	public object? TranslationCurve { get; set; }
 	public Vector3 WorldPosition { get; set; }
 }

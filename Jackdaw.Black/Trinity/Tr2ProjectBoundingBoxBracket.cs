@@ -7,14 +7,14 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ProjectBoundingBoxBracket : IRoot, ITriFunction {
 	[BlackUseNamePool]public string? Name { get; set; }
-	public IRoot? Object { get; set; }
+	public object? Object { get; set; }
 	public bool IntegerCoordinates { get; set; }
 	public float MinProjectedWidth { get; set; }
 	public float MinProjectedHeight { get; set; }
 	public float MaxProjectedWidth { get; set; }
 	public float MaxProjectedHeight { get; set; }
-	public IRoot? Parent { get; set; }
-	public IRoot? Bracket { get; set; }
+	public object? Parent { get; set; }
+	public object? Bracket { get; set; }
 	public float ProjectedX { get; set; }
 	public float ProjectedY { get; set; }
 	public float ProjectedZ { get; set; }

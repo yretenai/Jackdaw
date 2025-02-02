@@ -7,6 +7,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dLineTraceVertex : IRoot {
 	public string? Name { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector2 Position { get; set; }
+	public Vector4 Color { get; set; }
 }

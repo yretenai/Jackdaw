@@ -10,7 +10,7 @@ public class Tr2DynamicEmitter : IRoot, ITr2GenericEmitter, INotify, IInitialize
 	public string? Name { get; set; }
 	public List<IRoot?>? Generators { get; set; }
 	public bool IsValid { get; set; }
-	public IRoot? ParticleSystem { get; set; }
+	public object? ParticleSystem { get; set; }
 	public float Rate { get; set; }
 	public int MaxParticles { get; set; }
 }

@@ -8,5 +8,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2ActionAnimateCurveSet : IRoot, ITr2ControllerAction, ITr2Updateable, INotify {
 	public bool IsExpressionValid { get; set; }
 	public string? Value { get; set; }
-	public IRoot? CurveSet { get; set; }
+	public object? CurveSet { get; set; }
 }

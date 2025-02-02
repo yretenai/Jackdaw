@@ -13,7 +13,7 @@ public class EveSpriteSetItem : IRoot {
 	public float MinScale { get; set; }
 	public float MaxScale { get; set; }
 	public float Falloff { get; set; }
-	public Vector3 Color { get; set; }
-	public Vector3 WarpColor { get; set; }
+	public Vector4 Color { get; set; }
+	public Vector4 WarpColor { get; set; }
 	public int BoneIndex { get; set; }
 }

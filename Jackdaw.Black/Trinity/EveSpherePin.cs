@@ -8,20 +8,20 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveSpherePin : IRoot, IInitialize, ITr2Renderable, IEveTransform, IEveSpaceObject2, ITr2Pickable, INotify {
 	public string? Name { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Vector3 Translation { get; set; }
 	public Vector3 CenterNormal { get; set; }
 	public float PinMaxRadius { get; set; }
 	public float PinRadius { get; set; }
 	public float PinRotation { get; set; }
-	public Vector3 PinColor { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 PinColor { get; set; }
+	public Vector4 Color { get; set; }
 	public float PinAlphaThreshold { get; set; }
-	public Vector3 UvAtlasScaleOffset { get; set; }
+	public Vector4 UvAtlasScaleOffset { get; set; }
 	public string? PinEffectResPath { get; set; }
-	public IRoot? PinEffect { get; set; }
+	public object? PinEffect { get; set; }
 	public bool EnablePicking { get; set; }
-	public IRoot? PickEffect { get; set; }
+	public object? PickEffect { get; set; }
 	public string? GeometryResPath { get; set; }
 	public bool Display { get; set; }
 	public float SortValueMultiplier { get; set; }

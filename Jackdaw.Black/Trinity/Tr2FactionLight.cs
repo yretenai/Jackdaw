@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2FactionLight : IRoot, IEveInheritPropertiesOwner, Tr2Light, IInitialize, INotify {
-	public IRoot? SelectedColor { get; set; }
+	public Vector4 SelectedColor { get; set; }
 	public Vector3 Position { get; set; }
 	public float Brightness { get; set; }
 	public float NoiseAmplitude { get; set; }
@@ -14,13 +14,13 @@ public class Tr2FactionLight : IRoot, IEveInheritPropertiesOwner, Tr2Light, IIni
 	public int NoiseOctaves { get; set; }
 	public float Radius { get; set; }
 	public float InnerRadius { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public float OuterAngle { get; set; }
 	public float InnerAngle { get; set; }
 	public int BoneIndex { get; set; }
 	public short Flags { get; set; }
 	public string? Name { get; set; }
-	public IRoot? LightProfile { get; set; }
+	public object? LightProfile { get; set; }
 	[BlackUseNamePool]public string? LightProfilePath { get; set; }
 	public float Saturation { get; set; }
 	public bool IsSpotlight { get; set; }

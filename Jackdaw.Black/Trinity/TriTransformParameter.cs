@@ -10,7 +10,7 @@ public class TriTransformParameter : IRoot, ITriEffectParameter {
 	public int TransformBase { get; set; }
 	public Vector3 Scaling { get; set; }
 	public Vector3 RotationCenter { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Vector3 Translation { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 }

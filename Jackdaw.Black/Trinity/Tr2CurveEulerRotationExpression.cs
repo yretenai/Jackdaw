@@ -11,7 +11,7 @@ public class Tr2CurveEulerRotationExpression : IRoot, ITriQuaternionFunction, IT
 	public string? ExpressionRoll { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Inputs { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector4 CurrentValue { get; set; }
 	public float Input1 { get; set; }
 	public float Input2 { get; set; }
 	public float Input3 { get; set; }

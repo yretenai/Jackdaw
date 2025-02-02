@@ -6,14 +6,14 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveConnector : IRoot {
-	public IRoot? SourceObject { get; set; }
-	public IRoot? DestObject { get; set; }
+	public object? SourceObject { get; set; }
+	public object? DestObject { get; set; }
 	public int Type { get; set; }
 	public Vector3 SourcePosition { get; set; }
 	public Vector3 DestPosition { get; set; }
 	public Vector3 PlaneNormal { get; set; }
-	public Vector3 Color { get; set; }
-	public Vector3 AnimationColor { get; set; }
+	public Vector4 Color { get; set; }
+	public Vector4 AnimationColor { get; set; }
 	public float AnimationSpeed { get; set; }
 	public float AnimationScale { get; set; }
 	public float LineWidth { get; set; }

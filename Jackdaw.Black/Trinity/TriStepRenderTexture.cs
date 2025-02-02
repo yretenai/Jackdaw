@@ -6,11 +6,11 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderTexture : TriRenderStep {
-	public IRoot? Texture { get; set; }
-	public IRoot? RenderTarget { get; set; }
-	public IRoot? DepthStencil { get; set; }
-	public Vector3 TlTexCoord { get; set; }
-	public Vector3 BrTexCoord { get; set; }
-	public Vector3 TextureSize { get; set; }
+	public object? Texture { get; set; }
+	public object? RenderTarget { get; set; }
+	public object? DepthStencil { get; set; }
+	public Vector2 TlTexCoord { get; set; }
+	public Vector2 BrTexCoord { get; set; }
+	public Vector2 TextureSize { get; set; }
 	public int FailClearColor { get; set; }
 }

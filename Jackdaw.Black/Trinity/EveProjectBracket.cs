@@ -7,9 +7,9 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveProjectBracket : IRoot, ITriFunction {
 	[BlackUseNamePool]public string? Name { get; set; }
-	public IRoot? TrackBall { get; set; }
+	public object? TrackBall { get; set; }
 	public float BallTrackingScaling { get; set; }
-	public IRoot? TrackTransform { get; set; }
+	public object? TrackTransform { get; set; }
 	public Vector3 TrackPosition { get; set; }
 	public bool Dock { get; set; }
 	public bool IsVisible { get; set; }
@@ -24,9 +24,9 @@ public class EveProjectBracket : IRoot, ITriFunction {
 	public float CameraDistance { get; set; }
 	public float OffsetX { get; set; }
 	public float OffsetY { get; set; }
-	public IRoot? Parent { get; set; }
-	public IRoot? Bracket { get; set; }
-	public IRoot? BracketIcon { get; set; }
-	public Vector3 ProjectedPosition { get; set; }
-	public Vector3 RawProjectedPosition { get; set; }
+	public object? Parent { get; set; }
+	public object? Bracket { get; set; }
+	public object? BracketIcon { get; set; }
+	public Vector2 ProjectedPosition { get; set; }
+	public Vector2 RawProjectedPosition { get; set; }
 }

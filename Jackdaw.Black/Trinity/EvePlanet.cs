@@ -9,7 +9,7 @@ public class EvePlanet : EveEffectRoot2, IEveSpaceObject2, ITr2SecondaryLightSou
 	public float EstimatedPixelDiameter { get; set; }
 	public float Radius { get; set; }
 	public float MinScreenSize { get; set; }
-	public Vector3 AlbedoColor { get; set; }
-	public Vector3 EmissiveColor { get; set; }
-	public IRoot? ZOnlyModel { get; set; }
+	public Vector4 AlbedoColor { get; set; }
+	public Vector4 EmissiveColor { get; set; }
+	public object? ZOnlyModel { get; set; }
 }

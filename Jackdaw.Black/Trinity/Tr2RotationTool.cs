@@ -7,5 +7,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2RotationTool : Tr2ManipulationTool {
 	public float Precision { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 }

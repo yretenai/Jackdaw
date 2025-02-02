@@ -8,9 +8,9 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveLineSet : IRoot, IInitialize, ITr2Renderable, IEveTransform, IEveSpaceObject2 {
 	public string? Name { get; set; }
 	public bool Display { get; set; }
-	public IRoot? Effect { get; set; }
+	public object? Effect { get; set; }
 	public bool RenderTransparent { get; set; }
-	public IRoot? TranslationCurve { get; set; }
-	public IRoot? RotationCurve { get; set; }
+	public object? TranslationCurve { get; set; }
+	public object? RotationCurve { get; set; }
 	public Vector3 Scaling { get; set; }
 }

@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullLightSetSpotLight : EveSOFDataHullLightSetItem {
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public float InnerAngle { get; set; }
 	public float OuterAngle { get; set; }
 }

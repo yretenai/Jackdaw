@@ -13,20 +13,20 @@ public class Tr2Sprite2dScene : IRoot, ITr2Scene, ITr2Updateable, INotify {
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? Background { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
-	public IRoot? Ubershader2d { get; set; }
-	public IRoot? Ubershader3d { get; set; }
+	public object? Ubershader2d { get; set; }
+	public object? Ubershader3d { get; set; }
 	public bool DefaultTextureUpdates { get; set; }
 	public Vector3 Translation { get; set; }
 	public float DisplayX { get; set; }
 	public float DisplayY { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public float DepthMin { get; set; }
 	public float DepthMax { get; set; }
 	public float DisplayWidth { get; set; }
 	public float DisplayHeight { get; set; }
-	public Vector3 BackgroundColor { get; set; }
-	public Vector3 LastPickPos { get; set; }
+	public Vector4 BackgroundColor { get; set; }
+	public Vector2 LastPickPos { get; set; }
 	public int PickState { get; set; }
 	public bool DrawWireFrame { get; set; }
 	public bool IsFullscreen { get; set; }

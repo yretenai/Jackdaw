@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PPGodRaysEffect : Tr2PPEffect {
-	public Vector3 GodRayColor { get; set; }
+	public Vector4 GodRayColor { get; set; }
 	public float Intensity { get; set; }
 	public string? NoiseTexturePath { get; set; }
 }

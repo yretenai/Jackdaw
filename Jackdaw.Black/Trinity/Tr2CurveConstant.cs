@@ -7,6 +7,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveConstant : IRoot, ITriScalarFunction, ITriVectorFunction, ITriQuaternionFunction, ITriColorFunction, ITriFunction {
 	public string? Name { get; set; }
-	public Vector3 CurrentValue { get; set; }
-	public Vector3 Value { get; set; }
+	public Vector4 CurrentValue { get; set; }
+	public Vector4 Value { get; set; }
 }

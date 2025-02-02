@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2Transform : IRoot, ITr2Renderable {
 	public string? Name { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Vector3 Translation { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
@@ -18,7 +18,7 @@ public class Tr2Transform : IRoot, ITr2Renderable {
 	public bool Update { get; set; }
 	public float DistanceBasedScaleArg1 { get; set; }
 	public float DistanceBasedScaleArg2 { get; set; }
-	public IRoot? Mesh { get; set; }
+	public object? Mesh { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public float SortValueMultiplier { get; set; }
 }

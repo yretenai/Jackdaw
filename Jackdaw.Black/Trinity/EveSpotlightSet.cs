@@ -11,6 +11,6 @@ public class EveSpotlightSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
 	public string? Name { get; set; }
 	public float Intensity { get; set; }
 	public List<IRoot?>? SpotlightItems { get; set; }
-	public IRoot? ConeEffect { get; set; }
-	public IRoot? GlowEffect { get; set; }
+	public object? ConeEffect { get; set; }
+	public object? GlowEffect { get; set; }
 }

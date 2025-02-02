@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ParticleTurbulenceForce : IRoot, ITr2ParticleForce {
 	public Vector3 Amplitude { get; set; }
-	public Vector3 Frequency { get; set; }
+	public Vector4 Frequency { get; set; }
 	public int NoiseLevel { get; set; }
 	public float NoiseRatio { get; set; }
 }

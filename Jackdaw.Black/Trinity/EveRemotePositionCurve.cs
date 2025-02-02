@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveRemotePositionCurve : IRoot, ITriVectorFunction {
-	public IRoot? StartPositionCurve { get; set; }
+	public object? StartPositionCurve { get; set; }
 	public Vector3 Value { get; set; }
 	public Vector3 OffsetDir1 { get; set; }
 	public Vector3 OffsetDir2 { get; set; }

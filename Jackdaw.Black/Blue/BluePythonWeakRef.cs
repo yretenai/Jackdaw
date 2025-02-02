@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BluePythonWeakRef : IRoot {
-	public IRoot? Object { get; set; }
+	public object? Object { get; set; }
 }

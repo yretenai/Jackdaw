@@ -11,5 +11,5 @@ public class EveSceneStaticParticles : IRoot, IInitialize {
 	public long MaxParticleCount { get; set; }
 	public float ClusterParticleDensity { get; set; }
 	public float ClusterParticleDensityAdjust { get; set; }
-	public IRoot? Transform { get; set; }
+	public object? Transform { get; set; }
 }

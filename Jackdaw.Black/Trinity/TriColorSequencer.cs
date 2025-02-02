@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class TriColorSequencer : IRoot, ITriFunction, ITriColorFunction, ITriCurveLength {
 	[BlackUseNamePool]public string? Name { get; set; }
 	public long Start { get; set; }
-	public Vector3 Value { get; set; }
+	public Vector4 Value { get; set; }
 	public int Operator { get; set; }
 	public List<IRoot?>? Functions { get; set; }
 }

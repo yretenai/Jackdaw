@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2AudioStretchBase : IRoot, IInitialize, ITr2DebugRenderable, ITr2Audio {
-	public IRoot? SourceEmitter { get; set; }
-	public IRoot? DestinationEmitter { get; set; }
-	public IRoot? StretchEmitter { get; set; }
+	public object? SourceEmitter { get; set; }
+	public object? DestinationEmitter { get; set; }
+	public object? StretchEmitter { get; set; }
 }

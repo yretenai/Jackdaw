@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataArea : IRoot {
-	public IRoot? Primary { get; set; }
-	public IRoot? Glass { get; set; }
-	public IRoot? Sails { get; set; }
-	public IRoot? Reactor { get; set; }
-	public IRoot? Darkhull { get; set; }
-	public IRoot? Rock { get; set; }
-	public IRoot? Monument { get; set; }
-	public IRoot? Ornament { get; set; }
-	public IRoot? SimplePrimary { get; set; }
+	public object? Primary { get; set; }
+	public object? Glass { get; set; }
+	public object? Sails { get; set; }
+	public object? Reactor { get; set; }
+	public object? Darkhull { get; set; }
+	public object? Rock { get; set; }
+	public object? Monument { get; set; }
+	public object? Ornament { get; set; }
+	public object? SimplePrimary { get; set; }
 }

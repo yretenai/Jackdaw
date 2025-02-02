@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveCloudVolumeBall : IRoot, INotify {
 	public Vector3 Position { get; set; }
 	public float Radius { get; set; }
-	public Vector3 SelfIllumination { get; set; }
+	public Vector4 SelfIllumination { get; set; }
 	public float Opacity { get; set; }
 	public float Falloff { get; set; }
 }

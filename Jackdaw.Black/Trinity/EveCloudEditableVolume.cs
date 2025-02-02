@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveCloudEditableVolume : IRoot, IListNotify, IInitialize, INotify {
-	public IRoot? Texture { get; set; }
-	public IRoot? Bitmap { get; set; }
+	public object? Texture { get; set; }
+	public object? Bitmap { get; set; }
 	public List<IRoot?>? Balls { get; set; }
 	public int Width { get; set; }
 	public int Height { get; set; }

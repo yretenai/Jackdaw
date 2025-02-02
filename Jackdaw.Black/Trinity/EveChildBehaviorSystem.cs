@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveChildBehaviorSystem : IRoot, IEveSpaceObjectChild, ITr2Renderable {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }

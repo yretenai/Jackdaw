@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2InstancedMesh : Tr2Mesh {
-	public IRoot? InstanceGeometryResource { get; set; }
+	public object? InstanceGeometryResource { get; set; }
 	public string? InstanceGeometryResPath { get; set; }
 	public int InstanceMeshIndex { get; set; }
-	public IRoot? InstanceCount { get; set; }
+	public object? InstanceCount { get; set; }
 	public int BoundsMethod { get; set; }
 	public Vector3 MinBounds { get; set; }
 	public Vector3 MaxBounds { get; set; }

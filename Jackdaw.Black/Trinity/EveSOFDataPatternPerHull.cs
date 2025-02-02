@@ -7,6 +7,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataPatternPerHull : IRoot {
 	public string? Name { get; set; }
-	public IRoot? TransformLayer1 { get; set; }
-	public IRoot? TransformLayer2 { get; set; }
+	public object? TransformLayer1 { get; set; }
+	public object? TransformLayer2 { get; set; }
 }

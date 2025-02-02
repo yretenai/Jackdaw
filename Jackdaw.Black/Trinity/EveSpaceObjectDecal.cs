@@ -9,9 +9,9 @@ public class EveSpaceObjectDecal : IRoot, INotify, IInitialize, ITr2Renderable, 
 	public bool HasStaticIndexBuffers { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
-	public IRoot? DecalEffect { get; set; }
+	public object? DecalEffect { get; set; }
 	public Vector3 Position { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public int ParentBoneIndex { get; set; }
 	public float MinScreenSize { get; set; }

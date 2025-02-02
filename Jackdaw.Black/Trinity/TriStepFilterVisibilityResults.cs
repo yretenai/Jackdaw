@@ -9,6 +9,6 @@ public class TriStepFilterVisibilityResults : TriRenderStep {
 	public int EventFilter { get; set; }
 	public int FilterType { get; set; }
 	public List<IRoot?>? Objects { get; set; }
-	public IRoot? InputResults { get; set; }
-	public IRoot? OutputResults { get; set; }
+	public object? InputResults { get; set; }
+	public object? OutputResults { get; set; }
 }

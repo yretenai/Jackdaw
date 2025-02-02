@@ -18,7 +18,7 @@ public class Ball : IRoot, INotify, IBall {
 	public long FollowId { get; set; }
 	public long OwnerId { get; set; }
 	public long Harmonic { get; set; }
-	public IRoot? Ballpark { get; set; }
+	public object? Ballpark { get; set; }
 	public int AllianceID { get; set; }
 	public int CorporationID { get; set; }
 	public byte FormationID { get; set; }

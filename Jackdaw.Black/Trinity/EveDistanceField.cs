@@ -7,8 +7,8 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveDistanceField : IRoot, IListNotify, INotify {
 	public List<IRoot?>? Objects { get; set; }
-	public IRoot? CurveSet { get; set; }
-	public IRoot? CameraView { get; set; }
+	public object? CurveSet { get; set; }
+	public object? CameraView { get; set; }
 	public float MinDistance { get; set; }
 	public float MaxDistance { get; set; }
 	public float Distance { get; set; }

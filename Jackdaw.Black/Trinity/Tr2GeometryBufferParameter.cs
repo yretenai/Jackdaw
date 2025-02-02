@@ -10,6 +10,6 @@ public class Tr2GeometryBufferParameter : IRoot, ITriEffectParameter, ITriEffect
 	public string? Name { get; set; }
 	[BlackUseNamePool]public string? ResourcePath { get; set; }
 	public int MeshIndex { get; set; }
-	public IRoot? GpuBuffer { get; set; }
+	public object? GpuBuffer { get; set; }
 	public bool UsedByCurrentEffect { get; set; }
 }

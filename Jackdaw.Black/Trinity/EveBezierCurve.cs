@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveBezierCurve : IRoot, IEveLineSetPath, INotify {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public string? Name { get; set; }
 	public Vector3 Point1 { get; set; }
 	public Vector3 Point2 { get; set; }

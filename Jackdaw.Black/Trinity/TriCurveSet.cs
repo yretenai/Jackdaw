@@ -10,7 +10,7 @@ public class TriCurveSet : IRoot, IInitialize, ITr2Updateable {
 	public List<IRoot?>? Bindings { get; set; }
 	public List<IRoot?>? Curves { get; set; }
 	public List<IRoot?>? Ranges { get; set; }
-	public IRoot? Driver { get; set; }
+	public object? Driver { get; set; }
 	public bool IsPlaying { get; set; }
 	public bool PlayOnLoad { get; set; }
 	public bool UseSimTimeRebase { get; set; }

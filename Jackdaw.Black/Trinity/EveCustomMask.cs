@@ -8,9 +8,9 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveCustomMask : IRoot {
 	public Vector3 Position { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public byte MaterialIndex { get; set; }
-	public Vector3 TargetMaterials { get; set; }
+	public Vector4 TargetMaterials { get; set; }
 	public bool IsMirrored { get; set; }
 	public bool ClampU { get; set; }
 	public bool ClampV { get; set; }

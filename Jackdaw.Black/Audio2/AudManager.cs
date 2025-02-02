@@ -16,5 +16,5 @@ public class AudManager : IRoot {
 	public bool AudioCullingEnabled { get; set; }
 	public int MaxAwakeGameObjects { get; set; }
 	public float WeightMultiplier { get; set; }
-	public IRoot? Log { get; set; }
+	public object? Log { get; set; }
 }

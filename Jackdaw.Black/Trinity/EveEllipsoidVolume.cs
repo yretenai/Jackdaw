@@ -10,6 +10,6 @@ public class EveEllipsoidVolume : IRoot, IEveVolume, INotify {
 	public Vector3 Position { get; set; }
 	public Vector3 Shape { get; set; }
 	public Vector3 InnerShape { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public bool DebugShowIntersection { get; set; }
 }

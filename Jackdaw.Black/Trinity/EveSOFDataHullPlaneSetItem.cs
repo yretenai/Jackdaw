@@ -8,15 +8,15 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveSOFDataHullPlaneSetItem : IRoot {
 	public Vector3 Position { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 Rotation { get; set; }
+	public Vector4 Color { get; set; }
 	public int ColorType { get; set; }
 	public float Intensity { get; set; }
 	public float Saturation { get; set; }
-	public Vector3 Layer1Transform { get; set; }
-	public Vector3 Layer2Transform { get; set; }
-	public Vector3 Layer1Scroll { get; set; }
-	public Vector3 Layer2Scroll { get; set; }
+	public Vector4 Layer1Transform { get; set; }
+	public Vector4 Layer2Transform { get; set; }
+	public Vector4 Layer1Scroll { get; set; }
+	public Vector4 Layer2Scroll { get; set; }
 	public int BoneIndex { get; set; }
 	public int GroupIndex { get; set; }
 	public int MaskMapAtlasIndex { get; set; }

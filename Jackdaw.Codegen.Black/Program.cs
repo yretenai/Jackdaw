@@ -147,7 +147,7 @@ internal class Program {
 				var fieldName = FixName(field.Name);
 
 				var attribute = string.Empty;
-				var fieldType = "IRoot?";
+				var fieldType = "object?";
 
 				// ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
 				switch (field.Type) {
@@ -168,13 +168,17 @@ internal class Program {
 						break;
 					case BlueTypeId.FloatArray:
 						fieldType = field.Size switch {
-							            8 => "Vector3",
+							            0 when field.ClassType == "Matrix" => "Matrix4x4",
+							            0 when field.ClassType == "Color" => "Vector4",
+							            0 when field.ClassType == "Rotation" => "Quaternion",
+							            0 when field.ClassType == "" => "Vector3",
+							            8 => "Vector2",
 							            12 => "Vector3",
-							            16 => "Vector3",
+							            16 => "Vector4",
 							            24 => "Matrix3x2",
 							            36 => "Matrix3x3",
 							            64 => "Matrix4x4",
-							            _ => "IRoot?",
+							            _ => throw new InvalidOperationException(),
 						            };
 						break;
 					case BlueTypeId.String:

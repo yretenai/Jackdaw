@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveChildInstanceContainer : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2ControllerOwner, IListNotify, EveEntity {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
@@ -17,9 +17,9 @@ public class EveChildInstanceContainer : IRoot, IEveSpaceObjectChild, ITr2CurveS
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool AlwaysOn { get; set; }
-	public IRoot? InheritProperties { get; set; }
+	public object? InheritProperties { get; set; }
 	public int Origin { get; set; }
-	public IRoot? Source { get; set; }
+	public object? Source { get; set; }
 	public List<IRoot?>? Instances { get; set; }
 	public bool Reset { get; set; }
 	public string? LocatorSet { get; set; }

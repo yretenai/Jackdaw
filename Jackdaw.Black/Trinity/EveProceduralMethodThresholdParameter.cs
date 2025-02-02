@@ -7,6 +7,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveProceduralMethodThresholdParameter : IRoot, INotify, IInitialize {
 	public string? Name { get; set; }
-	public IRoot? Child { get; set; }
+	public object? Child { get; set; }
 	public float Threshold { get; set; }
 }

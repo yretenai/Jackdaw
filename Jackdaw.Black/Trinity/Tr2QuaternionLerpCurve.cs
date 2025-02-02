@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2QuaternionLerpCurve : IRoot, ITriFunction, ITriQuaternionFunction, ITriCurveLength {
 	public long Start { get; set; }
 	public float Length { get; set; }
-	public Vector3 Value { get; set; }
-	public IRoot? StartCurve { get; set; }
-	public IRoot? EndCurve { get; set; }
+	public Vector4 Value { get; set; }
+	public object? StartCurve { get; set; }
+	public object? EndCurve { get; set; }
 }

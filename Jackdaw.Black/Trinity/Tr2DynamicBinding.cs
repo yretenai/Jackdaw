@@ -15,5 +15,5 @@ public class Tr2DynamicBinding : IRoot, INotify {
 	public string? SourceObjectAttribute { get; set; }
 	public float Scale { get; set; }
 	public int BindingDelay { get; set; }
-	public IRoot? Binding { get; set; }
+	public object? Binding { get; set; }
 }

@@ -11,7 +11,7 @@ public class EveSOFDataHullExtensionPlacementDistributionPlacement : IRoot {
 	public Vector3 PlacementBias { get; set; }
 	public float CenterBias { get; set; }
 	public int Cap { get; set; }
-	public Vector3 RandomRotationStepSizeYPR { get; set; }
+	public Vector4 RandomRotationStepSizeYPR { get; set; }
 	public Vector3 RandomRotationMaxSteps { get; set; }
 	public Vector3 RandomScaleMin { get; set; }
 	public Vector3 RandomScaleMax { get; set; }

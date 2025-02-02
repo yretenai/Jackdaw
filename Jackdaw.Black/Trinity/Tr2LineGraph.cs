@@ -7,5 +7,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2LineGraph : IRoot, ICcpStatisticsAccumulator {
 	public string? Name { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 }

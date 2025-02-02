@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class WodBakingScene : IRoot, ITr2Scene {
-	public IRoot? Avatar { get; set; }
+	public object? Avatar { get; set; }
 	public int VisualizeMethod { get; set; }
 }

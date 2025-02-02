@@ -9,10 +9,10 @@ public class Tr2ShadowMap : IRoot, INotify {
 	public int ShadowQuality { get; set; }
 	public int Size { get; set; }
 	public int SplitCount { get; set; }
-	public IRoot? CascadedShadowMapDS { get; set; }
-	public IRoot? ShadowMapResultRT { get; set; }
-	public IRoot? Denoiser { get; set; }
-	public IRoot? CascadeEffect { get; set; }
+	public object? CascadedShadowMapDS { get; set; }
+	public object? ShadowMapResultRT { get; set; }
+	public object? Denoiser { get; set; }
+	public object? CascadeEffect { get; set; }
 	public float SplitNr0 { get; set; }
 	public float SplitNr1 { get; set; }
 	public float SplitNr2 { get; set; }

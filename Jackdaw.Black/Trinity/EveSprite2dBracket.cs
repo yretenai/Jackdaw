@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSprite2dBracket : IRoot {
-	public Vector3 Translation { get; set; }
-	public Vector3 Color { get; set; }
-	public IRoot? Icon { get; set; }
+	public Vector2 Translation { get; set; }
+	public Vector4 Color { get; set; }
+	public object? Icon { get; set; }
 	public bool Display { get; set; }
 }

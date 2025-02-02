@@ -9,6 +9,6 @@ public class Tr2ElementBlendConstraint : IRoot, ITr2GenericParticleConstraint {
 	public bool IsValid { get; set; }
 	public int ElementType { get; set; }
 	public string? CustomName { get; set; }
-	public Vector3 Value { get; set; }
+	public Vector4 Value { get; set; }
 	public float OriginalFactor { get; set; }
 }

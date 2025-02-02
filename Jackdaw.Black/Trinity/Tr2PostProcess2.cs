@@ -6,17 +6,17 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PostProcess2 : IRoot {
-	public IRoot? SignalLoss { get; set; }
-	public IRoot? GodRays { get; set; }
-	public IRoot? Bloom { get; set; }
-	public IRoot? DynamicExposure { get; set; }
-	public IRoot? FidelityFX { get; set; }
-	public IRoot? FilmGrain { get; set; }
-	public IRoot? Desaturate { get; set; }
-	public IRoot? Fade { get; set; }
-	public IRoot? Lut { get; set; }
-	public IRoot? Vignette { get; set; }
-	public IRoot? Fog { get; set; }
-	public IRoot? Taa { get; set; }
-	public IRoot? DepthOfField { get; set; }
+	public object? SignalLoss { get; set; }
+	public object? GodRays { get; set; }
+	public object? Bloom { get; set; }
+	public object? DynamicExposure { get; set; }
+	public object? FidelityFX { get; set; }
+	public object? FilmGrain { get; set; }
+	public object? Desaturate { get; set; }
+	public object? Fade { get; set; }
+	public object? Lut { get; set; }
+	public object? Vignette { get; set; }
+	public object? Fog { get; set; }
+	public object? Taa { get; set; }
+	public object? DepthOfField { get; set; }
 }

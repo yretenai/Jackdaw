@@ -16,16 +16,16 @@ public class EveSpaceObject2 : IRoot, EveEntity, IEveShadowCaster, IInitialize, 
 	public bool IsAnimated { get; set; }
 	public bool CastShadow { get; set; }
 	public Vector3 WorldPosition { get; set; }
-	public Vector3 WorldRotation { get; set; }
+	public Vector4 WorldRotation { get; set; }
 	public float ModelScale { get; set; }
-	public IRoot? Mesh { get; set; }
-	public IRoot? MeshLod { get; set; }
+	public object? Mesh { get; set; }
+	public object? MeshLod { get; set; }
 	public int LodLevel { get; set; }
 	public float ClipSphereFactor { get; set; }
 	public Vector3 ClipSphereCenter { get; set; }
 	public float EstimatedPixelDiameter { get; set; }
 	public float EstimatedPixelDiameterWithChildren { get; set; }
-	public IRoot? AnimationUpdater { get; set; }
+	public object? AnimationUpdater { get; set; }
 	public Vector3 BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
 	public Vector3 ModelWorldPosition { get; set; }
@@ -36,24 +36,24 @@ public class EveSpaceObject2 : IRoot, EveEntity, IEveShadowCaster, IInitialize, 
 	public List<IRoot?>? OverlayEffects { get; set; }
 	public List<IRoot?>? Decals { get; set; }
 	public List<IRoot?>? Locators { get; set; }
-	public IRoot? ImpactOverlay { get; set; }
+	public object? ImpactOverlay { get; set; }
 	public int LastDamageLocatorHit { get; set; }
 	public List<IRoot?>? Observers { get; set; }
-	public IRoot? TranslationCurve { get; set; }
-	public IRoot? RotationCurve { get; set; }
-	public IRoot? ModelRotationCurve { get; set; }
-	public IRoot? ModelTranslationCurve { get; set; }
+	public object? TranslationCurve { get; set; }
+	public object? RotationCurve { get; set; }
+	public object? ModelRotationCurve { get; set; }
+	public object? ModelTranslationCurve { get; set; }
 	public List<IRoot?>? LocatorSets { get; set; }
 	public List<IRoot?>? Lights { get; set; }
-	public Vector3 AlbedoColor { get; set; }
+	public Vector4 AlbedoColor { get; set; }
 	public float SecondaryLightingSphereRadius { get; set; }
 	public List<IRoot?>? Attachments { get; set; }
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? EffectChildren { get; set; }
-	public IRoot? InheritProperties { get; set; }
+	public object? InheritProperties { get; set; }
 	public List<IRoot?>? CustomMasks { get; set; }
 	public float DirtLevel { get; set; }
-	public IRoot? PositionDelta { get; set; }
+	public object? PositionDelta { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public bool DynamicBoundingSphereEnabled { get; set; }
 	public List<IRoot?>? ExternalParameters { get; set; }

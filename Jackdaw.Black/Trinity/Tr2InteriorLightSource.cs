@@ -12,10 +12,10 @@ public class Tr2InteriorLightSource : IRoot, IInitialize, INotify, ITr2InteriorL
 	public float ConeAlphaInner { get; set; }
 	public float Radius { get; set; }
 	public string? Name { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 	public float Falloff { get; set; }
 	public float SpecularIntensity { get; set; }
-	public IRoot? KelvinColor { get; set; }
+	public object? KelvinColor { get; set; }
 	public bool UseKelvinColor { get; set; }
 	public bool PrimaryLighting { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }

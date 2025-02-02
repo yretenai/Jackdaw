@@ -12,21 +12,21 @@ public class Tr2InteriorScene : IRoot, ITr2Scene, ITr2MultiPassScene, IInitializ
 	public bool OptimizeShadows { get; set; }
 	public bool RenderShadows { get; set; }
 	public bool DebugRenderShadowMaps { get; set; }
-	public IRoot? DebugRenderer { get; set; }
+	public object? DebugRenderer { get; set; }
 	public Vector3 SunDirection { get; set; }
-	public Vector3 SunDiffuseColor { get; set; }
-	public Vector3 SunSpecularColor { get; set; }
-	public Vector3 AmbientColor { get; set; }
+	public Vector4 SunDiffuseColor { get; set; }
+	public Vector4 SunSpecularColor { get; set; }
+	public Vector4 AmbientColor { get; set; }
 	public List<IRoot?>? Lights { get; set; }
 	public List<IRoot?>? Dynamics { get; set; }
-	public IRoot? VisibilityResults { get; set; }
+	public object? VisibilityResults { get; set; }
 	public string? BackgroundCubemapPath { get; set; }
-	public IRoot? BackgroundCubemapRes { get; set; }
-	public IRoot? BackgroundEffect { get; set; }
+	public object? BackgroundCubemapRes { get; set; }
+	public object? BackgroundEffect { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public int VisualizeMethod { get; set; }
 	public float MaxFogAmount { get; set; }
 	public float MaxFogDistance { get; set; }
 	public float MinFogDistance { get; set; }
-	public Vector3 FogColor { get; set; }
+	public Vector4 FogColor { get; set; }
 }

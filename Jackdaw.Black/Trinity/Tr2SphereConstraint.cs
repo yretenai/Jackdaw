@@ -13,7 +13,7 @@ public class Tr2SphereConstraint : IRoot, ITr2GenericParticleConstraint {
 	public float Elasticity { get; set; }
 	public float ReflectionNoise { get; set; }
 	public string? ParticleRadiusComponent { get; set; }
-	public Vector3 ParticleRadiusCoefficient { get; set; }
+	public Vector4 ParticleRadiusCoefficient { get; set; }
 	public bool AffectPosition { get; set; }
 	public bool AffectVelocity { get; set; }
 	public List<IRoot?>? Generators { get; set; }

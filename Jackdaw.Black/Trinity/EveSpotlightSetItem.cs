@@ -9,9 +9,9 @@ public class EveSpotlightSetItem : IRoot {
 	public string? Name { get; set; }
 	public Matrix4x4 Transform { get; set; }
 	public Vector3 SpriteScale { get; set; }
-	public Vector3 ConeColor { get; set; }
-	public Vector3 SpriteColor { get; set; }
-	public Vector3 FlareColor { get; set; }
+	public Vector4 ConeColor { get; set; }
+	public Vector4 SpriteColor { get; set; }
+	public Vector4 FlareColor { get; set; }
 	public int BoneIndex { get; set; }
 	public bool BoosterGainInfluence { get; set; }
 }

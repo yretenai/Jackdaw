@@ -10,7 +10,7 @@ public class Tr2ConsecutiveIntegerAttributeGenerator : IRoot, ITr2AttributeGener
 	public int Dimension { get; set; }
 	public int ElementType { get; set; }
 	public string? CustomName { get; set; }
-	public Vector3 MinRange { get; set; }
-	public Vector3 MaxRange { get; set; }
+	public Vector4 MinRange { get; set; }
+	public Vector4 MaxRange { get; set; }
 	public bool Valid { get; set; }
 }

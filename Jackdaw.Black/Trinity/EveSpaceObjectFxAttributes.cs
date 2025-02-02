@@ -16,5 +16,5 @@ public class EveSpaceObjectFxAttributes : IRoot, IEveFxAttribute {
 	public Vector3 GeneratedShapeEllipsoidCenter { get; set; }
 	public Vector3 GeneratedShapeEllipsoidRadius { get; set; }
 	public Vector3 ParentWorldTranslation { get; set; }
-	public Vector3 ParentWorldRotation { get; set; }
+	public Vector4 ParentWorldRotation { get; set; }
 }

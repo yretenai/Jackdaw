@@ -15,6 +15,6 @@ public class SpawnDrones : IRoot, IBehavior {
 	public float GridFullnessFactor { get; set; }
 	public int Count { get; set; }
 	public Vector3 SpawnPosition { get; set; }
-	public Vector3 GridInfo { get; set; }
+	public Vector4 GridInfo { get; set; }
 	public Vector3 GridSpacing { get; set; }
 }

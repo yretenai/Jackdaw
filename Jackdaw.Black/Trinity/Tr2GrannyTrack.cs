@@ -11,5 +11,5 @@ public class Tr2GrannyTrack : IRoot, ITriFunction, IInitialize, INotify {
 	public string? Name { get; set; }
 	public string? Group { get; set; }
 	public string? GrannyResPath { get; set; }
-	public IRoot? GrannyRes { get; set; }
+	public object? GrannyRes { get; set; }
 }

@@ -11,5 +11,5 @@ public class EvePlaneSet : IRoot, IInitialize, INotify, IEveSpaceObjectAttachmen
 	public byte PickBufferID { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Planes { get; set; }
-	public IRoot? Effect { get; set; }
+	public object? Effect { get; set; }
 }

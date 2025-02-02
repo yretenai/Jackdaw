@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2MaterialParameterStore : IRoot, INotify, IInitialize {
 	public string? Name { get; set; }
 	public string? ParentPath { get; set; }
-	public IRoot? Parent { get; set; }
+	public object? Parent { get; set; }
 	[BlackExperimental]public Dictionary<IRoot, IRoot?>? Parameters { get; set; }
 }

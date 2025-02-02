@@ -10,6 +10,6 @@ public class TriRigidOrientation : IRoot, ITriFunction, ITriQuaternionFunction {
 	public long Start { get; set; }
 	public float I { get; set; }
 	public float Drag { get; set; }
-	public Vector3 Value { get; set; }
+	public Vector4 Value { get; set; }
 	public List<IRoot?>? States { get; set; }
 }

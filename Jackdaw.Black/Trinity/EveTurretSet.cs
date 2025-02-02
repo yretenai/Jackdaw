@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTurretSet : IRoot, IInitialize, EveEntity, INotify, ITr2Renderable {
-	public IRoot? TargetObject { get; set; }
+	public object? TargetObject { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool DisplayEffects { get; set; }
@@ -19,12 +19,12 @@ public class EveTurretSet : IRoot, IInitialize, EveEntity, INotify, ITr2Renderab
 	public int SlotNumber { get; set; }
 	public int SwarmID { get; set; }
 	public bool UseDynamicBounds { get; set; }
-	public Vector3 BoundingSphere { get; set; }
+	public Vector4 BoundingSphere { get; set; }
 	public float BottomClipHeight { get; set; }
-	public IRoot? TurretEffect { get; set; }
+	public object? TurretEffect { get; set; }
 	public string? GeometryResPath { get; set; }
-	public IRoot? GeometryResource { get; set; }
-	public IRoot? Target { get; set; }
+	public object? GeometryResource { get; set; }
+	public object? Target { get; set; }
 	public bool LaserMissBehaviour { get; set; }
 	public bool ProjectileMissBehaviour { get; set; }
 	public float ImpactSize { get; set; }
@@ -49,18 +49,18 @@ public class EveTurretSet : IRoot, IInitialize, EveEntity, INotify, ITr2Renderab
 	public float SysBonePitch03Factor { get; set; }
 	public int State { get; set; }
 	public string? FiringEffectResPath { get; set; }
-	public IRoot? FiringEffect { get; set; }
+	public object? FiringEffect { get; set; }
 	public bool UseLowLodFiringTransform { get; set; }
 	public Vector3 LowLodFiringEffectTranslation { get; set; }
 	public Vector3 LowLodFiringEffectScale { get; set; }
-	public Vector3 LowLodFiringEffectRotation { get; set; }
+	public Vector4 LowLodFiringEffectRotation { get; set; }
 	public bool ChooseRandomLocator { get; set; }
 	public bool RandomizeExplosionRotation { get; set; }
-	public IRoot? AmbientEffect { get; set; }
-	public IRoot? GeneratedDistributedAmbientEffect { get; set; }
+	public object? AmbientEffect { get; set; }
+	public object? GeneratedDistributedAmbientEffect { get; set; }
 	public bool AmbientEffectEditingMode { get; set; }
 	public bool PlayMovementSound { get; set; }
-	public IRoot? TurretMovementObserver { get; set; }
+	public object? TurretMovementObserver { get; set; }
 	[BlackUseNamePool]public string? IdleToTargetingMovementAudioEvent { get; set; }
 	[BlackUseNamePool]public string? TargetingToIdleMovementAudioEvent { get; set; }
 }

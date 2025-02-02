@@ -14,6 +14,6 @@ public class EveSOFDataHullPlaneSet : IRoot {
 	public string? MaskMapResPath { get; set; }
 	public int Usage { get; set; }
 	public int AtlasSize { get; set; }
-	public Vector3 AtlasAspectRatio { get; set; }
+	public Vector2 AtlasAspectRatio { get; set; }
 	public List<IRoot?>? Items { get; set; }
 }

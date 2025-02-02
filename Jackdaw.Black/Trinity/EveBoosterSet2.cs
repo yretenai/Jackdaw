@@ -12,11 +12,11 @@ public class EveBoosterSet2 : IRoot, INotify, IInitialize {
 	public float AlwaysOnIntensity { get; set; }
 	public Vector3 BoosterBoundingSphereCenter { get; set; }
 	public float BoosterBoundingSphereRadius { get; set; }
-	public IRoot? Effect { get; set; }
-	public IRoot? EffectFar { get; set; }
-	public IRoot? Glows { get; set; }
+	public object? Effect { get; set; }
+	public object? EffectFar { get; set; }
+	public object? Glows { get; set; }
 	public bool FlareLodEnabled { get; set; }
-	public IRoot? Trails { get; set; }
+	public object? Trails { get; set; }
 	public float MaxVel { get; set; }
 	public float WarpIntensity { get; set; }
 	public float MaxSize { get; set; }
@@ -24,10 +24,10 @@ public class EveBoosterSet2 : IRoot, INotify, IInitialize {
 	public float SymHaloScale { get; set; }
 	public float HaloScaleX { get; set; }
 	public float HaloScaleY { get; set; }
-	public Vector3 GlowColor { get; set; }
-	public Vector3 HaloColor { get; set; }
-	public Vector3 WarpGlowColor { get; set; }
-	public Vector3 WarpHaloColor { get; set; }
+	public Vector4 GlowColor { get; set; }
+	public Vector4 HaloColor { get; set; }
+	public Vector4 WarpGlowColor { get; set; }
+	public Vector4 WarpHaloColor { get; set; }
 	public float TrailsSmoothing { get; set; }
 	public bool PhysicsUpdate { get; set; }
 	public bool DestinyUpdate { get; set; }
@@ -42,6 +42,6 @@ public class EveBoosterSet2 : IRoot, INotify, IInitialize {
 	public float LightWarpRadius { get; set; }
 	public float LightFlickerAmplitude { get; set; }
 	public float LightFlickerFrequency { get; set; }
-	public Vector3 LightColor { get; set; }
-	public Vector3 LightWarpColor { get; set; }
+	public Vector4 LightColor { get; set; }
+	public Vector4 LightWarpColor { get; set; }
 }

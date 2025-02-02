@@ -8,12 +8,12 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2SpriteObjectBase : IRoot, ITr2SpriteObject, INotify {
 	public bool Display { get; set; }
 	public bool IsDirty { get; set; }
-	public IRoot? AuxMouseover { get; set; }
+	public object? AuxMouseover { get; set; }
 	public float DisplayX { get; set; }
 	public float DisplayY { get; set; }
 	public float DisplayWidth { get; set; }
 	public float DisplayHeight { get; set; }
 	[BlackUseNamePool]public string? Name { get; set; }
 	public int PickState { get; set; }
-	public IRoot? PickingMask { get; set; }
+	public object? PickingMask { get; set; }
 }

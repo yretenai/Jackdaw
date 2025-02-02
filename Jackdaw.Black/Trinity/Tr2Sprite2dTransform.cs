@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dTransform : Tr2Sprite2dContainerBase {
-	public Vector3 RotationCenter { get; set; }
+	public Vector2 RotationCenter { get; set; }
 	public float Rotation { get; set; }
-	public Vector3 ScalingCenter { get; set; }
+	public Vector2 ScalingCenter { get; set; }
 	public float ScalingRotation { get; set; }
-	public Vector3 Scale { get; set; }
+	public Vector2 Scale { get; set; }
 }

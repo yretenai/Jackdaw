@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Vector3Parameter : IRoot, ITriEffectParameter, ITriReroutable, IInitialize {
-	public IRoot? Value { get; set; }
+	public Vector3 Value { get; set; }
 	public float X { get; set; }
 	public float Y { get; set; }
 	public float Z { get; set; }

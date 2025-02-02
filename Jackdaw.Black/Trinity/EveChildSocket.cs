@@ -8,12 +8,12 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveChildSocket : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
-	public IRoot? Plug { get; set; }
+	public object? Plug { get; set; }
 	public string? Name { get; set; }
 	public string? ResPath { get; set; }
 	public bool Display { get; set; }

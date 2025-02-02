@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2PlaneConstraint : IRoot, ITr2GenericParticleConstraint, INotify, IInitialize {
-	public Vector3 Plane { get; set; }
+	public Vector4 Plane { get; set; }
 	public float Friction { get; set; }
 	public float Elasticity { get; set; }
 	public float ReflectionNoise { get; set; }
 	public string? ParticleRadiusComponent { get; set; }
-	public Vector3 ParticleRadiusCoefficient { get; set; }
+	public Vector4 ParticleRadiusCoefficient { get; set; }
 	public bool AffectPosition { get; set; }
 	public bool AffectVelocity { get; set; }
 	public List<IRoot?>? Generators { get; set; }

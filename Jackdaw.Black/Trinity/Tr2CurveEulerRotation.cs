@@ -10,5 +10,5 @@ public class Tr2CurveEulerRotation : IRoot, ITriQuaternionFunction, ITriFunction
 	public Tr2CurveScalar? Yaw { get; set; }
 	public Tr2CurveScalar? Pitch { get; set; }
 	public Tr2CurveScalar? Roll { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector4 CurrentValue { get; set; }
 }

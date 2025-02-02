@@ -11,7 +11,7 @@ public class EveSOFDataHull : IRoot {
 	public string? Category { get; set; }
 	public int BuildClass { get; set; }
 	public string? GeometryResFilePath { get; set; }
-	public Vector3 BoundingSphere { get; set; }
+	public Vector4 BoundingSphere { get; set; }
 	public Vector3 ShapeEllipsoidCenter { get; set; }
 	public Vector3 ShapeEllipsoidRadius { get; set; }
 	public bool IsSkinned { get; set; }
@@ -23,7 +23,7 @@ public class EveSOFDataHull : IRoot {
 	public List<IRoot?>? TransparentAreas { get; set; }
 	public List<IRoot?>? AdditiveAreas { get; set; }
 	public List<IRoot?>? DistortionAreas { get; set; }
-	public IRoot? DefaultPattern { get; set; }
+	public object? DefaultPattern { get; set; }
 	public List<IRoot?>? SpriteSets { get; set; }
 	public List<IRoot?>? SpotlightSets { get; set; }
 	public List<IRoot?>? PlaneSets { get; set; }
@@ -34,7 +34,7 @@ public class EveSOFDataHull : IRoot {
 	public List<IRoot?>? DecalSets { get; set; }
 	public List<IRoot?>? LightSets { get; set; }
 	public int ImpactEffectType { get; set; }
-	public IRoot? Booster { get; set; }
+	public object? Booster { get; set; }
 	public Vector3 AudioPosition { get; set; }
 	public List<IRoot?>? LocatorTurrets { get; set; }
 	public List<IRoot?>? LocatorSets { get; set; }

@@ -11,7 +11,7 @@ public class EveSOFDataHullDecalSetItem : IRoot {
 	public int LogoType { get; set; }
 	public Vector3 Position { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public int BoneIndex { get; set; }
 	public int MeshIndex { get; set; }
 	public int GlowColorType { get; set; }

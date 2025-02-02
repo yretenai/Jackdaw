@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCamera : IRoot {
-	public IRoot? Forward { get; set; }
-	public IRoot? Right { get; set; }
-	public IRoot? Up { get; set; }
+	public Vector3 Forward { get; set; }
+	public Vector3 Right { get; set; }
+	public Vector3 Up { get; set; }
 	public string? Name { get; set; }
 	public bool Running { get; set; }
 	public List<IRoot?>? PositionBehaviours { get; set; }

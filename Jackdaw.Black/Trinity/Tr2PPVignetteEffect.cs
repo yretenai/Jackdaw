@@ -8,11 +8,11 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2PPVignetteEffect : Tr2PPEffect {
 	public string? ShapePath { get; set; }
 	public string? DetailPath { get; set; }
-	public Vector3 Detail1Size { get; set; }
-	public Vector3 Detail2Size { get; set; }
-	public Vector3 Detail1Scroll { get; set; }
-	public Vector3 Detail2Scroll { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector2 Detail1Size { get; set; }
+	public Vector2 Detail2Size { get; set; }
+	public Vector2 Detail1Scroll { get; set; }
+	public Vector2 Detail2Scroll { get; set; }
+	public Vector4 Color { get; set; }
 	public float Opacity { get; set; }
 	public float Intensity { get; set; }
 	public float SineFrequency { get; set; }

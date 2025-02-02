@@ -10,11 +10,11 @@ public class Tr2SpriteObject : Tr2SpriteObjectBase {
 	public int SpriteEffect { get; set; }
 	public int SpriteTarget { get; set; }
 	public float GlowBrightness { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 	public float Depth { get; set; }
-	public Vector3 ShadowOffset { get; set; }
-	public Vector3 ShadowColor { get; set; }
+	public Vector2 ShadowOffset { get; set; }
+	public Vector4 ShadowColor { get; set; }
 	public float GlowFactor { get; set; }
 	public float GlowExpand { get; set; }
-	public Vector3 GlowColor { get; set; }
+	public Vector4 GlowColor { get; set; }
 }

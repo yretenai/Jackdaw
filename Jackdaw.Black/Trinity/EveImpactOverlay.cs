@@ -15,21 +15,21 @@ public class EveImpactOverlay : IRoot {
 	public float RenderPriority { get; set; }
 	public float OverallShieldImpact { get; set; }
 	public int DataTextureBlockID { get; set; }
-	public IRoot? Mesh { get; set; }
+	public object? Mesh { get; set; }
 	public bool ShieldIsEllipsoid { get; set; }
 	public int MaxShieldImpacts { get; set; }
 	public float ShieldImpactColorFade { get; set; }
 	public float ShieldImpactParentSize { get; set; }
-	public IRoot? ArmorDamageShader { get; set; }
+	public object? ArmorDamageShader { get; set; }
 	public long ArmorImpactGoalCount { get; set; }
 	public float ArmorImpactParentSize { get; set; }
-	public IRoot? ArmorImpactEmitter { get; set; }
+	public object? ArmorImpactEmitter { get; set; }
 	public float HullDamageFactor { get; set; }
-	public IRoot? HullDamageFlickerCurve { get; set; }
-	public IRoot? HullImpactEmitter { get; set; }
-	public IRoot? ShieldHardening { get; set; }
-	public IRoot? ShieldBoosting { get; set; }
-	public IRoot? ArmorRepairing { get; set; }
-	public IRoot? ArmorHardening { get; set; }
-	public IRoot? HullRepairing { get; set; }
+	public object? HullDamageFlickerCurve { get; set; }
+	public object? HullImpactEmitter { get; set; }
+	public object? ShieldHardening { get; set; }
+	public object? ShieldBoosting { get; set; }
+	public object? ArmorRepairing { get; set; }
+	public object? ArmorHardening { get; set; }
+	public object? HullRepairing { get; set; }
 }

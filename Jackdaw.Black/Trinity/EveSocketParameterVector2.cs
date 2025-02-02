@@ -7,5 +7,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSocketParameterVector2 : IRoot, IEveSocketParameter {
 	public string? Name { get; set; }
-	public Vector3 Value { get; set; }
+	public Vector2 Value { get; set; }
 }

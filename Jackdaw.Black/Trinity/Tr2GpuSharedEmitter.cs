@@ -23,10 +23,10 @@ public class Tr2GpuSharedEmitter : IRoot, IInitialize, INotify, ITr2GenericEmitt
 	public float MaxLifeTime { get; set; }
 	public int TextureIndex { get; set; }
 	public float ColorMidpoint { get; set; }
-	public Vector3 Color0 { get; set; }
-	public Vector3 Color1 { get; set; }
-	public Vector3 Color2 { get; set; }
-	public Vector3 Color3 { get; set; }
+	public Vector4 Color0 { get; set; }
+	public Vector4 Color1 { get; set; }
+	public Vector4 Color2 { get; set; }
+	public Vector4 Color3 { get; set; }
 	public Vector3 Sizes { get; set; }
 	public float SizeVariance { get; set; }
 	public float Drag { get; set; }

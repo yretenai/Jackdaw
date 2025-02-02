@@ -8,9 +8,9 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class VideoPlayer : IRoot {
 	public int State { get; set; }
 	public bool Is_paused { get; set; }
-	public IRoot? Bgra_texture { get; set; }
+	public object? Bgra_texture { get; set; }
 	public long Media_time { get; set; }
 	public long Duration { get; set; }
 	public long Downloaded_media_time { get; set; }
-	public IRoot? Audio_sink { get; set; }
+	public object? Audio_sink { get; set; }
 }

@@ -8,5 +8,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveSOFDataFactionPlaneSet : IRoot {
 	public int GroupIndex { get; set; }
 	public string? Name { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 }

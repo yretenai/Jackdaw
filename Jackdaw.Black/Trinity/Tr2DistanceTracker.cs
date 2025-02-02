@@ -11,8 +11,8 @@ public class Tr2DistanceTracker : IRoot, ITriFunction, INotify {
 	public bool DistanceToClosest { get; set; }
 	public float Value { get; set; }
 	public Vector3 Direction { get; set; }
-	public IRoot? TargetObject { get; set; }
-	public IRoot? SourceObject { get; set; }
+	public object? TargetObject { get; set; }
+	public object? SourceObject { get; set; }
 	public Vector3 TargetPosition { get; set; }
 	public Vector3 SourcePosition { get; set; }
 }

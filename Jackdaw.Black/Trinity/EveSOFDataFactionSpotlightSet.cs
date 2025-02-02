@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveSOFDataFactionSpotlightSet : IRoot {
 	public int GroupIndex { get; set; }
 	public string? Name { get; set; }
-	public Vector3 ConeColor { get; set; }
-	public Vector3 SpriteColor { get; set; }
-	public Vector3 FlareColor { get; set; }
+	public Vector4 ConeColor { get; set; }
+	public Vector4 SpriteColor { get; set; }
+	public Vector4 FlareColor { get; set; }
 }

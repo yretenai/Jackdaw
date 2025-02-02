@@ -9,5 +9,5 @@ public class EveVirtualCameraBehaviourFloatNoise : EveVirtualCameraBehaviourFloa
 	public float PerlineScale { get; set; }
 	public int Octaves { get; set; }
 	public float Magnitude { get; set; }
-	public IRoot? MagnitudeCurve { get; set; }
+	public object? MagnitudeCurve { get; set; }
 }

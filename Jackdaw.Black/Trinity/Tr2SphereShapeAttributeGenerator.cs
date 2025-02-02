@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2SphereShapeAttributeGenerator : IRoot, ITr2AttributeGenerator {
 	public string? Name { get; set; }
 	public Vector3 Position { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public float MinPhi { get; set; }
 	public float MaxPhi { get; set; }
 	public float MinTheta { get; set; }

@@ -10,8 +10,8 @@ public class EveChildSpherePin : EveChildMesh {
 	public float PinMaxRadius { get; set; }
 	public float PinRadius { get; set; }
 	public float PinRotation { get; set; }
-	public Vector3 PinColor { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 PinColor { get; set; }
+	public Vector4 Color { get; set; }
 	public float PinAlphaThreshold { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 }

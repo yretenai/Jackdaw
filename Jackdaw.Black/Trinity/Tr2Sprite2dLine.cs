@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dLine : Tr2TexturedSpriteObject {
-	public Vector3 TranslationFrom { get; set; }
-	public Vector3 TranslationTo { get; set; }
+	public Vector2 TranslationFrom { get; set; }
+	public Vector2 TranslationTo { get; set; }
 	public float WidthFrom { get; set; }
 	public float WidthTo { get; set; }
-	public Vector3 ColorFrom { get; set; }
-	public Vector3 ColorTo { get; set; }
+	public Vector4 ColorFrom { get; set; }
+	public Vector4 ColorTo { get; set; }
 	public float TextureWidth { get; set; }
 	public float TextureOffsetBase { get; set; }
 	public float TextureOffset { get; set; }

@@ -16,8 +16,8 @@ public class SeekTarget : IRoot, IBehavior {
 	public float SlowDownRadius { get; set; }
 	public float DistFromOrigin { get; set; }
 	public float SecondsToTurn { get; set; }
-	public IRoot? Target { get; set; }
+	public object? Target { get; set; }
 	public string? LocatorSetName { get; set; }
 	public bool FirstSpawnAtRandomPlaces { get; set; }
-	public IRoot? LocatorSet { get; set; }
+	public object? LocatorSet { get; set; }
 }

@@ -7,6 +7,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraBehaviourVector3MoveForward : EveVirtualCameraBehaviourVector3Base, INotify {
 	public float Value { get; set; }
-	public IRoot? ScaleCurve { get; set; }
+	public object? ScaleCurve { get; set; }
 	public bool Proportional { get; set; }
 }

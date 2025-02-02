@@ -15,11 +15,11 @@ public class Tr2SSAO : IRoot, INotify {
 	public float ShadowPower { get; set; }
 	public float ShadowClamp { get; set; }
 	public float Sharpness { get; set; }
-	public IRoot? DeinterleavedDepthTarget { get; set; }
-	public IRoot? DeinterleavedNormalTarget { get; set; }
-	public IRoot? SsaoWorkerTargetA { get; set; }
-	public IRoot? SsaoWorkerTargetB { get; set; }
-	public IRoot? ImportanceTargetA { get; set; }
-	public IRoot? ImportanceTargetB { get; set; }
-	public IRoot? OutputTarget { get; set; }
+	public object? DeinterleavedDepthTarget { get; set; }
+	public object? DeinterleavedNormalTarget { get; set; }
+	public object? SsaoWorkerTargetA { get; set; }
+	public object? SsaoWorkerTargetB { get; set; }
+	public object? ImportanceTargetA { get; set; }
+	public object? ImportanceTargetB { get; set; }
+	public object? OutputTarget { get; set; }
 }

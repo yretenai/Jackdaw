@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Matrix4Parameter : IRoot, ITriEffectParameter, ITriReroutable {
-	public IRoot? Value { get; set; }
+	public Matrix4x4 Value { get; set; }
 	public string? Name { get; set; }
 	public bool UsedByCurrentTechnique { get; set; }
 	public bool UsedByCurrentEffect { get; set; }

@@ -9,6 +9,6 @@ public class EveChildEnvironment : IRoot, IEveSpaceObjectChild, IInitialize, ILi
 	public string? Name { get; set; }
 	public List<IRoot?>? Volumes { get; set; }
 	public List<IRoot?>? ExclusionVolumes { get; set; }
-	public Vector3 BoundingSphere { get; set; }
+	public Vector4 BoundingSphere { get; set; }
 	public float Intensity { get; set; }
 }

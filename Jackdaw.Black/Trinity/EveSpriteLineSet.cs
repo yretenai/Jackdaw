@@ -10,6 +10,6 @@ public class EveSpriteLineSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
 	public bool Display { get; set; }
 	public bool Skinned { get; set; }
 	public int EffectHash { get; set; }
-	public IRoot? Effect { get; set; }
+	public object? Effect { get; set; }
 	public List<IRoot?>? SpriteLines { get; set; }
 }

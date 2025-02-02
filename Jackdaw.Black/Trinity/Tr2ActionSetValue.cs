@@ -9,7 +9,7 @@ public class Tr2ActionSetValue : IRoot, ITr2ControllerAction, INotify {
 	public bool IsExpressionValid { get; set; }
 	public bool IsBindingValid { get; set; }
 	public string? Path { get; set; }
-	public IRoot? Destination { get; set; }
+	public object? Destination { get; set; }
 	public string? Attribute { get; set; }
 	public string? Value { get; set; }
 	public bool DelayBinding { get; set; }

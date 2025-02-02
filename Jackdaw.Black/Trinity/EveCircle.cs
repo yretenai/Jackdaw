@@ -8,9 +8,9 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveCircle : IRoot, IEveLineSetPath, INotify {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public string? Name { get; set; }
-	public Vector3 CircleDistort { get; set; }
+	public Vector4 CircleDistort { get; set; }
 	public Vector3 ObjectScale { get; set; }
 	public float CircleRadius { get; set; }
 	public float Completeness { get; set; }

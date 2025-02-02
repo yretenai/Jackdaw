@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveMissile : EveSpaceObject2, IEveSpaceObject2, ITr2Renderable {
 	public List<IRoot?>? Warheads { get; set; }
 	public bool UpdateWarheads { get; set; }
-	public IRoot? Target { get; set; }
+	public object? Target { get; set; }
 	public float TargetRadius { get; set; }
 }

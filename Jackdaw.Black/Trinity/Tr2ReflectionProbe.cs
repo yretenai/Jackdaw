@@ -9,13 +9,13 @@ public class Tr2ReflectionProbe : IRoot, INotify {
 	public bool LockPosition { get; set; }
 	public Vector3 Position { get; set; }
 	public int ReflectionSize { get; set; }
-	public IRoot? UnfilteredTexture { get; set; }
-	public IRoot? ReflectionTexture { get; set; }
-	public IRoot? CustomSourceTexture { get; set; }
+	public object? UnfilteredTexture { get; set; }
+	public object? ReflectionTexture { get; set; }
+	public object? CustomSourceTexture { get; set; }
 	public bool HdrOutput { get; set; }
 	public int RenderFrequency { get; set; }
 	public byte CurrentFrame { get; set; }
 	public bool HollywoodMode { get; set; }
-	public Vector3 BacklightColor { get; set; }
+	public Vector4 BacklightColor { get; set; }
 	public float BacklightContrast { get; set; }
 }

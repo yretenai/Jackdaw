@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveMissileWarhead : EveTransform {
-	public IRoot? SpriteSet { get; set; }
+	public object? SpriteSet { get; set; }
 	public float WarheadLength { get; set; }
 	public float WarheadRadius { get; set; }
 	public float ImpactDuration { get; set; }

@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2ActionPlayMeshAnimation : IRoot, ITr2ControllerAction, INotify {
 	public bool IsBindingValid { get; set; }
 	public string? Path { get; set; }
-	public IRoot? Destination { get; set; }
+	public object? Destination { get; set; }
 	public string? Animation { get; set; }
 	public string? Mask { get; set; }
 	public int DestinationType { get; set; }

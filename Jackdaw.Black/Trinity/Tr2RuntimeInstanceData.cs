@@ -10,5 +10,5 @@ public class Tr2RuntimeInstanceData : IRoot, ITr2InstanceData, ITr2GenericEmitte
 	public string? Name { get; set; }
 	public Vector3 AabbMin { get; set; }
 	public Vector3 AabbMax { get; set; }
-	public IRoot? ParticleSystem { get; set; }
+	public object? ParticleSystem { get; set; }
 }

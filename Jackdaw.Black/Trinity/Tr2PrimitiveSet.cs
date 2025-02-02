@@ -11,8 +11,8 @@ public class Tr2PrimitiveSet : IRoot, ITr2Renderable, ITr2Pickable, INotify {
 	public bool ViewOriented { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 	public string? Name { get; set; }
-	public IRoot? Effect { get; set; }
-	public IRoot? PickEffect { get; set; }
+	public object? Effect { get; set; }
+	public object? PickEffect { get; set; }
 }

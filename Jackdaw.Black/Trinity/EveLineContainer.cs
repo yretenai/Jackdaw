@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveLineContainer : IRoot, IEveSpaceObject2 {
 	public string? Name { get; set; }
 	public List<IRoot?>? Connectors { get; set; }
-	public IRoot? LineSet { get; set; }
+	public object? LineSet { get; set; }
 	public bool Display { get; set; }
 }

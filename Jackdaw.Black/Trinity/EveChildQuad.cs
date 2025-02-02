@@ -8,15 +8,15 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveChildQuad : IRoot, IEveSpaceObjectChild, IInitialize {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public string? Name { get; set; }
-	public IRoot? Effect { get; set; }
+	public object? Effect { get; set; }
 	public float ViewRotation { get; set; }
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 	public float Brightness { get; set; }
 	public float MinScreenSize { get; set; }
 	public float CurrentScreenSize { get; set; }

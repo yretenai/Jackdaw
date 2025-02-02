@@ -12,15 +12,15 @@ public class EveSOFDataFaction : IRoot {
 	public List<IRoot?>? SpotlightSets { get; set; }
 	public List<IRoot?>? PlaneSets { get; set; }
 	public List<IRoot?>? Children { get; set; }
-	public IRoot? VisibilityGroupSet { get; set; }
-	public IRoot? ColorSet { get; set; }
-	public IRoot? LogoSet { get; set; }
+	public object? VisibilityGroupSet { get; set; }
+	public object? ColorSet { get; set; }
+	public object? LogoSet { get; set; }
 	public int MaterialUsageMtl1 { get; set; }
 	public int MaterialUsageMtl2 { get; set; }
 	public int MaterialUsageMtl3 { get; set; }
 	public int MaterialUsageMtl4 { get; set; }
-	public IRoot? AreaTypes { get; set; }
-	public IRoot? DefaultPattern { get; set; }
+	public object? AreaTypes { get; set; }
+	public object? DefaultPattern { get; set; }
 	public string? DefaultPatternLayer1MaterialName { get; set; }
 	public string? DefaultPatternLayer2MaterialName { get; set; }
 	public string? DefaultPatternName { get; set; }

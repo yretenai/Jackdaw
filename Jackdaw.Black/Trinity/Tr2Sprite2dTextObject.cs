@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dTextObject : Tr2SpriteObject {
-	public IRoot? FontMeasurer { get; set; }
+	public object? FontMeasurer { get; set; }
 	public float PickRadius { get; set; }
 	public float TextWidth { get; set; }
 	public float TextHeight { get; set; }
 	public bool UseShadowSpriteEffect { get; set; }
 	public int ShadowSpriteEffect { get; set; }
-	public IRoot? TexturePrimary { get; set; }
+	public object? TexturePrimary { get; set; }
 	public bool UseSizeFromTexture { get; set; }
 	public bool HasAuxiliaryTooltip { get; set; }
 }

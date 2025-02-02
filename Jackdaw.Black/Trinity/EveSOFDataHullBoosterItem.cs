@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullBoosterItem : IRoot {
 	public Matrix4x4 Transform { get; set; }
-	public Vector3 Functionality { get; set; }
+	public Vector4 Functionality { get; set; }
 	public int AtlasIndex0 { get; set; }
 	public int AtlasIndex1 { get; set; }
 	public float LightScale { get; set; }

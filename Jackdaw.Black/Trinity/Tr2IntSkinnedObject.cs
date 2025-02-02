@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2IntSkinnedObject : Tr2SkinnedObject, ITr2InteriorDynamic, ITr2Interior, IInitialize, ITr2Pickable, ITr2BoundingBox, INotify, IBluePlacementObserver {
 	public Vector3 BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	public IRoot? VariableStore { get; set; }
+	public object? VariableStore { get; set; }
 	public float DepthOffset { get; set; }
 }

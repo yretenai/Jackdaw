@@ -10,6 +10,6 @@ public class Tr2MainWindow : IRoot {
 	public int Height { get; set; }
 	[BlackUseNamePool]public string? Title { get; set; }
 	public bool Active { get; set; }
-	public IRoot? MouseCursor { get; set; }
+	public object? MouseCursor { get; set; }
 	public long Hwnd { get; set; }
 }

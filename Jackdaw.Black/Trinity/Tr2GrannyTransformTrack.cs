@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2GrannyTransformTrack : Tr2GrannyTrack {
 	public Vector3 Translation { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Vector3 Scale { get; set; }
 	public bool CompressCurves { get; set; }
 }

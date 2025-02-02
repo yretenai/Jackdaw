@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataTransform : IRoot {
 	public Vector3 Position { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public int BoneIndex { get; set; }
 }

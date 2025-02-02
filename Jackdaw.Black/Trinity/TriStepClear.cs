@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepClear : TriRenderStep {
-	public Vector3 Color { get; set; }
+	public Vector4 Color { get; set; }
 	public float Depth { get; set; }
 	public int Stencil { get; set; }
 	public bool IsColorCleared { get; set; }

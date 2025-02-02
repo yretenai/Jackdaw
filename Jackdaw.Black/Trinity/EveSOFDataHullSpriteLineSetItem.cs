@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveSOFDataHullSpriteLineSetItem : IRoot {
 	public Vector3 Position { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public float Spacing { get; set; }
 	public float BlinkRate { get; set; }
 	public float BlinkPhase { get; set; }
@@ -21,5 +21,5 @@ public class EveSOFDataHullSpriteLineSetItem : IRoot {
 	public int BoneIndex { get; set; }
 	public bool IsCircle { get; set; }
 	public int ColorType { get; set; }
-	public IRoot? Light { get; set; }
+	public object? Light { get; set; }
 }

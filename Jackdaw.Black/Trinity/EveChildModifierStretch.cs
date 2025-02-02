@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildModifierStretch : IRoot, IEveChildTransformModifier {
-	public IRoot? Dest { get; set; }
+	public object? Dest { get; set; }
 }

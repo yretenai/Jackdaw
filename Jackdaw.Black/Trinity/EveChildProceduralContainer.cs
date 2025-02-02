@@ -8,14 +8,14 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveChildProceduralContainer : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, IListNotify, IShaderConfigurer, ITr2SoundEmitterOwner, IEveInheritPropertiesOwner {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public bool UseStaticRotation { get; set; }
-	public IRoot? SelectedObject { get; set; }
-	public IRoot? SelectionMethod { get; set; }
+	public object? SelectedObject { get; set; }
+	public object? SelectionMethod { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool Display { get; set; }

@@ -6,22 +6,22 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SkinnedObject : IRoot, ITr2Renderable, IWorldPosition, IListNotify {
-	public IRoot? Translation { get; set; }
-	public IRoot? Rotation { get; set; }
-	public IRoot? Scaling { get; set; }
+	public Vector3 Translation { get; set; }
+	public Quaternion Rotation { get; set; }
+	public Vector3 Scaling { get; set; }
 	public int CurrentLod { get; set; }
-	public IRoot? AnimationUpdater { get; set; }
-	public IRoot? WorldTransformUpdater { get; set; }
+	public object? AnimationUpdater { get; set; }
+	public object? WorldTransformUpdater { get; set; }
 	public string? Name { get; set; }
 	public TriMatrix? Transform { get; set; }
-	public IRoot? VisualModel { get; set; }
+	public object? VisualModel { get; set; }
 	public int FrameDelay { get; set; }
 	public int SkinningMatrixCount { get; set; }
 	public int RenderRigBoneCount { get; set; }
 	public bool Display { get; set; }
-	public IRoot? HighDetailModel { get; set; }
-	public IRoot? LowDetailModel { get; set; }
-	public IRoot? MediumDetailModel { get; set; }
+	public object? HighDetailModel { get; set; }
+	public object? LowDetailModel { get; set; }
+	public object? MediumDetailModel { get; set; }
 	public float EstimatedPixelDiameter { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public bool UseDynamicBounds { get; set; }

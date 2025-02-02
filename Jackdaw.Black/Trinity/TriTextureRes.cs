@@ -17,7 +17,7 @@ public class TriTextureRes : BlueAsyncRes, ITriTextureRes, ITr2TextureProvider, 
 	public int Type { get; set; }
 	public int Format { get; set; }
 	public string? Name { get; set; }
-	public IRoot? WrappedRenderTarget { get; set; }
+	public object? WrappedRenderTarget { get; set; }
 	public float CutoutX { get; set; }
 	public float CutoutY { get; set; }
 	public float CutoutWidth { get; set; }
@@ -26,5 +26,5 @@ public class TriTextureRes : BlueAsyncRes, ITriTextureRes, ITr2TextureProvider, 
 	public int OriginalResolution { get; set; }
 	public int CpuMip { get; set; }
 	public int GpuMip { get; set; }
-	public Vector3 AverageColor { get; set; }
+	public Vector4 AverageColor { get; set; }
 }

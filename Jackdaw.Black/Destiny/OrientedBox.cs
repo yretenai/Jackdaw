@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class OrientedBox : IRoot {
 	public long Id { get; set; }
-	public IRoot? Park { get; set; }
+	public object? Park { get; set; }
 	public bool IsMoribund { get; set; }
 	public double Corner_x { get; set; }
 }

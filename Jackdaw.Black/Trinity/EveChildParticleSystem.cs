@@ -8,14 +8,14 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveChildParticleSystem : IRoot, EveEntity, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Matrix4x4 LocalTransform { get; set; }
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public List<IRoot?>? ParticleEmitters { get; set; }
 	public string? Name { get; set; }
-	public IRoot? Mesh { get; set; }
+	public object? Mesh { get; set; }
 	public List<IRoot?>? ParticleSystems { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool UseDynamicLod { get; set; }

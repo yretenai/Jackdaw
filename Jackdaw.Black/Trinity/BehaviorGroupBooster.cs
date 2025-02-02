@@ -8,24 +8,24 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class BehaviorGroupBooster : IRoot, IInitialize, INotify {
 	public Vector3 BoosterOffset { get; set; }
 	public float LightRadius { get; set; }
-	public Vector3 LightColor { get; set; }
+	public Vector4 LightColor { get; set; }
 	public int AtlasIndex0 { get; set; }
 	public int AtlasIndex1 { get; set; }
 	public bool Display { get; set; }
-	public IRoot? BoosterEffect { get; set; }
-	public IRoot? HaloFlareEffect { get; set; }
+	public object? BoosterEffect { get; set; }
+	public object? HaloFlareEffect { get; set; }
 	public Vector3 HaloFlareOffset { get; set; }
 	public Vector3 HaloFlareScale { get; set; }
 	public float HaloFlareBrightness { get; set; }
-	public Vector3 HaloFlareColor { get; set; }
+	public Vector4 HaloFlareColor { get; set; }
 	public float HaloFlareNoiseAmplitude { get; set; }
 	public float HaloFlareNoiseSpeed { get; set; }
 	public int HaloFlareNoiseOctaves { get; set; }
-	public IRoot? AmbientFlareEffect { get; set; }
+	public object? AmbientFlareEffect { get; set; }
 	public Vector3 AmbientFlareOffset { get; set; }
 	public Vector3 AmbientFlareScale { get; set; }
 	public float AmbientFlareBrightness { get; set; }
-	public Vector3 AmbientFlareColor { get; set; }
+	public Vector4 AmbientFlareColor { get; set; }
 	public float AmbientFlareNoiseAmplitude { get; set; }
 	public float AmbientFlareNoiseSpeed { get; set; }
 	public int AmbientFlareNoiseOctaves { get; set; }

@@ -10,7 +10,7 @@ public class EveSOFDataHullChild : IRoot {
 	public string? RedFilePath { get; set; }
 	public int LowestLodVisible { get; set; }
 	public Vector3 Translation { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public int Id { get; set; }
 	public int GroupIndex { get; set; }

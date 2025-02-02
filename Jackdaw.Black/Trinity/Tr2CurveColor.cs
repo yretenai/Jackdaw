@@ -11,7 +11,7 @@ public class Tr2CurveColor : IRoot, ITriColorFunction, ITriFunction, ITriCurveLe
 	public Tr2CurveScalar? G { get; set; }
 	public Tr2CurveScalar? B { get; set; }
 	public Tr2CurveScalar? A { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector4 CurrentValue { get; set; }
 	public float TimeOffset { get; set; }
 	public bool SrgbOutput { get; set; }
 }

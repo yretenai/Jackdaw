@@ -7,8 +7,8 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullAnimation : IRoot {
 	public string? Name { get; set; }
-	public Vector3 StartRotationValue { get; set; }
-	public Vector3 EndRotationValue { get; set; }
+	public Vector4 StartRotationValue { get; set; }
+	public Vector4 EndRotationValue { get; set; }
 	public float StartRotationTime { get; set; }
 	public float EndRotationTime { get; set; }
 	public Vector3 StartTranslationValue { get; set; }

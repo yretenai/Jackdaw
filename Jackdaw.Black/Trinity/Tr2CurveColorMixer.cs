@@ -7,10 +7,10 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveColorMixer : IRoot, ITriColorFunction, ITriFunction, ITriCurveLength {
 	public string? Name { get; set; }
-	public Vector3 ConvertedLinearValue { get; set; }
-	public Vector3 Color1 { get; set; }
-	public Vector3 Color2 { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector4 ConvertedLinearValue { get; set; }
+	public Vector4 Color1 { get; set; }
+	public Vector4 Color2 { get; set; }
+	public Vector4 CurrentValue { get; set; }
 	public float LerpValue { get; set; }
 	public float Saturation { get; set; }
 	public float Brightness { get; set; }

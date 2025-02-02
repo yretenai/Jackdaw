@@ -9,8 +9,8 @@ public class Tr2CapsuleShapeAttributeGenerator : IRoot, ITr2AttributeGenerator {
 	public string? Name { get; set; }
 	public Vector3 PositionStart { get; set; }
 	public Vector3 PositionEnd { get; set; }
-	public Vector3 RotationStart { get; set; }
-	public Vector3 RotationEnd { get; set; }
+	public Vector4 RotationStart { get; set; }
+	public Vector4 RotationEnd { get; set; }
 	public float MinPhi { get; set; }
 	public float MaxPhi { get; set; }
 	public float MinTheta { get; set; }

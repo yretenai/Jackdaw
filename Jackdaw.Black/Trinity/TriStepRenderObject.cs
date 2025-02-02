@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderObject : TriRenderStep {
-	public IRoot? Renderable { get; set; }
-	public IRoot? EffectOverride { get; set; }
+	public object? Renderable { get; set; }
+	public object? EffectOverride { get; set; }
 	public bool RenderOpaque { get; set; }
 	public bool RenderDecal { get; set; }
 	public bool RenderTransparent { get; set; }

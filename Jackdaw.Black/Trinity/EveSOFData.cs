@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFData : IRoot {
-	public IRoot? Generic { get; set; }
+	public object? Generic { get; set; }
 	public List<IRoot?>? Hull { get; set; }
 	public List<IRoot?>? Faction { get; set; }
 	public List<IRoot?>? Race { get; set; }

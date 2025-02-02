@@ -6,18 +6,18 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2InteriorPlaceable : IRoot, ITr2Interior, ITr2InteriorDynamic, INotify, IInitialize, ITr2Renderable, ITr2Pickable, ITr2BoundingBox {
-	public IRoot? Translation { get; set; }
-	public IRoot? Rotation { get; set; }
-	public IRoot? Scaling { get; set; }
+	public Vector3 Translation { get; set; }
+	public Quaternion Rotation { get; set; }
+	public Vector3 Scaling { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool IsUnique { get; set; }
 	public TriMatrix? Transform { get; set; }
 	public string? PlaceableResPath { get; set; }
-	public IRoot? PlaceableRes { get; set; }
+	public object? PlaceableRes { get; set; }
 	public Vector3 BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	public IRoot? VariableStore { get; set; }
+	public object? VariableStore { get; set; }
 	public Vector3 ProbeOffset { get; set; }
 	public float DepthOffset { get; set; }
 }

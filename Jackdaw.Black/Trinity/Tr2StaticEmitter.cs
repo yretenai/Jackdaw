@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2StaticEmitter : IRoot, ITr2GenericEmitter, INotify, IInitialize {
 	public string? Name { get; set; }
 	public string? GeometryResourcePath { get; set; }
-	public IRoot? GeometryResource { get; set; }
-	public IRoot? ParticleSystem { get; set; }
+	public object? GeometryResource { get; set; }
+	public object? ParticleSystem { get; set; }
 	public int MeshIndex { get; set; }
 }

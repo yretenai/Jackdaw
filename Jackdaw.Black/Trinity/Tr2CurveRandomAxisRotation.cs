@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2CurveRandomAxisRotation : IRoot, ITriFunction, ITriQuaternionFunction {
 	public int Seed { get; set; }
 	public string? Name { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector4 CurrentValue { get; set; }
 	public float Period { get; set; }
 }

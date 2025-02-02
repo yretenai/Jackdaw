@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriVector4 : IRoot {
-	public Vector3 Data { get; set; }
+	public Vector4 Data { get; set; }
 }

@@ -8,5 +8,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveSOFDataGenericVariant : IRoot {
 	public string? Name { get; set; }
 	public bool IsTransparent { get; set; }
-	public IRoot? HullArea { get; set; }
+	public object? HullArea { get; set; }
 }

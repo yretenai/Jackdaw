@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRunJob : TriRenderStep {
-	public IRoot? Job { get; set; }
+	public object? Job { get; set; }
 }

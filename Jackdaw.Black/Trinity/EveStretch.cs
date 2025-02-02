@@ -11,20 +11,20 @@ public class EveStretch : IRoot, IEveTransform, IEveSpaceObject2, IEveFiringEffe
 	public bool Display { get; set; }
 	public bool Update { get; set; }
 	public bool UseCurveLod { get; set; }
-	public IRoot? Source { get; set; }
-	public IRoot? Dest { get; set; }
-	public IRoot? SourceObject { get; set; }
-	public IRoot? DestObject { get; set; }
-	public IRoot? StretchObject { get; set; }
-	public IRoot? MoveObject { get; set; }
+	public object? Source { get; set; }
+	public object? Dest { get; set; }
+	public object? SourceObject { get; set; }
+	public object? DestObject { get; set; }
+	public object? StretchObject { get; set; }
+	public object? MoveObject { get; set; }
 	public List<IRoot?>? SourceLights { get; set; }
 	public List<IRoot?>? DestLights { get; set; }
-	public IRoot? ProgressCurve { get; set; }
+	public object? ProgressCurve { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
-	public IRoot? MoveCompletion { get; set; }
+	public object? MoveCompletion { get; set; }
 	public bool MoveCompleted { get; set; }
 	public bool Moving { get; set; }
 	public long StartTime { get; set; }
-	public IRoot? Length { get; set; }
-	public IRoot? Audio { get; set; }
+	public object? Length { get; set; }
+	public object? Audio { get; set; }
 }

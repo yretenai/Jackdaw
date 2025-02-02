@@ -9,7 +9,7 @@ public class EveSOFDataPointLightAttachment : IRoot {
 	public float Saturation { get; set; }
 	public float Intensity { get; set; }
 	public Vector3 Translation { get; set; }
-	public Vector3 Rotation { get; set; }
+	public Vector4 Rotation { get; set; }
 	public float InnerScaleMultiplier { get; set; }
 	public float OuterScaleMultiplier { get; set; }
 	public float NoiseAmplitude { get; set; }

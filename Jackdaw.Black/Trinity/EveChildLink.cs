@@ -11,7 +11,7 @@ public class EveChildLink : EveChildMesh {
 	public float LinkStrength { get; set; }
 	public float LinkBarrier { get; set; }
 	public float TargetRadius { get; set; }
-	public IRoot? Target { get; set; }
+	public object? Target { get; set; }
 	public List<IRoot?>? LinkStrengthBindings { get; set; }
 	public List<IRoot?>? LinkStrengthCurves { get; set; }
 }

@@ -15,6 +15,6 @@ public class Tr2BoneMatrixCurve : IRoot, ITriFunction, IInitialize, ITriCurveLen
 	public Matrix4x4 CurrentValue { get; set; }
 	public Matrix4x4 EndValue { get; set; }
 	public List<IRoot?>? Keys { get; set; }
-	public IRoot? SkinnedObject { get; set; }
+	public object? SkinnedObject { get; set; }
 	public Matrix4x4 Transform { get; set; }
 }

@@ -6,13 +6,13 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderAtlas : TriRenderStep {
-	public IRoot? Atlas { get; set; }
-	public IRoot? Focus { get; set; }
-	public Vector3 TlTexCoord { get; set; }
-	public Vector3 BrTexCoord { get; set; }
+	public object? Atlas { get; set; }
+	public object? Focus { get; set; }
+	public Vector2 TlTexCoord { get; set; }
+	public Vector2 BrTexCoord { get; set; }
 	public bool ShowFree { get; set; }
 	public bool ShowUsed { get; set; }
-	public Vector3 BorderColour { get; set; }
-	public Vector3 FocusColour { get; set; }
-	public Vector3 FreeColour { get; set; }
+	public Vector4 BorderColour { get; set; }
+	public Vector4 FocusColour { get; set; }
+	public Vector4 FreeColour { get; set; }
 }

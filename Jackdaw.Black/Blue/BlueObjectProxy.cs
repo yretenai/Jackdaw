@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class BlueObjectProxy : IRoot, IBlueObjectProxy {
-	public IRoot? Object { get; set; }
+	public object? Object { get; set; }
 	public bool Temporary { get; set; }
 	public bool IsResident { get; set; }
-	public IRoot? Builder { get; set; }
+	public object? Builder { get; set; }
 	public int ObjectMarker { get; set; }
 }

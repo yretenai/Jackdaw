@@ -6,12 +6,12 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveCamera : IRoot, INotify {
-	public IRoot? Parent { get; set; }
-	public IRoot? Interest { get; set; }
-	public IRoot? Audio2Listener { get; set; }
+	public object? Parent { get; set; }
+	public object? Interest { get; set; }
+	public object? Audio2Listener { get; set; }
 	public float TranslationFromParent { get; set; }
-	public Vector3 RotationAroundParent { get; set; }
-	public Vector3 RotationOfInterest { get; set; }
+	public Vector4 RotationAroundParent { get; set; }
+	public Vector4 RotationOfInterest { get; set; }
 	public Vector3 Alignment { get; set; }
 	public Vector3 ExtraTranslation { get; set; }
 	public bool UseExtraTranslation { get; set; }
@@ -33,17 +33,17 @@ public class EveCamera : IRoot, INotify {
 	public float NoiseScale { get; set; }
 	public float NoiseDamp { get; set; }
 	public float CenterOffset { get; set; }
-	public IRoot? ZoomCurve { get; set; }
-	public IRoot? NoiseCurve { get; set; }
-	public IRoot? NoiseScaleCurve { get; set; }
-	public IRoot? NoiseDampCurve { get; set; }
+	public object? ZoomCurve { get; set; }
+	public object? NoiseCurve { get; set; }
+	public object? NoiseScaleCurve { get; set; }
+	public object? NoiseDampCurve { get; set; }
 	public bool Update { get; set; }
 	public Vector3 Pos { get; set; }
 	public Vector3 Intr { get; set; }
 	public Vector3 ViewVec { get; set; }
 	public Vector3 RightVec { get; set; }
 	public Vector3 UpVec { get; set; }
-	public IRoot? ProjectionMatrix { get; set; }
-	public IRoot? ViewMatrix { get; set; }
-	public IRoot? ErrorHandler { get; set; }
+	public object? ProjectionMatrix { get; set; }
+	public object? ViewMatrix { get; set; }
+	public object? ErrorHandler { get; set; }
 }

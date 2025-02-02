@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2AtlasTexture : BlueAsyncRes, IBlueResource, ICacheable {
 	public bool IsStandAlone { get; set; }
-	public IRoot? TextureRes { get; set; }
+	public object? TextureRes { get; set; }
 	public string? Name { get; set; }
 	public string? ResPath { get; set; }
 	public int X { get; set; }
@@ -16,5 +16,5 @@ public class Tr2AtlasTexture : BlueAsyncRes, IBlueResource, ICacheable {
 	public int Height { get; set; }
 	public int AtlasWidth { get; set; }
 	public int AtlasHeight { get; set; }
-	public IRoot? Atlas { get; set; }
+	public object? Atlas { get; set; }
 }

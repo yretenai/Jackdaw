@@ -9,8 +9,8 @@ public class EveVirtualCameraBehaviourVector3Orbit : EveVirtualCameraBehaviourVe
 	public float Start { get; set; }
 	public float End { get; set; }
 	public float Distance { get; set; }
-	public IRoot? DistanceScalarCurve { get; set; }
-	public IRoot? OrbitCurve { get; set; }
+	public object? DistanceScalarCurve { get; set; }
+	public object? OrbitCurve { get; set; }
 	public bool Proportional { get; set; }
 	public bool World { get; set; }
 }
