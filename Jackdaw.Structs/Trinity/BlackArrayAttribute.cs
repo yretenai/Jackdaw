@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.Trinity;
+namespace Jackdaw.Structs.Trinity;
 
 [AttributeUsage(AttributeTargets.Property)]
 public sealed class BlackArrayAttribute(int sizeOfEntry = 0) : Attribute {

@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.FSD.Schema;
+namespace Jackdaw.Structs.FSD.Schema;
 
 public record struct WwisePlaybackEvent : IFSDValue<WwisePlaybackEvent> {
 	public WwisePlaybackEvent(IFSDReader reader) {

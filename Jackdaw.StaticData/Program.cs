@@ -1,4 +1,4 @@
-﻿using CommunityToolkit.HighPerformance.Buffers;
+using CommunityToolkit.HighPerformance.Buffers;
 using Ferment;
 using Jackdaw.FSD;
 using Jackdaw.StaticData.Converters;

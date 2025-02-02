@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.Client;
+namespace Jackdaw.Structs.Client;
 
 public record StartInfo {
 	public string Version { get; set; } = "0.0";

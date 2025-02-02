@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.Client;
+namespace Jackdaw.Structs.Client;
 
 public record ClientInfo {
 	public string Build { get; set; } = null!;

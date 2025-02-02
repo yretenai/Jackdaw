@@ -1,4 +1,4 @@
-﻿using Jackdaw.Structs.Trinity.Generated;
+using Jackdaw.Structs.Trinity.Generated;
 using Newtonsoft.Json;
 
 namespace Jackdaw.StaticData.Converters;

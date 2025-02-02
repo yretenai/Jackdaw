@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.FSD;
+namespace Jackdaw.Structs.FSD;
 
 public enum FSDStructType {
 	Object,

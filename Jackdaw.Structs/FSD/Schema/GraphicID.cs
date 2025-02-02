@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.FSD.Schema;
+namespace Jackdaw.Structs.FSD.Schema;
 
 [FSDStruct(0xFBDAC5A9A509E464UL, 0xE518F3EF7E283764UL, FSDStructType.Dictionary)]
 public class GraphicID : IFSDValue<GraphicID>, IFSDDict {

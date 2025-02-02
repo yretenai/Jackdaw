@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.FSD.Schema;
+namespace Jackdaw.Structs.FSD.Schema;
 
 public record FSDString : IFSDValue<FSDString>, IFSDDict {
 	private FSDString(IFSDReader reader) {

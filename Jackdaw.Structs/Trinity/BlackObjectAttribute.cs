@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.Trinity;
+namespace Jackdaw.Structs.Trinity;
 
 [AttributeUsage(AttributeTargets.Class)]
 public sealed class BlackObjectAttribute(string name) : Attribute {

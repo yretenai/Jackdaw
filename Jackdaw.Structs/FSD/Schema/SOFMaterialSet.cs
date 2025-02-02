@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.FSD.Schema;
+namespace Jackdaw.Structs.FSD.Schema;
 
 [FSDStruct(0x9F8429EAE014BED4UL, 0x66419F7BB10C7711UL, FSDStructType.Dictionary)]
 public class SOFMaterialSet : IFSDValue<SOFMaterialSet>, IFSDDict {

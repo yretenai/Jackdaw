@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.Client;
+namespace Jackdaw.Structs.Client;
 
 public record BundleInfo {
 	public string Name { get; set; } = null!;

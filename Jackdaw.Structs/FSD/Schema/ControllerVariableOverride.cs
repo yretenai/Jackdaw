@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.FSD.Schema;
+namespace Jackdaw.Structs.FSD.Schema;
 
 public record ControllerVariableOverride : IFSDValue<ControllerVariableOverride>, IFSDDict {
 	private ControllerVariableOverride(IFSDReader reader) {

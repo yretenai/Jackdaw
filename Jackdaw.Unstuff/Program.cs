@@ -1,4 +1,4 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using DragonLib.CommandLine;
 using DragonLib.IO;
 using Jackdaw.Stuff;

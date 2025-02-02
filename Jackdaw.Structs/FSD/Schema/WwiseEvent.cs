@@ -1,4 +1,4 @@
-﻿namespace Jackdaw.Structs.FSD.Schema;
+namespace Jackdaw.Structs.FSD.Schema;
 
 [FSDStruct(0x8CA79B600F7DCB73UL, 0xED83B6A1C90F6C82, FSDStructType.Dictionary)]
 public record struct WwiseEvent : IFSDValue<WwiseEvent>, IFSDDict {

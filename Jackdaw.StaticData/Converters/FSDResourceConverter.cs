@@ -1,4 +1,4 @@
-﻿using Jackdaw.Structs.FSD.Schema;
+using Jackdaw.Structs.FSD.Schema;
 using Newtonsoft.Json;
 
 namespace Jackdaw.StaticData.Converters;
