@@ -7,7 +7,7 @@ public record ManagedBlueField : BlueField {
 		Name = field.Name.ReadString();
 		Description = field.Description.ReadString();
 		ClassType = field.ClassType.Read().Read().GetFullName();
-		Type = field.Type;
+		Type = (BlueTypeId) field.Type;
 		Offset = field.Offset;
 		Size = field.Size;
 		TypeId = field.TypeId;

@@ -77,7 +77,7 @@ internal class Program {
 			buildInterfaces.UnionWith(interfaceList);
 
 			interfaceList.Insert(0, parent);
-			typeLists[type.ClassId] = (interfaceList, type.Fields.Where(x => (BlueTypeId) x.Type is not (BlueTypeId.PythonFunction or BlueTypeId.PythonValue or BlueTypeId.PythonBinding)).Select(x => x.Name).ToList());
+			typeLists[type.ClassId] = (interfaceList, type.Fields.Where(x => x.Type is not (BlueTypeId.PythonFunction or BlueTypeId.PythonValue or BlueTypeId.PythonBinding)).Select(x => x.Name).ToList());
 		}
 
 		foreach (var type in types) {
@@ -132,7 +132,7 @@ internal class Program {
 				FindAllFields(typeLists, @interface, inheritedFields);
 			}
 
-			var fields = type.Fields.Where(x => (BlueTypeId) x.Type is not (BlueTypeId.PythonFunction or BlueTypeId.PythonValue or BlueTypeId.PythonBinding) && !inheritedFields.Contains(x.Name)).ToList();
+			var fields = type.Fields.Where(x => x.Type is not (BlueTypeId.PythonFunction or BlueTypeId.PythonValue or BlueTypeId.PythonBinding) && !inheritedFields.Contains(x.Name)).ToList();
 
 			if (fields.Count == 0) {
 				writer.WriteLine(" }");
@@ -150,7 +150,7 @@ internal class Program {
 				var fieldType = "IRoot?";
 
 				// ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
-				switch ((BlueTypeId) field.Type) {
+				switch (field.Type) {
 					case BlueTypeId.Int:
 						fieldType = "int";
 						break;
