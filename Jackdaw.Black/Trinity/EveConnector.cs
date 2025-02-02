@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveConnector : IRoot {
-	public object? SourceObject { get; set; }
-	public object? DestObject { get; set; }
+	public ITriVectorFunction? SourceObject { get; set; }
+	public ITriVectorFunction? DestObject { get; set; }
 	public int Type { get; set; }
 	public Vector3 SourcePosition { get; set; }
 	public Vector3 DestPosition { get; set; }

@@ -7,15 +7,15 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildCloud2 : IRoot, ITr2VolumetricRenderable, ITr2GeometryProvider, IInitialize, INotify, IEveSpaceObjectChild, ITr2Renderable, EveEntity {
 	public bool LightmapDirty { get; set; }
-	public object? Effect { get; set; }
-	public object? ReflectionEffect { get; set; }
+	public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? ReflectionEffect { get; set; }
 	public int NoiseTextureSize { get; set; }
 	public Vector3 Scaling { get; set; }
 	public Vector3 Translation { get; set; }
 	public Vector4 Rotation { get; set; }
 	public List<IRoot?>? Lights { get; set; }
-	public object? Lightmap { get; set; }
-	public object? Animation { get; set; }
+	public Tr2TextureReference? Lightmap { get; set; }
+	public Tr2TextureAnimation? Animation { get; set; }
 	public int ReflectionMode { get; set; }
 	public int MinVisibleQuality { get; set; }
 	public string? Name { get; set; }

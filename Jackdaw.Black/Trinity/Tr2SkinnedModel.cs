@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2SkinnedModel : Tr2Model, IInitialize, INotify {
 	public string? GeometryResPath { get; set; }
-	public object? GeometryRes { get; set; }
+	public TriGeometryRes? GeometryRes { get; set; }
 	public string? SkeletonName { get; set; }
 	public Vector3 SkinScale { get; set; }
 }

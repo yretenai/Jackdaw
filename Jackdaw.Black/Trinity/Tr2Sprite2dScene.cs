@@ -13,8 +13,8 @@ public class Tr2Sprite2dScene : IRoot, ITr2Scene, ITr2Updateable, INotify {
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? Background { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
-	public object? Ubershader2d { get; set; }
-	public object? Ubershader3d { get; set; }
+	public Tr2Effect? Ubershader2d { get; set; }
+	public Tr2Effect? Ubershader3d { get; set; }
 	public bool DefaultTextureUpdates { get; set; }
 	public Vector3 Translation { get; set; }
 	public float DisplayX { get; set; }

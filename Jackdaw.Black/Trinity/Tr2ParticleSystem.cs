@@ -13,8 +13,8 @@ public class Tr2ParticleSystem : IRoot, IInitialize, INotify, ITr2InstanceData, 
 	public int AliveCount { get; set; }
 	public List<IRoot?>? Forces { get; set; }
 	public List<IRoot?>? Constraints { get; set; }
-	public object? EmitParticleDuringLifeEmitter { get; set; }
-	public object? EmitParticleOnDeathEmitter { get; set; }
+	public ITr2GenericEmitter? EmitParticleDuringLifeEmitter { get; set; }
+	public ITr2GenericEmitter? EmitParticleOnDeathEmitter { get; set; }
 	public bool ApplyAging { get; set; }
 	public bool UpdateSimulation { get; set; }
 	public bool ApplyForce { get; set; }

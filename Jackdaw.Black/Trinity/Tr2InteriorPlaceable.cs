@@ -14,10 +14,10 @@ public class Tr2InteriorPlaceable : IRoot, ITr2Interior, ITr2InteriorDynamic, IN
 	public bool IsUnique { get; set; }
 	public TriMatrix? Transform { get; set; }
 	public string? PlaceableResPath { get; set; }
-	public object? PlaceableRes { get; set; }
+	public WodPlaceableRes? PlaceableRes { get; set; }
 	public Vector3 BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	public object? VariableStore { get; set; }
+	public Tr2VariableStore? VariableStore { get; set; }
 	public Vector3 ProbeOffset { get; set; }
 	public float DepthOffset { get; set; }
 }

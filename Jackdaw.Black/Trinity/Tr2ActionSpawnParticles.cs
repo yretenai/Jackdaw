@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2ActionSpawnParticles : IRoot, ITr2ControllerAction {
-	public object? Emitter { get; set; }
+	public Tr2DynamicEmitter? Emitter { get; set; }
 	public float Rate { get; set; }
 }

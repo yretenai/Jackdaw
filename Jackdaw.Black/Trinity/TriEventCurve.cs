@@ -13,5 +13,5 @@ public class TriEventCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
 	public float Length { get; set; }
 	public int Extrapolation { get; set; }
 	public List<IRoot?>? Keys { get; set; }
-	public object? EventListener { get; set; }
+	public IBlueEventListener? EventListener { get; set; }
 }

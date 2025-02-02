@@ -8,7 +8,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveBannerSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
 	public string? Name { get; set; }
 	public int Key { get; set; }
-	public object? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	[BlackArray]public byte[][]? Banners { get; set; }
 	public bool Display { get; set; }
 	public bool IsPickable { get; set; }

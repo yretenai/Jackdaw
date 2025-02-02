@@ -13,9 +13,9 @@ public class BackAndForth : IRoot, IBehavior {
 	public float BackAndForthWeight { get; set; }
 	public float SecondsToTurn { get; set; }
 	public float DistFromOrigin { get; set; }
-	public object? FxBehavior { get; set; }
-	public object? Target { get; set; }
-	public object? Parent { get; set; }
+	public IBehavior? FxBehavior { get; set; }
+	public EveSpaceObject2? Target { get; set; }
+	public EveSpaceObject2? Parent { get; set; }
 	public List<IRoot?>? LocatorSet { get; set; }
 	public string? LocatorSetName { get; set; }
 	public int LocatorType { get; set; }

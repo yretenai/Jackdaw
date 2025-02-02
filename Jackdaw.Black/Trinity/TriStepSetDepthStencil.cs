@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepSetDepthStencil : TriRenderStep {
-	public object? DepthStencil { get; set; }
+	public Tr2DepthStencil? DepthStencil { get; set; }
 }

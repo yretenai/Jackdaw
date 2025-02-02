@@ -9,9 +9,9 @@ public class Tr2ReflectionProbe : IRoot, INotify {
 	public bool LockPosition { get; set; }
 	public Vector3 Position { get; set; }
 	public int ReflectionSize { get; set; }
-	public object? UnfilteredTexture { get; set; }
-	public object? ReflectionTexture { get; set; }
-	public object? CustomSourceTexture { get; set; }
+	public Tr2RenderTarget? UnfilteredTexture { get; set; }
+	public Tr2RenderTarget? ReflectionTexture { get; set; }
+	public ITriTextureRes? CustomSourceTexture { get; set; }
 	public bool HdrOutput { get; set; }
 	public int RenderFrequency { get; set; }
 	public byte CurrentFrame { get; set; }

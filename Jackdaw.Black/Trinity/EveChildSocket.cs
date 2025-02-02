@@ -13,7 +13,7 @@ public class EveChildSocket : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, II
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
-	public object? Plug { get; set; }
+	public EveChildPlug? Plug { get; set; }
 	public string? Name { get; set; }
 	public string? ResPath { get; set; }
 	public bool Display { get; set; }

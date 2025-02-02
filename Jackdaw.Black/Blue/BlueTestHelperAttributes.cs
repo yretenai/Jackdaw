@@ -14,7 +14,7 @@ public class BlueTestHelperAttributes : IRoot {
 	public double MyDouble { get; set; }
 	public long MyInt64 { get; set; }
 	public string? SharedString { get; set; }
-	public object? SharedStringW { get; set; }
+	[BlackUseNamePool]public string? SharedStringW { get; set; }
 	public List<IRoot?>? MyVector { get; set; }
 	[BlackExperimental]public Dictionary<IRoot, IRoot?>? MyDict { get; set; }
 	[BlackArray]public byte[][]? MyStructureList { get; set; }

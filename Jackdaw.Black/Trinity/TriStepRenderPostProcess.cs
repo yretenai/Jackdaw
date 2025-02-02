@@ -6,25 +6,25 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderPostProcess : TriRenderStep, INotify {
-	public object? RenderTarget { get; set; }
-	public object? BloomHighPassFilter { get; set; }
-	public object? GodrayEffect { get; set; }
-	public object? SignalLossEffect { get; set; }
-	public object? DynamicExposureCreateHistogramShader { get; set; }
-	public object? DynamicExposureMergeHistogramShader { get; set; }
-	public object? DynamicExposureMeasureExposureShader { get; set; }
-	public object? DepthOfFieldCoCShader { get; set; }
-	public object? DepthOfFieldBokehBlurShader { get; set; }
-	public object? DepthOfFieldBokehFillShader { get; set; }
-	public object? FsrEasuShader { get; set; }
-	public object? FsrRCASShader { get; set; }
-	public object? FogColorEffect { get; set; }
-	public object? FogCompositeEffect { get; set; }
-	public object? TaaEffect { get; set; }
-	public object? AccumulationBuffer0 { get; set; }
-	public object? AccumulationBuffer1 { get; set; }
-	public object? TonemappingEffect { get; set; }
-	public object? Scene { get; set; }
-	public object? RenderInfo { get; set; }
+	public Tr2RenderTarget? RenderTarget { get; set; }
+	public Tr2Effect? BloomHighPassFilter { get; set; }
+	public Tr2Effect? GodrayEffect { get; set; }
+	public Tr2Effect? SignalLossEffect { get; set; }
+	public Tr2Effect? DynamicExposureCreateHistogramShader { get; set; }
+	public Tr2Effect? DynamicExposureMergeHistogramShader { get; set; }
+	public Tr2Effect? DynamicExposureMeasureExposureShader { get; set; }
+	public Tr2Effect? DepthOfFieldCoCShader { get; set; }
+	public Tr2Effect? DepthOfFieldBokehBlurShader { get; set; }
+	public Tr2Effect? DepthOfFieldBokehFillShader { get; set; }
+	public Tr2Effect? FsrEasuShader { get; set; }
+	public Tr2Effect? FsrRCASShader { get; set; }
+	public Tr2Effect? FogColorEffect { get; set; }
+	public Tr2Effect? FogCompositeEffect { get; set; }
+	public Tr2Effect? TaaEffect { get; set; }
+	public Tr2RenderTarget? AccumulationBuffer0 { get; set; }
+	public Tr2RenderTarget? AccumulationBuffer1 { get; set; }
+	public Tr2Effect? TonemappingEffect { get; set; }
+	public EveSpaceScene? Scene { get; set; }
+	public Tr2PostProcessRenderInfo? RenderInfo { get; set; }
 	public int Quality { get; set; }
 }

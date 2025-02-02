@@ -7,14 +7,14 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildCloud : IRoot, ITr2Renderable, ITr2GeometryProvider, IInitialize, INotify, IEveSpaceObjectChild {
 	public Vector4 BoundingSphere { get; set; }
-	public object? Effect { get; set; }
+	public Tr2Material? Effect { get; set; }
 	public Vector3 Scaling { get; set; }
 	public Vector3 Translation { get; set; }
 	public Vector4 Rotation { get; set; }
 	public int PreTesselationLevel { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
-	public object? Volume { get; set; }
+	public EveCloudEditableVolume? Volume { get; set; }
 	public float SortingModifier { get; set; }
 	public float MinScreenSize { get; set; }
 	public float CellScreenSize { get; set; }

@@ -8,5 +8,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2TextureAnimationParameter : IRoot, ITriEffectResourceParameter, INotify {
 	public string? Name { get; set; }
 	public string? Channel { get; set; }
-	public object? Animation { get; set; }
+	public Tr2TextureAnimation? Animation { get; set; }
 }

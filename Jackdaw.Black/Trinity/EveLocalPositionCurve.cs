@@ -7,11 +7,11 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveLocalPositionCurve : IRoot, ITriVectorFunction {
 	public int Behavior { get; set; }
-	public object? Parent { get; set; }
-	public object? TurretSetObject { get; set; }
-	public object? ParentPositionCurve { get; set; }
-	public object? ParentRotationCurve { get; set; }
-	public object? AlignPositionCurve { get; set; }
+	public IEveSpaceObject2? Parent { get; set; }
+	public EveTurretSet? TurretSetObject { get; set; }
+	public ITriVectorFunction? ParentPositionCurve { get; set; }
+	public ITriQuaternionFunction? ParentRotationCurve { get; set; }
+	public ITriVectorFunction? AlignPositionCurve { get; set; }
 	public float Offset { get; set; }
 	public int LocatorIndex { get; set; }
 	public string? LocatorSetName { get; set; }

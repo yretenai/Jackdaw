@@ -15,7 +15,7 @@ public class EveChildParticleSystem : IRoot, EveEntity, IEveSpaceObjectChild, IT
 	public bool UseSRT { get; set; }
 	public List<IRoot?>? ParticleEmitters { get; set; }
 	public string? Name { get; set; }
-	public object? Mesh { get; set; }
+	public Tr2InstancedMesh? Mesh { get; set; }
 	public List<IRoot?>? ParticleSystems { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool UseDynamicLod { get; set; }

@@ -7,8 +7,8 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataPattern : IRoot {
 	public string? Name { get; set; }
-	public object? Layer1 { get; set; }
-	public object? Layer2 { get; set; }
+	public EveSOFDataPatternLayer? Layer1 { get; set; }
+	public EveSOFDataPatternLayer? Layer2 { get; set; }
 	public List<IRoot?>? Projections { get; set; }
 	public List<IRoot?>? ApplicationGroups { get; set; }
 	public bool Sof6 { get; set; }

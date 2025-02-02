@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTacticalOverlayTrackObject : IRoot {
-	public object? TranslationCurve { get; set; }
+	public ITriVectorFunction? TranslationCurve { get; set; }
 	public Vector3 Position { get; set; }
 	public float Radius { get; set; }
 	public bool IsAggressive { get; set; }

@@ -6,24 +6,24 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveStretch3 : IRoot, INotify, IListNotify, IInitialize, IEveSpaceObject2, IEveFiringEffectElement, ITr2ControllerOwner, ITr2CurveSetOwner, ITr2DynamicBindingOwner, ITr2SoundEmitterOwner, ITr2LightOwner {
-	public object? SourceSpaceObject { get; set; }
-	public object? DestSpaceObject { get; set; }
+	public IEveSpaceObject2? SourceSpaceObject { get; set; }
+	public IEveSpaceObject2? DestSpaceObject { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool Update { get; set; }
 	public Vector3 SourcePosition { get; set; }
 	public Vector3 DestinationPosition { get; set; }
-	public object? Source { get; set; }
-	public object? Dest { get; set; }
-	public object? SourceObject { get; set; }
-	public object? DestObject { get; set; }
-	public object? StretchObject { get; set; }
-	public object? MoveObject { get; set; }
+	public ITriVectorFunction? Source { get; set; }
+	public ITriVectorFunction? Dest { get; set; }
+	public IEveSpaceObjectChild? SourceObject { get; set; }
+	public IEveSpaceObjectChild? DestObject { get; set; }
+	public IEveSpaceObjectChild? StretchObject { get; set; }
+	public IEveSpaceObjectChild? MoveObject { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public long StartTime { get; set; }
 	public List<IRoot?>? Controllers { get; set; }
 	public List<IRoot?>? DynamicBindings { get; set; }
-	public object? Length { get; set; }
-	public object? MoveProgression { get; set; }
-	public object? Audio { get; set; }
+	public TriFloat? Length { get; set; }
+	public TriFloat? MoveProgression { get; set; }
+	public ITr2Audio? Audio { get; set; }
 }

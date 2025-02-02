@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dLayer : Tr2Sprite2dContainer {
-	public object? TextureSecondary { get; set; }
+	public ITr2Sprite2dTexture? TextureSecondary { get; set; }
 	public Vector4 BackgroundColor { get; set; }
 	public Vector4 Color { get; set; }
 	public bool ClearBackground { get; set; }

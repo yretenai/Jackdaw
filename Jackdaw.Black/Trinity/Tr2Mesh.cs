@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Mesh : Tr2MeshBase, IInitialize, INotify {
 	public bool IsLoading { get; set; }
-	public object? Geometry { get; set; }
+	public TriGeometryRes? Geometry { get; set; }
 	public string? GeometryResPath { get; set; }
 	public bool DeferGeometryLoad { get; set; }
 }

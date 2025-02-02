@@ -9,5 +9,5 @@ public class Tr2StateMachineState : IRoot, IListNotify, INotify {
 	public string? Name { get; set; }
 	public List<IRoot?>? Actions { get; set; }
 	public List<IRoot?>? Transitions { get; set; }
-	public object? Finalizer { get; set; }
+	public ITr2StateMachineStateFinalizer? Finalizer { get; set; }
 }

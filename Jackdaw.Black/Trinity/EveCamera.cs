@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveCamera : IRoot, INotify {
-	public object? Parent { get; set; }
-	public object? Interest { get; set; }
-	public object? Audio2Listener { get; set; }
+	public ITriVectorFunction? Parent { get; set; }
+	public ITriVectorFunction? Interest { get; set; }
+	public IBluePlacementObserver? Audio2Listener { get; set; }
 	public float TranslationFromParent { get; set; }
 	public Vector4 RotationAroundParent { get; set; }
 	public Vector4 RotationOfInterest { get; set; }
@@ -33,17 +33,17 @@ public class EveCamera : IRoot, INotify {
 	public float NoiseScale { get; set; }
 	public float NoiseDamp { get; set; }
 	public float CenterOffset { get; set; }
-	public object? ZoomCurve { get; set; }
-	public object? NoiseCurve { get; set; }
-	public object? NoiseScaleCurve { get; set; }
-	public object? NoiseDampCurve { get; set; }
+	public ITriScalarFunction? ZoomCurve { get; set; }
+	public ITriScalarFunction? NoiseCurve { get; set; }
+	public ITriScalarFunction? NoiseScaleCurve { get; set; }
+	public ITriScalarFunction? NoiseDampCurve { get; set; }
 	public bool Update { get; set; }
 	public Vector3 Pos { get; set; }
 	public Vector3 Intr { get; set; }
 	public Vector3 ViewVec { get; set; }
 	public Vector3 RightVec { get; set; }
 	public Vector3 UpVec { get; set; }
-	public object? ProjectionMatrix { get; set; }
-	public object? ViewMatrix { get; set; }
-	public object? ErrorHandler { get; set; }
+	public TriProjection? ProjectionMatrix { get; set; }
+	public TriView? ViewMatrix { get; set; }
+	public IBlueEventListener? ErrorHandler { get; set; }
 }

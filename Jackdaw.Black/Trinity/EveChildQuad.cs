@@ -14,7 +14,7 @@ public class EveChildQuad : IRoot, IEveSpaceObjectChild, IInitialize {
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public string? Name { get; set; }
-	public object? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	public float ViewRotation { get; set; }
 	public Vector4 Color { get; set; }
 	public float Brightness { get; set; }

@@ -7,5 +7,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataHullExtensionPlacementDistributionParentMatch : IRoot, IEveSOFDataHullExtensionPlacementDistribution {
 	public string? Name { get; set; }
-	public object? ParentDescriptor { get; set; }
+	public EveSOFDNADescriptor? ParentDescriptor { get; set; }
 }

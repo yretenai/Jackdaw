@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Denoiser : IRoot, INotify {
-	public object? NoiseEstimate { get; set; }
-	public object? Intermediate { get; set; }
-	public object? Result { get; set; }
+	public Tr2RenderTarget? NoiseEstimate { get; set; }
+	public Tr2RenderTarget? Intermediate { get; set; }
+	public Tr2RenderTarget? Result { get; set; }
 	public int Radius { get; set; }
 	public int StepSize { get; set; }
 	public float DepthWeight { get; set; }

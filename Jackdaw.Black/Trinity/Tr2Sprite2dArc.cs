@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dArc : Tr2SpriteObject {
-	public object? TexturePrimary { get; set; }
-	public object? TextureSecondary { get; set; }
+	public ITr2Sprite2dTexture? TexturePrimary { get; set; }
+	public ITr2Sprite2dTexture? TextureSecondary { get; set; }
 	public float Radius { get; set; }
 	public float StartAngle { get; set; }
 	public float EndAngle { get; set; }

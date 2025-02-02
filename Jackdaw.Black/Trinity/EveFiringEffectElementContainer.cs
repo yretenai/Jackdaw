@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveFiringEffectElementContainer : IRoot, IEveSpaceObject2 {
 	public bool Active { get; set; }
-	public object? Element { get; set; }
+	public IEveFiringEffectElement? Element { get; set; }
 	public Matrix4x4 SourceTransform { get; set; }
 	public Vector3 Source { get; set; }
 	public Vector3 Destination { get; set; }

@@ -6,6 +6,6 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TexturedSpriteObject : Tr2SpriteObject {
-	public object? TexturePrimary { get; set; }
-	public object? TextureSecondary { get; set; }
+	public ITr2Sprite2dTexture? TexturePrimary { get; set; }
+	public ITr2Sprite2dTexture? TextureSecondary { get; set; }
 }

@@ -7,8 +7,8 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveTrailsSet : IRoot, IInitialize, INotify {
 	public bool Display { get; set; }
-	public object? Effect { get; set; }
-	public object? GeometryResource { get; set; }
+	public Tr2Effect? Effect { get; set; }
+	public TriGeometryRes? GeometryResource { get; set; }
 	public string? GeometryResPath { get; set; }
 	public float FadeSpeed { get; set; }
 }

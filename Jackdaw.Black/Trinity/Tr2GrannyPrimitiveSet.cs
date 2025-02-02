@@ -8,5 +8,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2GrannyPrimitiveSet : Tr2PrimitiveSet, IInitialize {
 	public bool RenderSolid { get; set; }
 	public string? GrannyResPath { get; set; }
-	public object? GrannyRes { get; set; }
+	public TriGrannyRes? GrannyRes { get; set; }
 }

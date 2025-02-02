@@ -7,5 +7,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2MaterialArea : IRoot {
 	public string? Metatype { get; set; }
-	public object? Material { get; set; }
+	public Tr2MaterialParameterStore? Material { get; set; }
 }

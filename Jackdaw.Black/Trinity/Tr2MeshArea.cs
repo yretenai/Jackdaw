@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2MeshArea : IRoot {
-	public object? Effect { get; set; }
+	public Tr2Material? Effect { get; set; }
 	public string? Name { get; set; }
 	public int Index { get; set; }
 	public int Count { get; set; }

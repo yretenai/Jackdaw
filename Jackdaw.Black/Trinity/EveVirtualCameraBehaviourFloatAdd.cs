@@ -7,5 +7,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveVirtualCameraBehaviourFloatAdd : EveVirtualCameraBehaviourFloatBase, INotify {
 	public float Value { get; set; }
-	public object? ScaleCurve { get; set; }
+	public Tr2CurveScalar? ScaleCurve { get; set; }
 }

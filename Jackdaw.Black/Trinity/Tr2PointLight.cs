@@ -18,6 +18,6 @@ public class Tr2PointLight : IRoot, Tr2Light, IInitialize, INotify {
 	public int BoneIndex { get; set; }
 	public short Flags { get; set; }
 	public string? Name { get; set; }
-	public object? LightProfile { get; set; }
+	public Tr2LightProfileRes? LightProfile { get; set; }
 	[BlackUseNamePool]public string? LightProfilePath { get; set; }
 }

@@ -11,5 +11,5 @@ public class EveSpriteSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
 	public string? Name { get; set; }
 	public float Intensity { get; set; }
 	public List<IRoot?>? Sprites { get; set; }
-	public object? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 }

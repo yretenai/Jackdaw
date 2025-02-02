@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateable, IInitialize, INotify, ITr2NamedPredicate {
-	public object? CameraAttachments { get; set; }
-	public object? ShLightingManager { get; set; }
-	public object? QuadRenderer { get; set; }
-	public object? GpuParticleSystem { get; set; }
+	public IRoot? CameraAttachments { get; set; }
+	public Tr2ShLightingManager? ShLightingManager { get; set; }
+	public Tr2QuadRenderer? QuadRenderer { get; set; }
+	public Tr2GpuParticleSystem? GpuParticleSystem { get; set; }
 	public bool Display { get; set; }
 	public bool Update { get; set; }
 	public bool EnableShadows { get; set; }
@@ -17,33 +17,33 @@ public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateabl
 	public bool BackgroundRenderingEnabled { get; set; }
 	public float PlanetScale { get; set; }
 	public float PlanetCameraScale { get; set; }
-	public object? CascadedShadowMap { get; set; }
+	public Tr2ShadowMap? CascadedShadowMap { get; set; }
 	public List<IRoot?>? BackgroundObjects { get; set; }
 	public List<IRoot?>? Planets { get; set; }
 	public List<IRoot?>? Objects { get; set; }
 	public List<IRoot?>? UiObjects { get; set; }
-	public object? WarpTunnel { get; set; }
+	public IEveSpaceObject2? WarpTunnel { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public List<IRoot?>? Lensflares { get; set; }
 	public List<IRoot?>? DistanceFields { get; set; }
-	public object? BackgroundEffect { get; set; }
+	public Tr2Effect? BackgroundEffect { get; set; }
 	public Vector4 EnvMapRotation { get; set; }
 	public string? EnvMapResPath { get; set; }
 	public string? EnvMap1ResPath { get; set; }
-	public object? EnvMap1 { get; set; }
+	public ITr2TextureProvider? EnvMap1 { get; set; }
 	public string? EnvMap2ResPath { get; set; }
-	public object? EnvMap2 { get; set; }
+	public ITr2TextureProvider? EnvMap2 { get; set; }
 	public string? EnvMap3ResPath { get; set; }
-	public object? EnvMap3 { get; set; }
+	public ITr2TextureProvider? EnvMap3 { get; set; }
 	public string? LowQualityNebulaResPath { get; set; }
 	public string? LowQualityNebulaMixResPath { get; set; }
-	public object? ColorTexture { get; set; }
-	public object? OpaqueColorTexture { get; set; }
-	public object? DepthTexture { get; set; }
-	public object? NormalTexture { get; set; }
-	public object? SSAO { get; set; }
-	public object? DistortionTexture { get; set; }
-	public object? VelocityMap { get; set; }
+	public Tr2RenderTarget? ColorTexture { get; set; }
+	public Tr2RenderTarget? OpaqueColorTexture { get; set; }
+	public Tr2DepthStencil? DepthTexture { get; set; }
+	public Tr2RenderTarget? NormalTexture { get; set; }
+	public Tr2SSAO? SSAO { get; set; }
+	public Tr2RenderTarget? DistortionTexture { get; set; }
+	public Tr2RenderTarget? VelocityMap { get; set; }
 	public Vector3 SunDirection { get; set; }
 	public Vector4 SunDiffuseColor { get; set; }
 	public Vector4 SunDiffuseColorWithDynamicLights { get; set; }
@@ -57,25 +57,25 @@ public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateabl
 	public int VisualizeMethod { get; set; }
 	public float PerFrameDebug { get; set; }
 	public List<IRoot?>? StaticParticles { get; set; }
-	public object? DataTextureMgr { get; set; }
-	public object? SunBall { get; set; }
-	public object? Ballpark { get; set; }
+	public Tr2DataTextureManager? DataTextureMgr { get; set; }
+	public ITriVectorFunction? SunBall { get; set; }
+	public IEveBallpark? Ballpark { get; set; }
 	public List<IRoot?>? ExternalParameters { get; set; }
-	public object? DebugRenderer { get; set; }
+	public Tr2DebugRenderer? DebugRenderer { get; set; }
 	public long UpdateTime { get; set; }
-	public object? Starfield { get; set; }
+	public EveStarfield? Starfield { get; set; }
 	public int TaaSubpixelPattern { get; set; }
 	public float PixelOffsetScale { get; set; }
-	public object? ImpostorManager { get; set; }
-	public object? Postprocess { get; set; }
-	public object? ReflectionProbe { get; set; }
-	public object? VirtualCameraSystem { get; set; }
+	public Tr2ImpostorManager? ImpostorManager { get; set; }
+	public Tr2PostProcess2? Postprocess { get; set; }
+	public Tr2ReflectionProbe? ReflectionProbe { get; set; }
+	public EveVirtualCameraSystem? VirtualCameraSystem { get; set; }
 	public float ReflectionIntensity { get; set; }
 	public float ReflectionBackLightingContrast { get; set; }
 	public Vector4 ReflectionBackLightingColor { get; set; }
 	public string? Name { get; set; }
-	public object? ComponentRegistry { get; set; }
-	public object? VolumetricsRenderer { get; set; }
+	public EveComponentRegistry? ComponentRegistry { get; set; }
+	public Tr2VolumetricsRenderer? VolumetricsRenderer { get; set; }
 	public bool DynamicObjectReflectionEnabled { get; set; }
 	public bool FreezeFrustum { get; set; }
 }

@@ -7,8 +7,8 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveChildParticleSphere : IRoot, IEveSpaceObjectChild, ITr2Renderable {
 	public bool IsValid { get; set; }
-	public object? Mesh { get; set; }
-	public object? ParticleSystem { get; set; }
+	public Tr2InstancedMesh? Mesh { get; set; }
+	public Tr2ParticleSystem? ParticleSystem { get; set; }
 	public List<IRoot?>? Generators { get; set; }
 	public string? Name { get; set; }
 	public float Radius { get; set; }

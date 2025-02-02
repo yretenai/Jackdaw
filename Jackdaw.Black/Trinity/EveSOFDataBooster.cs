@@ -17,10 +17,10 @@ public class EveSOFDataBooster : IRoot {
 	public Vector4 WarpHalpColor { get; set; }
 	public Vector4 TrailSize { get; set; }
 	public Vector4 Scale { get; set; }
-	public object? Shape0 { get; set; }
-	public object? Shape1 { get; set; }
-	public object? WarpShape0 { get; set; }
-	public object? WarpShape1 { get; set; }
+	public EveSOFDataBoosterShape? Shape0 { get; set; }
+	public EveSOFDataBoosterShape? Shape1 { get; set; }
+	public EveSOFDataBoosterShape? WarpShape0 { get; set; }
+	public EveSOFDataBoosterShape? WarpShape1 { get; set; }
 	public string? ShapeAtlasResPath { get; set; }
 	public string? Gradient0ResPath { get; set; }
 	public string? Gradient1ResPath { get; set; }

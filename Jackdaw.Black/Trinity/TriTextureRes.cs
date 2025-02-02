@@ -17,7 +17,7 @@ public class TriTextureRes : BlueAsyncRes, ITriTextureRes, ITr2TextureProvider, 
 	public int Type { get; set; }
 	public int Format { get; set; }
 	public string? Name { get; set; }
-	public object? WrappedRenderTarget { get; set; }
+	public Tr2RenderTarget? WrappedRenderTarget { get; set; }
 	public float CutoutX { get; set; }
 	public float CutoutY { get; set; }
 	public float CutoutWidth { get; set; }

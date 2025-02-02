@@ -6,10 +6,10 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRunComputeShader : TriRenderStep {
-	public object? Effect { get; set; }
+	public Tr2Material? Effect { get; set; }
 	public int GroupDimX { get; set; }
 	public int GroupDimY { get; set; }
 	public int GroupDimZ { get; set; }
-	public object? IndirectionBuffer { get; set; }
+	public ITr2GpuBuffer? IndirectionBuffer { get; set; }
 	public int OffsetForArgs { get; set; }
 }

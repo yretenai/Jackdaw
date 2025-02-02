@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2VolumetricsRenderer : IRoot {
-	public object? VolumeSlices { get; set; }
-	public object? DownsampledDepth { get; set; }
-	public object? BlurScratch { get; set; }
+	public Tr2TextureReference? VolumeSlices { get; set; }
+	public Tr2RenderTarget? DownsampledDepth { get; set; }
+	public Tr2RenderTarget? BlurScratch { get; set; }
 	public int Quality { get; set; }
 	public float ScaleFactor { get; set; }
 	public bool Blur { get; set; }

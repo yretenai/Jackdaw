@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepSetViewport : TriRenderStep {
-	public object? Viewport { get; set; }
+	public TriViewport? Viewport { get; set; }
 }

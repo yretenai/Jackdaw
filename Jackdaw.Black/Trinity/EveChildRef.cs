@@ -13,7 +13,7 @@ public class EveChildRef : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, IInit
 	public Matrix4x4 WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
-	public object? Child { get; set; }
+	public IEveSpaceObjectChild? Child { get; set; }
 	public string? Name { get; set; }
 	public string? ResPath { get; set; }
 	public bool LoadChildAutomatically { get; set; }

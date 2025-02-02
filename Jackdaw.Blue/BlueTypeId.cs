@@ -35,5 +35,6 @@ public enum BlueTypeId {
 	Byte = 31,
 	Short = 32,
 	PythonFunction = 33,
-	UTFString = 34,
+	UTF8String = 34,
+	UTF16String = 35,
 }

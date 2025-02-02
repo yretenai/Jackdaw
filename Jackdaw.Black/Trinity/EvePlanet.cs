@@ -11,5 +11,5 @@ public class EvePlanet : EveEffectRoot2, IEveSpaceObject2, ITr2SecondaryLightSou
 	public float MinScreenSize { get; set; }
 	public Vector4 AlbedoColor { get; set; }
 	public Vector4 EmissiveColor { get; set; }
-	public object? ZOnlyModel { get; set; }
+	public EveChildMesh? ZOnlyModel { get; set; }
 }

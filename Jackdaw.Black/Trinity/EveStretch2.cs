@@ -6,16 +6,16 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveStretch2 : IRoot, ITr2Renderable, IEveFiringEffectElement, IInitialize, INotify, ITr2LightOwner {
-	public object? Effect { get; set; }
-	public object? Start { get; set; }
-	public object? Loop { get; set; }
-	public object? End { get; set; }
-	public object? SourceLight { get; set; }
-	public object? DestinationLight { get; set; }
-	public object? SourceEmitter { get; set; }
-	public object? DestinationEmitter { get; set; }
-	public object? SourceObserver { get; set; }
-	public object? DestinationObserver { get; set; }
+	public Tr2Effect? Effect { get; set; }
+	public TriCurveSet? Start { get; set; }
+	public TriCurveSet? Loop { get; set; }
+	public TriCurveSet? End { get; set; }
+	public Tr2PointLight? SourceLight { get; set; }
+	public Tr2PointLight? DestinationLight { get; set; }
+	public Tr2GpuSharedEmitter? SourceEmitter { get; set; }
+	public Tr2GpuSharedEmitter? DestinationEmitter { get; set; }
+	public TriObserverLocal? SourceObserver { get; set; }
+	public TriObserverLocal? DestinationObserver { get; set; }
 	public string? Name { get; set; }
 	public int QuadCount { get; set; }
 	public float BoundingRadius { get; set; }

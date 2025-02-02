@@ -12,11 +12,11 @@ public class EveBoosterSet2 : IRoot, INotify, IInitialize {
 	public float AlwaysOnIntensity { get; set; }
 	public Vector3 BoosterBoundingSphereCenter { get; set; }
 	public float BoosterBoundingSphereRadius { get; set; }
-	public object? Effect { get; set; }
-	public object? EffectFar { get; set; }
-	public object? Glows { get; set; }
+	public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? EffectFar { get; set; }
+	public EveSpriteSet? Glows { get; set; }
 	public bool FlareLodEnabled { get; set; }
-	public object? Trails { get; set; }
+	public EveTrailsSet? Trails { get; set; }
 	public float MaxVel { get; set; }
 	public float WarpIntensity { get; set; }
 	public float MaxSize { get; set; }

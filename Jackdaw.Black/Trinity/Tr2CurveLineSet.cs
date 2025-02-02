@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2CurveLineSet : IRoot, ITr2Renderable, INotify, ITr2Pickable {
-	public object? LineEffect { get; set; }
-	public object? PickEffect { get; set; }
+	public Tr2Material? LineEffect { get; set; }
+	public Tr2Material? PickEffect { get; set; }
 	public Vector3 Scaling { get; set; }
 	public Vector4 Rotation { get; set; }
 	public Vector3 Translation { get; set; }

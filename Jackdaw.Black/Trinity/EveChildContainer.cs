@@ -28,9 +28,9 @@ public class EveChildContainer : IRoot, EveEntity, IEveSpaceObjectChild, ITr2Cur
 	public bool Display { get; set; }
 	public int DisplayFilter { get; set; }
 	public bool AlwaysOn { get; set; }
-	public object? InheritProperties { get; set; }
+	public EveChildInheritProperties? InheritProperties { get; set; }
 	public int Origin { get; set; }
 	public List<IRoot?>? FxAttributes { get; set; }
-	public object? AnimationOwner { get; set; }
+	public ITr2GrannyAnimationOwner? AnimationOwner { get; set; }
 	public List<IRoot?>? Attachments { get; set; }
 }

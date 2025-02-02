@@ -8,5 +8,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2PrimitiveScene : IRoot, ITr2Scene {
 	public List<IRoot?>? Primitives { get; set; }
 	public List<IRoot?>? TextLabels { get; set; }
-	public object? Manipulator { get; set; }
+	public Tr2ManipulationTool? Manipulator { get; set; }
 }

@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepPresentSwapChain : TriRenderStep {
-	public object? SwapChain { get; set; }
+	public Tr2SwapChain? SwapChain { get; set; }
 }

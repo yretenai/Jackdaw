@@ -7,6 +7,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2RuntimeTextureParameter : IRoot, ITriEffectResourceParameter, INotify {
 	public string? Name { get; set; }
-	public object? Texture { get; set; }
+	public ITr2TextureProvider? Texture { get; set; }
 	public int UavMipLevel { get; set; }
 }

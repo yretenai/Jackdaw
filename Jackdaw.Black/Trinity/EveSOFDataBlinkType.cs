@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataBlinkType : IRoot {
-	public object? Blink { get; set; }
-	public object? FadeIn { get; set; }
-	public object? FadeOut { get; set; }
-	public object? Cycle { get; set; }
+	public EveSOFDataBlink? Blink { get; set; }
+	public EveSOFDataBlink? FadeIn { get; set; }
+	public EveSOFDataBlink? FadeOut { get; set; }
+	public EveSOFDataBlink? Cycle { get; set; }
 }

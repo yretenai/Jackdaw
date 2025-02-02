@@ -9,6 +9,6 @@ public class Tr2QuaternionLerpCurve : IRoot, ITriFunction, ITriQuaternionFunctio
 	public long Start { get; set; }
 	public float Length { get; set; }
 	public Vector4 Value { get; set; }
-	public object? StartCurve { get; set; }
-	public object? EndCurve { get; set; }
+	public ITriQuaternionFunction? StartCurve { get; set; }
+	public ITriQuaternionFunction? EndCurve { get; set; }
 }

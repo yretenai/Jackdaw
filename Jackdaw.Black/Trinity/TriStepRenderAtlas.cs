@@ -6,8 +6,8 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderAtlas : TriRenderStep {
-	public object? Atlas { get; set; }
-	public object? Focus { get; set; }
+	public Tr2TextureAtlas? Atlas { get; set; }
+	public Tr2AtlasTexture? Focus { get; set; }
 	public Vector2 TlTexCoord { get; set; }
 	public Vector2 BrTexCoord { get; set; }
 	public bool ShowFree { get; set; }

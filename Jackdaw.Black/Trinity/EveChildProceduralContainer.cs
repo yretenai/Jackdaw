@@ -14,8 +14,8 @@ public class EveChildProceduralContainer : IRoot, IEveSpaceObjectChild, ITr2Curv
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public bool UseStaticRotation { get; set; }
-	public object? SelectedObject { get; set; }
-	public object? SelectionMethod { get; set; }
+	public IEveSpaceObjectChild? SelectedObject { get; set; }
+	public IEveProceduralSelectionMethod? SelectionMethod { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool Display { get; set; }

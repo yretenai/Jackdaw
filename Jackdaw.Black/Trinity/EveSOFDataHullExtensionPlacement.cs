@@ -13,7 +13,7 @@ public class EveSOFDataHullExtensionPlacement : IRoot, IEveSOFDataHullExtensionP
 	public bool ExtendsShieldEllipsoid { get; set; }
 	public bool ExtendsBoundingSphere { get; set; }
 	public Vector3 Offset { get; set; }
-	public object? Distribution { get; set; }
+	public EveSOFDataHullExtensionPlacementDistributionPlacement? Distribution { get; set; }
 	public List<IRoot?>? DistributionConditions { get; set; }
-	public object? Descriptor { get; set; }
+	public EveSOFDNADescriptor? Descriptor { get; set; }
 }

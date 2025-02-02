@@ -8,8 +8,8 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class EveEffectRoot2 : IRoot, IEveSpaceObject2, IInitialize, INotify, ITr2SecondaryLightSource, ITriTargetable, ITr2CurveSetOwner, IEveEffectChildrenOwner, ITr2ControllerOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2LightOwner, IWorldPosition, EveEntity {
 	public bool Mute { get; set; }
 	public List<IRoot?>? ExternalParameters { get; set; }
-	public object? ModelRotationCurve { get; set; }
-	public object? ModelTranslationCurve { get; set; }
+	public ITriQuaternionFunction? ModelRotationCurve { get; set; }
+	public ITriVectorFunction? ModelTranslationCurve { get; set; }
 	public Vector3 BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
 	public float SecondaryLightingSphereRadius { get; set; }
@@ -24,8 +24,8 @@ public class EveEffectRoot2 : IRoot, IEveSpaceObject2, IInitialize, INotify, ITr
 	public Vector3 Scaling { get; set; }
 	public Vector4 Rotation { get; set; }
 	public Vector3 Translation { get; set; }
-	public object? TranslationCurve { get; set; }
-	public object? RotationCurve { get; set; }
+	public ITriVectorFunction? TranslationCurve { get; set; }
+	public ITriQuaternionFunction? RotationCurve { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public Vector4 SecondaryLightingEmissiveColor { get; set; }
 	public List<IRoot?>? Observers { get; set; }

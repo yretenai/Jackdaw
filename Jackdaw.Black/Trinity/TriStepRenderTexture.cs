@@ -6,9 +6,9 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderTexture : TriRenderStep {
-	public object? Texture { get; set; }
-	public object? RenderTarget { get; set; }
-	public object? DepthStencil { get; set; }
+	public ITr2TextureProvider? Texture { get; set; }
+	public ITr2TextureProvider? RenderTarget { get; set; }
+	public ITr2TextureProvider? DepthStencil { get; set; }
 	public Vector2 TlTexCoord { get; set; }
 	public Vector2 BrTexCoord { get; set; }
 	public Vector2 TextureSize { get; set; }

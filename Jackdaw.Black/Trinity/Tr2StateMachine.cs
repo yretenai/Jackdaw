@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2StateMachine : IRoot, IListNotify, INotify {
 	public string? Name { get; set; }
 	public List<IRoot?>? States { get; set; }
-	public object? StartState { get; set; }
-	public object? CurrentState { get; set; }
+	public Tr2StateMachineState? StartState { get; set; }
+	public Tr2StateMachineState? CurrentState { get; set; }
 }

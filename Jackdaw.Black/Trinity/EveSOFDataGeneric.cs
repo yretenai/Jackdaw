@@ -24,10 +24,10 @@ public class EveSOFDataGeneric : IRoot {
 	public List<IRoot?>? PatternMaterialPrefixes { get; set; }
 	public List<IRoot?>? AreaShaders { get; set; }
 	public List<IRoot?>? DecalShaders { get; set; }
-	public object? Damage { get; set; }
-	public object? HullDamage { get; set; }
-	public object? Swarm { get; set; }
-	public object? GenericWreckMaterial { get; set; }
+	public EveSOFDataGenericDamage? Damage { get; set; }
+	public EveSOFDataGenericHullDamage? HullDamage { get; set; }
+	public EveSOFDataGenericSwarm? Swarm { get; set; }
+	public EveSOFDataAreaMaterial? GenericWreckMaterial { get; set; }
 	public EveSOFDataGenericShader? BannerShader { get; set; }
 	public List<IRoot?>? Variants { get; set; }
 	public List<IRoot?>? VisibilityGroups { get; set; }

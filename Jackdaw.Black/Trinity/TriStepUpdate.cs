@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepUpdate : TriRenderStep {
-	public object? Object { get; set; }
+	public ITr2Updateable? Object { get; set; }
 }

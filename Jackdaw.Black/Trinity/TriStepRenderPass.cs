@@ -7,5 +7,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepRenderPass : TriRenderStep {
 	public int PassType { get; set; }
-	public object? Scene { get; set; }
+	public ITr2MultiPassScene? Scene { get; set; }
 }

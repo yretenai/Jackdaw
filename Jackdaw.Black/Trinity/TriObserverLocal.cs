@@ -10,5 +10,5 @@ public class TriObserverLocal : IRoot, ITriObserverLocal {
 	public string? Name { get; set; }
 	public Vector3 Front { get; set; }
 	public Vector3 Position { get; set; }
-	public object? Observer { get; set; }
+	public IBluePlacementObserver? Observer { get; set; }
 }

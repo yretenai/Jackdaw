@@ -11,13 +11,13 @@ public class EveChildLineSet : IRoot, IEveSpaceObjectChild, IInitialize, INotify
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool AlwaysOn { get; set; }
-	public object? LineSet { get; set; }
+	public EveCurveLineSet? LineSet { get; set; }
 	public int RenderType { get; set; }
 	public Vector4 BaseColor { get; set; }
 	public Vector4 AnimColor { get; set; }
 	public float Brightness { get; set; }
 	public bool AdditiveBatches { get; set; }
-	public object? Mesh { get; set; }
+	public Tr2Mesh? Mesh { get; set; }
 	public float ScrollSpeed { get; set; }
 	public float CurrentScreenSize { get; set; }
 	public float MinScreenSize { get; set; }

@@ -10,10 +10,10 @@ public class Tr2GrannyAnimation : IRoot, IInitialize, ITr2AnimationUpdater {
 	public string? Model { get; set; }
 	public string? ResPath_ { get; set; }
 	public string? Model_ { get; set; }
-	public object? GrannyRes { get; set; }
+	public TriGrannyRes? GrannyRes { get; set; }
 	public GrannyBoneOffset? BoneOffset { get; set; }
 	public bool DebugRenderSkeleton { get; set; }
 	public bool DebugRenderJointNames { get; set; }
 	public bool AnimationEnabled { get; set; }
-	public object? EventListener { get; set; }
+	public IBlueEventListener? EventListener { get; set; }
 }

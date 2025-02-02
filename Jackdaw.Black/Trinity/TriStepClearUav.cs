@@ -6,7 +6,7 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class TriStepClearUav : TriRenderStep {
-	public object? Buffer { get; set; }
+	public ITr2GpuBuffer? Buffer { get; set; }
 	public bool ClearWithFloat { get; set; }
 	public Vector4 FloatValue { get; set; }
 	public int BitValue0 { get; set; }

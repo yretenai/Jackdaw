@@ -21,5 +21,5 @@ public class EveSOFDataHullSpriteLineSetItem : IRoot {
 	public int BoneIndex { get; set; }
 	public bool IsCircle { get; set; }
 	public int ColorType { get; set; }
-	public object? Light { get; set; }
+	public EveSOFDataPointLightAttachment? Light { get; set; }
 }

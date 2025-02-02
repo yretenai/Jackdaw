@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class Tr2SwapChain : IRoot {
 	public int Width { get; set; }
 	public int Height { get; set; }
-	public object? BackBuffer { get; set; }
-	public object? DepthStencilBuffer { get; set; }
+	public Tr2RenderTarget? BackBuffer { get; set; }
+	public Tr2DepthStencil? DepthStencilBuffer { get; set; }
 }

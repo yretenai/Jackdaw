@@ -15,21 +15,21 @@ public class EveImpactOverlay : IRoot {
 	public float RenderPriority { get; set; }
 	public float OverallShieldImpact { get; set; }
 	public int DataTextureBlockID { get; set; }
-	public object? Mesh { get; set; }
+	public Tr2MeshBase? Mesh { get; set; }
 	public bool ShieldIsEllipsoid { get; set; }
 	public int MaxShieldImpacts { get; set; }
 	public float ShieldImpactColorFade { get; set; }
 	public float ShieldImpactParentSize { get; set; }
-	public object? ArmorDamageShader { get; set; }
+	public Tr2Effect? ArmorDamageShader { get; set; }
 	public long ArmorImpactGoalCount { get; set; }
 	public float ArmorImpactParentSize { get; set; }
-	public object? ArmorImpactEmitter { get; set; }
+	public Tr2GpuUniqueEmitter? ArmorImpactEmitter { get; set; }
 	public float HullDamageFactor { get; set; }
-	public object? HullDamageFlickerCurve { get; set; }
-	public object? HullImpactEmitter { get; set; }
-	public object? ShieldHardening { get; set; }
-	public object? ShieldBoosting { get; set; }
-	public object? ArmorRepairing { get; set; }
-	public object? ArmorHardening { get; set; }
-	public object? HullRepairing { get; set; }
+	public TriPerlinCurve? HullDamageFlickerCurve { get; set; }
+	public Tr2GpuUniqueEmitter? HullImpactEmitter { get; set; }
+	public Tr2ScalarFader? ShieldHardening { get; set; }
+	public Tr2ScalarFader? ShieldBoosting { get; set; }
+	public Tr2ScalarFader? ArmorRepairing { get; set; }
+	public Tr2ScalarFader? ArmorHardening { get; set; }
+	public Tr2ScalarFader? HullRepairing { get; set; }
 }

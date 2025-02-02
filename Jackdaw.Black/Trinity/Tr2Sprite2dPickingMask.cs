@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dPickingMask : IRoot {
 	[BlackUseNamePool]public string? MaskPath { get; set; }
-	public object? Mask { get; set; }
+	public Tr2ImageRes? Mask { get; set; }
 	public int Channel { get; set; }
 	public float Threshold { get; set; }
 	public int LeftEdge { get; set; }

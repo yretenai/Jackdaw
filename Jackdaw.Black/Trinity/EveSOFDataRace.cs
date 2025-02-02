@@ -7,8 +7,8 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSOFDataRace : IRoot {
 	public string? Name { get; set; }
-	public object? Booster { get; set; }
+	public EveSOFDataBooster? Booster { get; set; }
 	public int HullPrimaryHeatColorType { get; set; }
 	public int HullReactorHeatColorType { get; set; }
-	public object? Damage { get; set; }
+	public EveSOFDataRaceDamage? Damage { get; set; }
 }

@@ -6,5 +6,5 @@ using System.Numerics;
 namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2Sprite2dRenderJob : Tr2SpriteObjectBase, ITr2SpriteObject {
-	public object? RenderJob { get; set; }
+	public TriRenderJob? RenderJob { get; set; }
 }

@@ -12,6 +12,6 @@ public class Tr2ActionAnimateValue : IRoot, ITr2ControllerAction, ITr2Updateable
 	public object? Destination { get; set; }
 	public string? Attribute { get; set; }
 	public string? Value { get; set; }
-	public object? Curve { get; set; }
+	public ITriScalarFunction? Curve { get; set; }
 	public bool DelayBinding { get; set; }
 }

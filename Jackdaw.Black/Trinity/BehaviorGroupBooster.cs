@@ -12,8 +12,8 @@ public class BehaviorGroupBooster : IRoot, IInitialize, INotify {
 	public int AtlasIndex0 { get; set; }
 	public int AtlasIndex1 { get; set; }
 	public bool Display { get; set; }
-	public object? BoosterEffect { get; set; }
-	public object? HaloFlareEffect { get; set; }
+	public Tr2Effect? BoosterEffect { get; set; }
+	public Tr2Effect? HaloFlareEffect { get; set; }
 	public Vector3 HaloFlareOffset { get; set; }
 	public Vector3 HaloFlareScale { get; set; }
 	public float HaloFlareBrightness { get; set; }
@@ -21,7 +21,7 @@ public class BehaviorGroupBooster : IRoot, IInitialize, INotify {
 	public float HaloFlareNoiseAmplitude { get; set; }
 	public float HaloFlareNoiseSpeed { get; set; }
 	public int HaloFlareNoiseOctaves { get; set; }
-	public object? AmbientFlareEffect { get; set; }
+	public Tr2Effect? AmbientFlareEffect { get; set; }
 	public Vector3 AmbientFlareOffset { get; set; }
 	public Vector3 AmbientFlareScale { get; set; }
 	public float AmbientFlareBrightness { get; set; }

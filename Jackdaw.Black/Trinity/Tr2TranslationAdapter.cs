@@ -7,7 +7,7 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class Tr2TranslationAdapter : IRoot, ITriVectorFunction {
 	public Vector4 RotationOffset { get; set; }
-	public object? Curve { get; set; }
+	public ITriVectorFunction? Curve { get; set; }
 	public Vector3 Value { get; set; }
 	public Vector3 CurrentValue { get; set; }
 }

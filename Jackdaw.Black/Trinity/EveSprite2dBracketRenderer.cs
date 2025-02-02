@@ -7,5 +7,5 @@ namespace Jackdaw.Structs.Trinity.Generated;
 
 public class EveSprite2dBracketRenderer : Tr2SpriteObject {
 	public List<IRoot?>? Brackets { get; set; }
-	public object? IconAtlas { get; set; }
+	public Tr2AtlasTexture? IconAtlas { get; set; }
 }

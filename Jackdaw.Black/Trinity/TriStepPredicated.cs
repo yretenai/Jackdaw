@@ -8,6 +8,6 @@ namespace Jackdaw.Structs.Trinity.Generated;
 public class TriStepPredicated : TriRenderStep {
 	public bool PredicateValue { get; set; }
 	public string? PredicateName { get; set; }
-	public object? Predicate { get; set; }
-	public object? Step { get; set; }
+	public ITr2NamedPredicate? Predicate { get; set; }
+	public TriRenderStep? Step { get; set; }
 }

@@ -13,7 +13,7 @@ public class EveSOFDataHullBannerSetItem : IRoot {
 	public int Usage { get; set; }
 	public Vector3 Position { get; set; }
 	public Vector4 Rotation { get; set; }
-	public object? Light { get; set; }
+	public EveSOFDataPointLightAttachment? Light { get; set; }
 	public int BoneIndex { get; set; }
 	public bool MaintainAspectRatio { get; set; }
 }

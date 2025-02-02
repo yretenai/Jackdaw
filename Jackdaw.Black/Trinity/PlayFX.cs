@@ -10,6 +10,6 @@ public class PlayFX : IRoot, IBehavior {
 	public float BehaviorWeight { get; set; }
 	public int Sec { get; set; }
 	public int BehaviorPriority { get; set; }
-	public object? FiringEffect { get; set; }
+	public IEveFiringEffectElement? FiringEffect { get; set; }
 	public List<IRoot?>? GeneratedFiringEffects { get; set; }
 }
