@@ -1,15 +1,13 @@
-﻿using System.Text;
+﻿using System.Diagnostics;
+using System.Text;
 using System.Text.Json;
-using Jackdaw.Structs.Trinity.Schema;
+using Jackdaw.Blue;
 using Serilog;
 
 namespace Jackdaw.Codegen.Black;
 
 internal class Program {
-	private const string ARRAY_REF = "BlueInterfaceIID<struct IList>";
-	private const string DICT_REF = "BlueInterfaceIID<struct IBlueDict>";
-	private const string STRUCT_LIST_REF = "BlueInterfaceIID<struct IBlueStructureList>";
-	private static readonly string[] IGNORE = ["IWeakObject", "IRoot", "_ClassDef", "object"];
+	private static readonly string[] IgnoredTypes = ["IWeakObject", "IRoot", "_ClassDef", "object", "IBlueStructureList", "IList"];
 
 	// ReSharper disable once UnusedMember.Local
 	private static string FormatComment(string comment, string indent) {
@@ -53,198 +51,199 @@ internal class Program {
 
 		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
-		var types = JsonSerializer.Deserialize<BlackSchemaRoot>(File.ReadAllText(args[0]))!;
+		var types = JsonSerializer.Deserialize<List<BlueClass>>(File.ReadAllText(args[0]))!;
 		var output = args[1];
 
-		var hasTypes = types.Types.Values.Where(x => x.Address != 0).Select(x => types.CLSIDs[x.Address].Name).ToHashSet();
-		var hasTypesReal = types.Types.Values.Where(x => x.Address != 0 && x.Properties.Count > 0).Select(x => types.CLSIDs[x.Address].Name).ToHashSet();
-		var buildInterfaces = new HashSet<string>();
-		foreach (var type in types.Types.Values) {
-			type.Description = type.Description.Trim();
-			if (type.Address is 0) {
-				continue;
+		var buildInterfaces = new HashSet<string> {
+			"IRoot",
+		};
+		var realClasses = new HashSet<string>();
+		var typeLists = new Dictionary<string, (List<string> Interfaces, List<string> Fields)>();
+
+		foreach (var type in types) {
+			var interfaces = type.Interfaces.Select(x => x.Name).ToList();
+			var parent = type.ClassId == "IRoot" ? "" : "IRoot";
+			if (type.Parent.Length > 0) {
+				parent = type.Parent.Split('.', StringSplitOptions.TrimEntries)[^1];
+			} else if (interfaces.Contains("EveChildContainer")) {
+				parent = "EveChildContainer";
+			} else if (interfaces.Contains("Tr2AudioStretchBase")) {
+				parent = "Tr2AudioStretchBase";
+			} else if (interfaces.Contains("EveSOFDataHullLightSetItem")) {
+				parent = "EveSOFDataHullLightSetItem";
 			}
+
+			var interfaceList = interfaces.Where(x => x != parent && x != "IRoot").ToList();
+			buildInterfaces.UnionWith(interfaceList);
+
+			interfaceList.Insert(0, parent);
+			typeLists[type.ClassId] = (interfaceList, type.Fields.Where(x => (BlueTypeId) x.Type is not (BlueTypeId.PythonFunction or BlueTypeId.PythonValue or BlueTypeId.PythonBinding)).Select(x => x.Name).ToList());
+		}
+
+		foreach (var type in types) {
+			type.Description = type.Description.Trim();
 
 			var group = "class";
-			var name = types.CLSIDs[type.Address].Name;
-			if (IGNORE.Contains(name)) {
+			var name = type.ClassId;
+			if (IgnoredTypes.Contains(name)) {
 				continue;
 			}
 
-			if (type.Properties.Count == 0 && type.Inherit == 0 && !type.Interfaces.Select(x => types.IIDs[x]).Where(x => !IGNORE.Contains(x) && x != name).Any(x => hasTypesReal.Contains(x))) {
+			var ns = "Blue";
+			if (type.Id.Contains('.', StringComparison.Ordinal)) {
+				var parts = type.Id.Split('.', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+				if (parts.Length != 2) {
+					Debugger.Break();
+				}
+
+				ns = parts[0].Trim('_');
+				ns = ns switch {
+					     "d3dinfo" => "D3DInfo",
+					     "evelocalization" => "EveLocalization",
+					     "eveplanetresources" => "EvePlanetResources",
+					     "pyfsd" => "FSD",
+					     "videoplayer" => "VideoPlayer",
+					     _ => char.ToUpper(ns[0]) + ns[1..],
+				     };
+			}
+
+			var nsOutput = ns.Length == 0 ? output : Path.Combine(output, ns);
+			Directory.CreateDirectory(nsOutput);
+
+			realClasses.Add(name);
+
+			if (type.Fields.Count == 0 && type.Parent.Length == 0) {
 				group = "interface";
 			}
 
-			var interfaceList = type.Interfaces.Select(x => types.IIDs[x]).Where(x => !IGNORE.Contains(x) && x != name).OrderBy(x => !hasTypes.Contains(x)).ToList();
-			buildInterfaces.UnionWith(interfaceList.Where(x => !hasTypes.Contains(x)));
-			if (types.CLSIDs.TryGetValue(type.Inherit, out var inherit)) {
-				interfaceList.Insert(0, inherit.Name);
-			} else if (types.Types.TryGetValue(type.Inherit, out var inheritType)) {
-				interfaceList.Insert(0, types.CLSIDs[inheritType.Address].Name);
-			}
-
-			var interfaceListString = interfaceList.Count == 0 ? "" : $": {string.Join(", ", interfaceList.Distinct())} ";
+			var interfaces = typeLists[name].Interfaces;
+			var interfaceListString = $": {string.Join(", ", interfaces.Distinct())} ";
 			Log.Information("Generating {Type} {InterfaceList}", name, interfaceListString);
 
-			using var writer = new StreamWriter(Path.Combine(output, $"{name}.cs"));
-			writer.WriteLine("/// <auto-generated/>\n#nullable enable\n\nnamespace Jackdaw.Structs.Trinity.Generated;\n");
+			using var writer = new StreamWriter(Path.Combine(nsOutput, $"{name}.cs"));
+			writer.WriteLine("/// <auto-generated/>\n#nullable enable\n\nusing System.Numerics;\n\nnamespace Jackdaw.Structs.Trinity.Generated;\n");
 			// if (!string.IsNullOrWhiteSpace(type.Description)) {
 			//     writer.WriteLine(FormatComment(type.Description, string.Empty));
 			// }
 			writer.Write($"public {group} {name} {interfaceListString}{{");
 
-			if (type.Properties.Count == 0) {
+			var inheritedFields = new HashSet<string>();
+			foreach (var @interface in interfaces) {
+				FindAllFields(typeLists, @interface, inheritedFields);
+			}
+
+			var fields = type.Fields.Where(x => (BlueTypeId) x.Type is not (BlueTypeId.PythonFunction or BlueTypeId.PythonValue or BlueTypeId.PythonBinding) && !inheritedFields.Contains(x.Name)).ToList();
+
+			if (fields.Count == 0) {
 				writer.WriteLine(" }");
 				continue;
 			}
 
 			writer.WriteLine();
 
-			foreach (var field in type.Properties.OrderBy(x => string.IsNullOrEmpty(x.Description)).DistinctBy(x => x.Name)) {
+			foreach (var field in fields.OrderBy(x => x.Offset).DistinctBy(x => x.Name)) {
 				field.Description = field.Description.Trim();
 
 				var fieldName = FixName(field.Name);
 
-				var iidType = "object";
-				if (ulong.TryParse(field.IID, out var iid) && types.IIDs.TryGetValue(iid, out var cachedIidType)) {
-					iidType = cachedIidType;
-				}
-
 				var attribute = string.Empty;
-				var fieldType = "object";
+				var fieldType = "IRoot?";
+
 				// ReSharper disable once SwitchStatementMissingSomeEnumCasesNoDefault
-				switch (field.Type) {
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Int:
+				switch ((BlueTypeId) field.Type) {
+					case BlueTypeId.Int:
 						fieldType = "int";
 						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Single:
+					case BlueTypeId.Single:
 						fieldType = "float";
 						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Double:
+					case BlueTypeId.Double:
 						fieldType = "double";
 						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Boolean:
+					case BlueTypeId.Boolean:
 						fieldType = "bool";
 						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.PureRef:
-						switch (field.IID) {
-							case ARRAY_REF:
-								fieldType = "object[]?";
+					case BlueTypeId.Long:
+						fieldType = "long";
+						break;
+					case BlueTypeId.FloatArray:
+						fieldType = field.Size switch {
+							            8 => "Vector3",
+							            12 => "Vector3",
+							            16 => "Vector3",
+							            24 => "Matrix3x2",
+							            36 => "Matrix3x3",
+							            64 => "Matrix4x4",
+							            _ => "IRoot?",
+						            };
+						break;
+					case BlueTypeId.String:
+					case BlueTypeId.UTFString:
+						fieldType = "string?";
+						break;
+					case BlueTypeId.WString:
+						fieldType = "string?";
+						attribute = "BlackUseNamePool";
+						break;
+					case BlueTypeId.Buffer:
+						fieldType = "int[]?";
+						attribute = "BlackArray(4)";
+						break;
+					case BlueTypeId.Byte:
+						fieldType = "byte";
+						break;
+					case BlueTypeId.Short:
+						fieldType = "short";
+						break;
+					case BlueTypeId.Collection:
+						switch (field.ClassType) {
+							case "IList":
+								fieldType = "List<IRoot?>?";
 								break;
-							case DICT_REF:
-								fieldType = "object?";
-								attribute = "[BlackExperimental] ";
+							case "IBlueDict":
+								fieldType = "Dictionary<IRoot, IRoot?>?";
+								attribute = "BlackExperimental";
 								break;
-							case STRUCT_LIST_REF:
+							case "IBlueStructureList":
 								fieldType = "byte[][]?";
-								attribute = "[BlackPureRef] ";
+								attribute = "BlackArray";
 								break;
 							default: {
-								fieldType = iidType + "?";
-								attribute = "[BlackPureRef] ";
-								if (!hasTypes.Contains(iidType)) {
-									buildInterfaces.Add(iidType);
-								}
-
+								fieldType = field.ClassType + "?";
 								break;
 							}
 						}
 
 						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Object:
-						fieldType = iidType + "?";
-						if (!hasTypes.Contains(iidType)) {
-							buildInterfaces.Add(iidType);
-						}
-
-						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Long:
-						fieldType = "long";
-						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.PythonObject:
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.PythonWeakref:
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.PythonFunction:
-						fieldType = "object?";
-						attribute = "[BlackExperimental] ";
-						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.FloatArray:
-						fieldType = "float[]?";
-						attribute = $"[BlackArraySize({field.Size / 4})] ";
-						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.String:
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.UTFString:
-						fieldType = "string?";
-						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.WString:
-						fieldType = "string?";
-						attribute = "[BlackUseNamePool] ";
-						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Buffer:
-						fieldType = "int[]?";
-						attribute = "[BlackPureRef(4)] ";
-						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Byte:
-						fieldType = "byte";
-						break;
-					case Structs.Trinity.Schema.BlackSchemaPropertyType.Short:
-						fieldType = "short";
-						break;
 				}
 
-				// if (!string.IsNullOrWhiteSpace(field.Description)) {
-				//     writer.WriteLine(FormatComment(field.Description, "    "));
-				// }
+				attribute = !string.IsNullOrEmpty(attribute) ? $"[{attribute}]" : string.Empty;
 
-				writer.WriteLine($"    {attribute}public {fieldType} {fieldName} {{ get; set; }}");
+				writer.WriteLine($"\t{attribute}public {fieldType} {fieldName} {{ get; set; }} // Offset: {field.Offset}, Size: {field.Size}, Type: {(BlueTypeId) field.Type}, Id: {field.TypeId}, Class: {field.ClassType}");
 			}
 
 			writer.WriteLine("}");
 		}
 
 		foreach (var buildInterface in buildInterfaces) {
-			if (IGNORE.Contains(buildInterface)) {
+			if (realClasses.Contains(buildInterface)) {
 				continue;
 			}
 
-			File.WriteAllText(Path.Combine(output, $"{buildInterface}.cs"), $"/// <auto-generated/>\nnamespace Jackdaw.Structs.Trinity.Generated;\n\npublic interface {buildInterface} {{ }}\n");
+			File.WriteAllText(Path.Combine(output, "Blue", $"{buildInterface}.cs"), $"/// <auto-generated/>\nnamespace Jackdaw.Structs.Trinity.Generated;\n\npublic interface {buildInterface} {{ }}\n");
 		}
 	}
 
-	internal enum BlackSchemaPropertyType {
-		None,
-		Int = 1,
-		Single = 2,
-		Double = 3,
-		Boolean = 4,
-		PureRef = 5,
-		Object = 6,
-		Unused7 = 7,
-		Unused8 = 8,
-		Long = 9,
-		Unused10 = 10,
-		PythonWeakref = 11,
-		Unused12 = 12,
-		Unused13 = 13,
-		Unused14 = 14,
-		FloatArray = 15,
-		Unused16 = 16,
-		Unused17 = 17,
-		Unused18 = 18,
-		Unused19 = 19,
-		Unused20 = 20,
-		PythonObject = 21,
-		Unused22 = 22,
-		String = 23,
-		WString = 24,
-		Buffer = 25,
-		Unused26 = 26,
-		Unused27 = 27,
-		Unused28 = 28,
-		Unused29 = 29,
-		Unused30 = 30,
-		Byte = 31,
-		Short = 32,
-		PythonFunction = 33,
-		InlineString = 34,
+	private static void FindAllFields(Dictionary<string, (List<string> Interfaces, List<string> Fields)> typeLists, string name, HashSet<string> inheritedFields) {
+		if (name == "IRoot" || !typeLists.TryGetValue(name, out var value)) {
+			return;
+		}
+
+		var (inherited, fields) = value;
+		inheritedFields.UnionWith(fields);
+
+		foreach (var @interface in inherited) {
+			FindAllFields(typeLists, @interface, inheritedFields);
+		}
 	}
 }

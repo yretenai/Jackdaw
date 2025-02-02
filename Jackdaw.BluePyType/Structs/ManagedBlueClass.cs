@@ -1,6 +1,8 @@
+using Jackdaw.Blue;
+
 namespace Jackdaw.BluePyType.Structs;
 
-public class ManagedBlueClass {
+public class ManagedBlueClass : Blue.BlueClass {
 	public ManagedBlueClass(BlueClass cls) {
 		Hash = cls.Hash;
 		Id = cls.Id.Read().GetFullName();
@@ -16,7 +18,7 @@ public class ManagedBlueClass {
 			var link = pyType.Interfaces.Read(index++);
 			lastInterfaceType = link.Id.Read().Read().GetFullName();
 			if (lastInterfaceType != ClassId && lastInterfaceType != Id && lastInterfaceType.Length > 0) {
-				Interfaces.Add(new ManagedBlueInterface(lastInterfaceType, link.Flags));
+				Interfaces.Add(new BlueInterface(lastInterfaceType, link.Flags));
 			}
 		} while (lastInterfaceType.Length > 0);
 
@@ -29,15 +31,4 @@ public class ManagedBlueClass {
 			}
 		} while (field.Type != 0);
 	}
-
-	public uint Hash { get; set; }
-	public string Id { get; set; }
-	public string PythonId { get; set; }
-	public string ClassId { get; set; }
-	public string Description { get; set; }
-	public string Parent { get; set; }
-	public List<ManagedBlueInterface> Interfaces { get; set; } = [];
-	public List<ManagedBlueField> Fields { get; set; } = [];
-
-	public override string ToString() => Id;
 }

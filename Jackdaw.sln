@@ -36,6 +36,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Knit.glTF", "Knit\Knit.glTF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Unstuff", "Jackdaw.Unstuff\Jackdaw.Unstuff.csproj", "{64D6C478-9398-4636-B88D-21797FC8D62C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Blue", "Jackdaw.Blue\Jackdaw.Blue.csproj", "{705C5C0F-A749-49FB-A968-959B7EEAE987}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Black", "Jackdaw.Black\Jackdaw.Black.csproj", "{A7005BD4-8F68-4953-B29E-D7BED43FBF9D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +97,14 @@ Global
 		{64D6C478-9398-4636-B88D-21797FC8D62C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64D6C478-9398-4636-B88D-21797FC8D62C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64D6C478-9398-4636-B88D-21797FC8D62C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{705C5C0F-A749-49FB-A968-959B7EEAE987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{705C5C0F-A749-49FB-A968-959B7EEAE987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{705C5C0F-A749-49FB-A968-959B7EEAE987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{705C5C0F-A749-49FB-A968-959B7EEAE987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7005BD4-8F68-4953-B29E-D7BED43FBF9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7005BD4-8F68-4953-B29E-D7BED43FBF9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7005BD4-8F68-4953-B29E-D7BED43FBF9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7005BD4-8F68-4953-B29E-D7BED43FBF9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

@@ -8,4 +8,8 @@
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	</PropertyGroup>
 
+	<ItemGroup>
+		<ProjectReference Include="..\Jackdaw.Blue\Jackdaw.Blue.csproj"/>
+	</ItemGroup>
+
 </Project>

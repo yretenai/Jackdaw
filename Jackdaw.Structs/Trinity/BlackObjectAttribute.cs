@@ -1,9 +1,8 @@
 ﻿namespace Jackdaw.Structs.Trinity;
 
 [AttributeUsage(AttributeTargets.Class)]
-public sealed class BlackObjectAttribute : Attribute {
-	public BlackObjectAttribute(string name) => Name = name;
-	public string Name { get; }
+public sealed class BlackObjectAttribute(string name) : Attribute {
+	public string Name { get; } = name;
 
 	public override bool Equals(object? obj) => obj is BlackObjectAttribute attribute && Name == attribute.Name;
 
