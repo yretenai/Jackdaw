@@ -32,29 +32,29 @@ internal class BeClasses {
 		var root = new BlueClasses();
 		IMemoryHandler.Handler.ReadBytes(beClassesAddr, MemoryMarshal.AsBytes(new Span<BlueClasses>(ref root)), out _);
 		var handledAddresses = new HashSet<nint> {
-			root.Classes.Address.Address,
+			root.Classes.Address,
 		};
 
-		HandleClassLinks(root.Classes.Address.Read(), handledAddresses);
+		HandleClassLinks(root.Classes.Address.Read<BlueListNode>(), handledAddresses);
 	}
 
 	public List<ManagedBlueClass> Classes { get; } = [];
 
 	private void HandleClassLinks(BlueListNode node, HashSet<nint> handledAddresses) {
-		if (handledAddresses.Add(node.Left.Address)) {
-			var cls = node.Left.Read();
+		if (handledAddresses.Add(node.Left)) {
+			var cls = node.Left.Read<BlueClass>();
 			Classes.Add(new ManagedBlueClass(cls));
 			HandleClassLinks(cls.Node, handledAddresses);
 		}
 
-		if (handledAddresses.Add(node.Right.Address)) {
-			var cls = node.Right.Read();
+		if (handledAddresses.Add(node.Right)) {
+			var cls = node.Right.Read<BlueClass>();
 			Classes.Add(new ManagedBlueClass(cls));
 			HandleClassLinks(cls.Node, handledAddresses);
 		}
 
-		if (handledAddresses.Add(node.Up.Address)) {
-			var cls = node.Up.Read();
+		if (handledAddresses.Add(node.Up)) {
+			var cls = node.Up.Read<BlueClass>();
 			Classes.Add(new ManagedBlueClass(cls));
 			HandleClassLinks(cls.Node, handledAddresses);
 		}

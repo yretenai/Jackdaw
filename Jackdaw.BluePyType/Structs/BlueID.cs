@@ -4,14 +4,14 @@ namespace Jackdaw.BluePyType.Structs;
 
 [StructLayout(LayoutKind.Sequential, Pack = 8)]
 public record struct BlueID {
-	public BluePtr<byte> Namespace { get; set; }
-	public BluePtr<byte> Name { get; set; }
+	public nint Namespace { get; set; }
+	public nint Name { get; set; }
 	public uint Hash { get; set; }
 
 	public void GetValues(out string ns, out string name) {
 		name = Name.ReadString();
 
-		if (Namespace.IsZero) {
+		if (Namespace == nint.Zero) {
 			var dot = name.IndexOf('.', StringComparison.Ordinal);
 			if (dot > 0) {
 				ns = name[..dot];

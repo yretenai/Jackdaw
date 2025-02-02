@@ -7,8 +7,8 @@ public record struct BlueClass {
 	public BlueListNode Node { get; set; }
 	public uint Unknown1 { get; set; }
 	public uint Unknown2 { get; set; }
-	public BluePtr<BlueID> Id { get; set; }
-	public BluePtr<BluePtr<BluePyType>> PyType { get; set; }
+	public nint Id { get; set; }
+	public nint PyType { get; set; }
 	public ulong Unknown3 { get; set; }
 	public uint Hash { get; set; }
 }

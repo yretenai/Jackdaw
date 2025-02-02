@@ -4,13 +4,13 @@ namespace Jackdaw.BluePyType.Structs;
 
 [StructLayout(LayoutKind.Sequential, Pack = 8)]
 public record struct BluePyType {
-	public BluePtr<BlueID> Id { get; set; }
-	public BluePtr<BlueCLSID> ClassId { get; set; }
-	public BluePtr<byte> Description { get; set; }
-	public BluePtr<BlueCLSIDLink> Interfaces { get; set; }
-	public BluePtr<BluePyField> Fields { get; set; }
+	public nint Id { get; set; }
+	public nint ClassId { get; set; }
+	public nint Description { get; set; }
+	public nint Interfaces { get; set; }
+	public nint Fields { get; set; }
 	public nint Unk1 { get; set; }
-	public BluePtr<BluePtr<BlueID>> Parent { get; set; }
+	public nint Parent { get; set; }
 	public nint Unk2 { get; set; }
 	public nint Unk3 { get; set; }
 	public nint Unk4 { get; set; }
