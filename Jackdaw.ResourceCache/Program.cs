@@ -108,11 +108,11 @@ internal class Program {
 					continue;
 				}
 
-				var existingRecord = totalRecords.FirstOrDefault(record.Path.Equals);
+				var existingRecord = totalRecords.FirstOrDefault(x => record.Path.Equals(x.Path));
 				if (existingRecord == null) {
 					Log.Information("Deleting {Path} as it is deleted", record.Path.AbsolutePath[1..]);
 					if (!flags.Dry) {
-						File.Delete(outputPath);
+						File.Delete(target);
 					}
 
 					continue;
@@ -121,7 +121,7 @@ internal class Program {
 				if (existingRecord.MD5 != record.MD5 || existingRecord.Size != record.Size || existingRecord.ResourcePath != record.ResourcePath) {
 					Log.Information("Deleting {Path} as it has changed", record.Path.AbsolutePath[1..]);
 					if (!flags.Dry) {
-						File.Delete(outputPath);
+						File.Delete(target);
 					}
 				}
 			}
