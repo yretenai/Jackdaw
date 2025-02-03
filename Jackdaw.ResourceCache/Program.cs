@@ -139,7 +139,12 @@ internal class Program {
 		foreach (var record in totalRecords.DistinctBy(x => Path.GetDirectoryName(x.Path.AbsolutePath[1..]))) {
 			targetCache.Add(record);
 
-			var target = Path.Combine(outputPath, record.Path.AbsolutePath[1..]);
+			var prefix = "res";
+			if (record.Path.Scheme == "app") {
+				prefix = "";
+			}
+
+			var target = Path.Combine(outputPath, prefix, record.Path.AbsolutePath[1..]);
 			var fullPath = Path.GetFullPath(target);
 			var directory = Path.GetDirectoryName(fullPath);
 			if (string.IsNullOrEmpty(directory)) {
@@ -167,8 +172,10 @@ internal class Program {
 			}
 
 			var host = RES_DOMAIN;
+			var prefix = "res";
 			if (record.Path.Scheme == "app") {
 				host = APP_DOMAIN;
+				prefix = "";
 			}
 
 			var resFilePath = Path.Combine(cacheRoot, resPath);
@@ -177,7 +184,7 @@ internal class Program {
 				try {
 					Log.Information("Downloading {Path}", resPath);
 					await Download(httpClient, flags, cacheRoot, resPath, host);
-				} catch(Exception e) {
+				} catch (Exception e) {
 					Log.Error(e, "Failed to download {ResPath}", resPath);
 					continue;
 				}
@@ -188,7 +195,7 @@ internal class Program {
 				continue;
 			}
 
-			var target = Path.Combine(outputPath, record.Path.AbsolutePath[1..]);
+			var target = Path.Combine(outputPath, prefix, record.Path.AbsolutePath[1..]);
 			var info = new FileInfo(target);
 			if (info.Exists) {
 				var isSymlink = (info.Attributes & FileAttributes.ReparsePoint) != 0;
@@ -294,7 +301,7 @@ internal class Program {
 				} catch {
 					try {
 						Download(client, flags, flags.ResCache, relative, APP_DOMAIN).Wait();
-					} catch(Exception e) {
+					} catch (Exception e) {
 						Log.Error(e, "Failed to download {ResPath}", relative);
 					}
 				}
@@ -320,6 +327,7 @@ internal class Program {
 
 		foreach (var record in cache.OrderBy(x => x.ResourcePath)) {
 			csv.WriteRecord(record);
+			csv.NextRecord();
 		}
 	}
 
@@ -342,7 +350,8 @@ internal class Program {
 			using var reader = new StreamReader(stream);
 
 			var isNew = reader.ReadLine()?.StartsWith("# version: ") == true;
-			stream.Position = 0;
+			reader.DiscardBufferedData();
+			reader.BaseStream.Position = 0;
 
 			if (isNew) {
 				using var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture) {
@@ -361,7 +370,7 @@ internal class Program {
 
 					if (line.Length > 0) {
 						cache.Add(new ResourceCacheRecord {
-							ResourcePath = line
+							ResourcePath = line,
 						});
 					}
 				}
