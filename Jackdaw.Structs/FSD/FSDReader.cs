@@ -1,28 +1,17 @@
-using System;
-using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
-using CommunityToolkit.HighPerformance.Buffers;
-using DragonLib;
-using Jackdaw.Structs.FSD;
 
-namespace Jackdaw.FSD;
+namespace Jackdaw.Structs.FSD;
 
-public sealed class FSDReader : IFSDReader, IDisposable {
-	public FSDReader(MemoryOwner<byte> data) => Data = data;
-
-	public MemoryOwner<byte> Data { get; }
-
-	public void Dispose() {
-		Data.Dispose();
-	}
+public class FSDReader(Memory<byte> data) {
+	public Memory<byte> Data { get; } = data;
 
 	public int Offset { get; set; }
 
 	public T Read<T>() where T : struct {
 		var size = Unsafe.SizeOf<T>();
-		var value = MemoryMarshal.Read<T>(Data.Memory.Span[Offset..]);
+		var value = MemoryMarshal.Read<T>(Data.Span[Offset..]);
 		Offset += size;
 		return value;
 	}
@@ -46,7 +35,7 @@ public sealed class FSDReader : IFSDReader, IDisposable {
 		var tmp = Offset;
 		Offset = offset;
 		var length = (int) Read<long>();
-		var value = length == 0 ? string.Empty : Encoding.UTF8.GetString(Data.Memory.Span.Slice(Offset, length));
+		var value = length == 0 ? string.Empty : Encoding.UTF8.GetString(Data.Span.Slice(Offset, length));
 		Offset = tmp;
 		return value;
 	}
@@ -106,6 +95,14 @@ public sealed class FSDReader : IFSDReader, IDisposable {
 	}
 
 	public void Align() {
-		Offset = Offset.Align(4);
+		Offset = unchecked(Offset + 3) & 0x7FFFFFFC;
 	}
+}
+
+public interface IFSDValue<out T> {
+	public static abstract T Read(FSDReader reader);
+}
+
+public interface IFSDDict {
+	public object Key { get; }
 }

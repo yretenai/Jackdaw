@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Runtime.InteropServices;
-using CommunityToolkit.HighPerformance.Buffers;
 using Jackdaw.Exceptions;
 using Jackdaw.Structs.FSD;
 
@@ -21,12 +20,13 @@ public class FSDBinary {
 		}
 	}
 
-	public FSDBinary(MemoryOwner<byte> data) {
-		IdHigh = MemoryMarshal.Read<ulong>(data.Memory.Span);
-		IdLow = MemoryMarshal.Read<ulong>(data.Memory.Span[8..]);
-		Hash = MemoryMarshal.Read<ulong>(data.Memory.Span[16..]);
+	public FSDBinary(Memory<byte> data) {
+		var span = data.Span;
+		IdHigh = MemoryMarshal.Read<ulong>(span);
+		IdLow = MemoryMarshal.Read<ulong>(span[8..]);
+		Hash = MemoryMarshal.Read<ulong>(span[16..]);
 
-		using var reader = new FSDReader(data.Slice(0x18, data.Length - 0x18));
+		var reader = new FSDReader(data[0x18..]);
 
 		if (!Types.TryGetValue((IdHigh, IdLow), out var type)) {
 			throw new UnknownStaticDataTypeException(IdHigh, IdLow);
@@ -46,7 +46,7 @@ public class FSDBinary {
 	public FSDHeader Header { get; }
 	public object Value { get; }
 
-	private object ReadValue<T>(IFSDReader reader, FSDStructType type) where T : IFSDValue<T> {
+	private object ReadValue<T>(FSDReader reader, FSDStructType type) where T : IFSDValue<T> {
 		switch (type) {
 			case FSDStructType.Array: {
 				var list = new List<T>((int) Header.EntryCount);

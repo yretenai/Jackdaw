@@ -1,7 +1,7 @@
 namespace Jackdaw.Structs.FSD.Schema;
 
 public record struct WwisePlaybackEvent : IFSDValue<WwisePlaybackEvent> {
-	public WwisePlaybackEvent(IFSDReader reader) {
+	public WwisePlaybackEvent(FSDReader reader) {
 		Type = reader.ReadString();
 		Max = reader.Read<float>();
 		Min = reader.Read<float>();
@@ -13,5 +13,5 @@ public record struct WwisePlaybackEvent : IFSDValue<WwisePlaybackEvent> {
 	public float Max { get; set; }
 	public float Min { get; set; }
 
-	public static WwisePlaybackEvent Read(IFSDReader reader) => new(reader);
+	public static WwisePlaybackEvent Read(FSDReader reader) => new(reader);
 }

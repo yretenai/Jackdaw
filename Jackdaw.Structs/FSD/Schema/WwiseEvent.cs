@@ -2,7 +2,7 @@ namespace Jackdaw.Structs.FSD.Schema;
 
 [FSDStruct(0x8CA79B600F7DCB73UL, 0xED83B6A1C90F6C82, FSDStructType.Dictionary)]
 public record struct WwiseEvent : IFSDValue<WwiseEvent>, IFSDDict {
-	public WwiseEvent(IFSDReader reader) {
+	public WwiseEvent(FSDReader reader) {
 		Key = reader.ReadString();
 		EventId = reader.Read<ulong>();
 		EventName = reader.ReadString();
@@ -27,5 +27,5 @@ public record struct WwiseEvent : IFSDValue<WwiseEvent>, IFSDDict {
 
 	public object Key { get; set; }
 
-	public static WwiseEvent Read(IFSDReader reader) => new(reader);
+	public static WwiseEvent Read(FSDReader reader) => new(reader);
 }

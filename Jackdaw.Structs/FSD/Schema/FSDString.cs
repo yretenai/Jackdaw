@@ -1,7 +1,7 @@
 namespace Jackdaw.Structs.FSD.Schema;
 
 public record FSDString : IFSDValue<FSDString>, IFSDDict {
-	private FSDString(IFSDReader reader) {
+	private FSDString(FSDReader reader) {
 		Key = reader.ReadString();
 		Value = reader.ReadString();
 	}
@@ -10,5 +10,5 @@ public record FSDString : IFSDValue<FSDString>, IFSDDict {
 
 	public object Key { get; set; }
 
-	public static FSDString Read(IFSDReader reader) => new(reader);
+	public static FSDString Read(FSDReader reader) => new(reader);
 }

@@ -1,7 +1,7 @@
+using System.Buffers;
 using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using CommunityToolkit.HighPerformance.Buffers;
 using Ferment;
 using Jackdaw.FSD;
 using Jackdaw.StaticData.Converters;
@@ -80,9 +80,10 @@ internal class Program {
 			try {
 				Log.Information("[{Current}/{Total}] Processing {File}", ++current, files.Length, file);
 				using var fs = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-				using var owner = MemoryOwner<byte>.Allocate((int) fs.Length);
-				fs.ReadExactly(owner.Memory.Span);
-				var fsd = new FSDBinary(owner);
+				using var owner = MemoryPool<byte>.Shared.Rent((int) fs.Length);
+				var block = owner.Memory[..(int) fs.Length];
+				fs.ReadExactly(block.Span);
+				var fsd = new FSDBinary(block);
 				using var stream = new FileStream(Path.ChangeExtension(file, ".json"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 				JsonSerializer.Serialize(stream, fsd.Value, JsonOptions);
 				stream.Flush();
@@ -99,9 +100,10 @@ internal class Program {
 			try {
 				Log.Information("[{Current}/{Total}] Processing {File}", ++current, files.Length, file);
 				using var fs = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-				using var owner = MemoryOwner<byte>.Allocate((int) fs.Length);
-				fs.ReadExactly(owner.Memory.Span);
-				var black = new BlackFile(owner);
+				using var owner = MemoryPool<byte>.Shared.Rent((int) fs.Length);
+				var block = owner.Memory.Span[..(int) fs.Length];
+				fs.ReadExactly(block);
+				var black = new BlackFile(block);
 				using var stream = new FileStream(Path.ChangeExtension(file, ".json"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 				JsonSerializer.Serialize(stream, black.Root, JsonOptions);
 				stream.Flush();

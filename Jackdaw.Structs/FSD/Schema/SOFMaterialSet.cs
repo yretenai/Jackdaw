@@ -2,7 +2,7 @@ namespace Jackdaw.Structs.FSD.Schema;
 
 [FSDStruct(0x9F8429EAE014BED4UL, 0x66419F7BB10C7711UL, FSDStructType.Dictionary)]
 public class SOFMaterialSet : IFSDValue<SOFMaterialSet>, IFSDDict {
-	public SOFMaterialSet(IFSDReader reader) {
+	public SOFMaterialSet(FSDReader reader) {
 		Key = reader.Read<ulong>();
 		CustomMaterial1 = reader.ReadString();
 		CustomMaterial2 = reader.ReadString();
@@ -41,5 +41,5 @@ public class SOFMaterialSet : IFSDValue<SOFMaterialSet>, IFSDDict {
 
 	public object Key { get; set; }
 
-	public static SOFMaterialSet Read(IFSDReader reader) => new(reader);
+	public static SOFMaterialSet Read(FSDReader reader) => new(reader);
 }

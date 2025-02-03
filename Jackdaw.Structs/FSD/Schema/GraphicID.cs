@@ -2,7 +2,7 @@ namespace Jackdaw.Structs.FSD.Schema;
 
 [FSDStruct(0xFBDAC5A9A509E464UL, 0xE518F3EF7E283764UL, FSDStructType.Dictionary)]
 public class GraphicID : IFSDValue<GraphicID>, IFSDDict {
-	private GraphicID(IFSDReader reader) {
+	private GraphicID(FSDReader reader) {
 		Key = reader.Read<ulong>();
 		AnimationStateObjects = reader.ReadClassDict<FSDString>();
 		ControllerVarriableOverrides = reader.ReadClassDict<ControllerVariableOverride>();
@@ -39,5 +39,5 @@ public class GraphicID : IFSDValue<GraphicID>, IFSDDict {
 
 	public object Key { get; set; }
 
-	public static GraphicID Read(IFSDReader reader) => new(reader);
+	public static GraphicID Read(FSDReader reader) => new(reader);
 }

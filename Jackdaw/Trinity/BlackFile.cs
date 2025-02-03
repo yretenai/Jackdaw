@@ -7,7 +7,6 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
-using CommunityToolkit.HighPerformance.Buffers;
 using DragonLib;
 using Jackdaw.Exceptions;
 using Jackdaw.Structs.Trinity;
@@ -21,36 +20,36 @@ public class BlackFile {
 		Types = typeof(IRoot).Assembly.GetTypes().ToDictionary(x => x.Name, x => x);
 	}
 
-	public BlackFile(MemoryOwner<byte> buffer) {
+	public BlackFile(Span<byte> buffer) {
 		var offset = 0;
-		Header = MemoryMarshal.Read<BlackHeader>(buffer.Span);
+		Header = MemoryMarshal.Read<BlackHeader>(buffer);
 		offset += Unsafe.SizeOf<BlackHeader>();
 
-		var blob = MemoryMarshal.Read<BlackBlob>(buffer.Span[offset..]);
+		var blob = MemoryMarshal.Read<BlackBlob>(buffer[offset..]);
 		offset += Unsafe.SizeOf<BlackBlob>();
 		{
 			var poolOffset = offset;
 			StringPool = new string[blob.Count];
 			for (var i = 0; i < StringPool.Length; i++) {
-				StringPool[i] = buffer.Span[poolOffset..].ReadString(Encoding.UTF8) ?? string.Empty;
+				StringPool[i] = buffer[poolOffset..].ReadString(Encoding.UTF8) ?? string.Empty;
 				poolOffset += Encoding.UTF8.GetBytes(StringPool[i]).Length + 1;
 			}
 		}
 		offset += blob.Size - 2;
 
-		blob = MemoryMarshal.Read<BlackBlob>(buffer.Span[offset..]);
+		blob = MemoryMarshal.Read<BlackBlob>(buffer[offset..]);
 		offset += Unsafe.SizeOf<BlackBlob>();
 		{
 			var poolOffset = offset;
 			NamePool = new string[blob.Count];
 			for (var i = 0; i < NamePool.Length; i++) {
-				NamePool[i] = MemoryMarshal.Cast<byte, ushort>(buffer.Span[poolOffset..]).ReadString(Encoding.Unicode) ?? string.Empty;
+				NamePool[i] = MemoryMarshal.Cast<byte, ushort>(buffer[poolOffset..]).ReadString(Encoding.Unicode) ?? string.Empty;
 				poolOffset += Encoding.Unicode.GetBytes(NamePool[i]).Length + 2;
 			}
 		}
 		offset += blob.Size - 2;
 
-		var span = buffer.Span[offset..];
+		var span = buffer[offset..];
 		Root = ReadObject(ref span, true);
 	}
 

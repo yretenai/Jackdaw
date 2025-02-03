@@ -1,7 +1,7 @@
 namespace Jackdaw.Structs.FSD.Schema;
 
 public record ControllerVariableOverride : IFSDValue<ControllerVariableOverride>, IFSDDict {
-	private ControllerVariableOverride(IFSDReader reader) {
+	private ControllerVariableOverride(FSDReader reader) {
 		Key = reader.ReadString();
 		Value = reader.Read<float>();
 		IntValue = reader.Read<int>();
@@ -12,5 +12,5 @@ public record ControllerVariableOverride : IFSDValue<ControllerVariableOverride>
 
 	public object Key { get; set; }
 
-	public static ControllerVariableOverride Read(IFSDReader reader) => new(reader);
+	public static ControllerVariableOverride Read(FSDReader reader) => new(reader);
 }

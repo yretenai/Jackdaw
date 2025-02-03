@@ -1,7 +1,7 @@
 using System;
+using System.Buffers;
 using System.IO;
 using System.IO.Compression;
-using CommunityToolkit.HighPerformance.Buffers;
 using IronCompress;
 
 namespace Jackdaw;
@@ -10,9 +10,11 @@ public static class JackdawUtils {
 	public static Iron Iron { get; } = new();
 
 	public static IronCompressResult Decompress(Stream stream) {
-		using var rented = MemoryOwner<byte>.Allocate((int) stream.Length);
-		stream.ReadExactly(rented.Memory.Span);
-		return Decompress(rented.Memory.Span);
+		var size = (int) stream.Length;
+		using var rented = MemoryPool<byte>.Shared.Rent(size);
+		var block = rented.Memory.Span[..size];
+		stream.ReadExactly(block);
+		return Decompress(block);
 	}
 
 	public static IronCompressResult Decompress(Span<byte> data) {
@@ -21,9 +23,11 @@ public static class JackdawUtils {
 	}
 
 	public static IronCompressResult DecompressGz(Stream stream) {
-		using var rented = MemoryOwner<byte>.Allocate((int) stream.Length);
-		stream.ReadExactly(rented.Memory.Span);
-		return DecompressGz(rented.Memory.Span);
+		var size = (int) stream.Length;
+		using var rented = MemoryPool<byte>.Shared.Rent(size);
+		var block = rented.Memory.Span[..size];
+		stream.ReadExactly(block);
+		return DecompressGz(block);
 	}
 
 	public static IronCompressResult DecompressGz(Span<byte> data) {
@@ -32,9 +36,11 @@ public static class JackdawUtils {
 	}
 
 	public static IronCompressResult Compress(Stream stream) {
-		using var rented = MemoryOwner<byte>.Allocate((int) stream.Length);
-		stream.ReadExactly(rented.Memory.Span);
-		return Compress(rented.Memory.Span);
+		var size = (int) stream.Length;
+		using var rented = MemoryPool<byte>.Shared.Rent(size);
+		var block = rented.Memory.Span[..size];
+		stream.ReadExactly(block);
+		return Compress(block);
 	}
 
 	public static IronCompressResult Compress(Span<byte> data) {
@@ -43,9 +49,11 @@ public static class JackdawUtils {
 	}
 
 	public static IronCompressResult CompressGz(Stream stream) {
-		using var rented = MemoryOwner<byte>.Allocate((int) stream.Length);
-		stream.ReadExactly(rented.Memory.Span);
-		return CompressGz(rented.Memory.Span);
+		var size = (int) stream.Length;
+		using var rented = MemoryPool<byte>.Shared.Rent(size);
+		var block = rented.Memory.Span[..size];
+		stream.ReadExactly(block);
+		return CompressGz(block);
 	}
 
 	public static IronCompressResult CompressGz(Span<byte> data) {
