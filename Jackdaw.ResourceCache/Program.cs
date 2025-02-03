@@ -116,6 +116,8 @@ internal class Program {
 			}
 		}
 
+		cacheRepo.UnionWith(totalRecords.Select(x => x.ResourcePath));
+
 		using var httpHandler = new HttpClientHandler();
 		httpHandler.CheckCertificateRevocationList = true;
 		httpHandler.AllowAutoRedirect = true;
@@ -131,7 +133,6 @@ internal class Program {
 		// pass 2: create directories
 		Log.Information("Creating directories");
 		foreach (var record in totalRecords.DistinctBy(x => Path.GetDirectoryName(x.Path.AbsolutePath[1..]))) {
-			cacheRepo.Add(record.ResourcePath);
 			targetCache.Add(record);
 
 			var target = Path.Combine(outputPath, record.Path.AbsolutePath[1..]);
@@ -226,16 +227,18 @@ internal class Program {
 		Directory.CreateDirectory(indexPath);
 		using var stream = new FileStream(Path.Combine(indexPath, skipTarget + ".txt"), FileMode.Create, FileAccess.Write);
 		using var writer = new StreamWriter(stream);
+		writer.NewLine = "\n";
 		writer.WriteLine("# version: 2");
 		writer.WriteLine($"# path: {outputPath}");
 		using var csv = new CsvWriter(writer, new CsvConfiguration(CultureInfo.InvariantCulture) {
 			HasHeaderRecord = false,
 			Comment = '#',
+			NewLine = "\n",
 			AllowComments = true,
 		});
 
 		foreach (var record in cache.OrderBy(x => x.ResourcePath)) {
-			writer.Write(record);
+			csv.WriteRecord(record);
 		}
 	}
 
