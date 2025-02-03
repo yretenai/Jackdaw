@@ -50,6 +50,7 @@ internal class Program {
 			new TriFloatConverter(),
 			new PolymorphicConverterFactory(),
 		},
+		NewLine = "\n",
 		NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals,
 		ReferenceHandler = ReferenceHandler.Preserve,
 		Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
@@ -65,6 +66,8 @@ internal class Program {
 				var data = pickle.Read();
 				using var stream = new FileStream(Path.ChangeExtension(file, ".json"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 				JsonSerializer.Serialize(stream, data, JsonOptions);
+				stream.Flush();
+				stream.WriteByte(0xA);
 			} catch (Exception ex) {
 				Log.Error(ex, "Failed to process {File}", file);
 			}
@@ -82,6 +85,8 @@ internal class Program {
 				var fsd = new FSDBinary(owner);
 				using var stream = new FileStream(Path.ChangeExtension(file, ".json"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 				JsonSerializer.Serialize(stream, fsd.Value, JsonOptions);
+				stream.Flush();
+				stream.WriteByte(0xA);
 			} catch (Exception ex) {
 				Log.Error(ex, "Failed to process {File}", file);
 			}
@@ -99,6 +104,8 @@ internal class Program {
 				var black = new BlackFile(owner);
 				using var stream = new FileStream(Path.ChangeExtension(file, ".json"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 				JsonSerializer.Serialize(stream, black.Root, JsonOptions);
+				stream.Flush();
+				stream.WriteByte(0xA);
 			} catch (Exception ex) {
 				Log.Error(ex, "Failed to process {File}", file);
 			}
