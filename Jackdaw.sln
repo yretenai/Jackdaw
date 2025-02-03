@@ -15,7 +15,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonLib", "DragonLib\Drag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Tests", "Jackdaw.Tests\Jackdaw.Tests.csproj", "{5968959D-F8EA-4D37-BA0F-8AF3B04FA450}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "research", "research", "{0E2B5EC8-7717-47B6-9940-877A301C3F85}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Research", "Research", "{0E2B5EC8-7717-47B6-9940-877A301C3F85}"
 	ProjectSection(SolutionItems) = preProject
 		research\rescache.txt = research\rescache.txt
 		research\fsdbinary.hexpat = research\fsdbinary.hexpat
@@ -39,6 +39,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Blue", "Jackdaw.Blue\Jackdaw.Blue.csproj", "{705C5C0F-A749-49FB-A968-959B7EEAE987}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jackdaw.Black", "Jackdaw.Black\Jackdaw.Black.csproj", "{A7005BD4-8F68-4953-B29E-D7BED43FBF9D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{B6397825-5E06-4A97-A9E2-6C19264D07D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,5 +109,9 @@ Global
 		{A7005BD4-8F68-4953-B29E-D7BED43FBF9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{364F0350-768E-4F1E-A3F7-2F6BCE138DB4} = {B6397825-5E06-4A97-A9E2-6C19264D07D5}
+		{E1157E53-FE90-495F-9AF5-D15F72628A42} = {B6397825-5E06-4A97-A9E2-6C19264D07D5}
+		{56BA40D2-361E-40C9-95D3-EB3BA50E1E49} = {B6397825-5E06-4A97-A9E2-6C19264D07D5}
+		{8E7701C8-B4B6-4D21-8B44-57777184DEA4} = {B6397825-5E06-4A97-A9E2-6C19264D07D5}
 	EndGlobalSection
 EndGlobal
