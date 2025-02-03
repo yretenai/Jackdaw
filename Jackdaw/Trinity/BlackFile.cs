@@ -1,6 +1,7 @@
 using System;
 using System.Buffers.Binary;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -10,13 +11,14 @@ using CommunityToolkit.HighPerformance.Buffers;
 using DragonLib;
 using Jackdaw.Exceptions;
 using Jackdaw.Structs.Trinity;
+using Jackdaw.Black;
 using Serilog;
 
 namespace Jackdaw.Trinity;
 
 public class BlackFile {
 	static BlackFile() {
-		Types = typeof(BlackHeader).Assembly.GetTypes().Where(x => x.Namespace?.StartsWith("Jackdaw.Structs.Trinity.Generated", StringComparison.Ordinal) == true).ToDictionary(x => x.Name, x => x);
+		Types = typeof(IRoot).Assembly.GetTypes().ToDictionary(x => x.Name, x => x);
 	}
 
 	public BlackFile(MemoryOwner<byte> buffer) {
@@ -120,6 +122,13 @@ public class BlackFile {
 			return ReadArray(ref chunk, type, member);
 		}
 
+		switch (type.IsConstructedGenericType) {
+			case true when type.GetGenericTypeDefinition() == typeof(List<>):
+				return ReadList(ref chunk, type, member);
+			case true when type.GetGenericTypeDefinition() == typeof(Dictionary<,>):
+				return ReadDictionary(ref chunk, type, member);
+		}
+
 		if (type.IsEnum) {
 			var value = ReadValue(ref chunk, type.GetEnumUnderlyingType(), member);
 			return value == null ? Activator.CreateInstance(type) : Enum.ToObject(type, value);
@@ -163,9 +172,28 @@ public class BlackFile {
 		throw new CatastrophicBlueException($"Unknown type {type.FullName}");
 	}
 
-	private object ReadArray(ref Span<byte> chunk, Type type, MemberInfo member) {
-		ArgumentNullException.ThrowIfNull(member);
+	private object? ReadList(ref Span<byte> chunk, Type type, MemberInfo member) {
+		var elementType = type.GetGenericArguments()[0];
+		if (elementType == null) {
+			throw new CatastrophicBlueException($"Failed to get element type for array {type.FullName}");
+		}
 
+		var size = BinaryPrimitives.ReadInt32LittleEndian(chunk);
+		chunk = chunk[4..];
+		var array = Activator.CreateInstance(type, size);
+		var add = type.GetMethod("Add") ?? throw new UnreachableException();
+		for (var i = 0; i < size; i++) {
+			add.Invoke(array, [ReadValue(ref chunk, elementType, member)]);
+		}
+
+		return array;
+	}
+
+	private object ReadDictionary(ref Span<byte> chunk, Type type, MemberInfo member) {
+		throw new NotImplementedException();
+	}
+
+	private object ReadArray(ref Span<byte> chunk, Type type, MemberInfo member) {
 		var elementType = type.GetElementType();
 		if (elementType == null) {
 			throw new CatastrophicBlueException($"Failed to get element type for array {type.FullName}");
