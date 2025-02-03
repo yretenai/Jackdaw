@@ -96,15 +96,21 @@ internal class Program {
 		if (flags.Update) {
 			var sourceCache = BuildCacheList(cacheRoot, outputPath, true);
 
+			var lookup = totalRecords.DistinctBy(x => x.Path).ToDictionary(x => x.Path, x => x);
+
 			Log.Information("Removing changed files");
 			foreach (var record in sourceCache) {
-				var target = Path.Combine(outputPath, record.Path.AbsolutePath[1..]);
+				var prefix = "res";
+				if (record.Path.Scheme == "app") {
+					prefix = "";
+				}
+
+				var target = Path.Combine(outputPath, prefix, record.Path.AbsolutePath[1..]);
 				if (!File.Exists(target)) {
 					continue;
 				}
 
-				var existingRecord = totalRecords.FirstOrDefault(x => record.Path.Equals(x.Path));
-				if (existingRecord == null) {
+				if (!lookup.TryGetValue(record.Path, out var existingRecord)) {
 					Log.Information("Deleting {Path} as it is deleted", record.Path.AbsolutePath[1..]);
 					if (!flags.Dry) {
 						File.Delete(target);
@@ -308,6 +314,7 @@ internal class Program {
 
 		var skipTarget = CRC.Create(CRC64Variants.Default).ComputeHashValue(Encoding.UTF8.GetBytes(outputPath)).ToString("x16");
 		var storagePath = Path.Combine(cacheRoot, ".jackdaw", skipTarget);
+		Directory.Delete(storagePath, true);
 		Directory.CreateDirectory(storagePath);
 
 		try {
@@ -345,7 +352,11 @@ internal class Program {
 		Directory.CreateDirectory(indexPath);
 
 		var records = new List<ResourceCacheRecord>();
-		foreach (var txt in Directory.EnumerateFiles(indexPath, "*.txt", SearchOption.AllDirectories)) {
+		foreach (var txt in Directory.EnumerateFiles(indexPath, "*", SearchOption.AllDirectories)) {
+			if (!txt.EndsWith(".txt", StringComparison.OrdinalIgnoreCase) && !txt.EndsWith(".zst", StringComparison.OrdinalIgnoreCase)) {
+				continue;
+			}
+
 			var isSelf = Path.GetFileName(Path.GetDirectoryName(txt)!) == skipTarget;
 
 			switch (isSelf) {
@@ -354,12 +365,12 @@ internal class Program {
 					continue;
 			}
 
-			if (indexPath.EndsWith(".zst", StringComparison.OrdinalIgnoreCase)) {
-				using var fs = new FileStream(indexPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+			if (txt.EndsWith(".zst", StringComparison.OrdinalIgnoreCase)) {
+				using var fs = new FileStream(txt, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 				using var data = JackdawUtils.Decompress(fs);
 				records.AddRange(IndexParser.Parse(data));
 			} else {
-				using var fs = new FileStream(indexPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+				using var fs = new FileStream(txt, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 				records.AddRange(IndexParser.Parse(fs));
 			}
 		}
