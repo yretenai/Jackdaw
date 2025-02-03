@@ -8,9 +8,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
 using DragonLib;
+using Jackdaw.Black;
 using Jackdaw.Exceptions;
 using Jackdaw.Structs.Trinity;
-using Jackdaw.Black;
 using Serilog;
 
 namespace Jackdaw.Trinity;
@@ -188,9 +188,7 @@ public class BlackFile {
 		return array;
 	}
 
-	private object ReadDictionary(ref Span<byte> chunk, Type type, MemberInfo member) {
-		throw new NotImplementedException();
-	}
+	private object ReadDictionary(ref Span<byte> chunk, Type type, MemberInfo member) => throw new NotImplementedException();
 
 	private object ReadArray(ref Span<byte> chunk, Type type, MemberInfo member) {
 		var elementType = type.GetElementType();

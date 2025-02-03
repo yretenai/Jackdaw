@@ -118,7 +118,7 @@ internal class Program {
 
 			realClasses.Add(name);
 
-			if (type.Fields.Count == 0 && type.Parent.Length == 0 && name[0] == 'I' || name == "EveEntity") {
+			if ((type.Fields.Count == 0 && type.Parent.Length == 0 && name[0] == 'I') || name == "EveEntity") {
 				group = "interface";
 			}
 
@@ -210,6 +210,7 @@ internal class Program {
 								if (fieldName == "IndexBuffers") {
 									attribute = "JsonIgnore";
 								}
+
 								break;
 							case "IBlueDict":
 								fieldType = "Dictionary<IRoot, IRoot?>?";

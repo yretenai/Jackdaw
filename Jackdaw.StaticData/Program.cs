@@ -11,6 +11,22 @@ using Serilog;
 namespace Jackdaw.StaticData;
 
 internal class Program {
+	private static readonly JsonSerializerOptions JsonOptions = new() {
+		WriteIndented = true,
+		Converters = {
+			new FSDColorConverter(),
+			new FSDResourceConverter(),
+			new FSDStringConverter(),
+			new EveSOFDataGenericStringConverter(),
+			new TriFloatConverter(),
+			new PolymorphicConverterFactory(),
+		},
+		NewLine = "\n",
+		NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals,
+		ReferenceHandler = ReferenceHandler.Preserve,
+		Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+	};
+
 	private static void Main(string[] args) {
 		if (args.Length < 2) {
 			Console.WriteLine("Usage: Jackdaw.StaticData [black/fsdbinary/pickle] <path to file, filelist or directory...>");
@@ -39,22 +55,6 @@ internal class Program {
 				break;
 		}
 	}
-
-	private static readonly JsonSerializerOptions JsonOptions = new() {
-		WriteIndented = true,
-		Converters = {
-			new FSDColorConverter(),
-			new FSDResourceConverter(),
-			new FSDStringConverter(),
-			new EveSOFDataGenericStringConverter(),
-			new TriFloatConverter(),
-			new PolymorphicConverterFactory(),
-		},
-		NewLine = "\n",
-		NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals,
-		ReferenceHandler = ReferenceHandler.Preserve,
-		Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
-	};
 
 	private static void ProcessPickle(string[] files) {
 		var current = 0;
