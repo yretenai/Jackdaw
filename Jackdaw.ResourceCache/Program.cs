@@ -314,7 +314,10 @@ internal class Program {
 
 		var skipTarget = CRC.Create(CRC64Variants.Default).ComputeHashValue(Encoding.UTF8.GetBytes(outputPath)).ToString("x16");
 		var storagePath = Path.Combine(cacheRoot, ".jackdaw", skipTarget);
-		Directory.Delete(storagePath, true);
+		if (Directory.Exists(storagePath)) {
+			Directory.Delete(storagePath, true);
+		}
+
 		Directory.CreateDirectory(storagePath);
 
 		try {
