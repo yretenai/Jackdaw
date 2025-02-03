@@ -50,6 +50,7 @@ internal class Program {
 			new TriFloatConverter(),
 			new PolymorphicConverterFactory(),
 		},
+		NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals,
 		ReferenceHandler = ReferenceHandler.Preserve,
 		Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
 	};
