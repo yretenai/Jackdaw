@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using CsvHelper;
@@ -25,6 +26,18 @@ internal class Program {
 	private static readonly Uri RES_DOMAIN = new("https://resources.eveonline.com", UriKind.Absolute);
 
 	private static async Task Main() {
+		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
+
+		var basicFlags = CommandLineFlagsParser.ParseFlags<ResCacheBasicFlags>(CommandLineFlagsParser.PrintHelpInvoker<ResCacheFlags>);
+		if (basicFlags == null) {
+			return;
+		}
+
+		if (basicFlags.Repair) {
+			Repair(basicFlags);
+			return;
+		}
+
 		var flags = CommandLineFlagsParser.ParseFlags<ResCacheFlags>();
 		if (flags == null) {
 			return;
@@ -36,8 +49,6 @@ internal class Program {
 		}
 
 		var method = canMakeSymlinks ? "Linking" : "Copying";
-
-		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
 		var cacheRoot = Path.GetFullPath(flags.ResCache);
 		var outputPath = Path.GetFullPath(flags.Output);
@@ -118,14 +129,7 @@ internal class Program {
 
 		cacheRepo.UnionWith(totalRecords.Select(x => x.ResourcePath));
 
-		using var httpHandler = new HttpClientHandler();
-		httpHandler.CheckCertificateRevocationList = true;
-		httpHandler.AllowAutoRedirect = true;
-		httpHandler.AutomaticDecompression = DecompressionMethods.All;
-
-		using var httpClient = new HttpClient(httpHandler, true);
-		httpClient.DefaultRequestHeaders.UserAgent.Clear();
-		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Jackdaw/1.0.0 (Module/ResCacheDownloader)");
+		using var httpClient = CreateHttpClient();
 
 		var md5Lookup = new Dictionary<string, string>();
 		var current = 0;
@@ -170,12 +174,12 @@ internal class Program {
 			var resFilePath = Path.Combine(cacheRoot, resPath);
 
 			if (!File.Exists(resFilePath)) {
-				Log.Information("Downloading {Path}", resPath);
-				if (flags is { Dry: false, NoDownload: false }) {
-					resFilePath.EnsureDirectoryExists();
-					await using var local = File.OpenWrite(resFilePath);
-					await using var remote = await httpClient.GetStreamAsync(new Uri(host, resPath));
-					await remote.CopyToAsync(local);
+				try {
+					Log.Information("Downloading {Path}", resPath);
+					await Download(httpClient, flags, cacheRoot, resPath, host);
+				} catch(Exception e) {
+					Log.Error(e, "Failed to download {ResPath}", resPath);
+					continue;
 				}
 			}
 
@@ -185,8 +189,23 @@ internal class Program {
 			}
 
 			var target = Path.Combine(outputPath, record.Path.AbsolutePath[1..]);
-			if (File.Exists(target)) {
-				if (flags.NoOverwrite) {
+			var info = new FileInfo(target);
+			if (info.Exists) {
+				var isSymlink = (info.Attributes & FileAttributes.ReparsePoint) != 0;
+
+				var skipOverwrite = canMakeSymlinks switch {
+					                    true when !isSymlink => false,
+					                    false when isSymlink => false,
+					                    _ => flags.NoOverwrite,
+				                    };
+
+				if (isSymlink &&
+				    !string.IsNullOrEmpty(info.LinkTarget) &&
+				    !File.Exists(Path.Combine(info.DirectoryName ?? outputPath, info.LinkTarget))) {
+					skipOverwrite = false; // file is missing.
+				}
+
+				if (skipOverwrite) {
 					continue;
 				}
 
@@ -203,7 +222,7 @@ internal class Program {
 		if (flags.Reclaim) {
 			// pass 4: clearing cache files
 			Log.Information("Reclaiming storage");
-			foreach (var file in Directory.GetFiles(cacheRoot, "*", SearchOption.AllDirectories)) {
+			foreach (var file in Directory.EnumerateFiles(cacheRoot, "*", SearchOption.AllDirectories)) {
 				var relative = Path.GetRelativePath(cacheRoot, file).Replace('\\', '/');
 				if (relative.StartsWith('.') || relative.StartsWith("bundle", StringComparison.OrdinalIgnoreCase) || cacheRepo.Contains(relative)) {
 					continue;
@@ -219,6 +238,68 @@ internal class Program {
 		}
 
 		WriteCacheList(cacheRoot, outputPath, targetCache);
+	}
+
+	private static async Task Download(HttpClient client, ResCacheBasicFlags flags, string cacheRoot, string resPath, Uri host) {
+		var path = Path.Combine(cacheRoot, resPath);
+		if (flags is { Dry: false, NoDownload: false }) {
+			path.EnsureDirectoryExists();
+			await using var local = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.ReadWrite);
+			await using var remote = await client.GetStreamAsync(new Uri(host, resPath));
+			await remote.CopyToAsync(local);
+		}
+	}
+
+	private static HttpClient CreateHttpClient() {
+		HttpClient? httpClient = null;
+		try {
+			var httpHandler = new HttpClientHandler();
+			httpHandler.CheckCertificateRevocationList = true;
+			httpHandler.AllowAutoRedirect = true;
+			httpHandler.AutomaticDecompression = DecompressionMethods.All;
+
+			httpClient = new HttpClient(httpHandler, true);
+			httpClient.DefaultRequestHeaders.UserAgent.Clear();
+			httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Jackdaw/1.0.0 (Module/ResCacheDownloader)");
+			return httpClient;
+		} catch {
+			httpClient?.Dispose();
+			throw;
+		}
+	}
+
+	private static void Repair(ResCacheBasicFlags flags) {
+		Log.Information("Repairing...");
+		using var client = CreateHttpClient();
+
+		Span<byte> buffer = stackalloc byte[0x20];
+		var expectedHash = buffer[..0x10];
+		var localHash = buffer[0x10..];
+
+		foreach (var file in Directory.EnumerateFiles(flags.ResCache, "*", SearchOption.AllDirectories)) {
+			var relative = Path.GetRelativePath(flags.ResCache, file).Replace('\\', '/');
+			var underscore = relative.IndexOf('_', StringComparison.Ordinal);
+			if (relative.StartsWith('.') || underscore == -1) {
+				continue;
+			}
+
+			Convert.FromHexString(relative[(underscore + 1)..], expectedHash, out _, out _);
+			using var stream = new FileStream(file, FileMode.Open, FileAccess.ReadWrite);
+			MD5.HashData(stream, localHash);
+
+			if (!expectedHash.SequenceEqual(localHash)) {
+				Log.Information("{ResPath} Corrupt, replacing", relative);
+				try {
+					Download(client, flags, flags.ResCache, relative, RES_DOMAIN).Wait();
+				} catch {
+					try {
+						Download(client, flags, flags.ResCache, relative, APP_DOMAIN).Wait();
+					} catch(Exception e) {
+						Log.Error(e, "Failed to download {ResPath}", relative);
+					}
+				}
+			}
+		}
 	}
 
 	private static void WriteCacheList(string cacheRoot, string outputPath, List<ResourceCacheRecord> cache) {
