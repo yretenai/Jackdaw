@@ -31,6 +31,12 @@ public record ResCacheFlags : CommandLineFlags {
 	[Flag("no-deduplication", Help = "Don't deduplicate files with the same hash")]
 	public bool NoDeduplication { get; set; }
 
-	[Flag("clean", Help = "Clean entire tree and reclaim storage from the resource cache")]
-	public bool CleanIndex { get; set; }
+	[Flag("clean", Help = "Clean entire tree when updating")]
+	public bool Clean { get; set; }
+
+	[Flag("update", Help = "Only update changed files")]
+	public bool Update { get; set; }
+
+	[Flag("reclaim", Help = "Remove unused resources files from the cache")]
+	public bool Reclaim { get; set; }
 }
