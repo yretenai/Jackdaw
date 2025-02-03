@@ -1,6 +1,6 @@
 using System;
+using System.Buffers;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Net;
@@ -8,8 +8,6 @@ using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using CsvHelper;
-using CsvHelper.Configuration;
 using DragonLib;
 using DragonLib.CommandLine;
 using DragonLib.Hash;
@@ -52,9 +50,6 @@ internal class Program {
 
 		var cacheRoot = Path.GetFullPath(flags.ResCache);
 		var outputPath = Path.GetFullPath(flags.Output);
-
-		var cacheRepo = BuildCacheList(cacheRoot, outputPath).Select(x => x.ResourcePath).ToHashSet();
-		var targetCache = new List<ResourceCacheRecord>();
 
 		var indexFiles = flags.IndexFiles;
 		if (indexFiles.Count == 2 && (new DirectoryInfo(indexFiles[0]).Attributes & FileAttributes.Directory) != 0) {
@@ -127,8 +122,6 @@ internal class Program {
 			}
 		}
 
-		cacheRepo.UnionWith(totalRecords.Select(x => x.ResourcePath));
-
 		using var httpClient = CreateHttpClient();
 
 		var md5Lookup = new Dictionary<string, string>();
@@ -137,8 +130,6 @@ internal class Program {
 		// pass 2: create directories
 		Log.Information("Creating directories");
 		foreach (var record in totalRecords.DistinctBy(x => Path.GetDirectoryName(x.Path.AbsolutePath[1..]))) {
-			targetCache.Add(record);
-
 			var prefix = "res";
 			if (record.Path.Scheme == "app") {
 				prefix = "";
@@ -229,9 +220,12 @@ internal class Program {
 		if (flags.Reclaim) {
 			// pass 4: clearing cache files
 			Log.Information("Reclaiming storage");
+			var cacheRepo = BuildCacheList(cacheRoot, outputPath).Select(x => Path.GetFileName(x.ResourcePath)).ToHashSet();
+			cacheRepo.UnionWith(totalRecords.Select(x => Path.GetFileName(x.ResourcePath)));
+
 			foreach (var file in Directory.EnumerateFiles(cacheRoot, "*", SearchOption.AllDirectories)) {
 				var relative = Path.GetRelativePath(cacheRoot, file).Replace('\\', '/');
-				if (relative.StartsWith('.') || relative.StartsWith("bundle", StringComparison.OrdinalIgnoreCase) || cacheRepo.Contains(relative)) {
+				if (relative.StartsWith('.') || cacheRepo.Contains(Path.GetFileName(relative))) {
 					continue;
 				}
 
@@ -244,7 +238,7 @@ internal class Program {
 			}
 		}
 
-		WriteCacheList(cacheRoot, outputPath, targetCache);
+		WriteCacheList(cacheRoot, outputPath, indexFiles);
 	}
 
 	private static async Task Download(HttpClient client, ResCacheBasicFlags flags, string cacheRoot, string resPath, Uri host) {
@@ -309,25 +303,39 @@ internal class Program {
 		}
 	}
 
-	private static void WriteCacheList(string cacheRoot, string outputPath, List<ResourceCacheRecord> cache) {
-		var skipTarget = CRC.Create(CRC64Variants.Default).ComputeHashValue(Encoding.UTF8.GetBytes(outputPath)).ToString("x16");
-		var indexPath = Path.Combine(cacheRoot, ".jackdaw");
-		Directory.CreateDirectory(indexPath);
-		using var stream = new FileStream(Path.Combine(indexPath, skipTarget + ".txt"), FileMode.Create, FileAccess.Write);
-		using var writer = new StreamWriter(stream);
-		writer.NewLine = "\n";
-		writer.WriteLine("# version: 2");
-		writer.WriteLine($"# path: {outputPath}");
-		using var csv = new CsvWriter(writer, new CsvConfiguration(CultureInfo.InvariantCulture) {
-			HasHeaderRecord = false,
-			Comment = '#',
-			NewLine = "\n",
-			AllowComments = true,
-		});
+	private static void WriteCacheList(string cacheRoot, string outputPath, List<string> indexFiles) {
+		var buffer = Array.Empty<byte>();
 
-		foreach (var record in cache.OrderBy(x => x.ResourcePath)) {
-			csv.WriteRecord(record);
-			csv.NextRecord();
+		var skipTarget = CRC.Create(CRC64Variants.Default).ComputeHashValue(Encoding.UTF8.GetBytes(outputPath)).ToString("x16");
+		var storagePath = Path.Combine(cacheRoot, ".jackdaw", skipTarget);
+		Directory.CreateDirectory(storagePath);
+
+		try {
+			foreach (var indexPath in indexFiles) {
+				using var stream = new FileStream(indexPath, FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
+				if (stream.Length > buffer.Length) {
+					if (buffer.Length > 0) {
+						ArrayPool<byte>.Shared.Return(buffer);
+					}
+
+					buffer = ArrayPool<byte>.Shared.Rent((int) stream.Length);
+				}
+
+				var ext = ".txt";
+				if (indexPath.EndsWith(".zst", StringComparison.OrdinalIgnoreCase)) {
+					ext += ".zst";
+				}
+
+				var block = buffer.AsSpan(0, (int) stream.Length);
+				_ = stream.Read(block);
+				var hash = CRC.Create(CRC64Variants.Default).ComputeHashValue(block).ToString("x16");
+				using var target = new FileStream(Path.Combine(storagePath, hash + ext), FileMode.Create, FileAccess.Write);
+				target.Write(block);
+			}
+		} finally {
+			if (buffer.Length > 0) {
+				ArrayPool<byte>.Shared.Return(buffer);
+			}
 		}
 	}
 
@@ -336,9 +344,9 @@ internal class Program {
 		var indexPath = Path.Combine(cacheRoot, ".jackdaw");
 		Directory.CreateDirectory(indexPath);
 
-		var cache = new List<ResourceCacheRecord>();
-		foreach (var txt in Directory.EnumerateFiles(indexPath, "*.txt", SearchOption.TopDirectoryOnly)) {
-			var isSelf = Path.GetFileNameWithoutExtension(txt) == skipTarget;
+		var records = new List<ResourceCacheRecord>();
+		foreach (var txt in Directory.EnumerateFiles(indexPath, "*.txt", SearchOption.AllDirectories)) {
+			var isSelf = Path.GetFileName(Path.GetDirectoryName(txt)!) == skipTarget;
 
 			switch (isSelf) {
 				case true when !onlySelf:
@@ -346,37 +354,16 @@ internal class Program {
 					continue;
 			}
 
-			using var stream = new FileStream(txt, FileMode.Open, FileAccess.Read);
-			using var reader = new StreamReader(stream);
-
-			var isNew = reader.ReadLine()?.StartsWith("# version: ") == true;
-			reader.DiscardBufferedData();
-			reader.BaseStream.Position = 0;
-
-			if (isNew) {
-				using var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture) {
-					HasHeaderRecord = false,
-					Comment = '#',
-					AllowComments = true,
-				});
-				cache.AddRange(csv.GetRecords<ResourceCacheRecord>());
+			if (indexPath.EndsWith(".zst", StringComparison.OrdinalIgnoreCase)) {
+				using var fs = new FileStream(indexPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+				using var data = JackdawUtils.Decompress(fs);
+				records.AddRange(IndexParser.Parse(data));
 			} else {
-				while (reader.ReadLine() is { } line) {
-					line = line.Trim();
-
-					if (line.StartsWith('#')) {
-						continue;
-					}
-
-					if (line.Length > 0) {
-						cache.Add(new ResourceCacheRecord {
-							ResourcePath = line,
-						});
-					}
-				}
+				using var fs = new FileStream(indexPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+				records.AddRange(IndexParser.Parse(fs));
 			}
 		}
 
-		return cache;
+		return records;
 	}
 }
