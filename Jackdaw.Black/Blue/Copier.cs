@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface Copier : IRoot, ICopier { }
+public class Copier : IRoot, ICopier { }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface AsymmetricCipher : IRoot { }
+public class AsymmetricCipher : IRoot { }

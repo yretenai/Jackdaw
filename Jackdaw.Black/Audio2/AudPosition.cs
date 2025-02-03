@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface AudPosition : IRoot, IBluePlacementObserver { }
+public class AudPosition : IRoot, IBluePlacementObserver { }

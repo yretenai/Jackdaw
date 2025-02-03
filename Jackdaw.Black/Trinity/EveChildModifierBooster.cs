@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveChildModifierBooster : IRoot, IEveChildTransformModifier { }
+public class EveChildModifierBooster : IRoot, IEveChildTransformModifier { }

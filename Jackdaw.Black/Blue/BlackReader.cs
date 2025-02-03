@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface BlackReader : IRoot, IRootReader, IBlueObjectBuilder, ICacheable { }
+public class BlackReader : IRoot, IRootReader, IBlueObjectBuilder, ICacheable { }

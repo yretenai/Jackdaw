@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface ClassDef : IRoot, IBlueDict, ICopierCustomAssignment { }
+public class ClassDef : IRoot, IBlueDict, ICopierCustomAssignment { }

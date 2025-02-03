@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildInstanceContainer : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2ControllerOwner, IListNotify, EveEntity {
+public class EveChildInstanceContainer : EveEntity, IEveSpaceObjectChild, ITr2CurveSetOwner, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2ControllerOwner, IListNotify {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public Vector4 Rotation { get; set; }

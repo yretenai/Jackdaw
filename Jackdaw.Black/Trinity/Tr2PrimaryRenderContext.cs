@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface Tr2PrimaryRenderContext : IRoot { }
+public class Tr2PrimaryRenderContext : IRoot { }

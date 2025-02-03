@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface WaveOutAudioSink : IRoot, IAudioSinkExposed { }
+public class WaveOutAudioSink : IRoot, IAudioSinkExposed { }

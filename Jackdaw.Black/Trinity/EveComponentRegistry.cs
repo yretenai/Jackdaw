@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveComponentRegistry : IRoot { }
+public class EveComponentRegistry : IRoot { }

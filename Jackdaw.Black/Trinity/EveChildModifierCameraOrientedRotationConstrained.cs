@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveChildModifierCameraOrientedRotationConstrained : IRoot, IEveChildTransformModifier { }
+public class EveChildModifierCameraOrientedRotationConstrained : IRoot, IEveChildTransformModifier { }

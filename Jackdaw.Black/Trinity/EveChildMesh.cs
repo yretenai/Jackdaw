@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildMesh : IRoot, EveEntity, IEveSpaceObjectDecalOwner, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify, ITr2GrannyAnimationOwner, IEveSpaceObjectAttachmentOwner, ITr2LightOwner, IEveShadowCaster {
+public class EveChildMesh : EveEntity, IEveSpaceObjectDecalOwner, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify, ITr2GrannyAnimationOwner, IEveSpaceObjectAttachmentOwner, ITr2LightOwner, IEveShadowCaster {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public Vector4 Rotation { get; set; }

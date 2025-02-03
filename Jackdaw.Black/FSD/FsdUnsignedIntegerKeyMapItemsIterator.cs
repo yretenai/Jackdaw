@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface FsdUnsignedIntegerKeyMapItemsIterator : IRoot { }
+public class FsdUnsignedIntegerKeyMapItemsIterator : IRoot { }

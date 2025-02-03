@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface AudStaticDataRepository : IRoot { }
+public class AudStaticDataRepository : IRoot { }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface PercentileAccumulator : IRoot { }
+public class PercentileAccumulator : IRoot { }

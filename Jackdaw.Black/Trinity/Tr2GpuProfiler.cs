@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface Tr2GpuProfiler : IRoot { }
+public class Tr2GpuProfiler : IRoot { }

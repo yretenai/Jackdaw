@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveVirtualCameraTransitionBase : IRoot { }
+public class EveVirtualCameraTransitionBase : IRoot { }

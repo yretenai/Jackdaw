@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface Tr2VisibilityResults : IRoot { }
+public class Tr2VisibilityResults : IRoot { }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface BlueThreadMonitor : IRoot { }
+public class BlueThreadMonitor : IRoot { }

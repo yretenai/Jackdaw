@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveChildModifierHaloInverted : IRoot, IEveChildTransformModifier { }
+public class EveChildModifierHaloInverted : IRoot, IEveChildTransformModifier { }

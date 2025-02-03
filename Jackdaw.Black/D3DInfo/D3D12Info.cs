@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface D3D12Info : IRoot { }
+public class D3D12Info : IRoot { }

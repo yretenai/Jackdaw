@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface Tr2DebugRenderer : IRoot { }
+public class Tr2DebugRenderer : IRoot { }

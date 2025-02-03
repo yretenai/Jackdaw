@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveTurretSet : IRoot, IInitialize, EveEntity, INotify, ITr2Renderable {
+public class EveTurretSet : EveEntity, IInitialize, INotify, ITr2Renderable {
 	public ITriTargetable? TargetObject { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }

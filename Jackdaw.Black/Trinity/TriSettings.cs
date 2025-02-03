@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface TriSettings : IRoot { }
+public class TriSettings : IRoot { }

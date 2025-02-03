@@ -15,5 +15,5 @@ public class EveSOFDataHullDecalSetItem : IRoot {
 	public int GlowColorType { get; set; }
 	public List<IRoot?>? Textures { get; set; }
 	public List<IRoot?>? Parameters { get; set; }
-	public List<IRoot?>? IndexBuffers { get; set; }
+	[JsonIgnore] public List<IRoot?>? IndexBuffers { get; set; }
 }

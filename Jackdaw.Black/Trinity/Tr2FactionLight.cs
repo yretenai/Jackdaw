@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2FactionLight : IRoot, IEveInheritPropertiesOwner, Tr2Light, IInitialize, INotify {
+public class Tr2FactionLight : Tr2Light, IEveInheritPropertiesOwner, IInitialize, INotify {
 	public Vector4 SelectedColor { get; set; }
 	public Vector3 Position { get; set; }
 	public float Brightness { get; set; }

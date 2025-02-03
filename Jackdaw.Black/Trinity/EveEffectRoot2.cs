@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveEffectRoot2 : IRoot, IEveSpaceObject2, IInitialize, INotify, ITr2SecondaryLightSource, ITriTargetable, ITr2CurveSetOwner, IEveEffectChildrenOwner, ITr2ControllerOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2LightOwner, IWorldPosition, EveEntity {
+public class EveEffectRoot2 : EveEntity, IEveSpaceObject2, IInitialize, INotify, ITr2SecondaryLightSource, ITriTargetable, ITr2CurveSetOwner, IEveEffectChildrenOwner, ITr2ControllerOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2LightOwner, IWorldPosition {
 	public bool Mute { get; set; }
 	public List<IRoot?>? ExternalParameters { get; set; }
 	public ITriQuaternionFunction? ModelRotationCurve { get; set; }

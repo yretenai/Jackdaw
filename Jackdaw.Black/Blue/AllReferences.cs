@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface AllReferences : IRoot { }
+public class AllReferences : IRoot { }

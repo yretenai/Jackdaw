@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface FsdObject : IRoot { }
+public class FsdObject : IRoot { }

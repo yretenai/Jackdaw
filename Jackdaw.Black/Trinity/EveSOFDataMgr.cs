@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveSOFDataMgr : IRoot { }
+public class EveSOFDataMgr : IRoot { }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TexturedPointLight : IRoot, Tr2Light, IInitialize, INotify {
+public class Tr2TexturedPointLight : Tr2Light, IInitialize, INotify {
 	public Vector3 Position { get; set; }
 	public Vector4 Color { get; set; }
 	public float Brightness { get; set; }

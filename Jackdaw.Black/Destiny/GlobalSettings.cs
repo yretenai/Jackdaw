@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface GlobalSettings : IRoot { }
+public class GlobalSettings : IRoot { }

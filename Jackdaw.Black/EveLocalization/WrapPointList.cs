@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface WrapPointList : IRoot { }
+public class WrapPointList : IRoot { }

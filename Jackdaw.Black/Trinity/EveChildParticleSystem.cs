@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildParticleSystem : IRoot, EveEntity, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify {
+public class EveChildParticleSystem : EveEntity, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify {
 	public Vector3 Translation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public Vector4 Rotation { get; set; }

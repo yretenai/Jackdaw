@@ -71,6 +71,8 @@ internal class Program {
 				parent = "Tr2AudioStretchBase";
 			} else if (interfaces.Contains("EveSOFDataHullLightSetItem")) {
 				parent = "EveSOFDataHullLightSetItem";
+			} else {
+				parent = interfaces.FirstOrDefault(x => x[0] != 'I', parent);
 			}
 
 			var interfaceList = interfaces.Where(x => x != parent && x != "IRoot").ToList();
@@ -116,7 +118,7 @@ internal class Program {
 
 			realClasses.Add(name);
 
-			if (type.Fields.Count == 0 && type.Parent.Length == 0) {
+			if (type.Fields.Count == 0 && type.Parent.Length == 0 && name[0] == 'I' || name == "EveEntity") {
 				group = "interface";
 			}
 
@@ -172,7 +174,7 @@ internal class Program {
 							            0 when field.ClassType == "Matrix" => "Matrix4x4",
 							            0 when field.ClassType == "Color" => "Vector4",
 							            0 when field.ClassType == "Rotation" => "Quaternion",
-							            0 when field.ClassType == "" => "Vector3",
+							            0 when field.ClassType == string.Empty => "Vector3",
 							            8 => "Vector2",
 							            12 => "Vector3",
 							            16 => "Vector4",
@@ -205,6 +207,9 @@ internal class Program {
 						switch (field.ClassType) {
 							case "IList":
 								fieldType = "List<IRoot?>?";
+								if (fieldName == "IndexBuffers") {
+									attribute = "JsonIgnore";
+								}
 								break;
 							case "IBlueDict":
 								fieldType = "Dictionary<IRoot, IRoot?>?";

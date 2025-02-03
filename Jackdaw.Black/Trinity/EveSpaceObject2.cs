@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSpaceObject2 : IRoot, EveEntity, IEveShadowCaster, IInitialize, ITr2Pickable, ITriTargetable, IWorldPosition, ITr2ShLightingReceiver, INotify, ITr2SecondaryLightSource, ITr2ImpostorSource, ITr2CurveSetOwner, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2ControllerOwner, ITr2GrannyAnimationOwner, IEveInheritPropertiesOwner, IEveSpaceObjectDecalOwner, ITr2LightOwner, IEveSpaceObjectAttachmentOwner {
+public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pickable, ITriTargetable, IWorldPosition, ITr2ShLightingReceiver, INotify, ITr2SecondaryLightSource, ITr2ImpostorSource, ITr2CurveSetOwner, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2ControllerOwner, ITr2GrannyAnimationOwner, IEveInheritPropertiesOwner, IEveSpaceObjectDecalOwner, ITr2LightOwner, IEveSpaceObjectAttachmentOwner {
 	public bool Mute { get; set; }
 	public float ActivationStrength { get; set; }
 	public string? Name { get; set; }

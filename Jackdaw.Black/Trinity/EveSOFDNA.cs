@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveSOFDNA : IRoot { }
+public class EveSOFDNA : IRoot { }

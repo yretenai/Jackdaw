@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveSocketParameterBindingBase : IRoot { }
+public class EveSocketParameterBindingBase : IRoot { }

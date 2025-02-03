@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildCloud2 : IRoot, ITr2VolumetricRenderable, ITr2GeometryProvider, IInitialize, INotify, IEveSpaceObjectChild, ITr2Renderable, EveEntity {
+public class EveChildCloud2 : EveEntity, ITr2VolumetricRenderable, ITr2GeometryProvider, IInitialize, INotify, IEveSpaceObjectChild, ITr2Renderable {
 	public bool LightmapDirty { get; set; }
 	public Tr2Effect? Effect { get; set; }
 	public Tr2Effect? ReflectionEffect { get; set; }

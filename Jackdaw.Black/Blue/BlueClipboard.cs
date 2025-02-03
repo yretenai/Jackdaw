@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface BlueClipboard : IRoot { }
+public class BlueClipboard : IRoot { }

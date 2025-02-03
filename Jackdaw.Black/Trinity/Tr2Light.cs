@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface Tr2Light : IRoot { }
+public class Tr2Light : IRoot { }

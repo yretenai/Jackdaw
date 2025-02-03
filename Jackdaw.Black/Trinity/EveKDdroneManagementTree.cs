@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface EveKDdroneManagementTree : IRoot { }
+public class EveKDdroneManagementTree : IRoot { }

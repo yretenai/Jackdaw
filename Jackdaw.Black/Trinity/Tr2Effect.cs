@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Effect : IRoot, Tr2Material, INotify, IInitialize, IListNotify {
+public class Tr2Effect : Tr2Material, INotify, IInitialize, IListNotify {
 	public string? Name { get; set; }
 	public string? EffectFilePath { get; set; }
 	public string? ActualEffectFilePath { get; set; }

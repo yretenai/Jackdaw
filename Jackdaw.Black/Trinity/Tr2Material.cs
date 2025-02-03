@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public interface Tr2Material : IRoot { }
+public class Tr2Material : IRoot { }
