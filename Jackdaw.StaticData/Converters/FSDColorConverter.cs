@@ -1,17 +1,18 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Jackdaw.Structs.FSD.Schema;
-using Newtonsoft.Json;
 
 namespace Jackdaw.StaticData.Converters;
 
 internal class FSDColorConverter : JsonConverter<FSDColor> {
-	public override void WriteJson(JsonWriter writer, FSDColor value, JsonSerializer serializer) {
+	public override FSDColor Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) => throw new NotImplementedException();
+
+	public override void Write(Utf8JsonWriter writer, FSDColor value, JsonSerializerOptions options) {
 		writer.WriteStartArray();
-		writer.WriteValue(value.Red);
-		writer.WriteValue(value.Green);
-		writer.WriteValue(value.Blue);
-		writer.WriteValue(value.Alpha);
+		writer.WriteNumberValue(value.Red);
+		writer.WriteNumberValue(value.Green);
+		writer.WriteNumberValue(value.Blue);
+		writer.WriteNumberValue(value.Alpha);
 		writer.WriteEndArray();
 	}
-
-	public override FSDColor ReadJson(JsonReader reader, Type objectType, FSDColor existingValue, bool hasExistingValue, JsonSerializer serializer) => throw new NotImplementedException();
 }

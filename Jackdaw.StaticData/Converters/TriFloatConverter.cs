@@ -1,21 +1,13 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Jackdaw.Black;
-using Newtonsoft.Json;
 
 namespace Jackdaw.StaticData.Converters;
 
 internal class TriFloatConverter : JsonConverter<TriFloat> {
-	public override TriFloat? ReadJson(JsonReader reader, Type objectType, TriFloat? existingValue, bool hasExistingValue, JsonSerializer serializer) {
-		var value = reader.ReadAsDouble();
-		if (value == null) {
-			return null;
-		}
+	public override TriFloat Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) => new() {
+		Value = (float) reader.GetDouble(),
+	};
 
-		return new TriFloat {
-			Value = (float) value,
-		};
-	}
-
-	public override void WriteJson(JsonWriter writer, TriFloat? value, JsonSerializer serializer) {
-		writer.WriteValue(value?.Value);
-	}
+	public override void Write(Utf8JsonWriter writer, TriFloat value, JsonSerializerOptions options) => writer.WriteNumberValue(value.Value);
 }

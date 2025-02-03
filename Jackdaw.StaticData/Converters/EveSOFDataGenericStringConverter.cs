@@ -1,11 +1,12 @@
+using System.Text.Json;
+using System.Text.Json.Serialization;
 using Jackdaw.Black;
-using Newtonsoft.Json;
 
 namespace Jackdaw.StaticData.Converters;
 
 internal class EveSOFDataGenericStringConverter : JsonConverter<EveSOFDataGenericString> {
-	public override EveSOFDataGenericString? ReadJson(JsonReader reader, Type objectType, EveSOFDataGenericString? existingValue, bool hasExistingValue, JsonSerializer serializer) {
-		var value = reader.ReadAsString();
+	public override EveSOFDataGenericString? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options) {
+		var value = reader.GetString();
 		if (value == null) {
 			return null;
 		}
@@ -15,7 +16,7 @@ internal class EveSOFDataGenericStringConverter : JsonConverter<EveSOFDataGeneri
 		};
 	}
 
-	public override void WriteJson(JsonWriter writer, EveSOFDataGenericString? value, JsonSerializer serializer) {
-		writer.WriteValue(value?.Str);
+	public override void Write(Utf8JsonWriter writer, EveSOFDataGenericString value, JsonSerializerOptions options) {
+		writer.WriteStringValue(value.Str);
 	}
 }
