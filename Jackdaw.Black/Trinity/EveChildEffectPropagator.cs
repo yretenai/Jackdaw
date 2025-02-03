@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class EveChildEffectPropagator : EveChildContainer, IEveSpaceObjectChild, INotify, EveEntity {
-	public EveChildInstanceContainer? Effect { get; set; }
 	public float PlayTime { get; set; }
+	public EveChildInstanceContainer? Effect { get; set; }
 	public Vector3 EffectScaling { get; set; }
 	public float RandScaleMin { get; set; }
 	public float RandScaleMax { get; set; }

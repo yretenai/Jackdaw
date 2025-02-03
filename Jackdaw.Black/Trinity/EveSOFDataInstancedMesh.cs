@@ -8,7 +8,7 @@ public class EveSOFDataInstancedMesh : IRoot {
 	public int LowestLodVisible { get; set; }
 	public int DisplayModifier { get; set; }
 	public string? GeometryResPath { get; set; }
-	[BlackArray]public byte[][]? Instances { get; set; }
+	[BlackArray] public byte[][]? Instances { get; set; }
 	public string? Shader { get; set; }
 	public List<IRoot?>? Textures { get; set; }
 }

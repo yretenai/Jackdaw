@@ -5,7 +5,6 @@ namespace Jackdaw.Black;
 
 public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateable, IInitialize, INotify, ITr2NamedPredicate {
 	public IRoot? CameraAttachments { get; set; }
-	public Tr2ShLightingManager? ShLightingManager { get; set; }
 	public Tr2QuadRenderer? QuadRenderer { get; set; }
 	public Tr2GpuParticleSystem? GpuParticleSystem { get; set; }
 	public bool Display { get; set; }
@@ -62,6 +61,7 @@ public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateabl
 	public Tr2DebugRenderer? DebugRenderer { get; set; }
 	public long UpdateTime { get; set; }
 	public EveStarfield? Starfield { get; set; }
+	public Tr2ShLightingManager? ShLightingManager { get; set; }
 	public int TaaSubpixelPattern { get; set; }
 	public float PixelOffsetScale { get; set; }
 	public Tr2ImpostorManager? ImpostorManager { get; set; }

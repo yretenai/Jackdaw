@@ -7,6 +7,6 @@ public class BlueAsyncRes : IRoot, IBlueResource {
 	public bool IsGood { get; set; }
 	public bool IsPrepared { get; set; }
 	public bool IsLoading { get; set; }
-	[BlackUseNamePool]public string? Path { get; set; }
-	[BlackUseNamePool]public string? Ext { get; set; }
+	[BlackUseNamePool] public string? Path { get; set; }
+	[BlackUseNamePool] public string? Ext { get; set; }
 }

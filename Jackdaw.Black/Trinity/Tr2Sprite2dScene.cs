@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class Tr2Sprite2dScene : IRoot, ITr2Scene, ITr2Updateable, INotify {
 	public bool UseLinearColorSpace { get; set; }
 	public bool GammaCorrectText { get; set; }
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public bool Display { get; set; }
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? Background { get; set; }

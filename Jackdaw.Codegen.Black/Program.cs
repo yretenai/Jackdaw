@@ -142,7 +142,7 @@ internal class Program {
 
 			writer.WriteLine();
 
-			foreach (var field in fields.OrderBy(x => x.Offset).DistinctBy(x => x.Name)) {
+			foreach (var field in fields.OrderByDescending(x => x.Offset).DistinctBy(x => x.Name).OrderBy(x => x.Offset)) {
 				field.Description = field.Description.Trim();
 
 				var fieldName = FixName(field.Name);
@@ -217,6 +217,7 @@ internal class Program {
 							default: {
 								if (field.ClassType.Length > 0 && totalNames.Contains(field.ClassType)) {
 									fieldType = field.ClassType + "?";
+									attribute = "BlackArray";
 								}
 
 								break;
@@ -234,7 +235,7 @@ internal class Program {
 						throw new InvalidOperationException();
 				}
 
-				attribute = !string.IsNullOrEmpty(attribute) ? $"[{attribute}]" : string.Empty;
+				attribute = !string.IsNullOrEmpty(attribute) ? $"[{attribute}] " : string.Empty;
 
 				writer.WriteLine($"\t{attribute}public {fieldType} {fieldName} {{ get; set; }}");
 			}

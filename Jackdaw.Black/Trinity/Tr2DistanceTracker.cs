@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2DistanceTracker : IRoot, ITriFunction, INotify {
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public bool SignedDistance { get; set; }
 	public bool DistanceToClosest { get; set; }
 	public float Value { get; set; }

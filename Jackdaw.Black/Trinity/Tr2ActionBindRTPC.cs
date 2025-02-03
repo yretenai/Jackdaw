@@ -7,6 +7,6 @@ public class Tr2ActionBindRTPC : IRoot, ITr2ControllerAction, ITr2Updateable, IN
 	public bool IsExpressionValid { get; set; }
 	public string? Value { get; set; }
 	public string? Emitter { get; set; }
-	[BlackUseNamePool]public string? RtpcName { get; set; }
+	[BlackUseNamePool] public string? RtpcName { get; set; }
 	public ITriScalarFunction? Curve { get; set; }
 }

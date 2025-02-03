@@ -19,7 +19,7 @@ public class Tr2FactionLight : IRoot, IEveInheritPropertiesOwner, Tr2Light, IIni
 	public short Flags { get; set; }
 	public string? Name { get; set; }
 	public Tr2LightProfileRes? LightProfile { get; set; }
-	[BlackUseNamePool]public string? LightProfilePath { get; set; }
+	[BlackUseNamePool] public string? LightProfilePath { get; set; }
 	public float Saturation { get; set; }
 	public bool IsSpotlight { get; set; }
 	public int FactionColor { get; set; }

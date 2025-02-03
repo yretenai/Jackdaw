@@ -21,6 +21,6 @@ public class EveChildInstanceContainer : IRoot, IEveSpaceObjectChild, ITr2CurveS
 	public List<IRoot?>? Instances { get; set; }
 	public bool Reset { get; set; }
 	public string? LocatorSet { get; set; }
-	[BlackArray]public byte[][]? Transforms { get; set; }
+	[BlackArray] public byte[][]? Transforms { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 }

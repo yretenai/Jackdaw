@@ -5,8 +5,8 @@ namespace Jackdaw.Black;
 
 public class Tr2CurveEulerRotation : IRoot, ITriQuaternionFunction, ITriFunction, ITriCurveLength {
 	public string? Name { get; set; }
-	public Tr2CurveScalar? Yaw { get; set; }
-	public Tr2CurveScalar? Pitch { get; set; }
-	public Tr2CurveScalar? Roll { get; set; }
+	[BlackArray] public Tr2CurveScalar? Yaw { get; set; }
+	[BlackArray] public Tr2CurveScalar? Pitch { get; set; }
+	[BlackArray] public Tr2CurveScalar? Roll { get; set; }
 	public Vector4 CurrentValue { get; set; }
 }

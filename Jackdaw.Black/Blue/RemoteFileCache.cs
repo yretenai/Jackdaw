@@ -9,7 +9,7 @@ public class RemoteFileCache : IRoot {
 	public string? Server { get; set; }
 	public string? BackupServer { get; set; }
 	public string? Prefix { get; set; }
-	[BlackUseNamePool]public string? CacheFolder { get; set; }
+	[BlackUseNamePool] public string? CacheFolder { get; set; }
 	public bool RegisterDownloadErrors { get; set; }
 	public int PrimaryServerFailThreshold { get; set; }
 	public long BytesDownloaded { get; set; }

@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class EveSOFDataHullSoundEmitter : IRoot {
 	public float AttenuationScalingFactor { get; set; }
 	public string? Name { get; set; }
-	[BlackUseNamePool]public string? Prefix { get; set; }
+	[BlackUseNamePool] public string? Prefix { get; set; }
 	public Vector3 Position { get; set; }
 	public Vector4 Rotation { get; set; }
 }

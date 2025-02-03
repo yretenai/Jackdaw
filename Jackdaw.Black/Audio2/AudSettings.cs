@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class AudSettings : IRoot {
-	[BlackUseNamePool]public string? BaseSoundbankPath { get; set; }
-	[BlackUseNamePool]public string? EssentialPath { get; set; }
-	[BlackUseNamePool]public string? SoundbankLanguage { get; set; }
+	[BlackUseNamePool] public string? BaseSoundbankPath { get; set; }
+	[BlackUseNamePool] public string? EssentialPath { get; set; }
+	[BlackUseNamePool] public string? SoundbankLanguage { get; set; }
 	public string? ApplicationName { get; set; }
 }

@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2GrannyVector3Curve : IRoot, ITriFunction, ITriCurveLength, ICustomPersist {
-	[BlackArray(4)]public int[]? Curve { get; set; }
+	[BlackArray(4)] public int[]? Curve { get; set; }
 	public bool Cycle { get; set; }
 	public Vector3 CurrentValue { get; set; }
 	public float TimeOffset { get; set; }

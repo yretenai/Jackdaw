@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveSOF : IRoot {
-	public EveSOFDataMgr? DataMgr { get; set; }
+	[BlackArray] public EveSOFDataMgr? DataMgr { get; set; }
 	public bool AllowFileCaching { get; set; }
 	public bool EditorMode { get; set; }
 }

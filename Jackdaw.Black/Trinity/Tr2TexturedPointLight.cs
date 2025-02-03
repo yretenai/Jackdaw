@@ -13,11 +13,11 @@ public class Tr2TexturedPointLight : IRoot, Tr2Light, IInitialize, INotify {
 	public float Radius { get; set; }
 	public float InnerRadius { get; set; }
 	public Vector4 Rotation { get; set; }
-	[BlackUseNamePool]public string? TexturePath { get; set; }
+	[BlackUseNamePool] public string? TexturePath { get; set; }
 	public int BoneIndex { get; set; }
 	public short Flags { get; set; }
 	public string? Name { get; set; }
 	public Tr2LightProfileRes? LightProfile { get; set; }
-	[BlackUseNamePool]public string? LightProfilePath { get; set; }
+	[BlackUseNamePool] public string? LightProfilePath { get; set; }
 	public TriTextureRes? Texture { get; set; }
 }

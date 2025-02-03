@@ -5,15 +5,15 @@ namespace Jackdaw.Black;
 
 public class BlueTestHelperAttributes : IRoot {
 	public string? MyString { get; set; }
-	[BlackUseNamePool]public string? MyUnicode { get; set; }
+	[BlackUseNamePool] public string? MyUnicode { get; set; }
 	public bool MyBool { get; set; }
 	public int MyInt { get; set; }
 	public float MyFloat { get; set; }
 	public double MyDouble { get; set; }
 	public long MyInt64 { get; set; }
 	public string? SharedString { get; set; }
-	[BlackUseNamePool]public string? SharedStringW { get; set; }
+	[BlackUseNamePool] public string? SharedStringW { get; set; }
 	public List<IRoot?>? MyVector { get; set; }
-	[BlackExperimental]public Dictionary<IRoot, IRoot?>? MyDict { get; set; }
-	[BlackArray]public byte[][]? MyStructureList { get; set; }
+	[BlackExperimental] public Dictionary<IRoot, IRoot?>? MyDict { get; set; }
+	[BlackArray] public byte[][]? MyStructureList { get; set; }
 }

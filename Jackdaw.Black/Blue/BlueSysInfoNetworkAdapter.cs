@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class BlueSysInfoNetworkAdapter : IRoot {
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public string? MacAddress { get; set; }
 	public string? MacAddressString { get; set; }
 	public string? Uuid { get; set; }

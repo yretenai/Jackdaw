@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class BlueTestHelperProperties : IRoot {
 	public string? MyString { get; set; }
-	[BlackUseNamePool]public string? MyUnicode { get; set; }
+	[BlackUseNamePool] public string? MyUnicode { get; set; }
 	public bool MyBool { get; set; }
 	public int MyInt { get; set; }
 	public float MyFloat { get; set; }

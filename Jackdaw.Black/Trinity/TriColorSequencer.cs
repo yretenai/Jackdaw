@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class TriColorSequencer : IRoot, ITriFunction, ITriColorFunction, ITriCurveLength {
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public long Start { get; set; }
 	public Vector4 Value { get; set; }
 	public int Operator { get; set; }

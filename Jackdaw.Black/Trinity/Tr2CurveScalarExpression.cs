@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class Tr2CurveScalarExpression : IRoot, ITriFunction, ITriScalarFunction, IInitialize {
-	public string? Expression { get; set; }
 	public string? Name { get; set; }
+	public string? Expression { get; set; }
 	public List<IRoot?>? Inputs { get; set; }
 	public float CurrentValue { get; set; }
 	public float Input1 { get; set; }

@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class TriEventKey : IRoot {
 	public float Time { get; set; }
-	[BlackUseNamePool]public string? Value { get; set; }
+	[BlackUseNamePool] public string? Value { get; set; }
 }

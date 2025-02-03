@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class TriVectorSequencer : IRoot, ITriFunction, ITriVectorFunction {
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public long Start { get; set; }
 	public Vector3 Value { get; set; }
 	public int Operator { get; set; }

@@ -9,7 +9,7 @@ public class BluePyOS : IRoot, IBluePyOS {
 	public int TimesliceWarning { get; set; }
 	public int BeNiceSlice { get; set; }
 	public int PerformanceUpdateFrequency { get; set; }
-	public TaskletTimer? TaskletTimer { get; set; }
+	[BlackArray] public TaskletTimer? TaskletTimer { get; set; }
 	public int Softspace { get; set; }
 	public bool Packaged { get; set; }
 	public bool InterpreterMode { get; set; }

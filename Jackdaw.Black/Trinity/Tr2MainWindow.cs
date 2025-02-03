@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class Tr2MainWindow : IRoot {
 	public int Width { get; set; }
 	public int Height { get; set; }
-	[BlackUseNamePool]public string? Title { get; set; }
+	[BlackUseNamePool] public string? Title { get; set; }
 	public bool Active { get; set; }
 	public Tr2MouseCursor? MouseCursor { get; set; }
 	public long Hwnd { get; set; }

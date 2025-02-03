@@ -10,7 +10,7 @@ public class Tr2Effect : IRoot, Tr2Material, INotify, IInitialize, IListNotify {
 	public Tr2EffectRes? EffectResource { get; set; }
 	public List<IRoot?>? Parameters { get; set; }
 	public List<IRoot?>? Resources { get; set; }
-	[BlackArray]public byte[][]? ConstParameters { get; set; }
-	[BlackArray]public byte[][]? SamplerOverrides { get; set; }
-	[BlackArray]public byte[][]? Options { get; set; }
+	[BlackArray] public byte[][]? ConstParameters { get; set; }
+	[BlackArray] public byte[][]? SamplerOverrides { get; set; }
+	[BlackArray] public byte[][]? Options { get; set; }
 }

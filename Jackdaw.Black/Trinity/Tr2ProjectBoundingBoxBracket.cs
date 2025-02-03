@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2ProjectBoundingBoxBracket : IRoot, ITriFunction {
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public ITr2BoundingBox? Object { get; set; }
 	public bool IntegerCoordinates { get; set; }
 	public float MinProjectedWidth { get; set; }

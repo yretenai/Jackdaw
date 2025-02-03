@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class Tr2ActionSetAudioEmitterPrefix : IRoot, ITr2ControllerAction {
 	public string? Emitter { get; set; }
-	[BlackUseNamePool]public string? Prefix { get; set; }
+	[BlackUseNamePool] public string? Prefix { get; set; }
 }

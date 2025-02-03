@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2TextureAnimation : IRoot, IInitialize, INotify {
-	[BlackUseNamePool]public string? ResPath { get; set; }
+	[BlackUseNamePool] public string? ResPath { get; set; }
 	public float Fps { get; set; }
 	public float Time { get; set; }
 	public int Frame { get; set; }

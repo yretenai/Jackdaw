@@ -4,10 +4,10 @@
 namespace Jackdaw.Black;
 
 public class Tr2CurveVector3Expression : IRoot, ITriColorFunction, ITriVectorFunction, ITriFunction, IInitialize {
+	public string? Name { get; set; }
 	public string? ExpressionX { get; set; }
 	public string? ExpressionY { get; set; }
 	public string? ExpressionZ { get; set; }
-	public string? Name { get; set; }
 	public List<IRoot?>? Inputs { get; set; }
 	public Vector3 CurrentValue { get; set; }
 	public float Input1 { get; set; }

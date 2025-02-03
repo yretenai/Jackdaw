@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2TexturePackChannel : IRoot {
-	[BlackUseNamePool]public string? Path { get; set; }
+	[BlackUseNamePool] public string? Path { get; set; }
 	public byte Channel { get; set; }
 	public byte Fill { get; set; }
 }

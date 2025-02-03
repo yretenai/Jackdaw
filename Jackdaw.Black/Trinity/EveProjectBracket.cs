@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveProjectBracket : IRoot, ITriFunction {
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public ITriVectorFunction? TrackBall { get; set; }
 	public float BallTrackingScaling { get; set; }
 	public IWorldPosition? TrackTransform { get; set; }

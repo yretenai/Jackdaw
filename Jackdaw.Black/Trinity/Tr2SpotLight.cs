@@ -19,5 +19,5 @@ public class Tr2SpotLight : IRoot, Tr2Light, IInitialize, INotify {
 	public short Flags { get; set; }
 	public string? Name { get; set; }
 	public Tr2LightProfileRes? LightProfile { get; set; }
-	[BlackUseNamePool]public string? LightProfilePath { get; set; }
+	[BlackUseNamePool] public string? LightProfilePath { get; set; }
 }

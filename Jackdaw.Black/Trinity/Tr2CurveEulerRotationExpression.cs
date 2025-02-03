@@ -4,10 +4,10 @@
 namespace Jackdaw.Black;
 
 public class Tr2CurveEulerRotationExpression : IRoot, ITriQuaternionFunction, ITriFunction, IInitialize {
+	public string? Name { get; set; }
 	public string? ExpressionYaw { get; set; }
 	public string? ExpressionPitch { get; set; }
 	public string? ExpressionRoll { get; set; }
-	public string? Name { get; set; }
 	public List<IRoot?>? Inputs { get; set; }
 	public Vector4 CurrentValue { get; set; }
 	public float Input1 { get; set; }

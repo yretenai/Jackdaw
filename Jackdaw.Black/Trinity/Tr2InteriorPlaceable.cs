@@ -10,7 +10,7 @@ public class Tr2InteriorPlaceable : IRoot, ITr2Interior, ITr2InteriorDynamic, IN
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool IsUnique { get; set; }
-	public TriMatrix? Transform { get; set; }
+	[BlackArray] public TriMatrix? Transform { get; set; }
 	public string? PlaceableResPath { get; set; }
 	public WodPlaceableRes? PlaceableRes { get; set; }
 	public Vector3 BoundingSphereCenter { get; set; }

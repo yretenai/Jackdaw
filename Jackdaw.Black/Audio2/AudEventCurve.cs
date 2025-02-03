@@ -7,7 +7,7 @@ public class AudEventCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
 	public string? Name { get; set; }
 	public double Time { get; set; }
 	public float LocalTime { get; set; }
-	[BlackUseNamePool]public string? Value { get; set; }
+	[BlackUseNamePool] public string? Value { get; set; }
 	public float Length { get; set; }
 	public int Extrapolation { get; set; }
 	public List<IRoot?>? Keys { get; set; }

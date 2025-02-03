@@ -11,7 +11,7 @@ public class Tr2SkinnedObject : IRoot, ITr2Renderable, IWorldPosition, IListNoti
 	public ITr2AnimationUpdater? AnimationUpdater { get; set; }
 	public object? WorldTransformUpdater { get; set; }
 	public string? Name { get; set; }
-	public TriMatrix? Transform { get; set; }
+	[BlackArray] public TriMatrix? Transform { get; set; }
 	public Tr2SkinnedModel? VisualModel { get; set; }
 	public int FrameDelay { get; set; }
 	public int SkinningMatrixCount { get; set; }

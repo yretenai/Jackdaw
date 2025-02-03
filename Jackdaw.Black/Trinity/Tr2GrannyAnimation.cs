@@ -9,7 +9,7 @@ public class Tr2GrannyAnimation : IRoot, IInitialize, ITr2AnimationUpdater {
 	public string? ResPath_ { get; set; }
 	public string? Model_ { get; set; }
 	public TriGrannyRes? GrannyRes { get; set; }
-	public GrannyBoneOffset? BoneOffset { get; set; }
+	[BlackArray] public GrannyBoneOffset? BoneOffset { get; set; }
 	public bool DebugRenderSkeleton { get; set; }
 	public bool DebugRenderJointNames { get; set; }
 	public bool AnimationEnabled { get; set; }

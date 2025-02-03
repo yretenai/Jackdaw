@@ -7,7 +7,7 @@ public class AudGameObjResource : IRoot, IInitialize, IListNotify {
 	public float MaxAttenuationRadius { get; set; }
 	public long ID { get; set; }
 	public string? Name { get; set; }
-	[BlackUseNamePool]public string? EventPrefix { get; set; }
+	[BlackUseNamePool] public string? EventPrefix { get; set; }
 	public List<IRoot?>? Parameters { get; set; }
 	public bool IsVisible { get; set; }
 	public bool ListenerInRange { get; set; }

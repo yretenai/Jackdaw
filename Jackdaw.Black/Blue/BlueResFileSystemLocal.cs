@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class BlueResFileSystemLocal : IRoot, IBlueResFileSystem {
-	[BlackUseNamePool]public string? InitialWorkingDirectory { get; set; }
+	[BlackUseNamePool] public string? InitialWorkingDirectory { get; set; }
 }

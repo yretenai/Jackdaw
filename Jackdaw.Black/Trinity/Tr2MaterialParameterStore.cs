@@ -7,5 +7,5 @@ public class Tr2MaterialParameterStore : IRoot, INotify, IInitialize {
 	public string? Name { get; set; }
 	public string? ParentPath { get; set; }
 	public Tr2MaterialParameterStore? Parent { get; set; }
-	[BlackExperimental]public Dictionary<IRoot, IRoot?>? Parameters { get; set; }
+	[BlackExperimental] public Dictionary<IRoot, IRoot?>? Parameters { get; set; }
 }

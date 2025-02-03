@@ -15,7 +15,7 @@ public class TriDevice : IRoot, ITriDevice {
 	public int AdapterWidth { get; set; }
 	public int AdapterHeight { get; set; }
 	public int AdapterRefreshRate { get; set; }
-	public TriViewport? Viewport { get; set; }
+	[BlackArray] public TriViewport? Viewport { get; set; }
 	public int TickInterval { get; set; }
 	public int DeviceType { get; set; }
 	public int Adapter { get; set; }

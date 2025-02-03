@@ -26,7 +26,7 @@ public class EveSOFDataGeneric : IRoot {
 	public EveSOFDataGenericHullDamage? HullDamage { get; set; }
 	public EveSOFDataGenericSwarm? Swarm { get; set; }
 	public EveSOFDataAreaMaterial? GenericWreckMaterial { get; set; }
-	public EveSOFDataGenericShader? BannerShader { get; set; }
+	[BlackArray] public EveSOFDataGenericShader? BannerShader { get; set; }
 	public List<IRoot?>? Variants { get; set; }
 	public List<IRoot?>? VisibilityGroups { get; set; }
 	public List<IRoot?>? HullCategories { get; set; }

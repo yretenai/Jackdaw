@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class TriRigidOrientation : IRoot, ITriFunction, ITriQuaternionFunction {
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public long Start { get; set; }
 	public float I { get; set; }
 	public float Drag { get; set; }

@@ -11,7 +11,7 @@ public class Tr2SpriteObjectBase : IRoot, ITr2SpriteObject, INotify {
 	public float DisplayY { get; set; }
 	public float DisplayWidth { get; set; }
 	public float DisplayHeight { get; set; }
-	[BlackUseNamePool]public string? Name { get; set; }
+	[BlackUseNamePool] public string? Name { get; set; }
 	public int PickState { get; set; }
 	public Tr2Sprite2dPickingMask? PickingMask { get; set; }
 }

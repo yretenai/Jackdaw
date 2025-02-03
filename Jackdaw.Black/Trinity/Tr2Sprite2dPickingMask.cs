@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2Sprite2dPickingMask : IRoot {
-	[BlackUseNamePool]public string? MaskPath { get; set; }
+	[BlackUseNamePool] public string? MaskPath { get; set; }
 	public Tr2ImageRes? Mask { get; set; }
 	public int Channel { get; set; }
 	public float Threshold { get; set; }

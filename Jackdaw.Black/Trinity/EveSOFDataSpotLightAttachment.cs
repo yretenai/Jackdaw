@@ -14,5 +14,5 @@ public class EveSOFDataSpotLightAttachment : IRoot {
 	public float NoiseAmplitude { get; set; }
 	public float NoiseFrequency { get; set; }
 	public int NoiseOctaves { get; set; }
-	[BlackUseNamePool]public string? LightProfilePath { get; set; }
+	[BlackUseNamePool] public string? LightProfilePath { get; set; }
 }

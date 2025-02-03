@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class Tr2InstancedMesh : Tr2Mesh {
-	public ITr2InstanceData? InstanceGeometryResource { get; set; }
 	public string? InstanceGeometryResPath { get; set; }
+	public ITr2InstanceData? InstanceGeometryResource { get; set; }
 	public int InstanceMeshIndex { get; set; }
 	public ITr2GpuBuffer? InstanceCount { get; set; }
 	public int BoundsMethod { get; set; }

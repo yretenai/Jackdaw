@@ -4,15 +4,15 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataHullBanner : IRoot {
-	public Vector3 Scaling { get; set; }
-	public float AngleX { get; set; }
-	public float AngleY { get; set; }
 	public string? Name { get; set; }
 	public string? VisibilityGroup { get; set; }
 	public int Usage { get; set; }
 	public Vector3 Position { get; set; }
+	public Vector3 Scaling { get; set; }
 	public Vector4 Rotation { get; set; }
 	public EveSOFDataHullBannerLight? LightOverride { get; set; }
+	public float AngleX { get; set; }
+	public float AngleY { get; set; }
 	public int BoneIndex { get; set; }
 	public bool MaintainAspectRatio { get; set; }
 }

@@ -4,7 +4,6 @@
 namespace Jackdaw.Black;
 
 public class Tr2Vector4Parameter : IRoot, ITriEffectParameter, ITriReroutable, IInitialize {
-	public Vector3 Value { get; set; }
 	public float X { get; set; }
 	public float Y { get; set; }
 	public float Z { get; set; }
@@ -13,6 +12,7 @@ public class Tr2Vector4Parameter : IRoot, ITriEffectParameter, ITriReroutable, I
 	public float V2 { get; set; }
 	public float V3 { get; set; }
 	public float V4 { get; set; }
+	public Vector4 Value { get; set; }
 	public string? Name { get; set; }
 	public bool UsedByCurrentTechnique { get; set; }
 	public bool UsedByCurrentEffect { get; set; }

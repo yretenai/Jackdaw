@@ -59,6 +59,6 @@ public class EveTurretSet : IRoot, IInitialize, EveEntity, INotify, ITr2Renderab
 	public bool AmbientEffectEditingMode { get; set; }
 	public bool PlayMovementSound { get; set; }
 	public TriObserverLocal? TurretMovementObserver { get; set; }
-	[BlackUseNamePool]public string? IdleToTargetingMovementAudioEvent { get; set; }
-	[BlackUseNamePool]public string? TargetingToIdleMovementAudioEvent { get; set; }
+	[BlackUseNamePool] public string? IdleToTargetingMovementAudioEvent { get; set; }
+	[BlackUseNamePool] public string? TargetingToIdleMovementAudioEvent { get; set; }
 }

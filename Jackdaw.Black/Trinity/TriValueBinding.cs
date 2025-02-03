@@ -5,9 +5,9 @@ namespace Jackdaw.Black;
 
 public class TriValueBinding : IRoot, ITr2ValueBinding, INotify {
 	public bool IsValid { get; set; }
+	public string? Name { get; set; }
 	public object? SourceObject { get; set; }
 	public object? DestinationObject { get; set; }
-	public string? Name { get; set; }
 	public string? SourceAttribute { get; set; }
 	public string? DestinationAttribute { get; set; }
 	public bool IsWeak { get; set; }

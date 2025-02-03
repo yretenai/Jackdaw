@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class EveLocatorSets : IRoot {
 	public string? Name { get; set; }
-	[BlackArray]public byte[][]? Locators { get; set; }
+	[BlackArray] public byte[][]? Locators { get; set; }
 }

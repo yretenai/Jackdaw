@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2CurveScalar : IRoot, ITriScalarFunction, ITriFunction, ITriCurveLength {
-	[BlackArray]public byte[][]? Keys { get; set; }
+	[BlackArray] public byte[][]? Keys { get; set; }
 	public string? Name { get; set; }
 	public float TimeOffset { get; set; }
 	public float TimeScale { get; set; }

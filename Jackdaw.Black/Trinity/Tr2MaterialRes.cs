@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class Tr2MaterialRes : IRoot {
 	public string? Name { get; set; }
-	[BlackExperimental]public Dictionary<IRoot, IRoot?>? Meshes { get; set; }
+	[BlackExperimental] public Dictionary<IRoot, IRoot?>? Meshes { get; set; }
 }

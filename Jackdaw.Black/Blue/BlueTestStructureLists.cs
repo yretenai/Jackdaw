@@ -4,17 +4,17 @@
 namespace Jackdaw.Black;
 
 public class BlueTestStructureLists : IRoot {
-	[BlackArray]public byte[][]? Uint8 { get; set; }
-	[BlackArray]public byte[][]? Int8 { get; set; }
-	[BlackArray]public byte[][]? Uint16 { get; set; }
-	[BlackArray]public byte[][]? Int16 { get; set; }
-	[BlackArray]public byte[][]? Uint32 { get; set; }
-	[BlackArray]public byte[][]? Int32 { get; set; }
-	[BlackArray]public byte[][]? Float32 { get; set; }
-	[BlackArray]public byte[][]? Float16 { get; set; }
-	[BlackArray]public byte[][]? String { get; set; }
-	[BlackArray]public byte[][]? Mixed { get; set; }
-	[BlackArray]public byte[][]? Matrix { get; set; }
-	[BlackArray]public byte[][]? Bool { get; set; }
-	[BlackArray]public byte[][]? Enum { get; set; }
+	[BlackArray] public byte[][]? Uint8 { get; set; }
+	[BlackArray] public byte[][]? Int8 { get; set; }
+	[BlackArray] public byte[][]? Uint16 { get; set; }
+	[BlackArray] public byte[][]? Int16 { get; set; }
+	[BlackArray] public byte[][]? Uint32 { get; set; }
+	[BlackArray] public byte[][]? Int32 { get; set; }
+	[BlackArray] public byte[][]? Float32 { get; set; }
+	[BlackArray] public byte[][]? Float16 { get; set; }
+	[BlackArray] public byte[][]? String { get; set; }
+	[BlackArray] public byte[][]? Mixed { get; set; }
+	[BlackArray] public byte[][]? Matrix { get; set; }
+	[BlackArray] public byte[][]? Bool { get; set; }
+	[BlackArray] public byte[][]? Enum { get; set; }
 }

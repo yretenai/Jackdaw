@@ -8,12 +8,12 @@ public class BlueSysInfo : IRoot {
 	public int SystemBitCount { get; set; }
 	public bool IsRosetta { get; set; }
 	public bool IsWine { get; set; }
-	[BlackUseNamePool]public string? WineVersion { get; set; }
-	[BlackUseNamePool]public string? WineHostOs { get; set; }
+	[BlackUseNamePool] public string? WineVersion { get; set; }
+	[BlackUseNamePool] public string? WineHostOs { get; set; }
 	public string? MachineUuid { get; set; }
-	[BlackUseNamePool]public string? ComputerName { get; set; }
-	[BlackUseNamePool]public string? DomainName { get; set; }
+	[BlackUseNamePool] public string? ComputerName { get; set; }
+	[BlackUseNamePool] public string? DomainName { get; set; }
 	public long ProcessStartTime { get; set; }
-	public BlueSysInfoCpu? Cpu { get; set; }
-	public BlueSysInfoOs? Os { get; set; }
+	[BlackArray] public BlueSysInfoCpu? Cpu { get; set; }
+	[BlackArray] public BlueSysInfoOs? Os { get; set; }
 }

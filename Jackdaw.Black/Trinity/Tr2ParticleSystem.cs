@@ -4,10 +4,10 @@
 namespace Jackdaw.Black;
 
 public class Tr2ParticleSystem : IRoot, IInitialize, INotify, ITr2InstanceData, ITr2GpuBuffer {
-	public int MaxParticleCount { get; set; }
 	public long GpuStride { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Elements { get; set; }
+	public int MaxParticleCount { get; set; }
 	public int AliveCount { get; set; }
 	public List<IRoot?>? Forces { get; set; }
 	public List<IRoot?>? Constraints { get; set; }

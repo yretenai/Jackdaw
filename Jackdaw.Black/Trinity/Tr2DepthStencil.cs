@@ -4,7 +4,6 @@
 namespace Jackdaw.Black;
 
 public class Tr2DepthStencil : IRoot, ITr2TextureProvider {
-	public string? Name { get; set; }
 	public int Width { get; set; }
 	public int Height { get; set; }
 	public int MultiSampleType { get; set; }
@@ -13,4 +12,5 @@ public class Tr2DepthStencil : IRoot, ITr2TextureProvider {
 	public int MipCount { get; set; }
 	public bool IsValid { get; set; }
 	public bool IsReadable { get; set; }
+	public string? Name { get; set; }
 }

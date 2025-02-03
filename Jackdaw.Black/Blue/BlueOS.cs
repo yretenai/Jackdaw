@@ -20,7 +20,7 @@ public class BlueOS : IRoot, IBlueOS {
 	public double TimeSyncAdjustFactor { get; set; }
 	public bool UseRDTSC { get; set; }
 	public int Debuglevel { get; set; }
-	[BlackUseNamePool]public string? LanguageID { get; set; }
+	[BlackUseNamePool] public string? LanguageID { get; set; }
 	public float SlugTimeMinMs { get; set; }
 	public float SlugTimeMaxMs { get; set; }
 	public bool UseNominalDeltaT { get; set; }
