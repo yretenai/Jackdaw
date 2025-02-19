@@ -9,6 +9,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<ProjectReference Include="..\DragonLib\DragonLib\DragonLib.csproj" />
 		<ProjectReference Include="..\Jackdaw.Blue\Jackdaw.Blue.csproj"/>
 	</ItemGroup>
 

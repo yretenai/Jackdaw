@@ -2,7 +2,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text.Encodings.Web;
 using System.Text.Json;
-using Jackdaw.BluePyType.MemoryHandlers;
+using DragonLib.IO.DataReader;
 
 namespace Jackdaw.BluePyType;
 

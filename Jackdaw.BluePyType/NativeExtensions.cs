@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using System.Text;
-using Jackdaw.BluePyType.MemoryHandlers;
+using DragonLib.IO.DataReader;
 
 namespace Jackdaw.BluePyType;
 
