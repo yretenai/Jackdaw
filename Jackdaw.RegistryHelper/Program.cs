@@ -42,6 +42,7 @@ internal class Program {
 		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
 		var flycatcherRoot = args[0];
+		var flycatcherNERoot = Path.Combine(flycatcherRoot, "china");
 
 		var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture) {
 			NewLine = "\n",
@@ -87,6 +88,7 @@ internal class Program {
 		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Jackdaw/0.0.1 (Automated; Module/VersionChecker)");
 
 		if (args.Length > 1) {
+			var info = ShardInfo.CCP;
 			if (args[1..] is ["all"]) {
 				var directory = Path.Combine(flycatcherRoot, "index");
 				foreach (var file in Directory.EnumerateFiles(directory, "eveonline_*.txt.zst", SearchOption.TopDirectoryOnly)) {
@@ -103,18 +105,25 @@ internal class Program {
 					}
 
 					var version = baseName[(versionIndex + 1)..];
-					await ProcessVersion(versionSet, version, DEFAULT_PLATFORMS, httpClient, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
+					await ProcessVersion(versionSet, version, DEFAULT_PLATFORMS, httpClient, info, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			} else {
 				foreach (var version in args[1..]) {
-					await ProcessVersion(versionSet, version, DEFAULT_PLATFORMS, httpClient, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
+					await ProcessVersion(versionSet, version, DEFAULT_PLATFORMS, httpClient, info, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			}
 		} else {
+			var infoNE = ShardInfo.NetEase;
+			var infoCCP = ShardInfo.CCP;
 			foreach (var server in Enum.GetValues<ShardServer>()) {
 				try {
+					if (server.IsInternal()) {
+						continue;
+					}
+
+					var info = server.ToRegion() is ShardRegion.NetEase ? infoNE : infoCCP;
 					Log.Information("Getting version for {Server}", server);
-					var json = await JsonSerializer.DeserializeAsync<ClientInfo>(await httpClient.GetStreamAsync(new Uri($"eveclient_{server.ToShortcode()}.json", UriKind.Relative)), JsonOptions, CancellationToken.None);
+					var json = await JsonSerializer.DeserializeAsync<ClientInfo>(await httpClient.GetStreamAsync(new Uri(info.VerDomain, $"eveclient_{server.ToShortcode()}.json")), JsonOptions, CancellationToken.None);
 					if (json == null) {
 						Log.Error("Failed to get version for {Server}", server);
 						continue;
@@ -126,7 +135,7 @@ internal class Program {
 					}
 
 					var version = json.Build;
-					await ProcessVersion(versionSet, version, json.Platforms ?? [], httpClient, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
+					await ProcessVersion(versionSet, version, json.Platforms ?? [], httpClient, info, server.ToRegion() is ShardRegion.NetEase ? flycatcherNERoot : flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
 				} catch {
 					Log.Error("Failed to get version for {Server}", server);
 				}
@@ -134,7 +143,7 @@ internal class Program {
 		}
 	}
 
-	private static async Task ProcessVersion(HashSet<string> versionSet, string version, string[] platforms, HttpClient httpClient, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
+	private static async Task ProcessVersion(HashSet<string> versionSet, string version, string[] platforms, HttpClient httpClient, ShardInfo info, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
 		if (versionSet.Contains(version)) {
 			Log.Information("Version {Version} is already in the registry", version);
 			return;
@@ -146,27 +155,31 @@ internal class Program {
 			return;
 		}
 
-		await ProcessVersionCore(version, platforms, httpClient, root, redirect, redirectWriter, versionWriter);
+		await ProcessVersionCore(version, platforms, httpClient, info, root, redirect, redirectWriter, versionWriter);
 	}
 
-	private static async Task ProcessVersionCore(string version, string[] platforms, HttpClient httpClient, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
+	private static async Task ProcessVersionCore(string version, string[] platforms, HttpClient httpClient, ShardInfo info, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
 		var versionInfo = new VersionRegistryRecord {
 			Build = version,
 			Platforms = string.Join(",", platforms),
 		};
 
-		await using var index = await Download(httpClient, new Uri($"eveonline_{version}.txt", UriKind.Relative),
+		await using var index = await Download(httpClient, new Uri(info.VerDomain, $"eveonline_{version}.txt"),
 		                                       Path.Combine(root, "index"), $"eveonline_{version}.txt");
-		if (await ProcessIndex(httpClient, index, root, versionInfo, true) == false) {
+		if (await ProcessIndex(httpClient, info, index, root, versionInfo, true) == false) {
 			Log.Error("Failed to process index for {Version}", version);
 			return;
 		}
 
 		foreach (var platform in platforms) {
+			if (string.IsNullOrEmpty(platform)) {
+				continue;
+			}
+
 			await using var platformIndex = await Download(httpClient,
-			                                               new Uri($"eveonline{platform}_{version}.txt", UriKind.Relative), Path.Combine(root, "index"),
+			                                               new Uri(info.VerDomain, $"eveonline{platform}_{version}.txt"), Path.Combine(root, "index"),
 			                                               $"eveonline{platform}_{version}.txt");
-			await ProcessIndex(httpClient, platformIndex, root, versionInfo, false);
+			await ProcessIndex(httpClient, info, platformIndex, root, versionInfo, false);
 		}
 
 		if (versionInfo.Build != version && !redirect.ContainsKey(version)) {
@@ -182,7 +195,7 @@ internal class Program {
 		await versionWriter.NextRecordAsync();
 	}
 
-	private static async Task<bool> ProcessIndex(HttpClient client, Stream indexStream, string root, VersionRegistryRecord version, bool process) {
+	private static async Task<bool> ProcessIndex(HttpClient client, ShardInfo info, Stream indexStream, string root, VersionRegistryRecord version, bool process) {
 		var index = IndexParser.Parse(indexStream);
 		if (process) {
 			var start = index.FirstOrDefault(x => x.Path.OriginalString.Equals(START, StringComparison.OrdinalIgnoreCase));
@@ -191,7 +204,7 @@ internal class Program {
 				return false;
 			}
 
-			await using var startStream = await Load(client, new Uri(start.ResourcePath, UriKind.Relative), Path.Combine(root, "start"), $"start_{version.Build}.ini");
+			await using var startStream = await Load(client, new Uri(info.AppDomain, start.ResourcePath), Path.Combine(root, "start"), $"start_{version.Build}.ini");
 			if (!startStream.CanRead) {
 				Log.Error("Failed to read {Start}", START);
 				return false;
@@ -208,7 +221,7 @@ internal class Program {
 		foreach (var file in index) {
 			if (DOWNLOAD_FILES.TryGetValue(file.Path.OriginalString, out var type)) {
 				var name = Path.GetFileNameWithoutExtension(file.Path.OriginalString) + $"_{version.Build}.txt";
-				await (await Download(client, new Uri(file.ResourcePath, UriKind.Relative), Path.Combine(root, type), name)).DisposeAsync();
+				await (await Download(client, new Uri(info.AppDomain, file.ResourcePath), Path.Combine(root, type), name)).DisposeAsync();
 			}
 		}
 
@@ -227,6 +240,8 @@ internal class Program {
 			return stream;
 		}
 
+		Directory.CreateDirectory(folder);
+
 		Log.Information("Downloading {Uri}", uri);
 		try {
 			var stream = new MemoryStream(await client.GetByteArrayAsync(uri)) {
@@ -243,6 +258,8 @@ internal class Program {
 	}
 
 	private static async Task<Stream> Load(HttpClient client, Uri uri, string folder, string name) {
+		Directory.CreateDirectory(folder);
+
 		Log.Information("Loading {Uri}", uri);
 		try {
 			var stream = new MemoryStream(await client.GetByteArrayAsync(uri)) {

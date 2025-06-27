@@ -20,9 +20,6 @@ using Serilog;
 namespace Jackdaw.ResourceCache;
 
 internal class Program {
-	private static readonly Uri APP_DOMAIN = new("https://binaries.eveonline.com", UriKind.Absolute);
-	private static readonly Uri RES_DOMAIN = new("https://resources.eveonline.com", UriKind.Absolute);
-
 	private static async Task Main() {
 		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
@@ -31,8 +28,10 @@ internal class Program {
 			return;
 		}
 
+		var serverInfo = basicFlags.NE ? ShardInfo.NetEase : ShardInfo.CCP;
+
 		if (basicFlags.Repair) {
-			Repair(basicFlags);
+			Repair(basicFlags, serverInfo);
 			return;
 		}
 
@@ -168,10 +167,10 @@ internal class Program {
 				}
 			}
 
-			var host = RES_DOMAIN;
+			var host = serverInfo.ResDomain;
 			var prefix = "res";
 			if (record.Path.Scheme == "app") {
-				host = APP_DOMAIN;
+				host = serverInfo.AppDomain;
 				prefix = "";
 			}
 
@@ -275,7 +274,7 @@ internal class Program {
 		}
 	}
 
-	private static void Repair(ResCacheBasicFlags flags) {
+	private static void Repair(ResCacheBasicFlags flags, ShardInfo info) {
 		Log.Information("Repairing...");
 		using var client = CreateHttpClient();
 
@@ -297,10 +296,10 @@ internal class Program {
 			if (!expectedHash.SequenceEqual(localHash)) {
 				Log.Information("{ResPath} Corrupt, replacing", relative);
 				try {
-					Download(client, flags, flags.ResCache, relative, RES_DOMAIN).Wait();
+					Download(client, flags, flags.ResCache, relative, info.ResDomain).Wait();
 				} catch {
 					try {
-						Download(client, flags, flags.ResCache, relative, APP_DOMAIN).Wait();
+						Download(client, flags, flags.ResCache, relative, info.AppDomain).Wait();
 					} catch (Exception e) {
 						Log.Error(e, "Failed to download {ResPath}", relative);
 					}

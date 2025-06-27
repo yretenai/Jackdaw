@@ -16,20 +16,22 @@ public enum ShardServer {
 	Dragon,
 	Unicorn,
 	Aurora,
+	Infinity,
 }
 
 public enum ShardRegion {
 	CCP,
-	China,
+	NetEase,
 }
 
 public static class ShardServerHelpers {
 	public static ShardRegion ToRegion(this ShardServer server) =>
 		server switch {
-			ShardServer.Serenity => ShardRegion.China,
-			ShardServer.Dragon => ShardRegion.China,
-			ShardServer.Unicorn => ShardRegion.China,
-			ShardServer.Aurora => ShardRegion.China,
+			ShardServer.Serenity => ShardRegion.NetEase,
+			ShardServer.Dragon => ShardRegion.NetEase,
+			ShardServer.Unicorn => ShardRegion.NetEase,
+			ShardServer.Aurora => ShardRegion.NetEase,
+			ShardServer.Infinity => ShardRegion.NetEase,
 			_ => ShardRegion.CCP,
 		};
 
@@ -39,7 +41,7 @@ public static class ShardServerHelpers {
 			ShardServer.Singularity => false,
 			ShardServer.Thunderdome => false,
 			ShardServer.Serenity => false,
-			ShardServer.Aurora => false,
+			ShardServer.Infinity => false,
 			_ => true,
 		};
 

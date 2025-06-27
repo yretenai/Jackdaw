@@ -15,6 +15,9 @@ public record ResCacheBasicFlags : CommandLineFlags {
 
 	[Flag("dry", Help = "Dry run, don't actually download/create anything")]
 	public bool Dry { get; set; }
+
+	[Flag("netease", Help = "If set, use NetEase URLs")]
+	public bool NE { get; set; }
 }
 
 public record ResCacheFlags : ResCacheBasicFlags {
