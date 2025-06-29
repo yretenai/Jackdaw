@@ -17,11 +17,20 @@ public enum ShardServer {
 	Unicorn,
 	Aurora,
 	Infinity,
+	Stillness,
 }
 
 public enum ShardRegion {
 	CCP,
+	Frontier,
+	Vanguard,
 	NetEase,
+}
+
+public enum ShardProduct {
+	EVE,
+	Frontier,
+	Vanguard,
 }
 
 public static class ShardServerHelpers {
@@ -32,7 +41,22 @@ public static class ShardServerHelpers {
 			ShardServer.Unicorn => ShardRegion.NetEase,
 			ShardServer.Aurora => ShardRegion.NetEase,
 			ShardServer.Infinity => ShardRegion.NetEase,
+			ShardServer.Stillness => ShardRegion.Frontier,
 			_ => ShardRegion.CCP,
+		};
+
+	public static bool IsValidFor(this ShardServer server, ShardProduct product) {
+		return product switch {
+			       ShardProduct.Frontier => server is ShardServer.Stillness,
+			       ShardProduct.Vanguard => server is ShardServer.Tranquility or ShardServer.Singularity or ShardServer.Thunderdome,
+			       _ => server is not ShardServer.Stillness,
+		       };
+	}
+
+	public static ShardProduct ToShardProduct(this ShardServer server) =>
+		server switch {
+			ShardServer.Stillness => ShardProduct.Frontier,
+			_ => ShardProduct.EVE,
 		};
 
 	public static bool IsInternal(this ShardServer server) =>
@@ -42,6 +66,7 @@ public static class ShardServerHelpers {
 			ShardServer.Thunderdome => false,
 			ShardServer.Serenity => false,
 			ShardServer.Infinity => false,
+			ShardServer.Stillness => false,
 			_ => true,
 		};
 
@@ -53,11 +78,23 @@ public static class ShardServerHelpers {
 			_ => server.ToString().ToUpperInvariant(),
 		};
 
-	public static ShardServer FromShortcode(string code) =>
+	public static ShardServer ToShardServer(this string code) =>
 		code.ToUpper() switch {
 			"TQ" => ShardServer.Tranquility,
 			"SISI" => ShardServer.Singularity,
 			"MP" => ShardServer.Multiplicity,
 			_ => Enum.Parse<ShardServer>(code, true),
+		};
+
+	public static string ToProductName(this ShardProduct product) =>
+		product switch {
+			ShardProduct.Vanguard => "evevanguard",
+			_ => "eveclient",
+		};
+
+	public static string ToClientName(this ShardProduct product) =>
+		product switch {
+			ShardProduct.Vanguard => "evevanguard",
+			_ => "eveonline",
 		};
 }

@@ -42,7 +42,6 @@ internal class Program {
 		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
 		var flycatcherRoot = args[0];
-		var flycatcherNERoot = Path.Combine(flycatcherRoot, "china");
 
 		var csvConfig = new CsvConfiguration(CultureInfo.InvariantCulture) {
 			NewLine = "\n",
@@ -105,68 +104,82 @@ internal class Program {
 					}
 
 					var version = baseName[(versionIndex + 1)..];
-					await ProcessVersion(versionSet, version, DEFAULT_PLATFORMS, httpClient, info, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
+					await ProcessVersion(versionSet, version, string.Empty, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, info, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			} else {
 				foreach (var version in args[1..]) {
-					await ProcessVersion(versionSet, version, DEFAULT_PLATFORMS, httpClient, info, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
+					await ProcessVersion(versionSet, version, string.Empty, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, info, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			}
 		} else {
-			var infoNE = ShardInfo.NetEase;
-			var infoCCP = ShardInfo.CCP;
 			foreach (var server in Enum.GetValues<ShardServer>()) {
-				try {
-					if (server.IsInternal()) {
-						continue;
-					}
+				if (server.IsInternal()) {
+					continue;
+				}
 
-					var info = server.ToRegion() is ShardRegion.NetEase ? infoNE : infoCCP;
-					Log.Information("Getting version for {Server}", server);
-					var json = await JsonSerializer.DeserializeAsync<ClientInfo>(await httpClient.GetStreamAsync(new Uri(info.VerDomain, $"eveclient_{server.ToShortcode()}.json")), JsonOptions, CancellationToken.None);
-					if (json == null) {
-						Log.Error("Failed to get version for {Server}", server);
-						continue;
-					}
+				foreach (var product in Enum.GetValues<ShardProduct>()) {
+					try {
+						if (!server.IsValidFor(product)) {
+							continue;
+						}
 
-					if (json.Protected) {
-						Log.Error("Failed to get version for {Server} because it is protected", server);
-						continue;
-					}
+						var info = server.ToRegion() switch {
+							           ShardRegion.NetEase => ShardInfo.NetEase,
+							           ShardRegion.Frontier => ShardInfo.CCPFrontier,
+							           ShardRegion.CCP when product is ShardProduct.Vanguard => ShardInfo.CCPVanguard,
+							           _ => ShardInfo.CCP,
+						           };
 
-					var version = json.Build;
-					await ProcessVersion(versionSet, version, json.Platforms ?? [], httpClient, info, server.ToRegion() is ShardRegion.NetEase ? flycatcherNERoot : flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
-				} catch {
-					Log.Error("Failed to get version for {Server}", server);
+						Log.Information("Getting {Product} version for {Server}", product, server);
+						var uri = new Uri(info.VerDomain, $"{product.ToProductName()}_{server.ToShortcode()}.json");
+						Log.Information("Downloading {Uri}", uri);
+						var json = await JsonSerializer.DeserializeAsync<ClientInfo>(await httpClient.GetStreamAsync(uri), JsonOptions, CancellationToken.None);
+						if (json == null) {
+							Log.Error("Failed to get {Product} version for {Server}", product, server);
+							continue;
+						}
+
+						if (json.Protected) {
+							Log.Error("Failed to get {Product} version for {Server} because it is protected", product, server);
+							continue;
+						}
+
+						var version = json.Build;
+						await ProcessVersion(versionSet, version, info.RegionPrefix, json.Platforms ?? DEFAULT_PLATFORMS, httpClient, product, info, server.ToRegion() is ShardRegion.CCP ? flycatcherRoot : Path.Combine(flycatcherRoot, server.ToRegion().ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
+					} catch {
+						Log.Error("Failed to get {Product} version for {Server}", product, server);
+					}
 				}
 			}
 		}
 	}
 
-	private static async Task ProcessVersion(HashSet<string> versionSet, string version, string[] platforms, HttpClient httpClient, ShardInfo info, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
-		if (versionSet.Contains(version)) {
-			Log.Information("Version {Version} is already in the registry", version);
+	private static async Task ProcessVersion(HashSet<string> versionSet, string version, string prefix, string[] platforms, HttpClient httpClient, ShardProduct product, ShardInfo info, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
+		Directory.CreateDirectory(root);
+
+		var combined = prefix + version;
+		if (versionSet.Contains(combined)) {
+			Log.Information("Version {Prefix}{Version} is already in the registry", prefix, version);
 			return;
 		}
 
-		version = redirect.GetValueOrDefault(version) ?? version;
-		if (!versionSet.Add(version)) {
-			Log.Information("Version for {Version} is already in the registry", version);
+		if (redirect.ContainsKey(combined)) {
+			Log.Information("Version for {Prefix}{Version} is already in the registry", prefix, version);
 			return;
 		}
 
-		await ProcessVersionCore(version, platforms, httpClient, info, root, redirect, redirectWriter, versionWriter);
+		await ProcessVersionCore(version, prefix, platforms, httpClient, product, info, root, redirect, redirectWriter, versionWriter);
 	}
 
-	private static async Task ProcessVersionCore(string version, string[] platforms, HttpClient httpClient, ShardInfo info, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
+	private static async Task ProcessVersionCore(string version, string prefix, string[] platforms, HttpClient httpClient, ShardProduct product, ShardInfo info, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
 		var versionInfo = new VersionRegistryRecord {
 			Build = version,
 			Platforms = string.Join(",", platforms),
 		};
 
-		await using var index = await Download(httpClient, new Uri(info.VerDomain, $"eveonline_{version}.txt"),
-		                                       Path.Combine(root, "index"), $"eveonline_{version}.txt");
-		if (await ProcessIndex(httpClient, info, index, root, versionInfo, true) == false) {
+		await using var index = await Download(httpClient, new Uri(info.VerDomain, $"{product.ToClientName()}_{version}.txt"),
+		                                       Path.Combine(root, "index"), $"{product.ToClientName()}_{version}.txt");
+		if (await ProcessIndex(httpClient, info, index, root, prefix, versionInfo, true) == false) {
 			Log.Error("Failed to process index for {Version}", version);
 			return;
 		}
@@ -177,12 +190,12 @@ internal class Program {
 			}
 
 			await using var platformIndex = await Download(httpClient,
-			                                               new Uri(info.VerDomain, $"eveonline{platform}_{version}.txt"), Path.Combine(root, "index"),
-			                                               $"eveonline{platform}_{version}.txt");
-			await ProcessIndex(httpClient, info, platformIndex, root, versionInfo, false);
+			                                               new Uri(info.VerDomain, $"{product.ToClientName()}{platform}_{version}.txt"), Path.Combine(root, "index"),
+			                                               $"{product.ToClientName()}{platform}_{version}.txt");
+			await ProcessIndex(httpClient, info, platformIndex, root, prefix, versionInfo, false);
 		}
 
-		if (versionInfo.Build != version && !redirect.ContainsKey(version)) {
+		if (string.IsNullOrEmpty(prefix) && versionInfo.Build != version && !redirect.ContainsKey(version)) {
 			redirect.Add(version, versionInfo.Build);
 			redirectWriter.WriteRecord(new Redirection {
 				From = version,
@@ -195,7 +208,7 @@ internal class Program {
 		await versionWriter.NextRecordAsync();
 	}
 
-	private static async Task<bool> ProcessIndex(HttpClient client, ShardInfo info, Stream indexStream, string root, VersionRegistryRecord version, bool process) {
+	private static async Task<bool> ProcessIndex(HttpClient client, ShardInfo info, Stream indexStream, string root, string prefix, VersionRegistryRecord version, bool process) {
 		var index = IndexParser.Parse(indexStream);
 		if (process) {
 			var start = index.FirstOrDefault(x => x.Path.OriginalString.Equals(START, StringComparison.OrdinalIgnoreCase));
@@ -211,7 +224,12 @@ internal class Program {
 			}
 
 			var startInfo = StartParser.Parse(startStream);
-			version.Build = startInfo.Build;
+			if (string.IsNullOrEmpty(startInfo.Version)) {
+				Log.Error("Failed to read {Start}", START);
+				return false;
+			}
+
+			version.Build = prefix + startInfo.Build;
 			version.Version = startInfo.Version;
 			version.Codename = startInfo.Codename;
 			version.Branch = startInfo.Branch;
