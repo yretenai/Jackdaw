@@ -59,11 +59,13 @@ public static class ShardServerHelpers {
 			_ => ShardProduct.EVE,
 		};
 
-	public static bool IsInternal(this ShardServer server) =>
+	public static bool IsDeprecated(this ShardServer server) =>
 		server switch {
 			ShardServer.Tranquility => false,
 			ShardServer.Singularity => false,
 			ShardServer.Thunderdome => false,
+			ShardServer.Chaos => false,
+			ShardServer.Nebula => false,
 			ShardServer.Serenity => false,
 			ShardServer.Infinity => false,
 			ShardServer.Stillness => false,

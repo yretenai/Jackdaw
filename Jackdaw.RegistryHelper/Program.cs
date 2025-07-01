@@ -113,7 +113,7 @@ internal class Program {
 			}
 		} else {
 			foreach (var server in Enum.GetValues<ShardServer>()) {
-				if (server.IsInternal()) {
+				if (server.IsDeprecated()) {
 					continue;
 				}
 
