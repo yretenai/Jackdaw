@@ -87,7 +87,6 @@ internal class Program {
 		httpClient.DefaultRequestHeaders.UserAgent.ParseAdd("Jackdaw/0.0.1 (Automated; Module/VersionChecker)");
 
 		if (args.Length > 1) {
-			var info = ShardInfo.CCP;
 			if (args[1..] is ["all"]) {
 				var directory = Path.Combine(flycatcherRoot, "index");
 				foreach (var file in Directory.EnumerateFiles(directory, "eveonline_*.txt.zst", SearchOption.TopDirectoryOnly)) {
@@ -104,11 +103,18 @@ internal class Program {
 					}
 
 					var version = baseName[(versionIndex + 1)..];
-					await ProcessVersion(versionSet, version, string.Empty, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, info, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
+					await ProcessVersion(versionSet, version, string.Empty, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, ShardInfo.CCP, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			} else {
 				foreach (var version in args[1..]) {
-					await ProcessVersion(versionSet, version, string.Empty, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, info, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
+					var info = args[0].ToLower() switch {
+						           "N" => ShardInfo.NetEase,
+						           "F" => ShardInfo.CCPFrontier,
+						           "V" => ShardInfo.CCPVanguard,
+						           _ => ShardInfo.CCP,
+					           };
+
+					await ProcessVersion(versionSet, version, info.RegionPrefix, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, info, info.Region is ShardRegion.CCP ? flycatcherRoot : Path.Combine(flycatcherRoot, info.Region.ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			}
 		} else {
@@ -156,6 +162,8 @@ internal class Program {
 
 	private static async Task ProcessVersion(HashSet<string> versionSet, string version, string prefix, string[] platforms, HttpClient httpClient, ShardProduct product, ShardInfo info, string root, Dictionary<string, string> redirect, CsvWriter redirectWriter, CsvWriter versionWriter) {
 		Directory.CreateDirectory(root);
+
+		version = version.Split(":")[^1];
 
 		var combined = prefix + version;
 		if (versionSet.Contains(combined)) {
