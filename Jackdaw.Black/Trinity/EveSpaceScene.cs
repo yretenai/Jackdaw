@@ -7,9 +7,11 @@ public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateabl
 	public IRoot? CameraAttachments { get; set; }
 	public Tr2QuadRenderer? QuadRenderer { get; set; }
 	public Tr2GpuParticleSystem? GpuParticleSystem { get; set; }
+	public bool ShadowsInReflections { get; set; }
+	public Tr2DepthStencil? ShadowMapAtlas { get; set; }
+	public ITr2TextureProvider? RaytracedDynamicShadowAtlas { get; set; }
 	public bool Display { get; set; }
 	public bool Update { get; set; }
-	public bool EnableShadows { get; set; }
 	public bool DisplayShadowMap { get; set; }
 	public bool BackgroundRenderingEnabled { get; set; }
 	public float PlanetScale { get; set; }
@@ -48,6 +50,8 @@ public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateabl
 	public Vector4 AmbientColor { get; set; }
 	public Vector4 FogColor { get; set; }
 	public float NebulaIntensity { get; set; }
+	public float BackgroundReflectionIntensity { get; set; }
+	public float DefaultDiffuseRoughness { get; set; }
 	public float FogStart { get; set; }
 	public float FogEnd { get; set; }
 	public float FogMax { get; set; }
@@ -62,10 +66,9 @@ public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateabl
 	public long UpdateTime { get; set; }
 	public EveStarfield? Starfield { get; set; }
 	public Tr2ShLightingManager? ShLightingManager { get; set; }
-	public int TaaSubpixelPattern { get; set; }
-	public float PixelOffsetScale { get; set; }
 	public Tr2ImpostorManager? ImpostorManager { get; set; }
 	public Tr2PostProcess2? Postprocess { get; set; }
+	public Tr2PostProcessAttributes? CombinedPostProcessAttributes { get; set; }
 	public Tr2ReflectionProbe? ReflectionProbe { get; set; }
 	public EveVirtualCameraSystem? VirtualCameraSystem { get; set; }
 	public float ReflectionIntensity { get; set; }
@@ -76,4 +79,6 @@ public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateabl
 	public Tr2VolumetricsRenderer? VolumetricsRenderer { get; set; }
 	public bool DynamicObjectReflectionEnabled { get; set; }
 	public bool FreezeFrustum { get; set; }
+	public int ShadowQualitySetting { get; set; }
+	public Tr2RaytracingManager? RaytracingManager { get; set; }
 }

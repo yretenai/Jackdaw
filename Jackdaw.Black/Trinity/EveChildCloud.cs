@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildCloud : IRoot, ITr2Renderable, ITr2GeometryProvider, IInitialize, INotify, IEveSpaceObjectChild {
+public class EveChildCloud : IRoot, ITr2Renderable, IInitialize, INotify, IEveSpaceObjectChild {
 	public Vector4 BoundingSphere { get; set; }
 	public Tr2Material? Effect { get; set; }
 	public Vector3 Scaling { get; set; }

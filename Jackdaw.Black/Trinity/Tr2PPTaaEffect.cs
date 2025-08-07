@@ -5,8 +5,9 @@ namespace Jackdaw.Black;
 
 public class Tr2PPTaaEffect : Tr2PPEffect {
 	public int Quality { get; set; }
-	public bool ApplyMipBias { get; set; }
 	public bool ShowMotionVectors { get; set; }
 	public bool ShowEarlyOutMask { get; set; }
 	public float EarlyOutThreshold { get; set; }
+	public float JitterX { get; set; }
+	public float JitterY { get; set; }
 }

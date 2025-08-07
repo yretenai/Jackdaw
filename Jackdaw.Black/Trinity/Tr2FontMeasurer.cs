@@ -4,6 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2FontMeasurer : IRoot {
+	public int Color { get; set; }
 	public string? Font { get; set; }
 	public int FontSize { get; set; }
 	public float FadeLeftStart { get; set; }
@@ -22,6 +23,5 @@ public class Tr2FontMeasurer : IRoot {
 	public int Asc { get; set; }
 	public int Descender { get; set; }
 	public int Des { get; set; }
-	public int Color { get; set; }
 	public bool Underline { get; set; }
 }

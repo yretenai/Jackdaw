@@ -8,4 +8,5 @@ public class EveSOFDataGenericDecalShader : IRoot {
 	public List<IRoot?>? Parameters { get; set; }
 	public List<IRoot?>? DefaultTextures { get; set; }
 	public List<IRoot?>? ParentTextures { get; set; }
+	public bool Additive { get; set; }
 }

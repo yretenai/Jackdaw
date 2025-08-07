@@ -15,4 +15,6 @@ public class Tr2SpriteObject : Tr2SpriteObjectBase {
 	public float GlowFactor { get; set; }
 	public float GlowExpand { get; set; }
 	public Vector4 GlowColor { get; set; }
+	public Vector4 OutlineColor { get; set; }
+	public float OutlineThreshold { get; set; }
 }

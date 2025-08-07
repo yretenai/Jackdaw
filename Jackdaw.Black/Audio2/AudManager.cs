@@ -4,6 +4,8 @@
 namespace Jackdaw.Black;
 
 public class AudManager : IRoot {
+	public int MaxAwakeGameObjects { get; set; }
+	public float WeightMultiplier { get; set; }
 	public long OneShotWindow { get; set; }
 	public float ActiveSoundsWeight { get; set; }
 	public float RangeWeight { get; set; }
@@ -11,8 +13,7 @@ public class AudManager : IRoot {
 	public float WaitingOneShotWeight { get; set; }
 	public float VisibleWeight { get; set; }
 	public float Playing2DWeight { get; set; }
+	public bool SpatialAudioEnabled { get; set; }
 	public bool AudioCullingEnabled { get; set; }
-	public int MaxAwakeGameObjects { get; set; }
-	public float WeightMultiplier { get; set; }
 	public IAudActionLog? Log { get; set; }
 }

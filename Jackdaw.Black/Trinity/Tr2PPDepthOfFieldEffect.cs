@@ -8,7 +8,6 @@ public class Tr2PPDepthOfFieldEffect : Tr2PPEffect {
 	public float FocalLength { get; set; }
 	public float Scale { get; set; }
 	public bool ForegroundBlurNeeded { get; set; }
-	public int Debug { get; set; }
 	public float CocScale { get; set; }
 	public int BokehShape { get; set; }
 	public bool UseTAAFriendlyBokeh { get; set; }

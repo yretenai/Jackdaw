@@ -22,7 +22,6 @@ public class EveChildMesh : EveEntity, IEveSpaceObjectDecalOwner, IEveSpaceObjec
 	public float SortValueOffset { get; set; }
 	public float SortValueScale { get; set; }
 	public bool Display { get; set; }
-	public bool UseSpaceObjectData { get; set; }
 	public bool CastShadow { get; set; }
 	public int Origin { get; set; }
 	public int ReflectionMode { get; set; }

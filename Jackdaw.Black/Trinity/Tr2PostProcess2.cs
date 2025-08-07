@@ -4,17 +4,25 @@
 namespace Jackdaw.Black;
 
 public class Tr2PostProcess2 : IRoot {
+	public float WhiteTemperature { get; set; }
+	public float WhiteTint { get; set; }
+	public float ColorSaturation { get; set; }
+	public float ColorContrast { get; set; }
+	public float ColorGamma { get; set; }
+	public Vector3 ColorGain { get; set; }
+	public Vector3 ColorOffset { get; set; }
 	public Tr2PPSignalLossEffect? SignalLoss { get; set; }
 	public Tr2PPGodRaysEffect? GodRays { get; set; }
 	public Tr2PPBloomEffect? Bloom { get; set; }
 	public Tr2PPDynamicExposureEffect? DynamicExposure { get; set; }
-	public Tr2PPFidelityFXEffect? FidelityFX { get; set; }
 	public Tr2PPFilmGrainEffect? FilmGrain { get; set; }
 	public Tr2PPDesaturateEffect? Desaturate { get; set; }
 	public Tr2PPFadeEffect? Fade { get; set; }
 	public Tr2PPLutEffect? Lut { get; set; }
+	public List<IRoot?>? Luts { get; set; }
 	public Tr2PPVignetteEffect? Vignette { get; set; }
 	public Tr2PPFogEffect? Fog { get; set; }
 	public Tr2PPTaaEffect? Taa { get; set; }
 	public Tr2PPDepthOfFieldEffect? DepthOfField { get; set; }
+	public Tr2PPTonemappingEffect? Tonemapping { get; set; }
 }

@@ -4,8 +4,11 @@
 namespace Jackdaw.Black;
 
 public class AudSettings : IRoot {
+	public bool SpatialAudioEnabled { get; set; }
 	[BlackUseNamePool] public string? BaseSoundbankPath { get; set; }
 	[BlackUseNamePool] public string? EssentialPath { get; set; }
 	[BlackUseNamePool] public string? SoundbankLanguage { get; set; }
+	[BlackUseNamePool] public string? StereoAudioDeviceName { get; set; }
+	[BlackUseNamePool] public string? SpatialAudioDeviceName { get; set; }
 	public string? ApplicationName { get; set; }
 }

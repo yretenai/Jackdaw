@@ -17,11 +17,15 @@ public class TriDevice : IRoot, ITriDevice {
 	public int AdapterRefreshRate { get; set; }
 	[BlackArray] public TriViewport? Viewport { get; set; }
 	public int TickInterval { get; set; }
+	[BlackArray] public byte[][]? SupportedUpscalingTechniques { get; set; }
 	public int DeviceType { get; set; }
 	public int Adapter { get; set; }
 	public int MultiSampleType { get; set; }
 	public int MultiSampleQuality { get; set; }
 	public int PresentationInterval { get; set; }
+	public int UpscalingTechnique { get; set; }
+	public int UpscalingSetting { get; set; }
+	public bool FrameGeneration { get; set; }
 	public float AnimationTime { get; set; }
 	public float AnimationTimeScale { get; set; }
 	public int MipLevelSkipCount { get; set; }

@@ -15,4 +15,5 @@ public class Tr2PPDynamicExposureEffect : Tr2PPEffect {
 	public float Adjustment { get; set; }
 	public float MinExposure { get; set; }
 	public float MaxExposure { get; set; }
+	public bool Debug { get; set; }
 }

@@ -12,7 +12,7 @@ public class EveChildBehaviorSystem : IRoot, IEveSpaceObjectChild, ITr2Renderabl
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public bool Display { get; set; }
-	public int VertexCount { get; set; }
+	public int InstanceCount { get; set; }
 	public List<IRoot?>? SplineTunnels { get; set; }
 	public List<IRoot?>? BehaviorGroups { get; set; }
 }

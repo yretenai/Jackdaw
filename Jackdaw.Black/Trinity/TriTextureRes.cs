@@ -8,6 +8,7 @@ public class TriTextureRes : BlueAsyncRes, ITriTextureRes, ITr2TextureProvider, 
 	public int MultiSampleType { get; set; }
 	public int MultiSampleQuality { get; set; }
 	public bool HadLodRequests { get; set; }
+	public int SrvIndex { get; set; }
 	public int Width { get; set; }
 	public int Height { get; set; }
 	public int Depth { get; set; }

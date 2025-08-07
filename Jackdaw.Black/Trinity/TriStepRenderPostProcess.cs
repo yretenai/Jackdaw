@@ -11,11 +11,11 @@ public class TriStepRenderPostProcess : TriRenderStep, INotify {
 	public Tr2Effect? DynamicExposureCreateHistogramShader { get; set; }
 	public Tr2Effect? DynamicExposureMergeHistogramShader { get; set; }
 	public Tr2Effect? DynamicExposureMeasureExposureShader { get; set; }
+	public Tr2Effect? DynamicExposureToTextureShader { get; set; }
+	public Tr2RenderTarget? Exposure { get; set; }
 	public Tr2Effect? DepthOfFieldCoCShader { get; set; }
 	public Tr2Effect? DepthOfFieldBokehBlurShader { get; set; }
 	public Tr2Effect? DepthOfFieldBokehFillShader { get; set; }
-	public Tr2Effect? FsrEasuShader { get; set; }
-	public Tr2Effect? FsrRCASShader { get; set; }
 	public Tr2Effect? FogColorEffect { get; set; }
 	public Tr2Effect? FogCompositeEffect { get; set; }
 	public Tr2Effect? TaaEffect { get; set; }
@@ -25,4 +25,5 @@ public class TriStepRenderPostProcess : TriRenderStep, INotify {
 	public EveSpaceScene? Scene { get; set; }
 	public Tr2PostProcessRenderInfo? RenderInfo { get; set; }
 	public int Quality { get; set; }
+	public Tr2RenderTarget? Reactive { get; set; }
 }

@@ -8,6 +8,7 @@ public class BlueStatistics : IRoot {
 	public float TelemetrySamplingTimeLeft { get; set; }
 	public bool IsTelemetryConnected { get; set; }
 	public bool IsTelemetryPaused { get; set; }
+	public bool IsTelemetryStarted { get; set; }
 	public bool IsCppCaptureEnabled { get; set; }
 	public bool IsTaskletCaptureEnabled { get; set; }
 	public bool IsPythonCaptureEnabled { get; set; }

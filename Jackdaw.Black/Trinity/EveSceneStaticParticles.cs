@@ -9,5 +9,7 @@ public class EveSceneStaticParticles : IRoot, IInitialize {
 	public long MaxParticleCount { get; set; }
 	public float ClusterParticleDensity { get; set; }
 	public float ClusterParticleDensityAdjust { get; set; }
-	public EveTransform? Transform { get; set; }
+	public float EstimatedSize { get; set; }
+	public Tr2InstancedMesh? Mesh { get; set; }
+	public bool Visible { get; set; }
 }

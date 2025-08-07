@@ -6,6 +6,7 @@ namespace Jackdaw.Black;
 public class EvePlaneSet : IRoot, IInitialize, INotify, IEveSpaceObjectAttachment {
 	public bool Display { get; set; }
 	public bool HideOnLowQuality { get; set; }
+	public bool Skinned { get; set; }
 	public byte PickBufferID { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Planes { get; set; }

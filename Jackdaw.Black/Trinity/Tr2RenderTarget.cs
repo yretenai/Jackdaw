@@ -9,6 +9,7 @@ public class Tr2RenderTarget : IRoot, ITr2TextureProvider {
 	public int MipCount { get; set; }
 	public int MultiSampleType { get; set; }
 	public int MultiSampleQuality { get; set; }
+	public int ArraySize { get; set; }
 	public int Format { get; set; }
 	public int Type { get; set; }
 	public bool IsValid { get; set; }

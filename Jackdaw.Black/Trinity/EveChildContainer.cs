@@ -4,7 +4,6 @@
 namespace Jackdaw.Black;
 
 public class EveChildContainer : EveEntity, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, IListNotify, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2ControllerOwner, IEveInheritPropertiesOwner, IEveSpaceObjectAttachmentOwner, ITr2Renderable {
-	public bool Mute { get; set; }
 	public bool IsRendering { get; set; }
 	public bool IsUpdating { get; set; }
 	public Vector3 Translation { get; set; }
@@ -24,6 +23,7 @@ public class EveChildContainer : EveEntity, IEveSpaceObjectChild, ITr2CurveSetOw
 	public List<IRoot?>? Controllers { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool Display { get; set; }
+	public bool Mute { get; set; }
 	public int DisplayFilter { get; set; }
 	public bool AlwaysOn { get; set; }
 	public EveChildInheritProperties? InheritProperties { get; set; }

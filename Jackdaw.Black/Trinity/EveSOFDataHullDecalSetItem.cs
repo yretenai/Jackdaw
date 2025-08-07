@@ -16,4 +16,5 @@ public class EveSOFDataHullDecalSetItem : IRoot {
 	public List<IRoot?>? Textures { get; set; }
 	public List<IRoot?>? Parameters { get; set; }
 	[JsonIgnore] public List<IRoot?>? IndexBuffers { get; set; }
+	public List<IRoot?>? MultiHullIndexBuffers { get; set; }
 }

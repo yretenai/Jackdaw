@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildCloud2 : EveEntity, ITr2VolumetricRenderable, ITr2GeometryProvider, IInitialize, INotify, IEveSpaceObjectChild, ITr2Renderable {
+public class EveChildCloud2 : EveEntity, ITr2VolumetricRenderable, IInitialize, INotify, IEveSpaceObjectChild, ITr2Renderable {
 	public bool LightmapDirty { get; set; }
 	public Tr2Effect? Effect { get; set; }
 	public Tr2Effect? ReflectionEffect { get; set; }
@@ -16,6 +16,7 @@ public class EveChildCloud2 : EveEntity, ITr2VolumetricRenderable, ITr2GeometryP
 	public Tr2TextureAnimation? Animation { get; set; }
 	public int ReflectionMode { get; set; }
 	public int MinVisibleQuality { get; set; }
+	public Tr2DepthStencil? ShadowMapDS { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool CastShadows { get; set; }

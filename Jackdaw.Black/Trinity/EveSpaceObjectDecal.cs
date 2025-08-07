@@ -13,4 +13,5 @@ public class EveSpaceObjectDecal : IRoot, INotify, IInitialize, ITr2Renderable, 
 	public Vector3 Scaling { get; set; }
 	public int ParentBoneIndex { get; set; }
 	public float MinScreenSize { get; set; }
+	public int BatchType { get; set; }
 }

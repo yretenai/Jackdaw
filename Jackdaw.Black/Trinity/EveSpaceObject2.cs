@@ -4,12 +4,12 @@
 namespace Jackdaw.Black;
 
 public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pickable, ITriTargetable, IWorldPosition, ITr2ShLightingReceiver, INotify, ITr2SecondaryLightSource, ITr2ImpostorSource, ITr2CurveSetOwner, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2ControllerOwner, ITr2GrannyAnimationOwner, IEveInheritPropertiesOwner, IEveSpaceObjectDecalOwner, ITr2LightOwner, IEveSpaceObjectAttachmentOwner {
-	public bool Mute { get; set; }
 	public float ActivationStrength { get; set; }
 	public string? Name { get; set; }
 	public string? Dna { get; set; }
 	public bool Update { get; set; }
 	public bool Display { get; set; }
+	public bool Mute { get; set; }
 	public bool IsPickable { get; set; }
 	public bool IsAnimated { get; set; }
 	public bool CastShadow { get; set; }
@@ -20,6 +20,7 @@ public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pic
 	public Tr2MeshBase? MeshLod { get; set; }
 	public int LodLevel { get; set; }
 	public float ClipSphereFactor { get; set; }
+	public float ClipSphereFactor2 { get; set; }
 	public Vector3 ClipSphereCenter { get; set; }
 	public float EstimatedPixelDiameter { get; set; }
 	public float EstimatedPixelDiameterWithChildren { get; set; }

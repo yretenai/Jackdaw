@@ -4,7 +4,6 @@
 namespace Jackdaw.Black;
 
 public class Tr2ShadowMap : IRoot, INotify {
-	public int ShadowQuality { get; set; }
 	public int Size { get; set; }
 	public int SplitCount { get; set; }
 	public Tr2DepthStencil? CascadedShadowMapDS { get; set; }

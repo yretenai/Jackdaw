@@ -5,4 +5,5 @@ namespace Jackdaw.Black;
 
 public class Tr2PostProcessRenderInfo : IRoot, INotify {
 	public Tr2RenderTarget? SourceBuffer { get; set; }
+	public bool DebugTextures { get; set; }
 }

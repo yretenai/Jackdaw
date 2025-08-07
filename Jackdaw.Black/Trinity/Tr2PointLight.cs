@@ -15,6 +15,8 @@ public class Tr2PointLight : Tr2Light, IInitialize, INotify {
 	public Vector4 Rotation { get; set; }
 	public int BoneIndex { get; set; }
 	public short Flags { get; set; }
+	public int CastsShadows { get; set; }
+	public bool IsVolumetric { get; set; }
 	public string? Name { get; set; }
 	public Tr2LightProfileRes? LightProfile { get; set; }
 	[BlackUseNamePool] public string? LightProfilePath { get; set; }
