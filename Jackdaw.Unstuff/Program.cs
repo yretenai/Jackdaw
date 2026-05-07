@@ -1,7 +1,7 @@
 using System.Diagnostics;
-using DragonLib.CommandLine;
-using DragonLib.IO;
+using Pluto.CommandLine;
 using Jackdaw.Stuff;
+using Pluto.IO.FileSystem;
 
 namespace Jackdaw.Unstuff;
 
@@ -10,10 +10,6 @@ internal static class Program {
 
 	private static void Main(string[] args) {
 		var flags = CommandLineFlagsParser.ParseFlags<UnstuffFlags>();
-		if (flags == null) {
-			return;
-		}
-
 		Flags = flags;
 
 		var options = new EnumerationOptions {
@@ -32,7 +28,7 @@ internal static class Program {
 		using var stuff = new EmbedFS(stream);
 
 		foreach (var file in stuff.Names) {
-			using var buffer = stuff.Open(file, out var size);
+			using var buffer = stuff.Open(file);
 			if (buffer == null) {
 				continue;
 			}
@@ -56,7 +52,7 @@ internal static class Program {
 			}
 
 			using var output = new FileStream(Path.Combine(Flags.Output, safeName), FileMode.Create, FileAccess.Write);
-			output.Write(buffer.Memory.Span[..size]);
+			output.Write(buffer.Span);
 		}
 	}
 }

@@ -174,7 +174,7 @@ internal class Program {
 							            0 when field.ClassType == "Matrix" => "Matrix4x4",
 							            0 when field.ClassType == "Color" => "Vector4",
 							            0 when field.ClassType == "Rotation" => "Quaternion",
-							            0 when field.ClassType == string.Empty => "Vector3",
+							            0 when string.IsNullOrEmpty(field.ClassType) => "Vector3",
 							            8 => "Vector2",
 							            12 => "Vector3",
 							            16 => "Vector4",

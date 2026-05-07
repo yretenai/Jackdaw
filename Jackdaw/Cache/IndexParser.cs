@@ -3,8 +3,8 @@ using System.IO;
 using System.Linq;
 using CsvHelper;
 using CsvHelper.Configuration;
-using IronCompress;
 using Jackdaw.Structs.Client;
+using Pluto.IO.Binary;
 
 namespace Jackdaw.Cache;
 
@@ -22,8 +22,8 @@ public static class IndexParser {
 		return csv.GetRecords<ResourceCacheRecord>().ToArray();
 	}
 
-	public static unsafe ResourceCacheRecord[] Parse(IronCompressResult data) {
-		var span = data.AsSpan();
+	public static unsafe ResourceCacheRecord[] Parse(RentedArray<byte> data) {
+		var span = data.Span;
 		fixed (byte* ptr = &span.GetPinnableReference()) {
 			using var stream = new UnmanagedMemoryStream(ptr, data.Length);
 			return Parse(stream);

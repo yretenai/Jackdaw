@@ -1,0 +1,31 @@
+<Solution>
+  <Folder Name="/Libraries/">
+    <Project Path="Knit/Knit.glTF/Knit.glTF.csproj" />
+    <Project Path="Knit/Knit/Knit.csproj" />
+    <Project Path="Neptune/Ceres/Ceres.csproj" />
+    <Project Path="Neptune/Charon/Charon.csproj" />
+    <Project Path="Neptune/Pluto/Pluto.csproj" />
+  </Folder>
+  <Folder Name="/Research/">
+    <File Path="research/fsdbinary.hexpat" />
+    <File Path="research/rescache.txt" />
+    <File Path="research/tr2_blacktype_scan.py" />
+  </Folder>
+  <Folder Name="/Tools/">
+    <Project Path="Jackdaw.BluePyType/Jackdaw.BluePyType.csproj" />
+    <Project Path="Jackdaw.Codegen.Black/Jackdaw.Codegen.Black.csproj" />
+    <Project Path="Jackdaw.RegistryHelper/Jackdaw.RegistryHelper.csproj" />
+    <Project Path="Jackdaw.ResourceCache/Jackdaw.ResourceCache.csproj" />
+    <Project Path="Jackdaw.StaticData/Jackdaw.StaticData.csproj" />
+    <Project Path="Jackdaw.Unstuff/Jackdaw.Unstuff.csproj" />
+  </Folder>
+  <Project Path="Jackdaw.Black/Jackdaw.Black.csproj" />
+  <Project Path="Jackdaw.Blue/Jackdaw.Blue.csproj" />
+  <Project Path="Jackdaw.Structs/Jackdaw.Structs.csproj" />
+  <Project Path="Jackdaw.Tests/Jackdaw.Tests.csproj">
+    <BuildType Project="?" />
+    <Platform Project="?" />
+    <Build Project="false" />
+  </Project>
+  <Project Path="Jackdaw/Jackdaw.csproj" />
+</Solution>

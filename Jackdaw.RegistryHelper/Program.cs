@@ -261,7 +261,7 @@ internal class Program {
 			await using var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
 			using var decompressed = JackdawUtils.Decompress(fileStream);
 			var stream = new MemoryStream(decompressed.Length);
-			stream.Write(decompressed.AsSpan());
+			stream.Write(decompressed.Span);
 			stream.Seek(0, SeekOrigin.Begin);
 			return stream;
 		}
@@ -275,7 +275,7 @@ internal class Program {
 			};
 			using var compressed = JackdawUtils.Compress(stream);
 			await using var fileStream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
-			fileStream.Write(compressed.AsSpan());
+			fileStream.Write(compressed.Span);
 			stream.Position = 0;
 			return stream;
 		} catch {

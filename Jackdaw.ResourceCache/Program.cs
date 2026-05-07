@@ -8,13 +8,13 @@ using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
-using DragonLib;
-using DragonLib.CommandLine;
-using DragonLib.Hash;
-using DragonLib.Hash.Basis;
-using DragonLib.Platform;
+using Charon.Hash;
+using Charon.Hash.Basis;
+using Pluto.CommandLine;
+using Pluto.Platform;
 using Jackdaw.Cache;
 using Jackdaw.Structs.Client;
+using Pluto.Extensions;
 using Serilog;
 
 namespace Jackdaw.ResourceCache;
@@ -23,11 +23,7 @@ internal class Program {
 	private static async Task Main() {
 		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
-		var basicFlags = CommandLineFlagsParser.ParseFlags<ResCacheBasicFlags>(CommandLineFlagsParser.PrintHelpInvoker<ResCacheFlags>);
-		if (basicFlags == null) {
-			return;
-		}
-
+		var basicFlags = CommandLineFlagsParser.ParseFlags<ResCacheBasicFlags>(new CommandLineOptions { HelpDelegate = CommandLineFlagsParser.PrintHelpInvoker<ResCacheFlags>});
 		var serverInfo = basicFlags.NE ? ShardInfo.NetEase : ShardInfo.CCP;
 
 		if (basicFlags.Repair) {
@@ -36,10 +32,6 @@ internal class Program {
 		}
 
 		var flags = CommandLineFlagsParser.ParseFlags<ResCacheFlags>();
-		if (flags == null) {
-			return;
-		}
-
 		var canMakeSymlinks = flags.Symlink || PlatformUtils.CanCreateSymlinks;
 		if (flags.NoSymlink) {
 			canMakeSymlinks = false;
@@ -230,7 +222,7 @@ internal class Program {
 
 			foreach (var file in Directory.EnumerateFiles(cacheRoot, "*", SearchOption.AllDirectories)) {
 				var relative = Path.GetRelativePath(cacheRoot, file).Replace('\\', '/');
-				if (relative.StartsWith('.') || cacheRepo.Contains(Path.GetFileName(relative))) {
+				if (relative.StartsWith('.', StringComparison.Ordinal) || cacheRepo.Contains(Path.GetFileName(relative))) {
 					continue;
 				}
 
@@ -285,7 +277,7 @@ internal class Program {
 		foreach (var file in Directory.EnumerateFiles(flags.ResCache, "*", SearchOption.AllDirectories)) {
 			var relative = Path.GetRelativePath(flags.ResCache, file).Replace('\\', '/');
 			var underscore = relative.IndexOf('_', StringComparison.Ordinal);
-			if (relative.StartsWith('.') || underscore == -1) {
+			if (relative.StartsWith('.', StringComparison.Ordinal) || underscore == -1) {
 				continue;
 			}
 

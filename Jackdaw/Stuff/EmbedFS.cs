@@ -1,10 +1,10 @@
 using System;
-using System.Buffers;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
+using Pluto.IO.Binary;
 
 namespace Jackdaw.Stuff;
 
@@ -59,17 +59,15 @@ public sealed class EmbedFS : IDisposable, IAsyncDisposable {
 		BaseStream.Dispose();
 	}
 
-	public IMemoryOwner<byte>? Open(string name, out int allocSize) {
-		allocSize = 0;
+	public RentedArray<byte>? Open(string name) {
 		if (!Resources.TryGetValue(name.Replace('\\', '/'), out var info)) {
 			return null;
 		}
 
 		BaseStream.Seek(BaseAddress + info.Offset, SeekOrigin.Begin);
-		var buffer = MemoryPool<byte>.Shared.Rent(info.Size);
+		var buffer = new RentedArray<byte>(info.Size);
 		try {
-			BaseStream.ReadExactly(buffer.Memory.Span[..info.Size]);
-			allocSize = info.Size;
+			BaseStream.ReadExactly(buffer.Span);
 			return buffer;
 		} catch {
 			buffer.Dispose();

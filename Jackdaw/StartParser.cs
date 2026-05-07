@@ -1,7 +1,7 @@
 using System;
 using System.IO;
-using IronCompress;
 using Jackdaw.Structs.Client;
+using Pluto.IO.Binary;
 
 namespace Jackdaw;
 
@@ -65,8 +65,8 @@ public static class StartParser {
 		return info;
 	}
 
-	public static unsafe StartInfo Parse(IronCompressResult data) {
-		var span = data.AsSpan();
+	public static unsafe StartInfo Parse(RentedArray<byte> data) {
+		var span = data.Span;
 		fixed (byte* ptr = &span.GetPinnableReference()) {
 			using var stream = new UnmanagedMemoryStream(ptr, data.Length);
 			return Parse(stream);

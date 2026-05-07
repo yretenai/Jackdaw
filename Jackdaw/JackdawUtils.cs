@@ -1,63 +1,60 @@
 using System;
-using System.Buffers;
 using System.IO;
-using System.IO.Compression;
-using IronCompress;
+using Charon.Compression;
+using Pluto.IO.Binary;
 
 namespace Jackdaw;
 
 public static class JackdawUtils {
-	public static Iron Iron { get; } = new();
-
-	public static IronCompressResult Decompress(Stream stream) {
-		var size = (int) stream.Length;
-		using var rented = MemoryPool<byte>.Shared.Rent(size);
-		var block = rented.Memory.Span[..size];
-		stream.ReadExactly(block);
-		return Decompress(block);
+	public static RentedArray<byte> Decompress(Stream stream) {
+		using var rented = new RentedArray<byte>((int) stream.Length);
+		stream.ReadExactly(rented.Span);
+		return Decompress(rented.Memory);
 	}
 
-	public static IronCompressResult Decompress(Span<byte> data) {
-		var decompressed = Iron.Decompress(Codec.Zstd, data);
-		return decompressed;
+	public static RentedArray<byte> Decompress(Memory<byte> data) {
+		var size = ZStandard.GetDecompressBound(data);
+		var rented = new RentedArray<byte>(size);
+		CompressionHelper.Decompress(CompressionType.Zstd, data, rented.Memory);
+		return rented;
 	}
 
-	public static IronCompressResult DecompressGz(Stream stream) {
-		var size = (int) stream.Length;
-		using var rented = MemoryPool<byte>.Shared.Rent(size);
-		var block = rented.Memory.Span[..size];
-		stream.ReadExactly(block);
-		return DecompressGz(block);
+	public static RentedArray<byte> DecompressGz(Stream stream) {
+		using var rented = new RentedArray<byte>((int) stream.Length);
+		stream.ReadExactly(rented.Span);
+		return DecompressGz(rented.Memory);
 	}
 
-	public static IronCompressResult DecompressGz(Span<byte> data) {
-		var decompressed = Iron.Decompress(Codec.Gzip, data);
-		return decompressed;
+	public static RentedArray<byte> DecompressGz(Memory<byte> data) {
+		var rented = new RentedArray<byte>(data.Length * 16);
+		var n = CompressionHelper.Decompress(CompressionType.GzipUnknownSize, data, rented.Memory);
+		rented.Length = n;
+		return rented;
 	}
 
-	public static IronCompressResult Compress(Stream stream) {
-		var size = (int) stream.Length;
-		using var rented = MemoryPool<byte>.Shared.Rent(size);
-		var block = rented.Memory.Span[..size];
-		stream.ReadExactly(block);
-		return Compress(block);
+	public static RentedArray<byte> Compress(Stream stream) {
+		using var rented = new RentedArray<byte>((int) stream.Length);
+		stream.ReadExactly(rented.Span);
+		return Compress(rented.Memory);
 	}
 
-	public static IronCompressResult Compress(Span<byte> data) {
-		var decompressed = Iron.Compress(Codec.Zstd, data, null, CompressionLevel.SmallestSize);
-		return decompressed;
+	public static RentedArray<byte> Compress(Memory<byte> data) {
+		var rented = new RentedArray<byte>(data.Length);
+		var n = CompressionHelper.Compress(CompressionType.Zstd, data, rented.Memory);
+		rented.Length = n;
+		return rented;
 	}
 
-	public static IronCompressResult CompressGz(Stream stream) {
-		var size = (int) stream.Length;
-		using var rented = MemoryPool<byte>.Shared.Rent(size);
-		var block = rented.Memory.Span[..size];
-		stream.ReadExactly(block);
-		return CompressGz(block);
+	public static RentedArray<byte> CompressGz(Stream stream) {
+		using var rented = new RentedArray<byte>((int) stream.Length);
+		stream.ReadExactly(rented.Span);
+		return CompressGz(rented.Memory);
 	}
 
-	public static IronCompressResult CompressGz(Span<byte> data) {
-		var decompressed = Iron.Compress(Codec.Gzip, data, null, CompressionLevel.SmallestSize);
-		return decompressed;
+	public static RentedArray<byte> CompressGz(Memory<byte> data) {
+		var rented = new RentedArray<byte>(data.Length);
+		var n = CompressionHelper.Compress(CompressionType.Gzip, data, rented.Memory);
+		rented.Length = n;
+		return rented;
 	}
 }
