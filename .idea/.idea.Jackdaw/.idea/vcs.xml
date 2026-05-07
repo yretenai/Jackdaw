@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/Ferment" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Knit" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Knit/Neptune" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Neptune" vcs="Git" />

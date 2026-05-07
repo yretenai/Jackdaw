@@ -79,7 +79,7 @@ internal class Program {
 			buildInterfaces.UnionWith(interfaceList);
 
 			interfaceList.Insert(0, parent);
-			typeLists[type.ClassId] = (interfaceList, type.Fields.Where(x => x.Type is not (BlueTypeId.PythonFunction or BlueTypeId.PythonValue or BlueTypeId.PythonBinding)).Select(x => x.Name).ToList());
+			typeLists[type.ClassId] = (interfaceList, type.Fields.Where(x => x.Type is not (BlueTypeId.ScriptCallback or BlueTypeId.PyObjectPtr or BlueTypeId.IRootWeakRef)).Select(x => x.Name).ToList());
 		}
 
 		var totalNames = new HashSet<string>();
@@ -135,7 +135,7 @@ internal class Program {
 				FindAllFields(typeLists, @interface, inheritedFields);
 			}
 
-			var fields = type.Fields.Where(x => x.Type is not (BlueTypeId.PythonFunction or BlueTypeId.PythonValue or BlueTypeId.PythonBinding) && !inheritedFields.Contains(x.Name)).ToList();
+			var fields = type.Fields.Where(x => x.Type is not (BlueTypeId.ScriptCallback or BlueTypeId.PyObjectPtr or BlueTypeId.IRootWeakRef) && !inheritedFields.Contains(x.Name)).ToList();
 
 			if (fields.Count == 0) {
 				writer.WriteLine(" }");
@@ -157,6 +157,9 @@ internal class Program {
 					case BlueTypeId.Int:
 						fieldType = "int";
 						break;
+					case BlueTypeId.UnsignedInt:
+						fieldType = "uint";
+						break;
 					case BlueTypeId.Single:
 						fieldType = "float";
 						break;
@@ -169,33 +172,91 @@ internal class Program {
 					case BlueTypeId.Long:
 						fieldType = "long";
 						break;
+					case BlueTypeId.UnsignedLong:
+						fieldType = "ulong";
+						break;
 					case BlueTypeId.FloatArray:
 						fieldType = field.Size switch {
-							            0 when field.ClassType == "Matrix" => "Matrix4x4",
-							            0 when field.ClassType == "Color" => "Vector4",
-							            0 when field.ClassType == "Rotation" => "Quaternion",
-							            0 when string.IsNullOrEmpty(field.ClassType) => "Vector3",
-							            8 => "Vector2",
-							            12 => "Vector3",
-							            16 => "Vector4",
-							            24 => "Matrix3x2",
-							            36 => "Matrix3x3",
-							            64 => "Matrix4x4",
-							            _ => throw new InvalidOperationException(),
-						            };
+							0 when field.ClassType == "Matrix" => "Matrix4X4<float>",
+				            0 when field.ClassType == "Color" => "Vector4D<float>",
+							0 when field.ClassType == "Rotation" => "Quaternion<float>",
+							0 when field.ClassType == "Vector2" => "Vector2D<float>",
+							0 when field.ClassType == "Vector3" => "Vector3D<float>",
+							0 when field.ClassType == "Vector4" => "Vector4D<float>",
+				            0 when string.IsNullOrEmpty(field.ClassType) => "Vector3",
+							0 when !string.IsNullOrEmpty(field.ClassType) => field.ClassType,
+							4 => "float",
+				            8 => "Vector2D<float>",
+				            12 => "Vector3D<float>",
+				            16 => "Vector4D<float>",
+				            24 => "Matrix3X2<float>",
+				            36 => "Matrix3X3<float>",
+				            64 => "Matrix4X4<float>",
+				            _ => null,
+						};
+						if (fieldType == null) {
+							fieldType = "float[]?";
+							attribute = "BlackArray(4)";
+						}
 						break;
-					case BlueTypeId.String:
-					case BlueTypeId.UTF8String:
+					case BlueTypeId.DoubleArray:
+						fieldType = field.Size switch {
+							0 when field.ClassType == "Vector2d" => "Vector2D<double>",
+							0 when field.ClassType == "Vector3d" => "Vector3D<double>",
+							0 when field.ClassType == "Vector4d" => "Vector4D<double>",
+							0 when string.IsNullOrEmpty(field.ClassType) => "Vector3D<double>",
+							0 when !string.IsNullOrEmpty(field.ClassType) => field.ClassType,
+							8 => "double",
+							16 => "Vector2D<double>",
+							24 => "Vector3D<double>",
+							32 => "Vector4D<double>",
+							48 => "Matrix3X2<double>",
+							72 => "Matrix3X3<double>",
+							128 => "Matrix4X4<double>",
+							_ => null,
+						};
+						if (fieldType == null) {
+							fieldType = "double[]?";
+							attribute = "BlackArray(8)";
+						}
+						break;
+					case BlueTypeId.IntArray:
+						fieldType = field.Size switch {
+							0 when field.ClassType == "Vector3i" => "Vector3D<int>",
+							0 when !string.IsNullOrEmpty(field.ClassType) => field.ClassType,
+							4 => "int",
+							8 => "Vector2D<int>",
+							12 => "Vector3D<int>",
+							16 => "Vector4D<int>",
+							24 => "Matrix3X2<int>",
+							36 => "Matrix3X3<int>",
+							64 => "Matrix4X4<int>",
+							_ => null,
+						};
+						if (fieldType == null) {
+							fieldType = "int[]?";
+							attribute = "BlackArray(4)";
+						}
+						break;
+					case BlueTypeId.StdString:
+					case BlueTypeId.SharedString:
+					case BlueTypeId.StringPtr:
 						fieldType = "string?";
 						break;
-					case BlueTypeId.WString:
-					case BlueTypeId.UTF16String:
+					case BlueTypeId.CharArray:
+						fieldType = "string?";
+						attribute = "BlackArray(1)";
+						break;
+					case BlueTypeId.StdWideString:
+					case BlueTypeId.SharedWideString:
+					case BlueTypeId.WideString:
+					case BlueTypeId.WideStringPtr:
 						fieldType = "string?";
 						attribute = "BlackUseNamePool";
 						break;
-					case BlueTypeId.Buffer:
-						fieldType = "int[]?";
-						attribute = "BlackArray(4)";
+					case BlueTypeId.BinaryBlock:
+						fieldType = "byte[]?";
+						attribute = "BlackArray(1)";
 						break;
 					case BlueTypeId.Byte:
 						fieldType = "byte";
@@ -203,17 +264,22 @@ internal class Program {
 					case BlueTypeId.Short:
 						fieldType = "short";
 						break;
-					case BlueTypeId.Collection:
+					case BlueTypeId.IRoot:
+					case BlueTypeId.IRootPtr:
+					case BlueTypeId.IRootWeakRef:
 						switch (field.ClassType) {
 							case "IList":
 								fieldType = "List<IRoot?>?";
-								if (fieldName == "IndexBuffers") {
-									attribute = "JsonIgnore";
+								switch (fieldName)
+								{
+									case "IndexBuffers":
+										attribute = "JsonIgnore";
+										break;
 								}
 
 								break;
 							case "IBlueDict":
-								fieldType = "Dictionary<IRoot, IRoot?>?";
+								fieldType = "Dictionary<string, IRoot?>?";
 								attribute = "BlackExperimental";
 								break;
 							case "IBlueStructureList":
@@ -228,12 +294,6 @@ internal class Program {
 
 								break;
 							}
-						}
-
-						break;
-					case BlueTypeId.Object:
-						if (field.ClassType.Length > 0 && totalNames.Contains(field.ClassType)) {
-							fieldType = field.ClassType + "?";
 						}
 
 						break;

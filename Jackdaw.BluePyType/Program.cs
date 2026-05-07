@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Runtime.InteropServices;
 using System.Text.Encodings.Web;
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Pluto.IO.DataReader;
 
 namespace Jackdaw.BluePyType;
@@ -10,6 +11,7 @@ internal class Program {
 	private static JsonSerializerOptions Options { get; } = new() {
 		WriteIndented = true,
 		Encoder = JavaScriptEncoder.UnsafeRelaxedJsonEscaping,
+		DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
 	};
 
 	private static void Main(string[] args) {
@@ -35,7 +37,7 @@ internal class Program {
 		IMemoryHandler.Handler = handler;
 
 		try {
-			var beClasses = new BeClasses();
+			var beClasses = new ManagedBeClasses();
 			using var stream = new FileStream("BluePyType.json", FileMode.Create, FileAccess.ReadWrite);
 			JsonSerializer.Serialize(stream, beClasses.Classes, Options);
 			Console.WriteLine($"Saved {beClasses.Classes.Count} classes");
