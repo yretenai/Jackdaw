@@ -103,18 +103,18 @@ internal class Program {
 					}
 
 					var version = baseName[(versionIndex + 1)..];
-					await ProcessVersion(versionSet, version, string.Empty, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, ShardInfo.CCP, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
+					await ProcessVersion(versionSet, version, string.Empty, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, ShardInfo.Fenris, flycatcherRoot, redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			} else {
 				foreach (var version in args[1..]) {
 					var info = args[0].ToLower() switch {
 						           "N" => ShardInfo.NetEase,
-						           "F" => ShardInfo.CCPFrontier,
-						           "V" => ShardInfo.CCPVanguard,
-						           _ => ShardInfo.CCP,
+						           "F" => ShardInfo.FenrisFrontier,
+						           "V" => ShardInfo.FenrisVanguard,
+						           _ => ShardInfo.Fenris,
 					           };
 
-					await ProcessVersion(versionSet, version, info.RegionPrefix, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, info, info.Region is ShardRegion.CCP ? flycatcherRoot : Path.Combine(flycatcherRoot, info.Region.ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
+					await ProcessVersion(versionSet, version, info.RegionPrefix, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, info, info.Region is ShardRegion.Fenris ? flycatcherRoot : Path.Combine(flycatcherRoot, info.Region.ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			}
 		} else {
@@ -131,9 +131,9 @@ internal class Program {
 
 						var info = server.ToRegion() switch {
 							           ShardRegion.NetEase => ShardInfo.NetEase,
-							           ShardRegion.Frontier => ShardInfo.CCPFrontier,
-							           ShardRegion.CCP when product is ShardProduct.Vanguard => ShardInfo.CCPVanguard,
-							           _ => ShardInfo.CCP,
+							           ShardRegion.Frontier => ShardInfo.FenrisFrontier,
+							           ShardRegion.Fenris when product is ShardProduct.Vanguard => ShardInfo.FenrisVanguard,
+							           _ => ShardInfo.Fenris,
 						           };
 
 						Log.Information("Getting {Product} version for {Server}", product, server);
@@ -151,7 +151,7 @@ internal class Program {
 						}
 
 						var version = json.Build;
-						await ProcessVersion(versionSet, version, info.RegionPrefix, json.Platforms ?? DEFAULT_PLATFORMS, httpClient, product, info, server.ToRegion() is ShardRegion.CCP ? flycatcherRoot : Path.Combine(flycatcherRoot, server.ToRegion().ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
+						await ProcessVersion(versionSet, version, info.RegionPrefix, json.Platforms ?? DEFAULT_PLATFORMS, httpClient, product, info, server.ToRegion() is ShardRegion.Fenris ? flycatcherRoot : Path.Combine(flycatcherRoot, server.ToRegion().ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
 					} catch {
 						Log.Error("Failed to get {Product} version for {Server}", product, server);
 					}

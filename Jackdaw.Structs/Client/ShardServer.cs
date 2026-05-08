@@ -29,7 +29,7 @@ public enum ShardServer {
 }
 
 public enum ShardRegion {
-	CCP,
+	Fenris,
 	Frontier,
 	Vanguard,
 	NetEase,
@@ -52,7 +52,7 @@ public static class ShardServerHelpers {
 			ShardServer.Hurricane => ShardRegion.NetEase,
 			ShardServer.Storm => ShardRegion.NetEase,
 			ShardServer.Stillness => ShardRegion.Frontier,
-			_ => ShardRegion.CCP,
+			_ => ShardRegion.Fenris,
 		};
 
 	public static bool IsValidFor(this ShardServer server, ShardProduct product) {

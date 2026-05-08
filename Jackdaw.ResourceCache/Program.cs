@@ -24,7 +24,7 @@ internal class Program {
 		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
 		var basicFlags = CommandLineFlagsParser.ParseFlags<ResCacheBasicFlags>(new CommandLineOptions { HelpDelegate = CommandLineFlagsParser.PrintHelpInvoker<ResCacheFlags>});
-		var serverInfo = basicFlags.NE ? ShardInfo.NetEase : ShardInfo.CCP;
+		var serverInfo = basicFlags.NE ? ShardInfo.NetEase : ShardInfo.Fenris;
 
 		if (basicFlags.Repair) {
 			Repair(basicFlags, serverInfo);
