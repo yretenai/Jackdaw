@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PrimitiveScene : IRoot, ITr2Scene {
+public class Tr2PrimitiveScene : ITr2Scene, IRoot {
 	public List<IRoot?>? Primitives { get; set; }
 	public List<IRoot?>? TextLabels { get; set; }
-	public Tr2ManipulationTool? Manipulator { get; set; }
+	[BlackArray] public Tr2ManipulationTool? Manipulator { get; set; }
 }

@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class EvePlaneSet : IRoot, IInitialize, INotify, IEveSpaceObjectAttachment {
+public class EvePlaneSet : IInitialize, INotify, IEveSpaceObjectAttachment, ITr2LightOwner, EveEntity, IRoot {
 	public bool Display { get; set; }
 	public bool HideOnLowQuality { get; set; }
 	public bool Skinned { get; set; }
 	public byte PickBufferID { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Planes { get; set; }
-	public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
 }

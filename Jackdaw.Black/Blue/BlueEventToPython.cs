@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class BlueEventToPython : IRoot, IBlueEventListener { }
+public class BlueEventToPython : IBlueEventListener, IRoot { }

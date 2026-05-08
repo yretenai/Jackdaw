@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class BluePyOS : IRoot, IBluePyOS {
+public class BluePyOS : IBluePyOS, IRoot {
 	public List<IRoot?>? CpuUsage { get; set; }
 	public bool MarkupZonesInPython { get; set; }
 	public int TimesliceWarning { get; set; }

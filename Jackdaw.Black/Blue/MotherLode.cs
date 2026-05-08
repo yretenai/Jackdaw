@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class MotherLode : IRoot, IMotherLode {
+public class MotherLode : IMotherLode, IRoot {
 	public long MaxMemUsage { get; set; }
 	public long MemUsage { get; set; }
 	public bool Verbose { get; set; }

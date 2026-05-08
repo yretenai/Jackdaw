@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepGenerateMipMaps : TriRenderStep {
-	public Tr2RenderTarget? RenderTarget { get; set; }
+public class TriStepGenerateMipMaps : TriRenderStep, IRoot {
+	[BlackArray] public Tr2RenderTarget? RenderTarget { get; set; }
 }

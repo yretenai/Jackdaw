@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class EveSwarmRenderable : EveEntity, ITr2Pickable, IEveShadowCaster { }
+public class EveSwarmRenderable : ITr2Pickable, EveEntity, IEveShadowCaster, IRoot { }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionSetExternalControllerVariable : IRoot, ITr2ControllerAction, INotify {
+public class Tr2ActionSetExternalControllerVariable : ITr2ControllerAction, INotify, IRoot {
 	public bool DestinationIsValid { get; set; }
 	public string? DestinationOwner { get; set; }
 	public string? SourceVariable { get; set; }

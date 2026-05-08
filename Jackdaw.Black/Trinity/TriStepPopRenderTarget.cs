@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepPopRenderTarget : TriRenderStep {
+public class TriStepPopRenderTarget : TriRenderStep, IRoot {
 	public int Slot { get; set; }
 }

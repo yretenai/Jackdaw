@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildSpherePin : EveChildMesh {
-	public Vector3 CenterNormal { get; set; }
+public class EveChildSpherePin : EveChildMesh, IRoot {
+	public Vector3D<float> CenterNormal { get; set; }
 	public float PinMaxRadius { get; set; }
 	public float PinRadius { get; set; }
 	public float PinRotation { get; set; }
-	public Vector4 PinColor { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector4D<float> PinColor { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public float PinAlphaThreshold { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 }

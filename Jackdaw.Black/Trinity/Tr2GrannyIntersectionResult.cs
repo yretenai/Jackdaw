@@ -4,9 +4,9 @@
 namespace Jackdaw.Black;
 
 public class Tr2GrannyIntersectionResult : IRoot {
-	public Vector3 Position { get; set; }
-	public Vector3 Normal { get; set; }
-	public Vector2 Uv { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> Normal { get; set; }
+	public Vector2D<float> Uv { get; set; }
 	public int MeshIndex { get; set; }
 	public int AreaIndex { get; set; }
 	public int BoneIndex { get; set; }

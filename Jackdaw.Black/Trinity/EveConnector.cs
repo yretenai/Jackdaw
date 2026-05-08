@@ -4,14 +4,14 @@
 namespace Jackdaw.Black;
 
 public class EveConnector : IRoot {
-	public ITriVectorFunction? SourceObject { get; set; }
-	public ITriVectorFunction? DestObject { get; set; }
+	[BlackArray] public ITriVectorFunction? SourceObject { get; set; }
+	[BlackArray] public ITriVectorFunction? DestObject { get; set; }
 	public int Type { get; set; }
-	public Vector3 SourcePosition { get; set; }
-	public Vector3 DestPosition { get; set; }
-	public Vector3 PlaneNormal { get; set; }
-	public Vector4 Color { get; set; }
-	public Vector4 AnimationColor { get; set; }
+	public Vector3D<float> SourcePosition { get; set; }
+	public Vector3D<float> DestPosition { get; set; }
+	public Vector3D<float> PlaneNormal { get; set; }
+	public Vector4D<float> Color { get; set; }
+	public Vector4D<float> AnimationColor { get; set; }
 	public float AnimationSpeed { get; set; }
 	public float AnimationScale { get; set; }
 	public float LineWidth { get; set; }

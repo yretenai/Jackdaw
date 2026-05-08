@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSwarm : EveShip2, IEveSpaceObject2, IInitialize, INotify, EveEntity, IEveShadowCaster {
+public class EveSwarm : EveShip2, IEveSpaceObject2, IInitialize, INotify, EveEntity, IEveShadowCaster, IRoot {
 	public bool SwarmingEnabled { get; set; }
 	public int Count { get; set; }
 	public float Mass { get; set; }

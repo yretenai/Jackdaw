@@ -6,13 +6,13 @@ namespace Jackdaw.Black;
 public class EveSOFDataHullExtensionPlacementDistributionPlacement : IRoot {
 	public string? Name { get; set; }
 	public float Completeness { get; set; }
-	public Vector3 PlacementBias { get; set; }
+	public Vector3D<float> PlacementBias { get; set; }
 	public float CenterBias { get; set; }
 	public int Cap { get; set; }
-	public Vector4 RandomRotationStepSizeYPR { get; set; }
-	public Vector3 RandomRotationMaxSteps { get; set; }
-	public Vector3 RandomScaleMin { get; set; }
-	public Vector3 RandomScaleMax { get; set; }
+	public Vector4D<float> RandomRotationStepSizeYPR { get; set; }
+	public Vector3D<float> RandomRotationMaxSteps { get; set; }
+	public Vector3D<float> RandomScaleMin { get; set; }
+	public Vector3D<float> RandomScaleMax { get; set; }
 	public bool UniformScale { get; set; }
 	public bool OccupyLocators { get; set; }
 }

@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class TriVector4 : IRoot {
-	public Vector4 Data { get; set; }
+	public Vector4D<float> Data { get; set; }
 }

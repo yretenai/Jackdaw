@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class Tr2BindingVector3 : IRoot {
-	public Vector3 Value { get; set; }
+	public Vector3D<float> Value { get; set; }
 }

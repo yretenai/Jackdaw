@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class TriTorque : IRoot {
 	public float Time { get; set; }
-	public Vector4 Rot0 { get; set; }
-	public Vector3 Omega0 { get; set; }
-	public Vector3 Torque { get; set; }
+	public Vector4D<float> Rot0 { get; set; }
+	public Vector3D<float> Omega0 { get; set; }
+	public Vector3D<float> Torque { get; set; }
 }

@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepRenderDebug : TriRenderStep, ITr2DebugRenderer {
+public class TriStepRenderDebug : TriRenderStep, ITr2DebugRenderer, IRoot {
 	public bool AutoClear { get; set; }
 }

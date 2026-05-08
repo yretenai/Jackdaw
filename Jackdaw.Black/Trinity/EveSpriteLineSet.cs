@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class EveSpriteLineSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
+public class EveSpriteLineSet : IInitialize, IEveSpaceObjectAttachment, ITr2LightOwner, EveEntity, IRoot {
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool Skinned { get; set; }
 	public int EffectHash { get; set; }
-	public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
 	public List<IRoot?>? SpriteLines { get; set; }
 }

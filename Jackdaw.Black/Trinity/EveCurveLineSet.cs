@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class EveCurveLineSet : Tr2CurveLineSet, IEveTransform, IEveSpaceObject2 { }
+public class EveCurveLineSet : Tr2CurveLineSet, IEveTransform, IEveSpaceObject2, IRoot { }

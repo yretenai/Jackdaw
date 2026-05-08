@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dLayer : Tr2Sprite2dContainer {
-	public ITr2Sprite2dTexture? TextureSecondary { get; set; }
-	public Vector4 BackgroundColor { get; set; }
-	public Vector4 Color { get; set; }
+public class Tr2Sprite2dLayer : Tr2Sprite2dContainer, IRoot {
+	[BlackArray] public ITr2Sprite2dTexture? TextureSecondary { get; set; }
+	public Vector4D<float> BackgroundColor { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public bool ClearBackground { get; set; }
 	public int BlendMode { get; set; }
 	public int SpriteEffect { get; set; }

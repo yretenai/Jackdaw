@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Controller : IRoot, ITr2Controller, IListNotify {
+public class Tr2Controller : EveThrottleable, ITr2Controller, ITr2ActionController, IListNotify, IRoot {
 	public long CallbackCount { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? StateMachines { get; set; }

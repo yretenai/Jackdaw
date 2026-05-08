@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class BlueTextResource : BlueAsyncRes {
+public class BlueTextResource : BlueAsyncRes, IRoot {
 	public string? Text { get; set; }
 }

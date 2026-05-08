@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSprite2dBracketRenderer : Tr2SpriteObject {
+public class EveSprite2dBracketRenderer : Tr2SpriteObject, IRoot {
 	public List<IRoot?>? Brackets { get; set; }
-	public Tr2AtlasTexture? IconAtlas { get; set; }
+	[BlackArray] public Tr2AtlasTexture? IconAtlas { get; set; }
 }

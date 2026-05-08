@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriFloatArrayParameter : IRoot, ITriEffectParameter, INotify, IInitialize {
+public class TriFloatArrayParameter : ITriEffectParameter, INotify, IInitialize, IRoot {
 	public List<IRoot?>? Value { get; set; }
 	public string? Name { get; set; }
 	public bool UsedByCurrentTechnique { get; set; }

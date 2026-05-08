@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveColorMixer : IRoot, ITriColorFunction, ITriFunction, ITriCurveLength {
+public class Tr2CurveColorMixer : ITriColorFunction, ITriFunction, ITriCurveLength, IRoot {
 	public string? Name { get; set; }
-	public Vector4 ConvertedLinearValue { get; set; }
-	public Vector4 Color1 { get; set; }
-	public Vector4 Color2 { get; set; }
-	public Vector4 CurrentValue { get; set; }
+	public Vector4D<float> ConvertedLinearValue { get; set; }
+	public Vector4D<float> Color1 { get; set; }
+	public Vector4D<float> Color2 { get; set; }
+	public Vector4D<float> CurrentValue { get; set; }
 	public float LerpValue { get; set; }
 	public float Saturation { get; set; }
 	public float Brightness { get; set; }

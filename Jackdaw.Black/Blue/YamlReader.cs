@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class YamlReader : IRoot, IRootReader, IBlueObjectBuilder, ICacheable {
+public class YamlReader : IRootReader, IBlueObjectBuilder, ICacheable, IRoot {
 	public bool IsStrict { get; set; }
 	public bool DoInitialize { get; set; }
 }

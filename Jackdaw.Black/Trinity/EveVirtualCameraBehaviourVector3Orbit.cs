@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourVector3Orbit : EveVirtualCameraBehaviourVector3Base, INotify {
+public class EveVirtualCameraBehaviourVector3Orbit : EveVirtualCameraBehaviourVector3Base, INotify, IRoot {
 	public float Start { get; set; }
 	public float End { get; set; }
 	public float Distance { get; set; }
-	public Tr2CurveScalar? DistanceScalarCurve { get; set; }
-	public Tr2CurveScalar? OrbitCurve { get; set; }
+	[BlackArray] public Tr2CurveScalar? DistanceScalarCurve { get; set; }
+	[BlackArray] public Tr2CurveScalar? OrbitCurve { get; set; }
 	public bool Proportional { get; set; }
 	public bool World { get; set; }
 }

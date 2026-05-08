@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourVector3Base : IRoot, INotify {
+public class EveVirtualCameraBehaviourVector3Base : INotify, IRoot {
 	public string? Name { get; set; }
 	public bool Active { get; set; }
 }

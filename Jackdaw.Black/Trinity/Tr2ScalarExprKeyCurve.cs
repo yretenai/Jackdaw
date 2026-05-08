@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ScalarExprKeyCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
+public class Tr2ScalarExprKeyCurve : ITriFunction, IInitialize, ITriCurveLength, IRoot {
 	public float Length { get; set; }
 	public string? Name { get; set; }
 	public float CurrentValue { get; set; }

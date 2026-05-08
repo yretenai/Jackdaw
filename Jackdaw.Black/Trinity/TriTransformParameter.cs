@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class TriTransformParameter : IRoot, ITriEffectParameter {
+public class TriTransformParameter : ITriEffectParameter, IRoot {
 	public string? Name { get; set; }
 	public int TransformBase { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector3 RotationCenter { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector3 Translation { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector3D<float> RotationCenter { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector3D<float> Translation { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
 }

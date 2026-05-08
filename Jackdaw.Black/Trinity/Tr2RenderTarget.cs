@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RenderTarget : IRoot, ITr2TextureProvider {
+public class Tr2RenderTarget : ITr2TextureProvider, IRoot {
 	public int Width { get; set; }
 	public int Height { get; set; }
 	public int MipCount { get; set; }

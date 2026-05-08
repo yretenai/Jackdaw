@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GrannyVectorTrack : Tr2GrannyTrack {
+public class Tr2GrannyVectorTrack : Tr2GrannyTrack, IRoot {
 	public float Value { get; set; }
 }

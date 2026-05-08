@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPFilmGrainEffect : Tr2PPEffect {
+public class Tr2PPFilmGrainEffect : Tr2PPEffect, IRoot {
 	public bool Colored { get; set; }
 	public float ColorAmount { get; set; }
 	public float GrainSize { get; set; }

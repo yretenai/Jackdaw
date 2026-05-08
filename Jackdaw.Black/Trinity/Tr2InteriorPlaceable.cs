@@ -3,19 +3,19 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2InteriorPlaceable : IRoot, ITr2Interior, ITr2InteriorDynamic, INotify, IInitialize, ITr2Renderable, ITr2Pickable, ITr2BoundingBox {
+public class Tr2InteriorPlaceable : ITr2Interior, ITr2InteriorDynamic, INotify, IInitialize, ITr2Renderable, ITr2Pickable, ITr2BoundingBox, IRoot {
 	public Vector3 Translation { get; set; }
-	public Quaternion Rotation { get; set; }
+	public Quaternion<float> Rotation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool IsUnique { get; set; }
 	[BlackArray] public TriMatrix? Transform { get; set; }
 	public string? PlaceableResPath { get; set; }
-	public WodPlaceableRes? PlaceableRes { get; set; }
-	public Vector3 BoundingSphereCenter { get; set; }
+	[BlackArray] public WodPlaceableRes? PlaceableRes { get; set; }
+	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	public Tr2VariableStore? VariableStore { get; set; }
-	public Vector3 ProbeOffset { get; set; }
+	[BlackArray] public Tr2VariableStore? VariableStore { get; set; }
+	public Vector3D<float> ProbeOffset { get; set; }
 	public float DepthOffset { get; set; }
 }

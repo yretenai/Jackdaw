@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepSetDepthStencil : TriRenderStep {
-	public Tr2DepthStencil? DepthStencil { get; set; }
+public class TriStepSetDepthStencil : TriRenderStep, IRoot {
+	[BlackArray] public Tr2DepthStencil? DepthStencil { get; set; }
 }

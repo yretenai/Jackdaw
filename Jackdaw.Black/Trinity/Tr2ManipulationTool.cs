@@ -5,8 +5,8 @@ namespace Jackdaw.Black;
 
 public class Tr2ManipulationTool : IRoot {
 	public List<IRoot?>? Primitives { get; set; }
-	public Vector3 Pivot { get; set; }
-	public Matrix4x4 LocalTransform { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
+	public Vector3D<float> Pivot { get; set; }
+	public Matrix4X4<float> LocalTransform { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool Captured { get; set; }
 }

@@ -3,14 +3,14 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2DistanceTracker : IRoot, ITriFunction, INotify {
+public class Tr2DistanceTracker : ITriFunction, INotify, IRoot {
 	[BlackUseNamePool] public string? Name { get; set; }
 	public bool SignedDistance { get; set; }
 	public bool DistanceToClosest { get; set; }
 	public float Value { get; set; }
-	public Vector3 Direction { get; set; }
-	public ITriVectorFunction? TargetObject { get; set; }
-	public ITriVectorFunction? SourceObject { get; set; }
-	public Vector3 TargetPosition { get; set; }
-	public Vector3 SourcePosition { get; set; }
+	public Vector3D<float> Direction { get; set; }
+	[BlackArray] public ITriVectorFunction? TargetObject { get; set; }
+	[BlackArray] public ITriVectorFunction? SourceObject { get; set; }
+	public Vector3D<float> TargetPosition { get; set; }
+	public Vector3D<float> SourcePosition { get; set; }
 }

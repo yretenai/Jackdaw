@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TextureArray : IRoot, ITr2TextureProvider {
+public class Tr2TextureArray : ITr2TextureProvider, IRoot {
 	public int Width { get; set; }
 	public int Height { get; set; }
 	public int ArraySize { get; set; }

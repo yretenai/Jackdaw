@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class BlueCallbackMan : IRoot, IBlueCallbackMan { }
+public class BlueCallbackMan : IBlueCallbackMan, IRoot { }

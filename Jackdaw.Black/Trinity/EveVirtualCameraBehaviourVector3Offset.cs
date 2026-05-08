@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourVector3Offset : EveVirtualCameraBehaviourVector3Base, INotify {
-	public Vector3 Offset { get; set; }
+public class EveVirtualCameraBehaviourVector3Offset : EveVirtualCameraBehaviourVector3Base, INotify, IRoot {
+	public Vector3D<float> Offset { get; set; }
 	public bool Proportional { get; set; }
 	public bool World { get; set; }
 }

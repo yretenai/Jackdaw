@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ControllerEventHandler : IRoot, IListNotify {
+public class Tr2ControllerEventHandler : IListNotify, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Actions { get; set; }
 }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ControllerFloatVariable : IRoot, IInitialize, INotify {
+public class Tr2ControllerFloatVariable : IInitialize, INotify, IRoot {
 	public string? Name { get; set; }
 	public string? EnumValues { get; set; }
 	public int VariableType { get; set; }

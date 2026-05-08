@@ -3,27 +3,27 @@
 
 namespace Jackdaw.Black;
 
-public class BehaviorGroupBooster : IRoot, IInitialize, INotify {
-	public Vector3 BoosterOffset { get; set; }
+public class BehaviorGroupBooster : IInitialize, INotify, IRoot {
+	public Vector3D<float> BoosterOffset { get; set; }
 	public float LightRadius { get; set; }
-	public Vector4 LightColor { get; set; }
+	public Vector4D<float> LightColor { get; set; }
 	public int AtlasIndex0 { get; set; }
 	public int AtlasIndex1 { get; set; }
 	public bool Display { get; set; }
-	public Tr2Effect? BoosterEffect { get; set; }
-	public Tr2Effect? HaloFlareEffect { get; set; }
-	public Vector3 HaloFlareOffset { get; set; }
-	public Vector3 HaloFlareScale { get; set; }
+	[BlackArray] public Tr2Effect? BoosterEffect { get; set; }
+	[BlackArray] public Tr2Effect? HaloFlareEffect { get; set; }
+	public Vector3D<float> HaloFlareOffset { get; set; }
+	public Vector3D<float> HaloFlareScale { get; set; }
 	public float HaloFlareBrightness { get; set; }
-	public Vector4 HaloFlareColor { get; set; }
+	public Vector4D<float> HaloFlareColor { get; set; }
 	public float HaloFlareNoiseAmplitude { get; set; }
 	public float HaloFlareNoiseSpeed { get; set; }
 	public int HaloFlareNoiseOctaves { get; set; }
-	public Tr2Effect? AmbientFlareEffect { get; set; }
-	public Vector3 AmbientFlareOffset { get; set; }
-	public Vector3 AmbientFlareScale { get; set; }
+	[BlackArray] public Tr2Effect? AmbientFlareEffect { get; set; }
+	public Vector3D<float> AmbientFlareOffset { get; set; }
+	public Vector3D<float> AmbientFlareScale { get; set; }
 	public float AmbientFlareBrightness { get; set; }
-	public Vector4 AmbientFlareColor { get; set; }
+	public Vector4D<float> AmbientFlareColor { get; set; }
 	public float AmbientFlareNoiseAmplitude { get; set; }
 	public float AmbientFlareNoiseSpeed { get; set; }
 	public int AmbientFlareNoiseOctaves { get; set; }

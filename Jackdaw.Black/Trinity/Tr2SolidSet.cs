@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SolidSet : Tr2PrimitiveSet, IInitialize { }
+public class Tr2SolidSet : Tr2PrimitiveSet, IInitialize, IRoot { }

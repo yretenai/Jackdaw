@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2EffectRes : BlueAsyncRes, IBlueResource, ICacheable { }
+public class Tr2EffectRes : BlueAsyncRes, IBlueResource, ICacheable, IRoot { }

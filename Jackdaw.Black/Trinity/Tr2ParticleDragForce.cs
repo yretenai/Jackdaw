@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ParticleDragForce : IRoot, ITr2ParticleForce {
+public class Tr2ParticleDragForce : ITr2ParticleForce, IRoot {
 	public float Drag { get; set; }
 }

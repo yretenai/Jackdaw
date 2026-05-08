@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class PlayFX : IRoot, IBehavior {
+public class PlayFX : IBehavior, IListNotify, EveEntity, IRoot {
 	public bool Enabled { get; set; }
 	public float BehaviorWeight { get; set; }
 	public int Sec { get; set; }
 	public int BehaviorPriority { get; set; }
-	public IEveFiringEffectElement? FiringEffect { get; set; }
+	[BlackArray] public IEveFiringEffectElement? FiringEffect { get; set; }
 	public List<IRoot?>? GeneratedFiringEffects { get; set; }
 }

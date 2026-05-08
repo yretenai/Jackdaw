@@ -4,15 +4,15 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataHullSpotlightSetItem : IRoot {
-	public Matrix4x4 Transform { get; set; }
+	public Matrix4X4<float> Transform { get; set; }
 	public int BoneIndex { get; set; }
 	public int GroupIndex { get; set; }
 	public bool BoosterGainInfluence { get; set; }
-	public Vector3 SpriteScale { get; set; }
+	public Vector3D<float> SpriteScale { get; set; }
 	public float FlareIntensity { get; set; }
 	public float SpriteIntensity { get; set; }
 	public float ConeIntensity { get; set; }
 	public float Saturation { get; set; }
 	public int ColorType { get; set; }
-	public EveSOFDataSpotLightAttachment? Light { get; set; }
+	[BlackArray] public EveSOFDataSpotLightAttachment? Light { get; set; }
 }

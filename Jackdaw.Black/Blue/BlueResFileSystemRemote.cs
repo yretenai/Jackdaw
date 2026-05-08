@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class BlueResFileSystemRemote : IRoot, IBlueResFileSystem { }
+public class BlueResFileSystemRemote : IBlueResFileSystem, IRoot { }

@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2InstancedMesh : Tr2Mesh {
+public class Tr2InstancedMesh : Tr2Mesh, IRoot {
 	public string? InstanceGeometryResPath { get; set; }
-	public ITr2InstanceData? InstanceGeometryResource { get; set; }
+	[BlackArray] public ITr2InstanceData? InstanceGeometryResource { get; set; }
 	public int InstanceMeshIndex { get; set; }
 	public int BoundsMethod { get; set; }
-	public Vector3 MinBounds { get; set; }
-	public Vector3 MaxBounds { get; set; }
+	public Vector3D<float> MinBounds { get; set; }
+	public Vector3D<float> MaxBounds { get; set; }
 	public float MaxInstanceSize { get; set; }
 }

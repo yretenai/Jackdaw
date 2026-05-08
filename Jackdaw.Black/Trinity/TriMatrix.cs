@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriMatrix : IRoot, ITriMatrix, IPythonMethods {
+public class TriMatrix : ITriMatrix, IPythonMethods, IRoot {
 	public float _11 { get; set; }
 	public float _12 { get; set; }
 	public float _13 { get; set; }

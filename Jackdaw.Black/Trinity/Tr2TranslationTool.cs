@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TranslationTool : Tr2ManipulationTool {
-	public Vector3 Translation { get; set; }
+public class Tr2TranslationTool : Tr2ManipulationTool, IRoot {
+	public Vector3D<float> Translation { get; set; }
 }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveProceduralMethodCycling : IRoot, IEveProceduralSelectionMethod, INotify {
+public class EveProceduralMethodCycling : IEveProceduralSelectionMethod, INotify, IRoot {
 	public int SelectedChild { get; set; }
 	public List<IRoot?>? Parameters { get; set; }
 	public bool RandomizeOrder { get; set; }

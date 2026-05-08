@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RandomDirectionAttributeGenerator : IRoot, ITr2AttributeGenerator {
+public class Tr2RandomDirectionAttributeGenerator : ITr2AttributeGenerator, IRoot {
 	public string? Name { get; set; }
 	public int Dimension { get; set; }
 	public int ElementType { get; set; }

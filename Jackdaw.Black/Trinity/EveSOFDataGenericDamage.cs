@@ -10,13 +10,13 @@ public class EveSOFDataGenericDamage : IRoot {
 	public int FlickerPerlinN { get; set; }
 	public float ArmorParticleRate { get; set; }
 	public float ArmorParticleAngle { get; set; }
-	public Vector2 ArmorParticleMinMaxSpeed { get; set; }
-	public Vector2 ArmorParticleMinMaxLifeTime { get; set; }
-	public Vector4 ArmorParticleSizes { get; set; }
-	public Vector4 ArmorParticleColor0 { get; set; }
-	public Vector4 ArmorParticleColor1 { get; set; }
-	public Vector4 ArmorParticleColor2 { get; set; }
-	public Vector4 ArmorParticleColor3 { get; set; }
+	public Vector2D<float> ArmorParticleMinMaxSpeed { get; set; }
+	public Vector2D<float> ArmorParticleMinMaxLifeTime { get; set; }
+	public Vector4D<float> ArmorParticleSizes { get; set; }
+	public Vector4D<float> ArmorParticleColor0 { get; set; }
+	public Vector4D<float> ArmorParticleColor1 { get; set; }
+	public Vector4D<float> ArmorParticleColor2 { get; set; }
+	public Vector4D<float> ArmorParticleColor3 { get; set; }
 	public int ArmorParticleTextureIndex { get; set; }
 	public float ArmorParticleVelocityStretchRotation { get; set; }
 	public float ArmorParticleDrag { get; set; }

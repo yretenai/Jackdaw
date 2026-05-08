@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2FloatParameter : IRoot, ITriEffectParameter, ITriReroutable, IInitialize {
+public class Tr2FloatParameter : ITriEffectParameter, ITriReroutable, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public float Value { get; set; }
 	public bool UsedByCurrentEffect { get; set; }

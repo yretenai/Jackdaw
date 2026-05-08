@@ -15,5 +15,5 @@ public class AudManager : IRoot {
 	public float Playing2DWeight { get; set; }
 	public bool SpatialAudioEnabled { get; set; }
 	public bool AudioCullingEnabled { get; set; }
-	public IAudActionLog? Log { get; set; }
+	[BlackArray] public IAudActionLog? Log { get; set; }
 }

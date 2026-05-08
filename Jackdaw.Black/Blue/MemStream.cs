@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class MemStream : IRoot, IBlueMemStream, IBlueStream, ICacheable {
+public class MemStream : IBlueMemStream, IBlueStream, ICacheable, IRoot {
 	public long Size { get; set; }
 	public long Pos { get; set; }
 }

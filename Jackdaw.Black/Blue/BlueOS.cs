@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class BlueOS : IRoot, IBlueOS {
+public class BlueOS : IBlueOS, IRoot {
 	public int FrameTimeTimeout { get; set; }
 	public bool IsOnMainTasklet { get; set; }
 	public double SimDilation { get; set; }

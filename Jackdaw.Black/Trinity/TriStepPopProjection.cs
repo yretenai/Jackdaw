@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepPopProjection : TriRenderStep { }
+public class TriStepPopProjection : TriRenderStep, IRoot { }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class EveParticleSpring : Tr2ParticleSpring { }
+public class EveParticleSpring : Tr2ParticleSpring, IRoot { }

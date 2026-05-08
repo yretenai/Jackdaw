@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ParticleSystem : IRoot, IInitialize, INotify, ITr2InstanceData, ITr2GpuBuffer {
+public class Tr2ParticleSystem : IInitialize, INotify, ITr2InstanceData, ITr2GpuBuffer, IRoot {
 	public long GpuStride { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Elements { get; set; }
@@ -11,16 +11,16 @@ public class Tr2ParticleSystem : IRoot, IInitialize, INotify, ITr2InstanceData, 
 	public int AliveCount { get; set; }
 	public List<IRoot?>? Forces { get; set; }
 	public List<IRoot?>? Constraints { get; set; }
-	public ITr2GenericEmitter? EmitParticleDuringLifeEmitter { get; set; }
-	public ITr2GenericEmitter? EmitParticleOnDeathEmitter { get; set; }
+	[BlackArray] public ITr2GenericEmitter? EmitParticleDuringLifeEmitter { get; set; }
+	[BlackArray] public ITr2GenericEmitter? EmitParticleOnDeathEmitter { get; set; }
 	public bool ApplyAging { get; set; }
 	public bool UpdateSimulation { get; set; }
 	public bool ApplyForce { get; set; }
 	public bool RequiresSorting { get; set; }
 	public bool IsGlobal { get; set; }
 	public bool IsValid { get; set; }
-	public Vector3 AabbMin { get; set; }
-	public Vector3 AabbMax { get; set; }
+	public Vector3D<float> AabbMin { get; set; }
+	public Vector3D<float> AabbMax { get; set; }
 	public int PeakAliveCount { get; set; }
 	public bool UseSimTimeRebase { get; set; }
 	public int OriginalMaxParticles { get; set; }

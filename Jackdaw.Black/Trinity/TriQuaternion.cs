@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriQuaternion : IRoot, ITriQuaternion, IPythonMethods {
+public class TriQuaternion : ITriQuaternion, IPythonMethods, IRoot {
 	public float X { get; set; }
 	public float Y { get; set; }
 	public float Z { get; set; }

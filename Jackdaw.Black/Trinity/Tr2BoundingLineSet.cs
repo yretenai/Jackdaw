@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2BoundingLineSet : Tr2LineSet {
-	public Vector3 MinBounds { get; set; }
-	public Vector3 MaxBounds { get; set; }
+public class Tr2BoundingLineSet : Tr2LineSet, IRoot {
+	public Vector3D<float> MinBounds { get; set; }
+	public Vector3D<float> MaxBounds { get; set; }
 }

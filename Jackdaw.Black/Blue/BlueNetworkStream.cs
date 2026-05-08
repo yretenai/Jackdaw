@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class BlueNetworkStream : IRoot, IBlueStream {
+public class BlueNetworkStream : IBlueStream, IRoot {
 	public long Size { get; set; }
 }

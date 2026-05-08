@@ -3,19 +3,20 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildLineSet : IRoot, IEveSpaceObjectChild, IInitialize, INotify, ITr2Renderable {
-	public Vector3 Translation { get; set; }
-	public Vector4 Rotation { get; set; }
+public class EveChildLineSet : IEveSpaceObjectChild, IInitialize, INotify, ITr2Renderable, IRoot {
+	public bool IsUpdating { get; set; }
+	public Vector3D<float> Translation { get; set; }
+	public Vector4D<float> Rotation { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool AlwaysOn { get; set; }
-	public EveCurveLineSet? LineSet { get; set; }
+	[BlackArray] public EveCurveLineSet? LineSet { get; set; }
 	public int RenderType { get; set; }
-	public Vector4 BaseColor { get; set; }
-	public Vector4 AnimColor { get; set; }
+	public Vector4D<float> BaseColor { get; set; }
+	public Vector4D<float> AnimColor { get; set; }
 	public float Brightness { get; set; }
 	public bool AdditiveBatches { get; set; }
-	public Tr2Mesh? Mesh { get; set; }
+	[BlackArray] public Tr2Mesh? Mesh { get; set; }
 	public float ScrollSpeed { get; set; }
 	public float CurrentScreenSize { get; set; }
 	public float MinScreenSize { get; set; }

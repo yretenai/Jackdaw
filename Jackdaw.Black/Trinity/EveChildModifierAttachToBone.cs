@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildModifierAttachToBone : IRoot, IEveChildTransformModifier {
+public class EveChildModifierAttachToBone : IEveChildTransformModifier, IRoot {
 	public int BoneIndex { get; set; }
 }

@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepEnableWireframeMode : TriRenderStep {
+public class TriStepEnableWireframeMode : TriRenderStep, IRoot {
 	public bool EnableWireframe { get; set; }
 }

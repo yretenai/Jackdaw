@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class BlueTestAsyncRes : BlueAsyncRes, IBlueResource, ICacheable {
+public class BlueTestAsyncRes : BlueAsyncRes, IBlueResource, ICacheable, IRoot {
 	public bool Ex { get; set; }
 }

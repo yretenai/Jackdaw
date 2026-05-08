@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class FollowASpline : IRoot, IBehavior, INotify {
+public class FollowASpline : IBehavior, INotify, IRoot {
 	public bool Enabled { get; set; }
 	public List<IRoot?>? SplineTunnels { get; set; }
 	public int TunnelGroupType { get; set; }

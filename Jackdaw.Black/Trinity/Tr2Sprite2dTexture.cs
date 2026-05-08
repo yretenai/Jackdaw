@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dTexture : IRoot, ITr2Sprite2dTexture, IInitialize, INotify {
+public class Tr2Sprite2dTexture : ITr2Sprite2dTexture, IInitialize, INotify, IRoot {
 	public string? ResPath { get; set; }
 	public float SrcX { get; set; }
 	public float SrcY { get; set; }
@@ -12,13 +12,13 @@ public class Tr2Sprite2dTexture : IRoot, ITr2Sprite2dTexture, IInitialize, INoti
 	public bool TileX { get; set; }
 	public bool TileY { get; set; }
 	public int RepeatMode { get; set; }
-	public Tr2AtlasTexture? AtlasTexture { get; set; }
+	[BlackArray] public Tr2AtlasTexture? AtlasTexture { get; set; }
 	[BlackUseNamePool] public string? Name { get; set; }
 	public bool UseTransform { get; set; }
-	public Vector2 Translation { get; set; }
-	public Vector2 RotationCenter { get; set; }
+	public Vector2D<float> Translation { get; set; }
+	public Vector2D<float> RotationCenter { get; set; }
 	public float Rotation { get; set; }
-	public Vector2 ScalingCenter { get; set; }
+	public Vector2D<float> ScalingCenter { get; set; }
 	public float ScalingRotation { get; set; }
-	public Vector2 Scale { get; set; }
+	public Vector2D<float> Scale { get; set; }
 }

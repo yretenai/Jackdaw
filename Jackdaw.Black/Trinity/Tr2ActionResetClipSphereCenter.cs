@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionResetClipSphereCenter : IRoot, ITr2ControllerAction {
+public class Tr2ActionResetClipSphereCenter : ITr2ControllerAction, IRoot {
 	public string? LocatorSetName { get; set; }
 	public int LocatorIndex { get; set; }
 	public int ResetBehavior { get; set; }

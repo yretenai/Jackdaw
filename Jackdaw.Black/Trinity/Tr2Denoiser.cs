@@ -3,10 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Denoiser : IRoot, INotify {
-	public Tr2RenderTarget? NoiseEstimate { get; set; }
-	public Tr2RenderTarget? Intermediate { get; set; }
-	public Tr2RenderTarget? Result { get; set; }
+public class Tr2Denoiser : INotify, IRoot {
 	public int Radius { get; set; }
 	public int StepSize { get; set; }
 	public float DepthWeight { get; set; }

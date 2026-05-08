@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataHullSpriteSetItem : IRoot {
-	public Vector3 Position { get; set; }
+	public Vector3D<float> Position { get; set; }
 	public float BlinkRate { get; set; }
 	public float BlinkPhase { get; set; }
 	public float MinScale { get; set; }
@@ -14,5 +14,5 @@ public class EveSOFDataHullSpriteSetItem : IRoot {
 	public float Saturation { get; set; }
 	public int BoneIndex { get; set; }
 	public int ColorType { get; set; }
-	public EveSOFDataPointLightAttachment? Light { get; set; }
+	[BlackArray] public EveSOFDataPointLightAttachment? Light { get; set; }
 }

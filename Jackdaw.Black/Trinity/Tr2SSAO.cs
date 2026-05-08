@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SSAO : IRoot, INotify {
+public class Tr2SSAO : IRoot {
 	public bool Enabled { get; set; }
 	public int Quality { get; set; }
 	public bool Downsampled { get; set; }
@@ -13,11 +13,11 @@ public class Tr2SSAO : IRoot, INotify {
 	public float ShadowPower { get; set; }
 	public float ShadowClamp { get; set; }
 	public float Sharpness { get; set; }
-	public Tr2RenderTarget? DeinterleavedDepthTarget { get; set; }
-	public Tr2RenderTarget? DeinterleavedNormalTarget { get; set; }
-	public Tr2RenderTarget? SsaoWorkerTargetA { get; set; }
-	public Tr2RenderTarget? SsaoWorkerTargetB { get; set; }
-	public Tr2RenderTarget? ImportanceTargetA { get; set; }
-	public Tr2RenderTarget? ImportanceTargetB { get; set; }
-	public Tr2RenderTarget? OutputTarget { get; set; }
+	public bool CortaoEnabled { get; set; }
+	public bool CortaoBentNormal { get; set; }
+	public float CortaoStrength { get; set; }
+	public float CortaoRadius { get; set; }
+	public float CortaoMaxBlockerSearchRadius { get; set; }
+	public float CortaoMipBias { get; set; }
+	public bool CortaoBlur { get; set; }
 }

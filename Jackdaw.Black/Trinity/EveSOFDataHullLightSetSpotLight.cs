@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class EveSOFDataHullLightSetSpotLight : EveSOFDataHullLightSetItem {
-	public Vector4 Rotation { get; set; }
+public class EveSOFDataHullLightSetSpotLight : EveSOFDataHullLightSetItem, IRoot {
+	public Vector4D<float> Rotation { get; set; }
 	public float InnerAngle { get; set; }
 	public float OuterAngle { get; set; }
 }

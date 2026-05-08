@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildExplosion : EveChildContainer, EveEntity, IEveSpaceObjectChild {
+public class EveChildExplosion : EveChildContainer, EveEntity, IEveSpaceObjectChild, IRoot {
 	public List<IRoot?>? GeneratedLocalExplosions { get; set; }
 	public float LocalExplosionDelay { get; set; }
 	public float LocalExplosionInterval { get; set; }
@@ -14,15 +14,15 @@ public class EveChildExplosion : EveChildContainer, EveEntity, IEveSpaceObjectCh
 	public float LocalDuration { get; set; }
 	public float GlobalDuration { get; set; }
 	public float TotalDuration { get; set; }
-	public IEveSpaceObjectChild? LocalExplosion { get; set; }
+	[BlackArray] public IEveSpaceObjectChild? LocalExplosion { get; set; }
 	public List<IRoot?>? LocalExplosions { get; set; }
-	public IEveSpaceObjectChild? LocalExplosionShared { get; set; }
-	public IEveSpaceObjectChild? GlobalExplosion { get; set; }
+	[BlackArray] public IEveSpaceObjectChild? LocalExplosionShared { get; set; }
+	[BlackArray] public IEveSpaceObjectChild? GlobalExplosion { get; set; }
 	public List<IRoot?>? GlobalExplosions { get; set; }
-	public EveChildContainer? GeneratedGlobalExplosions { get; set; }
+	[BlackArray] public EveChildContainer? GeneratedGlobalExplosions { get; set; }
 	public float PlayTime { get; set; }
 	public float GlobalExplosionTime { get; set; }
-	public Vector3 GlobalScaling { get; set; }
-	public Vector3 LocalScaling { get; set; }
+	public Vector3D<float> GlobalScaling { get; set; }
+	public Vector3D<float> LocalScaling { get; set; }
 	public bool IsPlaying { get; set; }
 }

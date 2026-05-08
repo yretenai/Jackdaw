@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class EveSOFDataSpotLightAttachment : IRoot {
 	public float Saturation { get; set; }
 	public float Intensity { get; set; }
-	public Vector3 Translation { get; set; }
+	public Vector3D<float> Translation { get; set; }
 	public float InnerAngleMultiplier { get; set; }
 	public float OuterAngleMultiplier { get; set; }
 	public float InnerScaleMultiplier { get; set; }

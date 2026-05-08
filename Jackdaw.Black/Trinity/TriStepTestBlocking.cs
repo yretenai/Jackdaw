@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepTestBlocking : TriRenderStep {
+public class TriStepTestBlocking : TriRenderStep, IRoot {
 	public bool InProgress { get; set; }
 }

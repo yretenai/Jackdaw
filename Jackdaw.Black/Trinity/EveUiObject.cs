@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveUiObject : EveSpaceObject2, IEveSpaceObject2 {
+public class EveUiObject : EveSpaceObject2, IEveSpaceObject2, IRoot {
 	public bool UsePerspectiveScale { get; set; }
 }

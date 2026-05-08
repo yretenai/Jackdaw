@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class EveRemotePositionCurve : IRoot, ITriVectorFunction {
-	public ITriVectorFunction? StartPositionCurve { get; set; }
-	public Vector3 Value { get; set; }
-	public Vector3 OffsetDir1 { get; set; }
-	public Vector3 OffsetDir2 { get; set; }
+public class EveRemotePositionCurve : ITriVectorFunction, IRoot {
+	[BlackArray] public ITriVectorFunction? StartPositionCurve { get; set; }
+	public Vector3D<float> Value { get; set; }
+	public Vector3D<float> OffsetDir1 { get; set; }
+	public Vector3D<float> OffsetDir2 { get; set; }
 	public float DelayTime { get; set; }
 	public float SweepTime { get; set; }
 	public bool Cycle { get; set; }

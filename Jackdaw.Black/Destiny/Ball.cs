@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Ball : IRoot, INotify, IBall {
+public class Ball : INotify, IBall, IRoot {
 	public long Id { get; set; }
 	public double X { get; set; }
 	public double Y { get; set; }
@@ -16,7 +16,7 @@ public class Ball : IRoot, INotify, IBall {
 	public long FollowId { get; set; }
 	public long OwnerId { get; set; }
 	public long Harmonic { get; set; }
-	public Ballpark? Ballpark { get; set; }
+	[BlackArray] public Ballpark? Ballpark { get; set; }
 	public int AllianceID { get; set; }
 	public int CorporationID { get; set; }
 	public byte FormationID { get; set; }

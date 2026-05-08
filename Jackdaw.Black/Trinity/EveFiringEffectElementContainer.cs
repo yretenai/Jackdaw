@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class EveFiringEffectElementContainer : IRoot, IEveSpaceObject2 {
+public class EveFiringEffectElementContainer : IEveSpaceObject2, EveEntity, IRoot {
 	public bool Active { get; set; }
-	public IEveFiringEffectElement? Element { get; set; }
-	public Matrix4x4 SourceTransform { get; set; }
-	public Vector3 Source { get; set; }
-	public Vector3 Destination { get; set; }
+	[BlackArray] public IEveFiringEffectElement? Element { get; set; }
+	public Matrix4X4<float> SourceTransform { get; set; }
+	public Vector3D<float> Source { get; set; }
+	public Vector3D<float> Destination { get; set; }
 	public float DestinationScale { get; set; }
 	public bool Display { get; set; }
 	public bool UseSourceTransform { get; set; }

@@ -3,18 +3,18 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SpriteObject : Tr2SpriteObjectBase {
+public class Tr2SpriteObject : Tr2SpriteObjectBase, IRoot {
 	public int BlendMode { get; set; }
 	public int SpriteEffect { get; set; }
 	public int SpriteTarget { get; set; }
 	public float GlowBrightness { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public float Depth { get; set; }
-	public Vector2 ShadowOffset { get; set; }
-	public Vector4 ShadowColor { get; set; }
+	public Vector2D<float> ShadowOffset { get; set; }
+	public Vector4D<float> ShadowColor { get; set; }
 	public float GlowFactor { get; set; }
 	public float GlowExpand { get; set; }
-	public Vector4 GlowColor { get; set; }
-	public Vector4 OutlineColor { get; set; }
+	public Vector4D<float> GlowColor { get; set; }
+	public Vector4D<float> OutlineColor { get; set; }
 	public float OutlineThreshold { get; set; }
 }

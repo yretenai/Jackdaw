@@ -3,15 +3,15 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SpriteObjectBase : IRoot, ITr2SpriteObject, INotify {
+public class Tr2SpriteObjectBase : ITr2SpriteObject, INotify, IRoot {
 	public bool Display { get; set; }
 	public bool IsDirty { get; set; }
-	public ITr2SpriteObject? AuxMouseover { get; set; }
+	[BlackArray] public ITr2SpriteObject? AuxMouseover { get; set; }
 	public float DisplayX { get; set; }
 	public float DisplayY { get; set; }
 	public float DisplayWidth { get; set; }
 	public float DisplayHeight { get; set; }
 	[BlackUseNamePool] public string? Name { get; set; }
 	public int PickState { get; set; }
-	public Tr2Sprite2dPickingMask? PickingMask { get; set; }
+	[BlackArray] public Tr2Sprite2dPickingMask? PickingMask { get; set; }
 }

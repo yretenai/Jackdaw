@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class BlueObjectRecycler : IRoot, IBlueObjectRecycler {
+public class BlueObjectRecycler : IBlueObjectRecycler, IRoot {
 	public float TimeLimit { get; set; }
 }

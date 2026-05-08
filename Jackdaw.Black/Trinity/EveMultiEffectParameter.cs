@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveMultiEffectParameter : IRoot, INotify {
+public class EveMultiEffectParameter : INotify, IRoot {
 	public bool IsValid { get; set; }
 	public string? Name { get; set; }
 	public object? Object { get; set; }

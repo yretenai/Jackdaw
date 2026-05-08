@@ -3,16 +3,16 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ObjectFollowCurveKey : IRoot, ITr2FollowCurveKey, INotify, IInitialize {
+public class Tr2ObjectFollowCurveKey : ITr2FollowCurveKey, INotify, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public float Time { get; set; }
-	public Vector3 LeftTangent { get; set; }
-	public Vector3 RightTangent { get; set; }
-	public Vector3 RotatedLeftTangent { get; set; }
-	public Vector3 RotatedRightTangent { get; set; }
+	public Vector3D<float> LeftTangent { get; set; }
+	public Vector3D<float> RightTangent { get; set; }
+	public Vector3D<float> RotatedLeftTangent { get; set; }
+	public Vector3D<float> RotatedRightTangent { get; set; }
 	public int Interpolation { get; set; }
 	public object? Object { get; set; }
 	public string? OffsetLocatorName { get; set; }
-	public Vector3 Offset { get; set; }
+	public Vector3D<float> Offset { get; set; }
 	public int RotationSetting { get; set; }
 }

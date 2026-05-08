@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2LineGraph : IRoot, ICcpStatisticsAccumulator {
+public class Tr2LineGraph : ICcpStatisticsAccumulator, IRoot {
 	public string? Name { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector4D<float> Color { get; set; }
 }

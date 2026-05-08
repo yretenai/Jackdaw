@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ParticleTurbulenceForce : IRoot, ITr2ParticleForce {
-	public Vector3 Amplitude { get; set; }
-	public Vector4 Frequency { get; set; }
+public class Tr2ParticleTurbulenceForce : ITr2ParticleForce, IRoot {
+	public Vector3D<float> Amplitude { get; set; }
+	public Vector4D<float> Frequency { get; set; }
 	public int NoiseLevel { get; set; }
 	public float NoiseRatio { get; set; }
 }

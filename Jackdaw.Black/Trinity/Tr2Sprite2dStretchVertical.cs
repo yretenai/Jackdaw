@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dStretchVertical : Tr2TexturedSpriteObject {
+public class Tr2Sprite2dStretchVertical : Tr2TexturedSpriteObject, IRoot {
 	public int TopEdgeSize { get; set; }
 	public int BottomEdgeSize { get; set; }
 	public float EdgeScale { get; set; }

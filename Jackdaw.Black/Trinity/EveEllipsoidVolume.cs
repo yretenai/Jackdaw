@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class EveEllipsoidVolume : IRoot, IEveVolume, INotify {
+public class EveEllipsoidVolume : IEveVolume, INotify, IRoot {
 	public string? Name { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector3 Shape { get; set; }
-	public Vector3 InnerShape { get; set; }
-	public Vector4 Rotation { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> Shape { get; set; }
+	public Vector3D<float> InnerShape { get; set; }
+	public Vector4D<float> Rotation { get; set; }
 	public bool DebugShowIntersection { get; set; }
 }

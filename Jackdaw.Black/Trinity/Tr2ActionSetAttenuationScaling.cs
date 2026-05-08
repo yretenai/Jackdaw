@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionSetAttenuationScaling : IRoot, ITr2ControllerAction {
+public class Tr2ActionSetAttenuationScaling : ITr2ControllerAction, IRoot {
 	public float FinalScalingFactor { get; set; }
 	public string? Emitter { get; set; }
 	public string? ControllerVariable { get; set; }

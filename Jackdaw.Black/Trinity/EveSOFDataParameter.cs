@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class EveSOFDataParameter : IRoot {
 	public string? Name { get; set; }
-	public Vector4 Value { get; set; }
+	public Vector4D<float> Value { get; set; }
 }

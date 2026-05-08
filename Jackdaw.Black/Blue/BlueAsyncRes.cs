@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class BlueAsyncRes : IRoot, IBlueResource {
+public class BlueAsyncRes : IBlueResource, IRoot {
 	public bool IsGood { get; set; }
 	public bool IsPrepared { get; set; }
 	public bool IsLoading { get; set; }

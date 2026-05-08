@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepSetView : TriRenderStep {
-	public TriView? View { get; set; }
-	public EveCamera? Camera { get; set; }
+public class TriStepSetView : TriRenderStep, IRoot {
+	[BlackArray] public TriView? View { get; set; }
+	[BlackArray] public EveCamera? Camera { get; set; }
 }

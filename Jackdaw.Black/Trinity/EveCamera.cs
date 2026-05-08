@@ -3,15 +3,15 @@
 
 namespace Jackdaw.Black;
 
-public class EveCamera : IRoot, INotify {
-	public ITriVectorFunction? Parent { get; set; }
-	public ITriVectorFunction? Interest { get; set; }
-	public IBluePlacementObserver? Audio2Listener { get; set; }
+public class EveCamera : INotify, IRoot {
+	[BlackArray] public ITriVectorFunction? Parent { get; set; }
+	[BlackArray] public ITriVectorFunction? Interest { get; set; }
+	[BlackArray] public IBluePlacementObserver? Audio2Listener { get; set; }
 	public float TranslationFromParent { get; set; }
-	public Vector4 RotationAroundParent { get; set; }
-	public Vector4 RotationOfInterest { get; set; }
-	public Vector3 Alignment { get; set; }
-	public Vector3 ExtraTranslation { get; set; }
+	public Vector4D<float> RotationAroundParent { get; set; }
+	public Vector4D<float> RotationOfInterest { get; set; }
+	public Vector3D<float> Alignment { get; set; }
+	public Vector3D<float> ExtraTranslation { get; set; }
 	public bool UseExtraTranslation { get; set; }
 	public float FieldOfView { get; set; }
 	public float FrontClip { get; set; }
@@ -31,17 +31,17 @@ public class EveCamera : IRoot, INotify {
 	public float NoiseScale { get; set; }
 	public float NoiseDamp { get; set; }
 	public float CenterOffset { get; set; }
-	public ITriScalarFunction? ZoomCurve { get; set; }
-	public ITriScalarFunction? NoiseCurve { get; set; }
-	public ITriScalarFunction? NoiseScaleCurve { get; set; }
-	public ITriScalarFunction? NoiseDampCurve { get; set; }
+	[BlackArray] public ITriScalarFunction? ZoomCurve { get; set; }
+	[BlackArray] public ITriScalarFunction? NoiseCurve { get; set; }
+	[BlackArray] public ITriScalarFunction? NoiseScaleCurve { get; set; }
+	[BlackArray] public ITriScalarFunction? NoiseDampCurve { get; set; }
 	public bool Update { get; set; }
-	public Vector3 Pos { get; set; }
-	public Vector3 Intr { get; set; }
-	public Vector3 ViewVec { get; set; }
-	public Vector3 RightVec { get; set; }
-	public Vector3 UpVec { get; set; }
-	public TriProjection? ProjectionMatrix { get; set; }
-	public TriView? ViewMatrix { get; set; }
-	public IBlueEventListener? ErrorHandler { get; set; }
+	public Vector3D<float> Pos { get; set; }
+	public Vector3D<float> Intr { get; set; }
+	public Vector3D<float> ViewVec { get; set; }
+	public Vector3D<float> RightVec { get; set; }
+	public Vector3D<float> UpVec { get; set; }
+	[BlackArray] public TriProjection? ProjectionMatrix { get; set; }
+	[BlackArray] public TriView? ViewMatrix { get; set; }
+	[BlackArray] public IBlueEventListener? ErrorHandler { get; set; }
 }

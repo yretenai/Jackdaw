@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class DroneAvoidance : IRoot, IBehavior {
+public class DroneAvoidance : IBehavior, IRoot {
 	public bool Enabled { get; set; }
 	public int FramesBetweenUpdates { get; set; }
 	public float BehaviorWeight { get; set; }

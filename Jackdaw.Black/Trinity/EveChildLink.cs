@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildLink : EveChildMesh {
-	public Vector3 CurrentDirection { get; set; }
+public class EveChildLink : EveChildMesh, IRoot {
+	public Vector3D<float> CurrentDirection { get; set; }
 	public float CurrentDistance { get; set; }
 	public float LinkStrength { get; set; }
 	public float LinkBarrier { get; set; }
 	public float TargetRadius { get; set; }
-	public ITriVectorFunction? Target { get; set; }
+	[BlackArray] public ITriVectorFunction? Target { get; set; }
 	public List<IRoot?>? LinkStrengthBindings { get; set; }
 	public List<IRoot?>? LinkStrengthCurves { get; set; }
 }

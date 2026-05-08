@@ -15,16 +15,16 @@ public class EveVirtualCamera : IRoot {
 	public List<IRoot?>? RollBehaviours { get; set; }
 	public float Fov { get; set; }
 	public float Roll { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector3 PointOfInterest { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> PointOfInterest { get; set; }
 	public List<IRoot?>? PositionAnchors { get; set; }
 	public List<IRoot?>? PointOfInterestAnchors { get; set; }
 	public float LocalElapsedTime { get; set; }
 	public float AnimationTimelineLength { get; set; }
-	public Vector3 PositionAnchorCenter { get; set; }
-	public Vector3 PointOfInterestAnchorCenter { get; set; }
+	public Vector3D<float> PositionAnchorCenter { get; set; }
+	public Vector3D<float> PointOfInterestAnchorCenter { get; set; }
 	public float PositionAnchorRadius { get; set; }
 	public float PointOfInterestAnchorRadius { get; set; }
-	public Vector3 PositionAnchorForwardDirection { get; set; }
-	public Vector3 PointOfInterestAnchorForwardDirection { get; set; }
+	public Vector3D<float> PositionAnchorForwardDirection { get; set; }
+	public Vector3D<float> PointOfInterestAnchorForwardDirection { get; set; }
 }

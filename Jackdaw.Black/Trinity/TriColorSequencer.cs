@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class TriColorSequencer : IRoot, ITriFunction, ITriColorFunction, ITriCurveLength {
+public class TriColorSequencer : ITriFunction, ITriColorFunction, ITriCurveLength, IRoot {
 	[BlackUseNamePool] public string? Name { get; set; }
 	public long Start { get; set; }
-	public Vector4 Value { get; set; }
+	public Vector4D<float> Value { get; set; }
 	public int Operator { get; set; }
 	public List<IRoot?>? Functions { get; set; }
 }

@@ -3,28 +3,28 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SkinnedObject : IRoot, ITr2Renderable, IWorldPosition, IListNotify {
+public class Tr2SkinnedObject : ITr2Renderable, IWorldPosition, IListNotify, IRoot {
 	public Vector3 Translation { get; set; }
-	public Quaternion Rotation { get; set; }
+	public Quaternion<float> Rotation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public int CurrentLod { get; set; }
-	public ITr2AnimationUpdater? AnimationUpdater { get; set; }
+	[BlackArray] public ITr2AnimationUpdater? AnimationUpdater { get; set; }
 	public object? WorldTransformUpdater { get; set; }
 	public string? Name { get; set; }
 	[BlackArray] public TriMatrix? Transform { get; set; }
-	public Tr2SkinnedModel? VisualModel { get; set; }
+	[BlackArray] public Tr2SkinnedModel? VisualModel { get; set; }
 	public int FrameDelay { get; set; }
 	public int SkinningMatrixCount { get; set; }
 	public int RenderRigBoneCount { get; set; }
 	public bool Display { get; set; }
-	public IBlueObjectProxy? HighDetailModel { get; set; }
-	public IBlueObjectProxy? LowDetailModel { get; set; }
-	public IBlueObjectProxy? MediumDetailModel { get; set; }
+	[BlackArray] public IBlueObjectProxy? HighDetailModel { get; set; }
+	[BlackArray] public IBlueObjectProxy? LowDetailModel { get; set; }
+	[BlackArray] public IBlueObjectProxy? MediumDetailModel { get; set; }
 	public float EstimatedPixelDiameter { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public bool UseDynamicBounds { get; set; }
 	public bool UseExplicitBounds { get; set; }
-	public Vector3 ExplicitMinBounds { get; set; }
-	public Vector3 ExplicitMaxBounds { get; set; }
+	public Vector3D<float> ExplicitMinBounds { get; set; }
+	public Vector3D<float> ExplicitMaxBounds { get; set; }
 	public float UpdatePeriod { get; set; }
 }

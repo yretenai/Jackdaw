@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSOFDataHullExtensionPlacementDistributionMapGraphicSettings : IRoot, IEveSOFDataHullExtensionPlacementDistribution {
+public class EveSOFDataHullExtensionPlacementDistributionMapGraphicSettings : IEveSOFDataHullExtensionPlacementDistribution, IRoot {
 	public string? Name { get; set; }
 	public int DisplayFilter { get; set; }
 }

@@ -3,18 +3,18 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildQuad : IRoot, IEveSpaceObjectChild, IInitialize {
-	public Vector3 Translation { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Matrix4x4 LocalTransform { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
+public class EveChildQuad : IEveSpaceObjectChild, IInitialize, IRoot {
+	public Vector3D<float> Translation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Matrix4X4<float> LocalTransform { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public string? Name { get; set; }
-	public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
 	public float ViewRotation { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public float Brightness { get; set; }
 	public float MinScreenSize { get; set; }
 	public float CurrentScreenSize { get; set; }

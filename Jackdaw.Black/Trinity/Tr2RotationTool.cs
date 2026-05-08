@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RotationTool : Tr2ManipulationTool {
+public class Tr2RotationTool : Tr2ManipulationTool, IRoot {
 	public float Precision { get; set; }
-	public Vector4 Rotation { get; set; }
+	public Vector4D<float> Rotation { get; set; }
 }

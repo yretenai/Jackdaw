@@ -3,22 +3,33 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildFogVolume : EveEntity, ITr2FroxelFogSettings, IEveSpaceObjectChild, IInitialize {
+public class EveChildFogVolume : ITr2FroxelFogSettings, EveEntity, IEveSpaceObjectChild, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Volumes { get; set; }
 	public float Intensity { get; set; }
 	public int Priority { get; set; }
 	public float Thickness { get; set; }
+	public bool ThicknessEnabled { get; set; }
 	public float LightDirectionality { get; set; }
+	public bool LightDirectionalityEnabled { get; set; }
 	public float EnvironmentIntensity { get; set; }
+	public bool EnvironmentIntensityEnabled { get; set; }
 	public float EnvironmentDirectionality { get; set; }
-	public Vector4 FogColor { get; set; }
+	public bool EnvironmentDirectionalityEnabled { get; set; }
+	public Vector4D<float> FogColor { get; set; }
+	public bool FogColorEnabled { get; set; }
 	public float BackgroundVisibility { get; set; }
+	public bool BackgroundVisibilityEnabled { get; set; }
 	public float GodRayNoiseIntensity { get; set; }
+	public bool GodRayNoiseIntensityEnabled { get; set; }
 	public float GodRayNoiseFrequency { get; set; }
+	public bool GodRayNoiseFrequencyEnabled { get; set; }
 	public float GodRayNoiseAnimationSpeed { get; set; }
+	public bool GodRayNoiseAnimationSpeedEnabled { get; set; }
 	public float FogNoiseIntensity { get; set; }
+	public bool FogNoiseIntensityEnabled { get; set; }
 	public float FogNoiseFrequency { get; set; }
-	public Vector3 BoundingSphereCenter { get; set; }
+	public bool FogNoiseFrequencyEnabled { get; set; }
+	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
 }

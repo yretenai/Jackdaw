@@ -3,23 +3,23 @@
 
 namespace Jackdaw.Black;
 
-public class EveSpherePin : IRoot, IInitialize, ITr2Renderable, IEveTransform, IEveSpaceObject2, ITr2Pickable, INotify {
+public class EveSpherePin : IInitialize, ITr2Renderable, IEveTransform, IEveSpaceObject2, ITr2Pickable, INotify, IRoot {
 	public string? Name { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector3 Translation { get; set; }
-	public Vector3 CenterNormal { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector3D<float> Translation { get; set; }
+	public Vector3D<float> CenterNormal { get; set; }
 	public float PinMaxRadius { get; set; }
 	public float PinRadius { get; set; }
 	public float PinRotation { get; set; }
-	public Vector4 PinColor { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector4D<float> PinColor { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public float PinAlphaThreshold { get; set; }
-	public Vector4 UvAtlasScaleOffset { get; set; }
+	public Vector4D<float> UvAtlasScaleOffset { get; set; }
 	public string? PinEffectResPath { get; set; }
-	public Tr2Effect? PinEffect { get; set; }
+	[BlackArray] public Tr2Effect? PinEffect { get; set; }
 	public bool EnablePicking { get; set; }
-	public Tr2Effect? PickEffect { get; set; }
+	[BlackArray] public Tr2Effect? PickEffect { get; set; }
 	public string? GeometryResPath { get; set; }
 	public bool Display { get; set; }
 	public float SortValueMultiplier { get; set; }

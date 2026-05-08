@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriValueBinding : IRoot, ITr2ValueBinding, INotify {
+public class TriValueBinding : ITr2ValueBinding, INotify, IRoot {
 	public bool IsValid { get; set; }
 	public string? Name { get; set; }
 	public object? SourceObject { get; set; }
@@ -13,5 +13,5 @@ public class TriValueBinding : IRoot, ITr2ValueBinding, INotify {
 	public bool IsWeak { get; set; }
 	public bool IsEnabled { get; set; }
 	public float Scale { get; set; }
-	public Vector4 Offset { get; set; }
+	public Vector4D<float> Offset { get; set; }
 }

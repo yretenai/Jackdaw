@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pickable, ITriTargetable, IWorldPosition, ITr2ShLightingReceiver, INotify, ITr2SecondaryLightSource, ITr2ImpostorSource, ITr2CurveSetOwner, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2ControllerOwner, ITr2GrannyAnimationOwner, IEveInheritPropertiesOwner, IEveSpaceObjectDecalOwner, ITr2LightOwner, IEveSpaceObjectAttachmentOwner {
+public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pickable, ITriTargetable, IWorldPosition, ITr2ShLightingReceiver, INotify, ITr2SecondaryLightSource, ITr2ImpostorSource, ITr2CurveSetOwner, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2ControllerOwner, ITr2GrannyAnimationOwner, IEveInheritPropertiesOwner, IEveSpaceObjectDecalOwner, ITr2LightOwner, IEveSpaceObjectAttachmentOwner, IRoot {
 	public float ActivationStrength { get; set; }
 	public string? Name { get; set; }
 	public string? Dna { get; set; }
@@ -13,46 +13,47 @@ public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pic
 	public bool IsPickable { get; set; }
 	public bool IsAnimated { get; set; }
 	public bool CastShadow { get; set; }
-	public Vector3 WorldPosition { get; set; }
-	public Vector4 WorldRotation { get; set; }
+	public Vector3D<float> WorldPosition { get; set; }
+	public Vector4D<float> WorldRotation { get; set; }
 	public float ModelScale { get; set; }
-	public Tr2MeshBase? Mesh { get; set; }
-	public Tr2MeshBase? MeshLod { get; set; }
+	[BlackArray] public Tr2MeshBase? Mesh { get; set; }
+	[BlackArray] public Tr2MeshBase? MeshLod { get; set; }
+	public Vector4D<float> CustomShaderData { get; set; }
 	public int LodLevel { get; set; }
 	public float ClipSphereFactor { get; set; }
 	public float ClipSphereFactor2 { get; set; }
-	public Vector3 ClipSphereCenter { get; set; }
+	public Vector3D<float> ClipSphereCenter { get; set; }
 	public float EstimatedPixelDiameter { get; set; }
 	public float EstimatedPixelDiameterWithChildren { get; set; }
-	public Tr2GrannyAnimation? AnimationUpdater { get; set; }
-	public Vector3 BoundingSphereCenter { get; set; }
+	[BlackArray] public Tr2GrannyAnimation? AnimationUpdater { get; set; }
+	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	public Vector3 ModelWorldPosition { get; set; }
-	public Vector3 ShapeEllipsoidCenter { get; set; }
-	public Vector3 ShapeEllipsoidRadius { get; set; }
-	public Vector3 GeneratedShapeEllipsoidCenter { get; set; }
-	public Vector3 GeneratedShapeEllipsoidRadius { get; set; }
+	public Vector3D<float> ModelWorldPosition { get; set; }
+	public Vector3D<float> ShapeEllipsoidCenter { get; set; }
+	public Vector3D<float> ShapeEllipsoidRadius { get; set; }
+	public Vector3D<float> GeneratedShapeEllipsoidCenter { get; set; }
+	public Vector3D<float> GeneratedShapeEllipsoidRadius { get; set; }
 	public List<IRoot?>? OverlayEffects { get; set; }
 	public List<IRoot?>? Decals { get; set; }
 	public List<IRoot?>? Locators { get; set; }
-	public EveImpactOverlay? ImpactOverlay { get; set; }
+	[BlackArray] public EveImpactOverlay? ImpactOverlay { get; set; }
 	public int LastDamageLocatorHit { get; set; }
 	public List<IRoot?>? Observers { get; set; }
-	public ITriVectorFunction? TranslationCurve { get; set; }
-	public ITriQuaternionFunction? RotationCurve { get; set; }
-	public ITriQuaternionFunction? ModelRotationCurve { get; set; }
-	public ITriVectorFunction? ModelTranslationCurve { get; set; }
+	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
+	[BlackArray] public ITriQuaternionFunction? RotationCurve { get; set; }
+	[BlackArray] public ITriQuaternionFunction? ModelRotationCurve { get; set; }
+	[BlackArray] public ITriVectorFunction? ModelTranslationCurve { get; set; }
 	public List<IRoot?>? LocatorSets { get; set; }
 	public List<IRoot?>? Lights { get; set; }
-	public Vector4 AlbedoColor { get; set; }
+	public Vector4D<float> AlbedoColor { get; set; }
 	public float SecondaryLightingSphereRadius { get; set; }
 	public List<IRoot?>? Attachments { get; set; }
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? EffectChildren { get; set; }
-	public EveChildInheritProperties? InheritProperties { get; set; }
+	[BlackArray] public EveChildInheritProperties? InheritProperties { get; set; }
 	public List<IRoot?>? CustomMasks { get; set; }
 	public float DirtLevel { get; set; }
-	public Tr2BindingVector3? PositionDelta { get; set; }
+	[BlackArray] public Tr2BindingVector3? PositionDelta { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public bool DynamicBoundingSphereEnabled { get; set; }
 	public List<IRoot?>? ExternalParameters { get; set; }

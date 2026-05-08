@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dPolygon : Tr2TexturedSpriteObject {
+public class Tr2Sprite2dPolygon : Tr2TexturedSpriteObject, IRoot {
 	public List<IRoot?>? Vertices { get; set; }
 	public List<IRoot?>? Triangles { get; set; }
 }

@@ -3,14 +3,14 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPVignetteEffect : Tr2PPEffect {
+public class Tr2PPVignetteEffect : Tr2PPEffect, IRoot {
 	public string? ShapePath { get; set; }
 	public string? DetailPath { get; set; }
-	public Vector2 Detail1Size { get; set; }
-	public Vector2 Detail2Size { get; set; }
-	public Vector2 Detail1Scroll { get; set; }
-	public Vector2 Detail2Scroll { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector2D<float> Detail1Size { get; set; }
+	public Vector2D<float> Detail2Size { get; set; }
+	public Vector2D<float> Detail1Scroll { get; set; }
+	public Vector2D<float> Detail2Scroll { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public float Opacity { get; set; }
 	public float Intensity { get; set; }
 	public float SineFrequency { get; set; }

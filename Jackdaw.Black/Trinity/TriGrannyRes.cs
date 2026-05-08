@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriGrannyRes : BlueAsyncRes, IBlueResource, ICacheable {
+public class TriGrannyRes : BlueAsyncRes, IBlueResource, ICacheable, IRoot {
 	public int ModelCount { get; set; }
 	public int MeshCount { get; set; }
 	public int AnimationCount { get; set; }

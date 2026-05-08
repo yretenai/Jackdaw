@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSocketParameterFilePath : IRoot, IEveSocketParameter {
+public class EveSocketParameterFilePath : IEveSocketParameter, IRoot {
 	public string? Name { get; set; }
 	public string? Value { get; set; }
 }

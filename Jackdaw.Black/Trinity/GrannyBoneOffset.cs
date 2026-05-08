@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class GrannyBoneOffset : IRoot, IInitialize { }
+public class GrannyBoneOffset : IInitialize, IRoot { }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TexturePipelineStepGenerateMips : IRoot, ITr2TexturePipelineStep { }
+public class Tr2TexturePipelineStepGenerateMips : ITr2TexturePipelineStep, IRoot { }

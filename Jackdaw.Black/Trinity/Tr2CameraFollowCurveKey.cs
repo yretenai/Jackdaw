@@ -3,19 +3,19 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CameraFollowCurveKey : IRoot, ITr2FollowCurveKey, INotify, IInitialize {
+public class Tr2CameraFollowCurveKey : ITr2FollowCurveKey, INotify, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public float FovMultiplication { get; set; }
 	public float Angle { get; set; }
 	public float AngleZero { get; set; }
-	public Vector3 ObjectBounds { get; set; }
-	public Vector3 Offset { get; set; }
+	public Vector3D<float> ObjectBounds { get; set; }
+	public Vector3D<float> Offset { get; set; }
 	public float Time { get; set; }
-	public Vector3 LeftTangent { get; set; }
-	public Vector3 RightTangent { get; set; }
-	public Vector3 RotatedLeftTangent { get; set; }
-	public Vector3 RotatedRightTangent { get; set; }
+	public Vector3D<float> LeftTangent { get; set; }
+	public Vector3D<float> RightTangent { get; set; }
+	public Vector3D<float> RotatedLeftTangent { get; set; }
+	public Vector3D<float> RotatedRightTangent { get; set; }
 	public int Interpolation { get; set; }
-	public Vector3 BoxPosition { get; set; }
+	public Vector3D<float> BoxPosition { get; set; }
 	public bool Enabled { get; set; }
 }

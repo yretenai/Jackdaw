@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TaskletTimer : IRoot, ITaskletTimer, INotify {
+public class TaskletTimer : ITaskletTimer, INotify, IRoot {
 	public int TimesliceWarning { get; set; }
 	public bool Active { get; set; }
 	public bool TelemetryOn { get; set; }

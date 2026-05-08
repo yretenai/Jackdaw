@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PyValueBinding : IRoot, ITr2ValueBinding, INotify {
+public class Tr2PyValueBinding : ITr2ValueBinding, INotify, IRoot {
 	public string? Name { get; set; }
 	public bool IsValid { get; set; }
 	public string? SourceAttribute { get; set; }

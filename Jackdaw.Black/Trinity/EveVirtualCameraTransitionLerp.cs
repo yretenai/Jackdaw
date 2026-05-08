@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraTransitionLerp : EveVirtualCameraTransitionBase {
+public class EveVirtualCameraTransitionLerp : EveVirtualCameraTransitionBase, IRoot {
 	public float TansitionTime { get; set; }
 }

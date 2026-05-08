@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionSpawnParticles : IRoot, ITr2ControllerAction {
-	public Tr2DynamicEmitter? Emitter { get; set; }
+public class Tr2ActionSpawnParticles : ITr2ControllerAction, IRoot {
+	[BlackArray] public Tr2DynamicEmitter? Emitter { get; set; }
 	public float Rate { get; set; }
 }

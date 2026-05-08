@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dContainer : Tr2Sprite2dContainerBase {
+public class Tr2Sprite2dContainer : Tr2Sprite2dContainerBase, IRoot {
 	public float DepthMin { get; set; }
 	public float DepthMax { get; set; }
 	public bool AbsoluteCoordinates { get; set; }

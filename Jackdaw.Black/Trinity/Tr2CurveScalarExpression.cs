@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveScalarExpression : IRoot, ITriFunction, ITriScalarFunction, IInitialize {
+public class Tr2CurveScalarExpression : ITriFunction, ITriScalarFunction, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public string? Expression { get; set; }
 	public List<IRoot?>? Inputs { get; set; }

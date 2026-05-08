@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dLine : Tr2TexturedSpriteObject {
-	public Vector2 TranslationFrom { get; set; }
-	public Vector2 TranslationTo { get; set; }
+public class Tr2Sprite2dLine : Tr2TexturedSpriteObject, IRoot {
+	public Vector2D<float> TranslationFrom { get; set; }
+	public Vector2D<float> TranslationTo { get; set; }
 	public float WidthFrom { get; set; }
 	public float WidthTo { get; set; }
-	public Vector4 ColorFrom { get; set; }
-	public Vector4 ColorTo { get; set; }
+	public Vector4D<float> ColorFrom { get; set; }
+	public Vector4D<float> ColorTo { get; set; }
 	public float TextureWidth { get; set; }
 	public float TextureOffsetBase { get; set; }
 	public float TextureOffset { get; set; }

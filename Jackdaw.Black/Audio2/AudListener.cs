@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class AudListener : AudGameObjResource { }
+public class AudListener : AudGameObjResource, IRoot { }

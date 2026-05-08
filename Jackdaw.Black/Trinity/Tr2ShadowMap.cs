@@ -3,13 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ShadowMap : IRoot, INotify {
+public class Tr2ShadowMap : INotify, IRoot {
 	public int Size { get; set; }
 	public int SplitCount { get; set; }
-	public Tr2DepthStencil? CascadedShadowMapDS { get; set; }
-	public Tr2RenderTarget? ShadowMapResultRT { get; set; }
-	public Tr2Denoiser? Denoiser { get; set; }
-	public Tr2Effect? CascadeEffect { get; set; }
+	[BlackArray] public Tr2Denoiser? Denoiser { get; set; }
+	[BlackArray] public Tr2Effect? CascadeEffect { get; set; }
 	public float SplitNr0 { get; set; }
 	public float SplitNr1 { get; set; }
 	public float SplitNr2 { get; set; }
@@ -28,4 +26,5 @@ public class Tr2ShadowMap : IRoot, INotify {
 	public float SplitNr15 { get; set; }
 	public bool DebugColorSplit { get; set; }
 	public bool DisableShimmer { get; set; }
+	public int ShadowSplitMode { get; set; }
 }

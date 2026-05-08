@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataHullBoosterItem : IRoot {
-	public Matrix4x4 Transform { get; set; }
-	public Vector4 Functionality { get; set; }
+	public Matrix4X4<float> Transform { get; set; }
+	public Vector4D<float> Functionality { get; set; }
 	public int AtlasIndex0 { get; set; }
 	public int AtlasIndex1 { get; set; }
 	public float LightScale { get; set; }

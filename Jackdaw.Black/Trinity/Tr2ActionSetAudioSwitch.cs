@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionSetAudioSwitch : IRoot, ITr2ControllerAction {
+public class Tr2ActionSetAudioSwitch : ITr2ControllerAction, IRoot {
 	public string? Emitter { get; set; }
 	[BlackUseNamePool] public string? SwitchGroup { get; set; }
 	[BlackUseNamePool] public string? SwitchState { get; set; }

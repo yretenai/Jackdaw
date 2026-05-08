@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RuntimeGpuBuffer : IRoot, ITr2GpuBuffer { }
+public class Tr2RuntimeGpuBuffer : ITr2GpuBuffer, IRoot { }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class AudActionLogCB : IRoot, IAudActionLog { }
+public class AudActionLogCB : IAudActionLog, IRoot { }

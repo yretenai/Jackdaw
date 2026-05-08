@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriEventCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
+public class TriEventCurve : ITriFunction, IInitialize, ITriCurveLength, IRoot {
 	public string? Name { get; set; }
 	public double Time { get; set; }
 	public float LocalTime { get; set; }
@@ -11,5 +11,5 @@ public class TriEventCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
 	public float Length { get; set; }
 	public int Extrapolation { get; set; }
 	public List<IRoot?>? Keys { get; set; }
-	public IBlueEventListener? EventListener { get; set; }
+	[BlackArray] public IBlueEventListener? EventListener { get; set; }
 }

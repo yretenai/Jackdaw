@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class EveEffectRoot2 : EveEntity, IEveSpaceObject2, IInitialize, INotify, ITr2SecondaryLightSource, ITriTargetable, ITr2CurveSetOwner, IEveEffectChildrenOwner, ITr2ControllerOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2LightOwner, IWorldPosition {
+public class EveEffectRoot2 : IEveSpaceObject2, IInitialize, INotify, ITr2SecondaryLightSource, ITriTargetable, ITr2CurveSetOwner, IEveEffectChildrenOwner, ITr2ControllerOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2LightOwner, IWorldPosition, EveEntity, IRoot {
 	public List<IRoot?>? ExternalParameters { get; set; }
-	public ITriQuaternionFunction? ModelRotationCurve { get; set; }
-	public ITriVectorFunction? ModelTranslationCurve { get; set; }
-	public Vector3 BoundingSphereCenter { get; set; }
+	[BlackArray] public ITriQuaternionFunction? ModelRotationCurve { get; set; }
+	[BlackArray] public ITriVectorFunction? ModelTranslationCurve { get; set; }
+	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
 	public float SecondaryLightingSphereRadius { get; set; }
 	public bool DynamicLOD { get; set; }
@@ -19,13 +19,13 @@ public class EveEffectRoot2 : EveEntity, IEveSpaceObject2, IInitialize, INotify,
 	public bool Display { get; set; }
 	public bool Mute { get; set; }
 	public List<IRoot?>? EffectChildren { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector3 Translation { get; set; }
-	public ITriVectorFunction? TranslationCurve { get; set; }
-	public ITriQuaternionFunction? RotationCurve { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector3D<float> Translation { get; set; }
+	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
+	[BlackArray] public ITriQuaternionFunction? RotationCurve { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
-	public Vector4 SecondaryLightingEmissiveColor { get; set; }
+	public Vector4D<float> SecondaryLightingEmissiveColor { get; set; }
 	public List<IRoot?>? Observers { get; set; }
 	public int LodLevel { get; set; }
 }

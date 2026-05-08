@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dArc : Tr2SpriteObject {
-	public ITr2Sprite2dTexture? TexturePrimary { get; set; }
-	public ITr2Sprite2dTexture? TextureSecondary { get; set; }
+public class Tr2Sprite2dArc : Tr2SpriteObject, IRoot {
+	[BlackArray] public ITr2Sprite2dTexture? TexturePrimary { get; set; }
+	[BlackArray] public ITr2Sprite2dTexture? TextureSecondary { get; set; }
 	public float Radius { get; set; }
 	public float StartAngle { get; set; }
 	public float EndAngle { get; set; }
 	public float LineWidth { get; set; }
-	public Vector4 LineColor { get; set; }
+	public Vector4D<float> LineColor { get; set; }
 	public bool Fill { get; set; }
 }

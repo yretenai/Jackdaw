@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class EveProjectBracket : IRoot, ITriFunction {
+public class EveProjectBracket : ITriFunction, IRoot {
 	[BlackUseNamePool] public string? Name { get; set; }
-	public ITriVectorFunction? TrackBall { get; set; }
+	[BlackArray] public ITriVectorFunction? TrackBall { get; set; }
 	public float BallTrackingScaling { get; set; }
-	public IWorldPosition? TrackTransform { get; set; }
-	public Vector3 TrackPosition { get; set; }
+	[BlackArray] public IWorldPosition? TrackTransform { get; set; }
+	public Vector3D<float> TrackPosition { get; set; }
 	public bool Dock { get; set; }
 	public bool IsVisible { get; set; }
 	public bool IsInFront { get; set; }
@@ -22,9 +22,9 @@ public class EveProjectBracket : IRoot, ITriFunction {
 	public float CameraDistance { get; set; }
 	public float OffsetX { get; set; }
 	public float OffsetY { get; set; }
-	public Tr2Sprite2dContainer? Parent { get; set; }
-	public Tr2Sprite2dContainer? Bracket { get; set; }
-	public EveSprite2dBracket? BracketIcon { get; set; }
-	public Vector2 ProjectedPosition { get; set; }
-	public Vector2 RawProjectedPosition { get; set; }
+	[BlackArray] public Tr2Sprite2dContainer? Parent { get; set; }
+	[BlackArray] public Tr2Sprite2dContainer? Bracket { get; set; }
+	[BlackArray] public EveSprite2dBracket? BracketIcon { get; set; }
+	public Vector2D<float> ProjectedPosition { get; set; }
+	public Vector2D<float> RawProjectedPosition { get; set; }
 }

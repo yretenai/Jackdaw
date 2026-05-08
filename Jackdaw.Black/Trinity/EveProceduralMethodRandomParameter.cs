@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class EveProceduralMethodRandomParameter : IRoot, INotify, IInitialize {
+public class EveProceduralMethodRandomParameter : INotify, IInitialize, IRoot {
 	public string? Name { get; set; }
-	public EveChildRef? Child { get; set; }
+	[BlackArray] public EveChildRef? Child { get; set; }
 	public int Weighting { get; set; }
 }

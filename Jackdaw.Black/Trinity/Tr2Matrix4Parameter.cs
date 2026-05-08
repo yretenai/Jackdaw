@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Matrix4Parameter : IRoot, ITriEffectParameter, ITriReroutable {
-	public Matrix4x4 Value { get; set; }
+public class Tr2Matrix4Parameter : ITriEffectParameter, ITriReroutable, IRoot {
+	public Matrix4X4<float> Value { get; set; }
 	public string? Name { get; set; }
 	public bool UsedByCurrentTechnique { get; set; }
 	public bool UsedByCurrentEffect { get; set; }

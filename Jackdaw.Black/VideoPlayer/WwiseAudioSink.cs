@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class WwiseAudioSink : IRoot, IAudioInputSink, IAudioSinkExposed {
+public class WwiseAudioSink : IAudioInputSink, IAudioSinkExposed, IRoot {
 	public float Volume { get; set; }
 }

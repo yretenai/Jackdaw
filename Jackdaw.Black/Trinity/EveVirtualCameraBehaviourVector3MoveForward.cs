@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourVector3MoveForward : EveVirtualCameraBehaviourVector3Base, INotify {
+public class EveVirtualCameraBehaviourVector3MoveForward : EveVirtualCameraBehaviourVector3Base, INotify, IRoot {
 	public float Value { get; set; }
-	public Tr2CurveScalar? ScaleCurve { get; set; }
+	[BlackArray] public Tr2CurveScalar? ScaleCurve { get; set; }
 	public bool Proportional { get; set; }
 }

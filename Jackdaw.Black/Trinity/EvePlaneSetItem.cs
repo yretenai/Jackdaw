@@ -5,14 +5,14 @@ namespace Jackdaw.Black;
 
 public class EvePlaneSetItem : IRoot {
 	public string? Name { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector4 Color { get; set; }
-	public Vector4 Layer1Transform { get; set; }
-	public Vector4 Layer2Transform { get; set; }
-	public Vector4 Layer1Scroll { get; set; }
-	public Vector4 Layer2Scroll { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector4D<float> Color { get; set; }
+	public Vector4D<float> Layer1Transform { get; set; }
+	public Vector4D<float> Layer2Transform { get; set; }
+	public Vector4D<float> Layer1Scroll { get; set; }
+	public Vector4D<float> Layer2Scroll { get; set; }
 	public int BoneIndex { get; set; }
 	public int MaskAtlasID { get; set; }
 }

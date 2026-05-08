@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourFloatSet : EveVirtualCameraBehaviourFloatBase, INotify {
+public class EveVirtualCameraBehaviourFloatSet : EveVirtualCameraBehaviourFloatBase, INotify, IRoot {
 	public float Value { get; set; }
 }

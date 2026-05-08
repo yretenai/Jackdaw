@@ -3,14 +3,14 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Vector3Parameter : IRoot, ITriEffectParameter, ITriReroutable, IInitialize {
+public class Tr2Vector3Parameter : ITriEffectParameter, ITriReroutable, IInitialize, IRoot {
 	public float X { get; set; }
 	public float Y { get; set; }
 	public float Z { get; set; }
 	public float V1 { get; set; }
 	public float V2 { get; set; }
 	public float V3 { get; set; }
-	public Vector3 Value { get; set; }
+	public Vector3D<float> Value { get; set; }
 	public string? Name { get; set; }
 	public bool UsedByCurrentTechnique { get; set; }
 	public bool UsedByCurrentEffect { get; set; }

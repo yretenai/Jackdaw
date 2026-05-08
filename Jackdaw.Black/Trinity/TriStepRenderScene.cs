@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepRenderScene : TriRenderStep {
-	public ITr2Scene? Scene { get; set; }
+public class TriStepRenderScene : TriRenderStep, IRoot {
+	[BlackArray] public ITr2Scene? Scene { get; set; }
 }

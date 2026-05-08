@@ -10,7 +10,7 @@ public class BlueClass {
 	public List<BlueInterface> Interfaces { get; set; } = [];
 	public List<BlueField> Fields { get; set; } = [];
 
-	public override string ToString() => Id;
+	public override string ToString() => ClassId;
 }
 
 [Flags]

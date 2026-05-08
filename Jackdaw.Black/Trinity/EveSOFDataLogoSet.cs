@@ -4,9 +4,9 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataLogoSet : IRoot {
-	public EveSOFDataLogo? Primary { get; set; }
-	public EveSOFDataLogo? Secondary { get; set; }
-	public EveSOFDataLogo? Tertiary { get; set; }
-	public EveSOFDataLogo? Marking_01 { get; set; }
-	public EveSOFDataLogo? Marking_02 { get; set; }
+	[BlackArray] public EveSOFDataLogo? Primary { get; set; }
+	[BlackArray] public EveSOFDataLogo? Secondary { get; set; }
+	[BlackArray] public EveSOFDataLogo? Tertiary { get; set; }
+	[BlackArray] public EveSOFDataLogo? Marking_01 { get; set; }
+	[BlackArray] public EveSOFDataLogo? Marking_02 { get; set; }
 }

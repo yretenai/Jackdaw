@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriTextureRes : BlueAsyncRes, ITriTextureRes, ITr2TextureProvider, IBlueResource, ICacheable {
+public class TriTextureRes : BlueAsyncRes, ITriTextureRes, ITr2TextureProvider, IBlueResource, ICacheable, IRoot {
 	public int MipCount { get; set; }
 	public int MultiSampleType { get; set; }
 	public int MultiSampleQuality { get; set; }
@@ -16,7 +16,7 @@ public class TriTextureRes : BlueAsyncRes, ITriTextureRes, ITr2TextureProvider, 
 	public int Type { get; set; }
 	public int Format { get; set; }
 	public string? Name { get; set; }
-	public Tr2RenderTarget? WrappedRenderTarget { get; set; }
+	[BlackArray] public Tr2RenderTarget? WrappedRenderTarget { get; set; }
 	public float CutoutX { get; set; }
 	public float CutoutY { get; set; }
 	public float CutoutWidth { get; set; }
@@ -25,5 +25,5 @@ public class TriTextureRes : BlueAsyncRes, ITriTextureRes, ITr2TextureProvider, 
 	public int OriginalResolution { get; set; }
 	public int CpuMip { get; set; }
 	public int GpuMip { get; set; }
-	public Vector4 AverageColor { get; set; }
+	public Vector4D<float> AverageColor { get; set; }
 }

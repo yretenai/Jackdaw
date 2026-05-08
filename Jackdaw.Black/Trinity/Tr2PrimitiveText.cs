@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class Tr2PrimitiveText : IRoot {
 	public string? Text { get; set; }
-	public Vector3 Position { get; set; }
+	public Vector3D<float> Position { get; set; }
 	public int Font { get; set; }
 	public bool Display { get; set; }
 }

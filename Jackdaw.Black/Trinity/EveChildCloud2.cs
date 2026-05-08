@@ -3,20 +3,20 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildCloud2 : EveEntity, ITr2VolumetricRenderable, IInitialize, INotify, IEveSpaceObjectChild, ITr2Renderable {
+public class EveChildCloud2 : ITr2VolumetricRenderable, IInitialize, INotify, IListNotify, IEveSpaceObjectChild, ITr2Renderable, ITr2LightOwner, EveEntity, IRoot {
 	public bool LightmapDirty { get; set; }
-	public Tr2Effect? Effect { get; set; }
-	public Tr2Effect? ReflectionEffect { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? ReflectionEffect { get; set; }
 	public int NoiseTextureSize { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector3 Translation { get; set; }
-	public Vector4 Rotation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector3D<float> Translation { get; set; }
+	public Vector4D<float> Rotation { get; set; }
 	public List<IRoot?>? Lights { get; set; }
-	public Tr2TextureReference? Lightmap { get; set; }
-	public Tr2TextureAnimation? Animation { get; set; }
+	[BlackArray] public Tr2TextureReference? Lightmap { get; set; }
+	[BlackArray] public Tr2TextureAnimation? Animation { get; set; }
 	public int ReflectionMode { get; set; }
 	public int MinVisibleQuality { get; set; }
-	public Tr2DepthStencil? ShadowMapDS { get; set; }
+	[BlackArray] public Tr2DepthStencil? ShadowMapDS { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool CastShadows { get; set; }
@@ -24,10 +24,10 @@ public class EveChildCloud2 : EveEntity, ITr2VolumetricRenderable, IInitialize, 
 	public float SortingModifier { get; set; }
 	public float MinScreenSize { get; set; }
 	public float LightmapSizeScale { get; set; }
-	public Vector3 TextureTiling { get; set; }
-	public Vector3 DetailTiling1 { get; set; }
-	public Vector3 DetailTiling2 { get; set; }
-	public Vector3 MapOffset0 { get; set; }
-	public Vector3 MapOffset1 { get; set; }
-	public Vector3 MapOffset2 { get; set; }
+	public Vector3D<float> TextureTiling { get; set; }
+	public Vector3D<float> DetailTiling1 { get; set; }
+	public Vector3D<float> DetailTiling2 { get; set; }
+	public Vector3D<float> MapOffset0 { get; set; }
+	public Vector3D<float> MapOffset1 { get; set; }
+	public Vector3D<float> MapOffset2 { get; set; }
 }

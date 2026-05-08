@@ -5,10 +5,10 @@ namespace Jackdaw.Black;
 
 public class EveHazeSetItem : IRoot {
 	public string? Name { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector4 HazeData { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector4D<float> HazeData { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public int BoneIndex { get; set; }
 }

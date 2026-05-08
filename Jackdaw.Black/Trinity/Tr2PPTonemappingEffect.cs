@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPTonemappingEffect : Tr2PPEffect {
+public class Tr2PPTonemappingEffect : Tr2PPEffect, IRoot {
 	public float ShoulderStrength { get; set; }
 	public float LinearStrength { get; set; }
 	public float LinearAngle { get; set; }
@@ -11,4 +11,13 @@ public class Tr2PPTonemappingEffect : Tr2PPEffect {
 	public float ToeNumerator { get; set; }
 	public float ToeDenominator { get; set; }
 	public float WhiteScale { get; set; }
+	public float Slope { get; set; }
+	public float Toe { get; set; }
+	public float Shoulder { get; set; }
+	public float BlackClip { get; set; }
+	public float WhiteClip { get; set; }
+	public float Scale { get; set; }
+	public float BlueCorrection { get; set; }
+	public bool UseSweeteners { get; set; }
+	public int Method { get; set; }
 }

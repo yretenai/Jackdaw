@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPDesaturateEffect : Tr2PPEffect {
+public class Tr2PPDesaturateEffect : Tr2PPEffect, IRoot {
 	public float Intensity { get; set; }
 }

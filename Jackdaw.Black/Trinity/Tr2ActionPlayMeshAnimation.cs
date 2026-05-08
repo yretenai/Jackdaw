@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionPlayMeshAnimation : IRoot, ITr2ControllerAction, INotify {
+public class Tr2ActionPlayMeshAnimation : ITr2ControllerAction, INotify, IRoot {
 	public bool IsBindingValid { get; set; }
 	public string? Path { get; set; }
 	public object? Destination { get; set; }

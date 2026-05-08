@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class TriView : IRoot {
-	public Matrix4x4 Transform { get; set; }
+	public Matrix4X4<float> Transform { get; set; }
 }

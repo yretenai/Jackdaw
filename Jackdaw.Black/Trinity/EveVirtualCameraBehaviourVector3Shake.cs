@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourVector3Shake : EveVirtualCameraBehaviourVector3Base, INotify {
+public class EveVirtualCameraBehaviourVector3Shake : EveVirtualCameraBehaviourVector3Base, INotify, IRoot {
 	public float PerlineScale { get; set; }
 	public int Octaves { get; set; }
-	public Vector3 Magnitude { get; set; }
-	public Tr2CurveScalar? MagnitudeCurve { get; set; }
+	public Vector3D<float> Magnitude { get; set; }
+	[BlackArray] public Tr2CurveScalar? MagnitudeCurve { get; set; }
 	public bool ScaleByView { get; set; }
 }

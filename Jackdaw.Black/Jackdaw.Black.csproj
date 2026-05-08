@@ -10,4 +10,12 @@
 		<ProjectReference Include="..\Jackdaw.Structs\Jackdaw.Structs.csproj"/>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Trinity\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Silk.NET.Maths" Version="2.23.0" />
+	</ItemGroup>
+
 </Project>

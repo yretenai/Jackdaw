@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildModifierTranslateWithCamera : IRoot, IEveChildTransformModifier {
+public class EveChildModifierTranslateWithCamera : IEveChildTransformModifier, IRoot {
 	public bool AttachedToCamera { get; set; }
 }

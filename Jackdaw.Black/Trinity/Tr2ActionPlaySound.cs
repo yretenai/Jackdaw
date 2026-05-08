@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionPlaySound : IRoot, ITr2ControllerAction {
+public class Tr2ActionPlaySound : ITr2ControllerAction, IRoot {
 	public string? Emitter { get; set; }
 	public string? Event { get; set; }
 	public string? Target { get; set; }

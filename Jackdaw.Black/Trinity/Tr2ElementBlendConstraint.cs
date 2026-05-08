@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ElementBlendConstraint : IRoot, ITr2GenericParticleConstraint {
+public class Tr2ElementBlendConstraint : ITr2GenericParticleConstraint, IRoot {
 	public bool IsValid { get; set; }
 	public int ElementType { get; set; }
 	public string? CustomName { get; set; }
-	public Vector4 Value { get; set; }
+	public Vector4D<float> Value { get; set; }
 	public float OriginalFactor { get; set; }
 }

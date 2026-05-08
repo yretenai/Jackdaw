@@ -3,19 +3,19 @@
 
 namespace Jackdaw.Black;
 
-public class EveLocalPositionCurve : IRoot, ITriVectorFunction {
+public class EveLocalPositionCurve : ITriVectorFunction, IRoot {
 	public int Behavior { get; set; }
-	public IEveSpaceObject2? Parent { get; set; }
-	public EveTurretSet? TurretSetObject { get; set; }
-	public ITriVectorFunction? ParentPositionCurve { get; set; }
-	public ITriQuaternionFunction? ParentRotationCurve { get; set; }
-	public ITriVectorFunction? AlignPositionCurve { get; set; }
+	[BlackArray] public IEveSpaceObject2? Parent { get; set; }
+	[BlackArray] public EveTurretSet? TurretSetObject { get; set; }
+	[BlackArray] public ITriVectorFunction? ParentPositionCurve { get; set; }
+	[BlackArray] public ITriQuaternionFunction? ParentRotationCurve { get; set; }
+	[BlackArray] public ITriVectorFunction? AlignPositionCurve { get; set; }
 	public float Offset { get; set; }
 	public int LocatorIndex { get; set; }
 	public string? LocatorSetName { get; set; }
-	public Vector3 Value { get; set; }
-	public Vector3 BoundingSize { get; set; }
-	public Vector3 PositionOffset { get; set; }
+	public Vector3D<float> Value { get; set; }
+	public Vector3D<float> BoundingSize { get; set; }
+	public Vector3D<float> PositionOffset { get; set; }
 	public int DamageLocatorIndex { get; set; }
 	public float ImpactSize { get; set; }
 	public int MuzzleIndex { get; set; }

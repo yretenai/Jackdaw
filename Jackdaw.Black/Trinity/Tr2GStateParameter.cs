@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GStateParameter : IRoot, IInitialize {
+public class Tr2GStateParameter : IInitialize, IRoot {
 	public float Value { get; set; }
 	public string? Name { get; set; }
 	public string? Nodename { get; set; }

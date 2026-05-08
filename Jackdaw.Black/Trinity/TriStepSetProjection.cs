@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepSetProjection : TriRenderStep {
-	public TriProjection? Projection { get; set; }
+public class TriStepSetProjection : TriRenderStep, IRoot {
+	[BlackArray] public TriProjection? Projection { get; set; }
 }

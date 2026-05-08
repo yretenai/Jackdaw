@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class EveDistanceField : IRoot, IListNotify, INotify {
+public class EveDistanceField : IListNotify, INotify, IRoot {
 	public List<IRoot?>? Objects { get; set; }
-	public TriCurveSet? CurveSet { get; set; }
-	public TriView? CameraView { get; set; }
+	[BlackArray] public TriCurveSet? CurveSet { get; set; }
+	[BlackArray] public TriView? CameraView { get; set; }
 	public float MinDistance { get; set; }
 	public float MaxDistance { get; set; }
 	public float Distance { get; set; }
@@ -15,6 +15,6 @@ public class EveDistanceField : IRoot, IListNotify, INotify {
 	public float DistanceThreshold { get; set; }
 	public float MaxXZRatio { get; set; }
 	public float MinYRatio { get; set; }
-	public Vector3 Midpoint { get; set; }
-	public Vector3 Dimensions { get; set; }
+	public Vector3D<float> Midpoint { get; set; }
+	public Vector3D<float> Dimensions { get; set; }
 }

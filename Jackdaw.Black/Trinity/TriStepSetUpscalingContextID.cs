@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepSetUpscalingContextID : TriRenderStep {
+public class TriStepSetUpscalingContextID : TriRenderStep, IRoot {
 	public int UpscalingContextID { get; set; }
 }

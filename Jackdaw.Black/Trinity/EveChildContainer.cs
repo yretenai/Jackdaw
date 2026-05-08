@@ -3,14 +3,14 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildContainer : EveEntity, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, IListNotify, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2ControllerOwner, IEveInheritPropertiesOwner, IEveSpaceObjectAttachmentOwner, ITr2Renderable {
+public class EveChildContainer : EveEntity, ITr2LightOwner, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, IListNotify, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, ITr2ControllerOwner, IEveInheritPropertiesOwner, IEveSpaceObjectAttachmentOwner, ITr2Renderable, IRoot {
 	public bool IsRendering { get; set; }
 	public bool IsUpdating { get; set; }
-	public Vector3 Translation { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Matrix4x4 LocalTransform { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
+	public Vector3D<float> Translation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Matrix4X4<float> LocalTransform { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public bool UseStaticRotation { get; set; }
@@ -23,12 +23,13 @@ public class EveChildContainer : EveEntity, IEveSpaceObjectChild, ITr2CurveSetOw
 	public List<IRoot?>? Controllers { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool Display { get; set; }
+	public bool UpdateOnDisplay { get; set; }
 	public bool Mute { get; set; }
 	public int DisplayFilter { get; set; }
 	public bool AlwaysOn { get; set; }
-	public EveChildInheritProperties? InheritProperties { get; set; }
+	[BlackArray] public EveChildInheritProperties? InheritProperties { get; set; }
 	public int Origin { get; set; }
 	public List<IRoot?>? FxAttributes { get; set; }
-	public ITr2GrannyAnimationOwner? AnimationOwner { get; set; }
+	[BlackArray] public ITr2GrannyAnimationOwner? AnimationOwner { get; set; }
 	public List<IRoot?>? Attachments { get; set; }
 }

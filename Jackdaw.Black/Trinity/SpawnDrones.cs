@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class SpawnDrones : IRoot, IBehavior {
+public class SpawnDrones : IBehavior, IRoot {
 	public bool Enabled { get; set; }
 	public bool AddByCount { get; set; }
 	public bool AddOnGrid { get; set; }
@@ -12,7 +12,7 @@ public class SpawnDrones : IRoot, IBehavior {
 	public float Time { get; set; }
 	public float GridFullnessFactor { get; set; }
 	public int Count { get; set; }
-	public Vector3 SpawnPosition { get; set; }
-	public Vector4 GridInfo { get; set; }
-	public Vector3 GridSpacing { get; set; }
+	public Vector3D<float> SpawnPosition { get; set; }
+	public Vector4D<float> GridInfo { get; set; }
+	public Vector3D<float> GridSpacing { get; set; }
 }

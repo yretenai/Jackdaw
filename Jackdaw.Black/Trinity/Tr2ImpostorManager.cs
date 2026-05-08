@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ImpostorManager : IRoot, IInitialize, INotify {
+public class Tr2ImpostorManager : IInitialize, INotify, IRoot {
 	public long Count { get; set; }
 	public int Width { get; set; }
 	public int Height { get; set; }
 	public int ItemWidth { get; set; }
 	public int ItemHeight { get; set; }
 	public int MaxUpdates { get; set; }
-	public Tr2RenderTarget? Atlas { get; set; }
-	public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2RenderTarget? Atlas { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
 }

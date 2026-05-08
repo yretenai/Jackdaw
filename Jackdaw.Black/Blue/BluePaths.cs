@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class BluePaths : IRoot, IBluePaths {
+public class BluePaths : IBluePaths, IRoot {
 	[BlackUseNamePool] public string? InitialWorkingDirectory { get; set; }
 	public bool CacheFileExistance { get; set; }
 }

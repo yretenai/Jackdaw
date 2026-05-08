@@ -3,14 +3,14 @@
 
 namespace Jackdaw.Black;
 
-public class EveBoosterSet2Renderable : IRoot, ITr2Renderable {
-	public Vector3 TrailsBoundsMin { get; set; }
-	public Vector3 TrailsBoundsMax { get; set; }
+public class EveBoosterSet2Renderable : ITr2Renderable, IRoot {
+	public Vector3D<float> TrailsBoundsMin { get; set; }
+	public Vector3D<float> TrailsBoundsMax { get; set; }
 	public bool BoosterHighLod { get; set; }
 	public bool BoostersVisible { get; set; }
 	public bool TrailsVisible { get; set; }
 	public float ParentSpeed { get; set; }
-	public Vector4 ParentRotation { get; set; }
+	public Vector4D<float> ParentRotation { get; set; }
 	public float OverallIntensity { get; set; }
 	public float TrailIntensity { get; set; }
 	public float TrailsTotalLength { get; set; }

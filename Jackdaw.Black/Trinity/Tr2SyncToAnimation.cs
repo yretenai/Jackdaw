@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SyncToAnimation : IRoot, ITr2StateMachineStateFinalizer {
+public class Tr2SyncToAnimation : ITr2StateMachineStateFinalizer, IRoot {
 	public string? Mask { get; set; }
 }

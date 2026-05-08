@@ -3,15 +3,15 @@
 
 namespace Jackdaw.Black;
 
-public class EveMissileWarhead : EveTransform {
-	public EveSpriteSet? SpriteSet { get; set; }
+public class EveMissileWarhead : EveTransform, IRoot {
+	[BlackArray] public EveSpriteSet? SpriteSet { get; set; }
 	public float WarheadLength { get; set; }
 	public float WarheadRadius { get; set; }
 	public float ImpactDuration { get; set; }
 	public float ImpactSize { get; set; }
 	public bool StartDataValid { get; set; }
 	public bool DoSpread { get; set; }
-	public Vector3 PathOffset { get; set; }
+	public Vector3D<float> PathOffset { get; set; }
 	public float PathOffsetNoiseScale { get; set; }
 	public float PathOffsetNoiseSpeed { get; set; }
 	public float DurationEjectPhase { get; set; }
@@ -20,5 +20,5 @@ public class EveMissileWarhead : EveTransform {
 	public int TargetLocatorID { get; set; }
 	public int Id { get; set; }
 	public float MaxExplosionDistance { get; set; }
-	public Vector3 ExplosionPosition { get; set; }
+	public Vector3D<float> ExplosionPosition { get; set; }
 }

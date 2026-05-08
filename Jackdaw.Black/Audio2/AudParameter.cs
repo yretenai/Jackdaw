@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class AudParameter : IRoot, INotify {
+public class AudParameter : INotify, IRoot {
 	[BlackUseNamePool] public string? Name { get; set; }
 	public float Value { get; set; }
 }

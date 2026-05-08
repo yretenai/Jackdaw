@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GrannyVector3Curve : IRoot, ITriFunction, ITriCurveLength, ICustomPersist {
-	[BlackArray(4)] public int[]? Curve { get; set; }
+public class Tr2GrannyVector3Curve : ITriFunction, ITriCurveLength, ICustomPersist, IRoot {
+	[BlackArray(1)] public byte[]? Curve { get; set; }
 	public bool Cycle { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector3D<float> CurrentValue { get; set; }
 	public float TimeOffset { get; set; }
 	public float Duration { get; set; }
 }

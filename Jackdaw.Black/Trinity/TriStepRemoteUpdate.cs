@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepRemoteUpdate : TriRenderStep { }
+public class TriStepRemoteUpdate : TriRenderStep, IRoot { }

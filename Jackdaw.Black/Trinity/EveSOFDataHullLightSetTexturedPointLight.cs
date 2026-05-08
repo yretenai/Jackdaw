@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveSOFDataHullLightSetTexturedPointLight : EveSOFDataHullLightSetItem {
+public class EveSOFDataHullLightSetTexturedPointLight : EveSOFDataHullLightSetItem, IRoot {
 	[BlackUseNamePool] public string? TexturePath { get; set; }
 }

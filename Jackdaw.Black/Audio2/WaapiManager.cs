@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2BoneTransformBuffer : IRoot { }
+public class WaapiManager : IRoot { }

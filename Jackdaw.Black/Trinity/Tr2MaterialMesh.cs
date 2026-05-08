@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class Tr2MaterialMesh : IRoot {
-	[BlackExperimental] public Dictionary<IRoot, IRoot?>? Areas { get; set; }
+	[BlackExperimental] public Dictionary<string, IRoot?>? Areas { get; set; }
 }

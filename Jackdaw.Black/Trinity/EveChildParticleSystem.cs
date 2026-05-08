@@ -3,17 +3,17 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildParticleSystem : EveEntity, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify {
-	public Vector3 Translation { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Matrix4x4 LocalTransform { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
+public class EveChildParticleSystem : EveEntity, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify, IRoot {
+	public Vector3D<float> Translation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Matrix4X4<float> LocalTransform { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public List<IRoot?>? ParticleEmitters { get; set; }
 	public string? Name { get; set; }
-	public Tr2InstancedMesh? Mesh { get; set; }
+	[BlackArray] public Tr2InstancedMesh? Mesh { get; set; }
 	public List<IRoot?>? ParticleSystems { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool UseDynamicLod { get; set; }

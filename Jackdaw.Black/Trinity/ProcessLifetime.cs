@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class ProcessLifetime : IRoot, IBehavior, INotify, IInitialize {
+public class ProcessLifetime : IBehavior, INotify, IInitialize, IRoot {
 	public float FirstAgentLifetime { get; set; }
 	public List<IRoot?>? SplineTunnels { get; set; }
 	public float BehaviorWeight { get; set; }

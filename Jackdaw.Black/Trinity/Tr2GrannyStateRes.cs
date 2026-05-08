@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GrannyStateRes : BlueAsyncRes, IBlueResource, ICacheable { }
+public class Tr2GrannyStateRes : BlueAsyncRes, IBlueResource, ICacheable, IRoot { }

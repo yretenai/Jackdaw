@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ParticleVortexForce : IRoot, ITr2ParticleForce {
+public class Tr2ParticleVortexForce : ITr2ParticleForce, IRoot {
 	public float Magnitude { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector3 Axis { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> Axis { get; set; }
 }

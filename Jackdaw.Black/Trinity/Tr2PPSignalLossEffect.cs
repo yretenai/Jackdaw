@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPSignalLossEffect : Tr2PPEffect {
+public class Tr2PPSignalLossEffect : Tr2PPEffect, IRoot {
 	public float Strength { get; set; }
 }

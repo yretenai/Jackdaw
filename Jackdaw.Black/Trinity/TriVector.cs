@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriVector : IRoot, ITriVector, IPythonMethods, IPythonNumeric {
+public class TriVector : ITriVector, IPythonMethods, IPythonNumeric, IRoot {
 	public float X { get; set; }
 	public float Y { get; set; }
 	public float Z { get; set; }

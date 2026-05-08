@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class EveHazeSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
+public class EveHazeSet : IInitialize, IEveSpaceObjectAttachment, ITr2LightOwner, EveEntity, IRoot {
 	public bool Display { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Hazes { get; set; }
-	public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
 }

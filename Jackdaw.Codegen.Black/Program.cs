@@ -62,8 +62,8 @@ internal class Program {
 
 		foreach (var type in types) {
 			var interfaces = type.Interfaces.Select(x => x.Name).ToList();
-			var parent = type.ClassId == "IRoot" ? "" : "IRoot";
-			if (type.Parent.Length > 0) {
+			var parent = type.Id == "IRoot" ? "" : "IRoot";
+			if (!string.IsNullOrEmpty(type.Parent)) {
 				parent = type.Parent.Split('.', StringSplitOptions.TrimEntries)[^1];
 			} else if (interfaces.Contains("EveChildContainer")) {
 				parent = "EveChildContainer";
@@ -79,7 +79,7 @@ internal class Program {
 			buildInterfaces.UnionWith(interfaceList);
 
 			interfaceList.Insert(0, parent);
-			typeLists[type.ClassId] = (interfaceList, type.Fields.Where(x => x.Type is not (BlueTypeId.ScriptCallback or BlueTypeId.PyObjectPtr or BlueTypeId.IRootWeakRef)).Select(x => x.Name).ToList());
+			typeLists[type.Id] = (interfaceList, type.Fields.Where(x => x.Type is not (BlueTypeId.ScriptCallback or BlueTypeId.PyObjectPtr or BlueTypeId.IRootWeakRef)).Select(x => x.Name).ToList());
 		}
 
 		var totalNames = new HashSet<string>();
@@ -87,17 +87,17 @@ internal class Program {
 		totalNames.UnionWith(buildInterfaces);
 
 		foreach (var type in types) {
-			type.Description = type.Description.Trim();
+			type.Description = type.Description?.Trim();
 
 			var group = "class";
-			var name = type.ClassId;
+			var name = type.Id;
 			if (IgnoredTypes.Contains(name)) {
 				continue;
 			}
 
 			var ns = "Blue";
-			if (type.Id.Contains('.', StringComparison.Ordinal)) {
-				var parts = type.Id.Split('.', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+			if (type.ClassId.Contains('.', StringComparison.Ordinal)) {
+				var parts = type.ClassId.Split('.', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
 				if (parts.Length != 2) {
 					Debugger.Break();
 				}
@@ -118,12 +118,12 @@ internal class Program {
 
 			realClasses.Add(name);
 
-			if ((type.Fields.Count == 0 && type.Parent.Length == 0 && name[0] == 'I') || name == "EveEntity") {
+			if ((type.Fields.Count == 0 && string.IsNullOrEmpty(type.Parent) && name[0] == 'I') || name == "EveEntity") {
 				group = "interface";
 			}
 
 			var interfaces = typeLists[name].Interfaces;
-			var interfaceListString = $": {string.Join(", ", interfaces.Distinct())} ";
+			var interfaceListString = $": {string.Join(", ", interfaces.Concat(["IRoot"]).Distinct().Where(x => x != name))} ";
 			Log.Information("Generating {Type} {InterfaceList}", name, interfaceListString);
 
 			using var writer = new StreamWriter(Path.Combine(nsOutput, $"{name}.cs"));
@@ -131,8 +131,8 @@ internal class Program {
 			writer.Write($"public {group} {name} {interfaceListString}{{");
 
 			var inheritedFields = new HashSet<string>();
-			foreach (var @interface in interfaces) {
-				FindAllFields(typeLists, @interface, inheritedFields);
+			foreach (var @interface in interfaces.Distinct().Where(x => x != name)) {
+				FindAllFields(typeLists, @interface, inheritedFields, []);
 			}
 
 			var fields = type.Fields.Where(x => x.Type is not (BlueTypeId.ScriptCallback or BlueTypeId.PyObjectPtr or BlueTypeId.IRootWeakRef) && !inheritedFields.Contains(x.Name)).ToList();
@@ -145,7 +145,7 @@ internal class Program {
 			writer.WriteLine();
 
 			foreach (var field in fields.OrderByDescending(x => x.Offset).DistinctBy(x => x.Name).OrderBy(x => x.Offset)) {
-				field.Description = field.Description.Trim();
+				field.Description = field.Description?.Trim();
 
 				var fieldName = FixName(field.Name);
 
@@ -287,7 +287,7 @@ internal class Program {
 								attribute = "BlackArray";
 								break;
 							default: {
-								if (field.ClassType.Length > 0 && totalNames.Contains(field.ClassType)) {
+								if (!string.IsNullOrEmpty(field.ClassType) && totalNames.Contains(field.ClassType)) {
 									fieldType = field.ClassType + "?";
 									attribute = "BlackArray";
 								}
@@ -318,8 +318,12 @@ internal class Program {
 		}
 	}
 
-	private static void FindAllFields(Dictionary<string, (List<string> Interfaces, List<string> Fields)> typeLists, string name, HashSet<string> inheritedFields) {
+	private static void FindAllFields(Dictionary<string, (List<string> Interfaces, List<string> Fields)> typeLists, string name, HashSet<string> inheritedFields, HashSet<string> seen) {
 		if (name == "IRoot" || !typeLists.TryGetValue(name, out var value)) {
+			return;
+		}
+
+		if(!seen.Add(name)) {
 			return;
 		}
 
@@ -327,7 +331,7 @@ internal class Program {
 		inheritedFields.UnionWith(fields);
 
 		foreach (var @interface in inherited) {
-			FindAllFields(typeLists, @interface, inheritedFields);
+			FindAllFields(typeLists, @interface, inheritedFields, seen);
 		}
 	}
 }

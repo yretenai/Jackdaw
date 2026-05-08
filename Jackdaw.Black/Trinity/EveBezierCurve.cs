@@ -3,15 +3,15 @@
 
 namespace Jackdaw.Black;
 
-public class EveBezierCurve : IRoot, IEveLineSetPath, INotify {
-	public Vector3 Translation { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
+public class EveBezierCurve : IEveLineSetPath, INotify, IRoot {
+	public Vector3D<float> Translation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
 	public string? Name { get; set; }
-	public Vector3 Point1 { get; set; }
-	public Vector3 Point2 { get; set; }
-	public Vector3 BezierPoint { get; set; }
-	public Vector3 ObjectScale { get; set; }
+	public Vector3D<float> Point1 { get; set; }
+	public Vector3D<float> Point2 { get; set; }
+	public Vector3D<float> BezierPoint { get; set; }
+	public Vector3D<float> ObjectScale { get; set; }
 	public float Completeness { get; set; }
 	public float Segments { get; set; }
 	public float LineWidth { get; set; }

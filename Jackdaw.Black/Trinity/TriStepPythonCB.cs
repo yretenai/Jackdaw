@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepPythonCB : TriRenderStep { }
+public class TriStepPythonCB : TriRenderStep, IRoot { }

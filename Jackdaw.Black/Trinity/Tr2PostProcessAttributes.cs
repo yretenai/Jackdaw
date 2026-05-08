@@ -14,6 +14,34 @@ public class Tr2PostProcessAttributes : IRoot {
 	public bool BloomLuminanceThresholdEnabled { get; set; }
 	public float BloomLuminanceScale { get; set; }
 	public bool BloomLuminanceScaleEnabled { get; set; }
+	public float BloomSizeScale { get; set; }
+	public bool BloomSizeScaleEnabled { get; set; }
+	public float BloomDirectionalWeight { get; set; }
+	public bool BloomDirectionalWeightEnabled { get; set; }
+	public float BloomStepSize1 { get; set; }
+	public bool BloomStepSize1Enabled { get; set; }
+	public float BloomStepSize2 { get; set; }
+	public bool BloomStepSize2Enabled { get; set; }
+	public float BloomStepSize3 { get; set; }
+	public bool BloomStepSize3Enabled { get; set; }
+	public float BloomStepSize4 { get; set; }
+	public bool BloomStepSize4Enabled { get; set; }
+	public float BloomStepSize5 { get; set; }
+	public bool BloomStepSize5Enabled { get; set; }
+	public float BloomStepSize6 { get; set; }
+	public bool BloomStepSize6Enabled { get; set; }
+	public Vector4D<float> BloomStepTint1 { get; set; }
+	public bool BloomStepTint1Enabled { get; set; }
+	public Vector4D<float> BloomStepTint2 { get; set; }
+	public bool BloomStepTint2Enabled { get; set; }
+	public Vector4D<float> BloomStepTint3 { get; set; }
+	public bool BloomStepTint3Enabled { get; set; }
+	public Vector4D<float> BloomStepTint4 { get; set; }
+	public bool BloomStepTint4Enabled { get; set; }
+	public Vector4D<float> BloomStepTint5 { get; set; }
+	public bool BloomStepTint5Enabled { get; set; }
+	public Vector4D<float> BloomStepTint6 { get; set; }
+	public bool BloomStepTint6Enabled { get; set; }
 	public float GrimeIntensity { get; set; }
 	public bool GrimeIntensityEnabled { get; set; }
 	public string? GrimePath { get; set; }
@@ -38,7 +66,7 @@ public class Tr2PostProcessAttributes : IRoot {
 	public bool SaturationEnabled { get; set; }
 	public float FadeIntensity { get; set; }
 	public bool FadeIntensityEnabled { get; set; }
-	public Vector4 FadeColor { get; set; }
+	public Vector4D<float> FadeColor { get; set; }
 	public bool FadeColorEnabled { get; set; }
 	public float LutIntensity { get; set; }
 	public bool LutIntensityEnabled { get; set; }
@@ -48,15 +76,15 @@ public class Tr2PostProcessAttributes : IRoot {
 	public bool VignetteIntensityEnabled { get; set; }
 	public float VignetteOpacity { get; set; }
 	public bool VignetteOpacityEnabled { get; set; }
-	public Vector4 VignetteColor { get; set; }
+	public Vector4D<float> VignetteColor { get; set; }
 	public bool VignetteColorEnabled { get; set; }
-	public Vector2 VignetteDetail1Size { get; set; }
+	public Vector2D<float> VignetteDetail1Size { get; set; }
 	public bool VignetteDetail1SizeEnabled { get; set; }
-	public Vector2 VignetteDetail1Scroll { get; set; }
+	public Vector2D<float> VignetteDetail1Scroll { get; set; }
 	public bool VignetteDetail1ScrollEnabled { get; set; }
-	public Vector2 VignetteDetail2Size { get; set; }
+	public Vector2D<float> VignetteDetail2Size { get; set; }
 	public bool VignetteDetail2SizeEnabled { get; set; }
-	public Vector2 VignetteDetail2Scroll { get; set; }
+	public Vector2D<float> VignetteDetail2Scroll { get; set; }
 	public bool VignetteDetail2ScrollEnabled { get; set; }
 	public string? VignetteShapePath { get; set; }
 	public bool VignetteShapePathEnabled { get; set; }
@@ -86,8 +114,8 @@ public class Tr2PostProcessAttributes : IRoot {
 	public bool ColorContrastEnabled { get; set; }
 	public float ColorGamma { get; set; }
 	public bool ColorGammaEnabled { get; set; }
-	public Vector3 ColorGain { get; set; }
+	public Vector3D<float> ColorGain { get; set; }
 	public bool ColorGainEnabled { get; set; }
-	public Vector3 ColorOffset { get; set; }
+	public Vector3D<float> ColorOffset { get; set; }
 	public bool ColorOffsetEnabled { get; set; }
 }

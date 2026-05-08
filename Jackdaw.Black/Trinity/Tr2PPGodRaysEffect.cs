@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPGodRaysEffect : Tr2PPEffect {
-	public Vector4 GodRayColor { get; set; }
+public class Tr2PPGodRaysEffect : Tr2PPEffect, IRoot {
+	public Vector4D<float> GodRayColor { get; set; }
 	public float Intensity { get; set; }
 	public string? NoiseTexturePath { get; set; }
 }

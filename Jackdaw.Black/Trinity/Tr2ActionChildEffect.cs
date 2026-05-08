@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionChildEffect : IRoot, ITr2ControllerAction {
+public class Tr2ActionChildEffect : ITr2ControllerAction, IRoot {
 	public string? Path { get; set; }
 	public string? ChildName { get; set; }
 	public bool AddOnStart { get; set; }

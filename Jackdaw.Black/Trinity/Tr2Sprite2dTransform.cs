@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dTransform : Tr2Sprite2dContainerBase {
-	public Vector2 RotationCenter { get; set; }
+public class Tr2Sprite2dTransform : Tr2Sprite2dContainerBase, IRoot {
+	public Vector2D<float> RotationCenter { get; set; }
 	public float Rotation { get; set; }
-	public Vector2 ScalingCenter { get; set; }
+	public Vector2D<float> ScalingCenter { get; set; }
 	public float ScalingRotation { get; set; }
-	public Vector2 Scale { get; set; }
+	public Vector2D<float> Scale { get; set; }
 }

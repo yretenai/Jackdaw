@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveTurretFiringFX : IRoot, IInitialize, INotify, ITr2ControllerOwner {
+public class EveTurretFiringFX : IInitialize, INotify, IListNotify, ITr2ControllerOwner, EveEntity, IRoot {
 	public float FiringDuration { get; set; }
 	public float FiringPeakTime { get; set; }
 	public float FiringDurationOverride { get; set; }
@@ -14,7 +14,7 @@ public class EveTurretFiringFX : IRoot, IInitialize, INotify, ITr2ControllerOwne
 	public float MaxScale { get; set; }
 	public bool Display { get; set; }
 	public string? Name { get; set; }
-	public Vector3 EndPosition { get; set; }
+	public Vector3D<float> EndPosition { get; set; }
 	public bool UseMuzzleTransform { get; set; }
 	public bool IsFiring { get; set; }
 	public bool IsLoopFiring { get; set; }
@@ -32,8 +32,8 @@ public class EveTurretFiringFX : IRoot, IInitialize, INotify, ITr2ControllerOwne
 	public float FiringDelay11 { get; set; }
 	public float FiringDelay12 { get; set; }
 	public List<IRoot?>? Stretch { get; set; }
-	public TriCurveSet? StartCurveSet { get; set; }
-	public TriCurveSet? StopCurveSet { get; set; }
-	public TriObserverLocal? SourceObserver { get; set; }
-	public TriObserverLocal? DestinationObserver { get; set; }
+	[BlackArray] public TriCurveSet? StartCurveSet { get; set; }
+	[BlackArray] public TriCurveSet? StopCurveSet { get; set; }
+	[BlackArray] public TriObserverLocal? SourceObserver { get; set; }
+	[BlackArray] public TriObserverLocal? DestinationObserver { get; set; }
 }

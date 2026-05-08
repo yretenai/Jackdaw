@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2StateMachineState : IRoot, IListNotify, INotify {
+public class Tr2StateMachineState : IListNotify, INotify, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Actions { get; set; }
 	public List<IRoot?>? Transitions { get; set; }
-	public ITr2StateMachineStateFinalizer? Finalizer { get; set; }
+	[BlackArray] public ITr2StateMachineStateFinalizer? Finalizer { get; set; }
 }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2DynamicBinding : IRoot, INotify {
+public class Tr2DynamicBinding : INotify, IRoot {
 	public bool IsDestinationValid { get; set; }
 	public bool IsSourceValid { get; set; }
 	public string? Name { get; set; }
@@ -13,5 +13,5 @@ public class Tr2DynamicBinding : IRoot, INotify {
 	public string? SourceObjectAttribute { get; set; }
 	public float Scale { get; set; }
 	public int BindingDelay { get; set; }
-	public TriValueBinding? Binding { get; set; }
+	[BlackArray] public TriValueBinding? Binding { get; set; }
 }

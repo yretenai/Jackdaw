@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPLutEffect : Tr2PPEffect {
+public class Tr2PPLutEffect : Tr2PPEffect, IRoot {
 	public float Influence { get; set; }
 	public string? Path { get; set; }
 }

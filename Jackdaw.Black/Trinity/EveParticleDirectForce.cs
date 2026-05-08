@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class EveParticleDirectForce : Tr2ParticleDirectForce { }
+public class EveParticleDirectForce : Tr2ParticleDirectForce, IRoot { }

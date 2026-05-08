@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriRect : IRoot, IPythonMethods {
+public class TriRect : IPythonMethods, IRoot {
 	public int Left { get; set; }
 	public int Top { get; set; }
 	public int Right { get; set; }

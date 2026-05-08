@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Formation : IRoot, IBehavior {
+public class Formation : IBehavior, IRoot {
 	public bool Enabled { get; set; }
 	public bool InFormation { get; set; }
 	public float MaxFormationVelocityScaler { get; set; }

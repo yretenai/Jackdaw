@@ -3,14 +3,14 @@
 
 namespace Jackdaw.Black;
 
-public class EveSpaceObjectDecal : IRoot, INotify, IInitialize, ITr2Renderable, ITr2Pickable {
+public class EveSpaceObjectDecal : INotify, IInitialize, ITr2Renderable, ITr2Pickable, IRoot {
 	public bool HasStaticIndexBuffers { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
-	public Tr2Effect? DecalEffect { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector3 Scaling { get; set; }
+	[BlackArray] public Tr2Effect? DecalEffect { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
 	public int ParentBoneIndex { get; set; }
 	public float MinScreenSize { get; set; }
 	public int BatchType { get; set; }

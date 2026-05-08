@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2AtlasTexture : BlueAsyncRes, IBlueResource, ICacheable {
+public class Tr2AtlasTexture : BlueAsyncRes, IBlueResource, ICacheable, IRoot {
 	public bool IsStandAlone { get; set; }
-	public TriTextureRes? TextureRes { get; set; }
+	[BlackArray] public TriTextureRes? TextureRes { get; set; }
 	public string? Name { get; set; }
 	public string? ResPath { get; set; }
 	public int X { get; set; }
@@ -14,5 +14,5 @@ public class Tr2AtlasTexture : BlueAsyncRes, IBlueResource, ICacheable {
 	public int Height { get; set; }
 	public int AtlasWidth { get; set; }
 	public int AtlasHeight { get; set; }
-	public Tr2TextureAtlas? Atlas { get; set; }
+	[BlackArray] public Tr2TextureAtlas? Atlas { get; set; }
 }

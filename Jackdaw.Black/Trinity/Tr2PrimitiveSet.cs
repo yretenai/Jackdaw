@@ -3,14 +3,14 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PrimitiveSet : IRoot, ITr2Renderable, ITr2Pickable, INotify {
+public class Tr2PrimitiveSet : ITr2Renderable, ITr2Pickable, INotify, IRoot {
 	public float Scale { get; set; }
 	public bool ScaleByDistanceToView { get; set; }
 	public bool ViewOriented { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
-	public Matrix4x4 LocalTransform { get; set; }
-	public Vector4 Color { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
+	public Matrix4X4<float> LocalTransform { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public string? Name { get; set; }
-	public Tr2Effect? Effect { get; set; }
-	public Tr2Effect? PickEffect { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? PickEffect { get; set; }
 }

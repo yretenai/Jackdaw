@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class CollisionAvoidance : IRoot, IBehavior {
+public class CollisionAvoidance : IBehavior, IRoot {
 	public bool Enabled { get; set; }
 	public List<IRoot?>? ExclusionVolumes { get; set; }
 	public float AvoidanceScalar { get; set; }

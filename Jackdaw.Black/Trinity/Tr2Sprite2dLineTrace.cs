@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dLineTrace : Tr2TexturedSpriteObject {
+public class Tr2Sprite2dLineTrace : Tr2TexturedSpriteObject, IRoot {
 	public List<IRoot?>? Vertices { get; set; }
 	public float LineWidth { get; set; }
 	public float TextureWidth { get; set; }

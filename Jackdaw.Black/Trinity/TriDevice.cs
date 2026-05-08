@@ -3,11 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class TriDevice : IRoot, ITriDevice {
+public class TriDevice : ITriDevice, IRoot {
 	public bool DisableGeometryLoad { get; set; }
 	public bool DisableTextureLoad { get; set; }
 	public bool DisableAsyncLoad { get; set; }
-	public ITr2Scene? Scene { get; set; }
+	public int MinimumModelLOD { get; set; }
+	[BlackArray] public ITr2Scene? Scene { get; set; }
 	public int Width { get; set; }
 	public int Height { get; set; }
 	public int SwapEffect { get; set; }

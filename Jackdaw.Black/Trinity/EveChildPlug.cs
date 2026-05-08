@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildPlug : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner {
+public class EveChildPlug : IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, EveEntity, IRoot {
 	public List<IRoot?>? Objects { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Controllers { get; set; }

@@ -4,27 +4,22 @@
 namespace Jackdaw.Black;
 
 public class Tr2VolumetricsRenderer : IRoot {
-	public Tr2TextureReference? VolumeSlices { get; set; }
-	public Tr2RenderTarget? DownsampledDepth { get; set; }
-	public Tr2RenderTarget? BlurScratch { get; set; }
-	public Tr2TextureReference? MieEnvironmentMap { get; set; }
+	[BlackArray] public Tr2TextureReference? MieEnvironmentMap { get; set; }
 	public bool LogBlending { get; set; }
 	public double LogBlendingSmoothness { get; set; }
 	public float Thickness { get; set; }
 	public float LightDirectionality { get; set; }
 	public float EnvironmentIntensity { get; set; }
 	public float EnvironmentDirectionality { get; set; }
-	public Vector4 FogColor { get; set; }
+	public Vector4D<float> FogColor { get; set; }
 	public float BackgroundVisibility { get; set; }
 	public float GodRayNoiseIntensity { get; set; }
 	public float GodRayNoiseFrequency { get; set; }
 	public float GodRayNoiseAnimationSpeed { get; set; }
 	public float FogNoiseIntensity { get; set; }
 	public float FogNoiseFrequency { get; set; }
-	public Vector3 FogNoiseMovementSpeed { get; set; }
-	public float Intensity { get; set; }
+	public Vector3D<float> FogNoiseMovementSpeed { get; set; }
 	public float GameBackClip { get; set; }
-	public Tr2TextureReference? FogFroxels { get; set; }
 	public int Quality { get; set; }
 	public float ScaleFactor { get; set; }
 	public bool Blur { get; set; }

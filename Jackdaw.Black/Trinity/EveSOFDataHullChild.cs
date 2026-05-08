@@ -7,9 +7,9 @@ public class EveSOFDataHullChild : IRoot {
 	public string? Name { get; set; }
 	public string? RedFilePath { get; set; }
 	public int LowestLodVisible { get; set; }
-	public Vector3 Translation { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector3 Scaling { get; set; }
+	public Vector3D<float> Translation { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
 	public int Id { get; set; }
 	public int GroupIndex { get; set; }
 	public int BuildFilter { get; set; }

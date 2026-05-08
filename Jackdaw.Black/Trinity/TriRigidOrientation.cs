@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class TriRigidOrientation : IRoot, ITriFunction, ITriQuaternionFunction {
+public class TriRigidOrientation : ITriFunction, ITriQuaternionFunction, IRoot {
 	[BlackUseNamePool] public string? Name { get; set; }
 	public long Start { get; set; }
 	public float I { get; set; }
 	public float Drag { get; set; }
-	public Vector4 Value { get; set; }
+	public Vector4D<float> Value { get; set; }
 	public List<IRoot?>? States { get; set; }
 }

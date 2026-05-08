@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class BlueResMan : IRoot, IBlueResMan {
+public class BlueResMan : IBlueResMan, IRoot {
 	public bool LoadObjectCacheEnabled { get; set; }
 	[BlackArray] public MotherLode? LoadObjectCache { get; set; }
 	public float LoadObjectTimeSlice { get; set; }

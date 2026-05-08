@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CapsuleShapeAttributeGenerator : IRoot, ITr2AttributeGenerator {
+public class Tr2CapsuleShapeAttributeGenerator : ITr2AttributeGenerator, IRoot {
 	public string? Name { get; set; }
-	public Vector3 PositionStart { get; set; }
-	public Vector3 PositionEnd { get; set; }
-	public Vector4 RotationStart { get; set; }
-	public Vector4 RotationEnd { get; set; }
+	public Vector3D<float> PositionStart { get; set; }
+	public Vector3D<float> PositionEnd { get; set; }
+	public Vector4D<float> RotationStart { get; set; }
+	public Vector4D<float> RotationEnd { get; set; }
 	public float MinPhi { get; set; }
 	public float MaxPhi { get; set; }
 	public float MinTheta { get; set; }

@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RuntimeTextureParameter : IRoot, ITriEffectResourceParameter, INotify {
+public class Tr2RuntimeTextureParameter : ITriEffectResourceParameter, INotify, IRoot {
 	public string? Name { get; set; }
-	public ITr2TextureProvider? Texture { get; set; }
+	[BlackArray] public ITr2TextureProvider? Texture { get; set; }
 	public int UavMipLevel { get; set; }
 }

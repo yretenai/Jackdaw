@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepPushRenderTarget : TriRenderStep {
-	public Tr2RenderTarget? RenderTarget { get; set; }
+public class TriStepPushRenderTarget : TriRenderStep, IRoot {
+	[BlackArray] public Tr2RenderTarget? RenderTarget { get; set; }
 	public int Slot { get; set; }
 }

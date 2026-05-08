@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveProceduralMethodAttributeMapParameter : IRoot, INotify, IInitialize {
+public class EveProceduralMethodAttributeMapParameter : INotify, IInitialize, IRoot {
 	public string? Name { get; set; }
-	public EveChildRef? Child { get; set; }
+	[BlackArray] public EveChildRef? Child { get; set; }
 }

@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepCopyRenderTarget : TriRenderStep {
-	public Tr2RenderTarget? Destination { get; set; }
-	public Tr2RenderTarget? Source { get; set; }
-	public TriTextureRes? DestinationTexture { get; set; }
-	public TriViewport? SourceViewport { get; set; }
-	public TriViewport? DestinationViewport { get; set; }
+public class TriStepCopyRenderTarget : TriRenderStep, IRoot {
+	[BlackArray] public Tr2RenderTarget? Destination { get; set; }
+	[BlackArray] public Tr2RenderTarget? Source { get; set; }
+	[BlackArray] public TriTextureRes? DestinationTexture { get; set; }
+	[BlackArray] public TriViewport? SourceViewport { get; set; }
+	[BlackArray] public TriViewport? DestinationViewport { get; set; }
 }

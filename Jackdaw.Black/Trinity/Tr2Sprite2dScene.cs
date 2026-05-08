@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dScene : IRoot, ITr2Scene, ITr2Updateable, INotify {
+public class Tr2Sprite2dScene : ITr2Scene, ITr2Updateable, INotify, IRoot {
 	public bool UseLinearColorSpace { get; set; }
 	public bool GammaCorrectText { get; set; }
 	[BlackUseNamePool] public string? Name { get; set; }
@@ -11,20 +11,20 @@ public class Tr2Sprite2dScene : IRoot, ITr2Scene, ITr2Updateable, INotify {
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? Background { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
-	public Tr2Effect? Ubershader2d { get; set; }
-	public Tr2Effect? Ubershader3d { get; set; }
+	[BlackArray] public Tr2Effect? Ubershader2d { get; set; }
+	[BlackArray] public Tr2Effect? Ubershader3d { get; set; }
 	public bool DefaultTextureUpdates { get; set; }
-	public Vector3 Translation { get; set; }
+	public Vector3D<float> Translation { get; set; }
 	public float DisplayX { get; set; }
 	public float DisplayY { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector3 Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
 	public float DepthMin { get; set; }
 	public float DepthMax { get; set; }
 	public float DisplayWidth { get; set; }
 	public float DisplayHeight { get; set; }
-	public Vector4 BackgroundColor { get; set; }
-	public Vector2 LastPickPos { get; set; }
+	public Vector4D<float> BackgroundColor { get; set; }
+	public Vector2D<float> LastPickPos { get; set; }
 	public int PickState { get; set; }
 	public bool DrawWireFrame { get; set; }
 	public bool IsFullscreen { get; set; }

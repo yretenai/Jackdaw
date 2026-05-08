@@ -11,6 +11,7 @@ public class EveSOFDataGeneric : IRoot {
 	public string? ShaderPrefixAnimated { get; set; }
 	public string? AreaShaderLocation { get; set; }
 	public string? DecalShaderLocation { get; set; }
+	public int TurretAreaType { get; set; }
 	public float DecalMinScreenSizeSTANDARD { get; set; }
 	public float DecalMinScreenSizeKILLCOUNTER { get; set; }
 	public float DecalMinScreenSizeHOLE { get; set; }
@@ -22,12 +23,13 @@ public class EveSOFDataGeneric : IRoot {
 	public List<IRoot?>? PatternMaterialPrefixes { get; set; }
 	public List<IRoot?>? AreaShaders { get; set; }
 	public List<IRoot?>? DecalShaders { get; set; }
-	public EveSOFDataGenericDamage? Damage { get; set; }
-	public EveSOFDataGenericHullDamage? HullDamage { get; set; }
-	public EveSOFDataGenericSwarm? Swarm { get; set; }
-	public EveSOFDataAreaMaterial? GenericWreckMaterial { get; set; }
+	[BlackArray] public EveSOFDataGenericDamage? Damage { get; set; }
+	[BlackArray] public EveSOFDataGenericHullDamage? HullDamage { get; set; }
+	[BlackArray] public EveSOFDataGenericSwarm? Swarm { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? GenericWreckMaterial { get; set; }
 	[BlackArray] public EveSOFDataGenericShader? BannerShader { get; set; }
 	public List<IRoot?>? Variants { get; set; }
 	public List<IRoot?>? VisibilityGroups { get; set; }
 	public List<IRoot?>? HullCategories { get; set; }
+	public List<IRoot?>? HullCategoriesData { get; set; }
 }

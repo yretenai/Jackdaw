@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class AudioInputMgr : IRoot, IAudioInputMgr { }
+public class AudioInputMgr : IAudioInputMgr, IRoot { }

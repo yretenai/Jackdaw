@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPDynamicExposureEffect : Tr2PPEffect {
+public class Tr2PPDynamicExposureEffect : Tr2PPEffect, IRoot {
 	public float MinBrightness { get; set; }
 	public float MaxBrightness { get; set; }
 	public float IncreaseSpeed { get; set; }

@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class Tr2MatrixKey : IRoot {
 	public float Time { get; set; }
-	public Matrix4x4 Value { get; set; }
+	public Matrix4X4<float> Value { get; set; }
 }

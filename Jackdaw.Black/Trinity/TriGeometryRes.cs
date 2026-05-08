@@ -3,8 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriGeometryRes : BlueAsyncRes, IBlueResource, ICacheable, ITr2InstanceData {
-	public int ModelCount { get; set; }
+public class TriGeometryRes : BlueAsyncRes, IBlueResource, ICacheable, ITr2InstanceData, IRoot {
 	public int MeshCount { get; set; }
 	public int AnimationCount { get; set; }
 	public string? Name { get; set; }

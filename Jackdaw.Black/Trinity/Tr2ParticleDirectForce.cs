@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ParticleDirectForce : IRoot, ITr2ParticleForce {
-	public Vector3 Force { get; set; }
+public class Tr2ParticleDirectForce : ITr2ParticleForce, IRoot {
+	public Vector3D<float> Force { get; set; }
 }

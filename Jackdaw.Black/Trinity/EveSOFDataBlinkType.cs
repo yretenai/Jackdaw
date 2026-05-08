@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataBlinkType : IRoot {
-	public EveSOFDataBlink? Blink { get; set; }
-	public EveSOFDataBlink? FadeIn { get; set; }
-	public EveSOFDataBlink? FadeOut { get; set; }
-	public EveSOFDataBlink? Cycle { get; set; }
+	[BlackArray] public EveSOFDataBlink? Blink { get; set; }
+	[BlackArray] public EveSOFDataBlink? FadeIn { get; set; }
+	[BlackArray] public EveSOFDataBlink? FadeOut { get; set; }
+	[BlackArray] public EveSOFDataBlink? Cycle { get; set; }
 }

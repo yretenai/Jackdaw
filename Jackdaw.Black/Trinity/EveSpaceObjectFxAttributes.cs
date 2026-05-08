@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSpaceObjectFxAttributes : IRoot, IEveFxAttribute {
+public class EveSpaceObjectFxAttributes : IEveFxAttribute, IRoot {
 	public string? Name { get; set; }
 	public float ActivationStrength { get; set; }
 	public float Ship { get; set; }
@@ -11,8 +11,8 @@ public class EveSpaceObjectFxAttributes : IRoot, IEveFxAttribute {
 	public float ChildParent { get; set; }
 	public float KillCount { get; set; }
 	public float ActiveTurretCount { get; set; }
-	public Vector3 GeneratedShapeEllipsoidCenter { get; set; }
-	public Vector3 GeneratedShapeEllipsoidRadius { get; set; }
-	public Vector3 ParentWorldTranslation { get; set; }
-	public Vector4 ParentWorldRotation { get; set; }
+	public Vector3D<float> GeneratedShapeEllipsoidCenter { get; set; }
+	public Vector3D<float> GeneratedShapeEllipsoidRadius { get; set; }
+	public Vector3D<float> ParentWorldTranslation { get; set; }
+	public Vector4D<float> ParentWorldRotation { get; set; }
 }

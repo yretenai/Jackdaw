@@ -3,52 +3,43 @@
 
 namespace Jackdaw.Black;
 
-public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateable, IInitialize, INotify, ITr2NamedPredicate {
-	public IRoot? CameraAttachments { get; set; }
-	public Tr2QuadRenderer? QuadRenderer { get; set; }
-	public Tr2GpuParticleSystem? GpuParticleSystem { get; set; }
+public class EveSpaceScene : ITr2Scene, ITr2Updateable, IInitialize, INotify, IRoot {
+	[BlackArray] public IRoot? CameraAttachments { get; set; }
+	[BlackArray] public Tr2QuadRenderer? QuadRenderer { get; set; }
+	[BlackArray] public Tr2GpuParticleSystem? GpuParticleSystem { get; set; }
 	public bool ShadowsInReflections { get; set; }
-	public Tr2DepthStencil? ShadowMapAtlas { get; set; }
-	public ITr2TextureProvider? RaytracedDynamicShadowAtlas { get; set; }
 	public bool Display { get; set; }
 	public bool Update { get; set; }
-	public bool DisplayShadowMap { get; set; }
 	public bool BackgroundRenderingEnabled { get; set; }
 	public float PlanetScale { get; set; }
 	public float PlanetCameraScale { get; set; }
-	public Tr2ShadowMap? CascadedShadowMap { get; set; }
+	[BlackArray] public Tr2ShadowMap? CascadedShadowMap { get; set; }
 	public List<IRoot?>? BackgroundObjects { get; set; }
 	public List<IRoot?>? Planets { get; set; }
 	public List<IRoot?>? Objects { get; set; }
 	public List<IRoot?>? UiObjects { get; set; }
-	public IEveSpaceObject2? WarpTunnel { get; set; }
+	[BlackArray] public IEveSpaceObject2? WarpTunnel { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public List<IRoot?>? Lensflares { get; set; }
 	public List<IRoot?>? DistanceFields { get; set; }
-	public Tr2Effect? BackgroundEffect { get; set; }
-	public Vector4 EnvMapRotation { get; set; }
+	[BlackArray] public Tr2Effect? BackgroundEffect { get; set; }
+	public Vector4D<float> EnvMapRotation { get; set; }
 	public string? EnvMapResPath { get; set; }
 	public string? EnvMap1ResPath { get; set; }
-	public ITr2TextureProvider? EnvMap1 { get; set; }
+	[BlackArray] public ITr2TextureProvider? EnvMap1 { get; set; }
 	public string? EnvMap2ResPath { get; set; }
-	public ITr2TextureProvider? EnvMap2 { get; set; }
+	[BlackArray] public ITr2TextureProvider? EnvMap2 { get; set; }
 	public string? EnvMap3ResPath { get; set; }
-	public ITr2TextureProvider? EnvMap3 { get; set; }
+	[BlackArray] public ITr2TextureProvider? EnvMap3 { get; set; }
 	public string? LowQualityNebulaResPath { get; set; }
 	public string? LowQualityNebulaMixResPath { get; set; }
-	public Tr2RenderTarget? ColorTexture { get; set; }
-	public Tr2RenderTarget? OpaqueColorTexture { get; set; }
-	public Tr2DepthStencil? DepthTexture { get; set; }
-	public Tr2RenderTarget? NormalTexture { get; set; }
-	public Tr2SSAO? SSAO { get; set; }
-	public Tr2RenderTarget? DistortionTexture { get; set; }
-	public Tr2RenderTarget? VelocityMap { get; set; }
-	public Vector3 SunDirection { get; set; }
-	public Vector4 SunDiffuseColor { get; set; }
-	public Vector4 SunDiffuseColorWithDynamicLights { get; set; }
+	[BlackArray] public Tr2SSSSS? SubSurfaceScattering { get; set; }
+	public Vector3D<float> SunDirection { get; set; }
+	public Vector4D<float> SunDiffuseColor { get; set; }
+	public Vector4D<float> SunDiffuseColorWithDynamicLights { get; set; }
 	public bool UseSunDiffuseColorWithDynamicLights { get; set; }
-	public Vector4 AmbientColor { get; set; }
-	public Vector4 FogColor { get; set; }
+	public Vector4D<float> AmbientColor { get; set; }
+	public Vector4D<float> FogColor { get; set; }
 	public float NebulaIntensity { get; set; }
 	public float BackgroundReflectionIntensity { get; set; }
 	public float DefaultDiffuseRoughness { get; set; }
@@ -58,27 +49,26 @@ public class EveSpaceScene : IRoot, ITr2Scene, ITr2MultiPassScene, ITr2Updateabl
 	public int VisualizeMethod { get; set; }
 	public float PerFrameDebug { get; set; }
 	public List<IRoot?>? StaticParticles { get; set; }
-	public Tr2DataTextureManager? DataTextureMgr { get; set; }
-	public ITriVectorFunction? SunBall { get; set; }
-	public IEveBallpark? Ballpark { get; set; }
+	[BlackArray] public Tr2DataTextureManager? DataTextureMgr { get; set; }
+	[BlackArray] public ITriVectorFunction? SunBall { get; set; }
+	[BlackArray] public IEveBallpark? Ballpark { get; set; }
 	public List<IRoot?>? ExternalParameters { get; set; }
-	public Tr2DebugRenderer? DebugRenderer { get; set; }
+	[BlackArray] public Tr2DebugRenderer? DebugRenderer { get; set; }
 	public long UpdateTime { get; set; }
-	public EveStarfield? Starfield { get; set; }
-	public Tr2ShLightingManager? ShLightingManager { get; set; }
-	public Tr2ImpostorManager? ImpostorManager { get; set; }
-	public Tr2PostProcess2? Postprocess { get; set; }
-	public Tr2PostProcessAttributes? CombinedPostProcessAttributes { get; set; }
-	public Tr2ReflectionProbe? ReflectionProbe { get; set; }
-	public EveVirtualCameraSystem? VirtualCameraSystem { get; set; }
+	[BlackArray] public EveStarfield? Starfield { get; set; }
+	[BlackArray] public Tr2ShLightingManager? ShLightingManager { get; set; }
+	[BlackArray] public Tr2ImpostorManager? ImpostorManager { get; set; }
+	[BlackArray] public Tr2PostProcess2? Postprocess { get; set; }
+	[BlackArray] public Tr2PostProcessAttributes? CombinedPostProcessAttributes { get; set; }
+	[BlackArray] public Tr2ReflectionProbe? ReflectionProbe { get; set; }
+	[BlackArray] public EveVirtualCameraSystem? VirtualCameraSystem { get; set; }
 	public float ReflectionIntensity { get; set; }
 	public float ReflectionBackLightingContrast { get; set; }
-	public Vector4 ReflectionBackLightingColor { get; set; }
+	public Vector4D<float> ReflectionBackLightingColor { get; set; }
 	public string? Name { get; set; }
-	public EveComponentRegistry? ComponentRegistry { get; set; }
-	public Tr2VolumetricsRenderer? VolumetricsRenderer { get; set; }
+	[BlackArray] public EveComponentRegistry? ComponentRegistry { get; set; }
+	[BlackArray] public Tr2VolumetricsRenderer? VolumetricsRenderer { get; set; }
 	public bool DynamicObjectReflectionEnabled { get; set; }
-	public bool FreezeFrustum { get; set; }
 	public int ShadowQualitySetting { get; set; }
-	public Tr2RaytracingManager? RaytracingManager { get; set; }
+	[BlackArray] public Tr2RaytracingManager? RaytracingManager { get; set; }
 }

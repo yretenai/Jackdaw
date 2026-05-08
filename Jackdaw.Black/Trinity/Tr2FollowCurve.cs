@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2FollowCurve : IRoot, ITriVectorFunction, ITriFunction {
+public class Tr2FollowCurve : ITriVectorFunction, ITriFunction, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Keys { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector3D<float> CurrentValue { get; set; }
 }

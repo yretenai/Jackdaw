@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class BlueObjectBuilderPython : IRoot, IBlueObjectBuilder { }
+public class BlueObjectBuilderPython : IBlueObjectBuilder, IRoot { }

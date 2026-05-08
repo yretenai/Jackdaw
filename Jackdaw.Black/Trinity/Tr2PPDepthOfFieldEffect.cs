@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPDepthOfFieldEffect : Tr2PPEffect {
+public class Tr2PPDepthOfFieldEffect : Tr2PPEffect, IRoot {
 	public float FocalDistance { get; set; }
 	public float FocalLength { get; set; }
 	public float Scale { get; set; }

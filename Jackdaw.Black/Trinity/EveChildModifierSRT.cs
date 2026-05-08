@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildModifierSRT : IRoot, IEveChildTransformModifier {
-	public Vector3 Scaling { get; set; }
-	public Vector3 Translation { get; set; }
-	public Vector4 Rotation { get; set; }
+public class EveChildModifierSRT : IEveChildTransformModifier, IRoot {
+	public Vector3D<float> Scaling { get; set; }
+	public Vector3D<float> Translation { get; set; }
+	public Vector4D<float> Rotation { get; set; }
 }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2d : Tr2TexturedSpriteObject, INotify {
+public class Tr2Sprite2d : Tr2TexturedSpriteObject, INotify, IRoot {
 	public float PickRadius { get; set; }
 	public bool UseSizeFromTexture { get; set; }
 	public float Saturation { get; set; }

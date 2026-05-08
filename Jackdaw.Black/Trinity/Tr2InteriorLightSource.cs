@@ -3,17 +3,17 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2InteriorLightSource : IRoot, IInitialize, INotify, ITr2InteriorLight {
-	public Vector3 Position { get; set; }
-	public Vector3 ConeDirection { get; set; }
+public class Tr2InteriorLightSource : IInitialize, INotify, ITr2InteriorLight, IRoot {
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> ConeDirection { get; set; }
 	public float ConeAlphaOuter { get; set; }
 	public float ConeAlphaInner { get; set; }
 	public float Radius { get; set; }
 	public string? Name { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public float Falloff { get; set; }
 	public float SpecularIntensity { get; set; }
-	public Tr2KelvinColor? KelvinColor { get; set; }
+	[BlackArray] public Tr2KelvinColor? KelvinColor { get; set; }
 	public bool UseKelvinColor { get; set; }
 	public bool PrimaryLighting { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }

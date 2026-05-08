@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionAnimateValue : IRoot, ITr2ControllerAction, ITr2Updateable, INotify {
+public class Tr2ActionAnimateValue : ITr2ControllerAction, ITr2Updateable, INotify, IRoot {
 	public bool IsBindingValid { get; set; }
 	public bool IsExpressionValid { get; set; }
 	public string? Path { get; set; }
 	public object? Destination { get; set; }
 	public string? Attribute { get; set; }
 	public string? Value { get; set; }
-	public ITriScalarFunction? Curve { get; set; }
+	[BlackArray] public ITriScalarFunction? Curve { get; set; }
 	public bool DelayBinding { get; set; }
 }

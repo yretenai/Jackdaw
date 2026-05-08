@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class EveStation2 : EveSpaceObject2, IEveSpaceObject2, ITr2Renderable { }
+public class EveStation2 : EveSpaceObject2, IEveSpaceObject2, ITr2Renderable, IRoot { }

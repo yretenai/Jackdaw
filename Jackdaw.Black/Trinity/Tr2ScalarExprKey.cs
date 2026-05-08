@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ScalarExprKey : IRoot, IInitialize, INotify {
+public class Tr2ScalarExprKey : IInitialize, INotify, IRoot {
 	public float Time { get; set; }
 	public float Value { get; set; }
 	public int Interpolation { get; set; }

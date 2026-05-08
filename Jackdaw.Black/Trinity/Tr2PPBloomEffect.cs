@@ -3,11 +3,26 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPBloomEffect : Tr2PPEffect {
+public class Tr2PPBloomEffect : Tr2PPEffect, IRoot {
 	public float LuminanceThreshold { get; set; }
 	public float LuminanceScale { get; set; }
 	public float Brightness { get; set; }
 	public bool ExposureDependency { get; set; }
+	public float SizeScale { get; set; }
+	public int Steps { get; set; }
+	public float Step1Size { get; set; }
+	public float Step2Size { get; set; }
+	public float Step3Size { get; set; }
+	public float Step4Size { get; set; }
+	public float Step5Size { get; set; }
+	public float Step6Size { get; set; }
+	public Vector4D<float> Step1Tint { get; set; }
+	public Vector4D<float> Step2Tint { get; set; }
+	public Vector4D<float> Step3Tint { get; set; }
+	public Vector4D<float> Step4Tint { get; set; }
+	public Vector4D<float> Step5Tint { get; set; }
+	public Vector4D<float> Step6Tint { get; set; }
+	public float DirectionalWeight { get; set; }
 	public float GrimeWeight { get; set; }
 	public string? GrimePath { get; set; }
 }

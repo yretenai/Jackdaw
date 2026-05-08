@@ -3,21 +3,21 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildInstanceContainer : EveEntity, IEveSpaceObjectChild, ITr2CurveSetOwner, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2ControllerOwner, IListNotify {
-	public Vector3 Translation { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Matrix4x4 LocalTransform { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
+public class EveChildInstanceContainer : IEveSpaceObjectChild, ITr2CurveSetOwner, INotify, IEveEffectChildrenOwner, IShaderConfigurer, ITr2ControllerOwner, IListNotify, EveEntity, IRoot {
+	public Vector3D<float> Translation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Matrix4X4<float> LocalTransform { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public bool UseStaticRotation { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool AlwaysOn { get; set; }
-	public EveChildInheritProperties? InheritProperties { get; set; }
+	[BlackArray] public EveChildInheritProperties? InheritProperties { get; set; }
 	public int Origin { get; set; }
-	public IEveSpaceObjectChild? Source { get; set; }
+	[BlackArray] public IEveSpaceObjectChild? Source { get; set; }
 	public List<IRoot?>? Instances { get; set; }
 	public bool Reset { get; set; }
 	public string? LocatorSet { get; set; }

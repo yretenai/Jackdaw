@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class BlueFileStream : IRoot, IBlueStream { }
+public class BlueFileStream : IBlueStream, IRoot { }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RaytracingGeometry : IRoot, ITr2GpuBuffer { }
+public class Tr2RaytracingGeometry : ITr2GpuBuffer, IRoot { }

@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Vector2Parameter : IRoot, ITriEffectParameter, ITriReroutable, IInitialize {
+public class Tr2Vector2Parameter : ITriEffectParameter, ITriReroutable, IInitialize, IRoot {
 	public float X { get; set; }
 	public float Y { get; set; }
 	public float V1 { get; set; }
 	public float V2 { get; set; }
-	public Vector2 Value { get; set; }
+	public Vector2D<float> Value { get; set; }
 	public string? Name { get; set; }
 	public bool UsedByCurrentTechnique { get; set; }
 	public bool UsedByCurrentEffect { get; set; }

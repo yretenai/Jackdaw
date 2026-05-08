@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionSetShaderOption : IRoot, ITr2ControllerAction {
+public class Tr2ActionSetShaderOption : ITr2ControllerAction, IRoot {
 	public string? Key { get; set; }
 	public string? Value { get; set; }
 }

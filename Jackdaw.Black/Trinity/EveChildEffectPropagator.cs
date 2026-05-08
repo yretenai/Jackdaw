@@ -3,16 +3,16 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildEffectPropagator : EveChildContainer, IEveSpaceObjectChild, INotify, EveEntity {
+public class EveChildEffectPropagator : EveChildContainer, IEveSpaceObjectChild, INotify, EveEntity, IRoot {
 	public float PlayTime { get; set; }
-	public EveChildInstanceContainer? Effect { get; set; }
-	public Vector3 EffectScaling { get; set; }
+	[BlackArray] public EveChildInstanceContainer? Effect { get; set; }
+	public Vector3D<float> EffectScaling { get; set; }
 	public float RandScaleMin { get; set; }
 	public float RandScaleMax { get; set; }
-	public Vector3 TriggerSphereOffset { get; set; }
-	public Tr2CurveScalar? TriggerSphereRadiusCurve { get; set; }
+	public Vector3D<float> TriggerSphereOffset { get; set; }
+	[BlackArray] public Tr2CurveScalar? TriggerSphereRadiusCurve { get; set; }
 	public float TriggerSphereScalarMulti { get; set; }
-	public EveLocatorSets? LocalLocators { get; set; }
+	[BlackArray] public EveLocatorSets? LocalLocators { get; set; }
 	public int PropagationType { get; set; }
 	public int TriggerMethood { get; set; }
 	public bool SkipCleanup { get; set; }

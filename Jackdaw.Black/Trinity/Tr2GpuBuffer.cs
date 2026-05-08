@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GpuBuffer : IRoot, INotify, IInitialize, ITr2GpuBuffer {
+public class Tr2GpuBuffer : INotify, IInitialize, ITr2GpuBuffer, IRoot {
 	public bool IsValid { get; set; }
 	public int Count { get; set; }
 	public int Format { get; set; }

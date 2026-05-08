@@ -3,18 +3,18 @@
 
 namespace Jackdaw.Black;
 
-public class EveBoosterSet2 : IRoot, INotify, IInitialize {
+public class EveBoosterSet2 : INotify, IInitialize, ITr2LightOwner, EveEntity, IRoot {
 	public List<IRoot?>? Instances { get; set; }
 	public bool Display { get; set; }
 	public bool AlwaysOn { get; set; }
 	public float AlwaysOnIntensity { get; set; }
-	public Vector3 BoosterBoundingSphereCenter { get; set; }
+	public Vector3D<float> BoosterBoundingSphereCenter { get; set; }
 	public float BoosterBoundingSphereRadius { get; set; }
-	public Tr2Effect? Effect { get; set; }
-	public Tr2Effect? EffectFar { get; set; }
-	public EveSpriteSet? Glows { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? EffectFar { get; set; }
+	[BlackArray] public EveSpriteSet? Glows { get; set; }
 	public bool FlareLodEnabled { get; set; }
-	public EveTrailsSet? Trails { get; set; }
+	[BlackArray] public EveTrailsSet? Trails { get; set; }
 	public float MaxVel { get; set; }
 	public float WarpIntensity { get; set; }
 	public float MaxSize { get; set; }
@@ -22,24 +22,24 @@ public class EveBoosterSet2 : IRoot, INotify, IInitialize {
 	public float SymHaloScale { get; set; }
 	public float HaloScaleX { get; set; }
 	public float HaloScaleY { get; set; }
-	public Vector4 GlowColor { get; set; }
-	public Vector4 HaloColor { get; set; }
-	public Vector4 WarpGlowColor { get; set; }
-	public Vector4 WarpHaloColor { get; set; }
+	public Vector4D<float> GlowColor { get; set; }
+	public Vector4D<float> HaloColor { get; set; }
+	public Vector4D<float> WarpGlowColor { get; set; }
+	public Vector4D<float> WarpHaloColor { get; set; }
 	public float TrailsSmoothing { get; set; }
 	public bool PhysicsUpdate { get; set; }
 	public bool DestinyUpdate { get; set; }
-	public Vector3 TrailsStaticOffsets0 { get; set; }
-	public Vector3 TrailsStaticOffsets1 { get; set; }
-	public Vector3 TrailsStaticOffsets2 { get; set; }
-	public Vector3 TrailsStaticOffsets3 { get; set; }
-	public Vector3 TrailsStaticOffsets4 { get; set; }
+	public Vector3D<float> TrailsStaticOffsets0 { get; set; }
+	public Vector3D<float> TrailsStaticOffsets1 { get; set; }
+	public Vector3D<float> TrailsStaticOffsets2 { get; set; }
+	public Vector3D<float> TrailsStaticOffsets3 { get; set; }
+	public Vector3D<float> TrailsStaticOffsets4 { get; set; }
 	public float StaticTrailLength { get; set; }
 	public float LightOffset { get; set; }
 	public float LightRadius { get; set; }
 	public float LightWarpRadius { get; set; }
 	public float LightFlickerAmplitude { get; set; }
 	public float LightFlickerFrequency { get; set; }
-	public Vector4 LightColor { get; set; }
-	public Vector4 LightWarpColor { get; set; }
+	public Vector4D<float> LightColor { get; set; }
+	public Vector4D<float> LightWarpColor { get; set; }
 }

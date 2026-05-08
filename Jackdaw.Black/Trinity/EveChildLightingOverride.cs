@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildLightingOverride : EveEntity, IEveSpaceObjectChild, IEveLightingOverride, IInitialize, ITr2DebugRenderable {
+public class EveChildLightingOverride : EveEntity, IEveSpaceObjectChild, IEveLightingOverride, IInitialize, ITr2DebugRenderable, IRoot {
 	public string? Name { get; set; }
 	public int Priority { get; set; }
-	public Vector4 SunColor { get; set; }
+	public Vector4D<float> SunColor { get; set; }
 	public float SunIntensity { get; set; }
 	public float BackgroundIntensity { get; set; }
 	public float ReflectionIntensity { get; set; }

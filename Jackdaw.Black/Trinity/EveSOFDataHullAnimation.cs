@@ -5,12 +5,12 @@ namespace Jackdaw.Black;
 
 public class EveSOFDataHullAnimation : IRoot {
 	public string? Name { get; set; }
-	public Vector4 StartRotationValue { get; set; }
-	public Vector4 EndRotationValue { get; set; }
+	public Vector4D<float> StartRotationValue { get; set; }
+	public Vector4D<float> EndRotationValue { get; set; }
 	public float StartRotationTime { get; set; }
 	public float EndRotationTime { get; set; }
-	public Vector3 StartTranslationValue { get; set; }
-	public Vector3 EndTranslationValue { get; set; }
+	public Vector3D<float> StartTranslationValue { get; set; }
+	public Vector3D<float> EndTranslationValue { get; set; }
 	public float StartTranslationTime { get; set; }
 	public float EndTranslationTime { get; set; }
 	public int Id { get; set; }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2LightProfileRes : BlueAsyncRes, IBlueResource, ICacheable { }
+public class Tr2LightProfileRes : BlueAsyncRes, IBlueResource, ICacheable, IRoot { }

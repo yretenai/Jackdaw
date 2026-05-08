@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2LineSet : Tr2PrimitiveSet, IInitialize, ITr2Renderable, ITr2Pickable { }
+public class Tr2LineSet : Tr2PrimitiveSet, IInitialize, ITr2Renderable, ITr2Pickable, IRoot { }

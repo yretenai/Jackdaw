@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TexturePipelineStepCompress : IRoot, ITr2TexturePipelineStep {
+public class Tr2TexturePipelineStepCompress : ITr2TexturePipelineStep, IRoot {
 	public int Format { get; set; }
 	public float R { get; set; }
 	public float G { get; set; }

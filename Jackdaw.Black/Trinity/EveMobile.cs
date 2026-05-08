@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveMobile : EveSpaceObject2, IEveSpaceObject2, ITr2Renderable, IListNotify {
+public class EveMobile : EveSpaceObject2, IEveSpaceObject2, ITr2Renderable, IListNotify, IRoot {
 	public int ActiveTurretCount { get; set; }
 	public List<IRoot?>? TurretSets { get; set; }
 }

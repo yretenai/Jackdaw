@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TexturePipelineStepLoad : IRoot, ITr2TexturePipelineStep {
+public class Tr2TexturePipelineStepLoad : ITr2TexturePipelineStep, IRoot {
 	[BlackUseNamePool] public string? Path { get; set; }
 }

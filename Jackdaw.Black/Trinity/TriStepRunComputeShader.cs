@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepRunComputeShader : TriRenderStep {
-	public Tr2Material? Effect { get; set; }
+public class TriStepRunComputeShader : TriRenderStep, IRoot {
+	[BlackArray] public Tr2Material? Effect { get; set; }
 	public int GroupDimX { get; set; }
 	public int GroupDimY { get; set; }
 	public int GroupDimZ { get; set; }
-	public ITr2GpuBuffer? IndirectionBuffer { get; set; }
+	[BlackArray] public ITr2GpuBuffer? IndirectionBuffer { get; set; }
 	public int OffsetForArgs { get; set; }
 }

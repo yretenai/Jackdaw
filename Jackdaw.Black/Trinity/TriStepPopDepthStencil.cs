@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepPopDepthStencil : TriRenderStep { }
+public class TriStepPopDepthStencil : TriRenderStep, IRoot { }

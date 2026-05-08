@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class EveProceduralMethodThresholdParameter : IRoot, INotify, IInitialize {
+public class EveProceduralMethodThresholdParameter : INotify, IInitialize, IRoot {
 	public string? Name { get; set; }
-	public EveChildRef? Child { get; set; }
+	[BlackArray] public EveChildRef? Child { get; set; }
 	public float Threshold { get; set; }
 }

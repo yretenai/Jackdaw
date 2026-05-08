@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class SplineTunnelGroup : IRoot, INotify {
+public class SplineTunnelGroup : INotify, IRoot {
 	public int TunnelGroupType { get; set; }
 	public int BreakPoints { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }

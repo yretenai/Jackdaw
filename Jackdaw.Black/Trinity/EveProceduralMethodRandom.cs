@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveProceduralMethodRandom : IRoot, IEveProceduralSelectionMethod, INotify, IListNotify, IInitialize {
+public class EveProceduralMethodRandom : IEveProceduralSelectionMethod, INotify, IListNotify, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public string? SeedName { get; set; }
 	public float Seed_temp { get; set; }

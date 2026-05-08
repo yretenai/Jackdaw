@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepRenderTexture : TriRenderStep {
-	public ITr2TextureProvider? Texture { get; set; }
-	public ITr2TextureProvider? RenderTarget { get; set; }
-	public ITr2TextureProvider? DepthStencil { get; set; }
-	public Vector2 TlTexCoord { get; set; }
-	public Vector2 BrTexCoord { get; set; }
-	public Vector2 TextureSize { get; set; }
+public class TriStepRenderTexture : TriRenderStep, IRoot {
+	[BlackArray] public ITr2TextureProvider? Texture { get; set; }
+	[BlackArray] public ITr2TextureProvider? RenderTarget { get; set; }
+	[BlackArray] public ITr2TextureProvider? DepthStencil { get; set; }
+	public Vector2D<float> TlTexCoord { get; set; }
+	public Vector2D<float> BrTexCoord { get; set; }
+	public Vector2D<float> TextureSize { get; set; }
 	public int FailClearColor { get; set; }
 }

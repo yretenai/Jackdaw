@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveVector2 : IRoot, ITriFunction, ITriCurveLength {
+public class Tr2CurveVector2 : ITriFunction, ITriCurveLength, IRoot {
 	public string? Name { get; set; }
 	[BlackArray] public Tr2CurveScalar? X { get; set; }
 	[BlackArray] public Tr2CurveScalar? Y { get; set; }
-	public Vector2 CurrentValue { get; set; }
+	public Vector2D<float> CurrentValue { get; set; }
 }

@@ -3,16 +3,16 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2BoneMatrixCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
+public class Tr2BoneMatrixCurve : ITriFunction, IInitialize, ITriCurveLength, IRoot {
 	public string? Bone { get; set; }
 	public bool Reversed { get; set; }
 	public bool Cycle { get; set; }
 	public float Length { get; set; }
 	public string? Name { get; set; }
-	public Matrix4x4 StartValue { get; set; }
-	public Matrix4x4 CurrentValue { get; set; }
-	public Matrix4x4 EndValue { get; set; }
+	public Matrix4X4<float> StartValue { get; set; }
+	public Matrix4X4<float> CurrentValue { get; set; }
+	public Matrix4X4<float> EndValue { get; set; }
 	public List<IRoot?>? Keys { get; set; }
-	public Tr2SkinnedObject? SkinnedObject { get; set; }
-	public Matrix4x4 Transform { get; set; }
+	[BlackArray] public Tr2SkinnedObject? SkinnedObject { get; set; }
+	public Matrix4X4<float> Transform { get; set; }
 }

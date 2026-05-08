@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveProceduralMethodAttributeMap : IRoot, IEveProceduralSelectionMethod, INotify {
+public class EveProceduralMethodAttributeMap : IEveProceduralSelectionMethod, INotify, IRoot {
 	public string? ThresholdAttribute { get; set; }
 	public string? Seed_temp { get; set; }
 	public int SelectedChild { get; set; }

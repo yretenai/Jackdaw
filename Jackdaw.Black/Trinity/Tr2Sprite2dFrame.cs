@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dFrame : Tr2TexturedSpriteObject {
+public class Tr2Sprite2dFrame : Tr2TexturedSpriteObject, IRoot {
 	public int CornerSize { get; set; }
 	public float CornerScale { get; set; }
 	public int Offset { get; set; }

@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourVector3Inertia : EveVirtualCameraBehaviourVector3Base, INotify {
+public class EveVirtualCameraBehaviourVector3Inertia : EveVirtualCameraBehaviourVector3Base, INotify, IRoot {
 	public float InertiaFactor { get; set; }
 }

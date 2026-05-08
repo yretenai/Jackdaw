@@ -5,13 +5,13 @@ namespace Jackdaw.Black;
 
 public class EveSpriteSetItem : IRoot {
 	public string? Name { get; set; }
-	public Vector3 Position { get; set; }
+	public Vector3D<float> Position { get; set; }
 	public float BlinkRate { get; set; }
 	public float BlinkPhase { get; set; }
 	public float MinScale { get; set; }
 	public float MaxScale { get; set; }
 	public float Falloff { get; set; }
-	public Vector4 Color { get; set; }
-	public Vector4 WarpColor { get; set; }
+	public Vector4D<float> Color { get; set; }
+	public Vector4D<float> WarpColor { get; set; }
 	public int BoneIndex { get; set; }
 }

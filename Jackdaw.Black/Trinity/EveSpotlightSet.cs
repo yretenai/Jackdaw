@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class EveSpotlightSet : IRoot, IInitialize, IEveSpaceObjectAttachment {
+public class EveSpotlightSet : IInitialize, IEveSpaceObjectAttachment, ITr2LightOwner, EveEntity, IRoot {
 	public bool Display { get; set; }
 	public bool Skinned { get; set; }
 	public string? Name { get; set; }
 	public float Intensity { get; set; }
 	public List<IRoot?>? SpotlightItems { get; set; }
-	public Tr2Effect? ConeEffect { get; set; }
-	public Tr2Effect? GlowEffect { get; set; }
+	[BlackArray] public Tr2Effect? ConeEffect { get; set; }
+	[BlackArray] public Tr2Effect? GlowEffect { get; set; }
 }

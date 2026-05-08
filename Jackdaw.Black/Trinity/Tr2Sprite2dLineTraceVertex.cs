@@ -5,6 +5,6 @@ namespace Jackdaw.Black;
 
 public class Tr2Sprite2dLineTraceVertex : IRoot {
 	public string? Name { get; set; }
-	public Vector2 Position { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector2D<float> Position { get; set; }
+	public Vector4D<float> Color { get; set; }
 }

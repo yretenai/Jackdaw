@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Ballpark : IRoot, IEveBallpark {
+public class Ballpark : IEveBallpark, IRoot {
 	public long Time { get; set; }
 	public int TickInterval { get; set; }
 	public int CurrentTime { get; set; }

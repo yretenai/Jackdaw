@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepRenderFps : TriRenderStep {
+public class TriStepRenderFps : TriRenderStep, IRoot {
 	public int DisplayX { get; set; }
 	public int DisplayY { get; set; }
 	public bool AlignRight { get; set; }

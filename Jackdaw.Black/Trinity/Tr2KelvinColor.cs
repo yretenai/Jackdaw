@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2KelvinColor : IRoot, IInitialize {
+public class Tr2KelvinColor : IInitialize, IRoot {
 	public float Temperature { get; set; }
 	public float Tint { get; set; }
 	public int WhiteBalance { get; set; }

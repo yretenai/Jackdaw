@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RuntimeInstanceData : IRoot, ITr2InstanceData, ITr2GenericEmitter, ITr2GpuBuffer {
+public class Tr2RuntimeInstanceData : ITr2InstanceData, ITr2GenericEmitter, ITr2GpuBuffer, IRoot {
 	public int Count { get; set; }
 	public string? Name { get; set; }
-	public Vector3 AabbMin { get; set; }
-	public Vector3 AabbMax { get; set; }
-	public Tr2ParticleSystem? ParticleSystem { get; set; }
+	public Vector3D<float> AabbMin { get; set; }
+	public Vector3D<float> AabbMax { get; set; }
+	[BlackArray] public Tr2ParticleSystem? ParticleSystem { get; set; }
 }

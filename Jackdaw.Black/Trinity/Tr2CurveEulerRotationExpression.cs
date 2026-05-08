@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveEulerRotationExpression : IRoot, ITriQuaternionFunction, ITriFunction, IInitialize {
+public class Tr2CurveEulerRotationExpression : ITriQuaternionFunction, ITriFunction, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public string? ExpressionYaw { get; set; }
 	public string? ExpressionPitch { get; set; }
 	public string? ExpressionRoll { get; set; }
 	public List<IRoot?>? Inputs { get; set; }
-	public Vector4 CurrentValue { get; set; }
+	public Vector4D<float> CurrentValue { get; set; }
 	public float Input1 { get; set; }
 	public float Input2 { get; set; }
 	public float Input3 { get; set; }

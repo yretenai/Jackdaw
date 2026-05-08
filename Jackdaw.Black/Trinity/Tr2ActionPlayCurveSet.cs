@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionPlayCurveSet : IRoot, ITr2ControllerAction {
+public class Tr2ActionPlayCurveSet : ITr2ControllerAction, IRoot {
 	public string? CurveSetName { get; set; }
 	public string? RangeName { get; set; }
 	public bool SyncToRange { get; set; }

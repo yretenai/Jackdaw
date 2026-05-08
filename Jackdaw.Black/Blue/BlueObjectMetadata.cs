@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class BlueObjectMetadata : IRoot, IBlueObjectMetadata { }
+public class BlueObjectMetadata : IBlueObjectMetadata, IRoot { }

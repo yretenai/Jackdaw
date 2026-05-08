@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ControllerReference : IRoot, IInitialize, INotify, ITr2Controller {
-	public ITr2Controller? Controller { get; set; }
+public class Tr2ControllerReference : IInitialize, INotify, ITr2Controller, IRoot {
+	[BlackArray] public ITr2Controller? Controller { get; set; }
 	public string? Path { get; set; }
 }

@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class Capsule : IRoot {
 	public long Id { get; set; }
-	public Ballpark? Park { get; set; }
+	[BlackArray] public Ballpark? Park { get; set; }
 	public bool IsMoribund { get; set; }
 	public double Ax { get; set; }
 	public double Ay { get; set; }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TexturePipelineStepLimitSize : IRoot, ITr2TexturePipelineStep {
+public class Tr2TexturePipelineStepLimitSize : ITr2TexturePipelineStep, IRoot {
 	public int MaxWidth { get; set; }
 	public int MaxHeight { get; set; }
 }

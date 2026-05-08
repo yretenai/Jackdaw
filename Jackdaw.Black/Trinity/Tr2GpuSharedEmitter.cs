@@ -3,15 +3,15 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GpuSharedEmitter : IRoot, IInitialize, INotify, ITr2GenericEmitter {
+public class Tr2GpuSharedEmitter : IInitialize, INotify, ITr2GenericEmitter, IRoot {
 	public string? Name { get; set; }
 	public float Rate { get; set; }
 	public float InheritVelocity { get; set; }
 	public float EmissionDensity { get; set; }
 	public float MaxEmissionDensity { get; set; }
 	public float MaxDisplacement { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector3 Direction { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> Direction { get; set; }
 	public float Radius { get; set; }
 	public float Angle { get; set; }
 	public float MinSpeed { get; set; }
@@ -21,11 +21,11 @@ public class Tr2GpuSharedEmitter : IRoot, IInitialize, INotify, ITr2GenericEmitt
 	public float MaxLifeTime { get; set; }
 	public int TextureIndex { get; set; }
 	public float ColorMidpoint { get; set; }
-	public Vector4 Color0 { get; set; }
-	public Vector4 Color1 { get; set; }
-	public Vector4 Color2 { get; set; }
-	public Vector4 Color3 { get; set; }
-	public Vector3 Sizes { get; set; }
+	public Vector4D<float> Color0 { get; set; }
+	public Vector4D<float> Color1 { get; set; }
+	public Vector4D<float> Color2 { get; set; }
+	public Vector4D<float> Color3 { get; set; }
+	public Vector3D<float> Sizes { get; set; }
 	public float SizeVariance { get; set; }
 	public float Drag { get; set; }
 	public float TurbulenceAmplitude { get; set; }

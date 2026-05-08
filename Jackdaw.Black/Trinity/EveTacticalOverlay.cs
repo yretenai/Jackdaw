@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class EveTacticalOverlay : IRoot, IEveSpaceObject2, IInitialize {
-	public Tr2Effect? ConnectorEffect { get; set; }
-	public Tr2Effect? AnchorEffect { get; set; }
-	public Tr2Effect? VelocityEffect { get; set; }
+public class EveTacticalOverlay : IEveSpaceObject2, IInitialize, IRoot {
+	[BlackArray] public Tr2Effect? ConnectorEffect { get; set; }
+	[BlackArray] public Tr2Effect? AnchorEffect { get; set; }
+	[BlackArray] public Tr2Effect? VelocityEffect { get; set; }
 	public float SegmentsLow { get; set; }
 	public float SegmentsMedium { get; set; }
 	public float SegmentsHigh { get; set; }
@@ -23,7 +23,7 @@ public class EveTacticalOverlay : IRoot, IEveSpaceObject2, IInitialize {
 	public float RangeMultiplier { get; set; }
 	public float SourceRadius { get; set; }
 	public List<IRoot?>? TrackObjects { get; set; }
-	public EveTacticalOverlayTrackObject? InterestObject { get; set; }
-	public ITriVectorFunction? TranslationCurve { get; set; }
-	public Vector3 WorldPosition { get; set; }
+	[BlackArray] public EveTacticalOverlayTrackObject? InterestObject { get; set; }
+	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
+	public Vector3D<float> WorldPosition { get; set; }
 }

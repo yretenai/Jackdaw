@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GpuUniqueEmitter : Tr2GpuSharedEmitter {
+public class Tr2GpuUniqueEmitter : Tr2GpuSharedEmitter, IRoot {
 	public float AttractorStrength { get; set; }
-	public Vector3 AttractorPosition { get; set; }
+	public Vector3D<float> AttractorPosition { get; set; }
 	public bool ScaledByParent { get; set; }
 }

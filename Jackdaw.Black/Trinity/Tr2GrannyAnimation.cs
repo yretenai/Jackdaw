@@ -3,15 +3,15 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GrannyAnimation : IRoot, IInitialize, ITr2AnimationUpdater {
+public class Tr2GrannyAnimation : IInitialize, ITr2AnimationUpdater, IRoot {
 	public string? ResPath { get; set; }
 	public string? Model { get; set; }
 	public string? ResPath_ { get; set; }
 	public string? Model_ { get; set; }
-	public TriGrannyRes? GrannyRes { get; set; }
+	[BlackArray] public TriGrannyRes? GrannyRes { get; set; }
 	[BlackArray] public GrannyBoneOffset? BoneOffset { get; set; }
 	public bool DebugRenderSkeleton { get; set; }
 	public bool DebugRenderJointNames { get; set; }
 	public bool AnimationEnabled { get; set; }
-	public IBlueEventListener? EventListener { get; set; }
+	[BlackArray] public IBlueEventListener? EventListener { get; set; }
 }

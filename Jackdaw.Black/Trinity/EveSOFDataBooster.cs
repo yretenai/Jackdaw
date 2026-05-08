@@ -8,17 +8,17 @@ public class EveSOFDataBooster : IRoot {
 	public float SymHaloScale { get; set; }
 	public float HaloScaleX { get; set; }
 	public float HaloScaleY { get; set; }
-	public Vector4 GlowColor { get; set; }
-	public Vector4 HaloColor { get; set; }
-	public Vector4 TrailColor { get; set; }
-	public Vector4 WarpGlowColor { get; set; }
-	public Vector4 WarpHalpColor { get; set; }
-	public Vector4 TrailSize { get; set; }
-	public Vector4 Scale { get; set; }
-	public EveSOFDataBoosterShape? Shape0 { get; set; }
-	public EveSOFDataBoosterShape? Shape1 { get; set; }
-	public EveSOFDataBoosterShape? WarpShape0 { get; set; }
-	public EveSOFDataBoosterShape? WarpShape1 { get; set; }
+	public Vector4D<float> GlowColor { get; set; }
+	public Vector4D<float> HaloColor { get; set; }
+	public Vector4D<float> TrailColor { get; set; }
+	public Vector4D<float> WarpGlowColor { get; set; }
+	public Vector4D<float> WarpHalpColor { get; set; }
+	public Vector4D<float> TrailSize { get; set; }
+	public Vector4D<float> Scale { get; set; }
+	[BlackArray] public EveSOFDataBoosterShape? Shape0 { get; set; }
+	[BlackArray] public EveSOFDataBoosterShape? Shape1 { get; set; }
+	[BlackArray] public EveSOFDataBoosterShape? WarpShape0 { get; set; }
+	[BlackArray] public EveSOFDataBoosterShape? WarpShape1 { get; set; }
 	public string? ShapeAtlasResPath { get; set; }
 	public string? Gradient0ResPath { get; set; }
 	public string? Gradient1ResPath { get; set; }
@@ -29,6 +29,6 @@ public class EveSOFDataBooster : IRoot {
 	public float LightWarpRadius { get; set; }
 	public float LightFlickerAmplitude { get; set; }
 	public float LightFlickerFrequency { get; set; }
-	public Vector4 LightColor { get; set; }
-	public Vector4 LightWarpColor { get; set; }
+	public Vector4D<float> LightColor { get; set; }
+	public Vector4D<float> LightWarpColor { get; set; }
 }

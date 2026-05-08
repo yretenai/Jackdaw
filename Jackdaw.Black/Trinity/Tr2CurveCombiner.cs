@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveCombiner : IRoot, ITriFunction, ITriVectorFunction, ITriCurveLength {
+public class Tr2CurveCombiner : ITriFunction, ITriVectorFunction, ITriCurveLength, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Curves { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector3D<float> CurrentValue { get; set; }
 }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ImageRes : BlueAsyncRes, IBlueResource, ICacheable {
+public class Tr2ImageRes : BlueAsyncRes, IBlueResource, ICacheable, IRoot {
 	public int Width { get; set; }
 	public int Height { get; set; }
 }

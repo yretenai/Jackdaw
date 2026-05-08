@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionBindRTPC : IRoot, ITr2ControllerAction, ITr2Updateable, INotify {
+public class Tr2ActionBindRTPC : ITr2ControllerAction, ITr2Updateable, INotify, IRoot {
 	public bool IsExpressionValid { get; set; }
 	public string? Value { get; set; }
 	public string? Emitter { get; set; }
 	[BlackUseNamePool] public string? RtpcName { get; set; }
-	public ITriScalarFunction? Curve { get; set; }
+	[BlackArray] public ITriScalarFunction? Curve { get; set; }
 }

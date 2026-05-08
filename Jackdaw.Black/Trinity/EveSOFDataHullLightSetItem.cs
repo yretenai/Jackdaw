@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataHullLightSetItem : IRoot {
-	public Vector3 Position { get; set; }
+	public Vector3D<float> Position { get; set; }
 	public float Radius { get; set; }
 	public float InnerRadius { get; set; }
 	public float Brightness { get; set; }

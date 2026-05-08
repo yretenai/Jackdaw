@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GrannyTransformTrack : Tr2GrannyTrack {
-	public Vector3 Translation { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector3 Scale { get; set; }
+public class Tr2GrannyTransformTrack : Tr2GrannyTrack, IRoot {
+	public Vector3D<float> Translation { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector3D<float> Scale { get; set; }
 	public bool CompressCurves { get; set; }
 }

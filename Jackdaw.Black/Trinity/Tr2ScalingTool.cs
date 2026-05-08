@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ScalingTool : Tr2ManipulationTool {
-	public Vector3 Scale { get; set; }
+public class Tr2ScalingTool : Tr2ManipulationTool, IRoot {
+	public Vector3D<float> Scale { get; set; }
 }

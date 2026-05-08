@@ -3,12 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class AudEmitter : AudGameObjResource, IBlueEventListener, IBluePlacementObserver, ITr2AudEmitter {
+public class AudEmitter : AudGameObjResource, IBlueEventListener, IBluePlacementObserver, ITr2AudEmitter, ITr2DebugRenderable, IRoot {
 	public bool NormalizeAttenuationScaling { get; set; }
 	public float MinNormalizedValue { get; set; }
 	public float MaxNormalizedValue { get; set; }
 	public float MinNormalizedScalingFactor { get; set; }
 	public float MaxNormalizedScalingFactor { get; set; }
-	public Vector3 DebugPosition { get; set; }
-	public Vector3 DebugFront { get; set; }
+	public float SimulationRadius { get; set; }
 }

@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class AudioCurveSetDriver : IRoot, ICurveSetDriver, IInitialize {
+public class AudioCurveSetDriver : ICurveSetDriver, IInitialize, IRoot {
 	public bool IsValid { get; set; }
 	public float AudioParameterValue { get; set; }
 	[BlackUseNamePool] public string? AudioParameterName { get; set; }
 	[BlackUseNamePool] public string? Name { get; set; }
-	public ITriScalarFunction? FallbackCurve { get; set; }
+	[BlackArray] public ITriScalarFunction? FallbackCurve { get; set; }
 }

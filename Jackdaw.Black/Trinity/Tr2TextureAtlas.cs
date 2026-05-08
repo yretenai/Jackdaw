@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TextureAtlas : IRoot, ITr2TextureProvider {
+public class Tr2TextureAtlas : ITr2TextureProvider, IRoot {
 	public int MultiSampleType { get; set; }
 	public int MultiSampleQuality { get; set; }
 	public int TexturesInAtlasCount { get; set; }

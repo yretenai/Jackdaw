@@ -6,9 +6,9 @@ namespace Jackdaw.Black;
 public class EveSpriteLineSetItem : IRoot {
 	public string? Name { get; set; }
 	public bool IsCircle { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Vector3 Scaling { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
 	public float Spacing { get; set; }
 	public float BlinkRate { get; set; }
 	public float BlinkPhase { get; set; }
@@ -16,6 +16,6 @@ public class EveSpriteLineSetItem : IRoot {
 	public float MinScale { get; set; }
 	public float MaxScale { get; set; }
 	public float Falloff { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public int BoneIndex { get; set; }
 }

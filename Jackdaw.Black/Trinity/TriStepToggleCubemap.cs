@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepToggleCubemap : TriRenderStep {
+public class TriStepToggleCubemap : TriRenderStep, IRoot {
 	public bool M_showCubemap { get; set; }
 }

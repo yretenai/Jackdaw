@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSOFDataHullExtensionPlacementGroup : IRoot, IEveSOFDataHullExtensionPlacement {
+public class EveSOFDataHullExtensionPlacementGroup : IEveSOFDataHullExtensionPlacement, IRoot {
 	public string? Name { get; set; }
 	public bool Enabled { get; set; }
 	public List<IRoot?>? DepletionCounters { get; set; }

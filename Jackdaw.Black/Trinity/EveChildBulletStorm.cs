@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildBulletStorm : IRoot, IEveSpaceObjectChild, ITr2Renderable, INotify {
+public class EveChildBulletStorm : IEveSpaceObjectChild, ITr2Renderable, INotify, IRoot {
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public int ObjectCount { get; set; }
@@ -12,8 +12,8 @@ public class EveChildBulletStorm : IRoot, IEveSpaceObjectChild, ITr2Renderable, 
 	public float Range { get; set; }
 	public float Speed { get; set; }
 	public float ClipSphere { get; set; }
-	public EveSpaceObject2? SourceObject { get; set; }
+	[BlackArray] public EveSpaceObject2? SourceObject { get; set; }
 	public float SourceRadius { get; set; }
 	public List<IRoot?>? TargetObjects { get; set; }
-	public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
 }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourVector3MoveRight : EveVirtualCameraBehaviourVector3MoveForward, INotify { }
+public class EveVirtualCameraBehaviourVector3MoveRight : EveVirtualCameraBehaviourVector3MoveForward, INotify, IRoot { }

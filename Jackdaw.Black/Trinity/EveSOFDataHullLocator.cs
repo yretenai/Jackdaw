@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class EveSOFDataHullLocator : IRoot {
 	public string? Name { get; set; }
-	public Matrix4x4 Transform { get; set; }
+	public Matrix4X4<float> Transform { get; set; }
 }

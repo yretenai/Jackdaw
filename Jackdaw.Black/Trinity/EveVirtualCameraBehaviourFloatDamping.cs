@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourFloatDamping : EveVirtualCameraBehaviourFloatBase, INotify {
+public class EveVirtualCameraBehaviourFloatDamping : EveVirtualCameraBehaviourFloatBase, INotify, IRoot {
 	public float DampingFactor { get; set; }
 }

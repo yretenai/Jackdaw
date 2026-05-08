@@ -3,17 +3,17 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildProceduralContainer : IRoot, IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, IListNotify, IShaderConfigurer, ITr2SoundEmitterOwner, IEveInheritPropertiesOwner {
-	public Vector3 Translation { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Matrix4x4 LocalTransform { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
+public class EveChildProceduralContainer : IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize, IListNotify, IShaderConfigurer, ITr2SoundEmitterOwner, IEveInheritPropertiesOwner, EveEntity, IRoot {
+	public Vector3D<float> Translation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Matrix4X4<float> LocalTransform { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public bool UseStaticRotation { get; set; }
-	public IEveSpaceObjectChild? SelectedObject { get; set; }
-	public IEveProceduralSelectionMethod? SelectionMethod { get; set; }
+	[BlackArray] public IEveSpaceObjectChild? SelectedObject { get; set; }
+	[BlackArray] public IEveProceduralSelectionMethod? SelectionMethod { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool Display { get; set; }

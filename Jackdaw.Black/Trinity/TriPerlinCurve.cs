@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriPerlinCurve : IRoot, ITriFunction, ITriScalarFunction {
+public class TriPerlinCurve : ITriFunction, ITriScalarFunction, IRoot {
 	[BlackUseNamePool] public string? Name { get; set; }
 	public float Value { get; set; }
 	public float Speed { get; set; }

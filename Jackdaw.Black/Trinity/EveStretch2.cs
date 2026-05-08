@@ -3,17 +3,17 @@
 
 namespace Jackdaw.Black;
 
-public class EveStretch2 : IRoot, ITr2Renderable, IEveFiringEffectElement, IInitialize, INotify, ITr2LightOwner {
-	public Tr2Effect? Effect { get; set; }
-	public TriCurveSet? Start { get; set; }
-	public TriCurveSet? Loop { get; set; }
-	public TriCurveSet? End { get; set; }
-	public Tr2PointLight? SourceLight { get; set; }
-	public Tr2PointLight? DestinationLight { get; set; }
-	public Tr2GpuSharedEmitter? SourceEmitter { get; set; }
-	public Tr2GpuSharedEmitter? DestinationEmitter { get; set; }
-	public TriObserverLocal? SourceObserver { get; set; }
-	public TriObserverLocal? DestinationObserver { get; set; }
+public class EveStretch2 : ITr2Renderable, IEveFiringEffectElement, IInitialize, INotify, ITr2LightOwner, EveEntity, IRoot {
+	[BlackArray] public Tr2Effect? Effect { get; set; }
+	[BlackArray] public TriCurveSet? Start { get; set; }
+	[BlackArray] public TriCurveSet? Loop { get; set; }
+	[BlackArray] public TriCurveSet? End { get; set; }
+	[BlackArray] public Tr2PointLight? SourceLight { get; set; }
+	[BlackArray] public Tr2PointLight? DestinationLight { get; set; }
+	[BlackArray] public Tr2GpuSharedEmitter? SourceEmitter { get; set; }
+	[BlackArray] public Tr2GpuSharedEmitter? DestinationEmitter { get; set; }
+	[BlackArray] public TriObserverLocal? SourceObserver { get; set; }
+	[BlackArray] public TriObserverLocal? DestinationObserver { get; set; }
 	public string? Name { get; set; }
 	public int QuadCount { get; set; }
 	public float BoundingRadius { get; set; }

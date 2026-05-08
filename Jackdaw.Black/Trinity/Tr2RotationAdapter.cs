@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RotationAdapter : IRoot, ITriQuaternionFunction {
-	public ITriQuaternionFunction? Curve { get; set; }
-	public Vector4 Value { get; set; }
-	public Vector4 CurrentValue { get; set; }
+public class Tr2RotationAdapter : ITriQuaternionFunction, IRoot {
+	[BlackArray] public ITriQuaternionFunction? Curve { get; set; }
+	public Vector4D<float> Value { get; set; }
+	public Vector4D<float> CurrentValue { get; set; }
 }

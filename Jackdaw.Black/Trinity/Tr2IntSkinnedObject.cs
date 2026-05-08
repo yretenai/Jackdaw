@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2IntSkinnedObject : Tr2SkinnedObject, ITr2InteriorDynamic, ITr2Interior, IInitialize, ITr2Pickable, ITr2BoundingBox, INotify, IBluePlacementObserver {
-	public Vector3 BoundingSphereCenter { get; set; }
+public class Tr2IntSkinnedObject : Tr2SkinnedObject, ITr2InteriorDynamic, ITr2Interior, IInitialize, ITr2Pickable, ITr2BoundingBox, INotify, IBluePlacementObserver, IRoot {
+	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	public Tr2VariableStore? VariableStore { get; set; }
+	[BlackArray] public Tr2VariableStore? VariableStore { get; set; }
 	public float DepthOffset { get; set; }
 }

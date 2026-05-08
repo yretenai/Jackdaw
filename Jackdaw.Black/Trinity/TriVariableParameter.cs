@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriVariableParameter : IRoot, ITriEffectParameter, INotify, IInitialize {
+public class TriVariableParameter : ITriEffectParameter, INotify, IInitialize, IRoot {
 	public int VariableType { get; set; }
 	public string? Name { get; set; }
 	public string? VariableName { get; set; }

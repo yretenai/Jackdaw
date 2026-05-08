@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionSetValue : IRoot, ITr2ControllerAction, INotify {
+public class Tr2ActionSetValue : ITr2ControllerAction, INotify, IRoot {
 	public bool IsExpressionValid { get; set; }
 	public bool IsBindingValid { get; set; }
 	public string? Path { get; set; }

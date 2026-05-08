@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PlaneConstraint : IRoot, ITr2GenericParticleConstraint, INotify, IInitialize {
-	public Vector4 Plane { get; set; }
+public class Tr2PlaneConstraint : ITr2GenericParticleConstraint, INotify, IInitialize, IRoot {
+	public Vector4D<float> Plane { get; set; }
 	public float Friction { get; set; }
 	public float Elasticity { get; set; }
 	public float ReflectionNoise { get; set; }
 	public string? ParticleRadiusComponent { get; set; }
-	public Vector4 ParticleRadiusCoefficient { get; set; }
+	public Vector4D<float> ParticleRadiusCoefficient { get; set; }
 	public bool AffectPosition { get; set; }
 	public bool AffectVelocity { get; set; }
 	public List<IRoot?>? Generators { get; set; }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveMeshOverlayEffect : IRoot, IInitialize, IListNotify, ITr2ControllerOwner, ITr2CurveSetOwner {
+public class EveMeshOverlayEffect : IInitialize, IListNotify, ITr2ControllerOwner, ITr2CurveSetOwner, IRoot {
 	public bool Display { get; set; }
 	public bool Update { get; set; }
 	public string? Name { get; set; }
@@ -13,5 +13,5 @@ public class EveMeshOverlayEffect : IRoot, IInitialize, IListNotify, ITr2Control
 	public List<IRoot?>? AdditiveEffects { get; set; }
 	public List<IRoot?>? DistortionEffects { get; set; }
 	public List<IRoot?>? Controllers { get; set; }
-	public TriCurveSet? CurveSet { get; set; }
+	[BlackArray] public TriCurveSet? CurveSet { get; set; }
 }

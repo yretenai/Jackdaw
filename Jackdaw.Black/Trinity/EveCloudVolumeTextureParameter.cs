@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class EveCloudVolumeTextureParameter : IRoot, ITriEffectResourceParameter {
+public class EveCloudVolumeTextureParameter : ITriEffectResourceParameter, IRoot {
 	public string? Name { get; set; }
-	public EveCloudEditableVolume? Volume { get; set; }
+	[BlackArray] public EveCloudEditableVolume? Volume { get; set; }
 	public bool IsUsedByEffect { get; set; }
 }

@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class AudUIPlayer : AudEmitter { }
+public class AudUIPlayer : AudEmitter, IRoot { }

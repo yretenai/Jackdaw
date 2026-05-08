@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveConstant : IRoot, ITriScalarFunction, ITriVectorFunction, ITriQuaternionFunction, ITriColorFunction, ITriFunction {
+public class Tr2CurveConstant : ITriScalarFunction, ITriVectorFunction, ITriQuaternionFunction, ITriColorFunction, ITriFunction, IRoot {
 	public string? Name { get; set; }
-	public Vector4 CurrentValue { get; set; }
-	public Vector4 Value { get; set; }
+	public Vector4D<float> CurrentValue { get; set; }
+	public Vector4D<float> Value { get; set; }
 }

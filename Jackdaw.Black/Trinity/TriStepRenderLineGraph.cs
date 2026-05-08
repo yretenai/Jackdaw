@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepRenderLineGraph : TriRenderStep {
+public class TriStepRenderLineGraph : TriRenderStep, IRoot {
 	public List<IRoot?>? LineGraphs { get; set; }
 	public float LegendScale { get; set; }
 	public float Scale { get; set; }

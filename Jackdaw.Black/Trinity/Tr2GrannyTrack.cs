@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GrannyTrack : IRoot, ITriFunction, IInitialize, INotify {
+public class Tr2GrannyTrack : ITriFunction, IInitialize, INotify, IRoot {
 	public bool Cycle { get; set; }
 	public float Duration { get; set; }
 	public string? Name { get; set; }
 	public string? Group { get; set; }
 	public string? GrannyResPath { get; set; }
-	public TriGrannyRes? GrannyRes { get; set; }
+	[BlackArray] public TriGrannyRes? GrannyRes { get; set; }
 }

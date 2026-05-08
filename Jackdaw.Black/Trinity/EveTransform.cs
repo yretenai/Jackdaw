@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveTransform : Tr2Transform, IEveTransform, IEveSpaceObject2, ITr2Pickable, IWorldPosition, IInitialize {
+public class EveTransform : Tr2Transform, IEveTransform, IEveSpaceObject2, ITr2Pickable, IWorldPosition, IInitialize, IRoot {
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? Observers { get; set; }
 	public List<IRoot?>? ParticleSystems { get; set; }
@@ -12,7 +12,7 @@ public class EveTransform : Tr2Transform, IEveTransform, IEveSpaceObject2, ITr2P
 	public bool HideOnLowQuality { get; set; }
 	public int LodLevel { get; set; }
 	public float VisibilityThreshold { get; set; }
-	public Vector3 OverrideBoundsMin { get; set; }
-	public Vector3 OverrideBoundsMax { get; set; }
-	public Tr2MeshBase? MeshLod { get; set; }
+	public Vector3D<float> OverrideBoundsMin { get; set; }
+	public Vector3D<float> OverrideBoundsMax { get; set; }
+	[BlackArray] public Tr2MeshBase? MeshLod { get; set; }
 }

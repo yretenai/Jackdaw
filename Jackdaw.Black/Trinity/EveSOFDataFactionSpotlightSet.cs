@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class EveSOFDataFactionSpotlightSet : IRoot {
 	public int GroupIndex { get; set; }
 	public string? Name { get; set; }
-	public Vector4 ConeColor { get; set; }
-	public Vector4 SpriteColor { get; set; }
-	public Vector4 FlareColor { get; set; }
+	public Vector4D<float> ConeColor { get; set; }
+	public Vector4D<float> SpriteColor { get; set; }
+	public Vector4D<float> FlareColor { get; set; }
 }

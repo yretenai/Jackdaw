@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionOverlay : IRoot, ITr2ControllerAction {
+public class Tr2ActionOverlay : ITr2ControllerAction, IRoot {
 	public string? Path { get; set; }
 	public string? TargetAnotherOwner { get; set; }
 	public bool AddOnStart { get; set; }

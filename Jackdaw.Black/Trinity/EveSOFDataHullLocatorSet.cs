@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSOFDataHullLocatorSet : IRoot, IEveSOFDataHullLocatorSet {
+public class EveSOFDataHullLocatorSet : IEveSOFDataHullLocatorSet, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Locators { get; set; }
 }

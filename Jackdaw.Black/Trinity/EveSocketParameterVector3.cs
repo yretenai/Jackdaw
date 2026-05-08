@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSocketParameterVector3 : IRoot, IEveSocketParameter {
+public class EveSocketParameterVector3 : IEveSocketParameter, IRoot {
 	public string? Name { get; set; }
-	public Vector3 Value { get; set; }
+	public Vector3D<float> Value { get; set; }
 }

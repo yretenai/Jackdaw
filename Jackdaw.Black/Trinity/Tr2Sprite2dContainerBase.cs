@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2Sprite2dContainerBase : Tr2SpriteObjectBase, ITr2SpriteObject, IListNotify {
+public class Tr2Sprite2dContainerBase : Tr2SpriteObjectBase, ITr2SpriteObject, IListNotify, IRoot {
 	public float Opacity { get; set; }
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? Background { get; set; }

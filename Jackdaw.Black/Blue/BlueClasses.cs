@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class BlueClasses : IRoot, IBlueClasses {
+public class BlueClasses : IBlueClasses, IRoot {
 	public bool PendingDeletesEnabled { get; set; }
 	public float MaxTimeForPendingDeletes { get; set; }
 	public int MaxPendingDeletes { get; set; }

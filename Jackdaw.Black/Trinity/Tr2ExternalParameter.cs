@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ExternalParameter : IRoot, IInitialize, INotify {
+public class Tr2ExternalParameter : IInitialize, INotify, IRoot {
 	public string? Name { get; set; }
 	public object? DestinationObject { get; set; }
 	public string? DestinationAttribute { get; set; }

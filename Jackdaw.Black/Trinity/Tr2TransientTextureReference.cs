@@ -3,4 +3,4 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TransientTextureReference : IRoot, ITr2TextureProvider { }
+public class Tr2TransientTextureReference : ITr2TextureProvider, IRoot { }

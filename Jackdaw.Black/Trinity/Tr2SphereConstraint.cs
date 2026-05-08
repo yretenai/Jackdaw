@@ -3,15 +3,15 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SphereConstraint : IRoot, ITr2GenericParticleConstraint {
-	public Vector3 Position { get; set; }
+public class Tr2SphereConstraint : ITr2GenericParticleConstraint, IRoot {
+	public Vector3D<float> Position { get; set; }
 	public float Radius { get; set; }
 	public bool InvertSphere { get; set; }
 	public float Friction { get; set; }
 	public float Elasticity { get; set; }
 	public float ReflectionNoise { get; set; }
 	public string? ParticleRadiusComponent { get; set; }
-	public Vector4 ParticleRadiusCoefficient { get; set; }
+	public Vector4D<float> ParticleRadiusCoefficient { get; set; }
 	public bool AffectPosition { get; set; }
 	public bool AffectVelocity { get; set; }
 	public List<IRoot?>? Generators { get; set; }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class AudEventCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
+public class AudEventCurve : ITriFunction, IInitialize, ITriCurveLength, IRoot {
 	public string? Name { get; set; }
 	public double Time { get; set; }
 	public float LocalTime { get; set; }
@@ -11,6 +11,6 @@ public class AudEventCurve : IRoot, ITriFunction, IInitialize, ITriCurveLength {
 	public float Length { get; set; }
 	public int Extrapolation { get; set; }
 	public List<IRoot?>? Keys { get; set; }
-	public AudEmitter? AudioEmitter { get; set; }
-	public ITriObserverLocal? SourceTriObserver { get; set; }
+	[BlackArray] public AudEmitter? AudioEmitter { get; set; }
+	[BlackArray] public ITriObserverLocal? SourceTriObserver { get; set; }
 }

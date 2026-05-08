@@ -6,5 +6,5 @@ namespace Jackdaw.Black;
 public class EveSOFDataFactionPlaneSet : IRoot {
 	public int GroupIndex { get; set; }
 	public string? Name { get; set; }
-	public Vector4 Color { get; set; }
+	public Vector4D<float> Color { get; set; }
 }

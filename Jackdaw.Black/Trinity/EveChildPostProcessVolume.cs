@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildPostProcessVolume : EveEntity, ITr2PostProcessOwner, IEveSpaceObjectChild, IInitialize {
+public class EveChildPostProcessVolume : ITr2PostProcessOwner, EveEntity, IEveSpaceObjectChild, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Volumes { get; set; }
 	public List<IRoot?>? ExclusionVolumes { get; set; }
-	public Vector3 BoundingSphereCenter { get; set; }
+	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	public Tr2PostProcessAttributes? PostProcessAttributes { get; set; }
+	[BlackArray] public Tr2PostProcessAttributes? PostProcessAttributes { get; set; }
 }

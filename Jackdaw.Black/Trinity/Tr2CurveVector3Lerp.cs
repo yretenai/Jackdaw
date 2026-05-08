@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveVector3Lerp : IRoot, ITriFunction, ITriVectorFunction {
+public class Tr2CurveVector3Lerp : ITriFunction, ITriVectorFunction, IRoot {
 	public string? Name { get; set; }
-	public Vector3 InitialValue { get; set; }
-	public Vector3 CurrentValue { get; set; }
+	public Vector3D<float> InitialValue { get; set; }
+	public Vector3D<float> CurrentValue { get; set; }
 	public float CurveStartTime { get; set; }
 	public int StartInterpolation { get; set; }
-	public ITriVectorFunction? Curve { get; set; }
+	[BlackArray] public ITriVectorFunction? Curve { get; set; }
 }

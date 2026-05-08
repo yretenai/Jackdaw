@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class TriTextureParameter : IRoot, ITriEffectParameter, ITriEffectResourceParameter, ITriEffectTextureParameter, IInitialize, INotify, ICopierCustomAssignment {
+public class TriTextureParameter : ITriEffectParameter, ITriEffectResourceParameter, ITriEffectTextureParameter, IInitialize, INotify, ICopierCustomAssignment, IRoot {
 	public string? Name { get; set; }
-	public ITr2TextureProvider? Resource { get; set; }
+	[BlackArray] public ITr2TextureProvider? Resource { get; set; }
 	public int UavMipLevel { get; set; }
 	public float PositionScale { get; set; }
 	public float UvDensityScale0 { get; set; }

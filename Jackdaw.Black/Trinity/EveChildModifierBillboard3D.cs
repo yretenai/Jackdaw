@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildModifierBillboard3D : IRoot, IEveChildTransformModifier {
+public class EveChildModifierBillboard3D : IEveChildTransformModifier, IRoot {
 	public bool Fixed { get; set; }
 }

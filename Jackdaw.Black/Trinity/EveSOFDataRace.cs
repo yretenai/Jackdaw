@@ -5,8 +5,8 @@ namespace Jackdaw.Black;
 
 public class EveSOFDataRace : IRoot {
 	public string? Name { get; set; }
-	public EveSOFDataBooster? Booster { get; set; }
+	[BlackArray] public EveSOFDataBooster? Booster { get; set; }
 	public int HullPrimaryHeatColorType { get; set; }
 	public int HullReactorHeatColorType { get; set; }
-	public EveSOFDataRaceDamage? Damage { get; set; }
+	[BlackArray] public EveSOFDataRaceDamage? Damage { get; set; }
 }

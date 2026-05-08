@@ -3,18 +3,18 @@
 
 namespace Jackdaw.Black;
 
-public class EveChildMesh : EveEntity, IEveSpaceObjectDecalOwner, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify, ITr2GrannyAnimationOwner, IEveSpaceObjectAttachmentOwner, ITr2LightOwner, IEveShadowCaster {
-	public Vector3 Translation { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
-	public Matrix4x4 LocalTransform { get; set; }
-	public Matrix4x4 WorldTransform { get; set; }
+public class EveChildMesh : EveEntity, IEveSpaceObjectDecalOwner, IEveSpaceObjectChild, ITr2Renderable, IInitialize, INotify, ITr2GrannyAnimationOwner, IEveSpaceObjectAttachmentOwner, ITr2LightOwner, ITr2Pickable, IEveShadowCaster, IRoot {
+	public Vector3D<float> Translation { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
+	public Matrix4X4<float> LocalTransform { get; set; }
+	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public string? Name { get; set; }
-	public Tr2MeshBase? Mesh { get; set; }
+	[BlackArray] public Tr2MeshBase? Mesh { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
-	public Tr2GrannyAnimation? AnimationUpdater { get; set; }
+	[BlackArray] public Tr2GrannyAnimation? AnimationUpdater { get; set; }
 	public int LowestLodVisible { get; set; }
 	public float MinScreenSize { get; set; }
 	public float CurrentScreenSize { get; set; }
@@ -23,6 +23,7 @@ public class EveChildMesh : EveEntity, IEveSpaceObjectDecalOwner, IEveSpaceObjec
 	public float SortValueScale { get; set; }
 	public bool Display { get; set; }
 	public bool CastShadow { get; set; }
+	public bool UpdateAnimation { get; set; }
 	public int Origin { get; set; }
 	public int ReflectionMode { get; set; }
 	public List<IRoot?>? Decals { get; set; }

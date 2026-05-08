@@ -3,12 +3,12 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2RandomIntegerAttributeGenerator : IRoot, ITr2AttributeGenerator {
+public class Tr2RandomIntegerAttributeGenerator : ITr2AttributeGenerator, IRoot {
 	public string? Name { get; set; }
 	public int Dimension { get; set; }
 	public int ElementType { get; set; }
 	public string? CustomName { get; set; }
-	public Vector4 MinRange { get; set; }
-	public Vector4 MaxRange { get; set; }
+	public Vector4D<float> MinRange { get; set; }
+	public Vector4D<float> MaxRange { get; set; }
 	public bool Valid { get; set; }
 }

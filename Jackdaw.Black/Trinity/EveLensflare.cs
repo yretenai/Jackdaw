@@ -3,23 +3,23 @@
 
 namespace Jackdaw.Black;
 
-public class EveLensflare : IRoot, ITr2ControllerOwner, ITr2CurveSetOwner, IInitialize {
+public class EveLensflare : ITr2ControllerOwner, ITr2CurveSetOwner, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool Update { get; set; }
 	public float CameraFactor { get; set; }
-	public Vector3 Position { get; set; }
+	public Vector3D<float> Position { get; set; }
 	public List<IRoot?>? DistanceToEdgeCurves { get; set; }
 	public List<IRoot?>? DistanceToCenterCurves { get; set; }
 	public List<IRoot?>? RadialAngleCurves { get; set; }
 	public List<IRoot?>? XDistanceToCenter { get; set; }
 	public List<IRoot?>? YDistanceToCenter { get; set; }
 	public List<IRoot?>? Bindings { get; set; }
-	public ITriVectorFunction? TranslationCurve { get; set; }
+	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
 	public List<IRoot?>? Flares { get; set; }
 	public List<IRoot?>? Occluders { get; set; }
 	public List<IRoot?>? BackgroundOccluders { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
-	public Tr2Mesh? Mesh { get; set; }
+	[BlackArray] public Tr2Mesh? Mesh { get; set; }
 	public List<IRoot?>? Controllers { get; set; }
 }

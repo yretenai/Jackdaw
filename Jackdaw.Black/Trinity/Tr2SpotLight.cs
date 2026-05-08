@@ -3,16 +3,16 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SpotLight : Tr2Light, IInitialize, INotify {
-	public Vector3 Position { get; set; }
-	public Vector4 Color { get; set; }
+public class Tr2SpotLight : Tr2Light, IInitialize, INotify, IRoot {
+	public Vector3D<float> Position { get; set; }
+	public Vector4D<float> Color { get; set; }
 	public float Brightness { get; set; }
 	public float NoiseAmplitude { get; set; }
 	public float NoiseFrequency { get; set; }
 	public int NoiseOctaves { get; set; }
 	public float Radius { get; set; }
 	public float InnerRadius { get; set; }
-	public Vector4 Rotation { get; set; }
+	public Vector4D<float> Rotation { get; set; }
 	public float OuterAngle { get; set; }
 	public float InnerAngle { get; set; }
 	public int BoneIndex { get; set; }
@@ -20,6 +20,6 @@ public class Tr2SpotLight : Tr2Light, IInitialize, INotify {
 	public int CastsShadows { get; set; }
 	public bool IsVolumetric { get; set; }
 	public string? Name { get; set; }
-	public Tr2LightProfileRes? LightProfile { get; set; }
+	[BlackArray] public Tr2LightProfileRes? LightProfile { get; set; }
 	[BlackUseNamePool] public string? LightProfilePath { get; set; }
 }

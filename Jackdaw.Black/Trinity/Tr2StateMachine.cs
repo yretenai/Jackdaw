@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2StateMachine : IRoot, IListNotify, INotify {
+public class Tr2StateMachine : IListNotify, INotify, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? States { get; set; }
-	public Tr2StateMachineState? StartState { get; set; }
-	public Tr2StateMachineState? CurrentState { get; set; }
+	[BlackArray] public Tr2StateMachineState? StartState { get; set; }
+	[BlackArray] public Tr2StateMachineState? CurrentState { get; set; }
 }

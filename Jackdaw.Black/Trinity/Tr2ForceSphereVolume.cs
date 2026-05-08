@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ForceSphereVolume : IRoot, ITr2ParticleForce {
+public class Tr2ForceSphereVolume : ITr2ParticleForce, IRoot {
 	public List<IRoot?>? Forces { get; set; }
-	public Vector3 Position { get; set; }
+	public Vector3D<float> Position { get; set; }
 	public float Radius { get; set; }
 	public float Exponent { get; set; }
 }

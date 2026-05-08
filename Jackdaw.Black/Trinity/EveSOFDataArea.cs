@@ -4,13 +4,14 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataArea : IRoot {
-	public EveSOFDataAreaMaterial? Primary { get; set; }
-	public EveSOFDataAreaMaterial? Glass { get; set; }
-	public EveSOFDataAreaMaterial? Sails { get; set; }
-	public EveSOFDataAreaMaterial? Reactor { get; set; }
-	public EveSOFDataAreaMaterial? Darkhull { get; set; }
-	public EveSOFDataAreaMaterial? Rock { get; set; }
-	public EveSOFDataAreaMaterial? Monument { get; set; }
-	public EveSOFDataAreaMaterial? Ornament { get; set; }
-	public EveSOFDataAreaMaterial? SimplePrimary { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Primary { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Glass { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Sails { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Reactor { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Darkhull { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Rock { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Monument { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Ornament { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? SimplePrimary { get; set; }
+	[BlackArray] public EveSOFDataAreaMaterial? Turret { get; set; }
 }

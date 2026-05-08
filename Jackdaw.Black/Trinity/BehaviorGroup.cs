@@ -3,14 +3,14 @@
 
 namespace Jackdaw.Black;
 
-public class BehaviorGroup : IRoot, IInitialize, INotify, IListNotify {
+public class BehaviorGroup : IInitialize, INotify, IListNotify, ITr2LightOwner, EveEntity, IRoot {
 	public bool Display { get; set; }
 	public bool Update { get; set; }
-	public Vector3 SpawnPosition { get; set; }
+	public Vector3D<float> SpawnPosition { get; set; }
 	public string? Name { get; set; }
 	public int Count { get; set; }
 	public int ActualCount { get; set; }
-	public Tr2Mesh? Mesh { get; set; }
+	[BlackArray] public Tr2Mesh? Mesh { get; set; }
 	public List<IRoot?>? Behaviors { get; set; }
 	public float MaxVelocity { get; set; }
 	public float BoundingSphereRadius { get; set; }
@@ -19,7 +19,7 @@ public class BehaviorGroup : IRoot, IInitialize, INotify, IListNotify {
 	public float RenderThreshold { get; set; }
 	public float BlendScreenSizeMin { get; set; }
 	public float BlendScreenSizeMax { get; set; }
-	public BehaviorGroupBooster? Boosters { get; set; }
+	[BlackArray] public BehaviorGroupBooster? Boosters { get; set; }
 	public bool DebugMode { get; set; }
 	public float DebugLodLevel { get; set; }
 	public float DebugIntensity { get; set; }

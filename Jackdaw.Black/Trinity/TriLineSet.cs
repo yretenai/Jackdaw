@@ -4,6 +4,6 @@
 namespace Jackdaw.Black;
 
 public class TriLineSet : IRoot {
-	public Matrix4x4 Transform { get; set; }
+	public Matrix4X4<float> Transform { get; set; }
 	public bool ZEnable { get; set; }
 }

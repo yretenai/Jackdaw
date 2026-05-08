@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class EveSOFDataDecalIndexBuffer : IRoot, ICustomPersist {
-	[BlackArray(4)] public int[]? IndexBuffer { get; set; }
+public class EveSOFDataDecalIndexBuffer : ICustomPersist, IRoot {
+	[BlackArray(1)] public byte[]? IndexBuffer { get; set; }
 }

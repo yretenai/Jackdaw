@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2GeometryBufferParameter : IRoot, ITriEffectParameter, ITriEffectResourceParameter, IInitialize, INotify {
+public class Tr2GeometryBufferParameter : ITriEffectParameter, ITriEffectResourceParameter, IInitialize, INotify, IRoot {
 	public bool IsValid { get; set; }
 	public string? Name { get; set; }
 	[BlackUseNamePool] public string? ResourcePath { get; set; }
 	public int MeshIndex { get; set; }
-	public ITr2GpuBuffer? GpuBuffer { get; set; }
+	[BlackArray] public ITr2GpuBuffer? GpuBuffer { get; set; }
 	public bool UsedByCurrentEffect { get; set; }
 }

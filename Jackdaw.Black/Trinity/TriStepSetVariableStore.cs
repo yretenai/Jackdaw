@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepSetVariableStore : TriRenderStep {
+public class TriStepSetVariableStore : TriRenderStep, IRoot {
 	public string? VariableName { get; set; }
 }

@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveQuaternion : IRoot, ITriQuaternionFunction, ITriFunction, ITriCurveLength {
+public class Tr2CurveQuaternion : ITriQuaternionFunction, ITriFunction, ITriCurveLength, IRoot {
 	[BlackArray] public byte[][]? Keys { get; set; }
 	public string? Name { get; set; }
-	public Vector4 CurrentValue { get; set; }
+	public Vector4D<float> CurrentValue { get; set; }
 	public int ExtrapolationBefore { get; set; }
 	public int ExtrapolationAfter { get; set; }
 }

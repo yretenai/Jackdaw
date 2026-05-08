@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2SkinnedModel : Tr2Model, IInitialize, INotify {
+public class Tr2SkinnedModel : Tr2Model, IInitialize, INotify, IRoot {
 	public string? GeometryResPath { get; set; }
-	public TriGeometryRes? GeometryRes { get; set; }
+	[BlackArray] public TriGeometryRes? GeometryRes { get; set; }
 	public string? SkeletonName { get; set; }
-	public Vector3 SkinScale { get; set; }
+	public Vector3D<float> SkinScale { get; set; }
 }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPFadeEffect : Tr2PPEffect {
-	public Vector4 Color { get; set; }
+public class Tr2PPFadeEffect : Tr2PPEffect, IRoot {
+	public Vector4D<float> Color { get; set; }
 	public float Intensity { get; set; }
 }

@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepRunJob : TriRenderStep {
-	public TriRenderJob? Job { get; set; }
+public class TriStepRunJob : TriRenderStep, IRoot {
+	[BlackArray] public TriRenderJob? Job { get; set; }
 }

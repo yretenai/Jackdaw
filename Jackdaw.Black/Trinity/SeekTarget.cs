@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class SeekTarget : IRoot, IBehavior {
+public class SeekTarget : IBehavior, IRoot {
 	public bool Enabled { get; set; }
 	public bool Exit { get; set; }
 	public bool Repair { get; set; }
@@ -14,8 +14,8 @@ public class SeekTarget : IRoot, IBehavior {
 	public float SlowDownRadius { get; set; }
 	public float DistFromOrigin { get; set; }
 	public float SecondsToTurn { get; set; }
-	public EveSpaceObject2? Target { get; set; }
+	[BlackArray] public EveSpaceObject2? Target { get; set; }
 	public string? LocatorSetName { get; set; }
 	public bool FirstSpawnAtRandomPlaces { get; set; }
-	public EveLocatorSets? LocatorSet { get; set; }
+	[BlackArray] public EveLocatorSets? LocatorSet { get; set; }
 }

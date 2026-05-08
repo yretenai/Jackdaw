@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2StateMachineTransition : IRoot, INotify {
+public class Tr2StateMachineTransition : INotify, IRoot {
 	public bool IsConditionValid { get; set; }
 	public string? Name { get; set; }
 	public string? Condition { get; set; }

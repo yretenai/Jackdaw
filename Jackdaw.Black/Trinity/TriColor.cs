@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriColor : IRoot, ITriColor, IPythonMethods {
+public class TriColor : ITriColor, IPythonMethods, IRoot {
 	public float R { get; set; }
 	public float G { get; set; }
 	public float B { get; set; }

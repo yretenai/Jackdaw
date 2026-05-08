@@ -9,9 +9,9 @@ public class EveSOFDataHull : IRoot {
 	public string? Category { get; set; }
 	public int BuildClass { get; set; }
 	public string? GeometryResFilePath { get; set; }
-	public Vector4 BoundingSphere { get; set; }
-	public Vector3 ShapeEllipsoidCenter { get; set; }
-	public Vector3 ShapeEllipsoidRadius { get; set; }
+	public Vector4D<float> BoundingSphere { get; set; }
+	public Vector3D<float> ShapeEllipsoidCenter { get; set; }
+	public Vector3D<float> ShapeEllipsoidRadius { get; set; }
 	public bool IsSkinned { get; set; }
 	public bool EnableDynamicBoundingSphere { get; set; }
 	public bool CastShadow { get; set; }
@@ -21,7 +21,7 @@ public class EveSOFDataHull : IRoot {
 	public List<IRoot?>? TransparentAreas { get; set; }
 	public List<IRoot?>? AdditiveAreas { get; set; }
 	public List<IRoot?>? DistortionAreas { get; set; }
-	public EveSOFDataPatternPerHull? DefaultPattern { get; set; }
+	[BlackArray] public EveSOFDataPatternPerHull? DefaultPattern { get; set; }
 	public List<IRoot?>? SpriteSets { get; set; }
 	public List<IRoot?>? SpotlightSets { get; set; }
 	public List<IRoot?>? PlaneSets { get; set; }
@@ -32,8 +32,8 @@ public class EveSOFDataHull : IRoot {
 	public List<IRoot?>? DecalSets { get; set; }
 	public List<IRoot?>? LightSets { get; set; }
 	public int ImpactEffectType { get; set; }
-	public EveSOFDataHullBooster? Booster { get; set; }
-	public Vector3 AudioPosition { get; set; }
+	[BlackArray] public EveSOFDataHullBooster? Booster { get; set; }
+	public Vector3D<float> AudioPosition { get; set; }
 	public List<IRoot?>? LocatorTurrets { get; set; }
 	public List<IRoot?>? LocatorSets { get; set; }
 	public List<IRoot?>? Children { get; set; }

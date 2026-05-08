@@ -3,10 +3,10 @@
 
 namespace Jackdaw.Black;
 
-public class TriObserverLocal : IRoot, ITriObserverLocal {
+public class TriObserverLocal : ITriObserverLocal, IRoot {
 	public bool Mute { get; set; }
 	public string? Name { get; set; }
-	public Vector3 Front { get; set; }
-	public Vector3 Position { get; set; }
-	public IBluePlacementObserver? Observer { get; set; }
+	public Vector3D<float> Front { get; set; }
+	public Vector3D<float> Position { get; set; }
+	[BlackArray] public IBluePlacementObserver? Observer { get; set; }
 }

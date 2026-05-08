@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Wander : IRoot, IBehavior {
+public class Wander : IBehavior, IRoot {
 	public bool Enabled { get; set; }
 	public float WeightWander { get; set; }
 	public float Rand1 { get; set; }

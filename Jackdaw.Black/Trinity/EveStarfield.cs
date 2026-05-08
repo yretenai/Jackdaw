@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveStarfield : IRoot, IInitialize, INotify {
+public class EveStarfield : IInitialize, INotify, IRoot {
 	public bool Display { get; set; }
 	public int NumStars { get; set; }
 	public int Seed { get; set; }
@@ -12,5 +12,5 @@ public class EveStarfield : IRoot, IInitialize, INotify {
 	public float MinFlashRate { get; set; }
 	public float MaxFlashRate { get; set; }
 	public float MinFlashIntensity { get; set; }
-	public Tr2Effect? Effect { get; set; }
+	[BlackArray] public Tr2Effect? Effect { get; set; }
 }

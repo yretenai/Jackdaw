@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class EveVirtualCameraBehaviourFloatNoise : EveVirtualCameraBehaviourFloatBase, INotify {
+public class EveVirtualCameraBehaviourFloatNoise : EveVirtualCameraBehaviourFloatBase, INotify, IRoot {
 	public float PerlineScale { get; set; }
 	public int Octaves { get; set; }
 	public float Magnitude { get; set; }
-	public Tr2CurveScalar? MagnitudeCurve { get; set; }
+	[BlackArray] public Tr2CurveScalar? MagnitudeCurve { get; set; }
 }

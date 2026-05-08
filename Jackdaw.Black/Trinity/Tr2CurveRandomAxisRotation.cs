@@ -3,9 +3,9 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2CurveRandomAxisRotation : IRoot, ITriFunction, ITriQuaternionFunction {
+public class Tr2CurveRandomAxisRotation : ITriFunction, ITriQuaternionFunction, IRoot {
 	public string? Name { get; set; }
-	public Vector4 CurrentValue { get; set; }
+	public Vector4D<float> CurrentValue { get; set; }
 	public float Period { get; set; }
 	public int Seed { get; set; }
 }

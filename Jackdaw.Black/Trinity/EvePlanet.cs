@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class EvePlanet : EveEffectRoot2, IEveSpaceObject2, ITr2SecondaryLightSource, ITr2CurveSetOwner, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, IWorldPosition {
+public class EvePlanet : EveEffectRoot2, IEveSpaceObject2, ITr2SecondaryLightSource, ITr2CurveSetOwner, IEveEffectChildrenOwner, IShaderConfigurer, ITr2SoundEmitterOwner, IWorldPosition, IRoot {
 	public float EstimatedPixelDiameter { get; set; }
 	public float Radius { get; set; }
 	public float MinScreenSize { get; set; }
-	public Vector4 AlbedoColor { get; set; }
-	public Vector4 EmissiveColor { get; set; }
-	public EveChildMesh? ZOnlyModel { get; set; }
+	public Vector4D<float> AlbedoColor { get; set; }
+	public Vector4D<float> EmissiveColor { get; set; }
+	[BlackArray] public EveChildMesh? ZOnlyModel { get; set; }
 }

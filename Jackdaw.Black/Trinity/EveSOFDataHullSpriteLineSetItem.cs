@@ -4,9 +4,9 @@
 namespace Jackdaw.Black;
 
 public class EveSOFDataHullSpriteLineSetItem : IRoot {
-	public Vector3 Position { get; set; }
-	public Vector3 Scaling { get; set; }
-	public Vector4 Rotation { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> Scaling { get; set; }
+	public Vector4D<float> Rotation { get; set; }
 	public float Spacing { get; set; }
 	public float BlinkRate { get; set; }
 	public float BlinkPhase { get; set; }
@@ -19,5 +19,5 @@ public class EveSOFDataHullSpriteLineSetItem : IRoot {
 	public int BoneIndex { get; set; }
 	public bool IsCircle { get; set; }
 	public int ColorType { get; set; }
-	public EveSOFDataPointLightAttachment? Light { get; set; }
+	[BlackArray] public EveSOFDataPointLightAttachment? Light { get; set; }
 }

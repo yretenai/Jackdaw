@@ -3,26 +3,27 @@
 
 namespace Jackdaw.Black;
 
-public class EveStretch : IRoot, IEveTransform, IEveSpaceObject2, IEveFiringEffectElement, ITr2DebugRenderable, ITr2LightOwner {
+public class EveStretch : INotify, IEveTransform, IEveSpaceObject2, IEveFiringEffectElement, ITr2DebugRenderable, ITr2LightOwner, EveEntity, IRoot {
 	public int LodLevel { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool Update { get; set; }
 	public bool UseCurveLod { get; set; }
-	public ITriVectorFunction? Source { get; set; }
-	public ITriVectorFunction? Dest { get; set; }
-	public EveTransform? SourceObject { get; set; }
-	public EveTransform? DestObject { get; set; }
-	public EveTransform? StretchObject { get; set; }
-	public EveTransform? MoveObject { get; set; }
+	[BlackArray] public ITriVectorFunction? Source { get; set; }
+	[BlackArray] public ITriVectorFunction? Dest { get; set; }
+	[BlackArray] public EveTransform? SourceObject { get; set; }
+	[BlackArray] public EveTransform? DestObject { get; set; }
+	[BlackArray] public EveTransform? StretchObject { get; set; }
+	[BlackArray] public EveTransform? MoveObject { get; set; }
 	public List<IRoot?>? SourceLights { get; set; }
 	public List<IRoot?>? DestLights { get; set; }
-	public ITriScalarFunction? ProgressCurve { get; set; }
+	[BlackArray] public ITriScalarFunction? ProgressCurve { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
-	public TriCurveSet? MoveCompletion { get; set; }
+	[BlackArray] public TriCurveSet? MoveCompletion { get; set; }
 	public bool MoveCompleted { get; set; }
 	public bool Moving { get; set; }
 	public long StartTime { get; set; }
-	public TriFloat? Length { get; set; }
-	public ITr2Audio? Audio { get; set; }
+	[BlackArray] public TriFloat? Length { get; set; }
+	[BlackArray] public ITr2Audio? Audio { get; set; }
+	[BlackArray] public IStretchAudio? StretchAudio { get; set; }
 }

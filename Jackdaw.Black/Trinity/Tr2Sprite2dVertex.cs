@@ -4,6 +4,6 @@
 namespace Jackdaw.Black;
 
 public class Tr2Sprite2dVertex : IRoot {
-	public Vector4 Color { get; set; }
-	public Vector3 Position { get; set; }
+	public Vector4D<float> Color { get; set; }
+	public Vector3D<float> Position { get; set; }
 }

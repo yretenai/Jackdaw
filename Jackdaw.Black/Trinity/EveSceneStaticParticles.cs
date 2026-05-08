@@ -3,13 +3,13 @@
 
 namespace Jackdaw.Black;
 
-public class EveSceneStaticParticles : IRoot, IInitialize {
+public class EveSceneStaticParticles : IInitialize, IRoot {
 	public float MinSize { get; set; }
 	public float MaxSize { get; set; }
 	public long MaxParticleCount { get; set; }
 	public float ClusterParticleDensity { get; set; }
 	public float ClusterParticleDensityAdjust { get; set; }
 	public float EstimatedSize { get; set; }
-	public Tr2InstancedMesh? Mesh { get; set; }
+	[BlackArray] public Tr2InstancedMesh? Mesh { get; set; }
 	public bool Visible { get; set; }
 }

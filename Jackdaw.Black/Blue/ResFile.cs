@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class ResFile : IRoot, IResFile, IBlueStream {
+public class ResFile : IResFile, IBlueStream, IRoot {
 	public long Size { get; set; }
 }

@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class EveTacticalOverlayTrackObject : IRoot {
-	public ITriVectorFunction? TranslationCurve { get; set; }
-	public Vector3 Position { get; set; }
+	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
+	public Vector3D<float> Position { get; set; }
 	public float Radius { get; set; }
 	public bool IsAggressive { get; set; }
 	public bool ShowVelocity { get; set; }

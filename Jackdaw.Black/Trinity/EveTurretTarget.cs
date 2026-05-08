@@ -6,8 +6,8 @@ namespace Jackdaw.Black;
 public class EveTurretTarget : IRoot {
 	public int Locator { get; set; }
 	public int Behaviour { get; set; }
-	public Vector3 Position { get; set; }
-	public Vector3 TargetPosition { get; set; }
-	public Vector3 PositionOld { get; set; }
+	public Vector3D<float> Position { get; set; }
+	public Vector3D<float> TargetPosition { get; set; }
+	public Vector3D<float> PositionOld { get; set; }
 	public float PositionOldInfluence { get; set; }
 }

@@ -3,15 +3,16 @@
 
 namespace Jackdaw.Black;
 
-public class EveSOFDataHullExtensionPlacement : IRoot, IEveSOFDataHullExtensionPlacement {
+public class EveSOFDataHullExtensionPlacement : IEveSOFDataHullExtensionPlacement, IRoot {
 	public string? Name { get; set; }
 	public string? LocatorSetName { get; set; }
 	public bool Enabled { get; set; }
 	public bool IsInstanced { get; set; }
+	public bool IsShared { get; set; }
 	public bool ExtendsShieldEllipsoid { get; set; }
 	public bool ExtendsBoundingSphere { get; set; }
-	public Vector3 Offset { get; set; }
-	public EveSOFDataHullExtensionPlacementDistributionPlacement? Distribution { get; set; }
+	public Vector3D<float> Offset { get; set; }
+	[BlackArray] public EveSOFDataHullExtensionPlacementDistributionPlacement? Distribution { get; set; }
 	public List<IRoot?>? DistributionConditions { get; set; }
-	public EveSOFDNADescriptor? Descriptor { get; set; }
+	[BlackArray] public EveSOFDNADescriptor? Descriptor { get; set; }
 }

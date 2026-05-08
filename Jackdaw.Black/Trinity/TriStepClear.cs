@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepClear : TriRenderStep {
-	public Vector4 Color { get; set; }
+public class TriStepClear : TriRenderStep, IRoot {
+	public Vector4D<float> Color { get; set; }
 	public float Depth { get; set; }
 	public int Stencil { get; set; }
 	public bool IsColorCleared { get; set; }

@@ -3,11 +3,11 @@
 
 namespace Jackdaw.Black;
 
-public class EveCameraFxAttributes : IRoot, IEveFxAttribute {
+public class EveCameraFxAttributes : IEveFxAttribute, IRoot {
 	public string? Name { get; set; }
 	public float DistanceToCamera { get; set; }
 	public float LookAngleToObject { get; set; }
-	public Vector3 ObjectRotation { get; set; }
-	public Vector3 RotationWithChildTransform { get; set; }
-	public Vector3 CameraRotation { get; set; }
+	public Vector3D<float> ObjectRotation { get; set; }
+	public Vector3D<float> RotationWithChildTransform { get; set; }
+	public Vector3D<float> CameraRotation { get; set; }
 }

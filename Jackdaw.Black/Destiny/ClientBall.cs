@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class ClientBall : Ball, ITriQuaternionFunction, ITriVectorFunction, IEveReferencePoint {
+public class ClientBall : Ball, ITriQuaternionFunction, ITriVectorFunction, IEveReferencePoint, IRoot {
 	public double CenterDist { get; set; }
 	public double SurfaceDist { get; set; }
 	public float MaxAngle { get; set; }

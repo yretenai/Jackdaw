@@ -3,6 +3,6 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2ActionCallback : IRoot, ITr2ControllerAction {
+public class Tr2ActionCallback : ITr2ControllerAction, IRoot {
 	public string? CallbackName { get; set; }
 }

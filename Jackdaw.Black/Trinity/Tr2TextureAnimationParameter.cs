@@ -3,8 +3,8 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2TextureAnimationParameter : IRoot, ITriEffectResourceParameter, INotify {
+public class Tr2TextureAnimationParameter : ITriEffectResourceParameter, INotify, IRoot {
 	public string? Name { get; set; }
 	public string? Channel { get; set; }
-	public Tr2TextureAnimation? Animation { get; set; }
+	[BlackArray] public Tr2TextureAnimation? Animation { get; set; }
 }

@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2AudioStretchAuto : Tr2AudioStretchBase, ITr2Audio {
+public class Tr2AudioStretchAuto : Tr2AudioStretchBase, ITr2Audio, IRoot {
 	[BlackUseNamePool] public string? OutburstEvent { get; set; }
 	[BlackUseNamePool] public string? ImpactEvent { get; set; }
 	[BlackUseNamePool] public string? StretchEvent { get; set; }

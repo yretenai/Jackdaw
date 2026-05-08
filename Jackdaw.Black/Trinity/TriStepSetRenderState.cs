@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class TriStepSetRenderState : TriRenderStep {
+public class TriStepSetRenderState : TriRenderStep, IRoot {
 	public int State { get; set; }
 	public int Value { get; set; }
 }

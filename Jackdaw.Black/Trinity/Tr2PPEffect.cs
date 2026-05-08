@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class Tr2PPEffect : IRoot, INotify {
+public class Tr2PPEffect : INotify, IRoot {
 	public bool Active { get; set; }
 	public bool Display { get; set; }
 	public bool Dirty { get; set; }

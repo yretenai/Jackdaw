@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveSOFDataHullExtensionPlacementDistributionRandomChance : IRoot, IEveSOFDataHullExtensionPlacementDistribution {
+public class EveSOFDataHullExtensionPlacementDistributionRandomChance : IEveSOFDataHullExtensionPlacementDistribution, IRoot {
 	public string? Name { get; set; }
 	public float ChanceOfUsage { get; set; }
 }

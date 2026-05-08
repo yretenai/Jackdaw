@@ -3,7 +3,7 @@
 
 namespace Jackdaw.Black;
 
-public class EveMultiEffect : IRoot, IEveSpaceObject2, ITr2ControllerOwner, IInitialize, ITr2DynamicBindingOwner, ITr2CurveSetOwner {
+public class EveMultiEffect : IEveSpaceObject2, ITr2ControllerOwner, IInitialize, ITr2DynamicBindingOwner, ITr2CurveSetOwner, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Parameters { get; set; }
 	public List<IRoot?>? Bindings { get; set; }
