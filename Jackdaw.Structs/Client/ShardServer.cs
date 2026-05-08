@@ -1,6 +1,7 @@
 namespace Jackdaw.Structs.Client;
 
 public enum ShardServer {
+	// fenris
 	Tranquility,
 	Singularity,
 	Multiplicity,
@@ -12,11 +13,18 @@ public enum ShardServer {
 	Nova,
 	Polaris,
 	Roundhouse,
+	Adam,
+
+	// cn
 	Serenity,
 	Dragon,
 	Unicorn,
 	Aurora,
 	Infinity,
+	Hurricane,
+	Storm,
+
+	// frontier
 	Stillness,
 }
 
@@ -41,6 +49,8 @@ public static class ShardServerHelpers {
 			ShardServer.Unicorn => ShardRegion.NetEase,
 			ShardServer.Aurora => ShardRegion.NetEase,
 			ShardServer.Infinity => ShardRegion.NetEase,
+			ShardServer.Hurricane => ShardRegion.NetEase,
+			ShardServer.Storm => ShardRegion.NetEase,
 			ShardServer.Stillness => ShardRegion.Frontier,
 			_ => ShardRegion.CCP,
 		};
@@ -65,6 +75,7 @@ public static class ShardServerHelpers {
 			ShardServer.Singularity => false,
 			ShardServer.Thunderdome => false,
 			ShardServer.Chaos => false,
+			ShardServer.Adam => false,
 			ShardServer.Nebula => false,
 			ShardServer.Serenity => false,
 			ShardServer.Infinity => false,
