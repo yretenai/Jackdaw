@@ -12,7 +12,6 @@ using Charon.Hash;
 using Charon.Hash.Basis;
 using Pluto.CommandLine;
 using Pluto.Platform;
-using Jackdaw.Cache;
 using Jackdaw.Structs.Client;
 using Pluto.Extensions;
 using Serilog;
@@ -24,7 +23,7 @@ internal class Program {
 		Log.Logger = new LoggerConfiguration().MinimumLevel.Verbose().WriteTo.Console().CreateLogger();
 
 		var basicFlags = CommandLineFlagsParser.ParseFlags<ResCacheBasicFlags>(new CommandLineOptions { HelpDelegate = CommandLineFlagsParser.PrintHelpInvoker<ResCacheFlags>});
-		var serverInfo = basicFlags.NE ? ShardInfo.NetEase : ShardInfo.Fenris;
+		var serverInfo = basicFlags.Type.Info;
 
 		if (basicFlags.Repair) {
 			Repair(basicFlags, serverInfo);

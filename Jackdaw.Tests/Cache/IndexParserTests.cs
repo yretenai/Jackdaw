@@ -1,6 +1,5 @@
 using System.IO;
 using System.Text;
-using Jackdaw.Cache;
 
 namespace Jackdaw.Tests.Cache;
 

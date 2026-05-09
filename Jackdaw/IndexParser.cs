@@ -6,7 +6,7 @@ using CsvHelper.Configuration;
 using Jackdaw.Structs.Client;
 using Pluto.IO.Binary;
 
-namespace Jackdaw.Cache;
+namespace Jackdaw;
 
 public static class IndexParser {
 	public static ResourceCacheRecord[] Parse(string path) {

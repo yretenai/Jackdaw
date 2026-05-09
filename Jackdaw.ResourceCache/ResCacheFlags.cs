@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Jackdaw.Structs.Client;
 using Pluto.CommandLine;
 
 namespace Jackdaw.ResourceCache;
@@ -16,8 +17,8 @@ public record ResCacheBasicFlags : CommandLineFlags {
 	[Flag("dry", Help = "Dry run, don't actually download/create anything")]
 	public bool Dry { get; set; }
 
-	[Flag("netease", Help = "If set, use NetEase URLs")]
-	public bool NE { get; set; }
+	[Flag("type", Help = "If set, use NetEase URLs")]
+	public ShardRegion Type { get; set; }
 }
 
 public record ResCacheFlags : ResCacheBasicFlags {

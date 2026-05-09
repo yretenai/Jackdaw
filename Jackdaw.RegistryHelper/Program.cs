@@ -11,7 +11,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using CsvHelper;
 using CsvHelper.Configuration;
-using Jackdaw.Cache;
 using Jackdaw.Structs.Client;
 using Serilog;
 
@@ -129,12 +128,7 @@ internal class Program {
 							continue;
 						}
 
-						var info = server.Region switch {
-							ShardRegion.NetEase => ShardInfo.NetEase,
-							ShardRegion.Frontier => ShardInfo.FenrisFrontier,
-							ShardRegion.Fenris when product is ShardProduct.Vanguard => ShardInfo.FenrisVanguard,
-							_ => ShardInfo.Fenris,
-						};
+						var info = server.Region.Info;
 
 						Log.Information("Getting {Product} version for {Server}", product, server);
 						var uri = new Uri(info.VerDomain, $"{product.ProductName}_{server.Short}.json");

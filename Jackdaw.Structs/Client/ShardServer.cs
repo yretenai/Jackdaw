@@ -57,6 +57,8 @@ public static class ShardServerHelpers {
 				ShardServer.Hurricane => ShardRegion.NetEase,
 				ShardServer.Storm => ShardRegion.NetEase,
 				ShardServer.Stillness => ShardRegion.Frontier,
+				ShardServer.Live => ShardRegion.Vanguard,
+				ShardServer.VIP => ShardRegion.Vanguard,
 				_ => ShardRegion.Fenris,
 			};
 
@@ -117,6 +119,17 @@ public static class ShardServerHelpers {
 			product switch {
 				ShardProduct.Vanguard => "evevanguard",
 				_ => "eveonline",
+			};
+	}
+
+	extension(ShardRegion region) {
+		public ShardInfo Info =>
+			region switch {
+				ShardRegion.Fenris => ShardInfo.Fenris,
+				ShardRegion.Frontier => ShardInfo.FenrisFrontier,
+				ShardRegion.Vanguard => ShardInfo.FenrisVanguard,
+				ShardRegion.NetEase => ShardInfo.NetEase,
+				_ => throw new ArgumentOutOfRangeException(nameof(region), region, null)
 			};
 	}
 }

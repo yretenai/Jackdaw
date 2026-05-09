@@ -1,7 +1,4 @@
-using System;
-using Jackdaw.Structs.Client;
-
-namespace Jackdaw.Cache;
+namespace Jackdaw.Structs.Client;
 
 public readonly record struct ShardInfo {
 	public required Uri VerDomain { get; init; }
