@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveRemotePositionCurve : ITriVectorFunction, IRoot {
-	[BlackArray] public ITriVectorFunction? StartPositionCurve { get; set; }
+	public ITriVectorFunction? StartPositionCurve { get; set; }
 	public Vector3D<float> Value { get; set; }
 	public Vector3D<float> OffsetDir1 { get; set; }
 	public Vector3D<float> OffsetDir2 { get; set; }

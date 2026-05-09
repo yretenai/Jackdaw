@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class OrientedBox : IRoot {
 	public long Id { get; set; }
-	[BlackArray] public Ballpark? Park { get; set; }
+	public Ballpark? Park { get; set; }
 	public bool IsMoribund { get; set; }
 	public double Corner_x { get; set; }
 }

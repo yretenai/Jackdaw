@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class EveTacticalTrails : IEveSpaceObject2, ITr2Renderable, IRoot {
-	[BlackArray] public Tr2Effect? TrailEffect { get; set; }
-	[BlackArray] public ITriVectorFunction? EgoBall { get; set; }
+	public Tr2Effect? TrailEffect { get; set; }
+	public ITriVectorFunction? EgoBall { get; set; }
 	public int Segments { get; set; }
 	public float FadeOutTime { get; set; }
 }

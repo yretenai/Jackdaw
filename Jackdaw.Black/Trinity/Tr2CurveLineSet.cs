@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class Tr2CurveLineSet : ITr2Renderable, INotify, ITr2Pickable, IRoot {
-	[BlackArray] public Tr2Material? LineEffect { get; set; }
-	[BlackArray] public Tr2Material? PickEffect { get; set; }
+	public Tr2Material? LineEffect { get; set; }
+	public Tr2Material? PickEffect { get; set; }
 	public Vector3D<float> Scaling { get; set; }
 	public Vector4D<float> Rotation { get; set; }
 	public Vector3D<float> Translation { get; set; }

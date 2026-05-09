@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class EveFiringEffectElementContainer : IEveSpaceObject2, EveEntity, IRoot {
 	public bool Active { get; set; }
-	[BlackArray] public IEveFiringEffectElement? Element { get; set; }
+	public IEveFiringEffectElement? Element { get; set; }
 	public Matrix4X4<float> SourceTransform { get; set; }
 	public Vector3D<float> Source { get; set; }
 	public Vector3D<float> Destination { get; set; }

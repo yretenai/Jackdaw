@@ -6,5 +6,5 @@ namespace Jackdaw.Black;
 public class Tr2ActionAnimateCurveSet : ITr2ControllerAction, ITr2Updateable, INotify, IRoot {
 	public bool IsExpressionValid { get; set; }
 	public string? Value { get; set; }
-	[BlackArray] public TriCurveSet? CurveSet { get; set; }
+	public TriCurveSet? CurveSet { get; set; }
 }

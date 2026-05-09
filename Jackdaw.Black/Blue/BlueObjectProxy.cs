@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class BlueObjectProxy : IBlueObjectProxy, IRoot {
 	public bool Temporary { get; set; }
 	public bool IsResident { get; set; }
-	[BlackArray] public IBlueObjectBuilder? Builder { get; set; }
+	public IBlueObjectBuilder? Builder { get; set; }
 	public int ObjectMarker { get; set; }
 	public object? Object { get; set; }
 }

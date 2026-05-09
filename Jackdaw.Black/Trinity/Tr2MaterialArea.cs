@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class Tr2MaterialArea : IRoot {
 	public string? Metatype { get; set; }
-	[BlackArray] public Tr2MaterialParameterStore? Material { get; set; }
+	public Tr2MaterialParameterStore? Material { get; set; }
 }

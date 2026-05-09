@@ -14,8 +14,8 @@ public class SeekTarget : IBehavior, IRoot {
 	public float SlowDownRadius { get; set; }
 	public float DistFromOrigin { get; set; }
 	public float SecondsToTurn { get; set; }
-	[BlackArray] public EveSpaceObject2? Target { get; set; }
+	public EveSpaceObject2? Target { get; set; }
 	public string? LocatorSetName { get; set; }
 	public bool FirstSpawnAtRandomPlaces { get; set; }
-	[BlackArray] public EveLocatorSets? LocatorSet { get; set; }
+	public EveLocatorSets? LocatorSet { get; set; }
 }

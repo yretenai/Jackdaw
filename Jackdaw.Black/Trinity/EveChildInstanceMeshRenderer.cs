@@ -8,5 +8,5 @@ public class EveChildInstanceMeshRenderer : EveChildMesh, EveEntity, IEveSpaceOb
 	public Vector3D<float> StaticOffsetScale { get; set; }
 	public Vector4D<float> StaticOffsetRotation { get; set; }
 	public int RotationConstraint { get; set; }
-	[BlackArray] public IEveDistributionMethod? Distribution { get; set; }
+	public IEveDistributionMethod? Distribution { get; set; }
 }

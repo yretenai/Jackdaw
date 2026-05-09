@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class EveBannerSet : IInitialize, IEveSpaceObjectAttachment, ITr2LightOwner, EveEntity, IRoot {
 	public string? Name { get; set; }
 	public int Key { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	[BlackArray] public byte[][]? Banners { get; set; }
 	public bool Display { get; set; }
 	public bool IsPickable { get; set; }

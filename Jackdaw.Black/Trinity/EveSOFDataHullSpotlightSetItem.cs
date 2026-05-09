@@ -14,5 +14,5 @@ public class EveSOFDataHullSpotlightSetItem : IRoot {
 	public float ConeIntensity { get; set; }
 	public float Saturation { get; set; }
 	public int ColorType { get; set; }
-	[BlackArray] public EveSOFDataSpotLightAttachment? Light { get; set; }
+	public EveSOFDataSpotLightAttachment? Light { get; set; }
 }

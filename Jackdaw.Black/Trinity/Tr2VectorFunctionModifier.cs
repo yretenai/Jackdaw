@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2VectorFunctionModifier : ITriVectorFunction, IRoot {
-	[BlackArray] public ITriVectorFunction? ClientBall { get; set; }
+	public ITriVectorFunction? ClientBall { get; set; }
 	public Vector3D<float> OffsetPosition { get; set; }
 	public float ScaleModifier { get; set; }
 	public bool UseViewSpace { get; set; }

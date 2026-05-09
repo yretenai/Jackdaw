@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class TriStepRenderAtlas : TriRenderStep, IRoot {
-	[BlackArray] public Tr2TextureAtlas? Atlas { get; set; }
-	[BlackArray] public Tr2AtlasTexture? Focus { get; set; }
+	public Tr2TextureAtlas? Atlas { get; set; }
+	public Tr2AtlasTexture? Focus { get; set; }
 	public Vector2D<float> TlTexCoord { get; set; }
 	public Vector2D<float> BrTexCoord { get; set; }
 	public bool ShowFree { get; set; }

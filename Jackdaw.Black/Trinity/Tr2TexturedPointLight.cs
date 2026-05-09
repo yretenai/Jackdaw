@@ -19,7 +19,7 @@ public class Tr2TexturedPointLight : Tr2Light, IInitialize, INotify, IRoot {
 	public int CastsShadows { get; set; }
 	public bool IsVolumetric { get; set; }
 	public string? Name { get; set; }
-	[BlackArray] public Tr2LightProfileRes? LightProfile { get; set; }
+	public Tr2LightProfileRes? LightProfile { get; set; }
 	[BlackUseNamePool] public string? LightProfilePath { get; set; }
-	[BlackArray] public TriTextureRes? Texture { get; set; }
+	public TriTextureRes? Texture { get; set; }
 }

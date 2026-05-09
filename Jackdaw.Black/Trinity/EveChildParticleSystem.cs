@@ -13,7 +13,7 @@ public class EveChildParticleSystem : EveEntity, IEveSpaceObjectChild, ITr2Rende
 	public bool UseSRT { get; set; }
 	public List<IRoot?>? ParticleEmitters { get; set; }
 	public string? Name { get; set; }
-	[BlackArray] public Tr2InstancedMesh? Mesh { get; set; }
+	public Tr2InstancedMesh? Mesh { get; set; }
 	public List<IRoot?>? ParticleSystems { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
 	public bool UseDynamicLod { get; set; }

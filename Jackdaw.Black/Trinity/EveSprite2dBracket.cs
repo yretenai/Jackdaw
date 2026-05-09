@@ -6,6 +6,6 @@ namespace Jackdaw.Black;
 public class EveSprite2dBracket : IRoot {
 	public Vector2D<float> Translation { get; set; }
 	public Vector4D<float> Color { get; set; }
-	[BlackArray] public Tr2AtlasTexture? Icon { get; set; }
+	public Tr2AtlasTexture? Icon { get; set; }
 	public bool Display { get; set; }
 }

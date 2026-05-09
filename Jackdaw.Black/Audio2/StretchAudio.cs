@@ -7,7 +7,7 @@ public class StretchAudio : IInitialize, ITr2DebugRenderable, IStretchAudio, IRo
 	[BlackUseNamePool] public string? OutburstEvent { get; set; }
 	[BlackUseNamePool] public string? ImpactEvent { get; set; }
 	[BlackUseNamePool] public string? StretchEvent { get; set; }
-	[BlackArray] public AudEmitter? SourceEmitter { get; set; }
-	[BlackArray] public AudEmitter? DestinationEmitter { get; set; }
-	[BlackArray] public AudEmitter? StretchEmitter { get; set; }
+	public AudEmitter? SourceEmitter { get; set; }
+	public AudEmitter? DestinationEmitter { get; set; }
+	public AudEmitter? StretchEmitter { get; set; }
 }

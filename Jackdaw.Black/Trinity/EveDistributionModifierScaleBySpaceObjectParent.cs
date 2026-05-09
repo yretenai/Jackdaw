@@ -6,5 +6,5 @@ namespace Jackdaw.Black;
 public class EveDistributionModifierScaleBySpaceObjectParent : IEveDistributionModifier, IRoot {
 	public float AuthoredForBoundingRadius { get; set; }
 	public float ScaleFactor { get; set; }
-	[BlackArray] public ITriVectorFunction? ScaleCurve { get; set; }
+	public ITriVectorFunction? ScaleCurve { get; set; }
 }

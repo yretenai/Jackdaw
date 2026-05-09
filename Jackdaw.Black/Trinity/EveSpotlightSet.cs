@@ -9,6 +9,6 @@ public class EveSpotlightSet : IInitialize, IEveSpaceObjectAttachment, ITr2Light
 	public string? Name { get; set; }
 	public float Intensity { get; set; }
 	public List<IRoot?>? SpotlightItems { get; set; }
-	[BlackArray] public Tr2Effect? ConeEffect { get; set; }
-	[BlackArray] public Tr2Effect? GlowEffect { get; set; }
+	public Tr2Effect? ConeEffect { get; set; }
+	public Tr2Effect? GlowEffect { get; set; }
 }

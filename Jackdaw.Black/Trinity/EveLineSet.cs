@@ -6,9 +6,9 @@ namespace Jackdaw.Black;
 public class EveLineSet : IInitialize, ITr2Renderable, IEveTransform, IEveSpaceObject2, IRoot {
 	public string? Name { get; set; }
 	public bool Display { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	public bool RenderTransparent { get; set; }
-	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
-	[BlackArray] public ITriQuaternionFunction? RotationCurve { get; set; }
+	public ITriVectorFunction? TranslationCurve { get; set; }
+	public ITriQuaternionFunction? RotationCurve { get; set; }
 	public Vector3D<float> Scaling { get; set; }
 }

@@ -14,5 +14,5 @@ public class EveTransform : Tr2Transform, IEveTransform, IEveSpaceObject2, ITr2P
 	public float VisibilityThreshold { get; set; }
 	public Vector3D<float> OverrideBoundsMin { get; set; }
 	public Vector3D<float> OverrideBoundsMax { get; set; }
-	[BlackArray] public Tr2MeshBase? MeshLod { get; set; }
+	public Tr2MeshBase? MeshLod { get; set; }
 }

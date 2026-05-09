@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class Tr2RenderNodeEffect : ITr2RenderNode, IRoot {
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	public List<IRoot?>? InputNodes { get; set; }
-	[BlackArray] public TriViewport? Viewport { get; set; }
+	public TriViewport? Viewport { get; set; }
 	public int RenderingMode { get; set; }
 }

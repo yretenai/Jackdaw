@@ -5,8 +5,8 @@ namespace Jackdaw.Black;
 
 public class EveChildParticleSphere : IEveSpaceObjectChild, ITr2Renderable, IRoot {
 	public bool IsValid { get; set; }
-	[BlackArray] public Tr2InstancedMesh? Mesh { get; set; }
-	[BlackArray] public Tr2ParticleSystem? ParticleSystem { get; set; }
+	public Tr2InstancedMesh? Mesh { get; set; }
+	public Tr2ParticleSystem? ParticleSystem { get; set; }
 	public List<IRoot?>? Generators { get; set; }
 	public string? Name { get; set; }
 	public float Radius { get; set; }

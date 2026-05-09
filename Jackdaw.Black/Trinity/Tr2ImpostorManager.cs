@@ -10,6 +10,6 @@ public class Tr2ImpostorManager : IInitialize, INotify, IRoot {
 	public int ItemWidth { get; set; }
 	public int ItemHeight { get; set; }
 	public int MaxUpdates { get; set; }
-	[BlackArray] public Tr2RenderTarget? Atlas { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2RenderTarget? Atlas { get; set; }
+	public Tr2Effect? Effect { get; set; }
 }

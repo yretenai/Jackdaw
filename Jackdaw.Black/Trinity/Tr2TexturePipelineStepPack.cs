@@ -5,8 +5,8 @@ namespace Jackdaw.Black;
 
 public class Tr2TexturePipelineStepPack : ITr2TexturePipelineStep, IRoot {
 	public int Format { get; set; }
-	[BlackArray] public Tr2TexturePackChannel? R { get; set; }
-	[BlackArray] public Tr2TexturePackChannel? G { get; set; }
-	[BlackArray] public Tr2TexturePackChannel? B { get; set; }
-	[BlackArray] public Tr2TexturePackChannel? A { get; set; }
+	public Tr2TexturePackChannel? R { get; set; }
+	public Tr2TexturePackChannel? G { get; set; }
+	public Tr2TexturePackChannel? B { get; set; }
+	public Tr2TexturePackChannel? A { get; set; }
 }

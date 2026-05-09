@@ -4,13 +4,13 @@
 namespace Jackdaw.Black;
 
 public class Tr2Sprite2dTextObject : Tr2SpriteObject, IRoot {
-	[BlackArray] public Tr2FontMeasurer? FontMeasurer { get; set; }
+	public Tr2FontMeasurer? FontMeasurer { get; set; }
 	public float PickRadius { get; set; }
 	public float TextWidth { get; set; }
 	public float TextHeight { get; set; }
 	public bool UseShadowSpriteEffect { get; set; }
 	public int ShadowSpriteEffect { get; set; }
-	[BlackArray] public ITr2Sprite2dTexture? TexturePrimary { get; set; }
+	public ITr2Sprite2dTexture? TexturePrimary { get; set; }
 	public bool UseSizeFromTexture { get; set; }
 	public bool HasAuxiliaryTooltip { get; set; }
 }

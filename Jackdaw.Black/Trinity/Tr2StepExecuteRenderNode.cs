@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2StepExecuteRenderNode : TriRenderStep, IRoot {
-	[BlackArray] public Tr2RenderTarget? DestinationTarget { get; set; }
-	[BlackArray] public ITr2RenderNode? Node { get; set; }
+	public Tr2RenderTarget? DestinationTarget { get; set; }
+	public ITr2RenderNode? Node { get; set; }
 	public bool ClearTargetOnFailure { get; set; }
 }

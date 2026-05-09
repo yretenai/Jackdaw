@@ -12,5 +12,5 @@ public class EveStarfield : IInitialize, INotify, IRoot {
 	public float MinFlashRate { get; set; }
 	public float MaxFlashRate { get; set; }
 	public float MinFlashIntensity { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 }

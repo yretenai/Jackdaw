@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class TriStepRenderEffect : TriRenderStep, IRoot {
-	[BlackArray] public Tr2Effect? Effect { get; set; }
-	[BlackArray] public Tr2ShaderBuffer? ShaderBuffer { get; set; }
+	public Tr2Effect? Effect { get; set; }
+	public Tr2ShaderBuffer? ShaderBuffer { get; set; }
 	public Vector2D<float> TlTexCoord { get; set; }
 	public Vector2D<float> BrTexCoord { get; set; }
 }

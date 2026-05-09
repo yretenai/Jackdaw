@@ -10,15 +10,15 @@ public class EveSOFDataFaction : IRoot {
 	public List<IRoot?>? SpotlightSets { get; set; }
 	public List<IRoot?>? PlaneSets { get; set; }
 	public List<IRoot?>? Children { get; set; }
-	[BlackArray] public EveSOFDataFactionVisibilityGroupSet? VisibilityGroupSet { get; set; }
-	[BlackArray] public EveSOFDataFactionColorSet? ColorSet { get; set; }
-	[BlackArray] public EveSOFDataLogoSet? LogoSet { get; set; }
+	public EveSOFDataFactionVisibilityGroupSet? VisibilityGroupSet { get; set; }
+	public EveSOFDataFactionColorSet? ColorSet { get; set; }
+	public EveSOFDataLogoSet? LogoSet { get; set; }
 	public int MaterialUsageMtl1 { get; set; }
 	public int MaterialUsageMtl2 { get; set; }
 	public int MaterialUsageMtl3 { get; set; }
 	public int MaterialUsageMtl4 { get; set; }
-	[BlackArray] public EveSOFDataArea? AreaTypes { get; set; }
-	[BlackArray] public EveSOFDataPatternLayer? DefaultPattern { get; set; }
+	public EveSOFDataArea? AreaTypes { get; set; }
+	public EveSOFDataPatternLayer? DefaultPattern { get; set; }
 	public string? DefaultPatternLayer1MaterialName { get; set; }
 	public string? DefaultPatternLayer2MaterialName { get; set; }
 	public string? DefaultPatternName { get; set; }

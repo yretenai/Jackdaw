@@ -9,7 +9,7 @@ public class EveSmartLightQuad : EveSmartLightBaseGroup, IInitialize, INotify, I
 	public bool EditMode { get; set; }
 	public Vector3D<float> StaticOffsetTranslation { get; set; }
 	public Vector3D<float> StaticQuadScale { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	public float Brightness { get; set; }
 	public bool SoftQuad { get; set; }
 }

@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class Tr2RaytracingManager : IRoot {
-	[BlackArray] public Tr2Effect? ShadowEffect { get; set; }
-	[BlackArray] public Tr2Denoiser? Denoiser { get; set; }
+	public Tr2Effect? ShadowEffect { get; set; }
+	public Tr2Denoiser? Denoiser { get; set; }
 	public float SunAngle { get; set; }
 	public bool ApplyDenoiser { get; set; }
 }

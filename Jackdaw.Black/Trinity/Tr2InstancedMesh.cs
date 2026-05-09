@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class Tr2InstancedMesh : Tr2Mesh, IRoot {
 	public string? InstanceGeometryResPath { get; set; }
-	[BlackArray] public ITr2InstanceData? InstanceGeometryResource { get; set; }
+	public ITr2InstanceData? InstanceGeometryResource { get; set; }
 	public int InstanceMeshIndex { get; set; }
 	public int BoundsMethod { get; set; }
 	public Vector3D<float> MinBounds { get; set; }

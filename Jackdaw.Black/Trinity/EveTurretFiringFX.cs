@@ -32,8 +32,8 @@ public class EveTurretFiringFX : IInitialize, INotify, IListNotify, ITr2Controll
 	public float FiringDelay11 { get; set; }
 	public float FiringDelay12 { get; set; }
 	public List<IRoot?>? Stretch { get; set; }
-	[BlackArray] public TriCurveSet? StartCurveSet { get; set; }
-	[BlackArray] public TriCurveSet? StopCurveSet { get; set; }
-	[BlackArray] public TriObserverLocal? SourceObserver { get; set; }
-	[BlackArray] public TriObserverLocal? DestinationObserver { get; set; }
+	public TriCurveSet? StartCurveSet { get; set; }
+	public TriCurveSet? StopCurveSet { get; set; }
+	public TriObserverLocal? SourceObserver { get; set; }
+	public TriObserverLocal? DestinationObserver { get; set; }
 }

@@ -8,7 +8,7 @@ public class TriDevice : ITriDevice, IRoot {
 	public bool DisableTextureLoad { get; set; }
 	public bool DisableAsyncLoad { get; set; }
 	public int MinimumModelLOD { get; set; }
-	[BlackArray] public ITr2Scene? Scene { get; set; }
+	public ITr2Scene? Scene { get; set; }
 	public int Width { get; set; }
 	public int Height { get; set; }
 	public int SwapEffect { get; set; }
@@ -16,7 +16,7 @@ public class TriDevice : ITriDevice, IRoot {
 	public int AdapterWidth { get; set; }
 	public int AdapterHeight { get; set; }
 	public int AdapterRefreshRate { get; set; }
-	[BlackArray] public TriViewport? Viewport { get; set; }
+	public TriViewport? Viewport { get; set; }
 	public int TickInterval { get; set; }
 	[BlackArray] public byte[][]? SupportedUpscalingTechniques { get; set; }
 	public int DeviceType { get; set; }

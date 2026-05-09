@@ -6,6 +6,6 @@ namespace Jackdaw.Black;
 public class Tr2SwapChain : IRoot {
 	public int Width { get; set; }
 	public int Height { get; set; }
-	[BlackArray] public Tr2RenderTarget? BackBuffer { get; set; }
-	[BlackArray] public Tr2DepthStencil? DepthStencilBuffer { get; set; }
+	public Tr2RenderTarget? BackBuffer { get; set; }
+	public Tr2DepthStencil? DepthStencilBuffer { get; set; }
 }

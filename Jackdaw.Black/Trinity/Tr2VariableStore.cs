@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class Tr2VariableStore : IRoot {
-	[BlackArray] public Tr2VariableStore? ParentStore { get; set; }
+	public Tr2VariableStore? ParentStore { get; set; }
 }

@@ -13,5 +13,5 @@ public class EveMeshOverlayEffect : IInitialize, IListNotify, ITr2ControllerOwne
 	public List<IRoot?>? AdditiveEffects { get; set; }
 	public List<IRoot?>? DistortionEffects { get; set; }
 	public List<IRoot?>? Controllers { get; set; }
-	[BlackArray] public TriCurveSet? CurveSet { get; set; }
+	public TriCurveSet? CurveSet { get; set; }
 }

@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class TriStepUpdate : TriRenderStep, IRoot {
-	[BlackArray] public ITr2Updateable? Object { get; set; }
+	public ITr2Updateable? Object { get; set; }
 }

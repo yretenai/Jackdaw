@@ -5,6 +5,6 @@ namespace Jackdaw.Black;
 
 public class EveCloudVolumeTextureParameter : ITriEffectResourceParameter, IRoot {
 	public string? Name { get; set; }
-	[BlackArray] public EveCloudEditableVolume? Volume { get; set; }
+	public EveCloudEditableVolume? Volume { get; set; }
 	public bool IsUsedByEffect { get; set; }
 }

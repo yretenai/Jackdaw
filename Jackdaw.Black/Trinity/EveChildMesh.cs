@@ -12,9 +12,9 @@ public class EveChildMesh : EveEntity, IEveSpaceObjectDecalOwner, IEveSpaceObjec
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public string? Name { get; set; }
-	[BlackArray] public Tr2MeshBase? Mesh { get; set; }
+	public Tr2MeshBase? Mesh { get; set; }
 	public List<IRoot?>? TransformModifiers { get; set; }
-	[BlackArray] public Tr2GrannyAnimation? AnimationUpdater { get; set; }
+	public Tr2GrannyAnimation? AnimationUpdater { get; set; }
 	public int LowestLodVisible { get; set; }
 	public float MinScreenSize { get; set; }
 	public float CurrentScreenSize { get; set; }

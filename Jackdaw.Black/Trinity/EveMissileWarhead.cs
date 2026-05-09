@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveMissileWarhead : EveTransform, IRoot {
-	[BlackArray] public EveSpriteSet? SpriteSet { get; set; }
+	public EveSpriteSet? SpriteSet { get; set; }
 	public float WarheadLength { get; set; }
 	public float WarheadRadius { get; set; }
 	public float ImpactDuration { get; set; }

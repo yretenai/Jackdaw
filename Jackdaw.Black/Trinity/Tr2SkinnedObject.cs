@@ -8,18 +8,18 @@ public class Tr2SkinnedObject : ITr2Renderable, IWorldPosition, IListNotify, IRo
 	public Quaternion<float> Rotation { get; set; }
 	public Vector3 Scaling { get; set; }
 	public int CurrentLod { get; set; }
-	[BlackArray] public ITr2AnimationUpdater? AnimationUpdater { get; set; }
+	public ITr2AnimationUpdater? AnimationUpdater { get; set; }
 	public object? WorldTransformUpdater { get; set; }
 	public string? Name { get; set; }
-	[BlackArray] public TriMatrix? Transform { get; set; }
-	[BlackArray] public Tr2SkinnedModel? VisualModel { get; set; }
+	public TriMatrix? Transform { get; set; }
+	public Tr2SkinnedModel? VisualModel { get; set; }
 	public int FrameDelay { get; set; }
 	public int SkinningMatrixCount { get; set; }
 	public int RenderRigBoneCount { get; set; }
 	public bool Display { get; set; }
-	[BlackArray] public IBlueObjectProxy? HighDetailModel { get; set; }
-	[BlackArray] public IBlueObjectProxy? LowDetailModel { get; set; }
-	[BlackArray] public IBlueObjectProxy? MediumDetailModel { get; set; }
+	public IBlueObjectProxy? HighDetailModel { get; set; }
+	public IBlueObjectProxy? LowDetailModel { get; set; }
+	public IBlueObjectProxy? MediumDetailModel { get; set; }
 	public float EstimatedPixelDiameter { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public bool UseDynamicBounds { get; set; }

@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class TriStepPresentSwapChain : TriRenderStep, IRoot {
-	[BlackArray] public Tr2SwapChain? SwapChain { get; set; }
+	public Tr2SwapChain? SwapChain { get; set; }
 }

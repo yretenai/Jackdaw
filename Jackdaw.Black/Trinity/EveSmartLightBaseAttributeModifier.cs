@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveSmartLightBaseAttributeModifier : IInitialize, INotify, IRoot {
-	[BlackArray] public Tr2CurveScalar? ActivationOverLifetime { get; set; }
+	public Tr2CurveScalar? ActivationOverLifetime { get; set; }
 	public int LifeTimeFormula { get; set; }
 	public bool Active { get; set; }
 	public bool StartsActive { get; set; }

@@ -4,10 +4,10 @@
 namespace Jackdaw.Black;
 
 public class Tr2CurveColor : ITriColorFunction, ITriFunction, ITriCurveLength, IRoot {
-	[BlackArray] public Tr2CurveScalar? R { get; set; }
-	[BlackArray] public Tr2CurveScalar? G { get; set; }
-	[BlackArray] public Tr2CurveScalar? B { get; set; }
-	[BlackArray] public Tr2CurveScalar? A { get; set; }
+	public Tr2CurveScalar? R { get; set; }
+	public Tr2CurveScalar? G { get; set; }
+	public Tr2CurveScalar? B { get; set; }
+	public Tr2CurveScalar? A { get; set; }
 	public string? Name { get; set; }
 	public Vector4D<float> CurrentValue { get; set; }
 	public float TimeOffset { get; set; }

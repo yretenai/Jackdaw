@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class EveVirtualCameraBehaviourVector3MoveBetween : EveVirtualCameraBehaviourVector3Base, INotify, IRoot {
 	public Vector3D<float> Start { get; set; }
 	public Vector3D<float> End { get; set; }
-	[BlackArray] public Tr2CurveScalar? InterpolationCurve { get; set; }
+	public Tr2CurveScalar? InterpolationCurve { get; set; }
 	public bool Proportional { get; set; }
 	public bool World { get; set; }
 }

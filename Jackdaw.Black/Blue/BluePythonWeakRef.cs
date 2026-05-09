@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class BluePythonWeakRef : IRoot {
-	[BlackArray] public IRoot? Object { get; set; }
+	public IRoot? Object { get; set; }
 }

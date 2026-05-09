@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2AudioStretchBase : IInitialize, ITr2DebugRenderable, ITr2Audio, IRoot {
-	[BlackArray] public ITr2AudEmitter? SourceEmitter { get; set; }
-	[BlackArray] public ITr2AudEmitter? DestinationEmitter { get; set; }
-	[BlackArray] public ITr2AudEmitter? StretchEmitter { get; set; }
+	public ITr2AudEmitter? SourceEmitter { get; set; }
+	public ITr2AudEmitter? DestinationEmitter { get; set; }
+	public ITr2AudEmitter? StretchEmitter { get; set; }
 }

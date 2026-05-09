@@ -8,10 +8,10 @@ public class Tr2GrannyAnimation : IInitialize, ITr2AnimationUpdater, IRoot {
 	public string? Model { get; set; }
 	public string? ResPath_ { get; set; }
 	public string? Model_ { get; set; }
-	[BlackArray] public TriGrannyRes? GrannyRes { get; set; }
-	[BlackArray] public GrannyBoneOffset? BoneOffset { get; set; }
+	public TriGrannyRes? GrannyRes { get; set; }
+	public GrannyBoneOffset? BoneOffset { get; set; }
 	public bool DebugRenderSkeleton { get; set; }
 	public bool DebugRenderJointNames { get; set; }
 	public bool AnimationEnabled { get; set; }
-	[BlackArray] public IBlueEventListener? EventListener { get; set; }
+	public IBlueEventListener? EventListener { get; set; }
 }

@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class EveVirtualCameraBehaviourFloatAdd : EveVirtualCameraBehaviourFloatBase, INotify, IRoot {
 	public float Value { get; set; }
-	[BlackArray] public Tr2CurveScalar? ScaleCurve { get; set; }
+	public Tr2CurveScalar? ScaleCurve { get; set; }
 }

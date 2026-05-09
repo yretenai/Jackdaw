@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2Sprite2dLayer : Tr2Sprite2dContainer, IRoot {
-	[BlackArray] public ITr2Sprite2dTexture? TextureSecondary { get; set; }
+	public ITr2Sprite2dTexture? TextureSecondary { get; set; }
 	public Vector4D<float> BackgroundColor { get; set; }
 	public Vector4D<float> Color { get; set; }
 	public bool ClearBackground { get; set; }

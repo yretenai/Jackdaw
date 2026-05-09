@@ -12,7 +12,7 @@ public class EveChildQuad : IEveSpaceObjectChild, IInitialize, IRoot {
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
 	public string? Name { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	public float ViewRotation { get; set; }
 	public Vector4D<float> Color { get; set; }
 	public float Brightness { get; set; }

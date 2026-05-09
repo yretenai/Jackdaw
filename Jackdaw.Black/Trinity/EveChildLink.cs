@@ -9,7 +9,7 @@ public class EveChildLink : EveChildMesh, IRoot {
 	public float LinkStrength { get; set; }
 	public float LinkBarrier { get; set; }
 	public float TargetRadius { get; set; }
-	[BlackArray] public ITriVectorFunction? Target { get; set; }
+	public ITriVectorFunction? Target { get; set; }
 	public List<IRoot?>? LinkStrengthBindings { get; set; }
 	public List<IRoot?>? LinkStrengthCurves { get; set; }
 }

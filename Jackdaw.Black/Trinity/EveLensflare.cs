@@ -15,11 +15,11 @@ public class EveLensflare : ITr2ControllerOwner, ITr2CurveSetOwner, IInitialize,
 	public List<IRoot?>? XDistanceToCenter { get; set; }
 	public List<IRoot?>? YDistanceToCenter { get; set; }
 	public List<IRoot?>? Bindings { get; set; }
-	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
+	public ITriVectorFunction? TranslationCurve { get; set; }
 	public List<IRoot?>? Flares { get; set; }
 	public List<IRoot?>? Occluders { get; set; }
 	public List<IRoot?>? BackgroundOccluders { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
-	[BlackArray] public Tr2Mesh? Mesh { get; set; }
+	public Tr2Mesh? Mesh { get; set; }
 	public List<IRoot?>? Controllers { get; set; }
 }

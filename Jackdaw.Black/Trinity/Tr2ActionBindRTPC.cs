@@ -8,5 +8,5 @@ public class Tr2ActionBindRTPC : ITr2ControllerAction, ITr2Updateable, INotify, 
 	public string? Value { get; set; }
 	public string? Emitter { get; set; }
 	[BlackUseNamePool] public string? RtpcName { get; set; }
-	[BlackArray] public ITriScalarFunction? Curve { get; set; }
+	public ITriScalarFunction? Curve { get; set; }
 }

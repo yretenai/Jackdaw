@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class EveProceduralMethodCyclingParameter : INotify, IInitialize, IRoot {
 	public string? Name { get; set; }
-	[BlackArray] public EveChildRef? Child { get; set; }
+	public EveChildRef? Child { get; set; }
 	public bool RestartRequired { get; set; }
 	public bool ReloadRequired { get; set; }
 	public float PlayDuration { get; set; }

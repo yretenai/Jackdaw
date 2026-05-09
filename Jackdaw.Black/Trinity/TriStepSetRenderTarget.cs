@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class TriStepSetRenderTarget : TriRenderStep, IRoot {
-	[BlackArray] public Tr2RenderTarget? RenderTarget { get; set; }
+	public Tr2RenderTarget? RenderTarget { get; set; }
 }

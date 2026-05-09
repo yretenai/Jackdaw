@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class EveSOFDataHullExtensionPlacementDistributionParentMatch : IEveSOFDataHullExtensionPlacementDistribution, IRoot {
 	public string? Name { get; set; }
-	[BlackArray] public EveSOFDNADescriptor? ParentDescriptor { get; set; }
+	public EveSOFDNADescriptor? ParentDescriptor { get; set; }
 }

@@ -9,5 +9,5 @@ public class EveChildPostProcessVolume : ITr2PostProcessOwner, EveEntity, IEveSp
 	public List<IRoot?>? ExclusionVolumes { get; set; }
 	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	[BlackArray] public Tr2PostProcessAttributes? PostProcessAttributes { get; set; }
+	public Tr2PostProcessAttributes? PostProcessAttributes { get; set; }
 }

@@ -5,8 +5,8 @@ namespace Jackdaw.Black;
 
 public class EveDistanceField : IListNotify, INotify, IRoot {
 	public List<IRoot?>? Objects { get; set; }
-	[BlackArray] public TriCurveSet? CurveSet { get; set; }
-	[BlackArray] public TriView? CameraView { get; set; }
+	public TriCurveSet? CurveSet { get; set; }
+	public TriView? CameraView { get; set; }
 	public float MinDistance { get; set; }
 	public float MaxDistance { get; set; }
 	public float Distance { get; set; }

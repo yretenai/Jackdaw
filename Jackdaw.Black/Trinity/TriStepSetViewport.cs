@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class TriStepSetViewport : TriRenderStep, IRoot {
-	[BlackArray] public TriViewport? Viewport { get; set; }
+	public TriViewport? Viewport { get; set; }
 }

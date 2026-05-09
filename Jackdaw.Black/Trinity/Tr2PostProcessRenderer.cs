@@ -4,22 +4,22 @@
 namespace Jackdaw.Black;
 
 public class Tr2PostProcessRenderer : IRoot {
-	[BlackArray] public Tr2Effect? BloomHighPassFilter { get; set; }
+	public Tr2Effect? BloomHighPassFilter { get; set; }
 	public bool UseNewBloom { get; set; }
 	public int BloomDebugMode { get; set; }
-	[BlackArray] public Tr2Effect? BloomDebugShader { get; set; }
-	[BlackArray] public Tr2Effect? GodrayEffect { get; set; }
-	[BlackArray] public Tr2Effect? SignalLossEffect { get; set; }
-	[BlackArray] public Tr2Effect? DynamicExposureCreateHistogramShader { get; set; }
-	[BlackArray] public Tr2Effect? DynamicExposureMergeHistogramShader { get; set; }
-	[BlackArray] public Tr2Effect? DynamicExposureMeasureExposureShader { get; set; }
-	[BlackArray] public Tr2Effect? DynamicExposureToTextureShader { get; set; }
-	[BlackArray] public Tr2Effect? DepthOfFieldCoCShader { get; set; }
-	[BlackArray] public Tr2Effect? DepthOfFieldBokehBlurShader { get; set; }
-	[BlackArray] public Tr2Effect? DepthOfFieldBokehFillShader { get; set; }
-	[BlackArray] public Tr2Effect? FogColorEffect { get; set; }
-	[BlackArray] public Tr2Effect? FogCompositeEffect { get; set; }
-	[BlackArray] public Tr2Effect? TaaEffect { get; set; }
-	[BlackArray] public Tr2Effect? TonemappingEffect { get; set; }
+	public Tr2Effect? BloomDebugShader { get; set; }
+	public Tr2Effect? GodrayEffect { get; set; }
+	public Tr2Effect? SignalLossEffect { get; set; }
+	public Tr2Effect? DynamicExposureCreateHistogramShader { get; set; }
+	public Tr2Effect? DynamicExposureMergeHistogramShader { get; set; }
+	public Tr2Effect? DynamicExposureMeasureExposureShader { get; set; }
+	public Tr2Effect? DynamicExposureToTextureShader { get; set; }
+	public Tr2Effect? DepthOfFieldCoCShader { get; set; }
+	public Tr2Effect? DepthOfFieldBokehBlurShader { get; set; }
+	public Tr2Effect? DepthOfFieldBokehFillShader { get; set; }
+	public Tr2Effect? FogColorEffect { get; set; }
+	public Tr2Effect? FogCompositeEffect { get; set; }
+	public Tr2Effect? TaaEffect { get; set; }
+	public Tr2Effect? TonemappingEffect { get; set; }
 	public int Quality { get; set; }
 }

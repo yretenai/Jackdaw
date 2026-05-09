@@ -8,7 +8,7 @@ public class TriCurveSet : IInitialize, ITr2Updateable, IRoot {
 	public List<IRoot?>? Bindings { get; set; }
 	public List<IRoot?>? Curves { get; set; }
 	public List<IRoot?>? Ranges { get; set; }
-	[BlackArray] public ICurveSetDriver? Driver { get; set; }
+	public ICurveSetDriver? Driver { get; set; }
 	public bool IsPlaying { get; set; }
 	public bool PlayOnLoad { get; set; }
 	public bool UseSimTimeRebase { get; set; }

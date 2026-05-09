@@ -7,7 +7,7 @@ public class EveSpaceObjectDecal : INotify, IInitialize, ITr2Renderable, ITr2Pic
 	public bool HasStaticIndexBuffers { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
-	[BlackArray] public Tr2Effect? DecalEffect { get; set; }
+	public Tr2Effect? DecalEffect { get; set; }
 	public Vector3D<float> Position { get; set; }
 	public Vector4D<float> Rotation { get; set; }
 	public Vector3D<float> Scaling { get; set; }

@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class WodPlaceableRes : IRoot {
-	[BlackArray] public Tr2Model? VisualModel { get; set; }
+	public Tr2Model? VisualModel { get; set; }
 	public float NearFadeDistance { get; set; }
 	public float FarFadeDistance { get; set; }
 	public bool IsShadowCaster { get; set; }

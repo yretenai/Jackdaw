@@ -4,20 +4,20 @@
 namespace Jackdaw.Black;
 
 public class Tr2PostProcess2 : IRoot {
-	[BlackArray] public Tr2PPSignalLossEffect? SignalLoss { get; set; }
-	[BlackArray] public Tr2PPGodRaysEffect? GodRays { get; set; }
-	[BlackArray] public Tr2PPBloomEffect? Bloom { get; set; }
-	[BlackArray] public Tr2PPDynamicExposureEffect? DynamicExposure { get; set; }
-	[BlackArray] public Tr2PPFilmGrainEffect? FilmGrain { get; set; }
-	[BlackArray] public Tr2PPDesaturateEffect? Desaturate { get; set; }
-	[BlackArray] public Tr2PPFadeEffect? Fade { get; set; }
-	[BlackArray] public Tr2PPLutEffect? Lut { get; set; }
+	public Tr2PPSignalLossEffect? SignalLoss { get; set; }
+	public Tr2PPGodRaysEffect? GodRays { get; set; }
+	public Tr2PPBloomEffect? Bloom { get; set; }
+	public Tr2PPDynamicExposureEffect? DynamicExposure { get; set; }
+	public Tr2PPFilmGrainEffect? FilmGrain { get; set; }
+	public Tr2PPDesaturateEffect? Desaturate { get; set; }
+	public Tr2PPFadeEffect? Fade { get; set; }
+	public Tr2PPLutEffect? Lut { get; set; }
 	public List<IRoot?>? Luts { get; set; }
-	[BlackArray] public Tr2PPVignetteEffect? Vignette { get; set; }
-	[BlackArray] public Tr2PPFogEffect? Fog { get; set; }
-	[BlackArray] public Tr2PPTaaEffect? Taa { get; set; }
-	[BlackArray] public Tr2PPDepthOfFieldEffect? DepthOfField { get; set; }
-	[BlackArray] public Tr2PPTonemappingEffect? Tonemapping { get; set; }
-	[BlackArray] public Tr2PPColorCorrectionEffect? ColorCorrection { get; set; }
-	[BlackArray] public Tr2PPGenericEffect? GenericEffect { get; set; }
+	public Tr2PPVignetteEffect? Vignette { get; set; }
+	public Tr2PPFogEffect? Fog { get; set; }
+	public Tr2PPTaaEffect? Taa { get; set; }
+	public Tr2PPDepthOfFieldEffect? DepthOfField { get; set; }
+	public Tr2PPTonemappingEffect? Tonemapping { get; set; }
+	public Tr2PPColorCorrectionEffect? ColorCorrection { get; set; }
+	public Tr2PPGenericEffect? GenericEffect { get; set; }
 }

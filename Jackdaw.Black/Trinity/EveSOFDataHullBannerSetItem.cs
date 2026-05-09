@@ -9,7 +9,7 @@ public class EveSOFDataHullBannerSetItem : IRoot {
 	public Vector3D<float> Position { get; set; }
 	public Vector3D<float> Scaling { get; set; }
 	public Vector4D<float> Rotation { get; set; }
-	[BlackArray] public EveSOFDataPointLightAttachment? Light { get; set; }
+	public EveSOFDataPointLightAttachment? Light { get; set; }
 	public float AngleX { get; set; }
 	public float AngleY { get; set; }
 	public int BoneIndex { get; set; }

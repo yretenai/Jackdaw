@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2MeshArea : IRoot {
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	public string? Name { get; set; }
 	public int Index { get; set; }
 	public int Count { get; set; }

@@ -11,6 +11,6 @@ public class AudEventCurve : ITriFunction, IInitialize, ITriCurveLength, IRoot {
 	public float Length { get; set; }
 	public int Extrapolation { get; set; }
 	public List<IRoot?>? Keys { get; set; }
-	[BlackArray] public AudEmitter? AudioEmitter { get; set; }
-	[BlackArray] public ITriObserverLocal? SourceTriObserver { get; set; }
+	public AudEmitter? AudioEmitter { get; set; }
+	public ITriObserverLocal? SourceTriObserver { get; set; }
 }

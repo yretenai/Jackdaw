@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class EveCloudEditableVolume : IListNotify, IInitialize, INotify, IRoot {
-	[BlackArray] public TriTextureRes? Texture { get; set; }
-	[BlackArray] public Tr2HostBitmap? Bitmap { get; set; }
+	public TriTextureRes? Texture { get; set; }
+	public Tr2HostBitmap? Bitmap { get; set; }
 	public List<IRoot?>? Balls { get; set; }
 	public int Width { get; set; }
 	public int Height { get; set; }

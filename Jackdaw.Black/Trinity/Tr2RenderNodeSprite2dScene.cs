@@ -4,6 +4,6 @@
 namespace Jackdaw.Black;
 
 public class Tr2RenderNodeSprite2dScene : ITr2RenderNode, IRoot {
-	[BlackArray] public Tr2Sprite2dScene? Scene { get; set; }
-	[BlackArray] public ITr2RenderNode? Background { get; set; }
+	public Tr2Sprite2dScene? Scene { get; set; }
+	public ITr2RenderNode? Background { get; set; }
 }

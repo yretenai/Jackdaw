@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveTurretSet : EveEntity, IInitialize, INotify, ITr2Renderable, IRoot {
-	[BlackArray] public ITriTargetable? TargetObject { get; set; }
+	public ITriTargetable? TargetObject { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool DisplayEffects { get; set; }
@@ -19,10 +19,10 @@ public class EveTurretSet : EveEntity, IInitialize, INotify, ITr2Renderable, IRo
 	public bool UseDynamicBounds { get; set; }
 	public Vector4D<float> BoundingSphere { get; set; }
 	public float BottomClipHeight { get; set; }
-	[BlackArray] public Tr2Effect? TurretEffect { get; set; }
+	public Tr2Effect? TurretEffect { get; set; }
 	public string? GeometryResPath { get; set; }
-	[BlackArray] public TriGeometryRes? GeometryResource { get; set; }
-	[BlackArray] public EveTurretTarget? Target { get; set; }
+	public TriGeometryRes? GeometryResource { get; set; }
+	public EveTurretTarget? Target { get; set; }
 	public bool LaserMissBehaviour { get; set; }
 	public bool ProjectileMissBehaviour { get; set; }
 	public float ImpactSize { get; set; }
@@ -47,18 +47,18 @@ public class EveTurretSet : EveEntity, IInitialize, INotify, ITr2Renderable, IRo
 	public float SysBonePitch03Factor { get; set; }
 	public int State { get; set; }
 	public string? FiringEffectResPath { get; set; }
-	[BlackArray] public EveTurretFiringFX? FiringEffect { get; set; }
+	public EveTurretFiringFX? FiringEffect { get; set; }
 	public bool UseLowLodFiringTransform { get; set; }
 	public Vector3D<float> LowLodFiringEffectTranslation { get; set; }
 	public Vector3D<float> LowLodFiringEffectScale { get; set; }
 	public Vector4D<float> LowLodFiringEffectRotation { get; set; }
 	public bool ChooseRandomLocator { get; set; }
 	public bool RandomizeExplosionRotation { get; set; }
-	[BlackArray] public IEveSpaceObjectChild? AmbientEffect { get; set; }
-	[BlackArray] public EveChildInstanceContainer? GeneratedDistributedAmbientEffect { get; set; }
+	public IEveSpaceObjectChild? AmbientEffect { get; set; }
+	public EveChildInstanceContainer? GeneratedDistributedAmbientEffect { get; set; }
 	public bool AmbientEffectEditingMode { get; set; }
 	public bool PlayMovementSound { get; set; }
-	[BlackArray] public TriObserverLocal? TurretMovementObserver { get; set; }
+	public TriObserverLocal? TurretMovementObserver { get; set; }
 	[BlackUseNamePool] public string? IdleToTargetingMovementAudioEvent { get; set; }
 	[BlackUseNamePool] public string? TargetingToIdleMovementAudioEvent { get; set; }
 }

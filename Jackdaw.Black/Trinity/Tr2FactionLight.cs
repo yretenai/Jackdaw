@@ -20,7 +20,7 @@ public class Tr2FactionLight : Tr2Light, IEveInheritPropertiesOwner, IInitialize
 	public int CastsShadows { get; set; }
 	public bool IsVolumetric { get; set; }
 	public string? Name { get; set; }
-	[BlackArray] public Tr2LightProfileRes? LightProfile { get; set; }
+	public Tr2LightProfileRes? LightProfile { get; set; }
 	[BlackUseNamePool] public string? LightProfilePath { get; set; }
 	public float Saturation { get; set; }
 	public bool IsSpotlight { get; set; }

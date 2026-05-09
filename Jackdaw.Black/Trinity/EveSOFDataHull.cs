@@ -21,7 +21,7 @@ public class EveSOFDataHull : IRoot {
 	public List<IRoot?>? TransparentAreas { get; set; }
 	public List<IRoot?>? AdditiveAreas { get; set; }
 	public List<IRoot?>? DistortionAreas { get; set; }
-	[BlackArray] public EveSOFDataPatternPerHull? DefaultPattern { get; set; }
+	public EveSOFDataPatternPerHull? DefaultPattern { get; set; }
 	public List<IRoot?>? SpriteSets { get; set; }
 	public List<IRoot?>? SpotlightSets { get; set; }
 	public List<IRoot?>? PlaneSets { get; set; }
@@ -32,7 +32,7 @@ public class EveSOFDataHull : IRoot {
 	public List<IRoot?>? DecalSets { get; set; }
 	public List<IRoot?>? LightSets { get; set; }
 	public int ImpactEffectType { get; set; }
-	[BlackArray] public EveSOFDataHullBooster? Booster { get; set; }
+	public EveSOFDataHullBooster? Booster { get; set; }
 	public Vector3D<float> AudioPosition { get; set; }
 	public List<IRoot?>? LocatorTurrets { get; set; }
 	public List<IRoot?>? LocatorSets { get; set; }

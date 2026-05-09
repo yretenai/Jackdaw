@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class EveSOFData : IRoot {
-	[BlackArray] public EveSOFDataGeneric? Generic { get; set; }
+	public EveSOFDataGeneric? Generic { get; set; }
 	public List<IRoot?>? Hull { get; set; }
 	public List<IRoot?>? Faction { get; set; }
 	public List<IRoot?>? Race { get; set; }

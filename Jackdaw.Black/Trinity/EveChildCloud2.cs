@@ -5,18 +5,18 @@ namespace Jackdaw.Black;
 
 public class EveChildCloud2 : ITr2VolumetricRenderable, IInitialize, INotify, IListNotify, IEveSpaceObjectChild, ITr2Renderable, ITr2LightOwner, EveEntity, IRoot {
 	public bool LightmapDirty { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
-	[BlackArray] public Tr2Effect? ReflectionEffect { get; set; }
+	public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? ReflectionEffect { get; set; }
 	public int NoiseTextureSize { get; set; }
 	public Vector3D<float> Scaling { get; set; }
 	public Vector3D<float> Translation { get; set; }
 	public Vector4D<float> Rotation { get; set; }
 	public List<IRoot?>? Lights { get; set; }
-	[BlackArray] public Tr2TextureReference? Lightmap { get; set; }
-	[BlackArray] public Tr2TextureAnimation? Animation { get; set; }
+	public Tr2TextureReference? Lightmap { get; set; }
+	public Tr2TextureAnimation? Animation { get; set; }
 	public int ReflectionMode { get; set; }
 	public int MinVisibleQuality { get; set; }
-	[BlackArray] public Tr2DepthStencil? ShadowMapDS { get; set; }
+	public Tr2DepthStencil? ShadowMapDS { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool CastShadows { get; set; }

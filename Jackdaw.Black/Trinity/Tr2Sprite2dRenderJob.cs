@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class Tr2Sprite2dRenderJob : Tr2SpriteObjectBase, ITr2SpriteObject, IRoot {
-	[BlackArray] public TriRenderJob? RenderJob { get; set; }
+	public TriRenderJob? RenderJob { get; set; }
 }

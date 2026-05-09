@@ -5,8 +5,8 @@ namespace Jackdaw.Black;
 
 public class Tr2CurveVector3 : ITriFunction, ITriVectorFunction, ITriCurveLength, IRoot {
 	public string? Name { get; set; }
-	[BlackArray] public Tr2CurveScalar? X { get; set; }
-	[BlackArray] public Tr2CurveScalar? Y { get; set; }
-	[BlackArray] public Tr2CurveScalar? Z { get; set; }
+	public Tr2CurveScalar? X { get; set; }
+	public Tr2CurveScalar? Y { get; set; }
+	public Tr2CurveScalar? Z { get; set; }
 	public Vector3D<float> CurrentValue { get; set; }
 }

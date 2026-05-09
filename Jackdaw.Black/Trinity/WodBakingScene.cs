@@ -4,6 +4,6 @@
 namespace Jackdaw.Black;
 
 public class WodBakingScene : ITr2Scene, IRoot {
-	[BlackArray] public Tr2SkinnedObject? Avatar { get; set; }
+	public Tr2SkinnedObject? Avatar { get; set; }
 	public int VisualizeMethod { get; set; }
 }

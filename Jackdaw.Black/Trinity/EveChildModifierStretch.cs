@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class EveChildModifierStretch : IEveChildTransformModifier, IRoot {
-	[BlackArray] public ITriVectorFunction? Dest { get; set; }
+	public ITriVectorFunction? Dest { get; set; }
 }

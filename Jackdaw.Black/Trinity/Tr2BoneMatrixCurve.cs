@@ -13,6 +13,6 @@ public class Tr2BoneMatrixCurve : ITriFunction, IInitialize, ITriCurveLength, IR
 	public Matrix4X4<float> CurrentValue { get; set; }
 	public Matrix4X4<float> EndValue { get; set; }
 	public List<IRoot?>? Keys { get; set; }
-	[BlackArray] public Tr2SkinnedObject? SkinnedObject { get; set; }
+	public Tr2SkinnedObject? SkinnedObject { get; set; }
 	public Matrix4X4<float> Transform { get; set; }
 }

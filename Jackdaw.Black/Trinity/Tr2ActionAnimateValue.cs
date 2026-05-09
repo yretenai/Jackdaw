@@ -10,6 +10,6 @@ public class Tr2ActionAnimateValue : ITr2ControllerAction, ITr2Updateable, INoti
 	public object? Destination { get; set; }
 	public string? Attribute { get; set; }
 	public string? Value { get; set; }
-	[BlackArray] public ITriScalarFunction? Curve { get; set; }
+	public ITriScalarFunction? Curve { get; set; }
 	public bool DelayBinding { get; set; }
 }

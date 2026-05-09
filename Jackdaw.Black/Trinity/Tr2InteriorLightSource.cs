@@ -13,7 +13,7 @@ public class Tr2InteriorLightSource : IInitialize, INotify, ITr2InteriorLight, I
 	public Vector4D<float> Color { get; set; }
 	public float Falloff { get; set; }
 	public float SpecularIntensity { get; set; }
-	[BlackArray] public Tr2KelvinColor? KelvinColor { get; set; }
+	public Tr2KelvinColor? KelvinColor { get; set; }
 	public bool UseKelvinColor { get; set; }
 	public bool PrimaryLighting { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }

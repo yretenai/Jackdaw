@@ -27,9 +27,9 @@ public class EveChildContainer : EveEntity, ITr2LightOwner, IEveSpaceObjectChild
 	public bool Mute { get; set; }
 	public int DisplayFilter { get; set; }
 	public bool AlwaysOn { get; set; }
-	[BlackArray] public EveChildInheritProperties? InheritProperties { get; set; }
+	public EveChildInheritProperties? InheritProperties { get; set; }
 	public int Origin { get; set; }
 	public List<IRoot?>? FxAttributes { get; set; }
-	[BlackArray] public ITr2GrannyAnimationOwner? AnimationOwner { get; set; }
+	public ITr2GrannyAnimationOwner? AnimationOwner { get; set; }
 	public List<IRoot?>? Attachments { get; set; }
 }

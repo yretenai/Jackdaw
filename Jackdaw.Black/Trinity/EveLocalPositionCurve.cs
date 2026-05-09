@@ -5,11 +5,11 @@ namespace Jackdaw.Black;
 
 public class EveLocalPositionCurve : ITriVectorFunction, IRoot {
 	public int Behavior { get; set; }
-	[BlackArray] public IEveSpaceObject2? Parent { get; set; }
-	[BlackArray] public EveTurretSet? TurretSetObject { get; set; }
-	[BlackArray] public ITriVectorFunction? ParentPositionCurve { get; set; }
-	[BlackArray] public ITriQuaternionFunction? ParentRotationCurve { get; set; }
-	[BlackArray] public ITriVectorFunction? AlignPositionCurve { get; set; }
+	public IEveSpaceObject2? Parent { get; set; }
+	public EveTurretSet? TurretSetObject { get; set; }
+	public ITriVectorFunction? ParentPositionCurve { get; set; }
+	public ITriQuaternionFunction? ParentRotationCurve { get; set; }
+	public ITriVectorFunction? AlignPositionCurve { get; set; }
 	public float Offset { get; set; }
 	public int LocatorIndex { get; set; }
 	public string? LocatorSetName { get; set; }

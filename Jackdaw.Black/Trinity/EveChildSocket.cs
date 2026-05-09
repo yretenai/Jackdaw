@@ -11,7 +11,7 @@ public class EveChildSocket : IEveSpaceObjectChild, ITr2CurveSetOwner, IInitiali
 	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
-	[BlackArray] public EveChildPlug? Plug { get; set; }
+	public EveChildPlug? Plug { get; set; }
 	public string? Name { get; set; }
 	public string? ResPath { get; set; }
 	public bool Display { get; set; }

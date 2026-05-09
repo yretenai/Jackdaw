@@ -14,6 +14,6 @@ public class BlueSysInfo : IRoot {
 	[BlackUseNamePool] public string? ComputerName { get; set; }
 	[BlackUseNamePool] public string? DomainName { get; set; }
 	public long ProcessStartTime { get; set; }
-	[BlackArray] public BlueSysInfoCpu? Cpu { get; set; }
-	[BlackArray] public BlueSysInfoOs? Os { get; set; }
+	public BlueSysInfoCpu? Cpu { get; set; }
+	public BlueSysInfoOs? Os { get; set; }
 }

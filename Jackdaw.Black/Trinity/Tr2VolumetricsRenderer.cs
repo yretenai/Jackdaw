@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class Tr2VolumetricsRenderer : IRoot {
-	[BlackArray] public Tr2TextureReference? MieEnvironmentMap { get; set; }
+	public Tr2TextureReference? MieEnvironmentMap { get; set; }
 	public bool LogBlending { get; set; }
 	public double LogBlendingSmoothness { get; set; }
 	public float Thickness { get; set; }

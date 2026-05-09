@@ -5,8 +5,8 @@ namespace Jackdaw.Black;
 
 public class EveTrailsSet : IInitialize, INotify, IRoot {
 	public bool Display { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
-	[BlackArray] public TriGeometryRes? GeometryResource { get; set; }
+	public Tr2Effect? Effect { get; set; }
+	public TriGeometryRes? GeometryResource { get; set; }
 	public string? GeometryResPath { get; set; }
 	public float FadeSpeed { get; set; }
 }

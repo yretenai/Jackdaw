@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class EveSOFDataPatternApplicationGroup : IRoot {
 	public string? Name { get; set; }
-	[BlackArray] public EveSOFDataPatternLayerProperties? Layer1Properties { get; set; }
-	[BlackArray] public EveSOFDataPatternLayerProperties? Layer2Properties { get; set; }
+	public EveSOFDataPatternLayerProperties? Layer1Properties { get; set; }
+	public EveSOFDataPatternLayerProperties? Layer2Properties { get; set; }
 	public List<IRoot?>? Projections { get; set; }
 }

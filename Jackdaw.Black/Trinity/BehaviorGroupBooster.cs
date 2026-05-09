@@ -10,8 +10,8 @@ public class BehaviorGroupBooster : IInitialize, INotify, IRoot {
 	public int AtlasIndex0 { get; set; }
 	public int AtlasIndex1 { get; set; }
 	public bool Display { get; set; }
-	[BlackArray] public Tr2Effect? BoosterEffect { get; set; }
-	[BlackArray] public Tr2Effect? HaloFlareEffect { get; set; }
+	public Tr2Effect? BoosterEffect { get; set; }
+	public Tr2Effect? HaloFlareEffect { get; set; }
 	public Vector3D<float> HaloFlareOffset { get; set; }
 	public Vector3D<float> HaloFlareScale { get; set; }
 	public float HaloFlareBrightness { get; set; }
@@ -19,7 +19,7 @@ public class BehaviorGroupBooster : IInitialize, INotify, IRoot {
 	public float HaloFlareNoiseAmplitude { get; set; }
 	public float HaloFlareNoiseSpeed { get; set; }
 	public int HaloFlareNoiseOctaves { get; set; }
-	[BlackArray] public Tr2Effect? AmbientFlareEffect { get; set; }
+	public Tr2Effect? AmbientFlareEffect { get; set; }
 	public Vector3D<float> AmbientFlareOffset { get; set; }
 	public Vector3D<float> AmbientFlareScale { get; set; }
 	public float AmbientFlareBrightness { get; set; }

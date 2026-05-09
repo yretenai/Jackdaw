@@ -13,5 +13,5 @@ public class EveSmartLightPointLight : EveSmartLightBaseGroup, IInitialize, INot
 	public Vector4D<float> StaticOffsetRotation { get; set; }
 	public string? Name { get; set; }
 	[BlackUseNamePool] public string? LightProfilePath { get; set; }
-	[BlackArray] public Tr2LightProfileRes? LightProfile { get; set; }
+	public Tr2LightProfileRes? LightProfile { get; set; }
 }

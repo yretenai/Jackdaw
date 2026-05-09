@@ -9,5 +9,5 @@ public class EveSpriteSet : IInitialize, IEveSpaceObjectAttachment, ITr2LightOwn
 	public string? Name { get; set; }
 	public float Intensity { get; set; }
 	public List<IRoot?>? Sprites { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 }

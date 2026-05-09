@@ -8,5 +8,5 @@ public class AudioCurveSetDriver : ICurveSetDriver, IInitialize, IRoot {
 	public float AudioParameterValue { get; set; }
 	[BlackUseNamePool] public string? AudioParameterName { get; set; }
 	[BlackUseNamePool] public string? Name { get; set; }
-	[BlackArray] public ITriScalarFunction? FallbackCurve { get; set; }
+	public ITriScalarFunction? FallbackCurve { get; set; }
 }

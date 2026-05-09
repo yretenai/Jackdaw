@@ -6,5 +6,5 @@ namespace Jackdaw.Black;
 public class Tr2GrannyPrimitiveSet : Tr2PrimitiveSet, IInitialize, IRoot {
 	public bool RenderSolid { get; set; }
 	public string? GrannyResPath { get; set; }
-	[BlackArray] public TriGrannyRes? GrannyRes { get; set; }
+	public TriGrannyRes? GrannyRes { get; set; }
 }

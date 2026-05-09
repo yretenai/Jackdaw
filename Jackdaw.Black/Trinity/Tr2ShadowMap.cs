@@ -6,8 +6,8 @@ namespace Jackdaw.Black;
 public class Tr2ShadowMap : INotify, IRoot {
 	public int Size { get; set; }
 	public int SplitCount { get; set; }
-	[BlackArray] public Tr2Denoiser? Denoiser { get; set; }
-	[BlackArray] public Tr2Effect? CascadeEffect { get; set; }
+	public Tr2Denoiser? Denoiser { get; set; }
+	public Tr2Effect? CascadeEffect { get; set; }
 	public float SplitNr0 { get; set; }
 	public float SplitNr1 { get; set; }
 	public float SplitNr2 { get; set; }

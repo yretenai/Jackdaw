@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class TriStepClearUav : TriRenderStep, IRoot {
-	[BlackArray] public ITr2GpuBuffer? Buffer { get; set; }
+	public ITr2GpuBuffer? Buffer { get; set; }
 	public bool ClearWithFloat { get; set; }
 	public Vector4D<float> FloatValue { get; set; }
 	public int BitValue0 { get; set; }

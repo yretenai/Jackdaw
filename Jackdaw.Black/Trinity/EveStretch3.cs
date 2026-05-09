@@ -4,25 +4,25 @@
 namespace Jackdaw.Black;
 
 public class EveStretch3 : INotify, IListNotify, IInitialize, IEveSpaceObject2, IEveFiringEffectElement, ITr2ControllerOwner, ITr2CurveSetOwner, ITr2DynamicBindingOwner, ITr2SoundEmitterOwner, EveEntity, IRoot {
-	[BlackArray] public IEveSpaceObject2? SourceSpaceObject { get; set; }
-	[BlackArray] public IEveSpaceObject2? DestSpaceObject { get; set; }
+	public IEveSpaceObject2? SourceSpaceObject { get; set; }
+	public IEveSpaceObject2? DestSpaceObject { get; set; }
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool Update { get; set; }
 	public Vector3D<float> SourcePosition { get; set; }
 	public Vector3D<float> DestinationPosition { get; set; }
-	[BlackArray] public ITriVectorFunction? Source { get; set; }
-	[BlackArray] public ITriVectorFunction? Dest { get; set; }
-	[BlackArray] public IEveSpaceObjectChild? SourceObject { get; set; }
-	[BlackArray] public IEveSpaceObjectChild? DestObject { get; set; }
-	[BlackArray] public IEveSpaceObjectChild? StretchObject { get; set; }
-	[BlackArray] public IEveSpaceObjectChild? MoveObject { get; set; }
+	public ITriVectorFunction? Source { get; set; }
+	public ITriVectorFunction? Dest { get; set; }
+	public IEveSpaceObjectChild? SourceObject { get; set; }
+	public IEveSpaceObjectChild? DestObject { get; set; }
+	public IEveSpaceObjectChild? StretchObject { get; set; }
+	public IEveSpaceObjectChild? MoveObject { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public long StartTime { get; set; }
 	public List<IRoot?>? Controllers { get; set; }
 	public List<IRoot?>? DynamicBindings { get; set; }
-	[BlackArray] public TriFloat? Length { get; set; }
-	[BlackArray] public TriFloat? MoveProgression { get; set; }
-	[BlackArray] public IStretchAudio? StretchAudio { get; set; }
-	[BlackArray] public ITr2Audio? Audio { get; set; }
+	public TriFloat? Length { get; set; }
+	public TriFloat? MoveProgression { get; set; }
+	public IStretchAudio? StretchAudio { get; set; }
+	public ITr2Audio? Audio { get; set; }
 }

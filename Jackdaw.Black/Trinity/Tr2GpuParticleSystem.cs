@@ -9,15 +9,15 @@ public class Tr2GpuParticleSystem : IInitialize, INotify, IRoot {
 	public float SortTime { get; set; }
 	public float RenderTime { get; set; }
 	public bool HasParticles { get; set; }
-	[BlackArray] public Tr2Effect? Emit { get; set; }
-	[BlackArray] public Tr2Effect? Update { get; set; }
-	[BlackArray] public Tr2Effect? Render { get; set; }
-	[BlackArray] public Tr2Effect? Clear { get; set; }
-	[BlackArray] public Tr2Effect? SetDrawParameters { get; set; }
-	[BlackArray] public Tr2Effect? SetSortParameters { get; set; }
-	[BlackArray] public Tr2Effect? Sort { get; set; }
-	[BlackArray] public Tr2Effect? SortStep { get; set; }
-	[BlackArray] public Tr2Effect? SortInner { get; set; }
+	public Tr2Effect? Emit { get; set; }
+	public Tr2Effect? Update { get; set; }
+	public Tr2Effect? Render { get; set; }
+	public Tr2Effect? Clear { get; set; }
+	public Tr2Effect? SetDrawParameters { get; set; }
+	public Tr2Effect? SetSortParameters { get; set; }
+	public Tr2Effect? Sort { get; set; }
+	public Tr2Effect? SortStep { get; set; }
+	public Tr2Effect? SortInner { get; set; }
 	public int MaxParticles { get; set; }
 	public bool EnableEmit { get; set; }
 	public bool EnableUpdate { get; set; }

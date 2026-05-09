@@ -17,9 +17,9 @@ public class EveSpherePin : IInitialize, ITr2Renderable, IEveTransform, IEveSpac
 	public float PinAlphaThreshold { get; set; }
 	public Vector4D<float> UvAtlasScaleOffset { get; set; }
 	public string? PinEffectResPath { get; set; }
-	[BlackArray] public Tr2Effect? PinEffect { get; set; }
+	public Tr2Effect? PinEffect { get; set; }
 	public bool EnablePicking { get; set; }
-	[BlackArray] public Tr2Effect? PickEffect { get; set; }
+	public Tr2Effect? PickEffect { get; set; }
 	public string? GeometryResPath { get; set; }
 	public bool Display { get; set; }
 	public float SortValueMultiplier { get; set; }

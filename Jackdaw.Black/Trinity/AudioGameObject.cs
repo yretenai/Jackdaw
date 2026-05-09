@@ -6,10 +6,10 @@ namespace Jackdaw.Black;
 public class AudioGameObject : IEveSpaceObject2, IInitialize, IWorldPosition, ITr2DebugRenderable, INotify, IRoot {
 	public Vector4D<float> Rotation { get; set; }
 	public Vector3D<float> Translation { get; set; }
-	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
-	[BlackArray] public ITriQuaternionFunction? RotationCurve { get; set; }
+	public ITriVectorFunction? TranslationCurve { get; set; }
+	public ITriQuaternionFunction? RotationCurve { get; set; }
 	public bool Display { get; set; }
-	[BlackArray] public ITr2AudEmitter? AudioEmitter { get; set; }
+	public ITr2AudEmitter? AudioEmitter { get; set; }
 	public bool Mute { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? ExternalParameters { get; set; }

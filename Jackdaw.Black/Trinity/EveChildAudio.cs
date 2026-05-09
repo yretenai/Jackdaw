@@ -6,5 +6,5 @@ namespace Jackdaw.Black;
 public class EveChildAudio : IEveSpaceObjectChild, IInitialize, INotify, IRoot {
 	public string? Name { get; set; }
 	public bool Mute { get; set; }
-	[BlackArray] public ITr2AudEmitter? AudioEmitter { get; set; }
+	public ITr2AudEmitter? AudioEmitter { get; set; }
 }

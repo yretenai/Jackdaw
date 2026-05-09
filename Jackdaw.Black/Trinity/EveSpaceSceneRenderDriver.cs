@@ -5,11 +5,11 @@ namespace Jackdaw.Black;
 
 public class EveSpaceSceneRenderDriver : ITr2RenderNode, IRoot {
 	public bool DebugMode { get; set; }
-	[BlackArray] public EveSpaceScene? Scene { get; set; }
-	[BlackArray] public Tr2SSAO? SSAO { get; set; }
-	[BlackArray] public TriProjection? Projection { get; set; }
-	[BlackArray] public TriView? View { get; set; }
-	[BlackArray] public EveCamera? Camera { get; set; }
+	public EveSpaceScene? Scene { get; set; }
+	public Tr2SSAO? SSAO { get; set; }
+	public TriProjection? Projection { get; set; }
+	public TriView? View { get; set; }
+	public EveCamera? Camera { get; set; }
 	public int InternalPixelFormat { get; set; }
 	public int ShadowQuality { get; set; }
 	public int AntiAliasingQuality { get; set; }
@@ -24,12 +24,12 @@ public class EveSpaceSceneRenderDriver : ITr2RenderNode, IRoot {
 	public bool EnableDistortion { get; set; }
 	public bool ShowFPS { get; set; }
 	public int VisualizeMethod { get; set; }
-	[BlackArray] public Tr2Effect? DistortionEffect { get; set; }
+	public Tr2Effect? DistortionEffect { get; set; }
 	public List<IRoot?>? ToolsScenes { get; set; }
-	[BlackArray] public Tr2PostProcessRenderer? PostProcess { get; set; }
-	[BlackArray] public TriStepRenderFps? FpsRenderer { get; set; }
-	[BlackArray] public ITr2RenderNode? Background { get; set; }
-	[BlackArray] public ITr2RenderNode? SceneOverlay { get; set; }
+	public Tr2PostProcessRenderer? PostProcess { get; set; }
+	public TriStepRenderFps? FpsRenderer { get; set; }
+	public ITr2RenderNode? Background { get; set; }
+	public ITr2RenderNode? SceneOverlay { get; set; }
 	public string? Name { get; set; }
 	public bool EnableRendering { get; set; }
 	public bool MainPassRenderingEnabled { get; set; }

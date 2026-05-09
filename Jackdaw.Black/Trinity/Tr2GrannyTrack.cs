@@ -9,5 +9,5 @@ public class Tr2GrannyTrack : ITriFunction, IInitialize, INotify, IRoot {
 	public string? Name { get; set; }
 	public string? Group { get; set; }
 	public string? GrannyResPath { get; set; }
-	[BlackArray] public TriGrannyRes? GrannyRes { get; set; }
+	public TriGrannyRes? GrannyRes { get; set; }
 }

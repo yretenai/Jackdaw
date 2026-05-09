@@ -4,9 +4,9 @@
 namespace Jackdaw.Black;
 
 public class EveShip2 : EveMobile, IEveSpaceObject2, ITr2Renderable, IListNotify, IRoot {
-	[BlackArray] public IRoot? AudioSpeedParameter { get; set; }
+	public IRoot? AudioSpeedParameter { get; set; }
 	public float MaxSpeed { get; set; }
-	[BlackArray] public TriFloat? Speed { get; set; }
-	[BlackArray] public EveBoosterSet2? Boosters { get; set; }
+	public TriFloat? Speed { get; set; }
+	public EveBoosterSet2? Boosters { get; set; }
 	public int DisplayKillCounterValue { get; set; }
 }

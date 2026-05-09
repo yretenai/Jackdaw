@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class EveVirtualCameraSystem : IRoot {
-	[BlackArray] public EveVirtualCamera? MainCamera { get; set; }
+	public EveVirtualCamera? MainCamera { get; set; }
 	public List<IRoot?>? Cameras { get; set; }
-	[BlackArray] public EveVirtualCameraTransitionBase? Transition { get; set; }
-	[BlackArray] public EveVirtualCamera? ExternalCamera { get; set; }
+	public EveVirtualCameraTransitionBase? Transition { get; set; }
+	public EveVirtualCamera? ExternalCamera { get; set; }
 }

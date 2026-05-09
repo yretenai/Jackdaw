@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class Tr2TranslationAdapter : ITriVectorFunction, IRoot {
 	public Vector4D<float> RotationOffset { get; set; }
-	[BlackArray] public ITriVectorFunction? Curve { get; set; }
+	public ITriVectorFunction? Curve { get; set; }
 	public Vector3D<float> Value { get; set; }
 	public Vector3D<float> CurrentValue { get; set; }
 }

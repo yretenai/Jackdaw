@@ -16,7 +16,7 @@ public class Tr2Transform : ITr2Renderable, IRoot {
 	public bool Update { get; set; }
 	public float DistanceBasedScaleArg1 { get; set; }
 	public float DistanceBasedScaleArg2 { get; set; }
-	[BlackArray] public Tr2MeshBase? Mesh { get; set; }
+	public Tr2MeshBase? Mesh { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public float SortValueMultiplier { get; set; }
 }

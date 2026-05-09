@@ -7,7 +7,7 @@ public class EveDistributionModifierTransformOffset : IEveDistributionModifier, 
 	public Vector3D<float> Translation { get; set; }
 	public Vector4D<float> Rotation { get; set; }
 	public Vector3D<float> Scaling { get; set; }
-	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
-	[BlackArray] public ITriQuaternionFunction? RotationCurve { get; set; }
-	[BlackArray] public ITriVectorFunction? ScaleCurve { get; set; }
+	public ITriVectorFunction? TranslationCurve { get; set; }
+	public ITriQuaternionFunction? RotationCurve { get; set; }
+	public ITriVectorFunction? ScaleCurve { get; set; }
 }

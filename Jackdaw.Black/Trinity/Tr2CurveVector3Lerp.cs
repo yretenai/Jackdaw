@@ -9,5 +9,5 @@ public class Tr2CurveVector3Lerp : ITriFunction, ITriVectorFunction, IRoot {
 	public Vector3D<float> CurrentValue { get; set; }
 	public float CurveStartTime { get; set; }
 	public int StartInterpolation { get; set; }
-	[BlackArray] public ITriVectorFunction? Curve { get; set; }
+	public ITriVectorFunction? Curve { get; set; }
 }

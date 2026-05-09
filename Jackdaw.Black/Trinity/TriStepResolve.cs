@@ -4,7 +4,7 @@
 namespace Jackdaw.Black;
 
 public class TriStepResolve : TriRenderStep, IRoot {
-	[BlackArray] public Tr2RenderTarget? Source { get; set; }
-	[BlackArray] public Tr2RenderTarget? Destination { get; set; }
+	public Tr2RenderTarget? Source { get; set; }
+	public Tr2RenderTarget? Destination { get; set; }
 	public bool GenerateMipmap { get; set; }
 }

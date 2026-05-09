@@ -5,5 +5,5 @@ namespace Jackdaw.Black;
 
 public class TriStepRenderPass : TriRenderStep, IRoot {
 	public int PassType { get; set; }
-	[BlackArray] public ITr2MultiPassScene? Scene { get; set; }
+	public ITr2MultiPassScene? Scene { get; set; }
 }

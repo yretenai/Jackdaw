@@ -4,6 +4,6 @@
 namespace Jackdaw.Black;
 
 public class Tr2TexturedSpriteObject : Tr2SpriteObject, IRoot {
-	[BlackArray] public ITr2Sprite2dTexture? TexturePrimary { get; set; }
-	[BlackArray] public ITr2Sprite2dTexture? TextureSecondary { get; set; }
+	public ITr2Sprite2dTexture? TexturePrimary { get; set; }
+	public ITr2Sprite2dTexture? TextureSecondary { get; set; }
 }

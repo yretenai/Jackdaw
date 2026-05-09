@@ -5,6 +5,6 @@ namespace Jackdaw.Black;
 
 public class EveSOFDataPatternPerHull : IRoot {
 	public string? Name { get; set; }
-	[BlackArray] public EveSOFDataPatternTransform? TransformLayer1 { get; set; }
-	[BlackArray] public EveSOFDataPatternTransform? TransformLayer2 { get; set; }
+	public EveSOFDataPatternTransform? TransformLayer1 { get; set; }
+	public EveSOFDataPatternTransform? TransformLayer2 { get; set; }
 }

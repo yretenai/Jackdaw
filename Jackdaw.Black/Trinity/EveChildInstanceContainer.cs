@@ -15,9 +15,9 @@ public class EveChildInstanceContainer : IEveSpaceObjectChild, ITr2CurveSetOwner
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool AlwaysOn { get; set; }
-	[BlackArray] public EveChildInheritProperties? InheritProperties { get; set; }
+	public EveChildInheritProperties? InheritProperties { get; set; }
 	public int Origin { get; set; }
-	[BlackArray] public IEveSpaceObjectChild? Source { get; set; }
+	public IEveSpaceObjectChild? Source { get; set; }
 	public List<IRoot?>? Instances { get; set; }
 	public bool Reset { get; set; }
 	public string? LocatorSet { get; set; }

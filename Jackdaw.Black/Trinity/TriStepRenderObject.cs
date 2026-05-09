@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class TriStepRenderObject : TriRenderStep, IRoot {
-	[BlackArray] public ITr2Renderable? Renderable { get; set; }
-	[BlackArray] public Tr2Material? EffectOverride { get; set; }
+	public ITr2Renderable? Renderable { get; set; }
+	public Tr2Material? EffectOverride { get; set; }
 	public bool RenderOpaque { get; set; }
 	public bool RenderDecal { get; set; }
 	public bool RenderTransparent { get; set; }

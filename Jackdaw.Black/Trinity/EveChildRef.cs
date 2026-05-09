@@ -11,7 +11,7 @@ public class EveChildRef : IEveSpaceObjectChild, ITr2CurveSetOwner, IInitialize,
 	public Matrix4X4<float> WorldTransform { get; set; }
 	public bool StaticTransform { get; set; }
 	public bool UseSRT { get; set; }
-	[BlackArray] public IEveSpaceObjectChild? Child { get; set; }
+	public IEveSpaceObjectChild? Child { get; set; }
 	public string? Name { get; set; }
 	public string? ResPath { get; set; }
 	public bool LoadChildAutomatically { get; set; }

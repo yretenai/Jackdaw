@@ -10,12 +10,12 @@ public class Tr2InteriorPlaceable : ITr2Interior, ITr2InteriorDynamic, INotify, 
 	public string? Name { get; set; }
 	public bool Display { get; set; }
 	public bool IsUnique { get; set; }
-	[BlackArray] public TriMatrix? Transform { get; set; }
+	public TriMatrix? Transform { get; set; }
 	public string? PlaceableResPath { get; set; }
-	[BlackArray] public WodPlaceableRes? PlaceableRes { get; set; }
+	public WodPlaceableRes? PlaceableRes { get; set; }
 	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
-	[BlackArray] public Tr2VariableStore? VariableStore { get; set; }
+	public Tr2VariableStore? VariableStore { get; set; }
 	public Vector3D<float> ProbeOffset { get; set; }
 	public float DepthOffset { get; set; }
 }

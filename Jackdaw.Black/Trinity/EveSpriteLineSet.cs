@@ -8,6 +8,6 @@ public class EveSpriteLineSet : IInitialize, IEveSpaceObjectAttachment, ITr2Ligh
 	public bool Display { get; set; }
 	public bool Skinned { get; set; }
 	public int EffectHash { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 	public List<IRoot?>? SpriteLines { get; set; }
 }

@@ -12,7 +12,7 @@ public class Tr2Sprite2dTexture : ITr2Sprite2dTexture, IInitialize, INotify, IRo
 	public bool TileX { get; set; }
 	public bool TileY { get; set; }
 	public int RepeatMode { get; set; }
-	[BlackArray] public Tr2AtlasTexture? AtlasTexture { get; set; }
+	public Tr2AtlasTexture? AtlasTexture { get; set; }
 	[BlackUseNamePool] public string? Name { get; set; }
 	public bool UseTransform { get; set; }
 	public Vector2D<float> Translation { get; set; }

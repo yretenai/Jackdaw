@@ -8,5 +8,5 @@ public class Tr2RuntimeInstanceData : ITr2InstanceData, ITr2GenericEmitter, ITr2
 	public string? Name { get; set; }
 	public Vector3D<float> AabbMin { get; set; }
 	public Vector3D<float> AabbMax { get; set; }
-	[BlackArray] public Tr2ParticleSystem? ParticleSystem { get; set; }
+	public Tr2ParticleSystem? ParticleSystem { get; set; }
 }

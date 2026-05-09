@@ -11,6 +11,6 @@ public class Tr2PrimitiveSet : ITr2Renderable, ITr2Pickable, INotify, IRoot {
 	public Matrix4X4<float> LocalTransform { get; set; }
 	public Vector4D<float> Color { get; set; }
 	public string? Name { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
-	[BlackArray] public Tr2Effect? PickEffect { get; set; }
+	public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? PickEffect { get; set; }
 }

@@ -6,6 +6,6 @@ namespace Jackdaw.Black;
 public class EveLineContainer : IEveSpaceObject2, IRoot {
 	public string? Name { get; set; }
 	public List<IRoot?>? Connectors { get; set; }
-	[BlackArray] public EveCurveLineSet? LineSet { get; set; }
+	public EveCurveLineSet? LineSet { get; set; }
 	public bool Display { get; set; }
 }

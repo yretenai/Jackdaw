@@ -4,5 +4,5 @@
 namespace Jackdaw.Black;
 
 public class Tr2GrannyEventTrack : Tr2GrannyTrack, IRoot {
-	[BlackArray] public IBlueEventListener? EventListener { get; set; }
+	public IBlueEventListener? EventListener { get; set; }
 }

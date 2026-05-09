@@ -6,6 +6,6 @@ namespace Jackdaw.Black;
 public class EveMissile : EveSpaceObject2, IEveSpaceObject2, ITr2Renderable, IRoot {
 	public List<IRoot?>? Warheads { get; set; }
 	public bool UpdateWarheads { get; set; }
-	[BlackArray] public ITriTargetable? Target { get; set; }
+	public ITriTargetable? Target { get; set; }
 	public float TargetRadius { get; set; }
 }

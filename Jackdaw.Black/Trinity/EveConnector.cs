@@ -4,8 +4,8 @@
 namespace Jackdaw.Black;
 
 public class EveConnector : IRoot {
-	[BlackArray] public ITriVectorFunction? SourceObject { get; set; }
-	[BlackArray] public ITriVectorFunction? DestObject { get; set; }
+	public ITriVectorFunction? SourceObject { get; set; }
+	public ITriVectorFunction? DestObject { get; set; }
 	public int Type { get; set; }
 	public Vector3D<float> SourcePosition { get; set; }
 	public Vector3D<float> DestPosition { get; set; }

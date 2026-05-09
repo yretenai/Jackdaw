@@ -6,6 +6,6 @@ namespace Jackdaw.Black;
 public class Tr2MaterialParameterStore : INotify, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public string? ParentPath { get; set; }
-	[BlackArray] public Tr2MaterialParameterStore? Parent { get; set; }
+	public Tr2MaterialParameterStore? Parent { get; set; }
 	[BlackExperimental] public Dictionary<string, IRoot?>? Parameters { get; set; }
 }

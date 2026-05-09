@@ -6,7 +6,7 @@ namespace Jackdaw.Black;
 public class Tr2StaticEmitter : ITr2GenericEmitter, INotify, IInitialize, IRoot {
 	public string? Name { get; set; }
 	public string? GeometryResourcePath { get; set; }
-	[BlackArray] public TriGrannyRes? GeometryResource { get; set; }
-	[BlackArray] public Tr2ParticleSystem? ParticleSystem { get; set; }
+	public TriGrannyRes? GeometryResource { get; set; }
+	public Tr2ParticleSystem? ParticleSystem { get; set; }
 	public int MeshIndex { get; set; }
 }

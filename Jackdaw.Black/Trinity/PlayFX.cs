@@ -8,6 +8,6 @@ public class PlayFX : IBehavior, IListNotify, EveEntity, IRoot {
 	public float BehaviorWeight { get; set; }
 	public int Sec { get; set; }
 	public int BehaviorPriority { get; set; }
-	[BlackArray] public IEveFiringEffectElement? FiringEffect { get; set; }
+	public IEveFiringEffectElement? FiringEffect { get; set; }
 	public List<IRoot?>? GeneratedFiringEffects { get; set; }
 }

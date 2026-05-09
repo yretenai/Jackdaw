@@ -5,14 +5,14 @@ namespace Jackdaw.Black;
 
 public class Tr2ProjectBoundingBoxBracket : ITriFunction, IRoot {
 	[BlackUseNamePool] public string? Name { get; set; }
-	[BlackArray] public ITr2BoundingBox? Object { get; set; }
+	public ITr2BoundingBox? Object { get; set; }
 	public bool IntegerCoordinates { get; set; }
 	public float MinProjectedWidth { get; set; }
 	public float MinProjectedHeight { get; set; }
 	public float MaxProjectedWidth { get; set; }
 	public float MaxProjectedHeight { get; set; }
-	[BlackArray] public Tr2Sprite2dContainer? Parent { get; set; }
-	[BlackArray] public Tr2Sprite2dContainer? Bracket { get; set; }
+	public Tr2Sprite2dContainer? Parent { get; set; }
+	public Tr2Sprite2dContainer? Bracket { get; set; }
 	public float ProjectedX { get; set; }
 	public float ProjectedY { get; set; }
 	public float ProjectedZ { get; set; }

@@ -6,5 +6,5 @@ namespace Jackdaw.Black;
 public class Tr2PPGenericEffect : Tr2PPEffect, IRoot {
 	public int Quality { get; set; }
 	public string? ShaderPath { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 }

@@ -14,5 +14,5 @@ public class EveSOFDataHullSpriteSetItem : IRoot {
 	public float Saturation { get; set; }
 	public int BoneIndex { get; set; }
 	public int ColorType { get; set; }
-	[BlackArray] public EveSOFDataPointLightAttachment? Light { get; set; }
+	public EveSOFDataPointLightAttachment? Light { get; set; }
 }

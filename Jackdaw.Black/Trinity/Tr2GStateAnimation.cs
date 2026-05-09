@@ -10,10 +10,10 @@ public class Tr2GStateAnimation : IInitialize, ITr2AnimationUpdater, IRoot {
 	public string? ResPath_ { get; set; }
 	public string? GStateResPath_ { get; set; }
 	public string? Model_ { get; set; }
-	[BlackArray] public TriGrannyRes? GrannyRes { get; set; }
+	public TriGrannyRes? GrannyRes { get; set; }
 	public bool DebugRenderSkeleton { get; set; }
 	public bool DebugRenderJointNames { get; set; }
 	public bool AnimationEnabled { get; set; }
-	[BlackArray] public IBlueEventListener? EventListener { get; set; }
+	public IBlueEventListener? EventListener { get; set; }
 	public List<IRoot?>? Parameters { get; set; }
 }

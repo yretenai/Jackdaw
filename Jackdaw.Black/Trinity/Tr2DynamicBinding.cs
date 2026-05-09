@@ -13,5 +13,5 @@ public class Tr2DynamicBinding : INotify, IRoot {
 	public string? SourceObjectAttribute { get; set; }
 	public float Scale { get; set; }
 	public int BindingDelay { get; set; }
-	[BlackArray] public TriValueBinding? Binding { get; set; }
+	public TriValueBinding? Binding { get; set; }
 }

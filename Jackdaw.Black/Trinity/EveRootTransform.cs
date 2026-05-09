@@ -7,9 +7,9 @@ public class EveRootTransform : Tr2Transform, IEveSpaceObject2, ITriTargetable, 
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? Observers { get; set; }
 	public int LodLevel { get; set; }
-	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
-	[BlackArray] public ITriQuaternionFunction? RotationCurve { get; set; }
-	[BlackArray] public ITriQuaternionFunction? ModelRotationCurve { get; set; }
-	[BlackArray] public ITriVectorFunction? ModelTranslationCurve { get; set; }
+	public ITriVectorFunction? TranslationCurve { get; set; }
+	public ITriQuaternionFunction? RotationCurve { get; set; }
+	public ITriQuaternionFunction? ModelRotationCurve { get; set; }
+	public ITriVectorFunction? ModelTranslationCurve { get; set; }
 	public float BoundingSphereRadius { get; set; }
 }

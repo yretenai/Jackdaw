@@ -7,5 +7,5 @@ public class EveHazeSet : IInitialize, IEveSpaceObjectAttachment, ITr2LightOwner
 	public bool Display { get; set; }
 	public string? Name { get; set; }
 	public List<IRoot?>? Hazes { get; set; }
-	[BlackArray] public Tr2Effect? Effect { get; set; }
+	public Tr2Effect? Effect { get; set; }
 }

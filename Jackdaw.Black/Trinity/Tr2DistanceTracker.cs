@@ -9,8 +9,8 @@ public class Tr2DistanceTracker : ITriFunction, INotify, IRoot {
 	public bool DistanceToClosest { get; set; }
 	public float Value { get; set; }
 	public Vector3D<float> Direction { get; set; }
-	[BlackArray] public ITriVectorFunction? TargetObject { get; set; }
-	[BlackArray] public ITriVectorFunction? SourceObject { get; set; }
+	public ITriVectorFunction? TargetObject { get; set; }
+	public ITriVectorFunction? SourceObject { get; set; }
 	public Vector3D<float> TargetPosition { get; set; }
 	public Vector3D<float> SourcePosition { get; set; }
 }

@@ -4,9 +4,9 @@
 namespace Jackdaw.Black;
 
 public class TriStepRenderTexture : TriRenderStep, IRoot {
-	[BlackArray] public ITr2TextureProvider? Texture { get; set; }
-	[BlackArray] public ITr2TextureProvider? RenderTarget { get; set; }
-	[BlackArray] public ITr2TextureProvider? DepthStencil { get; set; }
+	public ITr2TextureProvider? Texture { get; set; }
+	public ITr2TextureProvider? RenderTarget { get; set; }
+	public ITr2TextureProvider? DepthStencil { get; set; }
 	public Vector2D<float> TlTexCoord { get; set; }
 	public Vector2D<float> BrTexCoord { get; set; }
 	public Vector2D<float> TextureSize { get; set; }

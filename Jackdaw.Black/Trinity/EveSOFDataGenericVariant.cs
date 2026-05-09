@@ -6,5 +6,5 @@ namespace Jackdaw.Black;
 public class EveSOFDataGenericVariant : IRoot {
 	public string? Name { get; set; }
 	public bool IsTransparent { get; set; }
-	[BlackArray] public EveSOFDataHullArea? HullArea { get; set; }
+	public EveSOFDataHullArea? HullArea { get; set; }
 }

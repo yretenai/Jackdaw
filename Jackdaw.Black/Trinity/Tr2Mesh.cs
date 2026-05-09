@@ -5,7 +5,7 @@ namespace Jackdaw.Black;
 
 public class Tr2Mesh : Tr2MeshBase, IInitialize, INotify, IRoot {
 	public bool IsLoading { get; set; }
-	[BlackArray] public TriGeometryRes? Geometry { get; set; }
+	public TriGeometryRes? Geometry { get; set; }
 	public string? GeometryResPath { get; set; }
 	public List<IRoot?>? SerializedMorphAnimations { get; set; }
 	public bool DeferGeometryLoad { get; set; }

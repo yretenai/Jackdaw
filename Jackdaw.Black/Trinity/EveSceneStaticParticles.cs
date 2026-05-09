@@ -10,6 +10,6 @@ public class EveSceneStaticParticles : IInitialize, IRoot {
 	public float ClusterParticleDensity { get; set; }
 	public float ClusterParticleDensityAdjust { get; set; }
 	public float EstimatedSize { get; set; }
-	[BlackArray] public Tr2InstancedMesh? Mesh { get; set; }
+	public Tr2InstancedMesh? Mesh { get; set; }
 	public bool Visible { get; set; }
 }

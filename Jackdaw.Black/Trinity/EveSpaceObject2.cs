@@ -16,8 +16,8 @@ public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pic
 	public Vector3D<float> WorldPosition { get; set; }
 	public Vector4D<float> WorldRotation { get; set; }
 	public float ModelScale { get; set; }
-	[BlackArray] public Tr2MeshBase? Mesh { get; set; }
-	[BlackArray] public Tr2MeshBase? MeshLod { get; set; }
+	public Tr2MeshBase? Mesh { get; set; }
+	public Tr2MeshBase? MeshLod { get; set; }
 	public Vector4D<float> CustomShaderData { get; set; }
 	public int LodLevel { get; set; }
 	public float ClipSphereFactor { get; set; }
@@ -25,7 +25,7 @@ public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pic
 	public Vector3D<float> ClipSphereCenter { get; set; }
 	public float EstimatedPixelDiameter { get; set; }
 	public float EstimatedPixelDiameterWithChildren { get; set; }
-	[BlackArray] public Tr2GrannyAnimation? AnimationUpdater { get; set; }
+	public Tr2GrannyAnimation? AnimationUpdater { get; set; }
 	public Vector3D<float> BoundingSphereCenter { get; set; }
 	public float BoundingSphereRadius { get; set; }
 	public Vector3D<float> ModelWorldPosition { get; set; }
@@ -36,13 +36,13 @@ public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pic
 	public List<IRoot?>? OverlayEffects { get; set; }
 	public List<IRoot?>? Decals { get; set; }
 	public List<IRoot?>? Locators { get; set; }
-	[BlackArray] public EveImpactOverlay? ImpactOverlay { get; set; }
+	public EveImpactOverlay? ImpactOverlay { get; set; }
 	public int LastDamageLocatorHit { get; set; }
 	public List<IRoot?>? Observers { get; set; }
-	[BlackArray] public ITriVectorFunction? TranslationCurve { get; set; }
-	[BlackArray] public ITriQuaternionFunction? RotationCurve { get; set; }
-	[BlackArray] public ITriQuaternionFunction? ModelRotationCurve { get; set; }
-	[BlackArray] public ITriVectorFunction? ModelTranslationCurve { get; set; }
+	public ITriVectorFunction? TranslationCurve { get; set; }
+	public ITriQuaternionFunction? RotationCurve { get; set; }
+	public ITriQuaternionFunction? ModelRotationCurve { get; set; }
+	public ITriVectorFunction? ModelTranslationCurve { get; set; }
 	public List<IRoot?>? LocatorSets { get; set; }
 	public List<IRoot?>? Lights { get; set; }
 	public Vector4D<float> AlbedoColor { get; set; }
@@ -50,10 +50,10 @@ public class EveSpaceObject2 : EveEntity, IEveShadowCaster, IInitialize, ITr2Pic
 	public List<IRoot?>? Attachments { get; set; }
 	public List<IRoot?>? Children { get; set; }
 	public List<IRoot?>? EffectChildren { get; set; }
-	[BlackArray] public EveChildInheritProperties? InheritProperties { get; set; }
+	public EveChildInheritProperties? InheritProperties { get; set; }
 	public List<IRoot?>? CustomMasks { get; set; }
 	public float DirtLevel { get; set; }
-	[BlackArray] public Tr2BindingVector3? PositionDelta { get; set; }
+	public Tr2BindingVector3? PositionDelta { get; set; }
 	public List<IRoot?>? CurveSets { get; set; }
 	public bool DynamicBoundingSphereEnabled { get; set; }
 	public List<IRoot?>? ExternalParameters { get; set; }

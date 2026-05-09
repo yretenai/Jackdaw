@@ -8,5 +8,5 @@ public class TriObserverLocal : ITriObserverLocal, IRoot {
 	public string? Name { get; set; }
 	public Vector3D<float> Front { get; set; }
 	public Vector3D<float> Position { get; set; }
-	[BlackArray] public IBluePlacementObserver? Observer { get; set; }
+	public IBluePlacementObserver? Observer { get; set; }
 }
