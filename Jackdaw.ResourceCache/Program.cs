@@ -47,11 +47,11 @@ internal class Program {
 			var version = indexFiles[1];
 			indexFiles.Clear();
 			indexFiles.Add(Path.Combine(flyCatcherPath, "index", $"eveonline_{version}.txt.zst"));
-			indexFiles.Add(Path.Combine(flyCatcherPath, "prefetch", $"resfileindex_prefetch_{version}.txt.zst"));
-			indexFiles.Add(Path.Combine(flyCatcherPath, "resource", $"resfileindex_{version}.txt.zst"));
-			indexFiles.Add(Path.Combine(flyCatcherPath, "windows", $"resfileindex_Windows_{version}.txt.zst"));
+			indexFiles.Add(Path.Combine(flyCatcherPath, "prefetch", $"resfileindex_prefetch_{serverInfo.RegionPrefix}{version}.txt.zst"));
+			indexFiles.Add(Path.Combine(flyCatcherPath, "resource", $"resfileindex_{serverInfo.RegionPrefix}{version}.txt.zst"));
+			indexFiles.Add(Path.Combine(flyCatcherPath, "windows", $"resfileindex_Windows_{serverInfo.RegionPrefix}{version}.txt.zst"));
 			indexFiles.Add(Path.Combine(flyCatcherPath, "index", $"eveonlinemacOS_{version}.txt.zst"));
-			indexFiles.Add(Path.Combine(flyCatcherPath, "mac", $"resfileindex_macOS_{version}.txt.zst"));
+			indexFiles.Add(Path.Combine(flyCatcherPath, "mac", $"resfileindex_macOS_{serverInfo.RegionPrefix}{version}.txt.zst"));
 		}
 
 		// pass 1: delete directory
@@ -316,6 +316,10 @@ internal class Program {
 
 		try {
 			foreach (var indexPath in indexFiles) {
+				if (!Path.Exists(indexPath)) {
+					continue;
+				}
+
 				using var stream = new FileStream(indexPath, FileMode.Open, FileAccess.ReadWrite, FileShare.ReadWrite);
 				if (stream.Length > buffer.Length) {
 					if (buffer.Length > 0) {
