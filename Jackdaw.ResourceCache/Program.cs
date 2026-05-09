@@ -220,6 +220,7 @@ internal class Program {
 			var cacheRepo = BuildCacheList(cacheRoot, outputPath).Select(x => Path.GetFileName(x.ResourcePath)).ToHashSet();
 			cacheRepo.UnionWith(totalRecords.Select(x => Path.GetFileName(x.ResourcePath)));
 
+			var total = 0L;
 			foreach (var file in Directory.EnumerateFiles(cacheRoot, "*", SearchOption.AllDirectories)) {
 				var relative = Path.GetRelativePath(cacheRoot, file).Replace('\\', '/');
 				if (relative.StartsWith('.', StringComparison.Ordinal) || cacheRepo.Contains(Path.GetFileName(relative))) {
@@ -227,12 +228,15 @@ internal class Program {
 				}
 
 				Log.Information("Deleting {File}", relative);
+				total += new FileInfo(file).Length;
 				if (flags.Dry) {
 					continue;
 				}
 
 				File.Delete(file);
 			}
+
+			Log.Information("Reclaimed {Size}", total.HumanReadableBytes);
 		}
 
 		WriteCacheList(cacheRoot, outputPath, indexFiles);
