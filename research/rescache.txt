@@ -6,6 +6,11 @@ servers:
     SISI - public test (singularity)
     THUNDERDOME - event
 
+Old Res: s3-eu-west-1.amazonaws.com/eve-probe-res res.eveonline.ccpgames.com res.eveprobe.ccpgames.com
+Modern Res: resources.eveonline.com
+Old App: ?
+Modern App: binaries.eveonline.com
+
 client info:
     https://binaries.eveonline.com/eveclient_%s.json, server (in uppercase)
     example: https://binaries.eveonline.com/eveclient_TQ.json

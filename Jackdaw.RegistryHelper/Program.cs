@@ -51,9 +51,9 @@ internal class Program {
 		using var redirectReader = new StreamReader(redirectStream);
 		Dictionary<string, string> redirectMap;
 		using (var redirectCsvReader = new CsvReader(redirectReader, CultureInfo.InvariantCulture, true)) {
-			#pragma warning disable CA1849
+		#pragma warning disable CA1849
 			redirectMap = redirectCsvReader.GetRecords<Redirection>().ToDictionary(x => x.From, x => x.To);
-			#pragma warning restore CA1849
+		#pragma warning restore CA1849
 		}
 
 		redirectStream.Seek(0, SeekOrigin.End);
@@ -65,9 +65,9 @@ internal class Program {
 		using var versionReader = new StreamReader(versionStream);
 		HashSet<string> versionSet;
 		using (var versionCsvReader = new CsvReader(versionReader, CultureInfo.InvariantCulture, true)) {
-			#pragma warning disable CA1849
+		#pragma warning disable CA1849
 			versionSet = versionCsvReader.GetRecords<VersionRegistryRecord>().Select(x => x.Build).ToHashSet();
-			#pragma warning restore CA1849
+		#pragma warning restore CA1849
 		}
 
 		versionStream.Seek(0, SeekOrigin.End);
@@ -108,18 +108,18 @@ internal class Program {
 			} else {
 				foreach (var version in args[1..]) {
 					var info = args[0].ToLower() switch {
-						           "N" => ShardInfo.NetEase,
-						           "F" => ShardInfo.FenrisFrontier,
-						           "V" => ShardInfo.FenrisVanguard,
-						           _ => ShardInfo.Fenris,
-					           };
+						"N" => ShardInfo.NetEase,
+						"F" => ShardInfo.FenrisFrontier,
+						"V" => ShardInfo.FenrisVanguard,
+						_ => ShardInfo.Fenris,
+					};
 
 					await ProcessVersion(versionSet, version, info.RegionPrefix, DEFAULT_PLATFORMS, httpClient, ShardProduct.EVE, info, info.Region is ShardRegion.Fenris ? flycatcherRoot : Path.Combine(flycatcherRoot, info.Region.ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
 				}
 			}
 		} else {
 			foreach (var server in Enum.GetValues<ShardServer>()) {
-				if (server.IsDeprecated()) {
+				if (server.IsDeprecated) {
 					continue;
 				}
 
@@ -129,15 +129,15 @@ internal class Program {
 							continue;
 						}
 
-						var info = server.ToRegion() switch {
-							           ShardRegion.NetEase => ShardInfo.NetEase,
-							           ShardRegion.Frontier => ShardInfo.FenrisFrontier,
-							           ShardRegion.Fenris when product is ShardProduct.Vanguard => ShardInfo.FenrisVanguard,
-							           _ => ShardInfo.Fenris,
-						           };
+						var info = server.Region switch {
+							ShardRegion.NetEase => ShardInfo.NetEase,
+							ShardRegion.Frontier => ShardInfo.FenrisFrontier,
+							ShardRegion.Fenris when product is ShardProduct.Vanguard => ShardInfo.FenrisVanguard,
+							_ => ShardInfo.Fenris,
+						};
 
 						Log.Information("Getting {Product} version for {Server}", product, server);
-						var uri = new Uri(info.VerDomain, $"{product.ToProductName()}_{server.ToShortcode()}.json");
+						var uri = new Uri(info.VerDomain, $"{product.ProductName}_{server.Short}.json");
 						Log.Information("Downloading {Uri}", uri);
 						var json = await JsonSerializer.DeserializeAsync<ClientInfo>(await httpClient.GetStreamAsync(uri), JsonOptions, CancellationToken.None);
 						if (json == null) {
@@ -151,7 +151,7 @@ internal class Program {
 						}
 
 						var version = json.Build;
-						await ProcessVersion(versionSet, version, info.RegionPrefix, json.Platforms ?? DEFAULT_PLATFORMS, httpClient, product, info, server.ToRegion() is ShardRegion.Fenris ? flycatcherRoot : Path.Combine(flycatcherRoot, server.ToRegion().ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
+						await ProcessVersion(versionSet, version, info.RegionPrefix, json.Platforms ?? DEFAULT_PLATFORMS, httpClient, product, info, server.Region is ShardRegion.Fenris ? flycatcherRoot : Path.Combine(flycatcherRoot, server.Region.ToString().ToLower()), redirectMap, redirectCsvWriter, versionCsvWriter);
 					} catch {
 						Log.Error("Failed to get {Product} version for {Server}", product, server);
 					}
@@ -185,9 +185,9 @@ internal class Program {
 			Platforms = string.Join(",", platforms),
 		};
 
-		await using var index = await Download(httpClient, new Uri(info.VerDomain, $"{product.ToClientName()}_{version}.txt"),
-		                                       Path.Combine(root, "index"), $"{product.ToClientName()}_{version}.txt");
-		if (await ProcessIndex(httpClient, info, index, root, prefix, versionInfo, true) == false) {
+		await using var index = await Download(httpClient, new Uri(info.VerDomain, $"{product.ClientName}_{version}.txt"),
+			Path.Combine(root, "index"), $"{product.ClientName}_{version}.txt");
+		if (!await ProcessIndex(httpClient, info, index, root, prefix, versionInfo, true)) {
 			Log.Error("Failed to process index for {Version}", version);
 			return;
 		}
@@ -198,8 +198,8 @@ internal class Program {
 			}
 
 			await using var platformIndex = await Download(httpClient,
-			                                               new Uri(info.VerDomain, $"{product.ToClientName()}{platform}_{version}.txt"), Path.Combine(root, "index"),
-			                                               $"{product.ToClientName()}{platform}_{version}.txt");
+				new Uri(info.VerDomain, $"{product.ClientName}{platform}_{version}.txt"), Path.Combine(root, "index"),
+				$"{product.ClientName}{platform}_{version}.txt");
 			await ProcessIndex(httpClient, info, platformIndex, root, prefix, versionInfo, false);
 		}
 
@@ -278,7 +278,8 @@ internal class Program {
 			fileStream.Write(compressed.Span);
 			stream.Position = 0;
 			return stream;
-		} catch {
+		} catch (Exception e) {
+			Log.Error(e, "Failed to download {Uri}", uri);
 			return Stream.Null;
 		}
 	}
