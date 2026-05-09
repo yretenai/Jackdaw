@@ -2,7 +2,7 @@
 	<Folder Name="/Libraries/">
 		<Project Path="Knit/Knit.glTF/Knit.glTF.csproj"/>
 		<Project Path="Knit/Knit/Knit.csproj"/>
-		<Project Path="Neptune/Ceres/Ceres.csproj"/>
+		<Project Path="Knit/Neptune/Ceres/Ceres.csproj"/>
 		<Project Path="Neptune/Charon/Charon.csproj"/>
 		<Project Path="Neptune/Pluto/Pluto.csproj"/>
 	</Folder>
@@ -22,10 +22,6 @@
 	<Project Path="Jackdaw.Black/Jackdaw.Black.csproj"/>
 	<Project Path="Jackdaw.Blue/Jackdaw.Blue.csproj"/>
 	<Project Path="Jackdaw.Structs/Jackdaw.Structs.csproj"/>
-	<Project Path="Jackdaw.Tests/Jackdaw.Tests.csproj">
-		<BuildType Project="?"/>
-		<Platform Project="?"/>
-		<Build Project="false"/>
-	</Project>
+	<Project Path="Jackdaw.Tests/Jackdaw.Tests.csproj"/>
 	<Project Path="Jackdaw/Jackdaw.csproj"/>
 </Solution>
