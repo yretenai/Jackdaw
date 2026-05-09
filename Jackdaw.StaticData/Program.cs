@@ -6,6 +6,7 @@ using Jackdaw.FSD;
 using Jackdaw.StaticData.Converters;
 using Jackdaw.Trinity;
 using Pluto.IO;
+using Pluto.IO.Binary;
 using Serilog;
 
 namespace Jackdaw.StaticData;
@@ -20,6 +21,11 @@ internal class Program {
 			new EveSOFDataGenericStringConverter(),
 			new TriFloatConverter(),
 			new PolymorphicConverterFactory(),
+			new Matrix4X4ConverterFactory(),
+			new QuaternionConverterFactory(),
+			new Vector2DConverterFactory(),
+			new Vector3DConverterFactory(),
+			new Vector4DConverterFactory(),
 		},
 		NewLine = "\n",
 		NumberHandling = JsonNumberHandling.AllowNamedFloatingPointLiterals,
@@ -99,11 +105,7 @@ internal class Program {
 		foreach (var file in files) {
 			try {
 				Log.Information("[{Current}/{Total}] Processing {File}", ++current, files.Length, file);
-				using var fs = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-				using var owner = MemoryPool<byte>.Shared.Rent((int) fs.Length);
-				var block = owner.Memory.Span[..(int) fs.Length];
-				fs.ReadExactly(block);
-				var black = new BlackFile(block);
+				var black = new BlackFile(new ArrayPoolBinaryReader(RentedArray<byte>.FromFile(file)));
 				using var stream = new FileStream(Path.ChangeExtension(file, ".json"), FileMode.Create, FileAccess.ReadWrite, FileShare.ReadWrite);
 				JsonSerializer.Serialize(stream, black.Root, JsonOptions);
 				stream.Flush();

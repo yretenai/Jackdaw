@@ -1,16 +1,14 @@
 using System;
-using System.Buffers.Binary;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
 using System.Text;
 using Jackdaw.Black;
 using Jackdaw.Exceptions;
 using Jackdaw.Structs.Trinity;
-using Pluto.Extensions;
+using JetBrains.Annotations;
+using Pluto.IO.Binary;
 using Serilog;
 
 namespace Jackdaw.Trinity;
@@ -20,52 +18,44 @@ public class BlackFile {
 		Types = typeof(IRoot).Assembly.GetTypes().ToDictionary(x => x.Name, x => x);
 	}
 
-	public BlackFile(Span<byte> buffer) {
-		var offset = 0;
-		Header = MemoryMarshal.Read<BlackHeader>(buffer);
-		offset += Unsafe.SizeOf<BlackHeader>();
+	public BlackFile(BufferBinaryReader reader) {
+		Header = reader.Read<BlackHeader>();
 
-		var blob = MemoryMarshal.Read<BlackBlob>(buffer[offset..]);
-		offset += Unsafe.SizeOf<BlackBlob>();
+		var blob = reader.Read<BlackBlob>();
+		var expected = reader.Position + blob.Size - 2;
 		{
-			var poolOffset = offset;
 			StringPool = new string[blob.Count];
 			for (var i = 0; i < StringPool.Length; i++) {
-				StringPool[i] = buffer[poolOffset..].ReadString(Encoding.UTF8) ?? string.Empty;
-				poolOffset += Encoding.UTF8.GetBytes(StringPool[i]).Length + 1;
+				StringPool[i] = reader.ReadCString<byte>(Encoding.UTF8);
 			}
 		}
-		offset += blob.Size - 2;
+		reader.Position = expected;
 
-		blob = MemoryMarshal.Read<BlackBlob>(buffer[offset..]);
-		offset += Unsafe.SizeOf<BlackBlob>();
+		blob = reader.Read<BlackBlob>();
+		expected = reader.Position + blob.Size - 2;
 		{
-			var poolOffset = offset;
-			NamePool = new string[blob.Count];
-			for (var i = 0; i < NamePool.Length; i++) {
-				NamePool[i] = MemoryMarshal.Cast<byte, ushort>(buffer[poolOffset..]).ReadString(Encoding.Unicode) ?? string.Empty;
-				poolOffset += Encoding.Unicode.GetBytes(NamePool[i]).Length + 2;
+			WideStringPool = new string[blob.Count];
+			for (var i = 0; i < WideStringPool.Length; i++) {
+				WideStringPool[i] = reader.ReadCString<ushort>(Encoding.Unicode);
 			}
 		}
-		offset += blob.Size - 2;
+		reader.Position = expected;
 
-		var span = buffer[offset..];
-		Root = ReadObject(ref span, true);
+		Root = ReadObject(reader, true);
 	}
 
 	private static Dictionary<string, Type> Types { get; }
 
 	public BlackHeader Header { get; set; }
 	public string[] StringPool { get; set; }
-	public string[] NamePool { get; set; }
+	public string[] WideStringPool { get; set; }
 	public Dictionary<uint, object> Objects { get; set; } = new();
 	public object Root { get; set; }
 
-	private object ReadObject(ref Span<byte> block, bool hasId) {
+	private object ReadObject(BufferBinaryReader reader, bool hasId) {
 		var id = uint.MaxValue;
 		if (hasId) {
-			id = BinaryPrimitives.ReadUInt32LittleEndian(block);
-			block = block[4..];
+			id = reader.Read<uint>();
 		}
 
 		if (id == 0) {
@@ -76,27 +66,26 @@ public class BlackFile {
 			return obj;
 		}
 
-		var size = BinaryPrimitives.ReadInt32LittleEndian(block);
-		block = block[4..];
-		var type = StringPool[BinaryPrimitives.ReadUInt16LittleEndian(block)];
-		block = block[2..];
+		var size = reader.Read<int>();
+		if (size > reader.Length - reader.Position) {
+			return null;
+		}
+		using var objectReader = new ArrayPoolBinaryReader(reader.ReadSharedBytes(size));
+		var type = StringPool[objectReader.Read<ushort>()];
 
 		if (!Types.TryGetValue(type, out var t)) {
 			throw new UnknownBlueObjectException(type);
 		}
 
-		var chunk = block[..(size - 2)];
 		var properties = t.GetProperties().ToDictionary(x => x.Name, x => x, StringComparer.OrdinalIgnoreCase);
-		block = block[(size - 2)..];
 
 		obj = Activator.CreateInstance(t);
 		if (obj == null) {
 			throw new FailedBlueObjectCreationException(type);
 		}
 
-		while (chunk.Length > 0) {
-			var name = StringPool[BinaryPrimitives.ReadUInt16LittleEndian(chunk)].Replace(" ", "", StringComparison.Ordinal);
-			chunk = chunk[2..];
+		while (objectReader.Length - objectReader.Position > 0) {
+			var name = StringPool[objectReader.Read<ushort>()].Replace(" ", "", StringComparison.Ordinal);
 			if (!properties.TryGetValue(name, out var property)) {
 				throw new UnknownBluePropertyException(name, type);
 			}
@@ -105,7 +94,7 @@ public class BlackFile {
 				Log.Warning("Experimental property {Property} ({PropertyType}) is being read", name, property.PropertyType);
 			}
 
-			var value = ReadValue(ref chunk, property.PropertyType, property);
+			var value = ReadValue(objectReader, property.PropertyType, property);
 			property.SetValue(obj, value);
 		}
 
@@ -116,88 +105,74 @@ public class BlackFile {
 		return obj;
 	}
 
-	private object? ReadValue(ref Span<byte> chunk, Type type, MemberInfo member) {
+	[UsedImplicitly] private static T ReadPrimitive<T>(BufferBinaryReader reader) where T : unmanaged => reader.Read<T>();
+
+	private object? ReadValue(BufferBinaryReader reader, Type type, MemberInfo member) {
 		if (type.IsArray) {
-			return ReadArray(ref chunk, type, member);
+			return ReadArray(reader, type, member);
 		}
 
 		switch (type.IsConstructedGenericType) {
 			case true when type.GetGenericTypeDefinition() == typeof(List<>):
-				return ReadList(ref chunk, type, member);
+				return ReadList(reader, type, member);
 			case true when type.GetGenericTypeDefinition() == typeof(Dictionary<,>):
-				return ReadDictionary(ref chunk, type, member);
+				return ReadDictionary(reader, type, member);
 		}
 
 		if (type.IsEnum) {
-			var value = ReadValue(ref chunk, type.GetEnumUnderlyingType(), member);
+			var value = ReadValue(reader, type.GetEnumUnderlyingType(), member);
 			return value == null ? Activator.CreateInstance(type) : Enum.ToObject(type, value);
 		}
 
 		if (type.IsPrimitive || type.IsValueType) {
-			object? value;
-
 			if (type == typeof(bool)) {
-				value = chunk[0] != 0;
-				chunk = chunk[1..];
-				return value;
+				return reader.Read<byte>() != 0;
 			}
 
-			var size = Marshal.SizeOf(type);
-			unsafe {
-				fixed (byte* pin = chunk) {
-					value = Marshal.PtrToStructure((nint) pin, type);
-				}
-			}
-
-			chunk = chunk[size..];
-			return value;
+			return typeof(BlackFile).GetMethod("ReadPrimitive", BindingFlags.NonPublic | BindingFlags.Static)!.MakeGenericMethod(type).Invoke(null, [reader]);
 		}
 
 		if (type == typeof(string)) {
 			var pool = StringPool;
 			if (member.GetCustomAttribute<BlackUseNamePoolAttribute>() != null) {
-				pool = NamePool;
+				pool = WideStringPool;
 			}
 
-			var value = pool[BinaryPrimitives.ReadUInt16LittleEndian(chunk)];
-			chunk = chunk[2..];
-			return value;
+			return pool[reader.Read<ushort>()];
 		}
 
 		if (type.IsClass || type.IsValueType || type.IsInterface) {
-			return ReadObject(ref chunk, member.GetCustomAttribute<BlackArrayAttribute>() == null);
+			return ReadObject(reader, member.GetCustomAttribute<BlackArrayAttribute>() == null);
 		}
 
 		throw new CatastrophicBlueException($"Unknown type {type.FullName}");
 	}
 
-	private object? ReadList(ref Span<byte> chunk, Type type, MemberInfo member) {
+	private object? ReadList(BufferBinaryReader reader, Type type, MemberInfo member) {
 		var elementType = type.GetGenericArguments()[0];
 		if (elementType == null) {
 			throw new CatastrophicBlueException($"Failed to get element type for array {type.FullName}");
 		}
 
-		var size = BinaryPrimitives.ReadInt32LittleEndian(chunk);
-		chunk = chunk[4..];
+		var size = reader.Read<int>();
 		var array = Activator.CreateInstance(type, size);
 		var add = type.GetMethod("Add") ?? throw new UnreachableException();
 		for (var i = 0; i < size; i++) {
-			add.Invoke(array, [ReadValue(ref chunk, elementType, member)]);
+			add.Invoke(array, [ReadValue(reader, elementType, member)]);
 		}
 
 		return array;
 	}
 
-	private object ReadDictionary(ref Span<byte> chunk, Type type, MemberInfo member) => throw new NotImplementedException();
+	private object ReadDictionary(BufferBinaryReader reader, Type type, MemberInfo member) => throw new NotImplementedException();
 
-	private object ReadArray(ref Span<byte> chunk, Type type, MemberInfo member) {
+	private object ReadArray(BufferBinaryReader reader, Type type, MemberInfo member) {
 		var elementType = type.GetElementType();
 		if (elementType == null) {
 			throw new CatastrophicBlueException($"Failed to get element type for array {type.FullName}");
 		}
 
-		var size = BinaryPrimitives.ReadInt32LittleEndian(chunk);
-		chunk = chunk[4..];
+		var size = reader.Read<int>();
 
 		var pure = member.GetCustomAttribute<BlackArrayAttribute>();
 		if (pure is { Size: > 0 }) {
@@ -205,19 +180,19 @@ public class BlackFile {
 		}
 
 		if (member.GetCustomAttribute<BlackArrayAttribute>() != null && type == typeof(byte[][])) {
-			var elementSize = BinaryPrimitives.ReadInt16LittleEndian(chunk);
-			chunk = chunk[2..];
+			var elementSize = reader.Read<ushort>();
 			var array = new byte[size][];
+
 			for (var i = 0; i < size; i++) {
-				array[i] = chunk[..elementSize].ToArray();
-				chunk = chunk[elementSize..];
+				array[i] = new byte[elementSize];
+				reader.ReadBytes(array[i]);
 			}
 
 			return array;
 		} else {
 			var array = Array.CreateInstance(elementType, size);
 			for (var i = 0; i < size; i++) {
-				array.SetValue(ReadValue(ref chunk, elementType, member), i);
+				array.SetValue(ReadValue(reader, elementType, member), i);
 			}
 
 			return array;

@@ -270,8 +270,7 @@ internal class Program {
 						switch (field.ClassType) {
 							case "IList":
 								fieldType = "List<IRoot?>?";
-								switch (fieldName)
-								{
+								switch (fieldName) {
 									case "IndexBuffers":
 										attribute = "JsonIgnore";
 										break;
@@ -280,16 +279,15 @@ internal class Program {
 								break;
 							case "IBlueDict":
 								fieldType = "Dictionary<string, IRoot?>?";
-								attribute = "BlackExperimental";
+								attribute = "BlackExperimental"; // never seen this before
 								break;
 							case "IBlueStructureList":
 								fieldType = "byte[][]?";
-								attribute = "BlackArray";
+								attribute = "BlackArray"; // polymorphic
 								break;
 							default: {
 								if (!string.IsNullOrEmpty(field.ClassType) && totalNames.Contains(field.ClassType)) {
 									fieldType = field.ClassType + "?";
-									attribute = "BlackArray";
 								}
 
 								break;
