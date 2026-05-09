@@ -13,8 +13,7 @@ public static class JackdawUtils {
 	}
 
 	public static RentedArray<byte> Decompress(Memory<byte> data) {
-		var size = ZStandard.GetDecompressBound(data);
-		var rented = new RentedArray<byte>(size);
+		var rented = new RentedArray<byte>(CompressionHelper.FindDecompressedLength(CompressionType.Zstd, data));
 		CompressionHelper.Decompress(CompressionType.Zstd, data, rented.Memory);
 		return rented;
 	}
@@ -26,8 +25,8 @@ public static class JackdawUtils {
 	}
 
 	public static RentedArray<byte> DecompressGz(Memory<byte> data) {
-		var rented = new RentedArray<byte>(data.Length * 16);
-		var n = CompressionHelper.Decompress(CompressionType.GzipUnknownSize, data, rented.Memory);
+		var rented = new RentedArray<byte>(CompressionHelper.FindDecompressedLength(CompressionType.Gzip, data));
+		var n = CompressionHelper.Decompress(CompressionType.Gzip, data, rented.Memory);
 		if (n <= 0) {
 			throw new InvalidOperationException();
 		}
